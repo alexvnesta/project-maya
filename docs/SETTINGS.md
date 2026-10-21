@@ -589,6 +589,13 @@ member's parts as decode runs them, summed on the host and compared with the who
 | --- | --- | --- |
 | `MAYA_DS4_TP_GGUF_UNEVEN` | off | `1`: a GGUF's experts split in whole blocks, as even as they go, so its group can form |
 | `MAYA_DS4_TP_CHECK` | off | `1`: each member's parts checked against the whole expert at load |
+How many of a block's experts VRAM keeps: on one GPU, all of them as the room goes; on a group of several, once the
+expert profile has seen the drafter, those that take 99% of the block's routes, and more only while its member keeps
+the room of the group's next tightest member - the rest on the CPU lane. `MAYA_DS4_DRAFT_VRAM` sets it instead: each
+block keeps up to that many, the profile's hottest, as the room goes; the rest on the CPU lane, so the trunk keeps the
+room. A request's log then says how many of the drafter's picks took the CPU lane.
+
+| `MAYA_DS4_DRAFT_VRAM` | off (placed as above) | the most VRAM experts each DSpark block keeps, its profile's hottest: one number for every block, or one a block (`96,48,32`); 0 .. a block's experts (128) |
 
 ## DeepSeek: where the measured hipBLASLt picks are kept (AMD)
 
