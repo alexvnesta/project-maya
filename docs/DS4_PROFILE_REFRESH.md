@@ -14,6 +14,20 @@ prior normalized to one quarter of the recent total (approximately 80% recent,
 observations can influence the profile. Live adaptive cache replacement remains on;
 this is a startup/persisted-profile improvement, not a replacement for live learning.
 
+## Relationship to existing profile tools
+
+Upstream already records and saves DS4 expert counts. `tools/ds4/profile.py make`
+normalizes and combines saved profiles with equal input weights and a configurable
+output count scale; `compare` checks overlap in their hottest experts. Those tools
+remain useful when each input already represents the workload you want to retain.
+
+This utility handles calibration runs that **start from an accumulated profile**:
+it subtracts each run's starting counts before combining recent observations, then
+adds a separately normalized historical prior. Passing cumulative snapshots directly
+to `profile.py make` would retain the historical selections inside every snapshot.
+Starting calibration from empty profiles and using the existing tool is another
+option. This utility adds no automatic aging or change to runtime defaults.
+
 ## Safe calibration recipe
 
 This tool handles the DS4 engine's **raw little-endian uint32 count array**, not the
