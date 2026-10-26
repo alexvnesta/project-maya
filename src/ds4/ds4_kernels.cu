@@ -3731,6 +3731,9 @@ void hc_post_inplace(const float* y, float* h, const float* post, const float* c
 void project_out(float* y, const float* r, float scale, int dim, int T, cudaStream_t s) {
     if (T > 0) project_out_kernel<<<T, 1024, 0, s>>>(y, r, scale, dim);
 }
+void project_out(float* y, const float* r, float scale, int dim, int T, cudaStream_t s) {
+    if (T > 0) project_out_kernel<<<T, 1024, 0, s>>>(y, r, scale, dim);
+}
 void hc_mix_scale(const float* h, int hcdim, int n_mix, int T, float eps, float* mixes, cudaStream_t s) {
     pdl_launch(hc_mix_scale_kernel, T, kThreads, 0, s, h, hcdim, n_mix, eps, mixes);
 }
