@@ -2334,8 +2334,48 @@ struct Model::Impl {
     static Layer& member(Layer& l, int m) { return m == 0 ? l : l.mates[(size_t) m - 1]; }
     // abliteration: the T rows of y (a write about to enter hc_post, all-reduced already) lose their component along
     // the direction - what the rank-1 LoRA does to attn_output_b / ffn_down_shexp / ffn_down_exps
-    void ablate(const Dev& d, float* y, int T, cudaStream_t s) const {
-        if (d.abl_r != nullptr) project_out(y, d.abl_r, abl_scale, g.dim, T, s);
+    void ablate(const Dev& d, float* y, int T, cudaStream_t s, int il) const {
+        if (d.abl_r != nullptr && ablate::target_layer(il, g.nl)) project_out(y, d.abl_r, abl_scale, g.dim, T, s);
+    }
+    // Before serving, check the actual projection kernel/direction on every owning device.
+    bool check_ablate(Dev& d, std::string& err) const {
+        const int rows = 2;
+        std::vector<float> input((size_t) rows * g.dim), actual(input.size()), expected;
+        for (size_t j = 0; j < input.size(); ++j) input[j] = ((int) (j % 97) - 48) * 0.015625f;
+        float* buffer = nullptr;
+        auto checked = [&](cudaError_t rc, const char* operation) {
+            if (rc == cudaSuccess) return true;
+            err = std::string("abliteration check ") + operation + ": " + cudaGetErrorString(rc); return false;
+        };
+        auto finish = [&](bool ok) {
+            if (buffer != nullptr) {
+                const auto rc = cudaFree(buffer);
+                if (rc != cudaSuccess) { err += std::string("; cudaFree: ") + cudaGetErrorString(rc); ok = false; }
+            }
+            return ok;
+        };
+        if (!checked(cudaSetDevice(d.id), "device") ||
+            !checked(cudaMalloc((void**) &buffer, input.size() * sizeof(float)), "allocate")) return finish(false);
+        double maximum_error = 0.0;
+        for (float scale : {abl_scale, 0.25f}) {
+            if (!ablate::projection_reference(input, abl_dir, scale, rows, expected, err)) return finish(false);
+            if (!checked(cudaMemcpyAsync(buffer, input.data(), input.size() * sizeof(float), cudaMemcpyHostToDevice, d.st), "input copy")) return finish(false);
+            project_out(buffer, d.abl_r, scale, g.dim, rows, d.st);
+            if (!checked(cudaGetLastError(), "kernel launch") ||
+                !checked(cudaMemcpyAsync(actual.data(), buffer, actual.size() * sizeof(float), cudaMemcpyDeviceToHost, d.st), "result copy") ||
+                !checked(cudaStreamSynchronize(d.st), "synchronize")) return finish(false);
+            for (size_t j = 0; j < actual.size(); ++j) {
+                const double delta = std::fabs((double) actual[j] - expected[j]);
+                maximum_error = std::max(maximum_error, delta);
+                if (!std::isfinite(actual[j]) || delta > 5e-5 * (1.0 + std::fabs((double) expected[j]))) {
+                    err = "abliteration projection kernel differs from double reference"; return finish(false);
+                }
+            }
+        }
+        if (!finish(true)) return false;
+        std::fprintf(stderr, "abliteration check: device %d rows %d dim %d target blocks %d drafter untouched max_abs %.9g PASS\n",
+                     d.id, rows, g.dim, g.nl, maximum_error);
+        return true;
     }
     static const Layer& member(const Layer& l, int m) { return m == 0 ? l : l.mates[(size_t) m - 1]; }
     // bytes of a VRAM slot of l's experts (a member's part of each, in a group)
@@ -3273,10 +3313,10 @@ struct Model::Impl {
                 if (!dalloc(d, d.abl_r, abl_dir.size(), err)) return false;
                 CK(cudaSetDevice(d.id));
                 CK(cudaMemcpy(d.abl_r, abl_dir.data(), abl_dir.size() * sizeof(float), cudaMemcpyHostToDevice));
+                if (!check_ablate(d, err)) return false;
             }
         }
-        // (MAYA_DS4_Q8_BATCH / _SHARE: their lines now, at load; MAYA_DS4_Q8_CHECK=1: the batched rounding with sharing
-        //  checked on every device first)
+        // (MAYA_DS4_Q8_BATCH: its line now, at load; MAYA_DS4_Q8_CHECK=1: the batched rounding checked on every device first)
         if (pk.gguf) {
             gg::q8_batch();
             gg::q8_share();
@@ -16754,7 +16794,7 @@ struct Model::Impl {
             CK(cudaStreamWaitEvent(s, c.ar_done, 0));
         } else if (nm > 1)
             chunk_allreduce(d, c, ab, mi, T * D, s);
-        ablate(d, c.acc, T, s);
+        ablate(d, c.acc, T, s, L0.il);
         hc_post_inplace(c.acc, c.h, c.a_post, c.a_comb, D, H, T, s);
         prof_mark(d, 1);
         kick(s);   // (the attention submitted while the host queues the routing)
@@ -16836,7 +16876,7 @@ struct Model::Impl {
         if (c.flow) {
             if (!flow_layer(d, c, L0, mi, wp.k, T, b, err)) return false;
             if (nm > 1) allreduce(c.acc, T * D, ab, mi, ++c.arb_seq, d.xcnt, s);
-            ablate(d, c.acc, T, s);
+            ablate(d, c.acc, T, s, L0.il);
             hc_post_inplace(c.acc, c.h, c.f_post, c.f_comb, D, H, T, s);
             CK(cudaMemcpyAsync(c.pre, c.f_pre, (size_t) T * 8 * 4, cudaMemcpyDeviceToDevice, s));
             prof_mark(d, 3);
@@ -16872,7 +16912,7 @@ struct Model::Impl {
         }
         if (!run_vram(d, c, L0, l, l, b.data(), v_done, L0.pv_n, T, err)) return false;
         if (nm > 1) chunk_allreduce(d, c, ab, mi, T * D, s);
-        ablate(d, c.acc, T, s);
+        ablate(d, c.acc, T, s, L0.il);
         hc_post_inplace(c.acc, c.h, c.f_post, c.f_comb, D, H, T, s);
         CK(cudaMemcpyAsync(c.pre, c.f_pre, (size_t) T * 8 * 4, cudaMemcpyDeviceToDevice, s));
         prof_mark(d, 3);
@@ -20059,7 +20099,7 @@ struct Model::Impl {
         } else CK(cudaMemsetAsync(d.ao, 0, (size_t) T * D * sizeof(*d.ao), s));   // (no heads: nothing to add)
         if (nm > 1) allreduce(d.ao, T * D, ag, mi, ++d.ar_seq, d.xcnt, s);
         if (hs) CK(cudaStreamWaitEvent(s, d.hc_done, 0));
-        ablate(d, d.ao, T, s);
+        ablate(d, d.ao, T, s, l.il);
         hc_post(d.ao, d.h, d.a_post, d.a_comb, D, H, T, d.h2, s);
         std::swap(d.h, d.h2);
         if (dump_l != nullptr && mi == 0) dump_layer(d, d.h, 1000 + l.il, p0, T);   // (DS4_DUMP_L: after the attention)
@@ -20247,7 +20287,7 @@ struct Model::Impl {
             if (mi == 0 && l.mtp) st.draft_experts += (int64_t) T * l.k_exp;
             if (nm > 1) allreduce(d.moe_out, T * D, ag, mi, ++d.ar_seq, d.xcnt, s);
             if (hs) CK(cudaStreamWaitEvent(s, d.hc_done, 0));
-            ablate(d, d.moe_out, T, s);
+            ablate(d, d.moe_out, T, s, l.il);
             hc_post(d.moe_out, d.h, d.f_post, d.f_comb, D, H, T, d.h2, s);
             std::swap(d.h, d.h2);
             if (!fuse) CK(cudaMemcpyAsync(d.pre, d.f_pre, (size_t) T * 8 * 4, cudaMemcpyDeviceToDevice, s));
@@ -20371,7 +20411,7 @@ struct Model::Impl {
         }
         combine(d.ed, ents.empty() ? nullptr : d.cpu_part, d.sh_out, cm, T, D, d.moe_out, s);
         if (hs) CK(cudaStreamWaitEvent(s, d.hc_done, 0));
-        ablate(d, d.moe_out, T, s);
+        ablate(d, d.moe_out, T, s, l.il);
         hc_post(d.moe_out, d.h, d.f_post, d.f_comb, D, H, T, d.h2, s);
         std::swap(d.h, d.h2);
         if (!fuse) CK(cudaMemcpyAsync(d.pre, d.f_pre, (size_t) T * 8 * 4, cudaMemcpyDeviceToDevice, s));

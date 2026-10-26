@@ -27,6 +27,33 @@
 
 namespace strata::ds4::ablate {
 
+// The published adapter covers the main blocks only, not the DSpark/MTP drafter blocks.
+inline bool target_layer(int il, int main_blocks) { return main_blocks > 0 && il >= 0 && il < main_blocks; }
+
+// Independent double-accumulation reference for the startup device check, not a GPU replacement.
+inline bool projection_reference(const std::vector<float>& y, const std::vector<float>& r, float scale, int rows,
+                                 std::vector<float>& out, std::string& err) {
+    if (rows < 1 || r.empty() || y.size() / (size_t) rows != r.size() || y.size() % (size_t) rows ||
+        !std::isfinite(scale)) { err = "invalid projection-reference shape/scale"; return false; }
+    double norm = 0.0;
+    for (float x : r) { if (!std::isfinite(x)) { err = "nonfinite direction"; return false; } norm += (double) x * x; }
+    if (std::fabs(norm - 1.0) > 1e-5) { err = "direction not unit length"; return false; }
+    std::vector<float> result(y.size());
+    for (int t = 0; t < rows; ++t) {
+        double dot = 0.0;
+        const size_t base = (size_t) t * r.size();
+        for (size_t j = 0; j < r.size(); ++j) {
+            if (!std::isfinite(y[base + j])) { err = "nonfinite projection input"; return false; }
+            dot += (double) y[base + j] * r[j];
+        }
+        for (size_t j = 0; j < r.size(); ++j) {
+            result[base + j] = (float) ((double) y[base + j] - (double) scale * dot * r[j]);
+            if (!std::isfinite(result[base + j])) { err = "nonfinite projection reference"; return false; }
+        }
+    }
+    out.swap(result); return true;
+}
+
 // the integer `key` of g, in [lo, hi]; absent -> true with `out` untouched
 inline bool meta_int(const GgufFile& g, const std::string& path, const char* key, long long lo, long long hi,
                      long long& out, std::string& err) {
@@ -75,17 +102,17 @@ inline bool read_f32(const GgufFile& g, const std::string& path, const std::stri
         if (d == 0 || d > cap || n > cap / d) { err = path + ": " + name + " has an odd size"; return false; }
         n *= d;
     }
-    if (want != 0) {
-        if (n < want) { err = path + ": " + name + " has an odd size"; return false; }
-        n = want;
-    }
-    const uint64_t size = g.file_size(), data = g.data_start(), bytes = n * 4;
+    const uint64_t full_n = n;
+    if (want != 0 && n < want) { err = path + ": " + name + " has an odd size"; return false; }
+    // Validate the complete declared tensor, even when only its first direction is copied.
+    const uint64_t size = g.file_size(), data = g.data_start(), bytes = full_n * 4;
     if (data > size || t->offset > size - data || bytes > size - data - t->offset) {   // (no sum that can wrap)
         err = path + ": " + name + " lies outside the file";
         return false;
     }
+    n = want != 0 ? want : full_n;
     out.resize((size_t) n);
-    std::memcpy(out.data(), g.tensor_data(*t), (size_t) bytes);
+    std::memcpy(out.data(), g.tensor_data(*t), (size_t) n * sizeof(float));
     return true;
 }
 
@@ -116,10 +143,22 @@ inline bool load_direction(const std::string& path, int layer, int n_layer, floa
                               "projection of every write";
                         return false;
                     }
-                    if (!read_f32(g, path, base + ".lora_b", r.size(), b, err)) return false;
-                    if (std::memcmp(b.data(), r.data(), r.size() * sizeof(float)) != 0) {
-                        err = path + ": " + base + ".lora_b is not " + b0 + " - not a one-direction adapter";
+                    const auto* bt = g.find(base + ".lora_b");
+                    const bool experts = std::strcmp(w, "ffn_down_exps") == 0;
+                    if (bt->shape.size() != (experts ? 3u : 2u) || bt->shape[0] != 1 ||
+                        bt->shape[1] != r.size() || (experts && (bt->shape[2] == 0 || bt->shape[2] > 4096))) {
+                        err = path + ": " + base + ".lora_b has an incompatible rank/direction/expert shape";
                         return false;
+                    }
+                    if (!read_f32(g, path, base + ".lora_b", r.size(), b, err)) return false;
+                    // Every routed expert's B must be the same direction, not just the first expert.
+                    const uint64_t repeats = experts ? bt->shape[2] : 1;
+                    const auto* raw = g.tensor_data(*bt);
+                    for (uint64_t e = 0; e < repeats; ++e) {
+                        if (std::memcmp(raw + e * r.size() * sizeof(float), r.data(), r.size() * sizeof(float)) != 0) {
+                            err = path + ": " + base + ".lora_b is not " + b0 + " - not a one-direction adapter";
+                            return false;
+                        }
                     }
                 }
             if (g.find("blk." + std::to_string(n_layer) + ".attn_output_b.weight.lora_b") != nullptr) {
@@ -154,8 +193,8 @@ inline bool load_direction(const std::string& path, int layer, int n_layer, floa
             if (!read_f32(g, path, tname, 0, r, err)) return false;
             if (scale == 0.0f) scale = 1.0f;
         }
-        if (!std::isfinite(scale) || !(scale > 0.0f)) {   // must not reach the GPU
-            err = path + ": ablation scale is not a positive finite number";
+        if (!std::isfinite(scale) || scale < 1e-6f || scale > 1e6f) {   // after metadata factors multiply
+            err = path + ": effective ablation scale must be finite and in [1e-6, 1e6]";
             return false;
         }
         double ss = 0.0;
