@@ -1,0 +1,189 @@
+--- a/serve/server.py
++++ b/serve/server.py
+@@ -76,6 +76,7 @@
+ from strata_control import user_args  # noqa: E402
+ from strata_control import gpu_roles  # noqa: E402
+ from serve import ready as ready_file  # noqa: E402
++from serve import ds4_vision  # pinned Maya native DeepSeek image preparation
+ from serve import owner_guard  # noqa: E402
+ from serve import launch_identity  # noqa: E402
+ from serve import logit_bias as bias_api  # noqa: E402
+@@ -3824,6 +3825,8 @@
+                  fit_max_tokens: bool = True):
+         self.engine, self.tok, self.template, self.model, self.vision = engine, tokenizer, template, model_name, vision
+         self.literals = literal_tags(getattr(tokenizer, "control_tokens", ()))   # texts that stay text inside a message
++        if isinstance(vision, ds4_vision.Vision):
++            self.literals[ds4_vision.PLACEHOLDER] = "\U000F0D01"
+         self.fit_max_tokens = fit_max_tokens          # default: clamp the output cap to the room left; False (--no-fit-max-tokens) = 400
+         self.aliases: list[str] = []                  # #297: other names of the model (the config's `aliases`)
+         self.answer_room = True                       # 0.1.45: see ANSWER_ROOM_MIN_CAP (the config's "answer_room": false turns it off)
+@@ -4735,6 +4738,12 @@
+         thinking) is rendered as a default one up to the answer - the same prompt start, so the conversation cache
+         keeps it - and its effort follows in a short system turn right before the answer (thinking off: the template's
+         empty thinking block).  The engine (--tail-role-token) checkpoints in front of that turn."""
++        if isinstance(self.vision, ds4_vision.Vision):
++            # Literal text was protected before rendering; only actual image parts emit this marker.
++            if "content_blocks" not in self.template.source:
++                messages = [dict(m, content="".join(
++                    ds4_vision.PLACEHOLDER if item.get("type") == "image" else item.get("text", "")
++                    for item in m["content"])) if isinstance(m.get("content"), list) else m for m in messages]
+         effort = kwargs.get("reasoning_effort")
+         off = kwargs.get("enable_thinking") is False
+         if not self.effort_end or (not off and effort in (None, "", "xhigh", "high")):
+@@ -4760,9 +4769,18 @@
+         if changed:
+             prompt, plain = unmark_think_literals(prompt, self.literals)
+         if self.prompts is not None:            # #567: only what follows the last special shared with a recent prompt
+-            return self.prompts.encode(prompt, plain, store)
+-        return self.tok.encode(prompt, parse_special=True, plain=plain) if plain else \
+-            self.tok.encode(prompt, parse_special=True)
++            ids = self.prompts.encode(prompt, plain, store)
++        else:
++            ids = self.tok.encode(prompt, parse_special=True, plain=plain) if plain else \
++                self.tok.encode(prompt, parse_special=True)
++        if isinstance(self.vision, ds4_vision.Vision):
++            sources = images_of(messages)
++            if self.offline and any(src.startswith(("http://", "https://")) for src in sources):
++                raise ValueError("offline mode cannot download an image URL; send a data: image instead")
++            pictures = [self.vision.picture(src) for src in sources]
++            ids, starts = self.vision.expand(ids, pictures)
++            self.embeddings.native_pictures = (pictures, starts)
++        return ids
+ 
+     @contextlib.contextmanager
+     def _turn(self, cancel=None):
+@@ -4805,7 +4823,8 @@
+                             src = fetched[item["source"]] = Vision.download(src)   # outside the FIFO, as in prepare()
+                         with self._turn(cancel):  # the encoder takes its turn with the requests (see below)
+                             self._vision_up()         # an elastic encoder is not running until a picture needs it
+-                            self.vision.encode(src)
++                            (self.vision.picture(src) if isinstance(self.vision, ds4_vision.Vision)
++                             else self.vision.encode(src))
+                     except (ValueError, OSError, RuntimeError) as e:    # RuntimeError: the encoder did not start
+                         why = str(e)
+                 if why is not None:
+@@ -4831,7 +4850,7 @@
+         self.embeddings.path = None
+         self.embeddings.keys = None
+         images = images_of(messages)
+-        if images:
++        if images and not isinstance(self.vision, ds4_vision.Vision):
+             if self.offline and any(src.startswith(("http://", "https://")) for src in images):
+                 raise ValueError("offline mode cannot download an image URL; send a data: image instead")
+             if self.vision is None:
+@@ -4907,7 +4926,10 @@
+             print(f"[strata] max_tokens {max_new} shortened to {max(1, room)}: the prompt ({len(ids)} tokens) leaves that much "
+                   f"of the context ({ctx}); \"fit_max_tokens\": false answers 400 instead", flush=True)
+             max_new = max(1, room)          # a shorter completion beats a 400 (the default)
+-        if images:
++        if images and isinstance(self.vision, ds4_vision.Vision):
++            pictures, starts = self.embeddings.native_pictures
++            self.embeddings.path = self.vision.write(self.vision.dir / f"req-{uuid.uuid4().hex}.dsi", pictures, starts)
++        elif images:
+             # The request's images in one file for GENI (~10 MB a picture), written once nothing above refuses the
+             # request: one refused after it (the engine starting, no room) left it in the vision directory for good,
+             # one more for every retry of a 503.  run() deletes it; drop_embeddings() if run() never starts.
+@@ -5955,6 +5977,14 @@
+                 yield chunk if progress else None
+         result = openai_collect(buffered)
+         choice = result["choices"][0]
++        if choice["message"].get("tool_calls"):
++            # response_format constrains the final answer, not the function-call
++            # envelope. Keep IDs, argument fragments, usage and timing intact.
++            # An incomplete call must not escape the structured-output gate.
++            if choice["finish_reason"] != "tool_calls":
++                raise StructuredOutputError("structured tool turn was incomplete; increase the output budget")
++            yield from buffered
++            return
+         content = validated_json(choice["message"]["content"], validator, choice["finish_reason"])
+         yield buffered[0]
+         delta = {"content": content}
+@@ -7140,9 +7170,9 @@
+             if tool_choice_of(req.get("tool_choice"))[0] == "none":   # as the Responses route: no tools are offered
+                 tools = None
+             force = svc.force_text(forced_call(req.get("tool_choice"), tools))      # a bad value is a 400 before anything is sent
+-            messages, validator = prepare_format(req.get("response_format"), messages)
+-            if validator is not None and (tools or req.get("strata_mcp")):
+-                raise ValueError("structured response_format with tools/MCP is not supported")
++            messages, validator = prepare_format(req.get("response_format"), messages, with_tools=bool(tools))
++            if validator is not None and req.get("strata_mcp"):
++                raise ValueError("structured response_format with server-side MCP is not supported")
+             svc.load()
+             max_req = max_new = int(req.get("max_completion_tokens") or req.get("max_tokens") or 0)   # 0/-1: the rest
+             bias_api.validate_request(req, svc.engine, len(getattr(svc.tok, "tokens", ())) or None)
+@@ -8436,6 +8466,10 @@
+         if swapped:
+             print("[strata] this pack's chat template spells the tool-call block differently from the V4.1 model's; "
+                   "using the V4.1 template so tool calls come back as real calls", flush=True)
++    if vision is None and getattr(engine, "info", {}).get("vision") == "ds4":
++        vision = ds4_vision.Vision(ds4_vision.Geometry.from_info(engine.info),
++            Path(tempfile.mkdtemp(prefix="deepseek-native-pictures-")), Vision.load)
++        print("[hosted] native DeepSeek image input enabled", flush=True)
+     svc = Service(engine, tok, ChatTemplate(tpl if tpl.exists() else ROOT / "serve/chat_template.jinja"),
+                   model_name=default_model_name(cfg), vision=vision,
+                   sampling_defaults=sampling_defaults,
+--- a/serve/test_structured.py
++++ b/serve/test_structured.py
+@@ -133,7 +133,7 @@
+         fmt = {"type": "json_schema", "json_schema": {"name": "local", "schema": schema}}
+         self.assertEqual(self.chat('{"answer":4}', response_format=fmt)[0], 200)
+ 
+-    def test_malformed_formats_and_tools_are_rejected_before_loading(self):
++    def test_malformed_formats_and_server_mcp_are_rejected_before_loading(self):
+         formats = ([], {"type": "unsupported"},
+                    {"type": "json_schema", "json_schema": {"schema": {"type": "object"}}},
+                    {"type": "json_schema", "json_schema": {"name": "x", "strict": "true", "schema": {"type": "object"}}})
+@@ -141,10 +141,52 @@
+             for fmt in formats:
+                 with self.subTest(fmt=fmt):
+                     self.assertEqual(self.chat(response_format=fmt)[0], 400)
+-            self.assertEqual(self.chat(tools=[{"type": "function", "function": {"name": "search", "parameters": {"type": "object"}}}])[0], 400)
+             self.assertEqual(self.chat(strata_mcp=True)[0], 400)
+             self.assertEqual(self.request("/v1/chat/completions", [])[0], 400)
+             load.assert_not_called()
++
++    def test_schema_with_client_tools_round_trip(self):
++        tools = [{"type": "function", "function": {"name": "search", "parameters": {
++            "type": "object", "properties": {"query": TEXT}, "required": ["query"]}}}]
++        script = ('</think>\n\n<tool_call>\n<function=search>\n<parameter=query>\nweather\n'
++                  '</parameter>\n</function>\n</tool_call>')
++        for stream in (False, True):
++            with self.subTest(stream=stream):
++                code, response = self.chat(script, tools=tools, stream=stream)
++                self.assertEqual(code, 200, response)
++                prompt = self.tok.decode(self.engine.last_prompt)
++                self.assertIn("This applies only to your final answer", prompt)
++                if stream:
++                    from serve.server import openai_collect
++                    chunks = [json.loads(line[6:]) for line in response.splitlines()
++                              if line.startswith("data: {")]
++                    response = openai_collect(iter(chunks))
++                choice = response["choices"][0]
++                self.assertEqual(choice["finish_reason"], "tool_calls")
++                call = choice["message"]["tool_calls"][0]
++                self.assertTrue(call["id"])
++                self.assertEqual(call["function"]["name"], "search")
++                self.assertEqual(json.loads(call["function"]["arguments"]), {"query": "weather"})
++                # The next request keeps tools declared, includes their result,
++                # and still validates the final answer against the schema.
++                history = [{"role": "user", "content": "Write the story after searching."},
++                           choice["message"], {"role": "tool", "tool_call_id": call["id"],
++                                               "content": "Sunny."}]
++                code, reply = self.chat(json.dumps(STORY), tools=tools, messages=history)
++                self.assertEqual(code, 200, reply)
++                self.assertEqual(json.loads(reply["choices"][0]["message"]["content"]), STORY)
++                code, reply = self.chat("Not JSON", tools=tools, messages=history)
++                self.assertEqual(code, 502, reply)
++                self.assertEqual(reply["error"]["code"], "structured_output_failed")
++
++    def test_structured_tool_truncation_and_tool_choice_none(self):
++        tools = [{"type": "function", "function": {"name": "search", "parameters": {"type": "object"}}}]
++        script = '</think>\n\n<tool_call>\n<function=search>\n<parameter=query>\n' + 'x' * 100
++        code, response = self.chat(script, tools=tools, stream=True, max_tokens=65)
++        self.assertEqual(code, 200)
++        self.assertIn('"structured_output_failed"', response)
++        self.assertNotIn('"tool_calls":', response)
++        self.assertEqual(self.chat(json.dumps(STORY), tools=tools, tool_choice="none")[0], 200)
+ 
+     def test_without_jsonschema_an_object_is_still_required(self):
+         # jsonschema is optional: without it json_schema answers are checked to be one JSON object, json_object
