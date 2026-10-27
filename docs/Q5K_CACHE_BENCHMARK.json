@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-27T17:50:16.667974+00:00",
+  "decision": "KEEP_SELECTED_92ABB8_NO_PROMOTION",
+  "order_reversed_confirmation_allowed": false,
+  "promoted": false,
+  "first_pair_fully_reviewed": true,
+  "reason": "Combined candidate coding and pooled native decode regress; frozen >=2% improvement rule fails.",
+  "scope": "One matched process pair at current1M; not component attribution/statistical/p95/broadquality/nearfilled1M/full256K output proof",
+  "coding_decode_change_pct": -3.6613742193604693,
+  "pooled_main_decode_change_pct": -3.675960160969316,
+  "cold32761_prefill_change_pct": 0.803000779423213,
+  "image_client_change_pct": -5.559909627127791,
+  "main_client_seconds": {
+    "baseline": 349.5251636018511,
+    "candidate": 348.1458876298275,
+    "change_pct": -0.39461421255344575
+  },
+  "main_generated_tokens": {
+    "baseline": 12612,
+    "candidate": 12039
+  },
+  "native_source_commit": "e6034d7da591bc5c848d7f6143387343904ea34e",
+  "candidate_native_sha256": "dcbb39f5e26b5482574b5a79035c39b20f58a3c0b3d4c9965a064917945b31bf",
+  "baseline_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "all_private_native_API_window_exits_zero": true,
+  "all_kernel_and_resource_guards_passed": true,
+  "unrun_conditional_arms": [
+    "B2",
+    "A2"
+  ],
+  "no_replay_or_per_PR_sweep": true,
+  "GPU_launch_ready": false
+}
