@@ -1,0 +1,32 @@
+{
+  "strata_repository": "https://github.com/Niko1221/Strata",
+  "strata_base": "7dd5cf18e68c639a8773e096c5c79f971ea2a9f5",
+  "maya_native_base": "4615f346d9311dd1ce9f5738ab04446f023a6e42",
+  "deployed_server_sha256": "b1be40294f6c49692829ad5f85a7aa2867218180fdc8fbc9bef7710371ba3b9f",
+  "profile": {
+    "context": 524288,
+    "max_output_default": 131072,
+    "effort": 100,
+    "TP": 1,
+    "Q8_batch": 1,
+    "Q8_check": 1,
+    "images": true,
+    "runtime_projection_scale": 1,
+    "cache_namespace_must_include_direction_identity": true
+  },
+  "files": {
+    "model_ready_gate.py": "fbb90b64f7c89352cf5c4da29cd50d725d8def9c097a6b1daa08e3d67ae2aca7",
+    "controller.py": "46584b8687c3e1abfb524333ba4a9e78feeb75374779c44e023f5cae1d9a9045",
+    "hosting_preflight.py": "e3c930b3652095e64a29dcb796dc450a48275f79e0cd31ef1373eff78081c042",
+    "hosting_defaults.py": "846ed06043c81c791fee5fb1b6d383b88706d3e6d827aec1833dbb3b011ab37f",
+    "native-vision-and-tools.patch": "801a65d7982dea025f473ded03356cb68e0dcb1b4e59a0f5d972b82b32326e9a",
+    "switcher.py": "5b102994202e26d8d9357af68248fcc85c1cb3ebc30649a0497668f658182f3f",
+    "config.example.json": "76ea30fade4a1e5d3c9264c2dcaf0633f94dba4c902fd0c0492f8548aa9bdb04",
+    "hosting_ready.py": "d6fa270155505eb6c8848665ddd6df032d939a9bc6031eb8f386a81e892b7b3a",
+    "config.shared-settings.example.json": "d9fc97709aba0cfdd6bc80d5f98d7370363aca4bd18ded8442ffa734a94178f0",
+    "LICENSE-Strata.txt": "949b9b0aada7476006469e58ee4ffb0e0f68c2d9137e90a356757b61a09d37f0",
+    "hosting_entry.py": "25700acf9b780190b46a5c4a30a812a316ff5ea0b2c4db6e1191468dadb20b5d",
+    "overlay/serve/ds4_vision.py": "761212e162004aacf591beb405dc8072f83ee1facaa5398013ec98d5c737da4e"
+  },
+  "scope": "Reproducible deployed API source overlay plus portable hosting templates. Template path substitution is not deployment qualification."
+}
