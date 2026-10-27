@@ -1,6 +1,6 @@
 # Q5_K and cache migration candidate
 
-Status: CPU controls pass on macOS and physical Ubuntu. Native build and GPU/runtime qualification are pending. Production is unchanged.
+Status: implemented, built, GPU-checked and benchmarked as one bundle. Coding decode regressed3.66%; the candidate is not selected. Production is unchanged. See [the full comparison](Q5K_CACHE_BENCHMARK.md).
 
 The dense Q5_K GEMV candidate shares the two exact 16-value activation sums across output rows in a CTA. It preserves the original quantized weights, separate floating minimum products, accumulation order, and original kernel fallback above 32 KiB dynamic shared memory. Enabling `DS4_Q5K_SHARED_SUMS=1` requires an original-versus-optimized GPU check on each device before requests: 72 jobs spanning columns 1–16, mixed batches, odd rows, padding, bias, and large-K fallback. This check is not whole-model equivalence.
 
