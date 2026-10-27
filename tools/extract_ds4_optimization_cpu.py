@@ -11,6 +11,7 @@ METHODS = [
     "    bool stream_direct(", "    bool stage_needed(", "    bool stage_streamed(",
     "    bool copy_streamed(", "    int vram_cap(", "    bool draft_caps(",
     "    bool cp_pin(",
+    "    bool prompt_copy_check(",
 ]
 
 

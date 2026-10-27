@@ -4543,6 +4543,7 @@ struct Model::Impl {
             if ((decode_trim & 12) && !trim_copy_check(err)) return false;
             if (route_fuse_win && !(route_fuse_check(err, 3) && route_fuse_check(err, kWin)))   // (=2: windows too)
                 return false;
+            if (cp_dma && !prompt_copy_check(err)) return false;   // TP1 included, before any request
             if (tp_uneven && (std::getenv("STRATA_DS4_TP_CHECK") != nullptr || std::getenv("DS4_TP_CHECK") != nullptr) &&
                 !tp_check(err))
                 return false;   // (MAYA_DS4_TP_CHECK=1: at load, no request yet)
@@ -12776,6 +12777,62 @@ struct Model::Impl {
         return true;
     }
 
+    // The PR520 copy path is also used at TP1 when the prompt flow is disabled. Validate
+    // every standalone device/format or split format/rotation before any request, not only under TP checks.
+    bool prompt_copy_check(std::string& err) {
+        auto split = [&](const Layer& l) { return !l.mtp && l.nm > 1 && l.lay.fmt == gg::kFmtMXFP4; };
+        auto format = [&](const Layer& l) {
+            std::string fmt;
+            for (int r = 0; r < 3; ++r) fmt += std::string(r ? "/" : "") + gg::type_name(gg::expert_type(l.lay, r));
+            return fmt;
+        };
+        // Each split format/rotation/member and standalone format/device: an expert from RAM
+        // copy and one from the file, through the device (tp_copy_member)
+        int n = 0;
+        std::vector<std::string> done;   // (each key's first layer: a split one's format and rotation, else its format)
+        for (const Layer& l : L) {
+            const bool sp = split(l);
+            if (l.mtp || l.lay.fmt != gg::kFmtMXFP4 || (!sp && l.nm != 1)) continue;
+            const std::string key = sp ? format(l) + " " + std::to_string(l.il % l.nm) : format(l) + " alone " + std::to_string(l.dev);
+            if (std::find(done.begin(), done.end(), key) != done.end()) continue;
+            bool any = false;
+            for (int m = 0; m < l.nm; ++m) {
+                const Layer& x = member(l, m);
+                const Chunk* cp = (size_t) x.dev < chunks.size() ? chunks[(size_t) x.dev].get() : nullptr;
+                if (cp == nullptr || cp->stage == nullptr || cp->flow) continue;
+                any = true;
+                int e_ram = -1, e_file = -1;
+                for (int e = 0; e < l.n_exp; ++e) {
+                    const bool in_ram = !l.ram.empty() && l.ram[(size_t) e] >= 0;
+                    if (in_ram && e_ram < 0) e_ram = e;
+                    if (!in_ram && e_file < 0) e_file = e;
+                }
+                for (int e : {e_ram, e_file}) {
+                    if (e < 0) continue;
+                    size_t bad = 0, bad_guard = 0;
+                    if (!tp_copy_member(l, m, e, bad, bad_guard, err)) return false;
+                    if (bad + bad_guard > 0) {
+                        std::fprintf(stderr, "ds4: TP check: prompt copies %s (layer %d, member %d takes %d of %d, expert "
+                                             "%d from %s%s) FAILED: %zu bytes, %zu guard bytes differ\n",
+                                     format(l).c_str(), l.il, m, x.ffn, g.ff, e, e == e_ram ? "RAM" : "the file",
+                                     stream_direct(l, e) ? ", in place" : "", bad, bad_guard);
+                        err = "TP check FAILED: prompt copies (layer " + std::to_string(l.il) + ")";
+                        return false;
+                    }
+                    std::fprintf(stderr, "ds4: prompt copy check: CUDA%d layer %d member %d expert %d from %s: bytes and guards PASS\n",
+                                 devs[(size_t) x.dev].id, l.il, m, e, e == e_ram ? "RAM" : "file");
+                    ++n;
+                }
+            }
+            if (any) done.push_back(key);
+        }
+        if (cp_dma && n == 0) { err = "Prompt copy check: DMA enabled but no copy path checked"; return false; }
+        if (n > 0)
+            std::fprintf(stderr, "ds4: TP check: the prompt path's copies passed (%d experts' parts, from RAM%s and from "
+                                 "the file, on the devices byte for byte)\n", n, cp_dma ? " in place" : "");
+        return true;
+    }
+
     // DS4_TP_CHECK=1 (DS4_TP_GGUF_UNEVEN, at load, before any request): for each expert format and each rotation of the
     // split layers (which member takes the odd block) - every one they have - one token through every member's parts
     // (tp_check_member: three experts the layer holds in VRAM, weights 0.5 / 0.3 / 0.2, and the shared expert), the
@@ -12887,49 +12944,7 @@ struct Model::Impl {
             std::fprintf(stderr, "ds4: TP check: the flow's copies passed (%d of the formats', rotations' and members' "
                                  "copies) (DS4_FLOW_TP)\n", n);
         }
-        {   // the prompt path off the flow (copy_ahead: stage_streamed, copy_streamed) - each split layer's format and
-            // rotation, each such member, and each format of the layers a device holds alone: an expert from its RAM
-            // copy and one from the file, through the device (tp_copy_member)
-            int n = 0;
-            std::vector<std::string> done;   // (each key's first layer: a split one's format and rotation, else its format)
-            for (const Layer& l : L) {
-                const bool sp = split(l);
-                if (l.mtp || l.lay.fmt != gg::kFmtMXFP4 || (!sp && l.nm != 1)) continue;
-                const std::string key = sp ? format(l) + " " + std::to_string(l.il % l.nm) : format(l) + " alone";
-                if (std::find(done.begin(), done.end(), key) != done.end()) continue;
-                bool any = false;
-                for (int m = 0; m < l.nm; ++m) {
-                    const Layer& x = member(l, m);
-                    const Chunk* cp = (size_t) x.dev < chunks.size() ? chunks[(size_t) x.dev].get() : nullptr;
-                    if (cp == nullptr || cp->stage == nullptr || cp->flow) continue;
-                    any = true;
-                    int e_ram = -1, e_file = -1;
-                    for (int e = 0; e < l.n_exp; ++e) {
-                        const bool in_ram = !l.ram.empty() && l.ram[(size_t) e] >= 0;
-                        if (in_ram && e_ram < 0) e_ram = e;
-                        if (!in_ram && e_file < 0) e_file = e;
-                    }
-                    for (int e : {e_ram, e_file}) {
-                        if (e < 0) continue;
-                        size_t bad = 0, bad_guard = 0;
-                        if (!tp_copy_member(l, m, e, bad, bad_guard, err)) return false;
-                        if (bad + bad_guard > 0) {
-                            std::fprintf(stderr, "ds4: TP check: prompt copies %s (layer %d, member %d takes %d of %d, expert "
-                                                 "%d from %s%s) FAILED: %zu bytes, %zu guard bytes differ\n",
-                                         format(l).c_str(), l.il, m, x.ffn, g.ff, e, e == e_ram ? "RAM" : "the file",
-                                         stream_direct(l, e) ? ", in place" : "", bad, bad_guard);
-                            err = "TP check FAILED: prompt copies (layer " + std::to_string(l.il) + ")";
-                            return false;
-                        }
-                        ++n;
-                    }
-                }
-                if (any) done.push_back(key);
-            }
-            if (n > 0)
-                std::fprintf(stderr, "ds4: TP check: the prompt path's copies passed (%d experts' parts, from RAM%s and from "
-                                     "the file, on the devices byte for byte)\n", n, cp_dma ? " in place" : "");
-        }
+        if (!cp_dma && !prompt_copy_check(err)) return false;
         std::fprintf(stderr, "ds4: TP check passed (%zu expert formats and rotations, all the split layers have) "
                              "(DS4_TP_CHECK)\n", seen.size());
         return true;
