@@ -38,7 +38,7 @@ The combined source has separate CPU checks on macOS and physical Ubuntu: 42 con
 extracted native methods through a fake device backend, and five tests cover the offline profile tool.
 The tests cover RAM/file and NUMA/member layouts, direct DMA bytes and guards, copy/read failures,
 pin registration rollback, and drafter cap rejection. They do not execute CUDA or prove fused arithmetic.
-The production fused paths have their own startup byte checks, which must pass on real devices before use.
+The candidate fused paths have startup byte checks, which must pass on real devices before use.
 
 The new optimization controls are off when unset. `DS4_COPY_PIN=1` registers copies only for the
 non-flow prompt copy path; it does not accelerate the independent flow path or imply a decode gain.
@@ -47,3 +47,9 @@ New source must be built, audited and qualified through the existing owned maint
 replacing a hosted binary. No benchmark, restart, model download or service change happens by cloning this fork.
 
 See [the hosted integration](integrations/strata-hosted/README.md) for reproducible API and hosting sources.
+
+The first isolated SM80 CUDA build passed. A static audit compared all 1019 tracked base files,
+verified the exact 10 changed and eight new files, checked SM80-only device code and matched
+runtime dependencies against the selected engine. The candidate engine has not been executed.
+See [the bounded qualification record](docs/FORK_QUALIFICATION.json). GPU/runtime/API/lifecycle
+checks and performance measurements remain pending; the PR stays draft and the deployed binary is unchanged.
