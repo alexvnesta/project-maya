@@ -1,0 +1,179 @@
+{
+  "status": "COMBINED_GPU_AB_COMPLETE_NOT_PROMOTED_PREFILL_REGRESSION_REPEAT_PARTIAL",
+  "upstream_base": "4615f346d9311dd1ce9f5738ab04446f023a6e42",
+  "native_source_commit": "147264ac83ec94c88c50a521d18ec266d6260b9e",
+  "integration_merge_commit": "abc2f85e8dadf44c372a0d8271c9c5f80b26f423",
+  "native_binary_sha256": "64c6890832e08d3b393ed73bd3606452c9801c0796da3f60df1a70d853c8605d",
+  "new_CPU_methods_per_host": 48,
+  "profile_tool_tests_per_host": 5,
+  "build_admission_controls_per_host": 20,
+  "HIP_mapping_check": "PASS (not a HIP build)",
+  "CUDA_build": {
+    "architecture": "sm_80 only",
+    "parallel": 2,
+    "CUDA_VISIBLE_DEVICES": "",
+    "result": "V2_SM80_BUILD_PASS_REAL_STARTUP_EXECUTED",
+    "runtime_dependencies_match_selected": true,
+    "native_executed": true,
+    "source_commit": "147264ac83ec94c88c50a521d18ec266d6260b9e"
+  },
+  "static_source_audit": {
+    "tracked_files_compared": 1019,
+    "changed_tracked_files": 10,
+    "new_files": 8,
+    "all_match_frozen_manifest": true
+  },
+  "native_source_files_sha256": {
+    "CMakeLists.txt": "a86987b3ff43b883451a7725458f4f8825c415ab61114af74ff56dc0cc6c7478",
+    "README.md": "91af3a5aef18fb2528e65471010dd36a4d96eacd9c9db3ea9ce90ef8bc6381df",
+    "docs/DS4_PROFILE_REFRESH.md": "863ede92e536a44772c872777cc2695ccfdfc1a64acbfff5fdac7e5225588d1d",
+    "docs/SETTINGS.md": "8dc591c76565dd1a87a8caecc79357ff2214173981d48c1ab78d2287c6fea658",
+    "src/ds4/ds4_ablate.hpp": "6af30f3ad1f79eccbcf0f42b6a8b97dab9d9fb9e4a65ea2afb5bfe0bb3ba8599",
+    "src/ds4/ds4_gguf.cu": "9f3a5d2a6a898868fe7f7b898c55f34a63581f94b0fab750489bfdf21adb35b2",
+    "src/ds4/ds4_gguf.cuh": "f8c89f3e5b46a462d5b98c7e7af1e482e2497acceb6d550ec76d432a892fab20",
+    "src/ds4/ds4_kernels.cu": "2330280798c9705a1a273065f1d0e66157dfd5f1f21d4143f73083f548dfdd03",
+    "src/ds4/ds4_kernels.cuh": "811202b7f4d449564ca17fa5f7935f8fca916712d44105ec741dd07a0be3a950",
+    "src/ds4/ds4_main.cpp": "d5379f9bf1a6b07f0f9352a68521f3f096784c3b63fb6caa25235ace38be1188",
+    "src/ds4/ds4_model.cu": "e53538f7329a3a1edf993aaffafb08ce71a6d5fa303197b9f7f915a2a2c86309",
+    "src/ds4/ds4_model.hpp": "19ebd124a43086dcbb9f5ddf875f79cc1131d18be2b7fd05ada2d3d92a63c2ee",
+    "src/ds4/shared_q5_reference.h": "4781b1f31a358945d87437cc923de1ed37d5d7eb5c1099b26f11218798459bf4",
+    "tests/ds4_ablate_test.cpp": "82b85841d402c845afa917d3c562167efd6719e4c007d87966403a7d978799e9",
+    "tests/ds4_optimization_cpu_test.cpp": "ed09c1a1ca541fbb257ffbe88897ab9e9089eb042a31a786669ab2f4fe072e48",
+    "tools/extract_ds4_optimization_cpu.py": "0662fe83bf0542a6d9442d48737ce6cfba0c9b434277ac712e2b3a190dabc16f",
+    "tools/refresh_ds4_profile.py": "09372e1292f587716d406a218a9b13c25e98bdb34491bafd3457b0b626aec006",
+    "tools/test_refresh_ds4_profile.py": "b58b9425fd1fdd955fa27307ddcf5e937067916edef3fcfed966a5d1234d4c52"
+  },
+  "first_CPU_attempts": "Test shim compile and down-role geometry failures retained privately; corrected exact-source controls passed; neither was a native/GPU execution",
+  "deployed_native_unchanged": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "runtime_qualification": "Targeted real both-GPU startup/main-panel/lifecycle checks pass; repeat deadline-cancelled. Full candidate eligibility failed; no promotion.",
+  "performance_gain": "NONE_ESTABLISHED_COMBINED_BUNDLE_REJECTED",
+  "GPU_launch_ready": false,
+  "new_private_mode_CPU_controls_per_host": 133,
+  "historical_first_build": {
+    "source_commit": "9a116a8c206d0b0e03b847bd6f2df2e843f27d0f",
+    "binary_sha256": "bbd85e6b5a5f4e2b1bc170418ea3c4af9854c6023b62119989ce8228fcc8bd61",
+    "executed": false
+  },
+  "combined_benchmark": {
+    "schedule": [
+      "A",
+      "B"
+    ],
+    "context": 524288,
+    "production_output_default": 131072,
+    "main_case_output_cap": 32768,
+    "effort": 100,
+    "configuration": {
+      "STRATA_DS4_HC_FUSE": "2",
+      "STRATA_DS4_ROUTE_FUSE": "2",
+      "STRATA_DS4_DECODE_TRIM": "15",
+      "STRATA_DS4_DRAFT_VRAM": "96",
+      "STRATA_DS4_LOAD_DROP_CACHE": "1",
+      "DS4_COPY_PIN": "1",
+      "DS4_FLOW": "0"
+    },
+    "baseline_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "candidate_native_sha256": "64c6890832e08d3b393ed73bd3606452c9801c0796da3f60df1a70d853c8605d",
+    "cold_32761_native_prefill_ms": {
+      "A": 50717.4,
+      "B": 97934.3
+    },
+    "first_coding": {
+      "A": {
+        "tokens": 12631,
+        "native_decode_ms": 280668.0,
+        "native_decode_tps": 45.003349152735616,
+        "native_prefill_ms": 1928.2,
+        "reused": 0,
+        "drafts_accepted": 7586,
+        "drafts_offered": 9913,
+        "client_full_s": 282.6119446421508,
+        "client_first_reasoning_s": 1.9323377760592848,
+        "client_first_content_s": 254.0294544911012,
+        "client_first_tool_s": null
+      },
+      "B": {
+        "tokens": 9411,
+        "native_decode_ms": 209512.7,
+        "native_decode_tps": 44.918518065969266,
+        "native_prefill_ms": 1900.8,
+        "reused": 0,
+        "drafts_accepted": 5507,
+        "drafts_offered": 7651,
+        "client_full_s": 211.42870529089123,
+        "client_first_reasoning_s": 1.9061854660976678,
+        "client_first_content_s": 189.55831589689478,
+        "client_first_tool_s": null
+      }
+    },
+    "image_client_full_s": {
+      "A": 4.874857481801882,
+      "B": 7.118093752069399
+    },
+    "raw_basic_each_arm": 5,
+    "raw_full_each_arm": 3,
+    "raw_grades_unchanged": true,
+    "code_validation": {
+      "A_main": {
+        "cases": 2207,
+        "checks": 4414,
+        "supplied_tests": 28,
+        "negative_controls": 4,
+        "both_hosts": true
+      },
+      "A_repeat": {
+        "cases": 2207,
+        "checks": 4414,
+        "supplied_tests": 17,
+        "negative_controls": 4,
+        "both_hosts": true
+      },
+      "B_main": {
+        "cases": 2207,
+        "checks": 4414,
+        "supplied_tests": 13,
+        "negative_controls": 4,
+        "both_hosts": true
+      },
+      "B_repeat": "UNRUN_PARTIAL_NO_CONTENT"
+    },
+    "B_repeat": "8458tokens, cancelled by fixed1000s soft deadline before complete content; code review UNRUN, not a passing speed/quality observation",
+    "real_startup_checks": "Both GPUs: Q8, residual projection, fused arithmetic/bytes, compressor-copy guards, registered prompt RAM/file bytes and guards, handoff pairs; all pass",
+    "private_native_API_window_cleanup": "Both native/API/window exits0, kernel/root/swap guards pass",
+    "deployment": "Existing92abb8 release restored/public READY verified after both arms; no config/native promotion",
+    "scope_limits": [
+      "One combined processpair, no order balancing/statistical/p95/broadaccuracy/individualPRcausal attribution",
+      "Short panel at524288allocation; no nearfilled512K or full128K output proof",
+      "Variable output lengths anddraftacceptance; clientelapsed differences are not fixed-work speedup",
+      "Partial repeat excluded from any passing coding or quality aggregation"
+    ]
+  },
+  "capacity_upgrade_20261027": {
+    "date": "2026-10-27",
+    "context_allocation": 1048576,
+    "output_default": 262144,
+    "selected_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "native_changed": false,
+    "CPU_controls_each_host": 111,
+    "actual_native_requests": 7,
+    "actual_HTTP_requests": 8,
+    "targeted_gates": [
+      "omitted-output-default native cap262144",
+      "32761token typedJSON",
+      "nativeimage",
+      "stricttypedtoolcall",
+      "cache32760of32761",
+      "activeandqueuedcancel",
+      "recovery",
+      "DSI1cleanup"
+    ],
+    "native_API_window_exit0": true,
+    "kernel_resource_guards_passed": true,
+    "all_CPU_experts_in_RAM": 3903,
+    "GPU_expert_slots": 11457,
+    "public_auth_and_raw_streaming_READY": true,
+    "initial_harness_failures_retained_unqualified": true,
+    "nearfilled1M_or_full256K_output_tested": false,
+    "speed_or_broadquality_claim": false
+  }
+}

@@ -66,6 +66,7 @@ struct Image {
 struct Stats {
     int64_t tokens = 0;
     int64_t experts = 0, cpu_experts = 0;   // routed experts run, and how many of them on the CPU lane
+    int64_t draft_experts = 0, draft_cpu = 0;   // ... of them the DSpark blocks', and theirs on the CPU lane
     int64_t stream_experts = 0;             // ... and how many of the others streamed to the GPU (the PCIe lane)
     double cpu_ms = 0.0, gpu_wait_ms = 0.0;   // the CPU lane's time; the host's waits for the routing
     double layer_ms = 0.0, head_ms = 0.0, engram_ms = 0.0;   // the layers' host time in all; the head's wait; Engram reads

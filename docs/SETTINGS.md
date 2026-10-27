@@ -544,6 +544,32 @@ no consistent prompt-speed difference.
 | `--ablate FILE` (the config's engine `args`) | off | a control vector or a whole-model abliteration adapter (GGUF) |
 | `--ablate-layer N` | the adapter's, or a one-direction file's | which `direction.N` of a control vector (1-4096) |
 | `--ablate-scale F` | the adapter's `abliterate.scale` (x `adapter.lora.alpha`), else 1 | s, 1e-6 to 1e6; 1 removes the component along r, above 1 over-projects |
+## DeepSeek: a decoded token's small launches fused
+
+A decoded token runs a few launches a layer that do almost nothing: the HC split (one warp) and its pre-norm (one
+block), the attention input's int8 rounding and the layer's copy of the pre slots; and on a group's lead the router
+stage - the layer's gate, the next layer's gate (the lookahead's guesses), the routing and the guesses, four launches.
+`MAYA_DS4_HC_FUSE=1` runs the split and the norm in one launch and rounds the attention's input there (three launches
+fewer a layer); `MAYA_DS4_ROUTE_FUSE=1` runs the two gates in one launch and the routing and the guesses in another.
+`2` does the same for a DSpark verify window's rows too (`MAYA_DS4_HC_FUSE=2` also rounds the FFN's input for the
+shared expert). The old kernels stay; at load, before any request, every GPU runs both paths on its first and last
+layers (random, edge and tie inputs) and compares every byte - a difference fails the start, so the answers are the
+same. Not on a wave64 build (gfx908).
+
+| Setting | Default | |
+| --- | --- | --- |
+| `MAYA_DS4_HC_FUSE` | off (0) | `1`: a decoded token's HC split and norm in one launch, the attention input rounded to int8 there; `2`: a verify window's rows too, and the FFN input rounded for the shared expert (the same bits, checked at load) |
+| `MAYA_DS4_ROUTE_FUSE` | off (0) | `1`: a decoded token's router stage on a group's lead in two launches instead of four; `2`: a verify window's rows too (the same bits, checked at load; one layer of lookahead, `DS4_AHEAD` 1, the default) |
+
+`MAYA_DS4_DECODE_TRIM=<bits>` takes four more small steps out of a decoded window, each checked at load the same way:
+`1` the shared expert's swiglu rounds its output to int8 for its down GEMV, `2` q's norm rounds its output for wq_b,
+`4` a verify window's compressor snapshot (four copies) and a ratio-1 layer's latent copy one kernel each, `8` the
+DSpark drafter's final rows handed to the head group's GPUs through host-mapped rows and a flag,
+instead of copies through pinned memory and events. This fork keeps the existing drafter block placement. The bits add up (`15`: all four).
+
+| Setting | Default | |
+| --- | --- | --- |
+| `MAYA_DS4_DECODE_TRIM` | 0 | bits: `1` s2's int8 input from the swiglu, `2` wq_b's from q's norm, `4` the snapshot and latent copies one kernel each, `8` the drafter's hand-offs by host-mapped rows (the same bits, checked at load) |
 
 ## DeepSeek: tensor parallel 2 on Maya's own quants
 
@@ -564,6 +590,18 @@ member's parts as decode runs them, summed on the host and compared with the who
 | `MAYA_DS4_TP_GGUF_UNEVEN` | off | `1`: a GGUF's experts split in whole blocks, as even as they go, so its group can form |
 | `MAYA_DS4_TP_CHECK` | off | `1`: each member's parts checked against the whole expert at load |
 
+## DeepSeek: limiting drafter experts in VRAM
+
+How many of a block's experts VRAM keeps: on one GPU, all of them as the room goes; on a group of several, once the
+expert profile has seen the drafter, those that take 99% of the block's routes, and more only while its member keeps
+the room of the group's next tightest member - the rest on the CPU lane. `MAYA_DS4_DRAFT_VRAM` sets it instead: each
+block keeps up to that many, the profile's hottest, as the room goes; the rest on the CPU lane, so the trunk keeps the
+room. A request's log then says how many of the drafter's picks took the CPU lane.
+
+| Setting | Default | |
+| --- | --- | --- |
+| `MAYA_DS4_DRAFT_VRAM` | off (placed as above) | the most VRAM experts each DSpark block keeps, its profile's hottest: one number for every block, or one a block (`96,48,32`); 0 .. a block's experts (128) |
+
 ## DeepSeek: where the measured hipBLASLt picks are kept (AMD)
 
 On AMD the engine measures hipBLASLt's kernels for each prompt GEMM shape at its first use on a GPU and keeps the
@@ -582,6 +620,59 @@ pack has no counts yet, so the setup copies `data/expert-profile-ds4.bin` into i
 chat, code, multilingual text, reasoning and tool calls (`tools/ds4/profile.py`). Its counts weigh as much as about
 2,000 tokens of answers, so what your PC routes soon outweighs them. A pack that already has a profile keeps its own;
 an `--expert-profile` in the config's `args` (a file, or `none`) is used instead.
+
+## DeepSeek: loading the experts
+
+The engine reads the pack's expert regions into VRAM and RAM at start: 15,744 experts, 73 GB into VRAM and 147 GB
+into RAM here. The load is disk-bound, and the pack's files are read one after another, so a single file's regions
+are read in sequence. Three settings change how it reads them. In this fork all preserve the selected loader's behavior when unset.
+
+| Setting | Default | |
+| --- | --- | --- |
+| `MAYA_DS4_LOAD_DROP_CACHE` | off (fork) | drop each region's pages from the file cache once its bytes are copied; `0` keeps them |
+| `MAYA_DS4_LOAD_THREADS` | 12 | the threads that read the experts' regions (an EXL3 or other region pack; a GGUF pack's copies keep their own count): more threads load faster on a machine with the cores |
+| `MAYA_DS4_LOAD_INTERLEAVE` | off | `1`: the files round-robin - the first expert of each file, then the second, ... - so the threads read several files at once (a pack split over two drives streams both); `0`: file by file, as before |
+
+### The pages are dropped as the bytes are copied
+
+A buffered read leaves the expert's bytes in the file cache as well as in VRAM or RAM - the same 223 GB twice, on
+a machine with 251 GB. Past the first ~77 GB every new page is then allocated by reclaiming in the thread that
+copies: 0.79-0.91 GB/s measured, with 124-140 GB of page cache, memory PSI full at 69.7% and `pgsteal_direct`
+growing at the very rate of the copy. The load now calls `posix_fadvise(DONTNEED)` on each expert's region once its
+bytes are copied (`copy_experts` for a GGUF's experts into RAM, `load_experts` for an EXL3 pack's): the page cache
+stays at a few MB and the copy runs at the disk's speed. In place, where the CPU lane's experts *are* the file cache,
+only the VRAM experts' pages are dropped, as they already were.
+
+The drop is not free: walking 203 GB of pages costs about 20 us a MB, 4 s in all - and on a pack whose RAM tier
+leaves the cache room, the reclaim that the drop saves costs less than that. Upstream enables it by default; this fork requires an explicit opt-in while its load behavior is qualified on the target host.
+
+Measured cold (the container stopped, `echo 3 > /proc/sys/vm/drop_caches`, then started; the engine's own
+`ds4: loaded in` line):
+
+UD-Q4_K_XL, GGUF, 11 files over two NVMe drives (65 GB of experts into VRAM, 223 GB copied into RAM):
+
+- before: 0.79-0.91 GB/s, page cache 124-140 GB, ~6 min to `/health` 200
+- after: 5.6-6.0 GB/s, page cache 4 MB, **56.7-58.6 s** to `/health` 200
+
+EXL3 2.9bpw, 203 GB (14.7k experts into 146.7 GB of RAM, `--mmap-experts off`):
+
+- today (12 threads, file by file, no drop): 41.4 and 42.1 s, page cache peaking at 140-143 GB
+- pages dropped (12 threads, file by file): 45.2 and 48.5 s, page cache 11 GB
+- pages dropped, 24 threads, interleaved: 27.1 and 27.0 s, page cache 12 GB, 11.4 GB/s
+
+The second line is the cost above: the RAM tier leaves the cache room, so the drop alone is a little slower. What
+takes 203 GB to 27 s is the order and the threads.
+
+### If the load stalls part-way: huge pages
+
+The RAM tier is allocated with `MADV_HUGEPAGE`. On a machine where the 2 MB blocks run out (here: at 190 GB of the
+223), every further 2 MB fault does a synchronous direct compaction, and when that keeps failing the fault stalls
+and retries: 77 MB/s measured, `/proc/buddyinfo` with no order-9 blocks left, `compact_stall` 108 a second and
+`compact_success` 0. `echo defer > /sys/kernel/mm/transparent_hugepage/defrag` makes a fault that cannot have a
+huge page fall back to 4 KB at once and leaves `kcompactd` to refill in the background: 77 MB/s -> 760 MB/s, and
+no stalls. That is the machine's setting, not the engine's - a `tmpfiles.d` line keeps it:
+
+    w /sys/kernel/mm/transparent_hugepage/defrag - - - - defer
 
 ## DeepSeek: conversations kept (an agent's parent and workers on one model)
 

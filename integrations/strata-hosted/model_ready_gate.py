@@ -6,7 +6,7 @@ def qualified(health,models):
  s=health.get('switcher') or {}
  if health.get('status')!='ok' or s.get('fault') or s.get('default_model')!='deepseek' or s.get('active_model') not in ['deepseek','qwen','glm']:return False
  if models.get('default_model')!='deepseek-v4.1-flash-iq2-xs':return False
- if s['active_model']=='deepseek' and not (health.get('loaded') and health.get('max_context')==524288 and health.get('images') is True):return False
+ if s['active_model']=='deepseek' and not (health.get('loaded') and health.get('max_context')==1048576 and health.get('images') is True):return False
  return True
 
 def main():
