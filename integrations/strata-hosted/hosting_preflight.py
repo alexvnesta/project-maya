@@ -10,14 +10,14 @@ def competing_model_units():
 def validate_config(config):
     if config['host']!='127.0.0.1' or config['port']!=18141:raise RuntimeError('Unexpected hosting bind')
     args=config['args']
-    for flag,value in [('--max-context','524288'),('--dspark','on'),('--vision','on'),('--tp','1'),('--ablate',str(DEPLOY/'runtime-direction-L22.gguf')),('--ablate-scale','1')]:
+    for flag,value in [('--max-context','1048576'),('--dspark','on'),('--vision','on'),('--tp','1'),('--ablate',str(DEPLOY/'runtime-direction-L22.gguf')),('--ablate-scale','1')]:
         if args.count(flag)!=1 or args.index(flag)+1>=len(args) or args[args.index(flag)+1]!=value:raise RuntimeError('Serving contract mismatch')
     if config.get('hosted_default_effort')!=100:raise RuntimeError('Default maximum effort changed')
     if any(config.get(k)!=v for k,v in [('answer_room',False),('reasoning_budget_tokens',0),('repeat_stop_tokens',0),('reasoning_loop_recovery',False),('fit_max_tokens',False)]):raise RuntimeError('Quality policy changed')
     if config['exe']!=str(DEPLOY/'bin/maya-ds4'):raise RuntimeError('Unexpected native executable')
     env=config.get('env',{})
     if env.get('STRATA_DS4_Q8_BATCH')!='1' or env.get('DS4_Q8_CHECK')!='1':raise RuntimeError('Q8/check disabled')
-    if env.get('STRATA_DS4_SLOT_DIR')!=str(DEPLOY/('state/conversation-cache-'+os.environ['MAYA_DIRECTION_SHA256']+'-s1-512k')):raise RuntimeError('Projection requires isolated KV cache namespace')
+    if env.get('STRATA_DS4_SLOT_DIR')!=str(DEPLOY/('state/conversation-cache-'+os.environ['MAYA_DIRECTION_SHA256']+'-s1-1m')):raise RuntimeError('Projection requires isolated KV cache namespace')
 def main():
     manifest=json.loads((DEPLOY/'release.json').read_text())
     config=json.loads((DEPLOY/'config.json').read_text())
@@ -25,7 +25,7 @@ def main():
         if sha(name)!=expected:raise RuntimeError('Release identity changed: '+name)
     validate_config(config)
     args=config['args']
-    if json.loads((DEPLOY/'config.shared-settings.json').read_text()).get('max_tokens')!=131072:raise RuntimeError('Output default changed')
+    if json.loads((DEPLOY/'config.shared-settings.json').read_text()).get('max_tokens')!=262144:raise RuntimeError('Output default changed')
     lock=(ROOT/'experiment.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     latest=max((ROOT/'windows').glob('*.json'),key=lambda p:p.stat().st_mtime)
     state=json.loads(latest.read_text())

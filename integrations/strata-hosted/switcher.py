@@ -45,8 +45,8 @@ def qualified_deepseek_records(config,receipt):
     def setting(flag):
         try:return args[args.index(flag)+1]
         except (ValueError,IndexError):return None
-    if config.get('model_name')!=CANONICAL['deepseek'] or setting('--max-context')!='524288' or setting('--vision')!='on':return []
-    if health.get('max_context')!=524288 or health.get('images') is not True:return []
+    if config.get('model_name')!=CANONICAL['deepseek'] or setting('--max-context')!='1048576' or setting('--vision')!='on':return []
+    if health.get('max_context')!=1048576 or health.get('images') is not True:return []
     data=receipt.get('models',{}).get('data',[])
     return [r for r in data if r.get('id')==CANONICAL['deepseek'] and 'image' in r.get('architecture',{}).get('input_modalities',[])]
 
@@ -240,7 +240,7 @@ def make_app(services=None, controller=None, http_client=None):
             record["status"] = {"value": "loaded" if state["controller"].active == target else "unloaded"}
             if target == "deepseek":
                 context=record.get('meta',{}).get('n_ctx')
-                if isinstance(context,int):record.update(context_length=context,context_window=context,max_output_tokens=131072)
+                if isinstance(context,int):record.update(context_length=context,context_window=context,max_output_tokens=262144)
                 record["capabilities"] = {"tools": True, "streaming": True, "reasoning": True,
                     "structured_output": {"formats":["json_object","json_schema"],"constrained_decoding":False},
                     "image_input": "image" in record.get("architecture",{}).get("input_modalities",["text"])}
