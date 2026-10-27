@@ -147,5 +147,33 @@
       "Variable output lengths anddraftacceptance; clientelapsed differences are not fixed-work speedup",
       "Partial repeat excluded from any passing coding or quality aggregation"
     ]
+  },
+  "capacity_upgrade_20261027": {
+    "date": "2026-10-27",
+    "context_allocation": 1048576,
+    "output_default": 262144,
+    "selected_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "native_changed": false,
+    "CPU_controls_each_host": 111,
+    "actual_native_requests": 7,
+    "actual_HTTP_requests": 8,
+    "targeted_gates": [
+      "omitted-output-default native cap262144",
+      "32761token typedJSON",
+      "nativeimage",
+      "stricttypedtoolcall",
+      "cache32760of32761",
+      "activeandqueuedcancel",
+      "recovery",
+      "DSI1cleanup"
+    ],
+    "native_API_window_exit0": true,
+    "kernel_resource_guards_passed": true,
+    "all_CPU_experts_in_RAM": 3903,
+    "GPU_expert_slots": 11457,
+    "public_auth_and_raw_streaming_READY": true,
+    "initial_harness_failures_retained_unqualified": true,
+    "nearfilled1M_or_full256K_output_tested": false,
+    "speed_or_broadquality_claim": false
   }
 }

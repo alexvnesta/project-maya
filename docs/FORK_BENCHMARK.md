@@ -31,9 +31,37 @@ physical Ubuntu. Baseline main 28 tests, baseline repeat 17 tests and candidate 
 Both private runs closed their native/API/window processes with exit 0. Kernel and root/swap resource guards
 passed. The original hosted native 92abb8/configuration was restored and verified through public 401,
 authenticated model discovery and raw streaming READY. Context 524288/output default 131072/Q8/TP1/native images/
-runtime projection remain selected; the measured main requests used cap 32768 and effort 100.
+runtime projection were selected at that comparison; the measured main requests used cap 32768
+and effort 100. The later capacity change below does not alter those comparison settings or results.
 
 This single process pair is not order-balanced or statistical evidence, a p95 estimate, broad accuracy,
 near-filled 512K input/full 128K output proof, or proof that any individual PR is beneficial. No candidate
 activation or further sweep is planned from these results. Raw private receipts and original failed attempts
 remain retained outside this repository; this document contains only aggregate qualification metadata.
+
+## Capacity update: 2026-10-27
+
+The unchanged selected native `92abb8` now allocates 1,048,576 context tokens, with a
+262,144-token default output allowance. TP1, Q8 batch/check, native images, runtime projection,
+DSpark, sampling policy and the frozen profile seed remain unchanged. The combined optimization
+candidate above remains unpromoted.
+
+A focused check observed actual native KV residency at 1,048,576 tokens, both-GPU Q8 and
+projection checks, 3,903 CPU experts entirely in RAM and 11,457 GPU expert slots. Seven native
+requests/eight HTTP requests passed the omitted-output-default probe, 32K typed JSON, native
+image, typed tool, exact-prefix cache reuse, active/queued cancellation and recovery gates.
+The omitted-cap request reached native with `max_new=262144` and stopped naturally after eight
+tokens. Native, API and window exits were 0; kernel, disk/swap and DSI1 cleanup checks passed.
+Production startup, authenticated discovery and raw streaming READY passed after activation.
+
+Two initial harness attempts remain unqualified: a strict observation-path refusal before
+inference, then a wrapper false negative for a valid `tool_calls` finish. Their original
+receipts remain unchanged; the latter left cache/cancellation/recovery UNRUN. The corrected
+phase was manually reviewed and passed 111 bounded CPU controls on each of macOS and physical
+Ubuntu, including the entire phase body with scripted API/native boundaries and negative
+controls. Those CPU controls are separate from the actual native results above.
+
+This was an allocation and targeted-functionality check, with at most 32,761 prompt tokens.
+It does not establish near-filled 1M quality, latency or capacity behavior, full 256K generation,
+a speed gain or broad accuracy. With the full output allowance reserved, context leaves
+786,432 prompt tokens before framing. Old explicit lower request caps are still honored.

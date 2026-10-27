@@ -27,3 +27,10 @@ These templates create no services and perform no installation by themselves. Ad
 requires a fresh source, configuration and lifecycle review. The router retains its existing explicit
 backend-selection support, but this DeepSeek fork does not start or qualify other models.
 `PROVENANCE.json` distinguishes deployed source identity from template portability changes.
+
+The current profile allocates 1,048,576 context tokens and defaults to a 262,144-token
+output allowance. The context includes generated output, leaving 786,432 prompt tokens
+before framing when the full output allowance is reserved. These settings passed actual
+allocation and targeted image/tool/cache/cancellation/recovery checks on the selected native;
+they are not a filled-1M or full-256K-generation result. See
+[`FORK_BENCHMARK.md`](../../docs/FORK_BENCHMARK.md#capacity-update-2026-10-27) for the bounded result.
