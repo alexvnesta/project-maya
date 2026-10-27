@@ -3213,7 +3213,7 @@ void swiglu(const float* g, const float* u, int n, float lim, float* h, cudaStre
 bool swiglu_q8(const float* g, const float* u, int n, float lim, float* h, int8_t* q, float* qd, cudaStream_t s) {
     if (n % 32 != 0 || q == nullptr || qd == nullptr) return false;
     if (n > 0) swiglu_q8_kernel<<<cdiv(n, kThreads), kThreads, 0, s>>>(g, u, n, lim, h, q, qd);
-    return true;
+    return cudaGetLastError() == cudaSuccess;
 }
 bool copy_regions(const CopyRegions& r, cudaStream_t s) {
     if (r.n < 1 || r.n > 4) return false;
@@ -3224,7 +3224,7 @@ bool copy_regions(const CopyRegions& r, cudaStream_t s) {
     }
     const unsigned bx = (unsigned) std::max<size_t>(1, std::min<size_t>(64, (most + kThreads - 1) / kThreads));
     copy_regions_kernel<<<dim3(bx, (unsigned) r.n), kThreads, 0, s>>>(r);
-    return true;
+    return cudaGetLastError() == cudaSuccess;
 }
 
 void compress_win(const float* kv, const float* score, float* kv_state, float* score_state, int ratio, int p0, int T,

@@ -23,6 +23,7 @@
 #include "ds4_pcie.cuh"
 #include "ds4_pcie.hpp"
 #include "ds4_q6k.cuh"
+#include "shared_q5_reference.h"
 #include "ds4_pool.hpp"
 #include "ds4_prefill_stats.hpp"
 #include "ds4_vision.cuh"
@@ -57,6 +58,7 @@
 #include <numeric>
 #include <sstream>
 #include <thread>
+#include <system_error>
 #include <unordered_map>
 
 #if defined(_MSC_VER)
@@ -5906,7 +5908,7 @@ struct Model::Impl {
                             failed.store(true);
                             break;
                         }
-                        if (drop_cache)
+                        if (file_experts || drop_cache)
                             os::advise(pk.fds[(size_t) l.region_file[(size_t) e]], l.region_off[(size_t) e], l.region_bytes[(size_t) e], false);
                     } else if (!file_experts) {
                         for (int X = 0; X < NH; ++X) repack_part(l, region.data(), X, l.hh[(size_t) e][(size_t) X]);
@@ -7898,8 +7900,8 @@ struct Model::Impl {
         auto gemv = [&](const std::string& name, const std::vector<float>& in, std::vector<float>& out) {
             const Tensor* t = pk.get(l.name + name + ".weight");
             if (t == nullptr || t->shape.size() != 2 || (int) t->shape[1] != (int) in.size() ||
-                (t->dtype != "Q8_0" && t->dtype != "BF16")) {
-                err = l.name + name + ": not a BF16 / Q8_0 matrix of " + std::to_string(in.size()) + " inputs";
+                (t->dtype != "Q8_0" && t->dtype != "BF16" && t->dtype != "Q5_K")) {
+                err = l.name + name + ": not a BF16 / Q8_0 / Q5_K matrix of " + std::to_string(in.size()) + " inputs";
                 return false;
             }
             const int n = (int) t->shape[0], k = (int) t->shape[1];
@@ -7907,6 +7909,13 @@ struct Model::Impl {
             if (!pk.read(*t, w.data())) {
                 err = l.name + name + ": read failed";
                 return false;
+            }
+            if (t->dtype == "Q5_K") {
+                if (!q5_shared_cpu::gemv(w, n, k, in, out)) {
+                    err = l.name + name + ": Q5_K shared host reference rejected shape/size/nonfinite/rounding";
+                    return false;
+                }
+                return true;
             }
             out.assign((size_t) n, 0.0f);
             if (t->dtype == "BF16") {
