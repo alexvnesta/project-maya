@@ -40,6 +40,9 @@
 #include <cstring>
 #include <mutex>
 #include <unordered_map>
+#include <chrono>
+#include <thread>
+#include <vector>
 
 namespace strata::ds4::gguf::iq {
 namespace {
@@ -876,16 +879,36 @@ constexpr int kMaxJobs = 8;
 struct Jobs {
     MvJob j[kMaxJobs];
 };
-template <int T, int NC>
+template <int T, int NC, bool SHARED_SUMS = false>
 __global__ void __launch_bounds__(kThreads) mv_kernel(const Jobs J) {
     __shared__ uint32_t tab[Ty<T>::TAB > 0 ? Ty<T>::TAB : 1];
+    extern __shared__ int activation_sums[];
     load_tab<T>(tab);
-    __syncthreads();
     const MvJob& b = J.j[blockIdx.y];
+    const int nsb = b.k / 32;
+    if constexpr (SHARED_SUMS) {
+        static_assert(T == kQ5_K, "shared activation minima are confined to the dense Q5_K path");
+        // All output rows in this CTA use the same activations. Compute the two exact int16-lane
+        // sums once per input sub-block/column instead of repeating eight dp4a instructions per row.
+        // Keep the two halves separate: combining their floating minimum products changes rounding.
+        for (int i = threadIdx.x; i < b.ncol * nsb; i += blockDim.x) {
+            const int4* x = reinterpret_cast<const int4*>(b.xq + (size_t) i * 32);
+            int lo = __dp4a(0x01010101, x[0].x, 0);
+            lo = __dp4a(0x01010101, x[0].y, lo);
+            lo = __dp4a(0x01010101, x[0].z, lo);
+            lo = __dp4a(0x01010101, x[0].w, lo);
+            int hi = __dp4a(0x01010101, x[1].x, 0);
+            hi = __dp4a(0x01010101, x[1].y, hi);
+            hi = __dp4a(0x01010101, x[1].z, hi);
+            hi = __dp4a(0x01010101, x[1].w, hi);
+            activation_sums[i] = lo;
+            activation_sums[b.ncol * nsb + i] = hi;
+        }
+    }
+    __syncthreads();
     const int row = blockIdx.x * kWarps + (threadIdx.x >> 5), lane = threadIdx.x & 31;
     if (row >= b.n) return;
     const uint8_t* w = b.w + (size_t) row * b.ld;
-    const int nsb = b.k / 32;
     float acc[NC];
 #pragma unroll
     for (int c = 0; c < NC; ++c) acc[c] = 0.0f;
@@ -896,7 +919,24 @@ __global__ void __launch_bounds__(kThreads) mv_kernel(const Jobs J) {
         for (int c = 0; c < NC; ++c)
             if (c < b.ncol) {
                 const int4* xp = (const int4*) (b.xq + (size_t) c * b.k + (size_t) kb * 32);
-                acc[c] = fmaf(b.xd[(size_t) c * nsb + kb], sub_dot<T>(s, xp[0], xp[1]), acc[c]);
+                float v;
+                if constexpr (SHARED_SUMS) {
+                    int lo = __dp4a(s.q[0], xp[0].x, 0);
+                    lo = __dp4a(s.q[1], xp[0].y, lo);
+                    lo = __dp4a(s.q[2], xp[0].z, lo);
+                    lo = __dp4a(s.q[3], xp[0].w, lo);
+                    int hi = __dp4a(s.q[4], xp[1].x, 0);
+                    hi = __dp4a(s.q[5], xp[1].y, hi);
+                    hi = __dp4a(s.q[6], xp[1].z, hi);
+                    hi = __dp4a(s.q[7], xp[1].w, hi);
+                    v = __fmul_rn(s.d, (float) (s.s0 * lo + s.s1 * hi));
+                    const size_t i = (size_t) c * nsb + kb;
+                    v = __fsub_rn(v, __fadd_rn(__fmul_rn(s.m0, (float) activation_sums[i]),
+                                             __fmul_rn(s.m1, (float) activation_sums[b.ncol * nsb + i])));
+                } else {
+                    v = sub_dot<T>(s, xp[0], xp[1]);
+                }
+                acc[c] = fmaf(b.xd[(size_t) c * nsb + kb], v, acc[c]);
             }
     }
 #pragma unroll
@@ -1216,6 +1256,21 @@ bool light_set(const SetArgs& a, bool gu, cudaStream_t s) {
 template <int T>
 void mv_nc(const Jobs& J, int nj, int max_n, int max_c, cudaStream_t s) {
     const dim3 grid((unsigned) ((max_n + kWarps - 1) / kWarps), (unsigned) nj);
+    if constexpr (T == kQ5_K) {
+        if (q5k_shared_sums()) {
+            size_t bytes = 0;
+            for (int j = 0; j < nj; ++j)
+                bytes = std::max(bytes, (size_t) J.j[j].ncol * (size_t) (J.j[j].k / 32) * 2 * sizeof(int));
+            // No opt-in shared-memory attribute or architecture assumption: fit below CUDA's ordinary limit.
+            // Larger geometries retain the original kernel and arithmetic.
+            if (bytes <= 32768) {
+                if (max_c <= 1) mv_kernel<T, 1, true><<<grid, kThreads, bytes, s>>>(J);
+                else if (max_c <= 4) mv_kernel<T, 4, true><<<grid, kThreads, bytes, s>>>(J);
+                else mv_kernel<T, 16, true><<<grid, kThreads, bytes, s>>>(J);
+                return;
+            }
+        }
+    }
     if (max_c <= 1) mv_kernel<T, 1><<<grid, kThreads, 0, s>>>(J);
     else if (max_c <= 4) mv_kernel<T, 4><<<grid, kThreads, 0, s>>>(J);
     else mv_kernel<T, 16><<<grid, kThreads, 0, s>>>(J);
@@ -1224,6 +1279,18 @@ void mv_nc(const Jobs& J, int nj, int max_n, int max_c, cudaStream_t s) {
 }  // namespace
 
 bool supported(int t) { return block_bytes(t) > 0; }
+
+bool q5k_shared_sums() {
+    static const bool enabled = [] {
+        const char* v = std::getenv("DS4_Q5K_SHARED_SUMS");
+        const bool on = v != nullptr && std::strcmp(v, "1") == 0;
+        if (on) std::fprintf(stderr, "ds4: Q5_K shared activation sums (DS4_Q5K_SHARED_SUMS)\n");
+        return on;
+    }();
+    return enabled;
+}
+
+#include "ds4_q5k_check.inl"
 
 int block_bytes(int t) {
     switch (t) {
