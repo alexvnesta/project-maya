@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
+#include <memory>
 #include <stdexcept>
 #include <string>
 #include <system_error>
@@ -35,10 +36,11 @@ static size_t type_row_bytes(int t, int n) {
     return size_t(n / 256) * (t == 1 ? 84 : 176);
 }
 static int expert_type(const Layout& l, int r) { return l.type[r]; }
+static std::string type_name(int t) { return std::to_string(t); }
 }
 struct Layer {
     gg::Layout lay, hlay;
-    int nm = 1, ff0 = 0, ffn = 768, il = 0, n_exp = 128, n_cls = 1;
+    int nm = 1, ff0 = 0, ffn = 768, il = 0, dev = 0, n_exp = 128, n_cls = 1;
     bool mtp = false;
     size_t blob = 0;
     std::vector<int> ram{0}, region_file{0};
@@ -64,6 +66,17 @@ struct Harness {
     std::vector<size_t> ram_chunk_bytes;
     std::vector<char> cp_chunk;
     std::vector<int> draft_vram;
+    struct Chunk { uint8_t* stage = nullptr; bool flow = false; };
+    struct Device { int id = 0; };
+    std::vector<std::unique_ptr<Chunk>> chunks;
+    std::vector<Device> devs{{0}, {1}};
+    std::vector<int> checked_devices;
+    bool check_copy_fault = false, check_bad_bytes = false;
+    bool tp_copy_member(const Layer& l, int m, int, size_t& bad, size_t& guard, std::string& error) {
+        checked_devices.push_back(member(l, m).dev); bad = check_bad_bytes ? 1 : 0; guard = 0;
+        if (check_copy_fault) { error = "scripted copy fault"; return false; }
+        return true;
+    }
     const Layer& member(const Layer& l, int m) const { return l.nm == 1 ? l : members.at(m); }
     size_t mx_row_b(const Layer& l, int r) const { return gg::type_row_bytes(gg::expert_type(l.lay, r), r < 2 ? g.dim : g.ff); }
     int mx_n(int r) const { return r < 2 ? g.ff : g.dim; }
@@ -110,6 +123,7 @@ struct Harness {
         }
         ram_part.resize(1);
         for (auto& b : storage) { ram_part[0].push_back(b.data()); ram_chunks.push_back(b.data()); ram_chunk_bytes.push_back(b.size()); }
+        for (int i = 0; i < 2; ++i) { chunks.push_back(std::make_unique<Chunk>()); chunks.back()->stage = storage[0].data(); }
     }
     std::vector<uint8_t> expected(int m) const {
         const Layer& l = L[0]; const Layer& x = member(l, m);
@@ -125,6 +139,10 @@ struct Harness {
             std::memcpy(out.data() + x.hlay.trellis[2] + size_t(row) * dh,
                         pk.bytes.data() + l.lay.trellis[2] + size_t(row) * dr + d0, dh);
         return out;
+    }
+    void copy_check_fixture() {
+        Layer l = L[0]; l.nm = 1; l.n_exp = 2; l.ram = {0, -1}; l.dev = 0; l.mtp = false;
+        L = {l, l}; L[1].dev = 1; L[1].il = 1; cp_dma = true;
     }
 };
 static void require(bool b) { if (!b) throw std::runtime_error("control failed"); }
@@ -182,6 +200,12 @@ int main() {
         test("draft-mixed-class-refused", [] { setenv("DS4_DRAFT_VRAM", "127", 1); Harness h; h.L[1].n_cls = 2; std::string e; require(!h.draft_caps(e) && h.draft_vram.empty()); });
         test("draft-mixed-full-valid", [] { setenv("DS4_DRAFT_VRAM", "128", 1); Harness h; h.L[1].n_cls = 2; std::string e; require(h.draft_caps(e)); });
         test("draft-no-block-refused", [] { setenv("DS4_DRAFT_VRAM", "0", 1); Harness h; h.g.n_mtp = 0; std::string e; require(!h.draft_caps(e)); });
+        test("copy-check-covers-both-devices", [] { Harness h; h.copy_check_fixture(); std::string e; require(h.prompt_copy_check(e)); require(h.checked_devices == std::vector<int>({0, 0, 1, 1})); });
+        test("copy-check-does-not-repeat-device-format", [] { Harness h; h.copy_check_fixture(); h.L.push_back(h.L[0]); std::string e; require(h.prompt_copy_check(e)); require(h.checked_devices == std::vector<int>({0, 0, 1, 1})); });
+        test("copy-check-no-path-refused", [] { Harness h; h.copy_check_fixture(); for (auto& c : h.chunks) c->flow = true; std::string e; require(!h.prompt_copy_check(e) && h.checked_devices.empty() && !e.empty()); });
+        test("copy-check-copy-fault-terminal", [] { Harness h; h.copy_check_fixture(); h.check_copy_fault = true; std::string e; require(!h.prompt_copy_check(e) && h.checked_devices.size() == 1 && !e.empty()); });
+        test("copy-check-byte-fault-terminal", [] { Harness h; h.copy_check_fixture(); h.check_bad_bytes = true; std::string e; require(!h.prompt_copy_check(e) && h.checked_devices.size() == 1 && !e.empty()); });
+        test("copy-check-split-rotations", [] { Harness h; h.copy_check_fixture(); for (auto& l : h.L) l.nm = 2; h.members[0].dev = 0; h.members[1].dev = 1; std::string e; require(h.prompt_copy_check(e)); require(h.checked_devices == std::vector<int>({0, 0, 1, 1, 0, 0, 1, 1})); });
         env(nullptr); unsetenv("DS4_DRAFT_VRAM");
         std::cout << "SUMMARY " << count << " controls passed\n"; return 0;
     } catch (const std::exception& e) { std::cerr << "FAIL " << e.what() << '\n'; return 1; }
