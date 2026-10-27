@@ -564,8 +564,8 @@ same. Not on a wave64 build (gfx908).
 `MAYA_DS4_DECODE_TRIM=<bits>` takes four more small steps out of a decoded window, each checked at load the same way:
 `1` the shared expert's swiglu rounds its output to int8 for its down GEMV, `2` q's norm rounds its output for wq_b,
 `4` a verify window's compressor snapshot (four copies) and a ratio-1 layer's latent copy one kernel each, `8` the
-DSpark drafter's hand-offs between its GPUs (`MAYA_DS4_DRAFT_DEV`) through host-mapped rows and a flag, as a layer
-split's groups hand theirs, instead of copies through pinned memory and events. The bits add up (`15`: all four).
+DSpark drafter's final rows handed to the head group's GPUs through host-mapped rows and a flag,
+instead of copies through pinned memory and events. This fork keeps the existing drafter block placement. The bits add up (`15`: all four).
 
 | Setting | Default | |
 | --- | --- | --- |
@@ -589,12 +589,17 @@ member's parts as decode runs them, summed on the host and compared with the who
 | --- | --- | --- |
 | `MAYA_DS4_TP_GGUF_UNEVEN` | off | `1`: a GGUF's experts split in whole blocks, as even as they go, so its group can form |
 | `MAYA_DS4_TP_CHECK` | off | `1`: each member's parts checked against the whole expert at load |
+
+## DeepSeek: limiting drafter experts in VRAM
+
 How many of a block's experts VRAM keeps: on one GPU, all of them as the room goes; on a group of several, once the
 expert profile has seen the drafter, those that take 99% of the block's routes, and more only while its member keeps
 the room of the group's next tightest member - the rest on the CPU lane. `MAYA_DS4_DRAFT_VRAM` sets it instead: each
 block keeps up to that many, the profile's hottest, as the room goes; the rest on the CPU lane, so the trunk keeps the
 room. A request's log then says how many of the drafter's picks took the CPU lane.
 
+| Setting | Default | |
+| --- | --- | --- |
 | `MAYA_DS4_DRAFT_VRAM` | off (placed as above) | the most VRAM experts each DSpark block keeps, its profile's hottest: one number for every block, or one a block (`96,48,32`); 0 .. a block's experts (128) |
 
 ## DeepSeek: where the measured hipBLASLt picks are kept (AMD)
@@ -620,12 +625,11 @@ an `--expert-profile` in the config's `args` (a file, or `none`) is used instead
 
 The engine reads the pack's expert regions into VRAM and RAM at start: 15,744 experts, 73 GB into VRAM and 147 GB
 into RAM here. The load is disk-bound, and the pack's files are read one after another, so a single file's regions
-are read in sequence. Three settings change how it reads them: the first is on, the other two keep today's behaviour
-by default.
+are read in sequence. Three settings change how it reads them. In this fork all preserve the selected loader's behavior when unset.
 
 | Setting | Default | |
 | --- | --- | --- |
-| `MAYA_DS4_LOAD_DROP_CACHE` | on | drop each region's pages from the file cache once its bytes are copied; `0` keeps them |
+| `MAYA_DS4_LOAD_DROP_CACHE` | off (fork) | drop each region's pages from the file cache once its bytes are copied; `0` keeps them |
 | `MAYA_DS4_LOAD_THREADS` | 12 | the threads that read the experts' regions (an EXL3 or other region pack; a GGUF pack's copies keep their own count): more threads load faster on a machine with the cores |
 | `MAYA_DS4_LOAD_INTERLEAVE` | off | `1`: the files round-robin - the first expert of each file, then the second, ... - so the threads read several files at once (a pack split over two drives streams both); `0`: file by file, as before |
 
@@ -640,9 +644,7 @@ stays at a few MB and the copy runs at the disk's speed. In place, where the CPU
 only the VRAM experts' pages are dropped, as they already were.
 
 The drop is not free: walking 203 GB of pages costs about 20 us a MB, 4 s in all - and on a pack whose RAM tier
-leaves the cache room, the reclaim that the drop saves costs less than that. It is on by default because the pack
-that does not fit pays minutes, not seconds, and `MAYA_DS4_LOAD_DROP_CACHE=0` is the better setting where the drop
-costs more than it saves.
+leaves the cache room, the reclaim that the drop saves costs less than that. Upstream enables it by default; this fork requires an explicit opt-in while its load behavior is qualified on the target host.
 
 Measured cold (the container stopped, `echo 3 > /proc/sys/vm/drop_caches`, then started; the engine's own
 `ds4: loaded in` line):
