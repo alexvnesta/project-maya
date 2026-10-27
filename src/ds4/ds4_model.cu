@@ -13,6 +13,7 @@
 #include "ds4_model.hpp"
 #include "ds4_ablate.hpp"
 #include "ds4_engram_io.hpp"
+#include "ds4_cache_admission.hpp"
 
 #include "ds4_gguf.cuh"
 #include "ds4_gguf_cpu.hpp"
@@ -1262,6 +1263,8 @@ struct Model::Impl {
     static float env_f(const char* k, float d) { return std::getenv(k) ? (float) std::atof(std::getenv(k)) : d; }
     const float c_margin = env_f("DS4_CACHE_MARGIN", 1.25f), c_bonus = env_f("DS4_CACHE_BONUS", 1.0f),
                 c_decay = env_f("DS4_CACHE_DECAY", 0.9f);
+    const double c_reuse_mib = env_f("DS4_CACHE_REUSE_MIB", 0.0f);
+    int64_t cache_price_deferrals = 0;   // admission attempts refused by the byte-price guard, not misses or saved bytes
     const int c_inflight = std::max(1, (int) env_f("DS4_CACHE_INFLIGHT", (float) kMaxSwaps));
     // the RAM tier (a GGUF's in-place experts, as GLM's: the hottest in VRAM, the next hottest here, the coldest in the
     // files): RAM slots of one expert blob each, filled at load with the hottest experts VRAM does not hold, so the
@@ -2551,6 +2554,17 @@ struct Model::Impl {
                 for (int id : ids)
                     if (!gg::q8_batch_check(id, err)) return false;
             }
+            if (gg::iq::q5k_shared_sums())
+                for (int id : ids)
+                    if (!gg::iq::q5k_shared_sums_check(id, err)) return false;
+        }
+        if (!std::isfinite(c_reuse_mib) || c_reuse_mib < 0.0) {
+            err = "DS4_CACHE_REUSE_MIB must be finite and nonnegative";
+            return false;
+        }
+        if (c_reuse_mib > 0.0) {
+            std::fprintf(stderr, "ds4: copy-mode cache admission prices both transfers at %.3f MiB per excess reuse "
+                                 "(DS4_CACHE_REUSE_MIB)\n", c_reuse_mib);
         }
         if (const char* v = ds4_env("DS4_HC_FUSE")) {   // (MAYA_DS4_HC_FUSE)
             if (std::strcmp(v, "1") != 0 && std::strcmp(v, "2") != 0 && std::strcmp(v, "0") != 0) {
@@ -7580,6 +7594,13 @@ struct Model::Impl {
             cudaSetDevice(devs[di].id);
             const int n = (int) std::min<size_t>(u.size() / 2, (size_t) kRcUpd);
             if (n > 0) {
+                // PR #550, handmade0octopus (MIT): a queued tab_set may still read this
+                // mapped input when a back-to-back drain flush reuses its host buffer.
+                const cudaError_t prior = cudaStreamSynchronize(devs[di].st);
+                if (prior != cudaSuccess) {
+                    std::fprintf(stderr, "ds4: table-input predecessor sync failed: %s\n", cudaGetErrorString(prior));
+                    std::abort();
+                }
                 std::memcpy(rc_upd[di], u.data(), (size_t) n * 16);
                 tab_set(rc_upd[di], n, devs[di].st);
             }
@@ -7782,7 +7803,12 @@ struct Model::Impl {
                         (cold < 0 || l.heat[(size_t) e] < l.heat[(size_t) cold]))
                         cold = e;
                 }
-                if (cold >= 0 && l.heat[(size_t) best] > l.heat[(size_t) cold] * c_margin + c_bonus) {
+                const bool old_admits = cold >= 0 && l.heat[(size_t) best] > l.heat[(size_t) cold] * c_margin + c_bonus;
+                const bool admits = cold >= 0 && cache_migration_worthwhile(l.heat[(size_t) best], l.heat[(size_t) cold],
+                                                                           c_margin, c_bonus, l.blob,
+                                                                           copy_mode ? c_reuse_mib : 0.0);
+                if (old_admits && !admits) ++cache_price_deferrals;
+                if (admits) {
                     l.swap_pending = true;
                     l.sw_in = best;
                     ++sw_inflight;
@@ -13713,6 +13739,9 @@ struct Model::Impl {
     }
 
     void save_profile() const {
+        if (c_reuse_mib > 0.0)
+            std::fprintf(stderr, "ds4 cache admission: %lld cost deferrals (attempts), %lld completed swaps\n",
+                         (long long) cache_price_deferrals, (long long) st.swaps);
         if (std::getenv("DS4_CPU_STATS") != nullptr && cpu_calls > 0)
             std::fprintf(stderr, "CPU lane: %ld calls, %.2f experts and %.2f rows a call; per call: gate/up %.3f ms, "
                                  "bands %.3f, down %.3f, down bands %.3f\n", cpu_calls, (double) cpu_ents / cpu_calls,

@@ -14,6 +14,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <string>
 #include <cuda_runtime.h>
 
 namespace strata::ds4::gguf::iq {
@@ -30,6 +31,9 @@ int block_bytes(int type);
 inline size_t row_bytes(int type, int64_t k) { return (size_t) (k / 256) * (size_t) block_bytes(type); }
 /// The type's name ("?" when unknown).
 const char* name(int type);
+/// Opt-in exact Q5_K activation-sum reuse, with a mandatory load check.
+bool q5k_shared_sums();
+bool q5k_shared_sums_check(int dev, std::string& err);
 
 /// The token / window experts (ds4_gguf.cu's MxArgs, with the roles' types): group g = an expert (grp_ptr null: expert g
 /// of the plan, plan_ptr[g] its blob or 0, its entry g, input row 0; else blob grp_ptr[g], entries grp_ent[grp_start[g]
