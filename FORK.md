@@ -34,7 +34,7 @@ not qualify this combined candidate. The optional image-RAM slot prototype remai
 not included. No near-filled 512K input, full 128K output, broad accuracy, refusal-rate or speed
 claim follows from the configured limits.
 
-The combined source has separate CPU checks on macOS and physical Ubuntu: 42 controls exercise exact
+The combined source has separate CPU checks on macOS and physical Ubuntu: 48 controls exercise exact
 extracted native methods through a fake device backend, and five tests cover the offline profile tool.
 The tests cover RAM/file and NUMA/member layouts, direct DMA bytes and guards, copy/read failures,
 pin registration rollback, and drafter cap rejection. They do not execute CUDA or prove fused arithmetic.
@@ -48,8 +48,25 @@ replacing a hosted binary. No benchmark, restart, model download or service chan
 
 See [the hosted integration](integrations/strata-hosted/README.md) for reproducible API and hosting sources.
 
-The first isolated SM80 CUDA build passed. A static audit compared all 1019 tracked base files,
-verified the exact 10 changed and eight new files, checked SM80-only device code and matched
-runtime dependencies against the selected engine. The candidate engine has not been executed.
-See [the bounded qualification record](docs/FORK_QUALIFICATION.json). GPU/runtime/API/lifecycle
-checks and performance measurements remain pending; the PR stays draft and the deployed binary is unchanged.
+The second isolated SM80 CUDA build passed, with a static audit of all 1019 tracked base files,
+SM80-only device code and matching runtime dependencies. Its TP1-accessible guarded prompt-copy
+checks passed on both real GPUs, along with the Q8, fused-operation, compressor-copy, handoff
+and residual-projection startup checks.
+
+One combined A/B comparison is complete. The combined bundle is **not promoted**: cold 32,761-token
+native prefill rose from 50.7174 to 97.9343 seconds (+93.10%), first coding decode was essentially
+flat (45.0033 vs 44.9185 tokens/s), and image client completion rose from 4.8749 to 7.1181 seconds.
+The candidate's repeated coding request reached the unchanged 1000-second soft deadline and remains
+partial. It supplies no passing repeat or pooled speed claim. Both arms' main panels and lifecycle
+controls completed; native, API and maintenance-window cleanup returned zero, and the existing
+hosted release was restored and verified after each arm.
+
+The original raw basic 5/5 and full 3/5 grades are retained separately from offline code adjudication.
+Both hosts passed 2,207 independent cases/4,414 checks, every supplied test and four negative controls
+for the baseline main/repeat outputs and candidate main output. Candidate repeat code validation is
+UNRUN because the response was partial. New mode CPU controls passed 133 on each host before launch;
+these are separate from the 48 mocked native-method controls and five offline profile-tool tests.
+
+The source is retained for review in this draft PR with experimental defaults off. No individual-PR
+attribution or additional benchmark sweep follows from this combined result. See
+[the benchmark record](docs/FORK_BENCHMARK.md) and [bounded qualification record](docs/FORK_QUALIFICATION.json).
