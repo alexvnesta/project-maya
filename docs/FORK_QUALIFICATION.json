@@ -1,0 +1,50 @@
+{
+  "status": "SOURCE_CONSOLIDATED_CPU_TESTED_SM80_BUILD_AND_STATIC_AUDIT_PASS_RUNTIME_UNQUALIFIED",
+  "upstream_base": "4615f346d9311dd1ce9f5738ab04446f023a6e42",
+  "native_source_commit": "9a116a8c206d0b0e03b847bd6f2df2e843f27d0f",
+  "integration_merge_commit": "abc2f85e8dadf44c372a0d8271c9c5f80b26f423",
+  "native_binary_sha256": "bbd85e6b5a5f4e2b1bc170418ea3c4af9854c6023b62119989ce8228fcc8bd61",
+  "new_CPU_methods_per_host": 42,
+  "profile_tool_tests_per_host": 5,
+  "build_admission_controls_per_host": 20,
+  "HIP_mapping_check": "PASS (not a HIP build)",
+  "CUDA_build": {
+    "architecture": "sm_80 only",
+    "parallel": 2,
+    "CUDA_VISIBLE_DEVICES": "",
+    "result": "PASS",
+    "runtime_dependencies_match_selected": true,
+    "native_executed": false
+  },
+  "static_source_audit": {
+    "tracked_files_compared": 1019,
+    "changed_tracked_files": 10,
+    "new_files": 8,
+    "all_match_frozen_manifest": true
+  },
+  "native_source_files_sha256": {
+    "CMakeLists.txt": "a86987b3ff43b883451a7725458f4f8825c415ab61114af74ff56dc0cc6c7478",
+    "README.md": "91af3a5aef18fb2528e65471010dd36a4d96eacd9c9db3ea9ce90ef8bc6381df",
+    "docs/DS4_PROFILE_REFRESH.md": "863ede92e536a44772c872777cc2695ccfdfc1a64acbfff5fdac7e5225588d1d",
+    "docs/SETTINGS.md": "8dc591c76565dd1a87a8caecc79357ff2214173981d48c1ab78d2287c6fea658",
+    "src/ds4/ds4_ablate.hpp": "6af30f3ad1f79eccbcf0f42b6a8b97dab9d9fb9e4a65ea2afb5bfe0bb3ba8599",
+    "src/ds4/ds4_gguf.cu": "9f3a5d2a6a898868fe7f7b898c55f34a63581f94b0fab750489bfdf21adb35b2",
+    "src/ds4/ds4_gguf.cuh": "f8c89f3e5b46a462d5b98c7e7af1e482e2497acceb6d550ec76d432a892fab20",
+    "src/ds4/ds4_kernels.cu": "2330280798c9705a1a273065f1d0e66157dfd5f1f21d4143f73083f548dfdd03",
+    "src/ds4/ds4_kernels.cuh": "811202b7f4d449564ca17fa5f7935f8fca916712d44105ec741dd07a0be3a950",
+    "src/ds4/ds4_main.cpp": "d5379f9bf1a6b07f0f9352a68521f3f096784c3b63fb6caa25235ace38be1188",
+    "src/ds4/ds4_model.cu": "2a37a51c065f6a0aacae515021f7a60055f0dfd48d86e92b114ecdecff6d2394",
+    "src/ds4/ds4_model.hpp": "19ebd124a43086dcbb9f5ddf875f79cc1131d18be2b7fd05ada2d3d92a63c2ee",
+    "src/ds4/shared_q5_reference.h": "4781b1f31a358945d87437cc923de1ed37d5d7eb5c1099b26f11218798459bf4",
+    "tests/ds4_ablate_test.cpp": "82b85841d402c845afa917d3c562167efd6719e4c007d87966403a7d978799e9",
+    "tests/ds4_optimization_cpu_test.cpp": "80ff2dfab485232366916acc35d2387be7257ae913b186f6a197741ef2fee21d",
+    "tools/extract_ds4_optimization_cpu.py": "282126baebe79a8b4b82eca4d5137d0a5be81f1fa068d3c57cb55fa42915548c",
+    "tools/refresh_ds4_profile.py": "09372e1292f587716d406a218a9b13c25e98bdb34491bafd3457b0b626aec006",
+    "tools/test_refresh_ds4_profile.py": "b58b9425fd1fdd955fa27307ddcf5e937067916edef3fcfed966a5d1234d4c52"
+  },
+  "first_CPU_attempts": "Test shim compile and down-role geometry failures retained privately; corrected exact-source controls passed; neither was a native/GPU execution",
+  "deployed_native_unchanged": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "runtime_qualification": "NOT_RUN",
+  "performance_gain": "NOT_MEASURED",
+  "GPU_launch_ready": false
+}
