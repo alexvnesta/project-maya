@@ -35,11 +35,14 @@ allocation and targeted image/tool/cache/cancellation/recovery checks on the sel
 they are not a filled-1M or full-256K-generation result. See
 [`FORK_BENCHMARK.md`](../../docs/FORK_BENCHMARK.md#capacity-update-2026-10-27) for the bounded result.
 
-The current portable profile also retains mode1 prompt skipping and a 2048-token prefill chunk.
-A separate four-arm comparison reproduced about 30.46% less cold 32K prefill time than chunk 1024
-on the selected dual-CMP170HX setup. The production change was activated and publicly verified
-on 2026-10-28 after separate both-host activation controls. Cache namespaces include direction,
-mode and chunk identity; retain older namespaces rather than mixing their KV states.
-The portable pathname uses the full direction placeholder, so template bytes are deliberately
-different from installation-specific production bytes. See
-[`prefill-chunk2048-20261028.md`](../../docs/prefill-chunk2048-20261028.md) for measurements and limits.
+The current portable profile retains mode1 prompt skipping and a 4096-token prefill chunk.
+A separately frozen four-arm comparison reproduced about 21.90% less cold 32K prefill time
+than chunk2048 on the selected dual-CMP170HX setup; coding decode stayed roughly flat.
+Chunk4096 was activated and publicly verified at 16:28:49 UTC on 2026-10-28 after separate
+source, both-host CPU and existing-owner lifecycle qualification. The earlier chunk2048
+result remains documented as a historical comparison.
+Cache namespaces include direction, mode and chunk identity; retain older namespaces.
+The portable pathname uses the full direction placeholder, so template bytes deliberately
+differ from installation-specific production bytes. Portable CPU controls qualify templates,
+not a new deployment. See [`prefill-chunk4096-20261028.md`](../../docs/prefill-chunk4096-20261028.md)
+for measured results, activation evidence and limitations.
