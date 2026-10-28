@@ -1,0 +1,1671 @@
+{
+  "status": "FOUR_ARMS_CLOSED",
+  "activation_screen_passed": true,
+  "same_selected_native": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "context": 1048576,
+  "output_default": 262144,
+  "mode": 1,
+  "chunks": {
+    "A1": 2048,
+    "B1": 4096,
+    "B2": 4096,
+    "A2": 2048
+  },
+  "natural_stop_main": 20,
+  "caps_partial_UNRUN": 0,
+  "production_active": false,
+  "supplied_tests_each_arm": {
+    "A1": 15,
+    "B1": 14,
+    "B2": 13,
+    "A2": 14
+  },
+  "pairs": [
+    {
+      "control": "A1",
+      "candidate": "B1",
+      "passed": true,
+      "prefill_reduction_pct": 21.815712784727317,
+      "coding_decode_change_pct": -0.4015888246464765
+    },
+    {
+      "control": "A2",
+      "candidate": "B2",
+      "passed": true,
+      "prefill_reduction_pct": 21.99371617509171,
+      "coding_decode_change_pct": 2.213347880313146
+    }
+  ],
+  "pooled": {
+    "control2048": {
+      "cold32761_prefill_ms_mean": 30330.65,
+      "coding_tokens": 23554,
+      "coding_native_decode_tps": 43.28613709727068,
+      "main_tokens": 24283,
+      "main_native_decode_tps": 43.42722207060737,
+      "main_client_seconds_sum": 643.7122209127992
+    },
+    "candidate4096": {
+      "cold32761_prefill_ms_mean": 23686.75,
+      "coding_tokens": 28714,
+      "coding_native_decode_tps": 43.71640939593739,
+      "main_tokens": 29402,
+      "main_native_decode_tps": 43.827678903893634,
+      "main_client_seconds_sum": 742.1990966186859
+    }
+  },
+  "raw_basic": {
+    "A1": 5,
+    "B1": 5,
+    "B2": 5,
+    "A2": 5
+  },
+  "raw_full": {
+    "A1": 3,
+    "B1": 3,
+    "B2": 3,
+    "A2": 3
+  },
+  "all_raw_metrics": {
+    "A1": {
+      "agent-ledger-32K": {
+        "tokens": 123,
+        "native_decode_ms": 2876.4,
+        "native_decode_tps": 42.76178556528995,
+        "native_prefill_ms": 30265.8,
+        "reused": 0,
+        "drafts_accepted": 77,
+        "drafts_offered": 103,
+        "client_full_s": 33.196796166943386,
+        "client_first_reasoning_s": 33.196624350966886,
+        "client_first_content_s": 33.196624350966886,
+        "client_first_tool_s": null
+      },
+      "coding-ranges": {
+        "tokens": 12172,
+        "native_decode_ms": 276559.4,
+        "native_decode_tps": 44.01224474742135,
+        "native_prefill_ms": 1895.2,
+        "reused": 0,
+        "drafts_accepted": 7132,
+        "drafts_offered": 9812,
+        "client_full_s": 278.4707162620034,
+        "client_first_reasoning_s": 1.8997591501101851,
+        "client_first_content_s": 252.65861950907856,
+        "client_first_tool_s": null
+      },
+      "tool-lookup": {
+        "tokens": 76,
+        "native_decode_ms": 1416.4,
+        "native_decode_tps": 53.65715899463428,
+        "native_prefill_ms": 4978.6,
+        "reused": 0,
+        "drafts_accepted": 54,
+        "drafts_offered": 61,
+        "client_full_s": 6.411733468063176,
+        "client_first_reasoning_s": 4.984631570056081,
+        "client_first_content_s": null,
+        "client_first_tool_s": 5.764691591961309
+      },
+      "tool-final": {
+        "tokens": 59,
+        "native_decode_ms": 1316.0,
+        "native_decode_tps": 44.83282674772037,
+        "native_prefill_ms": 1332.3,
+        "reused": 372,
+        "drafts_accepted": 40,
+        "drafts_offered": 60,
+        "client_full_s": 2.6645910588558763,
+        "client_first_reasoning_s": 1.33786027203314,
+        "client_first_content_s": 2.3246162058785558,
+        "client_first_tool_s": null
+      },
+      "vision-chart": {
+        "tokens": 61,
+        "native_decode_ms": 1185.7,
+        "native_decode_tps": 51.446402968710466,
+        "native_prefill_ms": 3462.5,
+        "reused": 0,
+        "drafts_accepted": 40,
+        "drafts_offered": 45,
+        "client_full_s": 4.820784207899123,
+        "client_first_reasoning_s": 4.8206283720210195,
+        "client_first_content_s": 4.8206283720210195,
+        "client_first_tool_s": null
+      }
+    },
+    "B1": {
+      "agent-ledger-32K": {
+        "tokens": 172,
+        "native_decode_ms": 3768.4,
+        "native_decode_tps": 45.64271308778261,
+        "native_prefill_ms": 23663.1,
+        "reused": 0,
+        "drafts_accepted": 109,
+        "drafts_offered": 128,
+        "client_full_s": 27.486968030920252,
+        "client_first_reasoning_s": 27.486799150006846,
+        "client_first_content_s": 27.486799150006846,
+        "client_first_tool_s": null
+      },
+      "coding-ranges": {
+        "tokens": 19224,
+        "native_decode_ms": 438548.7,
+        "native_decode_tps": 43.83549649103965,
+        "native_prefill_ms": 1871.6,
+        "reused": 0,
+        "drafts_accepted": 11273,
+        "drafts_offered": 15537,
+        "client_full_s": 440.4370443120133,
+        "client_first_reasoning_s": 1.875445205019787,
+        "client_first_content_s": 418.17003369308077,
+        "client_first_tool_s": null
+      },
+      "tool-lookup": {
+        "tokens": 73,
+        "native_decode_ms": 1295.2,
+        "native_decode_tps": 56.36195182211241,
+        "native_prefill_ms": 4966.1,
+        "reused": 0,
+        "drafts_accepted": 55,
+        "drafts_offered": 58,
+        "client_full_s": 6.28106180508621,
+        "client_first_reasoning_s": 4.974457233212888,
+        "client_first_content_s": null,
+        "client_first_tool_s": 5.540842673042789
+      },
+      "tool-final": {
+        "tokens": 56,
+        "native_decode_ms": 1159.0,
+        "native_decode_tps": 48.31751509922347,
+        "native_prefill_ms": 1311.7,
+        "reused": 372,
+        "drafts_accepted": 38,
+        "drafts_offered": 48,
+        "client_full_s": 2.485651026945561,
+        "client_first_reasoning_s": 1.3162321269046515,
+        "client_first_content_s": 2.0852970199193805,
+        "client_first_tool_s": null
+      },
+      "vision-chart": {
+        "tokens": 68,
+        "native_decode_ms": 1452.3,
+        "native_decode_tps": 46.822281897679545,
+        "native_prefill_ms": 3522.0,
+        "reused": 0,
+        "drafts_accepted": 42,
+        "drafts_offered": 53,
+        "client_full_s": 5.14516463293694,
+        "client_first_reasoning_s": 5.145004969788715,
+        "client_first_content_s": 5.145004969788715,
+        "client_first_tool_s": null
+      }
+    },
+    "B2": {
+      "agent-ledger-32K": {
+        "tokens": 106,
+        "native_decode_ms": 2140.3,
+        "native_decode_tps": 49.52576741578283,
+        "native_prefill_ms": 23710.4,
+        "reused": 0,
+        "drafts_accepted": 76,
+        "drafts_offered": 87,
+        "client_full_s": 25.90744216181338,
+        "client_first_reasoning_s": 25.90720293787308,
+        "client_first_content_s": 25.90720293787308,
+        "client_first_tool_s": null
+      },
+      "coding-ranges": {
+        "tokens": 9490,
+        "native_decode_ms": 218275.6,
+        "native_decode_tps": 43.47714540699922,
+        "native_prefill_ms": 1906.5,
+        "reused": 0,
+        "drafts_accepted": 5533,
+        "drafts_offered": 7763,
+        "client_full_s": 220.19799152994528,
+        "client_first_reasoning_s": 1.9110051449388266,
+        "client_first_content_s": 199.2752981800586,
+        "client_first_tool_s": null
+      },
+      "tool-lookup": {
+        "tokens": 76,
+        "native_decode_ms": 1326.1,
+        "native_decode_tps": 57.31091169595054,
+        "native_prefill_ms": 4956.4,
+        "reused": 0,
+        "drafts_accepted": 58,
+        "drafts_offered": 62,
+        "client_full_s": 6.297988021047786,
+        "client_first_reasoning_s": 4.9621397741138935,
+        "client_first_content_s": null,
+        "client_first_tool_s": 5.565656970022246
+      },
+      "tool-final": {
+        "tokens": 74,
+        "native_decode_ms": 1620.9,
+        "native_decode_tps": 45.65364920723055,
+        "native_prefill_ms": 1321.4,
+        "reused": 372,
+        "drafts_accepted": 49,
+        "drafts_offered": 69,
+        "client_full_s": 2.9572093039751053,
+        "client_first_reasoning_s": 1.3263171389698982,
+        "client_first_content_s": 2.540368463844061,
+        "client_first_tool_s": null
+      },
+      "vision-chart": {
+        "tokens": 63,
+        "native_decode_ms": 1268.1,
+        "native_decode_tps": 49.680624556423,
+        "native_prefill_ms": 3576.2,
+        "reused": 0,
+        "drafts_accepted": 41,
+        "drafts_offered": 48,
+        "client_full_s": 5.002575794002041,
+        "client_first_reasoning_s": 5.00239075277932,
+        "client_first_content_s": 5.00239075277932,
+        "client_first_tool_s": null
+      }
+    },
+    "A2": {
+      "agent-ledger-32K": {
+        "tokens": 153,
+        "native_decode_ms": 3251.3,
+        "native_decode_tps": 47.058099836988276,
+        "native_prefill_ms": 30395.5,
+        "reused": 0,
+        "drafts_accepted": 103,
+        "drafts_offered": 124,
+        "client_full_s": 33.707793653942645,
+        "client_first_reasoning_s": 33.707596198888496,
+        "client_first_content_s": 33.707596198888496,
+        "client_first_tool_s": null
+      },
+      "coding-ranges": {
+        "tokens": 11382,
+        "native_decode_ms": 267587.1,
+        "native_decode_tps": 42.53568277394538,
+        "native_prefill_ms": 1872.7,
+        "reused": 0,
+        "drafts_accepted": 6443,
+        "drafts_offered": 9267,
+        "client_full_s": 269.4751565151382,
+        "client_first_reasoning_s": 1.876651942031458,
+        "client_first_content_s": 247.2998212540988,
+        "client_first_tool_s": null
+      },
+      "tool-lookup": {
+        "tokens": 99,
+        "native_decode_ms": 1965.0,
+        "native_decode_tps": 50.38167938931298,
+        "native_prefill_ms": 4950.7,
+        "reused": 0,
+        "drafts_accepted": 70,
+        "drafts_offered": 86,
+        "client_full_s": 6.931755943922326,
+        "client_first_reasoning_s": 4.958258813014254,
+        "client_first_content_s": null,
+        "client_first_tool_s": 6.196686227107421
+      },
+      "tool-final": {
+        "tokens": 70,
+        "native_decode_ms": 1328.4,
+        "native_decode_tps": 52.69497139415838,
+        "native_prefill_ms": 1337.0,
+        "reused": 372,
+        "drafts_accepted": 50,
+        "drafts_offered": 59,
+        "client_full_s": 2.6798738099168986,
+        "client_first_reasoning_s": 1.3414880849886686,
+        "client_first_content_s": 2.2652270898688585,
+        "client_first_tool_s": null
+      },
+      "vision-chart": {
+        "tokens": 88,
+        "native_decode_ms": 1679.7,
+        "native_decode_tps": 52.390307793058284,
+        "native_prefill_ms": 3487.8,
+        "reused": 0,
+        "drafts_accepted": 60,
+        "drafts_offered": 67,
+        "client_full_s": 5.353019826114178,
+        "client_first_reasoning_s": 5.35288619203493,
+        "client_first_content_s": 5.35288619203493,
+        "client_first_tool_s": null
+      }
+    }
+  },
+  "actual_startup": {
+    "A1": {
+      "passed": true,
+      "native_pid": 1233825,
+      "actual_chunk": 2048,
+      "context": 1048576,
+      "vision": true,
+      "expert_slots": 11410,
+      "cpu_experts": 3950,
+      "ram_experts": 3950,
+      "placement_warning": "Chunk workspace may change GPU/CPU expert counts; retain actual values, not only common profile seed.",
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.8,
+            "human_experts_with_drafter": 5796,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2022
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 59.31,
+            "human_experts_with_drafter": 5998,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2020
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "Q8": {
+        "passed": true,
+        "devices": [
+          0,
+          1
+        ],
+        "int8_values_each": 42784,
+        "scale_values_each": 1337,
+        "scope": "Startup self-check only; not model-output identity or broad quality proof",
+        "batch": 1,
+        "factor_enabled_line_count": 1,
+        "control_disabled_basis": null
+      },
+      "factor": {
+        "projection_passed": true,
+        "prompt_skip": 1,
+        "activation_required_after_cold_requests": true
+      },
+      "actual_process": {
+        "actual_argv_matches": true,
+        "controlled_env_matches": true,
+        "owned_window_cgroup": true,
+        "native_pid": 1233825,
+        "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+        "actual_argv": [
+          "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+          "--serve",
+          "--pack",
+          "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1",
+          "--gpus",
+          "0,1",
+          "--max-context",
+          "1048576",
+          "--reserve-mib",
+          "2048",
+          "--cpu-threads",
+          "24",
+          "--tp",
+          "1",
+          "--dspark",
+          "on",
+          "--prefill-chunk",
+          "2048",
+          "--eos",
+          "1",
+          "--dspark-conf",
+          "0.65",
+          "--mmap-experts",
+          "off",
+          "--expert-profile",
+          "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-A1-20261028T125017Z/native/expert-profile.bin",
+          "--serve",
+          "--vision",
+          "on",
+          "--ablate",
+          "/home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf",
+          "--ablate-scale",
+          "1",
+          "--verbose",
+          "--layer-split",
+          "auto",
+          ""
+        ],
+        "actual_controlled_env": {
+          "STRATA_DS4_DISK_SKIP_W": "0",
+          "DS4_YOCO": "1",
+          "STRATA_DS4_PROMPT_SKIP": "1",
+          "STRATA_DS4_REUSE": "1",
+          "STRATA_DS4_SLOT_KEEP": "1",
+          "STRATA_DS4_AUTO_PIN": "1",
+          "STRATA_DS4_SLOT_CAP": "4",
+          "STRATA_DS4_SLOT_GB": "8",
+          "STRATA_DS4_SLOT_DAYS": "7",
+          "STRATA_DS4_SLOT_MIN": "1024",
+          "STRATA_DS4_SLOT_DIR": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-A1-20261028T125017Z/native/cache",
+          "STRATA_DS4_DSPARK_CUM": "0",
+          "DS4_DSPARK_CUM": "0",
+          "DS4_DSPARK_MAX": "4",
+          "DS4_REQUIRE_ALL_RAM": "1",
+          "DS4_LANE_CAL": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-A1-20261028T125017Z/native/lane.txt",
+          "DS4_LT_STORE": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-A1-20261028T125017Z/native/lt.txt",
+          "DS4_STREAM": "0",
+          "STRATA_DS4_Q8_BATCH": "1",
+          "DS4_Q8_CHECK": "1"
+        },
+        "actual_cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service\n",
+        "same_executable": true
+      }
+    },
+    "B1": {
+      "passed": true,
+      "native_pid": 1250688,
+      "actual_chunk": 4096,
+      "context": 1048576,
+      "vision": true,
+      "expert_slots": 11315,
+      "cpu_experts": 4045,
+      "ram_experts": 4045,
+      "placement_warning": "Chunk workspace may change GPU/CPU expert counts; retain actual values, not only common profile seed.",
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.32,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2026
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.86,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2030
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "Q8": {
+        "passed": true,
+        "devices": [
+          0,
+          1
+        ],
+        "int8_values_each": 42784,
+        "scale_values_each": 1337,
+        "scope": "Startup self-check only; not model-output identity or broad quality proof",
+        "batch": 1,
+        "factor_enabled_line_count": 1,
+        "control_disabled_basis": null
+      },
+      "factor": {
+        "projection_passed": true,
+        "prompt_skip": 1,
+        "activation_required_after_cold_requests": true
+      },
+      "actual_process": {
+        "actual_argv_matches": true,
+        "controlled_env_matches": true,
+        "owned_window_cgroup": true,
+        "native_pid": 1250688,
+        "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+        "actual_argv": [
+          "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+          "--serve",
+          "--pack",
+          "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1",
+          "--gpus",
+          "0,1",
+          "--max-context",
+          "1048576",
+          "--reserve-mib",
+          "2048",
+          "--cpu-threads",
+          "24",
+          "--tp",
+          "1",
+          "--dspark",
+          "on",
+          "--prefill-chunk",
+          "4096",
+          "--eos",
+          "1",
+          "--dspark-conf",
+          "0.65",
+          "--mmap-experts",
+          "off",
+          "--expert-profile",
+          "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-B1-20261028T131639Z/native/expert-profile.bin",
+          "--serve",
+          "--vision",
+          "on",
+          "--ablate",
+          "/home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf",
+          "--ablate-scale",
+          "1",
+          "--verbose",
+          "--layer-split",
+          "auto",
+          ""
+        ],
+        "actual_controlled_env": {
+          "STRATA_DS4_DISK_SKIP_W": "0",
+          "DS4_YOCO": "1",
+          "STRATA_DS4_PROMPT_SKIP": "1",
+          "STRATA_DS4_REUSE": "1",
+          "STRATA_DS4_SLOT_KEEP": "1",
+          "STRATA_DS4_AUTO_PIN": "1",
+          "STRATA_DS4_SLOT_CAP": "4",
+          "STRATA_DS4_SLOT_GB": "8",
+          "STRATA_DS4_SLOT_DAYS": "7",
+          "STRATA_DS4_SLOT_MIN": "1024",
+          "STRATA_DS4_SLOT_DIR": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-B1-20261028T131639Z/native/cache",
+          "STRATA_DS4_DSPARK_CUM": "0",
+          "DS4_DSPARK_CUM": "0",
+          "DS4_DSPARK_MAX": "4",
+          "DS4_REQUIRE_ALL_RAM": "1",
+          "DS4_LANE_CAL": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-B1-20261028T131639Z/native/lane.txt",
+          "DS4_LT_STORE": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-B1-20261028T131639Z/native/lt.txt",
+          "DS4_STREAM": "0",
+          "STRATA_DS4_Q8_BATCH": "1",
+          "DS4_Q8_CHECK": "1"
+        },
+        "actual_cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service\n",
+        "same_executable": true
+      }
+    },
+    "B2": {
+      "passed": true,
+      "native_pid": 1286929,
+      "actual_chunk": 4096,
+      "context": 1048576,
+      "vision": true,
+      "expert_slots": 11315,
+      "cpu_experts": 4045,
+      "ram_experts": 4045,
+      "placement_warning": "Chunk workspace may change GPU/CPU expert counts; retain actual values, not only common profile seed.",
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.32,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2026
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.86,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2030
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "Q8": {
+        "passed": true,
+        "devices": [
+          0,
+          1
+        ],
+        "int8_values_each": 42784,
+        "scale_values_each": 1337,
+        "scope": "Startup self-check only; not model-output identity or broad quality proof",
+        "batch": 1,
+        "factor_enabled_line_count": 1,
+        "control_disabled_basis": null
+      },
+      "factor": {
+        "projection_passed": true,
+        "prompt_skip": 1,
+        "activation_required_after_cold_requests": true
+      },
+      "actual_process": {
+        "actual_argv_matches": true,
+        "controlled_env_matches": true,
+        "owned_window_cgroup": true,
+        "native_pid": 1286929,
+        "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+        "actual_argv": [
+          "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+          "--serve",
+          "--pack",
+          "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1",
+          "--gpus",
+          "0,1",
+          "--max-context",
+          "1048576",
+          "--reserve-mib",
+          "2048",
+          "--cpu-threads",
+          "24",
+          "--tp",
+          "1",
+          "--dspark",
+          "on",
+          "--prefill-chunk",
+          "4096",
+          "--eos",
+          "1",
+          "--dspark-conf",
+          "0.65",
+          "--mmap-experts",
+          "off",
+          "--expert-profile",
+          "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-B2-20261028T143017Z/native/expert-profile.bin",
+          "--serve",
+          "--vision",
+          "on",
+          "--ablate",
+          "/home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf",
+          "--ablate-scale",
+          "1",
+          "--verbose",
+          "--layer-split",
+          "auto",
+          ""
+        ],
+        "actual_controlled_env": {
+          "STRATA_DS4_DISK_SKIP_W": "0",
+          "DS4_YOCO": "1",
+          "STRATA_DS4_PROMPT_SKIP": "1",
+          "STRATA_DS4_REUSE": "1",
+          "STRATA_DS4_SLOT_KEEP": "1",
+          "STRATA_DS4_AUTO_PIN": "1",
+          "STRATA_DS4_SLOT_CAP": "4",
+          "STRATA_DS4_SLOT_GB": "8",
+          "STRATA_DS4_SLOT_DAYS": "7",
+          "STRATA_DS4_SLOT_MIN": "1024",
+          "STRATA_DS4_SLOT_DIR": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-B2-20261028T143017Z/native/cache",
+          "STRATA_DS4_DSPARK_CUM": "0",
+          "DS4_DSPARK_CUM": "0",
+          "DS4_DSPARK_MAX": "4",
+          "DS4_REQUIRE_ALL_RAM": "1",
+          "DS4_LANE_CAL": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-B2-20261028T143017Z/native/lane.txt",
+          "DS4_LT_STORE": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-B2-20261028T143017Z/native/lt.txt",
+          "DS4_STREAM": "0",
+          "STRATA_DS4_Q8_BATCH": "1",
+          "DS4_Q8_CHECK": "1"
+        },
+        "actual_cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service\n",
+        "same_executable": true
+      }
+    },
+    "A2": {
+      "passed": true,
+      "native_pid": 1306859,
+      "actual_chunk": 2048,
+      "context": 1048576,
+      "vision": true,
+      "expert_slots": 11410,
+      "cpu_experts": 3950,
+      "ram_experts": 3950,
+      "placement_warning": "Chunk workspace may change GPU/CPU expert counts; retain actual values, not only common profile seed.",
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.8,
+            "human_experts_with_drafter": 5796,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2022
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 59.31,
+            "human_experts_with_drafter": 5998,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2020
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "Q8": {
+        "passed": true,
+        "devices": [
+          0,
+          1
+        ],
+        "int8_values_each": 42784,
+        "scale_values_each": 1337,
+        "scope": "Startup self-check only; not model-output identity or broad quality proof",
+        "batch": 1,
+        "factor_enabled_line_count": 1,
+        "control_disabled_basis": null
+      },
+      "factor": {
+        "projection_passed": true,
+        "prompt_skip": 1,
+        "activation_required_after_cold_requests": true
+      },
+      "actual_process": {
+        "actual_argv_matches": true,
+        "controlled_env_matches": true,
+        "owned_window_cgroup": true,
+        "native_pid": 1306859,
+        "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+        "actual_argv": [
+          "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+          "--serve",
+          "--pack",
+          "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1",
+          "--gpus",
+          "0,1",
+          "--max-context",
+          "1048576",
+          "--reserve-mib",
+          "2048",
+          "--cpu-threads",
+          "24",
+          "--tp",
+          "1",
+          "--dspark",
+          "on",
+          "--prefill-chunk",
+          "2048",
+          "--eos",
+          "1",
+          "--dspark-conf",
+          "0.65",
+          "--mmap-experts",
+          "off",
+          "--expert-profile",
+          "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-A2-20261028T150241Z/native/expert-profile.bin",
+          "--serve",
+          "--vision",
+          "on",
+          "--ablate",
+          "/home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf",
+          "--ablate-scale",
+          "1",
+          "--verbose",
+          "--layer-split",
+          "auto",
+          ""
+        ],
+        "actual_controlled_env": {
+          "STRATA_DS4_DISK_SKIP_W": "0",
+          "DS4_YOCO": "1",
+          "STRATA_DS4_PROMPT_SKIP": "1",
+          "STRATA_DS4_REUSE": "1",
+          "STRATA_DS4_SLOT_KEEP": "1",
+          "STRATA_DS4_AUTO_PIN": "1",
+          "STRATA_DS4_SLOT_CAP": "4",
+          "STRATA_DS4_SLOT_GB": "8",
+          "STRATA_DS4_SLOT_DAYS": "7",
+          "STRATA_DS4_SLOT_MIN": "1024",
+          "STRATA_DS4_SLOT_DIR": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-A2-20261028T150241Z/native/cache",
+          "STRATA_DS4_DSPARK_CUM": "0",
+          "DS4_DSPARK_CUM": "0",
+          "DS4_DSPARK_MAX": "4",
+          "DS4_REQUIRE_ALL_RAM": "1",
+          "DS4_LANE_CAL": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-A2-20261028T150241Z/native/lane.txt",
+          "DS4_LT_STORE": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/prefill-chunk4096-A2-20261028T150241Z/native/lt.txt",
+          "DS4_STREAM": "0",
+          "STRATA_DS4_Q8_BATCH": "1",
+          "DS4_Q8_CHECK": "1"
+        },
+        "actual_cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service\n",
+        "same_executable": true
+      }
+    }
+  },
+  "extra_controls": {
+    "A1": {
+      "passed": true,
+      "scores": [
+        {
+          "id": "long-image-cold",
+          "passed": true,
+          "native": {
+            "generated": 183,
+            "prompt_tokens": 8648,
+            "prompt_ms": 9244.3,
+            "decode_ms": 4693.7,
+            "finish": "stop",
+            "drafts_accepted": 87,
+            "drafts_offered": 133,
+            "reused": 0,
+            "hits": 57209,
+            "lookups": 58365
+          }
+        },
+        {
+          "id": "long-image-warm",
+          "passed": true,
+          "native": {
+            "generated": 127,
+            "prompt_tokens": 8648,
+            "prompt_ms": 35.1,
+            "decode_ms": 2710.5,
+            "finish": "stop",
+            "drafts_accepted": 76,
+            "drafts_offered": 91,
+            "reused": 8647,
+            "hits": 35784,
+            "lookups": 36060
+          }
+        },
+        {
+          "id": "prefill-cancel",
+          "passed": true,
+          "purpose": "INTENTIONAL_PREFILL_CANCELLATION_NOT_QUALITY_OR_SPEED"
+        },
+        {
+          "id": "prefill-recovery",
+          "passed": true,
+          "native": {
+            "generated": 9,
+            "prompt_tokens": 18,
+            "prompt_ms": 264.5,
+            "decode_ms": 140.5,
+            "finish": "stop",
+            "drafts_accepted": 7,
+            "drafts_offered": 8,
+            "reused": 0,
+            "hits": 2421,
+            "lookups": 2490
+          }
+        }
+      ],
+      "bindings": [
+        {
+          "id": "long-image-cold",
+          "trace": "native-009",
+          "audit": {
+            "passed": true,
+            "native_pid": 1233825,
+            "prompt_tokens": 8648,
+            "observed_tokens": 183,
+            "native": {
+              "generated": 183,
+              "prompt_tokens": 8648,
+              "prompt_ms": 9244.3,
+              "decode_ms": 4693.7,
+              "finish": "stop",
+              "drafts_accepted": 87,
+              "drafts_offered": 133,
+              "reused": 0,
+              "hits": 57209,
+              "lookups": 58365
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": 13.97649989509955,
+            "client_first_content_s": 13.97649989509955,
+            "client_first_tool_s": null,
+            "client_full_s": 13.976649970049039,
+            "scope": "Native/client timings separately retained"
+          }
+        },
+        {
+          "id": "long-image-warm",
+          "trace": "native-010",
+          "audit": {
+            "passed": true,
+            "native_pid": 1233825,
+            "prompt_tokens": 8648,
+            "observed_tokens": 127,
+            "native": {
+              "generated": 127,
+              "prompt_tokens": 8648,
+              "prompt_ms": 35.1,
+              "decode_ms": 2710.5,
+              "finish": "stop",
+              "drafts_accepted": 76,
+              "drafts_offered": 91,
+              "reused": 8647,
+              "hits": 35784,
+              "lookups": 36060
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": 2.762919253204018,
+            "client_first_content_s": 2.762919253204018,
+            "client_first_tool_s": null,
+            "client_full_s": 2.7630439491476864,
+            "scope": "Native/client timings separately retained"
+          }
+        },
+        {
+          "id": "prefill-cancel",
+          "trace": "native-011",
+          "audit": {
+            "passed": true,
+            "native_pid": 1233825,
+            "prompt_tokens": 8362,
+            "observed_tokens": 0,
+            "native": {
+              "generated": 0,
+              "prompt_tokens": 8362,
+              "prompt_ms": 2804.4,
+              "decode_ms": 0.0,
+              "finish": "cancel",
+              "drafts_accepted": 0,
+              "drafts_offered": 0,
+              "reused": 0,
+              "hits": 0,
+              "lookups": 0
+            },
+            "cancelled_control_or_budget": true,
+            "client_first_reasoning_s": null,
+            "client_first_content_s": null,
+            "client_first_tool_s": null,
+            "client_full_s": 1.755657817935571,
+            "scope": "Cancelled observations are partial and never quality/speed passes"
+          }
+        },
+        {
+          "id": "prefill-recovery",
+          "trace": "native-012",
+          "audit": {
+            "passed": true,
+            "native_pid": 1233825,
+            "prompt_tokens": 18,
+            "observed_tokens": 9,
+            "native": {
+              "generated": 9,
+              "prompt_tokens": 18,
+              "prompt_ms": 264.5,
+              "decode_ms": 140.5,
+              "finish": "stop",
+              "drafts_accepted": 7,
+              "drafts_offered": 8,
+              "reused": 0,
+              "hits": 2421,
+              "lookups": 2490
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": null,
+            "client_first_content_s": 0.2666613489855081,
+            "client_first_tool_s": null,
+            "client_full_s": 0.417390403104946,
+            "scope": "Native/client timings separately retained"
+          }
+        }
+      ]
+    },
+    "B1": {
+      "passed": true,
+      "scores": [
+        {
+          "id": "long-image-cold",
+          "passed": true,
+          "native": {
+            "generated": 132,
+            "prompt_tokens": 8648,
+            "prompt_ms": 8387.7,
+            "decode_ms": 3353.6,
+            "finish": "stop",
+            "drafts_accepted": 69,
+            "drafts_offered": 104,
+            "reused": 0,
+            "hits": 41723,
+            "lookups": 42510
+          }
+        },
+        {
+          "id": "long-image-warm",
+          "passed": true,
+          "native": {
+            "generated": 80,
+            "prompt_tokens": 8648,
+            "prompt_ms": 35.0,
+            "decode_ms": 1752.2,
+            "finish": "stop",
+            "drafts_accepted": 46,
+            "drafts_offered": 56,
+            "reused": 8647,
+            "hits": 22668,
+            "lookups": 22905
+          }
+        },
+        {
+          "id": "prefill-cancel",
+          "passed": true,
+          "purpose": "INTENTIONAL_PREFILL_CANCELLATION_NOT_QUALITY_OR_SPEED"
+        },
+        {
+          "id": "prefill-recovery",
+          "passed": true,
+          "native": {
+            "generated": 9,
+            "prompt_tokens": 18,
+            "prompt_ms": 263.9,
+            "decode_ms": 140.2,
+            "finish": "stop",
+            "drafts_accepted": 7,
+            "drafts_offered": 8,
+            "reused": 0,
+            "hits": 2428,
+            "lookups": 2490
+          }
+        }
+      ],
+      "bindings": [
+        {
+          "id": "long-image-cold",
+          "trace": "native-009",
+          "audit": {
+            "passed": true,
+            "native_pid": 1250688,
+            "prompt_tokens": 8648,
+            "observed_tokens": 132,
+            "native": {
+              "generated": 132,
+              "prompt_tokens": 8648,
+              "prompt_ms": 8387.7,
+              "decode_ms": 3353.6,
+              "finish": "stop",
+              "drafts_accepted": 69,
+              "drafts_offered": 104,
+              "reused": 0,
+              "hits": 41723,
+              "lookups": 42510
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": 11.780956187983975,
+            "client_first_content_s": 11.780956187983975,
+            "client_first_tool_s": null,
+            "client_full_s": 11.781048514181748,
+            "scope": "Native/client timings separately retained"
+          }
+        },
+        {
+          "id": "long-image-warm",
+          "trace": "native-010",
+          "audit": {
+            "passed": true,
+            "native_pid": 1250688,
+            "prompt_tokens": 8648,
+            "observed_tokens": 80,
+            "native": {
+              "generated": 80,
+              "prompt_tokens": 8648,
+              "prompt_ms": 35.0,
+              "decode_ms": 1752.2,
+              "finish": "stop",
+              "drafts_accepted": 46,
+              "drafts_offered": 56,
+              "reused": 8647,
+              "hits": 22668,
+              "lookups": 22905
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": 1.8063157459255308,
+            "client_first_content_s": 1.8063157459255308,
+            "client_first_tool_s": null,
+            "client_full_s": 1.8064434081315994,
+            "scope": "Native/client timings separately retained"
+          }
+        },
+        {
+          "id": "prefill-cancel",
+          "trace": "native-011",
+          "audit": {
+            "passed": true,
+            "native_pid": 1250688,
+            "prompt_tokens": 8362,
+            "observed_tokens": 0,
+            "native": {
+              "generated": 0,
+              "prompt_tokens": 8362,
+              "prompt_ms": 3656.5,
+              "decode_ms": 0.0,
+              "finish": "cancel",
+              "drafts_accepted": 0,
+              "drafts_offered": 0,
+              "reused": 0,
+              "hits": 0,
+              "lookups": 0
+            },
+            "cancelled_control_or_budget": true,
+            "client_first_reasoning_s": null,
+            "client_first_content_s": null,
+            "client_first_tool_s": null,
+            "client_full_s": 2.1648052919190377,
+            "scope": "Cancelled observations are partial and never quality/speed passes"
+          }
+        },
+        {
+          "id": "prefill-recovery",
+          "trace": "native-012",
+          "audit": {
+            "passed": true,
+            "native_pid": 1250688,
+            "prompt_tokens": 18,
+            "observed_tokens": 9,
+            "native": {
+              "generated": 9,
+              "prompt_tokens": 18,
+              "prompt_ms": 263.9,
+              "decode_ms": 140.2,
+              "finish": "stop",
+              "drafts_accepted": 7,
+              "drafts_offered": 8,
+              "reused": 0,
+              "hits": 2428,
+              "lookups": 2490
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": null,
+            "client_first_content_s": 0.2664889849256724,
+            "client_first_tool_s": null,
+            "client_full_s": 0.4179901371244341,
+            "scope": "Native/client timings separately retained"
+          }
+        }
+      ]
+    },
+    "B2": {
+      "passed": true,
+      "scores": [
+        {
+          "id": "long-image-cold",
+          "passed": true,
+          "native": {
+            "generated": 146,
+            "prompt_tokens": 8648,
+            "prompt_ms": 8439.4,
+            "decode_ms": 3865.0,
+            "finish": "stop",
+            "drafts_accepted": 68,
+            "drafts_offered": 108,
+            "reused": 0,
+            "hits": 46645,
+            "lookups": 47565
+          }
+        },
+        {
+          "id": "long-image-warm",
+          "passed": true,
+          "native": {
+            "generated": 88,
+            "prompt_tokens": 8648,
+            "prompt_ms": 35.8,
+            "decode_ms": 1951.2,
+            "finish": "stop",
+            "drafts_accepted": 53,
+            "drafts_offered": 73,
+            "reused": 8647,
+            "hits": 26896,
+            "lookups": 27120
+          }
+        },
+        {
+          "id": "prefill-cancel",
+          "passed": true,
+          "purpose": "INTENTIONAL_PREFILL_CANCELLATION_NOT_QUALITY_OR_SPEED"
+        },
+        {
+          "id": "prefill-recovery",
+          "passed": true,
+          "native": {
+            "generated": 9,
+            "prompt_tokens": 18,
+            "prompt_ms": 267.9,
+            "decode_ms": 139.6,
+            "finish": "stop",
+            "drafts_accepted": 7,
+            "drafts_offered": 8,
+            "reused": 0,
+            "hits": 2440,
+            "lookups": 2490
+          }
+        }
+      ],
+      "bindings": [
+        {
+          "id": "long-image-cold",
+          "trace": "native-009",
+          "audit": {
+            "passed": true,
+            "native_pid": 1286929,
+            "prompt_tokens": 8648,
+            "observed_tokens": 146,
+            "native": {
+              "generated": 146,
+              "prompt_tokens": 8648,
+              "prompt_ms": 8439.4,
+              "decode_ms": 3865.0,
+              "finish": "stop",
+              "drafts_accepted": 68,
+              "drafts_offered": 108,
+              "reused": 0,
+              "hits": 46645,
+              "lookups": 47565
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": 12.346114113926888,
+            "client_first_content_s": 12.346114113926888,
+            "client_first_tool_s": null,
+            "client_full_s": 12.34642568603158,
+            "scope": "Native/client timings separately retained"
+          }
+        },
+        {
+          "id": "long-image-warm",
+          "trace": "native-010",
+          "audit": {
+            "passed": true,
+            "native_pid": 1286929,
+            "prompt_tokens": 8648,
+            "observed_tokens": 88,
+            "native": {
+              "generated": 88,
+              "prompt_tokens": 8648,
+              "prompt_ms": 35.8,
+              "decode_ms": 1951.2,
+              "finish": "stop",
+              "drafts_accepted": 53,
+              "drafts_offered": 73,
+              "reused": 8647,
+              "hits": 26896,
+              "lookups": 27120
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": 2.0049870871007442,
+            "client_first_content_s": 2.0049870871007442,
+            "client_first_tool_s": null,
+            "client_full_s": 2.0051077459938824,
+            "scope": "Native/client timings separately retained"
+          }
+        },
+        {
+          "id": "prefill-cancel",
+          "trace": "native-011",
+          "audit": {
+            "passed": true,
+            "native_pid": 1286929,
+            "prompt_tokens": 8362,
+            "observed_tokens": 0,
+            "native": {
+              "generated": 0,
+              "prompt_tokens": 8362,
+              "prompt_ms": 3657.3,
+              "decode_ms": 0.0,
+              "finish": "cancel",
+              "drafts_accepted": 0,
+              "drafts_offered": 0,
+              "reused": 0,
+              "hits": 0,
+              "lookups": 0
+            },
+            "cancelled_control_or_budget": true,
+            "client_first_reasoning_s": null,
+            "client_first_content_s": null,
+            "client_first_tool_s": null,
+            "client_full_s": 2.164615344023332,
+            "scope": "Cancelled observations are partial and never quality/speed passes"
+          }
+        },
+        {
+          "id": "prefill-recovery",
+          "trace": "native-012",
+          "audit": {
+            "passed": true,
+            "native_pid": 1286929,
+            "prompt_tokens": 18,
+            "observed_tokens": 9,
+            "native": {
+              "generated": 9,
+              "prompt_tokens": 18,
+              "prompt_ms": 267.9,
+              "decode_ms": 139.6,
+              "finish": "stop",
+              "drafts_accepted": 7,
+              "drafts_offered": 8,
+              "reused": 0,
+              "hits": 2440,
+              "lookups": 2490
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": null,
+            "client_first_content_s": 0.2700720098800957,
+            "client_first_tool_s": null,
+            "client_full_s": 0.4198884558863938,
+            "scope": "Native/client timings separately retained"
+          }
+        }
+      ]
+    },
+    "A2": {
+      "passed": true,
+      "scores": [
+        {
+          "id": "long-image-cold",
+          "passed": true,
+          "native": {
+            "generated": 104,
+            "prompt_tokens": 8648,
+            "prompt_ms": 9257.4,
+            "decode_ms": 2426.0,
+            "finish": "stop",
+            "drafts_accepted": 59,
+            "drafts_offered": 81,
+            "reused": 0,
+            "hits": 31102,
+            "lookups": 31800
+          }
+        },
+        {
+          "id": "long-image-warm",
+          "passed": true,
+          "native": {
+            "generated": 161,
+            "prompt_tokens": 8648,
+            "prompt_ms": 34.5,
+            "decode_ms": 3921.1,
+            "finish": "stop",
+            "drafts_accepted": 81,
+            "drafts_offered": 112,
+            "reused": 8647,
+            "hits": 48599,
+            "lookups": 49095
+          }
+        },
+        {
+          "id": "prefill-cancel",
+          "passed": true,
+          "purpose": "INTENTIONAL_PREFILL_CANCELLATION_NOT_QUALITY_OR_SPEED"
+        },
+        {
+          "id": "prefill-recovery",
+          "passed": true,
+          "native": {
+            "generated": 9,
+            "prompt_tokens": 18,
+            "prompt_ms": 275.2,
+            "decode_ms": 142.3,
+            "finish": "stop",
+            "drafts_accepted": 7,
+            "drafts_offered": 8,
+            "reused": 0,
+            "hits": 2438,
+            "lookups": 2490
+          }
+        }
+      ],
+      "bindings": [
+        {
+          "id": "long-image-cold",
+          "trace": "native-009",
+          "audit": {
+            "passed": true,
+            "native_pid": 1306859,
+            "prompt_tokens": 8648,
+            "observed_tokens": 104,
+            "native": {
+              "generated": 104,
+              "prompt_tokens": 8648,
+              "prompt_ms": 9257.4,
+              "decode_ms": 2426.0,
+              "finish": "stop",
+              "drafts_accepted": 59,
+              "drafts_offered": 81,
+              "reused": 0,
+              "hits": 31102,
+              "lookups": 31800
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": 11.722044090973213,
+            "client_first_content_s": 11.722044090973213,
+            "client_first_tool_s": null,
+            "client_full_s": 11.722197242081165,
+            "scope": "Native/client timings separately retained"
+          }
+        },
+        {
+          "id": "long-image-warm",
+          "trace": "native-010",
+          "audit": {
+            "passed": true,
+            "native_pid": 1306859,
+            "prompt_tokens": 8648,
+            "observed_tokens": 161,
+            "native": {
+              "generated": 161,
+              "prompt_tokens": 8648,
+              "prompt_ms": 34.5,
+              "decode_ms": 3921.1,
+              "finish": "stop",
+              "drafts_accepted": 81,
+              "drafts_offered": 112,
+              "reused": 8647,
+              "hits": 48599,
+              "lookups": 49095
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": 3.973839233862236,
+            "client_first_content_s": 3.973839233862236,
+            "client_first_tool_s": null,
+            "client_full_s": 3.9740368290804327,
+            "scope": "Native/client timings separately retained"
+          }
+        },
+        {
+          "id": "prefill-cancel",
+          "trace": "native-011",
+          "audit": {
+            "passed": true,
+            "native_pid": 1306859,
+            "prompt_tokens": 8362,
+            "observed_tokens": 0,
+            "native": {
+              "generated": 0,
+              "prompt_tokens": 8362,
+              "prompt_ms": 2855.7,
+              "decode_ms": 0.0,
+              "finish": "cancel",
+              "drafts_accepted": 0,
+              "drafts_offered": 0,
+              "reused": 0,
+              "hits": 0,
+              "lookups": 0
+            },
+            "cancelled_control_or_budget": true,
+            "client_first_reasoning_s": null,
+            "client_first_content_s": null,
+            "client_first_tool_s": null,
+            "client_full_s": 1.7588482878636569,
+            "scope": "Cancelled observations are partial and never quality/speed passes"
+          }
+        },
+        {
+          "id": "prefill-recovery",
+          "trace": "native-012",
+          "audit": {
+            "passed": true,
+            "native_pid": 1306859,
+            "prompt_tokens": 18,
+            "observed_tokens": 9,
+            "native": {
+              "generated": 9,
+              "prompt_tokens": 18,
+              "prompt_ms": 275.2,
+              "decode_ms": 142.3,
+              "finish": "stop",
+              "drafts_accepted": 7,
+              "drafts_offered": 8,
+              "reused": 0,
+              "hits": 2438,
+              "lookups": 2490
+            },
+            "cancelled_control_or_budget": false,
+            "client_first_reasoning_s": null,
+            "client_first_content_s": 0.2776522079948336,
+            "client_first_tool_s": null,
+            "client_full_s": 0.4320685090497136,
+            "scope": "Native/client timings separately retained"
+          }
+        }
+      ]
+    }
+  },
+  "resources": {
+    "A1": {
+      "root_min_GiB": 841.9311408996582,
+      "swapout_page_delta": 0,
+      "swap_not_model_attributed": true
+    },
+    "B1": {
+      "root_min_GiB": 841.6892890930176,
+      "swapout_page_delta": 0,
+      "swap_not_model_attributed": true
+    },
+    "B2": {
+      "root_min_GiB": 841.4945487976074,
+      "swapout_page_delta": 0,
+      "swap_not_model_attributed": true
+    },
+    "A2": {
+      "root_min_GiB": 841.3351058959961,
+      "swapout_page_delta": 0,
+      "swap_not_model_attributed": true
+    }
+  },
+  "native_requests": 52,
+  "HTTP_requests": 56,
+  "limitations": [
+    "Targeted32K/8.6K panel at1M allocation only; no nearfilled1M/full256K output proof.",
+    "Variable output lengths and draft acceptance prevent overall task-speed, statistical orp95 claims.",
+    "Candidate moves95 GPUexpert slots toRAM and has coarser observed prefill cancellation; numerical rows differ.",
+    "Rawfull3/5 each is preserved separately from manual code and exact typed-tool qualification."
+  ],
+  "utc": "2026-10-28T15:42:38.873712+00:00",
+  "terminal_audit_sha256": {
+    "A1": "1d053e80c9a445bb1c251ea251894d3098556ddc5eed371fa7b8ebc551b1427e",
+    "B1": "36a239f981db3a78c1d968753b8ec0bc2992183f9371db5e8bd86039fdf6c1b8",
+    "B2": "f739eabf98e5627a4d8162e94ea93b3a1ed49b8f46f9fd2bae1fe1562520b5c3",
+    "A2": "b171d1eaeac91b20cf3fce064c4054970bf0f3523d3fbd13f0310ecdbcf193cb"
+  },
+  "selection_plan_sha256": "ba3120c8f31b6500f09ecce9e03799d055b7e00236e36baefed7c8a2870ebb05",
+  "producer_sha256": "42f97a52cac41eeea8e41968894d4f890a4d57bf3bb21dfc2cde3d52fa53db1d",
+  "manual_quality_sha256": {
+    "A1/main/CPU-attempt1-darwin.json": "7a7a54c7119f9510fbd594c66ff5e9cc824111fd4c21e108de28a13c80489334",
+    "A1/main/CPU-attempt1-darwin.log": "a968d2773af8d834211fb9080d20b013e64ca89d30877af330b64a3cc6a70adb",
+    "A1/main/CPU-attempt1-linux.json": "b2680f3a509dd883542abfa49fc8a7655ffbf22988ec95dff7ec85e874f8ce0b",
+    "A1/main/CPU-attempt1-linux.log": "9ec9da6c3773d8cabb5719d8681adc2daa9482afa5b40ff690ec0409e0e81159",
+    "A1/main/Ubuntu-stage-parent-diagnosis.json": "83fb1ea9fac86e4c3c29b9bbe06814d985b41d900d94defb56d7c48f472f71b9",
+    "A1/main/code-review-darwin.json": "49be800b2b51931d6e17d61d331c10c273fe88314e5e76c6c48a3cef0b6470df",
+    "A1/main/code-review-linux.json": "be92b241ca99a742c942abc536f4a293ad9bc3bde3d5fda68b5cf6161ca49304",
+    "A1/main/generated_code.py": "befae9743145a6ab51291313f55fec2442ea65b83b31fac036e612c4499462d8",
+    "A1/main/manual-code-review.json": "f8d5a62cece7d8ac00588cb8364842412921ae7c3e11a3af941d134faeb76f65",
+    "A1/main/review_code.py": "c9ef3fdfd80394d22e9861a153f0c8d98f7990f6a56f8b7e0cc6618b290fbc3f",
+    "A1/main/root-manual-code-review.json": "505b057ff0b85761eca066da7f3f64eac9e689fa3e50b5e7201a634a4ba13523",
+    "A1/main/supplied-tests-darwin.log": "3f02e2a8a73e792449a769aaaa652d07f28d38f07cdced5149b2e6d74772b7a0",
+    "A1/main/supplied-tests-linux.log": "3f02e2a8a73e792449a769aaaa652d07f28d38f07cdced5149b2e6d74772b7a0",
+    "A1/result-astra-review.json": "8a8e216decf8dc4a6df81a87c1cbab250b3eda0864f13c777e1139ac84c2d81c",
+    "A2/main/CPU-attempt1-darwin.json": "906b566a47da7bf6ac6c82982a6cc40132bacea1040565bf1ec16a73a448ac82",
+    "A2/main/CPU-attempt1-darwin.log": "1c9c3cf465d227c4126db684e1249e8c4d76cc0808d1495ca29980545d7fe51d",
+    "A2/main/CPU-attempt1-linux.json": "be421654ef0e517300151022cabfbca25bec56bd7c6a2e2b9a20637d07c80fd0",
+    "A2/main/CPU-attempt1-linux.log": "d525a34d0cb50db869bd489404f2e985c1cb91922ba43464173ac82c50a7e7aa",
+    "A2/main/code-review-darwin.json": "3ba94c24c956e4ff7db870e48e32511d43e2a9046cc592b245f23c9ee8b49bb7",
+    "A2/main/code-review-linux.json": "cf509f3185e9befdcbf473829a7abbca936e3f7eb267bec4c098ed974cb13a63",
+    "A2/main/generated_code.py": "66d89272d6fab6d18768e43897983f51526bc246e5ab92e4848a3905cce592d0",
+    "A2/main/manual-code-review.json": "7e446f4657e277793093f37e9f55292270a934898a0fd1f0137643856884952e",
+    "A2/main/review_code.py": "52e3073ae591668c6483cfb413fc7fe534787f425358f1785abfb9c09eb3002f",
+    "A2/main/root-manual-code-review.json": "575edcd19cf39736ac903be4832b7077e944f3f68a9c2dbe9d351de0f49bb22d",
+    "A2/main/supplied-tests-darwin.log": "2e98e9f640827dc4f931322aee89a22b89b5102f8b0d0dfe91a02ec38f872a35",
+    "A2/main/supplied-tests-linux.log": "2e98e9f640827dc4f931322aee89a22b89b5102f8b0d0dfe91a02ec38f872a35",
+    "A2/result-astra-review.json": "060889e30446e43f14e330c4b82b00eceb3d17801ab69a829f5c8d91c25183ad",
+    "B1/main/CPU-attempt1-darwin.json": "a88ac877d19c785c326096c0b7e0bc8b8a6a8dcb51aeee19ce305bc3ec19670a",
+    "B1/main/CPU-attempt1-darwin.log": "f1b3eb0d7bef66900af0375abf0b771568b1a37953ca1447323b6948cd40ef04",
+    "B1/main/CPU-attempt1-linux.json": "4a2140e12bb46265b47b70738738e56e94be2356bf1f12d45e586d3629d9027a",
+    "B1/main/CPU-attempt1-linux.log": "2dc3445a01cbdd29e972dc8f2e3d81dfaa67c565f56eba7b886afa198d8883a8",
+    "B1/main/code-review-darwin.json": "9c44d552c49798bb858c0e0c654ad66d4ae646cbcdba89a1faebea4c6edb3bc6",
+    "B1/main/code-review-linux.json": "3e9e66c6902bbfe50ba9baf4b1d813ff7d2c86d8ff46ffc320a3c25898332f8a",
+    "B1/main/gate-source-astra-review.json": "742ce82b80be0746e31302d89f4962ec54840dd2e0af8388fa6e7d4e22c697d6",
+    "B1/main/generated_code.py": "5e2b0ff21db1d71f7f87c3a14efd5f20f8e9ad49e83838a45c63605ca23402e7",
+    "B1/main/int-guard-attempt1-darwin-child.json": "e81dba314ca736ba88525d4434c22cd6b8fadc0d0fede74d13445a23fd71b91b",
+    "B1/main/int-guard-attempt1-darwin.log": "fd7ae42c79b9f49e905395d8368f6b7e388b44303e6b79e5e7602d0f079c562f",
+    "B1/main/int-guard-attempt1-linux-child.json": "0e2caaeeb707bf7e629a1bfc8778832fc148121fec1e6105143504cf7aa6cc68",
+    "B1/main/int-guard-attempt1-linux.log": "fd7ae42c79b9f49e905395d8368f6b7e388b44303e6b79e5e7602d0f079c562f",
+    "B1/main/int-guard-both-hosts-checkpoint.json": "831e27aac03c3dc52f545cc28d10a00e9ba056a0bf328328d5251c968a9c57ca",
+    "B1/main/int-guard-darwin.json": "805c262a3319053f268b738ae2ce7a6645ad693bfc3cd808fbd647bbabddd14b",
+    "B1/main/int-guard-linux.json": "4f7e1a8d73e7984754a29e654bf00d1160237ff167b08be37ff0e790898e0166",
+    "B1/main/manual-code-review.json": "6ecfd24bbe7dd0050fe41ee8232064479787a391877a923c15e9eb92850b36d8",
+    "B1/main/review_code.py": "afb8742fd96b41389d7702094fe48e396f7b688bae4ab6e365b74dbc7c492e0d",
+    "B1/main/root-manual-code-review.json": "69097b20f6417ff4a6af68f48d97d18526759360e1049e9b6426a43b408ba63a",
+    "B1/main/supplied-tests-darwin.log": "241ebfc8c977c6c973aa2ebc4c8cbfd11012079cf9cef9790db8ba997a41a448",
+    "B1/main/supplied-tests-linux.log": "241ebfc8c977c6c973aa2ebc4c8cbfd11012079cf9cef9790db8ba997a41a448",
+    "B1/main/test_review_int_guard.py": "c235352afef6c6ae7c3a86bdcc36919d23da6449bac1c73d430769e3f06d7ab2",
+    "B1/result-astra-review.json": "e7ad86ab7e1313649227d2496bc7c361e42fa1297c5a77288039d9db8543b6bd",
+    "B2/main/CPU-attempt1-darwin.json": "9742951a5e40a2db18b4b8e1e5d78e97bff79ae5918573650428c3fec6f4adce",
+    "B2/main/CPU-attempt1-darwin.log": "21bc877066e2926466f9f76783866bee4ece6ae5286e2469e29d198832a51078",
+    "B2/main/CPU-attempt1-linux.json": "8903ee6d6b6cb4a38dbb28a3165ec2b0f60a759c1a8ba5033733891380015f0c",
+    "B2/main/CPU-attempt1-linux.log": "11c1b67db6fb45a0f9e6ccb6527eb07e1ab2305245a2e15cbdfe5b6abddbc742",
+    "B2/main/code-review-darwin.json": "b7d012b8845a95ce207f95a46269589bd67b87b5e1f21f8a8de579ad8cd79603",
+    "B2/main/code-review-linux.json": "7135f31bd2609c0ef241a1ecb13a0e81a82f3638fb70cc73e8518717b48528a6",
+    "B2/main/gate-source-astra-review.json": "032ba93393a2ea6cc10df869f0332c5e07ef92ce6fef54b7a954755ca8fa7978",
+    "B2/main/generated_code.py": "79ff50946257f1df9047a56f29ec040e2e79eed72e17a6759b056c2ed03b8153",
+    "B2/main/helper-guard-attempt1-darwin-child.json": "be587205341a6e223de6bd2acaf19e37c05a6d8dee6bea8721322fc428fbd82c",
+    "B2/main/helper-guard-attempt1-darwin.log": "6f494ff45163c01335d7a9fad9966229b5f55fbf83df23c8b0fd25ab578411de",
+    "B2/main/helper-guard-attempt1-linux-child.json": "c00fa51538e1589ef87396235b60472ea216a2056f8081afe9b272cec4c9a96a",
+    "B2/main/helper-guard-attempt1-linux.log": "d97b70dfb35d4337c81dc24c740b8b32d56a87e7629ae7a86cd4c2069379eef1",
+    "B2/main/helper-guard-both-hosts-checkpoint.json": "5347ca04da240985dcd34537ab991c91206a2e3487921d3708f0d60f956781f7",
+    "B2/main/helper-guard-darwin.json": "7412871e2035ee1f731f5c0db1b1a2a7a75b156033e571f52760aa11a0c6c899",
+    "B2/main/helper-guard-linux.json": "7bd9472fba496a6d243e8e486431fcada636a76c08b3feb1019cbd2d8a2dfe6b",
+    "B2/main/manual-code-review.json": "0f1d6c0bfa4aeef84d1f7462ed3443f88b3fcfdc1492ab606765b0ae60daa89e",
+    "B2/main/review_code.py": "8e8d295a135e3829f35952e689f13a81a1dd02838411968438e29c1755f29f1f",
+    "B2/main/root-manual-code-review.json": "01013042c141ef8212605d6c037383e5b63eb529621094e1bccd1a5a239c085a",
+    "B2/main/supplied-tests-darwin.log": "9cf8944dd82b135edc882d7e88d580a5af8e1cdc2e7657eca35c1dfcaa234d15",
+    "B2/main/supplied-tests-linux.log": "9cf8944dd82b135edc882d7e88d580a5af8e1cdc2e7657eca35c1dfcaa234d15",
+    "B2/main/test_review_helper_guard.py": "786a53a762115b6aabc8772a6094b518b8d9e591aa0e44bc5c6a0808b88cf565",
+    "B2/result-astra-review.json": "36a738d7acbc89aae271b4701f2cbc97fced85542c50055265047cf47c8d4b21"
+  }
+}
