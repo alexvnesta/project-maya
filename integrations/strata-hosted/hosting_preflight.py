@@ -10,14 +10,16 @@ def competing_model_units():
 def validate_config(config):
     if config['host']!='127.0.0.1' or config['port']!=18141:raise RuntimeError('Unexpected hosting bind')
     args=config['args']
-    for flag,value in [('--max-context','1048576'),('--dspark','on'),('--vision','on'),('--tp','1'),('--ablate',str(DEPLOY/'runtime-direction-L22.gguf')),('--ablate-scale','1')]:
+    for flag,value in [('--prefill-chunk','2048'),('--max-context','1048576'),('--dspark','on'),('--vision','on'),('--tp','1'),('--ablate',str(DEPLOY/'runtime-direction-L22.gguf')),('--ablate-scale','1')]:
         if args.count(flag)!=1 or args.index(flag)+1>=len(args) or args[args.index(flag)+1]!=value:raise RuntimeError('Serving contract mismatch')
     if config.get('hosted_default_effort')!=100:raise RuntimeError('Default maximum effort changed')
     if any(config.get(k)!=v for k,v in [('answer_room',False),('reasoning_budget_tokens',0),('repeat_stop_tokens',0),('reasoning_loop_recovery',False),('fit_max_tokens',False)]):raise RuntimeError('Quality policy changed')
     if config['exe']!=str(DEPLOY/'bin/maya-ds4'):raise RuntimeError('Unexpected native executable')
     env=config.get('env',{})
     if env.get('STRATA_DS4_Q8_BATCH')!='1' or env.get('DS4_Q8_CHECK')!='1':raise RuntimeError('Q8/check disabled')
-    if env.get('STRATA_DS4_SLOT_DIR')!=str(DEPLOY/('state/conversation-cache-'+os.environ['MAYA_DIRECTION_SHA256']+'-s1-1m')):raise RuntimeError('Projection requires isolated KV cache namespace')
+    if env.get('DS4_YOCO')!='1' or env.get('STRATA_DS4_PROMPT_SKIP')!='1':raise RuntimeError('Qualified mode1 prompt skip required')
+    if any(k in env for k in ['DS4_CHUNK','DS4_CHUNK_MIN','DS4_CACHE_REUSE_MIB','DS4_COPY_PIN','DS4_FLOW','DS4_Q5K_SHARED_SUMS','DS4_SERVE_DUMP','DS4_SPLIT','DS4_YOCO_KEEP','STRATA_DS4_DECODE_TRIM','STRATA_DS4_DRAFT_VRAM','STRATA_DS4_HC_FUSE','STRATA_DS4_LOAD_DROP_CACHE','STRATA_DS4_ROUTE_FUSE']):raise RuntimeError('Unqualified mixed factors')
+    if env.get('STRATA_DS4_SLOT_DIR')!=str(DEPLOY/('state/conversation-cache-'+os.environ['MAYA_DIRECTION_SHA256']+'-s1-1m-yoco1-chunk2048')):raise RuntimeError('Projection requires isolated KV cache namespace')
 def main():
     manifest=json.loads((DEPLOY/'release.json').read_text())
     config=json.loads((DEPLOY/'config.json').read_text())
