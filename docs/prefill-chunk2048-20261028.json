@@ -2,7 +2,7 @@
   "utc": "2026-10-28T09:52:25.287600+00:00",
   "status": "FOUR_ARMS_CLOSED",
   "activation_screen_passed": true,
-  "production_active": false,
+  "production_active": true,
   "same_selected_native": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
   "context": 1048576,
   "output_default": 262144,
@@ -258,7 +258,7 @@
     "RAM_GiB": 128
   },
   "fixed": "TP1,automatic19-21,mode1,Q8flags1/1,1Mcontext,256Koutput,nativeimages,runtimeprojectionL22scale1,DSpark.65,24CPU,allCPUexpertsRAM,stream0",
-  "candidate_activation_status": "Reproduced result accepted by dedicated Astra for separate activation-source qualification; candidate not yet active.",
+  "candidate_activation_status": "Activated and actual selected production/public verified2026-10-28T10:30:28Z; independent final observation10:33Z and dedicated Astra postactivation review passed.",
   "arms": {
     "A1": {
       "metrics": {
@@ -684,5 +684,31 @@
         "exact_prompt_bytes_observed": false
       }
     }
+  },
+  "activation": {
+    "utc": "2026-10-28T10:30:28.264625+00:00",
+    "release_id": "deepseek-maya-1m-native-vision-q8-runtime-ablated-output256k-yoco1-chunk2048-20261028",
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "e3219ee32dc8ac5540a66b21909210df6e45b5a6be9ffbf1349b95016b45768b",
+    "preflight_sha256": "51bf692be0ed184a092303d61e0d2b7de74eca5473098d4b78a705d4b83c7bb2",
+    "release_sha256": "d7ed05c83af8f749dfc3e609e67a1609147550884a75598ab726fa8f291bb75e",
+    "all972_live_release_pins_verified": true,
+    "selected_same_native_1M_context_256K_allowance_images_Q8_TP1_projection": true,
+    "old_cache_retained_new_separate_cache": true,
+    "public": {
+      "unauthenticated_models": 401,
+      "authenticated_models": 200,
+      "SSE_done": true,
+      "finish": "stop",
+      "known_answer_passed": true,
+      "content": "READY"
+    },
+    "kernel_clean": true,
+    "root_free_GiB": 842.4954299926758,
+    "systemwide_swapout_page_delta": 0,
+    "swap_not_model_attributed": true,
+    "activation_CPU_controls_each_host": 43,
+    "portable_profile_CPU_controls_each_host": 7,
+    "raw_activation_state_sha256": "803e4d471a950394c0ebfaa32cd7935ce8e1616cfc454f6898a86490005f328d"
   }
 }
