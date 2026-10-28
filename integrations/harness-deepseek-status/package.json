@@ -1,0 +1,14 @@
+{
+  "name": "@alex/harness-deepseek-status",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {".": "./index.mjs", "./client": "./client.js", "./package.json": "./package.json"},
+  "dsh": {
+    "bundle": {"patch": "./cordis.patch.yml"},
+    "client": {"inject": ["@deepseek-ai/dsh-client-ui-layout", "@deepseek-ai/dsh-client-connection"], "platform": "web"}
+  },
+  "peerDependencies": {"@deepseek-ai/cordis": "~4.0.5"},
+  "scripts": {"test": "node --test test.mjs"}
+}
