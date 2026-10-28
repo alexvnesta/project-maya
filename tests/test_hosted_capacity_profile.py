@@ -20,6 +20,15 @@ class HostedCapacity(unittest.TestCase):
   return expand(json.loads((ROOT/'config.example.json').read_text()))
  def test_expanded_1m_profile_and_output_default_are_admitted(self):
   m=self.module('hosting_preflight');c=self.config();m.validate_config(c);self.assertEqual(c['args'][c['args'].index('--max-context')+1],'1048576');self.assertEqual(json.loads((ROOT/'config.shared-settings.example.json').read_text())['max_tokens'],262144)
+ def test_chunk_mode_cache_identity_and_hidden_factors_are_refused(self):
+  m=self.module('hosting_preflight');good=self.config();self.assertEqual(good['args'][good['args'].index('--prefill-chunk')+1],'2048');self.assertEqual([good['env'][k]for k in ['DS4_YOCO','STRATA_DS4_PROMPT_SKIP']],['1','1'])
+  for kind in ['chunk','duplicate','DS4_YOCO','STRATA_DS4_PROMPT_SKIP','cache','DS4_CHUNK','DS4_CHUNK_MIN','DS4_COPY_PIN']:
+   c=self.config()
+   if kind=='chunk':c['args'][c['args'].index('--prefill-chunk')+1]='1024'
+   elif kind=='duplicate':c['args'].extend(['--prefill-chunk','2048'])
+   elif kind=='cache':c['env']['STRATA_DS4_SLOT_DIR']=c['env']['STRATA_DS4_SLOT_DIR'].replace('-yoco1-chunk2048','')
+   else:c['env'][kind]='0' if kind in ['DS4_YOCO','STRATA_DS4_PROMPT_SKIP'] else '1'
+   with self.assertRaises(RuntimeError):m.validate_config(c)
  def test_old_context_and_old_cache_namespace_are_refused(self):
   m=self.module('hosting_preflight')
   for flag in ['context','cache']:

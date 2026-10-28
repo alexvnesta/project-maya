@@ -34,3 +34,12 @@ before framing when the full output allowance is reserved. These settings passed
 allocation and targeted image/tool/cache/cancellation/recovery checks on the selected native;
 they are not a filled-1M or full-256K-generation result. See
 [`FORK_BENCHMARK.md`](../../docs/FORK_BENCHMARK.md#capacity-update-2026-10-27) for the bounded result.
+
+The current portable profile also retains mode1 prompt skipping and a 2048-token prefill chunk.
+A separate four-arm comparison reproduced about 30.46% less cold 32K prefill time than chunk 1024
+on the selected dual-CMP170HX setup. The production change was activated and publicly verified
+on 2026-10-28 after separate both-host activation controls. Cache namespaces include direction,
+mode and chunk identity; retain older namespaces rather than mixing their KV states.
+The portable pathname uses the full direction placeholder, so template bytes are deliberately
+different from installation-specific production bytes. See
+[`prefill-chunk2048-20261028.md`](../../docs/prefill-chunk2048-20261028.md) for measurements and limits.
