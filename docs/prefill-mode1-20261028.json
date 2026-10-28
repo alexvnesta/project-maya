@@ -1,0 +1,80 @@
+{
+  "status": "FOUR_ARMS_CLOSED",
+  "same_selected_native": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "context": 1048576,
+  "output_default": 262144,
+  "pairs": [
+    {
+      "control": "A1",
+      "candidate": "B1",
+      "cold32761_prefill_reduction_pct": 15.81582566197416,
+      "coding_decode_change_pct": -0.5780143494091949,
+      "passed": true
+    },
+    {
+      "control": "A2",
+      "candidate": "B2",
+      "cold32761_prefill_reduction_pct": 14.953478976244705,
+      "coding_decode_change_pct": 1.4197583469955033,
+      "passed": true
+    }
+  ],
+  "cold32761_prefill_ms": {
+    "control_mean": 51541.8,
+    "candidate_mean": 43610.95,
+    "reduction_pct": 15.387219693530307
+  },
+  "coding": {
+    "control": {
+      "tokens": 19829,
+      "native_decode_ms": 451457.6,
+      "native_decode_tps": 43.92217563731345,
+      "native_prefill_ms_mean": 1969.75,
+      "client_full_seconds_sum": 455.43009502091445
+    },
+    "candidate": {
+      "tokens": 21655,
+      "native_decode_ms": 491727.5,
+      "native_decode_tps": 44.03861895053663,
+      "native_prefill_ms_mean": 1902.25,
+      "client_full_seconds_sum": 495.56253638491035
+    },
+    "pooled_decode_change_pct": 0.2651128081284204,
+    "generated_token_change_pct": 9.208734681527053
+  },
+  "natural_stop_main": 20,
+  "native_HTTP_counts": {
+    "performance_native": 52,
+    "performance_HTTP": 56,
+    "separate_numeric_native": 8
+  },
+  "raw_basic": [
+    5,
+    5,
+    5,
+    5
+  ],
+  "raw_full_unregraded": [
+    3,
+    3,
+    3,
+    3
+  ],
+  "code_tests_per_arm": {
+    "A1": 17,
+    "B1": 15,
+    "B2": 14,
+    "A2": 16
+  },
+  "terminal_audit_sha256": {
+    "A1": "d947dfbe6e5daa8d508c914b851c33b2f91cce16ddae593abd490a77ff8ef410",
+    "B1": "649bae0499b072c3786313f9a75d7553263f2ecdc01b3e66fa9d4228affc3573",
+    "B2": "34d8ded5036cf548134775754c09cbab4d0aae89a3af24691f94273f44342a1f",
+    "A2": "3662af03c7036bc8736e11760312e0f0b944b022d2a4722a86f2f1caae3fa143"
+  },
+  "selection_plan_sha256": "e559f8bfa0685f5091089d3a42436048da15a26e0e1feb9f0944a3522f9389e9",
+  "scope": "32K common panel at1Mallocation; exact existing mode1 only. Nearfilled1M/full256K generation, statistical/p95/overall task speedup and whole-model bit equivalence not claimed.",
+  "production_activated": true,
+  "activation_config_sha256": "8af68678f44b7c217ccc18dd590f2cea9155c74074e022564bbb9bf5e2fd2ebc",
+  "activation_receipt_sha256": "9df0706ead7c2ffedc1d82af95b7b5d8e8c812686be8ab72e4aae2afdadb591c"
+}
