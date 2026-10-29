@@ -1,0 +1,83 @@
+{
+  "observed_utc": "2026-10-29T04:42:25.309579+00:00",
+  "stage": "GPU_KERNEL_CORRECTNESS_PASSED_MODEL_AND_SPEED_UNRUN",
+  "compile": {
+    "passed": true,
+    "outputs": {
+      "ds4_iq.cu.o": "19800554edcd3031e1876e335530d00693dd591844a87fa136a1f3bec8e85cfe",
+      "ds4_gguf_test.cu.o": "9b4c1db4852367b1064aae808a6ed07f87b15b53e0c267c0d0eccdcce496a004",
+      "maya-ds4-candidate": "bef0b4d37e4ca028698d69babe227e23aa701c00d2bb1a706b821f1e98e4367a",
+      "ds4_gguf_test-candidate": "9633f21e87d961e3b64615209269b1a7692f521f8f6d7cb1ff08d489b7630a31"
+    },
+    "children_exit0": 4,
+    "actual_link_unknown_inputs": [],
+    "controller_CPU_each_host": 31,
+    "preparation_controller_CPU_each_host": 63,
+    "all_source_and_ID_maps_matched": true,
+    "IMMA_registers_NG1_NG2": [
+      128,
+      255
+    ],
+    "spill_store_load_bytes": 0
+  },
+  "GPU": {
+    "passed": true,
+    "window": "/home/alex/strata-deepseek-test-20261024/windows/20261029T042558Z.json",
+    "devices": [
+      {
+        "device": 0,
+        "raw_GEMV_cases": 110,
+        "public_Q8_cases": 12,
+        "exit0": true,
+        "actual_dispatch_and_canary_assertions": true,
+        "model_execution": false,
+        "speed_claim": false
+      },
+      {
+        "device": 1,
+        "raw_GEMV_cases": 110,
+        "public_Q8_cases": 12,
+        "exit0": true,
+        "actual_dispatch_and_canary_assertions": true,
+        "model_execution": false,
+        "speed_claim": false
+      }
+    ],
+    "fixture_sha256": "9633f21e87d961e3b64615209269b1a7692f521f8f6d7cb1ff08d489b7630a31",
+    "GPU_kernel_execution": true,
+    "model_execution": false,
+    "speed_claim": false
+  },
+  "window": {
+    "id": "20261029T042558Z",
+    "returncode": 0,
+    "kernel_fault_lines": [],
+    "swapout_delta_bytes": 0,
+    "minimum_root_free_GiB": 840.1767082214355
+  },
+  "restoration": {
+    "passed": true,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prefill_chunk": 4096,
+    "public": {
+      "unauthenticated_models": 401,
+      "authenticated_models": 200,
+      "SSE_done": true,
+      "finish": "stop",
+      "known_answer_passed": true,
+      "content": "READY"
+    }
+  },
+  "independent_review_sha256": "1c6c45987d1e8f26a34dfe319cce2ca9416c75ad1963f5f5bfb047e065a75137",
+  "qualification_sha256": "0f003d0033b9f7401de5ecd2c455a48ce471459ec53bd1e4f837d5084bbc90fb",
+  "limitations": [
+    "Synthetic GPU kernel equivalence/dispatch/guards/Q8 proof only. No candidate model execution, numerical distribution or speed gain yet.",
+    "Original selected native92 remains deployed; candidatebef0 is not promoted.",
+    "Historical prior API ExecMainStatus was not separately captured; nativeclose0 and successful owned unit stop are observed. Kernel phase has no API server child.",
+    "Pre-existing compiler warning in unreachable legacy MXFP4 test_experts path retained, byte-identical to selected base and not called by --imma-check.",
+    "Initial preparation path and outer preflight logging failures preserved separately; neither reached candidate compile/native/GPU execution."
+  ]
+}
