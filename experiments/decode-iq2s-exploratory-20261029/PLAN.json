@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-10-29T16:47:45.494947+00:00",
+  "new_direct_user_request": "can you test now?",
+  "request_context": "Direct request after disclosure of closed IQ2S numerical HOLD and deleted idle monitor. Earlier same model/quality/context/output/no active-work interruption requirements persist.",
+  "operator_scope_announced": "I will treat this as a new exploratory speed comparison. The earlier numerical HOLD stays in place, so timing alone will not qualify the update for deployment.",
+  "authorization_interpretation": "New diagnostic observations only, not an explicit waiver or regrade of old exact-state eligibility. No numerical acceptance, broad quality claim, promotion or old-arm replay.",
+  "source_plan_sha256": "3a7f3c85bfdef8f58ee0c4c6d7e64067c4bd6d9b47a020e9cce3ad7ee1891cdd",
+  "prior_HOLD_sha256": "6c181cf865d5dd01cfc166c986164ecd00dbc95533875ce0850de12728342e6d",
+  "baseline_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "candidate_native_sha256": "da28ca8b108048990f5950e76909cccacacb9f921d8e37fad9f16b440bb513a6",
+  "selected_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "limits_preserved": {
+    "total_context": 1048576,
+    "output_allowance": 262144,
+    "request_max_tokens": 32768,
+    "effort": 100,
+    "chunk": 4096,
+    "CPU_threads": 24,
+    "TP": 1,
+    "automatic_split": [
+      19,
+      21
+    ],
+    "Q8": [
+      1,
+      1
+    ],
+    "mode1": true,
+    "images_enabled": true,
+    "runtime_projection": "L22 scale1 all40 main blocks",
+    "drafter_unchanged": true,
+    "DSpark_confidence": 0.65,
+    "all_CPU_experts_RAM": true,
+    "stream": 0
+  },
+  "new_namespace": "decode-iq2s-exploratory-X0|X1-UTC",
+  "fresh_arms": [
+    "X0",
+    "X1"
+  ],
+  "request_ids": [
+    "sequence1024-cold",
+    "sequence1024-warm"
+  ],
+  "fixed_visible_work": "Typed JSON single key values, integers1..1024 in ascending order exactly once",
+  "constraints": "New source/tests all ROOT+same Astra manually read before first bounded exact CPU controls BOTH physical hosts. Actual API/tokenizer CPU freeze before model. Source-only until exact immutable q, all actual file/input pins, fresh idle/default/noqueue/reserved/inflight/no phases/current owner/root and separate same Astra perarm admission. Existing lock/window1200/soft1000/cleanup200 and budgets unchanged. Only light receipts during private/restoration. No global/hardware/driver/VM/pip/cache/security/owner-message changes. Preserve failed/raw evidence and all older caches. No new automation.",
+  "result_interpretation": "Native generated/decode rates, native prefill/drafts/reuse and client whole-request latency separately per cold/warm case; preserve reasoning/outputlength. No matched-path assumption or acceptance threshold. Partial/wrong/cap/UNRUN remain scored and stop.",
+  "GPU_admitted": false,
+  "production_change_admitted": false
+}

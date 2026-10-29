@@ -1,0 +1,172 @@
+{
+  "utc": "2026-10-29T18:24:53.108027+00:00",
+  "decision": "X1_COMPLETE_RAW_REVIEW_AND_FIRST_INDEPENDENT_AUDIT_PASSED_SELECTED4096_RESTORED",
+  "terminal_audit_sha256": "5d1d88915c35d217a19af7acac689171825a55196381e1c5abae47e083a1ca79",
+  "same_Astra_review_sha256": "c8872e332ea123eaa7d7a26f34d7d80adbdcd93b6389088889d1ded8574e0a1a",
+  "raw_manifest_sha256": "96ef6f31c8f9f1f0d78f88be9d74cfbeb4014ea49bb581e74fc9a6350d6fa729",
+  "manual_read": "Entire both raw reasoning/content responses, native metrics/reuse/drafts/token paths, actual process/startup/factor, old owner stable API exit/native close, private API/native cleanup and window0/telemetry/resources/kernel, restored public READY/stop/DONE/auth/current identity read. HistoricalOct25 windowGLM snapshot is not current ownership.",
+  "rows": [
+    {
+      "id": "sequence1024-cold",
+      "natural_stop": true,
+      "typed_answer_correct": true,
+      "native": {
+        "generated": 3223,
+        "prompt_tokens": 1429,
+        "prompt_ms": 4332.6,
+        "decode_ms": 59385.7,
+        "finish": "stop",
+        "drafts_accepted": 2342,
+        "drafts_offered": 2601,
+        "reused": 0,
+        "hits": 853444,
+        "lookups": 873015
+      },
+      "observed_tokens": 3223,
+      "numerical_equivalence_pass": false,
+      "observations": {
+        "generated_tokens_including_reasoning": 3223,
+        "native_decode_ms": 59385.7,
+        "native_tokens_per_second": 54.272324818937896,
+        "native_prefill_ms": 4332.6,
+        "client_completion_seconds": 63.73811073997058,
+        "buffered_first_visible_delta_seconds": {
+          "client_first_content_seconds": 63.73758686496876,
+          "client_first_reasoning_seconds": 63.73758686496876,
+          "client_first_tool_seconds": null
+        },
+        "actual_TTFT_proven": false,
+        "content_characters": 4025,
+        "reasoning_characters": 3605,
+        "prompt_tokens": 1429,
+        "reused_tokens": 0,
+        "drafts_offered": 2601,
+        "drafts_accepted": 2342,
+        "cache_hits": 853444,
+        "cache_lookups": 873015
+      }
+    },
+    {
+      "id": "sequence1024-warm",
+      "natural_stop": true,
+      "typed_answer_correct": true,
+      "native": {
+        "generated": 2821,
+        "prompt_tokens": 1429,
+        "prompt_ms": 45.7,
+        "decode_ms": 48995.2,
+        "finish": "stop",
+        "drafts_accepted": 2067,
+        "drafts_offered": 2213,
+        "reused": 1428,
+        "hits": 742366,
+        "lookups": 743295
+      },
+      "observed_tokens": 2821,
+      "numerical_equivalence_pass": false,
+      "observations": {
+        "generated_tokens_including_reasoning": 2821,
+        "native_decode_ms": 48995.2,
+        "native_tokens_per_second": 57.577068774084,
+        "native_prefill_ms": 45.7,
+        "client_completion_seconds": 49.057084086118266,
+        "buffered_first_visible_delta_seconds": {
+          "client_first_content_seconds": 49.056747026974335,
+          "client_first_reasoning_seconds": 49.056747026974335,
+          "client_first_tool_seconds": null
+        },
+        "actual_TTFT_proven": false,
+        "content_characters": 4025,
+        "reasoning_characters": 2255,
+        "prompt_tokens": 1429,
+        "reused_tokens": 1428,
+        "drafts_offered": 2213,
+        "drafts_accepted": 2067,
+        "cache_hits": 742366,
+        "cache_lookups": 743295
+      }
+    }
+  ],
+  "resources": {
+    "root_min_GiB": 837.6364898681641,
+    "system_swapout_delta_bytes": 0
+  },
+  "actual_native_pid": 2424389,
+  "private_API_pid": 2424363,
+  "private_native_API_window_returncodes": [
+    0,
+    0,
+    0
+  ],
+  "old_native_API_success": true,
+  "FIRST_bounded_audit_child": 2434131,
+  "audit_child_returncode": 0,
+  "selected_identity": {
+    "native_pid": 2427790,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "f2b87ac5943049aca1ca6eff01607397",
+      "main_pid": 2427755,
+      "native_pid": 2427790,
+      "native_start_ticks": 156575799
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "candidate_factor_receipt": "One eligible IQ2_S persistent down launch branch; not per-model launch count",
+  "prior_numerical_HOLD": true,
+  "promotion_allowed": false,
+  "speed_acceptance": false,
+  "prose_measured": false,
+  "scope": "Two correct fixed-visible-answer observations, variable hidden reasoning/token paths. No general or causal speed/quality/equivalence claim."
+}

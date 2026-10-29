@@ -1,0 +1,316 @@
+{
+  "utc": "2026-10-29T18:35:59.091743+00:00",
+  "status": "CLOSED_EXPLORATORY_MIXED_RATES_NO_QUALIFIED_THROUGHPUT_GAIN_NO_PROMOTION",
+  "qualification_sha256": "5191da7f4d2ffb9442614b13d4d50c3740b404fa3c9f76550bffb7fb285c4457",
+  "baseline_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "selected_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "candidate_native_sha256": "da28ca8b108048990f5950e76909cccacacb9f921d8e37fad9f16b440bb513a6",
+  "comparison_result_sha256": "e7e5fb3b97dcbc3f608e2ef0e8c2ee3e89c571afaae53a0a28865c79b9e4519b",
+  "comparison_both_hosts_sha256": "950e3499d1415e9b5c4902467ab868a3d446b2445404da3f92a9b00c4fa47a41",
+  "final_Astra_review_sha256": "d6e7bfcaa0a014088f95b0763b969774d85bb060195d2a019604afbd91ad3a1f",
+  "rows": [
+    {
+      "baseline": {
+        "actual_TTFT_proven": false,
+        "buffered_first_visible_delta_seconds": {
+          "client_first_content_seconds": 65.56934237387031,
+          "client_first_reasoning_seconds": 65.56934237387031,
+          "client_first_tool_seconds": null
+        },
+        "cache_hits": 852682,
+        "cache_lookups": 871995,
+        "client_completion_seconds": 65.56997752003372,
+        "content_characters": 4025,
+        "drafts_accepted": 2436,
+        "drafts_offered": 2629,
+        "generated_tokens_including_reasoning": 3289,
+        "native_decode_ms": 61180.5,
+        "native_prefill_ms": 4367.0,
+        "native_tokens_per_second": 53.75895914547936,
+        "prompt_tokens": 1429,
+        "reasoning_characters": 3390,
+        "reused_tokens": 0
+      },
+      "candidate": {
+        "actual_TTFT_proven": false,
+        "buffered_first_visible_delta_seconds": {
+          "client_first_content_seconds": 63.73758686496876,
+          "client_first_reasoning_seconds": 63.73758686496876,
+          "client_first_tool_seconds": null
+        },
+        "cache_hits": 853444,
+        "cache_lookups": 873015,
+        "client_completion_seconds": 63.73811073997058,
+        "content_characters": 4025,
+        "drafts_accepted": 2342,
+        "drafts_offered": 2601,
+        "generated_tokens_including_reasoning": 3223,
+        "native_decode_ms": 59385.7,
+        "native_prefill_ms": 4332.6,
+        "native_tokens_per_second": 54.272324818937896,
+        "prompt_tokens": 1429,
+        "reasoning_characters": 3605,
+        "reused_tokens": 0
+      },
+      "diagnostic_native_rate_ratio": 1.0095493975630982,
+      "emitted_paths_identical": false,
+      "fixed_known_answer_client_latency_ratio": 0.9720624156153868,
+      "id": "sequence1024-cold",
+      "matched_token_speedup_claim": false
+    },
+    {
+      "baseline": {
+        "actual_TTFT_proven": false,
+        "buffered_first_visible_delta_seconds": {
+          "client_first_content_seconds": 89.5355881541036,
+          "client_first_reasoning_seconds": 89.5355881541036,
+          "client_first_tool_seconds": null
+        },
+        "cache_hits": 1376257,
+        "cache_lookups": 1378095,
+        "client_completion_seconds": 89.53606378706172,
+        "content_characters": 4025,
+        "drafts_accepted": 4026,
+        "drafts_offered": 4241,
+        "generated_tokens_including_reasoning": 5297,
+        "native_decode_ms": 89459.9,
+        "native_prefill_ms": 56.2,
+        "native_tokens_per_second": 59.210886665422166,
+        "prompt_tokens": 1429,
+        "reasoning_characters": 7530,
+        "reused_tokens": 1428
+      },
+      "candidate": {
+        "actual_TTFT_proven": false,
+        "buffered_first_visible_delta_seconds": {
+          "client_first_content_seconds": 49.056747026974335,
+          "client_first_reasoning_seconds": 49.056747026974335,
+          "client_first_tool_seconds": null
+        },
+        "cache_hits": 742366,
+        "cache_lookups": 743295,
+        "client_completion_seconds": 49.057084086118266,
+        "content_characters": 4025,
+        "drafts_accepted": 2067,
+        "drafts_offered": 2213,
+        "generated_tokens_including_reasoning": 2821,
+        "native_decode_ms": 48995.2,
+        "native_prefill_ms": 45.7,
+        "native_tokens_per_second": 57.577068774084,
+        "prompt_tokens": 1429,
+        "reasoning_characters": 2255,
+        "reused_tokens": 1428
+      },
+      "diagnostic_native_rate_ratio": 0.9724067990981077,
+      "emitted_paths_identical": false,
+      "fixed_known_answer_client_latency_ratio": 0.547903068452817,
+      "id": "sequence1024-warm",
+      "matched_token_speedup_claim": false
+    }
+  ],
+  "all_four_visible_answers_correct": true,
+  "token_paths_differ": true,
+  "prior_numerical_HOLD": true,
+  "prior_numerical_review_sha256": "6c181cf865d5dd01cfc166c986164ecd00dbc95533875ce0850de12728342e6d",
+  "general_quality_equivalence_proven": false,
+  "speed_acceptance": false,
+  "replication_authorized": false,
+  "candidate_deployed": false,
+  "production_changed": false,
+  "prose_measured": false,
+  "scope": "Two distinct isolated X0/X1 sequence arms only, each1429-token input/cold then1428 reuse, cap32768/effort100/native1M/defaultoutput262144. Variable hidden work, no general prose/kernel-causal/statistical gain. Buffered visible delta is not TTFT.",
+  "arms": {
+    "X0": {
+      "fully_reviewed": true,
+      "audit_sha256": "88821f96485f6bfb326df8fc94d60c7a54f94d1dd28a7c63923129167d8b7040",
+      "actual_native_pid": 2324111,
+      "resources": {
+        "root_min_GiB": 829.3462257385254,
+        "system_swapout_delta_bytes": 299008
+      },
+      "private_API_pid": 2324040,
+      "window": "20261029T172803Z.json",
+      "native_API_window_exit0": true,
+      "all_two_cases_natural_correct": true,
+      "old_hosted_native_and_API_exit0_prospectively_captured": true
+    },
+    "X1": {
+      "fully_reviewed": true,
+      "audit_sha256": "5d1d88915c35d217a19af7acac689171825a55196381e1c5abae47e083a1ca79",
+      "actual_native_pid": 2424389,
+      "resources": {
+        "root_min_GiB": 837.6364898681641,
+        "system_swapout_delta_bytes": 0
+      },
+      "private_API_pid": 2424363,
+      "window": "20261029T180231Z.json",
+      "native_API_window_exit0": true,
+      "all_two_cases_natural_correct": true,
+      "old_hosted_native_and_API_exit0_prospectively_captured": true
+    }
+  },
+  "CPU_qualification": {
+    "sources": 17,
+    "inputs": 965,
+    "controls_each_physical_host": 137,
+    "corrected_FIRST_children": {
+      "darwin": 26760,
+      "linux": 2296817
+    },
+    "original_failed_child": 24330,
+    "original_failed_controls": 137,
+    "original_failures": 1,
+    "original_preserved_unregraded": true,
+    "cause": "Test trace-only glob included native-ready.json; corrected distinct CPU proof namespace and reviewed new source before FIRST corrected checks."
+  },
+  "independent_audit_children": {
+    "X0": 2415846,
+    "X1": 2434131
+  },
+  "offline_comparison_children": {
+    "darwin": 2729,
+    "linux": 2437633
+  },
+  "prior_prechild_audit_path_refusal_preserved": true,
+  "preexec_closeout_syntax_refusal_preserved": true,
+  "historical_kernel_API_process_exit_gap_not_retrofilled": true,
+  "persistent_gate_NE4_NE8_stack_spill_bytes_each": 8,
+  "final_production_observation_sha256": "83984c90975cb6588d8057433e3ec542e0382f9bd4f27868ecd3bcace68dc129",
+  "final_production": {
+    "utc": "2026-10-29T18:34:18.947034+00:00",
+    "status": "FINAL_PRODUCTION_OBSERVATION_PASS_NO_NEW_INFERENCE",
+    "binding": {
+      "invocation": "f2b87ac5943049aca1ca6eff01607397",
+      "main_pid": 2427755,
+      "native_pid": 2427790,
+      "native_start_ticks": 156575799
+    },
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "actual_native_argv": [
+      "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+      "--serve",
+      "--pack",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1",
+      "--gpus",
+      "0,1",
+      "--max-context",
+      "1048576",
+      "--reserve-mib",
+      "2048",
+      "--cpu-threads",
+      "24",
+      "--tp",
+      "1",
+      "--dspark",
+      "on",
+      "--prefill-chunk",
+      "4096",
+      "--eos",
+      "1",
+      "--dspark-conf",
+      "0.65",
+      "--mmap-experts",
+      "off",
+      "--expert-profile",
+      "/home/alex/deepseek-hosted-20261025/state/expert-profile.bin",
+      "--serve",
+      "--vision",
+      "on",
+      "--ablate",
+      "/home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf",
+      "--ablate-scale",
+      "1",
+      "--layer-split",
+      "auto",
+      ""
+    ],
+    "actual_native_cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/deepseek-hosted.service\n",
+    "controlled_env": {
+      "STRATA_DS4_DISK_SKIP_W": "0",
+      "DS4_YOCO": "1",
+      "STRATA_DS4_PROMPT_SKIP": "1",
+      "STRATA_DS4_REUSE": "1",
+      "STRATA_DS4_SLOT_KEEP": "1",
+      "STRATA_DS4_AUTO_PIN": "1",
+      "STRATA_DS4_SLOT_CAP": "4",
+      "STRATA_DS4_SLOT_GB": "8",
+      "STRATA_DS4_SLOT_DAYS": "7",
+      "STRATA_DS4_SLOT_MIN": "1024",
+      "STRATA_DS4_SLOT_DIR": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096",
+      "STRATA_DS4_DSPARK_CUM": "0",
+      "DS4_DSPARK_CUM": "0",
+      "DS4_DSPARK_MAX": "4",
+      "DS4_REQUIRE_ALL_RAM": "1",
+      "DS4_LANE_CAL": "/home/alex/deepseek-hosted-20261025/state/lane-times.txt",
+      "DS4_LT_STORE": "/home/alex/deepseek-hosted-20261025/state/lt-picks.txt",
+      "DS4_STREAM": "0",
+      "STRATA_DS4_Q8_BATCH": "1",
+      "DS4_Q8_CHECK": "1"
+    },
+    "IQ2_persistent_production_enabled": false,
+    "units": {
+      "deepseek-hosted": {
+        "ActiveState": "active",
+        "InvocationID": "f2b87ac5943049aca1ca6eff01607397",
+        "Restart": "no",
+        "MainPID": "2427755"
+      },
+      "glm-qwen-switcher": {
+        "ActiveState": "active",
+        "InvocationID": "69feb4b2ba0944198dbb6af443cd0fc1",
+        "Restart": "no",
+        "MainPID": "2433358"
+      }
+    },
+    "health": {
+      "status": "ok",
+      "max_context": 1048576,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "images": true,
+      "api_key": false,
+      "image_generation": false,
+      "loaded": true,
+      "service": "strata",
+      "busy": false,
+      "switcher": {
+        "active_model": "deepseek",
+        "inflight": 0,
+        "waiting": 0,
+        "nondefault_idle_seconds": 900.0,
+        "default_model": "deepseek",
+        "fault": null
+      }
+    },
+    "work": {
+      "active": 0,
+      "queued": 0,
+      "admission_reserved": 0
+    },
+    "sole_GPU_owner_checked": true,
+    "kernel_since": "2026-10-29 18:01:28 UTC",
+    "kernel_guard_passed": true,
+    "prior_window": "/home/alex/strata-deepseek-test-20261024/windows/20261029T180231Z.json",
+    "root_free_GiB": 837.5529174804688,
+    "public_verified_after_last_restore": {
+      "unauthenticated_models": 401,
+      "authenticated_models": 200,
+      "SSE_done": true,
+      "finish": "stop",
+      "known_answer_passed": true,
+      "content": "READY"
+    },
+    "public_verification_source": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-iq2s-exploratory-X1-20261029T180128Z/state.json",
+    "new_inference": false,
+    "state_phase_flags": {
+      "active_private_phase": null,
+      "active_gpu_experiment": false,
+      "active_cpu_build": false,
+      "production_verification_pending": false,
+      "production_temporarily_stopped": false
+    },
+    "prior_numerical_result_status": "CLOSED_HOLD_TOKEN_PATH_DIFFERS"
+  },
+  "no_new_automation": true,
+  "next": "No further inference/replay/replication/promotion admitted. Keep selected92/c43/chunk4096 production."
+}

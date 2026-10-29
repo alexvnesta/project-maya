@@ -1,0 +1,131 @@
+{
+  "utc": "2026-10-29T17:25:18.782420+00:00",
+  "decision": "CONDITIONALLY_ADMIT_SINGLE_FRESH_X0_EXPLORATORY_DIAGNOSTIC_WINDOW_ONLY",
+  "qualification_sha256": "5191da7f4d2ffb9442614b13d4d50c3740b404fa3c9f76550bffb7fb285c4457",
+  "evidence_sha256": {
+    "actual-preflight-X0-FIRST/result.json": "c07d983ea2ce49c3acf20158c9ee0f76278f2d139555352307a8baa03153a8cc",
+    "actual-preflight-X0-FIRST/state.json": "f71693850e9fd1d051b86d3de724d0264b11560212cfe6f1696dca6820f15b6e",
+    "actual-preflight-X0-FIRST/target-placement.json": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "q-map-astra-review.json": "8dc24bc3a05bbab031f26ea31ad664087903ab8285f97edcc3906eb4c99115c9",
+    "CPU-result-astra-review.json": "8f3cab76be651cf1c74ad65bf99aa99f768e21ef26584518d067ec03e14fadd7",
+    "exploratory-CPU-source-review.json": "80f2fd76eaea81f48cb889f932b0ebae238480f016e0e87b3e80503853ed7596",
+    "EXPLORATORY_CRITERIA_FROZEN.json": "b2bf8268b54af1f21820446d013f057913d75f9fa572bc083d1053550caf83b3",
+    "exploratory-fixtures.json": "6cd0ddd21db305c41186288d84979f5aaf84f8b7f8d653c3aa45694511600ebf",
+    "exploratory-fixture-pin.json": "9eda83b320e91ffe0a4fa42aeceeebd21f7a066e138e060a0c2396b43417fe1d",
+    "exploratory-arms.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+  },
+  "scope": {
+    "mode": "exploratory",
+    "arm": "X0",
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "persistent_flag": 0,
+    "requests": [
+      "sequence1024-cold",
+      "sequence1024-warm"
+    ],
+    "prior_numerical_HOLD": true,
+    "promotion_allowed": false,
+    "X1_admitted": false,
+    "replication_admitted": false,
+    "replay_admitted": false
+  },
+  "reviewed_preflight": {
+    "utc": "2026-10-29 17:21:57 UTC",
+    "file_map_matches_frozen2268": true,
+    "qualification_self_digest_matches": true,
+    "source_guard_scope": "Frozen preflight code checks fresh idle/default, phase keys, root>=132GiB, exact canonical baseline owner, qualified files, same PID identity sandwich, prior clean window, exact fixture and unattempted X0.",
+    "actual_identity": {
+      "native_pid": 2041169,
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+      "context": 1048576,
+      "output_default": 262144,
+      "prompt_skip_mode": 1,
+      "prefill_chunk": 4096,
+      "Q8": [
+        1,
+        1
+      ],
+      "TP": 1,
+      "images": true,
+      "runtime_ablation": true,
+      "DSpark": true,
+      "CPU_experts": 4045,
+      "all_CPU_experts_RAM": true,
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.32,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2026
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.86,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2030
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "GPU_expert_slots_inferred": 11315,
+      "GPU_slots_direct_hosted_INFO": false,
+      "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+      "start_binding": {
+        "invocation": "999f3c55a064452f864c7ff9a4875655",
+        "main_pid": 2041131,
+        "native_pid": 2041169,
+        "native_start_ticks": 155393110
+      },
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+    },
+    "note": "Raw preflight does not serialize individual free-space/work counters. Reported831.633GiB comes from parent guard; admission relies on frozen successful guard and requires immediate fresh checks rather than claiming separately recorded numeric counters here."
+  },
+  "unchanged_bounds": {
+    "context": 1048576,
+    "default_output": 262144,
+    "request_cap": 32768,
+    "effort": 100,
+    "temperature": 1.0,
+    "seed": 1,
+    "chunk": 4096,
+    "window_s": 1200,
+    "soft_s": 1000,
+    "cleanup_s": 200,
+    "root_admission_GiB": 132,
+    "root_runtime_GiB": 120,
+    "swap_less_than_GiB": 1,
+    "private_cache_GiB": 8,
+    "logs_GiB": 4,
+    "dump": "OFF",
+    "native_FSIZE_hook": false
+  },
+  "conditions": [
+    "Immediately before any drain: fresh idle/default/no queued-reserved-inflight work/no other phase-build-pending, exact same canonical999f/native2041169 binding, root>=132GiB, clock and current kernel/prior-window checks. Busy defers untouched before attempt; changed ownership/source requires new review.",
+    "Recheck immutable qualification5191 and all2268files plus qualification selfdigest, new fixture6cd0, current reviewed source and empty X0 attempt registry. Use only existing qualified controller/coordinate/lock/window, one new X0 attempt.",
+    "Capture bound old nativeclose0 and stable oldAPIinactive ExecMainCode1/ExecMainStatus0/Resultsuccess before restoring; exact private native/API/window exit0 and resource/kernel evidence required.",
+    "Within private phase/restoration only lightweight owned receipts; no other source hashes, staging, tests, services, observers, model requests or concurrent work.",
+    "Exactly two fullcap natural known-answer requests. Retain raw outputs, hidden reasoning/generated lengths, native/client/cache/draft counters and no-dump/positive-draft/reuse/placement/process proofs. Wrong/cap/partial/budget/fault is incomplete/HOLD, not a speed pass; no retry or extra requests.",
+    "Restore selected92/c43/chunk4096 through same bound owner, verify401/auth200/assembledREADY-stop-DONE and canonical current binding. If public busy, pending verification only without restart; foreign owner untouched.",
+    "After full restoration/fresh idle: independent bounded auditor plus manual raw result review. X1 requires its own fresh preflight and separate admission."
+  ],
+  "claims_limit": "New fixed-answer exploratory observations only; prior strict numerical HOLD unchanged. No matched-token speedup/general quality equivalence/images/tools/code/nearfilled1M/full256K/deployment claim. Buffered first visible delta is not real TTFT.",
+  "reviewer_actions": "Local source/evidence read and this report only; no remote, tests, service, native or GPU action."
+}

@@ -1,0 +1,250 @@
+{
+  "utc": "2026-10-29T17:54:02.294522+00:00",
+  "decision": "X0_COMPLETE_EXPLORATORY_RAW_RESULT_REVIEWED_SELECTED4096_RESTORED_NO_X1_ADMISSION",
+  "arm": "X0",
+  "terminal_audit_sha256": "88821f96485f6bfb326df8fc94d60c7a54f94d1dd28a7c63923129167d8b7040",
+  "qualification_sha256": "5191da7f4d2ffb9442614b13d4d50c3740b404fa3c9f76550bffb7fb285c4457",
+  "evidence_sha256": {
+    "X0/terminal-audit.json": "88821f96485f6bfb326df8fc94d60c7a54f94d1dd28a7c63923129167d8b7040",
+    "X0-raw-FIRST-manifest.json": "304d30d85b31899f2506b505346e93e3a5d340dac5928bc49d910c8a7ec7d9d3",
+    "X0-audit-FIRST/child.json": "e2c574dcf546ffe01ebf43aad0064372d1d4df9a984d31e6c74ffc3201919a4d",
+    "X0-audit-FIRST/child.log": "c090a8311c1cab56e510f9cec2797d1eeea280ad5e4ebcd308ed32c4ec8024f8",
+    "X0-audit-dispatch-FIRST-refusal.json": "60fbfa8522ce2ca0595f8b114f36570bde87c8b90a6647138fc662bfae8a0fcb",
+    "X0-admission-astra-review.json": "ea19dda7cd471af6a40ff0dfaf41fe2a9a730246cef1a62d52fb17ccdd48b598"
+  },
+  "raw_file_sha256": {
+    "output/server-start.json": "bfb0a81ebf796a6bcdece3b24efc1c9f9bffcf2330ac81ee8aa58dd28e075063",
+    "output/candidate-config.json": "5333a583122a8f25a78f7749cf351ec0692c2554d6d4e038128f9cf632e72abb",
+    "output/candidate-config.shared-settings.json": "9dccb6db4fd0d5e1596ad0845decb60c24aae2756a4eca216cb9b914d310fdc9",
+    "output/fixture.json": "6cd0ddd21db305c41186288d84979f5aaf84f8b7f8d653c3aa45694511600ebf",
+    "output/receipt.json": "63303139035afe5215c2e762114a543d0ac4bfe76f44571db9224217d60ab4d6",
+    "output/startup-audit.json": "8651d90b3b46179db82b6139dc803124e92b0568514582740019093aafb08c5f",
+    "output/proof.json": "ac5576abc28ba237e9234258cefc1393b29019a2a5e150d34ab9c98099ffc11d",
+    "output/startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "output/startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c",
+    "output/native/engine.log": "f28f9d306d2c794e47cdfa21e02816fd90f6c433b583f3b9b329b72121df08b9",
+    "output/native/native-ready.json": "6ec21103030e7f881d854b281da512b97d915a04fcde5f87cfeb8c057bd92e22",
+    "output/native/native-close.jsonl": "d823743c52b1af8f2f00f7d04b3784842006e4cc927b8f9552fda80e32660772",
+    "output/native/server-cleanup.json": "57f212b1c4fe0611631790aeed0a102783a4a0aa61661992b57eb7d299cf0cdd",
+    "output/native/entry-audit.json": "47b8127f6439683acfd8088b7e3b8298e9f1afa49e69129810bfd3bc643121b8",
+    "output/native/server.log": "f8dc88b9ac64e3b68591af5632d81a533dbe0eb0731259d6311c8063d4374330",
+    "output/native/native-launch.json": "88af9d77e00a11eb7c63b2efcd57279db4ba91082604edd832689bc7ee76ad7a",
+    "output/native/native-000/native-statistics.json": "8822ea0bd3a42ee533f5783cd697e519a44043cf8244898264e24fe91fe84432",
+    "output/native/native-000/raw-done.txt": "b8138c2d98b3abfe2fe7f66a87be92c4d4491893582df3dca3f9be00fa31ec11",
+    "output/native/native-000/trace-receipt.json": "26e58113b167ba271ec1b274a6d79e8a8ea2fc1d4ac9730080600c4cb7256307",
+    "output/native/native-000/tokens.jsonl": "82b5b846824e2ded7368b396a8557033cccaf2817b9131a124f192ed1f1aee1d",
+    "output/native/native-000/request.json": "92a78f1a869956c2166ebb1bcdf2ebe574ecb5980a7dfb0675921d25cdb74017",
+    "output/native/skip-controls/sequence1024-warm/native-audit.json": "6229cf32c268fe85420337abaaaf2b8c64feaf5e9a560420e7ae09c3fec0f6eb",
+    "output/native/skip-controls/sequence1024-warm/response.json": "fb5db04b6afbe28e74f25527a8d35dc84f79f057c9b7413fc60ad0660290826a",
+    "output/native/skip-controls/sequence1024-warm/request.json": "f67565ae6e3c2ff8e0e0a3efd52b29d4ac42ad6520e7c8fe7046e27cc4a33d96",
+    "output/native/skip-controls/sequence1024-cold/native-audit.json": "fa90eaf7abfa3451f19645619b4da4c8df575bcee00813368c1a0771bcaf200a",
+    "output/native/skip-controls/sequence1024-cold/response.json": "d53c9786c4aaf5a07e033e596fb6edeab9c91db103398b5e666983a79d3af2ee",
+    "output/native/skip-controls/sequence1024-cold/request.json": "f67565ae6e3c2ff8e0e0a3efd52b29d4ac42ad6520e7c8fe7046e27cc4a33d96",
+    "output/native/native-001/native-statistics.json": "5e962d7db5c017557598bef717c8ff2d976a1558bdf35081ee5715572652cae9",
+    "output/native/native-001/raw-done.txt": "5c27908453cacd8994e09c50534c82d2567d80e41f799e98472c9391eefe4c39",
+    "output/native/native-001/trace-receipt.json": "b8272ab9730ebfe0edbe58ad2442766fdd7341b6a0e06eadc6183b39660b2c65",
+    "output/native/native-001/tokens.jsonl": "35501b3e481bf3fb1cca5ef125e51a77089cd0f5c88992fd1c5787b7134081e9",
+    "output/native/native-001/request.json": "92a78f1a869956c2166ebb1bcdf2ebe574ecb5980a7dfb0675921d25cdb74017",
+    "maintenance/old-owner-close.json": "47492c0106b3dddea354854ea5937188f2fe2fb76919f0368d3496bcf0e57606",
+    "maintenance/public-default-output-request.json": "93bb8806b80adc0a4793b4302b8387e13ae2d02b04932ddd2b2f166be29a455a",
+    "maintenance/state.json": "9a636eaa5faf9f0fc0e8761b5787af627d76dc80ba1077593778ddc55054feb9",
+    "maintenance/start-unit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "maintenance/public-default-output-sse.txt": "7419a5ae9cc39dec89b5a84ac13a9e5026255d5ca74a274642eba6c77dd44a1a",
+    "maintenance/target-placement.json": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "maintenance/proof.json": "ac5576abc28ba237e9234258cefc1393b29019a2a5e150d34ab9c98099ffc11d",
+    "maintenance/result.json": "9a636eaa5faf9f0fc0e8761b5787af627d76dc80ba1077593778ddc55054feb9",
+    "maintenance/start-binding.json": "c77b19fd2a34f4594d7d6ef4fc2e3d8022e4c3f470f6a90044bc64eb872ddfea",
+    "window/20261029T172803Z.json": "7fb10d1fcf5d0626b8ccee907b55fd92dce74194df95d0c8cd4e79063c8cd0bd",
+    "window/20261029T172803Z.telemetry.jsonl": "54a338f98ae2cfad523b475f1fdb27897fc4a7996d677cf732a0df100b74f32d"
+  },
+  "raw_file_count": 43,
+  "rows": [
+    {
+      "id": "sequence1024-cold",
+      "generated": 3289,
+      "prompt_tokens": 1429,
+      "prompt_ms": 4367.0,
+      "decode_ms": 61180.5,
+      "finish": "stop",
+      "drafts_accepted": 2436,
+      "drafts_offered": 2629,
+      "reused": 0,
+      "hits": 852682,
+      "lookups": 871995,
+      "native_tokens_per_second": 53.75895914547936,
+      "client_completion_seconds": 65.56997752003372,
+      "reasoning_characters": 3390,
+      "content_characters": 4025,
+      "typed_visible_answer_correct": true,
+      "complete_reasoning_and_content_manually_read": true
+    },
+    {
+      "id": "sequence1024-warm",
+      "generated": 5297,
+      "prompt_tokens": 1429,
+      "prompt_ms": 56.2,
+      "decode_ms": 89459.9,
+      "finish": "stop",
+      "drafts_accepted": 4026,
+      "drafts_offered": 4241,
+      "reused": 1428,
+      "hits": 1376257,
+      "lookups": 1378095,
+      "native_tokens_per_second": 59.210886665422166,
+      "client_completion_seconds": 89.53606378706172,
+      "reasoning_characters": 7530,
+      "content_characters": 4025,
+      "typed_visible_answer_correct": true,
+      "complete_reasoning_and_content_manually_read": true
+    }
+  ],
+  "proof": {
+    "same_q_and_frozen_fixture": true,
+    "exact_two_traces_and_two_complete_answers": true,
+    "actual_private_native": 2324111,
+    "actual_private_API": 2324040,
+    "native_API_window_returncodes": [
+      0,
+      0,
+      0
+    ],
+    "old_hosted_native": 2041169,
+    "old_hosted_API": 2041131,
+    "old_native_close0_and_stable_inactive_API_ExecMainCode1_Status0_ResultSuccess": true,
+    "actual_native92_argv_controlled_env_cgroup_unlimitedFSIZE_and_no_hook": true,
+    "private_INFO_GPU_slots": 11315,
+    "CPU_experts_all_RAM": 4045,
+    "split": [
+      19,
+      21
+    ],
+    "Q8_bothdevices_startupcheck": true,
+    "projection_all40blocks_drafter_untouched_startupchecks": true,
+    "persistent0_no_branch_receipt": true,
+    "no_shortprompt_skip_lines": true,
+    "no_dumps_profile_export_or_new_images_tools_code": true,
+    "FIRST_audit_child": {
+      "utc": "2026-10-29T17:46:17.976732+00:00",
+      "argv": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_audit.py",
+        "--arm",
+        "X0"
+      ],
+      "pid": 2415846,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "CPU_s": 30,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "Linux_AS_MiB": 512,
+      "native_execution": false,
+      "GPU_execution": false,
+      "selected_binding": {
+        "invocation": "45a402a34d6943dda4163bd9a506b875",
+        "main_pid": 2405043,
+        "native_pid": 2405078,
+        "native_start_ticks": 156358186
+      }
+    },
+    "resources": {
+      "root_min_GiB": 829.3462257385254,
+      "system_swapout_delta_bytes": 299008,
+      "kernel_fault_lines": []
+    },
+    "restored_binding": {
+      "invocation": "45a402a34d6943dda4163bd9a506b875",
+      "main_pid": 2405043,
+      "native_pid": 2405078,
+      "native_start_ticks": 156358186
+    },
+    "public": {
+      "unauthenticated_models": 401,
+      "authenticated_models": 200,
+      "SSE_done": true,
+      "finish": "stop",
+      "known_answer_passed": true,
+      "content": "READY"
+    },
+    "selected_identity": {
+      "native_pid": 2405078,
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+      "context": 1048576,
+      "output_default": 262144,
+      "prompt_skip_mode": 1,
+      "prefill_chunk": 4096,
+      "Q8": [
+        1,
+        1
+      ],
+      "TP": 1,
+      "images": true,
+      "runtime_ablation": true,
+      "DSpark": true,
+      "CPU_experts": 4045,
+      "all_CPU_experts_RAM": true,
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.32,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2026
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.86,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2030
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "GPU_expert_slots_inferred": 11315,
+      "GPU_slots_direct_hosted_INFO": false,
+      "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+      "start_binding": {
+        "invocation": "45a402a34d6943dda4163bd9a506b875",
+        "main_pid": 2405043,
+        "native_pid": 2405078,
+        "native_start_ticks": 156358186
+      },
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+    }
+  },
+  "limitations": [
+    "These are two selected92/persist0 baseline observations, not a candidate comparison or repeatability estimate. Warm request generated5297tokens versus3289cold with more reasoning, so cold/warm rate/client differences are not matched-work or isolated cache effects.",
+    "One fixed visible JSON task was correct; general quality, token-path equivalence, speed acceptance and deployment remain unproven. Prior numerical HOLD is unchanged.",
+    "First visible content and reasoning were buffered until completion; they are not real TTFT.",
+    "Private startup directly reports11315GPUslots; restored hosted identity11315 is labeled inferred from human startup counts/384drafter, not direct hostedINFO.",
+    "Window units/health_before/glm_unit are inheritedOct25metadata. They are not currentGLMownership; current selected identity/publicrestore proveDeepSeek. Window maintenance-held/restoredfalse denotes continued outer maintenance; new controller separately restoredselectedDeepSeek.",
+    "Audit dispatch missing-parent refusal occurred before any audit child. It is preserved separately; first actual bounded independent auditor passed, no native fault/retry/regrade.",
+    "No cache/profile/dump contents were exported/reviewed. No remote/test/native/model execution by reviewer."
+  ],
+  "findings": [],
+  "next_step": "Only a separate fresh actual X1 preflight/current45a4-native2405078 binding and deliberate X1-only admission may allow candidate observation.",
+  "X1_admitted": false,
+  "prior_numerical_HOLD": true,
+  "promotion_allowed": false,
+  "speed_acceptance": false
+}
