@@ -1,0 +1,166 @@
+{
+  "utc": "2026-10-29T18:30:54.465676+00:00",
+  "decision": "CLOSED_EXPLORATORY_MIXED_RATES_NO_QUALIFIED_THROUGHPUT_GAIN_NO_PROMOTION",
+  "comparison_result_sha256": "e7e5fb3b97dcbc3f608e2ef0e8c2ee3e89c571afaae53a0a28865c79b9e4519b",
+  "program_sha256": "8e1678545170e9edab18b50ff1bd63f200f20f22516d4b2b6d2e4380a6ee4aaa",
+  "children": {
+    "darwin": {
+      "utc": "2026-10-29T18:29:48.376372+00:00",
+      "pid": 2729,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "program_sha256": "8e1678545170e9edab18b50ff1bd63f200f20f22516d4b2b6d2e4380a6ee4aaa",
+      "case_ids": [
+        "sequence1024-cold",
+        "sequence1024-warm"
+      ],
+      "module_origins": {
+        "iq2s_explore_summary": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_summary.py",
+        "iq2s_explore_fixtures": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_fixtures.py",
+        "iq2s_explore_dependencies": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_dependencies.py"
+      },
+      "CPU_s": 30,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "Linux_AS_MiB": null,
+      "native_execution": false,
+      "GPU_execution": false
+    },
+    "linux": {
+      "utc": "2026-10-29T18:29:48.593886+00:00",
+      "pid": 2437633,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "program_sha256": "8e1678545170e9edab18b50ff1bd63f200f20f22516d4b2b6d2e4380a6ee4aaa",
+      "case_ids": [
+        "sequence1024-cold",
+        "sequence1024-warm"
+      ],
+      "module_origins": {
+        "iq2s_explore_summary": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_summary.py",
+        "iq2s_explore_fixtures": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_fixtures.py",
+        "iq2s_explore_dependencies": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_dependencies.py"
+      },
+      "CPU_s": 30,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "Linux_AS_MiB": 512,
+      "native_execution": false,
+      "GPU_execution": false
+    }
+  },
+  "same_source_map_count": 17,
+  "same_input_map_count": 2,
+  "byte_identical_results": true,
+  "rows": [
+    {
+      "baseline": {
+        "actual_TTFT_proven": false,
+        "buffered_first_visible_delta_seconds": {
+          "client_first_content_seconds": 65.56934237387031,
+          "client_first_reasoning_seconds": 65.56934237387031,
+          "client_first_tool_seconds": null
+        },
+        "cache_hits": 852682,
+        "cache_lookups": 871995,
+        "client_completion_seconds": 65.56997752003372,
+        "content_characters": 4025,
+        "drafts_accepted": 2436,
+        "drafts_offered": 2629,
+        "generated_tokens_including_reasoning": 3289,
+        "native_decode_ms": 61180.5,
+        "native_prefill_ms": 4367.0,
+        "native_tokens_per_second": 53.75895914547936,
+        "prompt_tokens": 1429,
+        "reasoning_characters": 3390,
+        "reused_tokens": 0
+      },
+      "candidate": {
+        "actual_TTFT_proven": false,
+        "buffered_first_visible_delta_seconds": {
+          "client_first_content_seconds": 63.73758686496876,
+          "client_first_reasoning_seconds": 63.73758686496876,
+          "client_first_tool_seconds": null
+        },
+        "cache_hits": 853444,
+        "cache_lookups": 873015,
+        "client_completion_seconds": 63.73811073997058,
+        "content_characters": 4025,
+        "drafts_accepted": 2342,
+        "drafts_offered": 2601,
+        "generated_tokens_including_reasoning": 3223,
+        "native_decode_ms": 59385.7,
+        "native_prefill_ms": 4332.6,
+        "native_tokens_per_second": 54.272324818937896,
+        "prompt_tokens": 1429,
+        "reasoning_characters": 3605,
+        "reused_tokens": 0
+      },
+      "diagnostic_native_rate_ratio": 1.0095493975630982,
+      "emitted_paths_identical": false,
+      "fixed_known_answer_client_latency_ratio": 0.9720624156153868,
+      "id": "sequence1024-cold",
+      "matched_token_speedup_claim": false
+    },
+    {
+      "baseline": {
+        "actual_TTFT_proven": false,
+        "buffered_first_visible_delta_seconds": {
+          "client_first_content_seconds": 89.5355881541036,
+          "client_first_reasoning_seconds": 89.5355881541036,
+          "client_first_tool_seconds": null
+        },
+        "cache_hits": 1376257,
+        "cache_lookups": 1378095,
+        "client_completion_seconds": 89.53606378706172,
+        "content_characters": 4025,
+        "drafts_accepted": 4026,
+        "drafts_offered": 4241,
+        "generated_tokens_including_reasoning": 5297,
+        "native_decode_ms": 89459.9,
+        "native_prefill_ms": 56.2,
+        "native_tokens_per_second": 59.210886665422166,
+        "prompt_tokens": 1429,
+        "reasoning_characters": 7530,
+        "reused_tokens": 1428
+      },
+      "candidate": {
+        "actual_TTFT_proven": false,
+        "buffered_first_visible_delta_seconds": {
+          "client_first_content_seconds": 49.056747026974335,
+          "client_first_reasoning_seconds": 49.056747026974335,
+          "client_first_tool_seconds": null
+        },
+        "cache_hits": 742366,
+        "cache_lookups": 743295,
+        "client_completion_seconds": 49.057084086118266,
+        "content_characters": 4025,
+        "drafts_accepted": 2067,
+        "drafts_offered": 2213,
+        "generated_tokens_including_reasoning": 2821,
+        "native_decode_ms": 48995.2,
+        "native_prefill_ms": 45.7,
+        "native_tokens_per_second": 57.577068774084,
+        "prompt_tokens": 1429,
+        "reasoning_characters": 2255,
+        "reused_tokens": 1428
+      },
+      "diagnostic_native_rate_ratio": 0.9724067990981077,
+      "emitted_paths_identical": false,
+      "fixed_known_answer_client_latency_ratio": 0.547903068452817,
+      "id": "sequence1024-warm",
+      "matched_token_speedup_claim": false
+    }
+  ],
+  "prior_numerical_HOLD": true,
+  "promotion_allowed": false,
+  "speed_acceptance": false,
+  "replication_authorized": false,
+  "prose_measured": false,
+  "selected_production_unchanged": true,
+  "interpretation": "Cold native rate about+0.955%, warm about-2.759%, one observation each. Candidate warm client time49.057s vs89.536s accompanies2821 vs5297totalgeneratedtokens; no causal kernel/task-speed gain or general prose claim."
+}

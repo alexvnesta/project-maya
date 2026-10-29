@@ -1,0 +1,84 @@
+{
+  "scope": "NEW_EXPLORATORY_DESCRIPTIVE_DECODE_ONLY",
+  "arms": [
+    "X0",
+    "X1"
+  ],
+  "requests_per_arm": [
+    "sequence1024-cold",
+    "sequence1024-warm"
+  ],
+  "fixture_sha256": "6cd0ddd21db305c41186288d84979f5aaf84f8b7f8d653c3aa45694511600ebf",
+  "selected_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "candidate_native_sha256": "da28ca8b108048990f5950e76909cccacacb9f921d8e37fad9f16b440bb513a6",
+  "selected_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "settings": {
+    "total_context": 1048576,
+    "default_output": 262144,
+    "benchmark_cap": 32768,
+    "effort": 100,
+    "images": true,
+    "Q8": [
+      1,
+      1
+    ],
+    "mode": 1,
+    "projection": "L22/scale1/all40mainblocks",
+    "drafter": "unchanged",
+    "DSpark_confidence": 0.65,
+    "DSpark_max": 4,
+    "TP": 1,
+    "placement": "automatic19-21",
+    "CPU_threads": 24,
+    "all_CPU_experts_RAM": true,
+    "stream": 0,
+    "chunk": 4096
+  },
+  "policy": {
+    "model": "deepseek-v4.1-flash-iq2-xs",
+    "stream": true,
+    "reasoning_effort": 100,
+    "reasoning_budget_tokens": 0,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "seed": 1,
+    "max_tokens": 32768
+  },
+  "actual_fixture": {
+    "prompt_tokens": 1429,
+    "expected_reuse": [
+      0,
+      1428
+    ],
+    "canonical_answer_tokens": 2076,
+    "expected_prompt_skip_lines": []
+  },
+  "bounds": {
+    "window_s": 1200,
+    "soft_s": 1000,
+    "cleanup_s": 200,
+    "root_admission_GiB": 132,
+    "root_runtime_GiB": 120,
+    "swapdelta_less_than_GiB": 1,
+    "private_cache_GiB": 8,
+    "log_GiB": 4
+  },
+  "gates": [
+    "Fresh idle/default/no queued-inflight-reserved work/no phases-build-pending",
+    "Exact canonical current owner/source/q/window/root",
+    "X0-only independent admission, complete raw audit/restoration and same Astra manual result review before separate X1 admission",
+    "Natural typed integer values1..1024, HTTP200/stop/DONE, no wrong-cap-partial-UNRUN, retry0",
+    "Actual native/PID/environment/argv/cgroup/placement/draft/cache, actual private API/native/window exit0, old-owner closure and selected restoration",
+    "First genuine execution/API/native/lifecycle fault: owned cleanup/HOLD/offline diagnosis, no blind retry"
+  ],
+  "claims": {
+    "prior_numerical_HOLD": true,
+    "same_quality_equivalence_proven": false,
+    "matched_token_speedup_claim": false,
+    "speed_acceptance": false,
+    "replication_authorized": false,
+    "promotion_allowed": false,
+    "actual_TTFT_proven": false,
+    "description": "One descriptive observation per arm/cold-warm case. Identical required visible answer, variable hidden reasoning/token paths. Keep output lengths/native/client/cache/draft metrics; buffered first delta is not TTFT. No new code/tool/image/nearfilled1M/full256K capacity claim."
+  }
+}

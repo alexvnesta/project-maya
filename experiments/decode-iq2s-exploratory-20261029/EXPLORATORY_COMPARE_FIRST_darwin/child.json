@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-29T18:29:48.376372+00:00",
+  "pid": 2729,
+  "returncode": 0,
+  "error": null,
+  "cleanup_errors": [],
+  "program_sha256": "8e1678545170e9edab18b50ff1bd63f200f20f22516d4b2b6d2e4380a6ee4aaa",
+  "source_sha256": {
+    "iq2s_explore.py": "9b1048524d606ada541e31508e89681731d37fe684089f90333686d0ce6357dc",
+    "iq2s_explore_audit.py": "22fc09f89d44964dd9389c8ba7d68ba3692d21679abcf95a17540756068a6f56",
+    "iq2s_explore_config.py": "f99d1923199e5767fe2e86c0932704ee757a4eb3354ba3359a458cbf5100730f",
+    "iq2s_explore_controls.py": "211913552b19efcb8cc5ea452d7361e0f87c7adf0ba1e4b5e4ecef17c38010ee",
+    "iq2s_explore_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+    "iq2s_explore_fixtures.py": "e2e402942282c9d5df23d5aac3e928a8c185056d5d8bc6404bd24179554da4a8",
+    "iq2s_explore_runtime.py": "b3dc8fb5da7db354f29216f3e26680e3ff28c6e6af35fb34c501f3ae7797b4d1",
+    "iq2s_explore_summary.py": "9423c74ffd8b02bdef9cb6f02e211553070e00abd9c774388e9a3f2e959b5f14",
+    "qualify_iq2s_explore_cpu.py": "90c9512999bdfbecce4ee360c439edfc2efd725e20baf01d78f70b2db4bcb708",
+    "test_iq2s_explore.py": "bb313f554795aa2bc02cc115949ea1897c45a5cb7de7327b55956f6b983e51bf",
+    "test_iq2s_explore_config.py": "2f27cb3f0a2e95fea5c411750c4371d7a7a4378335e440c4a785bac07ffdf6ff",
+    "test_iq2s_explore_controls.py": "40679e1bc678aaba653fd292289334d7bd5e1cd992b8fa75d4019c79c5d04299",
+    "test_iq2s_explore_dependencies.py": "8de073c1be007c92647ae88f31ae4dbd14e27416f97b5e660eb978dd1df4f3fb",
+    "test_iq2s_explore_fixtures.py": "f5b17f27c5b237e0203a9ed4006e62758c5d2aea86e7f1a282e5a2a30f054199",
+    "test_iq2s_explore_runtime.py": "15194d835729f989bcc14a382e41272dd5134bfa45ee53d629644833ed62405d",
+    "test_iq2s_explore_summary.py": "8feba6a4ca5b7c5917233adc8206198920486b724c21d48dc34a07710132985c",
+    "test_qualify_iq2s_explore_cpu.py": "19fa4cf9543c05017dca46fbe754cbf2f44ae6d9be5b35b5e5d3c37a48116a5d"
+  },
+  "input_sha256": {
+    "X0/terminal-audit.json": "88821f96485f6bfb326df8fc94d60c7a54f94d1dd28a7c63923129167d8b7040",
+    "X1/terminal-audit.json": "5d1d88915c35d217a19af7acac689171825a55196381e1c5abae47e083a1ca79"
+  },
+  "case_ids": [
+    "sequence1024-cold",
+    "sequence1024-warm"
+  ],
+  "module_origins": {
+    "iq2s_explore_summary": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_summary.py",
+    "iq2s_explore_fixtures": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_fixtures.py",
+    "iq2s_explore_dependencies": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_dependencies.py"
+  },
+  "CPU_s": 30,
+  "wall_s": 90,
+  "nice": 15,
+  "CUDA_hidden": true,
+  "Linux_AS_MiB": null,
+  "native_execution": false,
+  "GPU_execution": false
+}

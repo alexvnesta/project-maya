@@ -1,0 +1,63 @@
+{
+  "utc": "2026-10-29T17:08:01.549583+00:00",
+  "status": "FIRST_CPU_HOLD_OBSERVER_ASSERTION_DEFECT",
+  "native_or_GPU_executed": false,
+  "Ubuntu_staged": false,
+  "candidate_deployed": false,
+  "source_snapshot": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/failed-FIRST-CPU-source-v1",
+  "source_snapshot_sha256": {
+    "test_iq2s_explore_config.py": "2f27cb3f0a2e95fea5c411750c4371d7a7a4378335e440c4a785bac07ffdf6ff",
+    "test_iq2s_explore_dependencies.py": "8de073c1be007c92647ae88f31ae4dbd14e27416f97b5e660eb978dd1df4f3fb",
+    "iq2s_explore_summary.py": "9423c74ffd8b02bdef9cb6f02e211553070e00abd9c774388e9a3f2e959b5f14",
+    "iq2s_explore_config.py": "f99d1923199e5767fe2e86c0932704ee757a4eb3354ba3359a458cbf5100730f",
+    "test_qualify_iq2s_explore_cpu.py": "19fa4cf9543c05017dca46fbe754cbf2f44ae6d9be5b35b5e5d3c37a48116a5d",
+    "iq2s_explore.py": "9b1048524d606ada541e31508e89681731d37fe684089f90333686d0ce6357dc",
+    "test_iq2s_explore_controls.py": "40679e1bc678aaba653fd292289334d7bd5e1cd992b8fa75d4019c79c5d04299",
+    "iq2s_explore_fixtures.py": "e2e402942282c9d5df23d5aac3e928a8c185056d5d8bc6404bd24179554da4a8",
+    "test_iq2s_explore_runtime.py": "38195716ce8dfccddddea69368ef837678f1f59b7ab467dbb7fc2db77e950360",
+    "iq2s_explore_controls.py": "211913552b19efcb8cc5ea452d7361e0f87c7adf0ba1e4b5e4ecef17c38010ee",
+    "test_iq2s_explore.py": "cfc8bcaa2bf7aeee6c5ea1296fdc83757ba2b3818a189eb12d3c2329de63fcb6",
+    "test_iq2s_explore_summary.py": "8feba6a4ca5b7c5917233adc8206198920486b724c21d48dc34a07710132985c",
+    "qualify_iq2s_explore_cpu.py": "7f04b5a1f0376ee765401b679ff94c23e347cfa46002af0b64f62768569c5fc0",
+    "iq2s_explore_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+    "test_iq2s_explore_fixtures.py": "f5b17f27c5b237e0203a9ed4006e62758c5d2aea86e7f1a282e5a2a30f054199",
+    "iq2s_explore_runtime.py": "10aedf03b46ee182bb9fd78a5f9ee129c1f11220c5d74f14e8df0f1f3bb8711e",
+    "iq2s_explore_audit.py": "22fc09f89d44964dd9389c8ba7d68ba3692d21679abcf95a17540756068a6f56",
+    "exploratory-CPU-source-review.json": "f009962e0f09ece3322fc102da6e66f1552f49d187dd75e8d5b51c562c1b96c1",
+    "source-astra-review.json": "ee3b931ed4c843ffd7c793acd086be0c38396dd110c6d448fa7ee1fbe131e506",
+    "ROOT_MANUAL_READ_PROGRESS.json": "ed5f94f0bdba52a2e68eaa1dc9daa4ab1c9b44b69163b0a6a0baf60d3579bb6d",
+    "base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "kernel-prerequisite.json": "0e6fa30f6a1c304a12be80a02d0539168a3cfd852422cd0161f29b1d599eab13",
+    "PLAN.json": "53765cce03cb816b5cf9bc4012db6983cb50edb1278d09857b87f6f20a04d286",
+    "STATE.json": "30b9da9dee3d4146316bb9cc648f9d28216cfa1559dac42b167661b6da9f4915"
+  },
+  "failed_raw_directory": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/exploratory-CPU-darwin",
+  "failed_raw_sha256": {
+    "encoded-fixture.json": "6cd0ddd21db305c41186288d84979f5aaf84f8b7f8d653c3aa45694511600ebf",
+    "child.log": "86e033ba3b3039b4d61506deb2eb091ec4a31e95a248ade7f25715bf6d9037b6",
+    "child.json": "f638a538aa20b4a1020cd513b4800fd3f2d8a8ccf8af44c012a74d1ea2b2ae57",
+    "receipt.json": "63ee7ecdd8a3ac9b0cdc9494f2d5457f943ec5c864511f3a087d66b819ed163d"
+  },
+  "controls_executed": 137,
+  "unittest_failures": 1,
+  "child_returncode": 1,
+  "child_pid": 24330,
+  "actual_prompt_tokens": [
+    1429,
+    1429
+  ],
+  "canonical_answer_tokens": 2076,
+  "observed_failure": "Trace-only assertion used native-* and included legitimate native-ready.json. Actual four trace directories were also present. Real socket cancel/release/counter+1/recovery checks precede the failing final assertion. Independent same Astra diagnosis pending.",
+  "prior_numerical_HOLD": true,
+  "promotion_allowed": false,
+  "selected_binding_last_guarded": {
+    "invocation": "999f3c55a064452f864c7ff9a4875655",
+    "main_pid": 2041131,
+    "native_pid": 2041169,
+    "native_start_ticks": 155393110
+  },
+  "last_guard_UTC": "2026-10-29T17:05:50Z",
+  "root_free_GiB_at_guard": 837.9446411132812,
+  "guard_status": "IDLE_GUARD_PASSED",
+  "next": "Offline review and separately frozen exact CPU-source correction with distinct new output directories; original failed proof is not regraded/replayed"
+}

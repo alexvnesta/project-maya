@@ -1,0 +1,27 @@
+import sys,os,json,time,subprocess,hashlib,importlib.util,datetime
+from pathlib import Path
+S=Path(sys.argv[1]);sys.path.insert(0,str(S));import qualify_iq2s_explore_cpu as d
+guard=None
+if sys.platform=='linux':
+ _,rt,a,host,binding=d.c.support();guard=lambda:d.c.guard(rt,host,binding);guard();assert binding=={'invocation':'f2b87ac5943049aca1ca6eff01607397','main_pid':2427755,'native_pid':2427790,'native_start_ticks':156575799}
+planpath=S/'EXPLORATORY_COMPARISON_COMMAND.json';assert d.c.sha(planpath)=='3887035ae5be2cbf66d2da93cb584a4350db4050a4a997b187325b1e8f373de1';plan=json.loads(planpath.read_text());assert hashlib.sha256(plan['program'].encode()).hexdigest()==plan['program_sha256']=='8e1678545170e9edab18b50ff1bd63f200f20f22516d4b2b6d2e4380a6ee4aaa'
+def custody():
+ assert {n:d.c.sha(S/n)for n in plan['source_sha256']}==plan['source_sha256'];assert {n:d.c.sha(S/n)for n in plan['input_sha256']}==plan['input_sha256']
+ return {n:str(Path(importlib.util.find_spec(n).origin).resolve())for n in ('iq2s_explore_summary','iq2s_explore_fixtures','iq2s_explore_dependencies')}
+origins=custody();assert origins=={n:str(S/(n+'.py'))for n in origins};out=S/('EXPLORATORY_COMPARE_FIRST_'+sys.platform);d.c.fresh(out);out.mkdir();argv=[sys.executable,'-B','-c',plan['program']];env=dict(os.environ,PYTHONPATH=str(S),CUDA_VISIBLE_DEVICES='',OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',MALLOC_ARENA_MAX='1',PYTHONDONTWRITEBYTECODE='1');p=None;error=None;cleanup=[];code=None;began=time.monotonic()
+with (out/'result.json').open('x')as stdout,(out/'stderr.log').open('x')as stderr:
+ try:
+  p=subprocess.Popen(argv,cwd=S,env=env,preexec_fn=d.limits,start_new_session=True,stdout=stdout,stderr=stderr)
+  while True:
+   if guard:guard()
+   if time.monotonic()-began>=90:raise TimeoutError('Data comparison wall90')
+   if sum((out/n).stat().st_size for n in ('result.json','stderr.log'))>4*2**20:raise ValueError('Data comparison output4MiB')
+   code=p.poll()
+   if code is not None:break
+   time.sleep(.2)
+ except BaseException as exc:
+  error=repr(exc)
+  if p is not None:cleanup=d.cleanup_child(p);code=p.returncode
+proof={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'pid':p.pid if p else None,'returncode':code,'error':error,'cleanup_errors':cleanup,'program_sha256':plan['program_sha256'],'source_sha256':plan['source_sha256'],'input_sha256':plan['input_sha256'],'case_ids':plan['case_ids'],'module_origins':origins,'CPU_s':30,'wall_s':90,'nice':15,'CUDA_hidden':True,'Linux_AS_MiB':512 if sys.platform=='linux'else None,'native_execution':False,'GPU_execution':False};d.c.emit_new(out/'child.json',proof);assert custody()==origins;d.c.require(code==0 and error is None and not cleanup,'FIRST offline data comparison HOLD; no retry');result=json.loads((out/'result.json').read_text());assert result['prior_numerical_HOLD']is True and result['promotion_allowed']is False and result['speed_acceptance']is False
+if guard:guard()
+print(json.dumps({'passed':True,'host':sys.platform,'pid':p.pid,'returncode':code,'result_sha256':d.c.sha(out/'result.json'),'native_execution':False,'GPU_execution':False}))
