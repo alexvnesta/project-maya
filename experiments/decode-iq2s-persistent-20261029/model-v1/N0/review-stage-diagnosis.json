@@ -1,0 +1,12 @@
+{
+  "scope": "Operator metadata-only stage, not model/controller execution",
+  "original": "review-stage-FIRST.json exit1 ModuleNotFoundError: iq2s_numerical",
+  "cause": "Wrapper added Q but omitted M on sys.path before importing qualified ledger writer",
+  "four_review_payloads_staged": true,
+  "registry_changed_before_error": false,
+  "private_model_or_CPU_test_child_started": false,
+  "source_or_tests_changed": false,
+  "correction": "Separately finalize untouched N0 ledger under fresh idle guard with M on sys.path and exact three report/audit hashes",
+  "actual_N1_after_finalization": "READ_ONLY_PREFLIGHT_PASS; candidate numerical arm remains UNRUN",
+  "original_error_receipt_preserved": true
+}
