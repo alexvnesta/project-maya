@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-29T13:58:17.180184+00:00",
+  "status": "DEFERRED_BUSY_UNTOUCHED",
+  "raw_stdout": "{\"status\": \"DEFERRED_BUSY_UNTOUCHED\"}",
+  "command": "iq2s_numerical.py --arm N0 --run",
+  "backoff_since_prior_run_check_s": 300,
+  "N0_arm_attempted": false,
+  "drain": false,
+  "request": false,
+  "restart": false,
+  "private_window": false,
+  "production_changed": false,
+  "scope": "After backoff fresh controller busy guard deferred before metadata/hash/binding/claim/drain; user work untouched, no model attempt"
+}

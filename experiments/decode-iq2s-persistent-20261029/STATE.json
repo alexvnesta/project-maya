@@ -8,8 +8,8 @@
   "compiler_run": true,
   "GPU_run": true,
   "production_changed": false,
-  "next": "Fresh safe idle/current owner/root actual2199 numerical preflight checks, then separate SAME Astra N0-only admission. User busy deferral untouched.",
-  "updated_utc": "2026-10-29T13:43:18.138204+00:00",
+  "next": "When user work permits a fresh safe idle gap, exact same qualified N0 controller may recheck admission; no attempted model arm exists. No poll/interrupt/new automation.",
+  "updated_utc": "2026-10-29T13:58:17.180184+00:00",
   "CPU_controls_each_host": {
     "controller": 59,
     "policy": 46
@@ -105,7 +105,7 @@
     "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
   },
   "numerical": {
-    "status": "FIRST109_EACH_HOST_PASS_QUALIFICATION_STAGED_N0_PREFLIGHT_DEFERRED_BUSY",
+    "status": "FIRST109_EACH_HOST_PASS_ACTUAL2199_PREFLIGHT_PASS_N0_UNRUN_USER_BUSY",
     "source_count": 11,
     "input_maps": 931,
     "Mac_CPU_controls": 109,
@@ -113,10 +113,12 @@
     "model_windows": "UNRUN",
     "first_prechild_refusal": "model-v1/CPU-prechild-path-refusal-FIRST.json",
     "fresh_busy_deferral": "numerical-stage-busy-deferral-FIRST.json",
-    "GPU_admitted": false,
+    "GPU_admitted": "CONDITIONAL_N0_ONLY_A976_NO_ACTUAL_GPU_WINDOW",
     "qualification_sha256": "11deaac7b10b7d53bd988acff210136b5e2107d533d1a13e28c315037810113e",
     "qualification_files": 2198,
     "independent_CPU_review": "1d8f7e95dc342ae6c4a916592a1e23be277405b9b186eeac78f0fe73d6fc2cc5",
-    "independent_qualification_review": "8f407f1e8dabc03767baaf5782531f5bf708487db472c65ec26df61334dac9e8"
+    "independent_qualification_review": "8f407f1e8dabc03767baaf5782531f5bf708487db472c65ec26df61334dac9e8",
+    "actual_preflight": "READ_ONLY_PREFLIGHT_PASS_20261029T134410Z",
+    "actual_attempt_registry_empty": true
   }
 }
