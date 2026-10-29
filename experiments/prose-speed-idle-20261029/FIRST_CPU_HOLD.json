@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-29T19:38:14.577093+00:00",
+  "status": "FIRST_CPU_PROOF_HOLD_NO_MODEL_LAUNCHED",
+  "CPU_controls_each_host": 56,
+  "failures_each_host": 1,
+  "source_sha256": {
+    "test_prose_measure.py": "b7191ed06fe37cb69ed3bbdea277aefda886513a440bec06361eeca39187fdb1",
+    "test_qualify_prose_cpu.py": "c027a37a6a4fe6bf3f53bd78e09c6932a4dd807465cf1669ba23f17614b1b3cd",
+    "prose_measure.py": "3157ff6ba7cbafab6ae896ae325e2afcddb65b9f4ecd6e12b3c5d298a0c489c4",
+    "transport.py": "cd026ab8cc86228500f606efb0913e55a63ba89b4e55fbfc33707b18c595bf37",
+    "test_transport.py": "a7410d5f1efb74a47ea998db14cfc4d0555969a499b0815c8b2a827709c0b55f",
+    "qualify_prose_cpu.py": "77db10b3c7b1e5972dfc1b35770c2754b920d6b895e1207af328557db6636344",
+    "prose-fixtures.json": "8039ba7415335710ab481c5cd29f3c2c1bffb19b223d83ec586baf759a336faf",
+    "prose-CPU-source-review.json": "8279a454229b4e69a701287be55c9535d5f23ddf8bacd33434f0de2d81ff5956",
+    "SOURCE_ASTRA_REVIEW.json": "695bd3b5e1ba8294def0ca6f3535c6f9939f0f30ccb2d441652b64ea9ade92bd",
+    "PLAN.json": "e6d5a2f158c2f1f97c4cc60f3591879665364af726bbefb4f6a851f2467fe7f2",
+    "STATE.json": "2fb977efc34beacc642c039b90394d75f635374e018a187e00853e0ce8f975cc"
+  },
+  "failure": "ActualAPI scripted engine cancel_seen flag not set, despite API0token disconnect/cancelTrue and reservationrelease; offline sameAstra diagnosis pending.",
+  "old_receipts_not_regraded": true,
+  "selected_production_changed": false,
+  "model_or_GPU_run": false,
+  "classification": "TEST_OBSERVER_FLAG_SKIPPED_BY_GENERATOR_CLOSE_NO_OBSERVED_API_LIFECYCLE_FAILURE",
+  "unexecuted_assertions": "Queued-user cancellation and subsequent recovery portion of failed integration method UNRUN in v1.",
+  "raw_sha256": {
+    "prose-CPU-FIRST-darwin/receipt.json": "445ed5b7963195b77ed002121280c26f0e7b56f7daadb563a9226495f7655511",
+    "prose-CPU-FIRST-darwin/child.json": "fc99b351608c86324482996f184ec075242b360b0e854c5c0c0bf442be864dbb",
+    "prose-CPU-FIRST-darwin/child.log": "88e82aac0ad056eb4ba643f4859d588af9736f8365f74c6cc76bb15e72098c3b",
+    "prose-CPU-FIRST-linux/receipt.json": "445ed5b7963195b77ed002121280c26f0e7b56f7daadb563a9226495f7655511",
+    "prose-CPU-FIRST-linux/child.json": "0801ee1121c57b606a7197ae3965e5733de5433cd5697ef691d0215d1212737d",
+    "prose-CPU-FIRST-linux/child.log": "037e0650370c6001d0b74b0a397e954282ba23549cc7aedc74a08111181e84ad"
+  }
+}

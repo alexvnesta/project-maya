@@ -1,0 +1,63 @@
+--- failedv1/prose_measure.py
++++ v2/prose_measure.py
+@@ -154,13 +154,13 @@
+     ids = q['test_ids']
+     require(type(ids) is list and ids and len(ids) == len(set(ids)), 'Test ID inventory')
+     for label in ('darwin', 'linux'):
+-        folder = HERE / ('prose-CPU-FIRST-' + label)
++        folder = HERE / ('prose-CPU-v2-' + label)
+         for name in ('receipt.json', 'child.json', 'child.log', 'encoded-fixture.json'):
+             require(q['files'].get(str(folder / name)) == sha(folder / name), 'CPU raw proof unpinned')
+         receipt, child = load(folder / 'receipt.json'), load(folder / 'child.json')
+         cpu_contract(receipt, child, q, label)
+-    left = HERE / 'prose-CPU-FIRST-darwin/encoded-fixture.json'
+-    right = HERE / 'prose-CPU-FIRST-linux/encoded-fixture.json'
++    left = HERE / 'prose-CPU-v2-darwin/encoded-fixture.json'
++    right = HERE / 'prose-CPU-v2-linux/encoded-fixture.json'
+     require(sha(left) == sha(right), 'Both-host real encoding differs')
+     original = HERE / 'prose-fixtures.json'
+     require(q['files'].get(str(original)) == sha(original), 'Fixture not pinned')
+@@ -514,7 +514,7 @@
+             require(runtime.current_binding(state) == binding and process_identity(binding) == before_proc,
+                     'Selected identity changed')
+             resource_check(output, first_swap)
+-        fixture = encoded_fixture(load(HERE / 'prose-CPU-FIRST-darwin/encoded-fixture.json'),
++        fixture = encoded_fixture(load(HERE / 'prose-CPU-v2-darwin/encoded-fixture.json'),
+                                   fixtures(load(HERE / 'prose-fixtures.json')))
+         results = panel(fixture['cases'], output, lightweight=lightweight, deadline=start + 1000,
+                         cleanup_deadline=start + 1200, clock=clock)
+--- failedv1/test_transport.py
++++ v2/test_transport.py
+@@ -168,10 +168,11 @@
+                             if time.monotonic() >= limit: raise AssertionError('CPU scripted request never released')
+                             yield None; time.sleep(.005)
+                         if cancel.is_set():
+-                            inner.cancel_seen.set(); return
++                            return
+                     for token in super().generate(ids, max_new, sampling, cancel, embeddings):
+                         count += 1; yield token
+                 finally:
++                    if cancel.is_set(): inner.cancel_seen.set()
+                     finish = 'cancel' if cancel.is_set() else 'stop'
+                     inner._parse_done(f'DONE {count} {len(ids)} 1.0 2.0 {finish} 3 5 0 0 0')
+         with tempfile.TemporaryDirectory() as tmp:
+--- failedv1/qualify_prose_cpu.py
++++ v2/qualify_prose_cpu.py
+@@ -155,7 +155,7 @@
+         _, runtime, _, host, binding = c.support()
+         guard = lambda: c.guard(runtime, host, binding)
+         guard()
+-    review = json.loads((HERE / 'prose-CPU-source-review.json').read_text())
++    review = json.loads((HERE / 'prose-CPU-v2-source-review.json').read_text())
+     pins = source_pins(review)
+     inputs = input_pins(review)
+     ids = test_ids()
+@@ -164,7 +164,7 @@
+               and c.sha(HERE / 'qualify_prose_cpu.py') == review['driver_sha256']
+               and c.sha(Q / 'iq2s_build.py') == review['build_support_sha256'],
+               'Exact manual source/test review absent')
+-    out = HERE / ('prose-CPU-FIRST-' + sys.platform)
++    out = HERE / ('prose-CPU-v2-' + sys.platform)
+     if child:
+         suite = unittest.TestSuite(unittest.defaultTestLoader.loadTestsFromName(module) for module in MODULES)
+         def names(s):

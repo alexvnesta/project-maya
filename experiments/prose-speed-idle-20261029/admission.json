@@ -1,0 +1,72 @@
+{
+  "utc": "2026-10-29T19:46:36.903362+00:00",
+  "decision": "CONDITIONAL_SINGLE_P0_HOSTED_PROSE_ONLY",
+  "qualification_sha256": "53b6521962e4522d31457dbe7aaecdf865f2193189a538b99b4716dfe8001afc",
+  "binding": {
+    "invocation": "f2b87ac5943049aca1ca6eff01607397",
+    "main_pid": 2427755,
+    "native_pid": 2427790,
+    "native_start_ticks": 156575799
+  },
+  "kernel_since": "2026-10-29 18:01:28 UTC",
+  "previous_window_path": "/home/alex/strata-deepseek-test-20261024/windows/20261029T180231Z.json",
+  "previous_window_sha256": "586d67a6db1845aa05877284888faa926ca62b11e8dfceda54f6056051891e20",
+  "previous_telemetry_sha256": "cd065895ac085505223aa302b9c12838f4d6e3590b1a19433be29d9d38644ebf",
+  "evidence_sha256": {
+    "actual-preflight-FIRST.json": "1ed0913a732b996843cc152775b6e9c97924053ceed500facb5eca689ae99ea4",
+    "QUALIFICATION_ASTRA_REVIEW.json": "bc4851224979ba3ce71b88cd4093e8271447d500ede95567952c75c9f198d99c",
+    "CPU_V2_ASTRA_REVIEW.json": "2c1086bacde02c82306e4c9316b48ef503b88323554a38ea41206e39163c5be7",
+    "SOURCE_ASTRA_REVIEW_v2.json": "c2f840c6c4d39a04c5ba2349714ee1d7e4376a6e1c7d3a2be68f3a8b39ff99cb",
+    "prose-CPU-v2-source-review.json": "829413a7f31bcd60a31297472283244c3a38b7956f7a64b9c51b8ecbc79442a6",
+    "prose-fixtures.json": "8039ba7415335710ab481c5cd29f3c2c1bffb19b223d83ec586baf759a336faf",
+    "CPU_FIRST_V2_BOTH_HOSTS_ROOT_REVIEW.json": "27ef84c625347559769504934dff3daf532edd5a906e3b40581e2d45ed094504",
+    "FIRST_CPU_HOLD.json": "5b930a37eaf560dc170a92be74a0711f16a03f32ae24849648d1d467fdacbe54"
+  },
+  "scope": {
+    "mode": "SELECTED_HOSTED_PROSE_DESCRIPTIVE_ONLY",
+    "attempt": "P0-FIRST",
+    "requests": [
+      "expository-prose",
+      "creative-prose"
+    ],
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_allowance": 262144,
+    "request_max_tokens": 32768,
+    "effort": 100,
+    "chunk": 4096,
+    "native_restarts": 0,
+    "alternate_candidate": false,
+    "prior_numerical_HOLD": true,
+    "promotion_allowed": false
+  },
+  "bounds": {
+    "total_soft_s": 1000,
+    "cleanup_s": 200,
+    "total_deadline_s": 1200,
+    "root_start_GiB": 132,
+    "root_runtime_GiB": 120,
+    "swap_delta_strictly_below_bytes": 1073741824,
+    "log_budget_bytes": 4294967296,
+    "request_SSE_limit_bytes": 67108864
+  },
+  "conditions_before_any_POST": [
+    "Use only the frozen qualified controller once with exact qualification and this admission SHA; no source edits, unreviewed arguments, direct bypass or new owner. P0-FIRST must be absent.",
+    "Immediately recheck full source/evidence and qualification bytes, actual default/idle/empty queue and reservations, exact current native/cgroup/binding, absence of other phases, held existing production lock, root132, fresh clock, clean previous window and kernel interval. Busy defers without an HTTP request.",
+    "Cooperative own-PID reservation must preserve existing canonical selected binding and foreign state. No service/model stop, restart, drain, pruning, shared cancellation or lock replacement."
+  ],
+  "during_and_terminal_conditions": [
+    "Monitor only lightweight redacted telemetry/resource/process/custody while requests are active. On foreign demand, ID ambiguity, gaps, owner/custody change, fault, timeout or resource overflow close only the captured own socket; retain incomplete/UNRUN and do not retry.",
+    "After own request, verify same selected owner and release only the exact own reservation. User work may remain active; do not require or cause global idleness. Preserve cleanup/attribution uncertainty and never label ambiguous cancellation an own-ID release proof.",
+    "Retain both complete own synthetic answers/reasoning/SSE, exact attributable native and API counters separately, output lengths, native/cache/draft values and direct client timing. Full manual prose quality review remains required before interpreting results."
+  ],
+  "limitations": [
+    "Actual saved preflight is a controller result with operator-recorded exitcode/check count; reviewer did not make live host calls. Kernel/root/idle/source/owner checks must be fresh at action time.",
+    "GET-to-POST idle admission and cooperative STATE update are not globally atomic. Best-effort own-socket yielding does not guarantee zero user latency; queued cancellation uses existing10s heartbeat.",
+    "Buffered first visible delta is not real TTFT. Exact native rate requires unique uncontended native history attribution and SSE crosschecks; raw cache hits/lookups unavailable. No inferred prose quality or broader throughput claim from tags, length, CPU MockEngine timings or sequence results.",
+    "Both original CPU56 failures remain failures; corrected separate v2 proofs establish current56 controls per host, not a retrospective regrade.",
+    "No additional request panel, prose replication, candidate test, deployment, previous-arm replay or numerical-HOLD waiver is authorized by this report."
+  ],
+  "reviewer_model_test_remote_execution": false
+}

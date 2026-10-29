@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "scope": "SELECTED_HOSTED_PROSE_DESCRIPTIVE_ONLY",
+  "cases": [
+    {
+      "id": "expository-prose",
+      "request": {
+        "model": "deepseek-v4.1-flash-iq2-xs",
+        "stream": true,
+        "reasoning_effort": 100,
+        "reasoning_budget_tokens": 0,
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "seed": 1,
+        "max_tokens": 32768,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Synthetic prose speed fixture P0 expository, 2026-10-29.\nWrite about 800 to 1000 words of clear continuous prose for a curious general reader explaining how a hash table finds a value. Explain hash functions and buckets, collision handling by chaining, the load factor and resizing, and why expected constant-time lookup differs from worst-case linear lookup. Include one small worked example using the keys cedar, maple and pine with explicitly made-up bucket assignments, without presenting those assignments as a real hash function. Use paragraphs, not code, tables, lists or headings. Complete the explanation naturally. End with exactly this sentence: That is how the lookup finds its way."
+          }
+        ]
+      },
+      "expected_last_sentence": "That is how the lookup finds its way.",
+      "requested_words": [
+        800,
+        1000
+      ],
+      "length_is_observed_not_fitted": true
+    },
+    {
+      "id": "creative-prose",
+      "request": {
+        "model": "deepseek-v4.1-flash-iq2-xs",
+        "stream": true,
+        "reasoning_effort": 100,
+        "reasoning_budget_tokens": 0,
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "seed": 1,
+        "max_tokens": 32768,
+        "messages": [
+          {
+            "role": "user",
+            "content": "Synthetic prose speed fixture P0 creative, 2026-10-29.\nWrite a self-contained literary short story of about 800 to 1000 words in natural, varied prose. In a small coastal village, a clock repairer named Mara returns to repair the clock at the old ferry terminal with her father Ilan. Their disagreement concerns whether the terminal should be preserved or replaced. Let the work on the clock change their understanding of each other, using sensory detail and believable dialogue. Keep the setting realistic, without magic or a sudden disaster. Use paragraphs without headings, lists or commentary about the writing. Give the story a complete ending. End with exactly this sentence: By morning, the clock was keeping ordinary time."
+          }
+        ]
+      },
+      "expected_last_sentence": "By morning, the clock was keeping ordinary time.",
+      "requested_words": [
+        800,
+        1000
+      ],
+      "length_is_observed_not_fitted": true
+    }
+  ],
+  "policy": {
+    "model": "deepseek-v4.1-flash-iq2-xs",
+    "stream": true,
+    "reasoning_effort": 100,
+    "reasoning_budget_tokens": 0,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "seed": 1,
+    "max_tokens": 32768
+  },
+  "context": 1048576,
+  "output_allowance": 262144,
+  "input_tokens_predeclared_bounds": [
+    64,
+    1024
+  ],
+  "images_enabled_unchanged": true,
+  "prior_numerical_HOLD": true,
+  "candidate_allowed": false,
+  "promotion_allowed": false,
+  "case_retry_allowed": false,
+  "prose_quality_requires_full_manual_review": true,
+  "client_latency_scope": "Direct loopback native API; not public-router end-to-end latency",
+  "stream0_first_visible_is_not_TTFT": true,
+  "idle_admission_atomic": false,
+  "foreign_work_cancels_only_our_socket": true
+}

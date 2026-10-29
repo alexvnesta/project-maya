@@ -1,0 +1,170 @@
+{
+  "utc": "2026-10-29T19:18:58.818739+00:00",
+  "decision": "HOSTED_SELECTED_PROSE_DIAGNOSTIC_SOURCE_DESIGN_FEASIBLE_WITH_EXPLICIT_NONATOMIC_USER_PRIORITY_ABORT",
+  "implementation_authorized_by_this_report": false,
+  "source_sha256": {
+    "selected_API": {
+      "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/runtime/serve/server.py",
+      "sha256": "b1be40294f6c49692829ad5f85a7aa2867218180fdc8fbc9bef7710371ba3b9f"
+    },
+    "private_protocol": {
+      "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/prefill-v2/protocol.py",
+      "sha256": "516e887d0e73eab577b7eea939f463fab7b0e5fa8d4f6a39ab01c98a6298c9f3"
+    },
+    "canonical_coordinate": {
+      "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-profile-v1/maintenance.py",
+      "sha256": "276a78f6f62d9ae7760e9b436863a6279715d58ea0960bb396bdb7adcc3776dd"
+    },
+    "archival_router": {
+      "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/apps-model-router/switcher.py",
+      "sha256": "dd574a55e0f2fa0f241efcf070c5e761914a27943291f055c2e76026231342e1"
+    },
+    "archival_router_controller": {
+      "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/apps-model-router/controller.py",
+      "sha256": "46584b8687c3e1abfb524333ba4a9e78feeb75374779c44e023f5cae1d9a9045"
+    },
+    "qualified_exploratory_runtime": {
+      "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_runtime.py",
+      "sha256": "b3dc8fb5da7db354f29216f3e26680e3ff28c6e6af35fb34c501f3ae7797b4d1"
+    },
+    "qualified_exploratory_controls": {
+      "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_controls.py",
+      "sha256": "211913552b19efcb8cc5ea452d7361e0f87c7adf0ba1e4b5e4ecef17c38010ee"
+    },
+    "qualified_exploratory_summary": {
+      "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_summary.py",
+      "sha256": "9423c74ffd8b02bdef9cb6f02e211553070e00abd9c774388e9a3f2e959b5f14"
+    },
+    "qualified_exploratory_driver": {
+      "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/qualify_iq2s_explore_cpu.py",
+      "sha256": "90c9512999bdfbecce4ee360c439edfc2efd725e20baf01d78f70b2db4bcb708"
+    }
+  },
+  "state_basis": {
+    "local_E_phase_flags": {
+      "active_private_phase": null,
+      "active_GPU_phase": null,
+      "active_gpu_experiment": false,
+      "active_cpu_build": false,
+      "production_temporarily_stopped": false
+    },
+    "warning": "Local E/P selected snapshots are stale; no fresh remote observation by reviewer. S closed STATE and reviewed X1 restoration bind latestf2b8/native2427790. Parent separately reports liveidle19:12 and nullqueue limits; must refresh actualcanonicalbinding/idle beforeCPU staging and inference.",
+    "last_reviewed_binding": {
+      "invocation": "f2b87ac5943049aca1ca6eff01607397",
+      "main_pid": 2427755,
+      "native_pid": 2427790,
+      "native_start_ticks": 156575799
+    }
+  },
+  "recommended_mode": {
+    "name": "selected-hosted-prose",
+    "arm": "P0",
+    "purpose": "DESCRIPTIVE_SELECTED_PROSE_SPEED_ONLY",
+    "native": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "endpoint": "http://127.0.0.1:18141/v1/chat/completions",
+    "router_observation": "http://127.0.0.1:8012/health",
+    "context": 1048576,
+    "output_default": 262144,
+    "request_cap": 32768,
+    "effort": 100,
+    "temperature": 1.0,
+    "seed": 1,
+    "chunk": 4096,
+    "requests": 2,
+    "dump": false,
+    "restart": false,
+    "native_launch": false,
+    "service_config_change": false,
+    "new_owner_or_automation": false,
+    "prior_numerical_HOLD": true,
+    "promotion_allowed": false,
+    "replication_authorized": false,
+    "fixtures": [
+      {
+        "id": "prose-explanation",
+        "system": "Write clear, natural prose for an interested adult reader. Use only the supplied facts for factual claims about the fictional example. Do not use tools, code, tables, bullet lists, or JSON.",
+        "user": "Explain how a small town library could use a catalogue cache without confusing a cached answer with the authoritative record. In this fictional example, the authoritative catalogue is stored on the library server; a desk computer keeps recent search results locally; librarians can change a book location on the server; a cached result can therefore become stale; a cache miss asks the server; and the desk computer can refresh or discard cached results. Develop a coherent explanation covering the roles of the two copies, an example of a stale location, the tradeoff between quick replies and freshness, and why a cache miss is not itself an error. End with a practical explanation of when checking the server matters. No fabricated measurements or claims about a particular software product.",
+        "manual_rubric": [
+          "Connected explanatory prose rather than list/code/JSON",
+          "Catalogue is authoritative; local result can be stale after a change",
+          "Miss asks server and is not an error",
+          "Explains speed/freshness tradeoff without invented performance numbers"
+        ]
+      },
+      {
+        "id": "prose-narrative",
+        "system": "Write original, natural prose using the supplied fictional facts. Do not use tools, code, tables, bullet lists, or JSON.",
+        "user": "Write a self-contained short story about a volunteer preparing a neighbourhood book swap. The volunteer is named Mira. The event is on Saturday in a community hall. On Friday, rain damages the handwritten signs but does not damage any books. Mira asks her neighbour Leon to help make new signs. They rearrange the tables so visitors can find fiction, history, and children\u2019s books. At the opening, a visitor finds a book they had been searching for and thanks the volunteers. Develop the setback, their cooperation, the atmosphere in the hall, and a satisfying ending. Keep these facts consistent; you may invent dialogue and harmless details within this fictional setting.",
+        "manual_rubric": [
+          "Coherent beginning, setback, cooperation and ending in prose",
+          "Mira and Leon; Friday sign damage without damaged books; Saturday community hall",
+          "Fiction/history/children sections and grateful visitor included",
+          "No contradictory facts, tool calls, code or JSON"
+        ]
+      }
+    ]
+  },
+  "admission_and_user_priority": [
+    "Read currentcanonicalstate/guard exactselectedunit,invocation,main/nativePID,startticks,exe/config/release and default loaded. No private/restoration/build/pending; root>=132GiB; kernel/priorwindowclean; no hashing/heavywork ifbusy. Fresh owned output/attempt manifest, no oldarm reuse.",
+    "Before EACH request, require both router and native idle (active/queued/reserved/inflight/waiting zero), snapshot redacted native activity.last_seq and aggregate counters. A second fresh guard immediately before sending narrows but does not eliminate the race.",
+    "Use direct18141 so our request is not a router lease: any routerinflight/waiter/switch/defaultchange is foreign demand. Conservatively close ONLY our own captured socket on foreign demand, native queued/reserved>1, additional requestIDs, activity-sequence gap/reset/overrun, monitor failure, owner change, resource/deadline breach or attribution ambiguity.",
+    "Native activity includes only last32 events (server6503); preserve a contiguous cursor across polls. Never equate SSEchatcmplID with native internalrequestID or /api/requestsID. Successful single-request epoch can retrospectively attribute the unique new nativeID; concurrent/ambiguous epochs cannot be used as clean throughput samples.",
+    "Own-socket close is per-request cancellation (server6300\u20136323,4001\u20134009); never POST /stop, /unload, /settings, /load, drain, kill, or change queue limits. The0.5s watcher and native cancellation boundary mean zero added user latency is NOT guaranteed. No active user request is explicitly cancelled or restarted by this design.",
+    "On cancellation preservepartial/UNRUN and never issue the second prompt or retry. Do not wait for globalzero because legitimate userwork may remain. If uniquely attributed ownterminalID exists, wait only for its terminal/removal within boundedcleanup; otherwise record OWN_RELEASE_UNVERIFIED/HOLD and leave service untouched. No forced cleanup of sharedservice.",
+    "After naturalstop/DONE and requestrelease, require unchanged binding and uncontended completeepoch before accepting rates. Re-guard before secondrequest; ifuserwork arrived, retain first and leave secondUNRUN. No second attempt to fill missingdata.",
+    "No post-run READY inference is needed: existingservice was not restarted. Read-only identity/status verification only; if user busy, retain last binding witness and defer heavyaudit."
+  ],
+  "metrics": {
+    "SSE_own_request": "server5682\u20135703 emits cache_n,prompt_n,prompt_ms,predicted_n,predicted_ms,predicted_per_second,draft_n,draft_n_accepted; usage includes generated total, including reasoning. Save full ownsyntheticSSE/response/usage/timings.",
+    "native_rate": "Retain native reported decode rate and ms/count; where request retries/continuations or engine_generated vs API completioncount differ, label uncertainty. A redacted uniquely-attributed metrics history row has exactengine_generated/decode_ms (5527\u20135546); otherwise do not claim independently observed rawtoken path.",
+    "cache": "Prompt reusedtokens from ownSSE exact. Expert hit_rate is rounded in /metrics history; raw hits/lookups are not exposed in ownSSE and must be marked unavailable. Do not fabricate counters or fetch usercontent/logs to fill them.",
+    "latency": "Direct nativeAPI client completion only; not publicrouter end-to-end. DS4_STREAM0 buffered firstvisible delta is not trueTTFT. Native first_engine_token_s, if uniquely correlated, has its documented queue/prefill origin.",
+    "scope": "Two prose outputs on selectedmodel only; no candidate comparison. No same-token, generalquality, longcontext/fulloutput or optimalperformance claim. Record actualdraftoffered/accepted even ifzero; do not force a repetitive sequence to improve acceptance."
+  },
+  "source_reuse_and_deltas": {
+    "new_sources": [
+      "prose_fixtures.py (two literalprompts/rubrics/requestlimits/CPU-only encoder)",
+      "hosted_prose_transport.py (narrow fixed18141 variant of owned-socket/SSE parser; oldprivateprotocol untouched)",
+      "hosted_prose.py (single P0 controller, existingread-only identity helpers, redactedepoch/user-prioritymonitor, freshledger/budgets)",
+      "prose_audit.py (ownSSE/metrics correlation, naturalstop/partial preservation, manualrubrics, unchangedbinding and descriptive rates)",
+      "qualify_prose_cpu.py (existingboundedchild pattern, source/origin/rawproof custody)"
+    ],
+    "tests": [
+      "test_prose_fixtures.py",
+      "test_hosted_prose_transport.py",
+      "test_hosted_prose.py",
+      "test_prose_audit.py",
+      "test_qualify_prose_cpu.py"
+    ],
+    "exact_counts": "Determine from actual written/testloadedsource; no invented controlcount. All new source and testbodies read ROOT+sameAstra beforeFIRSTCPU.",
+    "do_not_reuse_unchanged": [
+      "protocol.private_endpoint rejects18141 bydesign; no monkeypatch or widening its oldguard.",
+      "iq2s_explore_controls.bounded_request waitsforGLOBALidle oncancel and is therefore inappropriate for liveusertraffic.",
+      "canonical maintenance.coordinate explicitlystopsrouter/native (139\u2013169); do not call it or spoofno-opstop/free/restoration in hostedmode.",
+      "Existingprivateconfig/activation/kernelgate/candidatecomparison namespace cannot be reused as if this were anotherX0."
+    ]
+  },
+  "required_CPU_controls": [
+    "Two frozen requests preserve fullcap32768/effort100/temp1/seed1; realtokenizer onceeachhost, eachpromptbelow1024 and answeruntokenized/no autoresizing. No forcedword/token count or outputcap fitting.",
+    "Exactfixedendpoint+no redirect/foreign port/secretlogging; parser malformed/duplicateDONE/partial/length/nonnatural/finitetiming; fullownsocketcancelbeforeheaders and whileSSE.",
+    "ActualCPUHTTP MockEngine scenarios userwinsfirst thenbenchmarkqueues; benchmarkfirst thenuserqueues; ownsocketonlycancel with userrequestcompleting; no globallystoppingservice.",
+    "Redactedcounter/event uniqueness, eventgap/reset/overrun, twoIDs/IDnamespacecollision, pollingfailure, queue/reservationbeforeencoding; neverread /api/requestscontent.",
+    "Secondrequestblockedonuserarrival; cancellation/timeout/resourcebudget keepsbothscores withpartial/UNRUN and no retry; currentforeignPID notkilled or adopted.",
+    "Budget output4GiB/root120/swapdelta<1GiB and1000soft+200cleanup/1200overall; no nativeFSIZE/cachepolicychange. Sharedcache incidentalchanges and unknownexactcachehits labeled.",
+    "CPUdriver30s/LinuxAS512MiB/wall90/nice15/CUDAhidden/threads1, matching source/inputmap+actualIDs+rawproofbothhosts; freshLinuxidle before staging/CPU.",
+    "Independentmanual prose rubric review afterrun; meaningful coherent completion only, no languagecorrectness proof from wordcount."
+  ],
+  "private_fallback": {
+    "feasible": true,
+    "scope": "If hostedbest-effort cancellation/attribution cannot bequalified, use separatelyconfirmed P0 selected92-only private mode copied from currentexploratory lifecycle, notX0/X1replay.",
+    "cost": "Graceful router drain plus modelreload and publicrestoration; two recentloads261.2/413.4s show substantial overhead.",
+    "requirements": "Verify actualeffectiveUvicorn/systemd graceful stop configuration and pending-request drain behavior; racing admitted requests must finish before native stop. No native stop while directbackenduserwork remains. Retainprospective oldAPI/native0/privateAPI/native/window0 and qualifiedselectedrestore. Existingrouter/owner/coordinate only, no priorityframework/servingpatch.",
+    "not_authorized_here": true
+  },
+  "important_limits": [
+    "No atomicidle reservation exists in selectedAPI: reserve_inference3984\u20133996 checksdraining/capacity only; nullmaxqueue meansordinaryFIFOqueueing.",
+    "No-stopping-active-userwork is implementable by cancelling only our socket; zero addeduserwait is not provable. Report this distinction explicitly.",
+    "All source/CPU/metadata/inference readiness remains pending. No sourceimplementation/execution/staging or servingchange was performed by reviewer."
+  ]
+}

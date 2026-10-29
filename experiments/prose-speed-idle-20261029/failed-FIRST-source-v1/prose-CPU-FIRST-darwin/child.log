@@ -1,0 +1,72 @@
+test_before_post_foreign_epoch_defers_without_stream (test_prose_measure.CaseTests.test_before_post_foreign_epoch_defers_without_stream) ... ok
+test_foreign_arrival_during_history_capture_blocks_rate (test_prose_measure.CaseTests.test_foreign_arrival_during_history_capture_blocks_rate) ... ok
+test_natural_prose_is_manual_pending_not_wordcount_quality (test_prose_measure.CaseTests.test_natural_prose_is_manual_pending_not_wordcount_quality) ... ok
+test_panel_preserves_unrun_second_after_partial_no_retry (test_prose_measure.CaseTests.test_panel_preserves_unrun_second_after_partial_no_retry) ... ok
+test_primary_and_cancel_failure_both_preserved (test_prose_measure.CaseTests.test_primary_and_cancel_failure_both_preserved) ... ok
+test_racing_user_after_post_closes_only_owned_stream (test_prose_measure.CaseTests.test_racing_user_after_post_closes_only_owned_stream) ... ok
+test_resource_failure_cancels_and_preserves_primary (test_prose_measure.CaseTests.test_resource_failure_cancels_and_preserves_primary) ... ok
+test_soft_deadline_cancels_without_extending_cap (test_prose_measure.CaseTests.test_soft_deadline_cancels_without_extending_cap) ... ok
+test_actual_run_failure_releases_only_own_reservation (test_prose_measure.CustodyTests.test_actual_run_failure_releases_only_own_reservation) ... ok
+test_actual_run_foreign_replacement_is_not_cleared (test_prose_measure.CustodyTests.test_actual_run_foreign_replacement_is_not_cleared) ... ok
+test_busy_claim_has_no_mutation (test_prose_measure.CustodyTests.test_busy_claim_has_no_mutation) ... ok
+test_claim_release_preserves_old_selected_and_hold (test_prose_measure.CustodyTests.test_claim_release_preserves_old_selected_and_hold) ... ok
+test_compare_write_conflict_refuses_no_foreign_overwrite (test_prose_measure.CustodyTests.test_compare_write_conflict_refuses_no_foreign_overwrite) ... ok
+test_existing_output_never_replayed (test_prose_measure.CustodyTests.test_existing_output_never_replayed) ... ok
+test_foreign_cleanup_and_missing_reservation_untouched (test_prose_measure.CustodyTests.test_foreign_cleanup_and_missing_reservation_untouched) ... ok
+test_production_lock_is_observed_not_held_for_benchmark (test_prose_measure.CustodyTests.test_production_lock_is_observed_not_held_for_benchmark) ... ok
+test_real_directory_symlink_ancestor_refused (test_prose_measure.CustodyTests.test_real_directory_symlink_ancestor_refused) ... ok
+test_resource_root_swap_reset_limit_and_log_symlink (test_prose_measure.CustodyTests.test_resource_root_swap_reset_limit_and_log_symlink) ... ok
+test_boolean_counters_omitted_and_wrong_id_namespace_refused (test_prose_measure.EpochTests.test_boolean_counters_omitted_and_wrong_id_namespace_refused) ... ok
+test_event_gap_duplicate_reset_and_restart_refused (test_prose_measure.EpochTests.test_event_gap_duplicate_reset_and_restart_refused) ... ok
+test_initial_busy_or_nondefault_refused (test_prose_measure.EpochTests.test_initial_busy_or_nondefault_refused) ... ok
+test_native_extra_request_and_queue_reservation_refused (test_prose_measure.EpochTests.test_native_extra_request_and_queue_reservation_refused) ... ok
+test_observer_drops_shared_content_and_unrelated_history (test_prose_measure.EpochTests.test_observer_drops_shared_content_and_unrelated_history) ... ok
+test_own_release_not_global_idle_and_ambiguity_not_attribution (test_prose_measure.EpochTests.test_own_release_not_global_idle_and_ambiguity_not_attribution) ... ok
+test_router_user_arrival_cancels_even_with_one_native_id (test_prose_measure.EpochTests.test_router_user_arrival_cancels_even_with_one_native_id) ... ok
+test_unique_epoch_released_and_own_router_busy_allowed (test_prose_measure.EpochTests.test_unique_epoch_released_and_own_router_busy_allowed) ... ok
+test_encoded_bounds_never_resize (test_prose_measure.FixtureTests.test_encoded_bounds_never_resize) ... ok
+test_frozen_profile_and_literal_cases (test_prose_measure.FixtureTests.test_frozen_profile_and_literal_cases) ... ok
+test_profile_type_and_limit_changes_rejected (test_prose_measure.FixtureTests.test_profile_type_and_limit_changes_rejected) ... ok
+test_history_keeps_only_exact_own_metadata (test_prose_measure.MetricsTests.test_history_keeps_only_exact_own_metadata) ... ok
+test_history_sse_draft_decode_prompt_conflicts_refused (test_prose_measure.MetricsTests.test_history_sse_draft_decode_prompt_conflicts_refused) ... ok
+test_native_engine_count_kept_separate_from_api_count (test_prose_measure.MetricsTests.test_native_engine_count_kept_separate_from_api_count) ... ok
+test_nonfinite_negative_boolean_drafts_and_continuation_refused (test_prose_measure.MetricsTests.test_nonfinite_negative_boolean_drafts_and_continuation_refused) ... ok
+test_slot_session_cache_uses_exact_server_max_expression (test_prose_measure.MetricsTests.test_slot_session_cache_uses_exact_server_max_expression) ... ok
+test_changed_qualification_or_wrong_scope_refused_before_input_reads (test_prose_measure.QualificationTests.test_changed_qualification_or_wrong_scope_refused_before_input_reads) ... ok
+test_exact_cpu_maps_ids_and_typed_limits (test_prose_measure.QualificationTests.test_exact_cpu_maps_ids_and_typed_limits) ... ok
+test_missing_changed_cpu_ids_sources_inputs_or_execution_refused (test_prose_measure.QualificationTests.test_missing_changed_cpu_ids_sources_inputs_or_execution_refused) ... ok
+test_relaxed_limits_cleanup_errors_and_bool_returncode_refused (test_prose_measure.QualificationTests.test_relaxed_limits_cleanup_errors_and_bool_returncode_refused) ... ok
+test_actual_fullcap_API_natural_cancel_user_queue_and_recovery (test_transport.ActualSelectedAPITests.test_actual_fullcap_API_natural_cancel_user_queue_and_recovery) ... [strata] done: 5 tokens in 0 s (2500.0 tok/s) (stop, cancel=False)
+[strata] done: 0 tokens in 0 s (no speed) (disconnect, cancel=True)
+FAIL
+test_fragmented_ready_and_comment (test_transport.ParserTests.test_fragmented_ready_and_comment) ... ok
+test_malformed_utf8_json_and_oversize (test_transport.ParserTests.test_malformed_utf8_json_and_oversize) ... ok
+test_missing_done_length_and_tool_finish_refused (test_transport.ParserTests.test_missing_done_length_and_tool_finish_refused) ... ok
+test_mixed_identity_choice_role_and_server_errors (test_transport.ParserTests.test_mixed_identity_choice_role_and_server_errors) ... ok
+test_observation_endpoint_allowlist_before_connection (test_transport.ParserTests.test_observation_endpoint_allowlist_before_connection) ... ok
+test_premature_duplicate_done_and_text_after_finish (test_transport.ParserTests.test_premature_duplicate_done_and_text_after_finish) ... ok
+test_cancel_before_connect_returns_never_sends (test_transport.SocketTests.test_cancel_before_connect_returns_never_sends) ... ok
+test_cancel_owned_queued_socket_only_user_and_recovery_complete (test_transport.SocketTests.test_cancel_owned_queued_socket_only_user_and_recovery_complete) ... ok
+test_real_loopback_natural_response_fixed_production_address (test_transport.SocketTests.test_real_loopback_natural_response_fixed_production_address) ... ok
+test_absolute_and_even_reviewed_escape_refused_before_metadata (test_qualify_prose_cpu.InputCustody.test_absolute_and_even_reviewed_escape_refused_before_metadata) ... ok
+test_actual_input_map_preserves_raw_key_and_checks_bytes_and_closure (test_qualify_prose_cpu.InputCustody.test_actual_input_map_preserves_raw_key_and_checks_bytes_and_closure) ... ok
+test_changed_pin_on_reviewed_raw_alias_refused (test_qualify_prose_cpu.InputCustody.test_changed_pin_on_reviewed_raw_alias_refused) ... ok
+test_exact_inherited_alias_returns_same_canonical_file (test_qualify_prose_cpu.InputCustody.test_exact_inherited_alias_returns_same_canonical_file) ... ok
+test_new_canonical_input_allowed_without_traversal (test_qualify_prose_cpu.InputCustody.test_new_canonical_input_allowed_without_traversal) ... ok
+test_prior_inventory_tamper_refused_before_input_metadata (test_qualify_prose_cpu.InputCustody.test_prior_inventory_tamper_refused_before_input_metadata) ... ok
+test_symlink_prefix_refused_before_descendant_inspection (test_qualify_prose_cpu.InputCustody.test_symlink_prefix_refused_before_descendant_inspection) ... ok
+test_unreviewed_alias_refused_even_for_identical_target (test_qualify_prose_cpu.InputCustody.test_unreviewed_alias_refused_even_for_identical_target) ... ok
+
+======================================================================
+FAIL: test_actual_fullcap_API_natural_cancel_user_queue_and_recovery (test_transport.ActualSelectedAPITests.test_actual_fullcap_API_natural_cancel_user_queue_and_recovery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/prose-speed-v1/test_transport.py", line 218, in test_actual_fullcap_API_natural_cancel_user_queue_and_recovery
+    self.assertTrue(engine.cancel_seen.is_set())
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 56 tests in 4.380s
+
+FAILED (failures=1)
