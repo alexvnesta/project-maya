@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-29T17:46:06.307327+00:00",
+  "status": "PRECHILD_PATH_PREPARATION_REFUSAL",
+  "returncode": 1,
+  "error": "ValueError: Directory alias refused",
+  "diagnosis": "CPU dispatch wrapper called existing c.fresh on S/X0/terminal-audit.json before its new parent S/X0 directory existed. c.fresh requires a real existing parent. Refused before output mkdir, subprocess or independent audit.",
+  "CPU_child_started": false,
+  "native_or_GPU_run": false,
+  "production_changed": false,
+  "repair": "After fresh idle, explicitly require/create the new owned empty X0 report directory before checking the fresh terminal file; keep existing bounded auditor bytes and limits unchanged.",
+  "first_actual_independent_audit": "UNRUN"
+}

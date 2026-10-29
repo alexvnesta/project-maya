@@ -1,0 +1,84 @@
+{
+  "arm": "X0",
+  "arm_results": {
+    "complete": true,
+    "rows": [
+      {
+        "id": "sequence1024-cold",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 3289,
+          "prompt_tokens": 1429,
+          "prompt_ms": 4367.0,
+          "decode_ms": 61180.5,
+          "finish": "stop",
+          "drafts_accepted": 2436,
+          "drafts_offered": 2629,
+          "reused": 0,
+          "hits": 852682,
+          "lookups": 871995
+        },
+        "observed_tokens": 3289,
+        "numerical_equivalence_pass": false
+      },
+      {
+        "id": "sequence1024-warm",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 5297,
+          "prompt_tokens": 1429,
+          "prompt_ms": 56.2,
+          "decode_ms": 89459.9,
+          "finish": "stop",
+          "drafts_accepted": 4026,
+          "drafts_offered": 4241,
+          "reused": 1428,
+          "hits": 1376257,
+          "lookups": 1378095
+        },
+        "observed_tokens": 5297,
+        "numerical_equivalence_pass": false
+      }
+    ],
+    "native_count": 2,
+    "case_scores": [
+      {
+        "id": "sequence1024-cold",
+        "status": "NATURAL_KNOWN_ANSWER_PASSED",
+        "passed": true
+      },
+      {
+        "id": "sequence1024-warm",
+        "status": "NATURAL_KNOWN_ANSWER_PASSED",
+        "passed": true
+      }
+    ],
+    "unrun_ids": [],
+    "incomplete_reason": null,
+    "prior_numerical_HOLD": true,
+    "promotion_allowed": false,
+    "quality_or_speed_pass": false,
+    "retry": false,
+    "actual_native_count": 2,
+    "activation": {
+      "mode": 1,
+      "short_prompt_skip_expected": false,
+      "activation_early_rows": []
+    },
+    "IQ2S": {
+      "persistent": 0,
+      "eligible_dispatch_observed": false,
+      "per_model_kernel_launch_count_observed": false,
+      "scope": "One branch receipt after first launch, not completion/count; separate both-device exact fixture required"
+    },
+    "DSI1_leftovers": []
+  },
+  "native_server_cleanup_passed": true,
+  "prior_numerical_HOLD": true,
+  "promotion_allowed": false,
+  "seconds_including_load": 425.07119271089323,
+  "not_a_promotion": true,
+  "speed_pass": false
+}

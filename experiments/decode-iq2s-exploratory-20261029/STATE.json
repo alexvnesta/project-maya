@@ -1,0 +1,72 @@
+{
+  "status": "CLOSED_EXPLORATORY_MIXED_RATES_NO_QUALIFIED_THROUGHPUT_GAIN_NO_PROMOTION",
+  "utc": "2026-10-29T16:47:45.494947+00:00",
+  "CPU_controls_run": true,
+  "fixture_encoder_run": true,
+  "Ubuntu_staged": true,
+  "GPU_or_native_run": true,
+  "source_plan_sha256": "3a7f3c85bfdef8f58ee0c4c6d7e64067c4bd6d9b47a020e9cce3ad7ee1891cdd",
+  "prior_numerical_HOLD_unchanged": true,
+  "quality_or_promotion_qualified": false,
+  "production_changed": false,
+  "next": "Same Astra source handoff; ROOT entire source/tests manual review before first bounded CPU controls both physical hosts and fixture encoding.",
+  "first_CPU": {
+    "darwin": {
+      "passed": false,
+      "controls": 137,
+      "failures": 1,
+      "child_returncode": 1,
+      "raw": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/exploratory-CPU-darwin"
+    },
+    "linux": "UNRUN_BLOCKED"
+  },
+  "correction_source_pending": false,
+  "corrected_CPU_both_hosts_passed": true,
+  "qualification_sha256": "5191da7f4d2ffb9442614b13d4d50c3740b404fa3c9f76550bffb7fb285c4457",
+  "qualification_actual_file_pins": 2268,
+  "corrected_CPU": {
+    "controls_each_host": 137,
+    "sources": 17,
+    "inputs": 965,
+    "Mac_pid": 26760,
+    "Ubuntu_pid": 2296817
+  },
+  "X0": {
+    "fully_reviewed": true,
+    "audit_sha256": "88821f96485f6bfb326df8fc94d60c7a54f94d1dd28a7c63923129167d8b7040",
+    "actual_native_pid": 2324111,
+    "resources": {
+      "root_min_GiB": 829.3462257385254,
+      "system_swapout_delta_bytes": 299008
+    },
+    "private_API_pid": 2324040,
+    "window": "20261029T172803Z.json",
+    "native_API_window_exit0": true,
+    "all_two_cases_natural_correct": true,
+    "old_hosted_native_and_API_exit0_prospectively_captured": true
+  },
+  "X1": {
+    "fully_reviewed": true,
+    "audit_sha256": "5d1d88915c35d217a19af7acac689171825a55196381e1c5abae47e083a1ca79",
+    "actual_native_pid": 2424389,
+    "resources": {
+      "root_min_GiB": 837.6364898681641,
+      "system_swapout_delta_bytes": 0
+    },
+    "private_API_pid": 2424363,
+    "window": "20261029T180231Z.json",
+    "native_API_window_exit0": true,
+    "all_two_cases_natural_correct": true,
+    "old_hosted_native_and_API_exit0_prospectively_captured": true
+  },
+  "selected_binding": {
+    "invocation": "f2b87ac5943049aca1ca6eff01607397",
+    "main_pid": 2427755,
+    "native_pid": 2427790,
+    "native_start_ticks": 156575799
+  },
+  "closeout_sha256": "efc2ecb94c8e6bd577787c0935ea78b2255d7e1b229bfe65d9c760c5bf45de96",
+  "candidate_deployed": false,
+  "prose_measured": false,
+  "completed": true
+}

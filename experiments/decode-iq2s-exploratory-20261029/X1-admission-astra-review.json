@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-29T18:00:04.463732+00:00",
+  "decision": "CONDITIONALLY_ADMIT_SINGLE_FRESH_X1_EXPLORATORY_DIAGNOSTIC_WINDOW_ONLY",
+  "qualification_sha256": "5191da7f4d2ffb9442614b13d4d50c3740b404fa3c9f76550bffb7fb285c4457",
+  "evidence_sha256": {
+    "actual-preflight-X1-FIRST/result.json": "49c7b0487748b05a3efd4f608354a1121c8e78f7988625d5aa007e0f49533c9f",
+    "actual-preflight-X1-FIRST/state.json": "0c6bb46785c0950c7e1be32fe3b6a642536ec0bba7284d92851939ebb5e62eeb",
+    "actual-preflight-X1-FIRST/target-placement.json": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "registry-after-X0-full-review.json": "f2edb3e438325f5192cc1b18a4a041b59d6a25a6223d5ba2286f658f248b7ee5",
+    "X0/terminal-audit.json": "88821f96485f6bfb326df8fc94d60c7a54f94d1dd28a7c63923129167d8b7040",
+    "X0-result-astra-review.json": "a33f1b392022c628fee04598937d5da1365f5ca36299220f1b88f3ffdd9961fb",
+    "q-map-astra-review.json": "8dc24bc3a05bbab031f26ea31ad664087903ab8285f97edcc3906eb4c99115c9",
+    "CPU-result-astra-review.json": "8f3cab76be651cf1c74ad65bf99aa99f768e21ef26584518d067ec03e14fadd7",
+    "EXPLORATORY_CRITERIA_FROZEN.json": "b2bf8268b54af1f21820446d013f057913d75f9fa572bc083d1053550caf83b3",
+    "exploratory-fixtures.json": "6cd0ddd21db305c41186288d84979f5aaf84f8b7f8d653c3aa45694511600ebf"
+  },
+  "prerequisites": {
+    "X0_complete_independently_audited_manually_reviewed_restored": true,
+    "X0_registry_terminal_and_Astra_pins_reconciled": true,
+    "X1_absent_unattempted": true,
+    "actual_preflight_utc": "2026-10-29 17:56:55 UTC",
+    "exact2268_file_map_and_qself": true,
+    "actual_preflight_factor": {
+      "fixture_sha256": "6cd0ddd21db305c41186288d84979f5aaf84f8b7f8d653c3aa45694511600ebf",
+      "factor": {
+        "exe": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/maya-ds4-candidate",
+        "native_sha256": "da28ca8b108048990f5950e76909cccacacb9f921d8e37fad9f16b440bb513a6",
+        "persistent": 1
+      },
+      "purpose": "EXPLORATORY_DESCRIPTIVE_DECODE_ONLY",
+      "prior_numerical_HOLD": true,
+      "promotion_allowed": false,
+      "speed_acceptance": false
+    },
+    "required_action_time_baseline_binding": {
+      "invocation": "45a402a34d6943dda4163bd9a506b875",
+      "main_pid": 2405043,
+      "native_pid": 2405078,
+      "native_start_ticks": 156358186
+    },
+    "baseline_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "baseline_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa"
+  },
+  "scope": {
+    "arm": "X1",
+    "requests": [
+      "sequence1024-cold",
+      "sequence1024-warm"
+    ],
+    "prompt_tokens": 1429,
+    "expected_reuse_tokens": [
+      0,
+      1428
+    ],
+    "native_context": 1048576,
+    "default_output": 262144,
+    "request_cap": 32768,
+    "effort": 100,
+    "temperature": 1.0,
+    "seed": 1,
+    "chunk": 4096,
+    "DSpark_confidence": 0.65,
+    "DSpark_max": 4,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "CPU_threads": 24,
+    "images_capability": true,
+    "dump": "OFF",
+    "FSIZE_hook_installed": false,
+    "window_s": 1200,
+    "soft_s": 1000,
+    "cleanup_s": 200,
+    "root_admission_GiB": 132,
+    "root_runtime_GiB": 120,
+    "swap_less_than_GiB": 1,
+    "cache_GiB": 8,
+    "logs_GiB": 4
+  },
+  "conditions": [
+    "Immediate fresh idle/default/no queued-reserved-inflight user work, no other phase/build/pending; exact current45a4/main2405043/native2405078/startticks156358186 binding; root>=132GiB, clock/currentkernel and prior172803cleanwindow. Busy must defer untouched; changed owner/source requires review.",
+    "Revalidate q5191+all2268files+self, exactfixture6cd0, closedHOLD/kernel104 prerequisites, X0terminal8882/Astraa33 and unattemptedX1. Only qualified existing controller/coordinate/lock/window; one new X1 attempt, no newowner/build/configdeployment.",
+    "Exact candidate da28/persist1 sole controlled factor; actualargv/env/exe/cgroup/one eligible-persistent branch receipt required. Keep actual residency/drafter/cache/request metrics without claiming instruction counts or arithmetic equivalence.",
+    "Run exactly two natural fullcap fixed-answer requests; preserve fullreasoning/outputlength/native/client/cache/draft/rawtoken traces. Wrong/cap/partial/budget/lifecycle fault is incomplete/HOLD; no retry, no extra prose/coding/image/tool request or replication.",
+    "Capture actual oldhostednativeclose0 and stable oldAPIinactiveCode1/Status0/Resultsuccess before restore; privateAPI/native/window0, root/swap/kernel/storage and ownedcleanup proofs required.",
+    "Restoreselected92/c43/chunk4096 through samequalifiedowner; public401/auth200/assembledREADY-stop-DONE/default1M262K, canonicalnewbinding. Lateuserbusy means pending sameowner verification only, no restart; foreignowner untouched.",
+    "Duringprivate/restoration onlylightweight ownedreceipts. Afterterminalrestoration/freshidle, independentboundedaudit+manualrawreview; onlythen separately reviewed offline descriptive comparison."
+  ],
+  "limits": [
+    "Old exact numerical gate remains CLOSED HOLD. This admission is explicit new exploratory testing, not a waiver of quality/equivalence or a deployment qualification.",
+    "No matched-token speedup, general prose rate, broadquality, nearfilled1M/full256K capacity, images/tools/code coverage or promotion claim. Fixed visibleanswer is common; hiddenreasoning/tokenpaths may differ.",
+    "Raw preflight reports sourceguard success and identity, not independently serialized numeric root/work counters; immediate repeated guards remain mandatory. Hosted11315GPUslots are labeled inferred, while private INFO counts must be recorded directly."
+  ],
+  "prior_numerical_HOLD": true,
+  "promotion_allowed": false,
+  "speed_acceptance": false,
+  "replication_admitted": false,
+  "replay_admitted": false,
+  "reviewer_actions": "Local evidence reads and this admission report only; no native/service/remote/CPU-test execution."
+}

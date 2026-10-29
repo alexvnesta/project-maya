@@ -1,0 +1,59 @@
+[strata] 2026-10-29 18:02:34 engine started: /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/maya-ds4-candidate --serve --pack /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1 --gpus 0,1 --max-context 1048576 --reserve-mib 2048 --cpu-threads 24 --tp 1 --dspark on --prefill-chunk 4096 --eos 1 --dspark-conf 0.65 --mmap-experts off --expert-profile /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-iq2s-exploratory-X1-20261029T180128Z/native/expert-profile.bin --serve --vision on --ablate /home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf --ablate-scale 1 --verbose --layer-split auto
+abliteration check: device 0 rows 2 dim 5120 target blocks 40 drafter untouched max_abs 5.96046448e-08 PASS
+abliteration check: device 1 rows 2 dim 5120 target blocks 40 drafter untouched max_abs 5.96046448e-08 PASS
+ds4: a GEMV call's int8 inputs rounded in one launch (DS4_Q8_BATCH)
+ds4: CUDA0 Q8 batch check: 8 jobs (k 32 .. 5120, rows 1 .. 16, strided, one input shared): 42784 int8 and 1337 scales the per-job launches' bit for bit, every guard intact (DS4_Q8_CHECK)
+ds4: CUDA1 Q8 batch check: 8 jobs (k 32 .. 5120, rows 1 .. 16, strided, one input shared): 42784 int8 and 1337 scales the per-job launches' bit for bit, every guard intact (DS4_Q8_CHECK)
+ds4: vision tower (32 blocks) on CUDA0: 319 MiB, up to 9189 patches, 0.8 s
+ds4: dense weights loaded in 4.3 s
+ds4: Engram rows read on 16 threads, issued with the tokens, collected before their layer; row cache 256 MB (1016800 rows)
+ds4: CUDA0 prompt slabs: the attention 2048 rows, the dense weights' FP16 scratch 128 MB
+ds4: CUDA1 prompt slabs: the attention 2048 rows, the dense weights' FP16 scratch 128 MB
+ds4: the experts VRAM leaves over (~39.1 GB) are read in place from the model's files (copied into RAM after the GPUs' share when the RAM holds them all; --mmap-experts on keeps them in place) (93.1 GB of RAM free to keep them: the most-routed 39.1 GB read ahead; prompts in chunks of 4096)
+ds4: group 0 (1 GPUs): 51.11 GB a member for experts, 5765 of 7680 in VRAM
+ds4: group 1 (1 GPUs): 58.86 GB a member for experts, 5974 of 8064 in VRAM
+ds4: experts 0 / 11699 (0.0 GB, 0.08 GB/s)
+ds4: experts 1024 / 11699 (9.4 GB, 4.64 GB/s)
+ds4: experts 2048 / 11699 (18.7 GB, 5.02 GB/s)
+ds4: experts 3072 / 11699 (28.7 GB, 5.15 GB/s)
+ds4: experts 4096 / 11699 (38.5 GB, 5.18 GB/s)
+ds4: experts 5120 / 11699 (48.6 GB, 5.21 GB/s)
+ds4: experts 6144 / 11699 (58.2 GB, 5.24 GB/s)
+ds4: experts 7168 / 11699 (69.0 GB, 5.26 GB/s)
+ds4: experts 8192 / 11699 (79.5 GB, 5.23 GB/s)
+ds4: experts 9216 / 11699 (89.6 GB, 5.24 GB/s)
+ds4: experts 10240 / 11699 (99.2 GB, 5.25 GB/s)
+ds4: experts 11264 / 11699 (109.1 GB, 5.26 GB/s)
+ds4: strict RAM: all 4045 CPU experts selected, no disk fallback
+ds4: copying experts 0 / 4045 (0.0 GB, 1.85 GB/s)
+ds4: copying experts 2048 / 4045 (19.5 GB, 2.40 GB/s)
+ds4: 4045 of the CPU lane's 4045 experts copied into RAM (39.5 GB, 1 NUMA part) in 373.6 s
+ds4: CPU lane: 24 threads, MXFP4 rows avx2 ()
+ds4: CPU lane's experts pinned in 0.0 s
+ds4: prompts through the flow or windows by this PC's speeds: DMA 6.8 GB/s, RAM to staging 17.7 GB/s, the disk not measured; the CPU lane 42.9 GB/s in RAM, not measured from the disk (157 ms)
+ds4: loaded in 413.4 s
+ds4: abliteration: /home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf direction.1, scale 1, projected out of every layer's attention and MoE writes
+ds4: CUDA0 layers [0, 42]: weights 3.31 GB, experts 58.32 GB (5746 of 7680 in VRAM), caches 0.58 GB, 2026 MiB free
+ds4: CUDA1 layers [19, 39] + head: weights 3.31 GB, experts 58.86 GB (5953 of 8064 in VRAM), caches 0.54 GB, 2030 MiB free
+ds4: 4045 routed experts on the CPU lane (39.5 GB): 4045 copied into RAM (1 NUMA parts), the rest in place in the model's files; 24 threads
+ds4: abliteration: /home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf direction.1, scale 1, projected out of every layer's attention and MoE writes
+ds4: CUDA0 layers [0, 42]: weights 3.31 GB, experts 58.32 GB (5746 of 7680 in VRAM), caches 0.58 GB, 2026 MiB free
+ds4: CUDA1 layers [19, 39] + head: weights 3.31 GB, experts 58.86 GB (5953 of 8064 in VRAM), caches 0.54 GB, 2030 MiB free
+ds4: 4045 routed experts on the CPU lane (39.5 GB): 4045 copied into RAM (1 NUMA parts), the rest in place in the model's files; 24 threads
+maya ds4 serve: GEN <max_new> [keys] <ids>; GENI <max_new> [keys] <pictures> <ids>; STOP, QUIT
+ds4 slots: folder /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-iq2s-exploratory-X1-20261029T180128Z/native/cache: 0 conversation(s) kept from earlier runs (0.00 GB)
+ds4: a prompt of 1429 tokens through the flow: predicted 5.78 s, windows 5.83 s (100% of its CPU-lane experts' 39.4 GB in RAM)
+ds4: CUDA0 prompt attention on the tensor cores (sm_80)
+ds4: CUDA0 busy experts (64 rows or more) as FP16 GEMMs, 1024 rows a piece, FFN up to 2304 (77 MB)
+ds4: CUDA1 prompt attention on the tensor cores (sm_80)
+ds4: CUDA1 busy experts (64 rows or more) as FP16 GEMMs, 1024 rows a piece, FFN up to 2304 (77 MB)
+ds4 prompt stream, CUDA0: 1429 tokens in 4313 ms; 920 experts streamed: 0 from the files (0.0 GB, 0.00 GB/s: 0.0 GB from the disk unbuffered, 0.0 GB through the page cache), 920 from RAM (8.4 GB); 143 likely ones queued early, 76 of them unpicked; the compute waited 401 ms for reads
+ds4 prompt stream, CUDA1: 1429 tokens in 4313 ms; 971 experts streamed: 0 from the files (0.0 GB, 0.00 GB/s: 0.0 GB from the disk unbuffered, 0.0 GB through the page cache), 971 from RAM (8.9 GB); 131 likely ones queued early, 72 of them unpicked; the compute waited 473 ms for reads
+IQ2_S_PERSIST dispatch kind=down blocks=296
+maya ds4 serve: prompt 1429 tokens = 0 reused + 1429 read in 4333 ms (329.8 tok/s), 3223 generated in 59386 ms (54.27 tok/s); CPU lane 1.6% of the experts
+maya ds4 serve: drafts 2342 of 2601 kept; per position (kept / reached): 1: 691/790 87% 2: 594/632 94% 3: 541/556 97% 4: 516/520 99%
+ds4 slots: saved a 4651-token conversation (0.02 GB in RAM in 0.0 s); 1 in RAM, 0 in /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-iq2s-exploratory-X1-20261029T180128Z/native/cache
+maya ds4 serve: prompt 1429 tokens = 1428 reused + 1 read in 46 ms (21.9 tok/s), 2821 generated in 48995 ms (57.58 tok/s); CPU lane 0.1% of the experts
+maya ds4 serve: drafts 2067 of 2213 kept; per position (kept / reached): 1: 580/645 90% 2: 514/545 94% 3: 492/498 99% 4: 481/481 100%
+ds4 slots: saved a 4249-token conversation as the engine ended (0.02 GB in RAM in 0.0 s); 2 in RAM, 0 in /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-iq2s-exploratory-X1-20261029T180128Z/native/cache
+ds4 slots: wrote 2 conversation(s) to /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-iq2s-exploratory-X1-20261029T180128Z/native/cache; 2 there in all

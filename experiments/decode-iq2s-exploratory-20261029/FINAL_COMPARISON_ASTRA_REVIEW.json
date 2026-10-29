@@ -1,0 +1,152 @@
+{
+  "utc": "2026-10-29T18:32:19.368628+00:00",
+  "decision": "CLOSED_EXPLORATORY_MIXED_RATES_NO_QUALIFIED_THROUGHPUT_GAIN_NO_PROMOTION",
+  "comparison_result_sha256": "e7e5fb3b97dcbc3f608e2ef0e8c2ee3e89c571afaae53a0a28865c79b9e4519b",
+  "evidence_sha256": {
+    "EXPLORATORY_COMPARISON_COMMAND.json": "3887035ae5be2cbf66d2da93cb584a4350db4050a4a997b187325b1e8f373de1",
+    "EXPLORATORY_COMPARISON_EXECUTOR.txt": "d380505e2410790c03cda029bfd6136eb2ace1f23751501e914db763dc1bd854",
+    "comparison-command-astra-review.json": "26e5a5e4d07d5523278542e29dfd5b1414e685d8ba8d28aff50dc6930b4effce",
+    "EXPLORATORY_COMPARISON_FIRST_BOTH_HOSTS.json": "950e3499d1415e9b5c4902467ab868a3d446b2445404da3f92a9b00c4fa47a41",
+    "X0/terminal-audit.json": "88821f96485f6bfb326df8fc94d60c7a54f94d1dd28a7c63923129167d8b7040",
+    "X1/terminal-audit.json": "5d1d88915c35d217a19af7acac689171825a55196381e1c5abae47e083a1ca79",
+    "X0-result-astra-review.json": "a33f1b392022c628fee04598937d5da1365f5ca36299220f1b88f3ffdd9961fb",
+    "X1-result-astra-review.json": "c8872e332ea123eaa7d7a26f34d7d80adbdcd93b6389088889d1ded8574e0a1a",
+    "EXPLORATORY_COMPARE_FIRST_darwin/child.json": "afe8b5ab8c2afea9ad6bbaf0d80c03f236a7498b9b479ef567368abbbb1a6ae4",
+    "EXPLORATORY_COMPARE_FIRST_darwin/result.json": "e7e5fb3b97dcbc3f608e2ef0e8c2ee3e89c571afaae53a0a28865c79b9e4519b",
+    "EXPLORATORY_COMPARE_FIRST_darwin/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "EXPLORATORY_COMPARE_FIRST_linux/child.json": "f57ec7022633daa82ad30137ac969432ee0e8a863475edc3da8a822142da4faa",
+    "EXPLORATORY_COMPARE_FIRST_linux/result.json": "e7e5fb3b97dcbc3f608e2ef0e8c2ee3e89c571afaae53a0a28865c79b9e4519b",
+    "EXPLORATORY_COMPARE_FIRST_linux/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "verification": {
+    "actual_first_both_host_child_returncode": 0,
+    "error": null,
+    "cleanup_errors": [],
+    "stderr_empty_each_host": true,
+    "source_map17_exact_current_and_frozen_plan": true,
+    "input_map2_exact_reviewed_terminals": true,
+    "caseIDs2_exact_order": true,
+    "program8e167_exact_literal_and_executor_fully_read": true,
+    "expected_local_and_physicalLinux_module_origins": true,
+    "limits": {
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "OMP_NUM_THREADS": 1,
+      "OPENBLAS_NUM_THREADS": 1,
+      "MALLOC_ARENA_MAX": 1
+    },
+    "Linux_AS_enforced_only_on_Linux": true,
+    "byte_identical_data_results": true,
+    "raw_terminal_counts_decode_ms_client_times_independently_recomputed_without_importing_or_rerunning_comparison": true,
+    "four_natural_correct_visible_sequence_answers": true
+  },
+  "independent_arithmetic": [
+    {
+      "id": "sequence1024-cold",
+      "baseline_native_tps": 53.75895914547936,
+      "candidate_native_tps": 54.272324818937896,
+      "descriptive_native_rate_change_percent": 0.954939756309825,
+      "baseline_generated_tokens": 3289,
+      "candidate_generated_tokens": 3223,
+      "generated_count_change_percent": -2.006688963210701,
+      "baseline_client_seconds": 65.56997752003372,
+      "candidate_client_seconds": 63.73811073997058,
+      "observed_client_time_change_percent": -2.7937584384613245,
+      "emitted_paths_identical": false
+    },
+    {
+      "id": "sequence1024-warm",
+      "baseline_native_tps": 59.210886665422166,
+      "candidate_native_tps": 57.577068774084,
+      "descriptive_native_rate_change_percent": -2.7593200901892323,
+      "baseline_generated_tokens": 5297,
+      "candidate_generated_tokens": 2821,
+      "generated_count_change_percent": -46.74343968283934,
+      "baseline_client_seconds": 89.53606378706172,
+      "candidate_client_seconds": 49.057084086118266,
+      "observed_client_time_change_percent": -45.2096931547183,
+      "emitted_paths_identical": false
+    }
+  ],
+  "interpretation": [
+    "Cold native total-generated rate changed +0.95494%; warm changed -2.75932%. Two single observations per arm on this synthetic integer-sequence task do not demonstrate a reproducible or qualified throughput gain.",
+    "Both full emitted paths differ. The visible output is identical correct JSON, but hidden reasoning/generated work differs; native rates remain descriptive, not matched-token or causal kernel-speed measurements.",
+    "Warm candidate completion49.057s versus baseline89.536s accompanies2821 versus5297generated tokens. It is an observed faster completion of this one visible task, not evidence that the kernel accelerated equivalent generated work or general workloads.",
+    "Prompt1429 and warmreuse1428 are matched; actualdraft/cache counters remain retained. Sequence regularity and draft acceptance do not establish prose throughput.",
+    "Buffered first-visible delta remains distinguished from true TTFT. No nearfilled1M/full256K, prose, images, tools, coding or broadquality coverage.",
+    "Old strict numerical HOLD and failed-proof history remain immutable. This exploration adds no acceptance threshold, numerical tolerance, replication or promotion authority."
+  ],
+  "prior_numerical_HOLD": true,
+  "promotion_allowed": false,
+  "speed_acceptance": false,
+  "replication_authorized": false,
+  "prose_measured": false,
+  "further_GPU_model_or_service_actions_admitted": false,
+  "last_reviewed_selected_production": {
+    "native_pid": 2427790,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "f2b87ac5943049aca1ca6eff01607397",
+      "main_pid": 2427755,
+      "native_pid": 2427790,
+      "native_start_ticks": 156575799
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "production_claim_scope": "Last completed X1 restoration receipts reviewed; no new live request or independent current-host probe performed in this result audit.",
+  "reviewer_actions": "Local saved source/receipts/hash checks and independent arithmetic only. No comparison helper rerun, tests, model, service, remote or staging action."
+}
