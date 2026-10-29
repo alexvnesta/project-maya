@@ -1,0 +1,79 @@
+{
+  "decision": "ISOLATED_IQ2_S_TOKEN_WINDOW_SOURCE_PORT_JUSTIFIED_NOT_EXECUTION_ADMISSION",
+  "selected_base": "native92 / IQ883cec / header072922 / modeldfe326; never held IMMA candidatebef0 or ownfork mixed HEAD",
+  "upstream": {
+    "release": "7ee8f2777c754229605a8c19ca985cbb68540419",
+    "implementation_squash": "50a3313b43db8a60e6f9fffa79f9939e7014b085",
+    "SM80_default_commit": "c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc",
+    "urls": [
+      "https://github.com/mw00/project-maya/blob/7ee8f2777c754229605a8c19ca985cbb68540419/src/ds4/ds4_iq.cu",
+      "https://github.com/mw00/project-maya/commit/c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc"
+    ],
+    "primary_refresh": "Pinned complete IQ source fetched through GitHub connector; local same-ref source supplied by ROOT. Full model/API v1.1.37 not needed or claimed reviewed."
+  },
+  "applicability": {
+    "IQ2_S_routed_tensors": 6144,
+    "layers": [
+      8,
+      10,
+      16,
+      17,
+      21,
+      22,
+      24,
+      25,
+      30,
+      32,
+      38,
+      39
+    ],
+    "hardware": "Two SM80 CMP170HX devices; selected pack contains IQ2_S despite IQ2_XS model name. Actual routed traffic and device residency per expert unmeasured.",
+    "mechanism": "IQ2_S codebook is 2048 uint32 words = 8192 bytes. A resident block loads it once and processes multiple original (row-block,expert-group) items, reducing repeated table loads. No dense Q5 speed/profile fraction transfers to this type."
+  },
+  "minimal_port": {
+    "scope": "IQ2_S type22 token/window gate_up and down only. Keep light prompt/set kernels, IQ1 types, all other quant types and old fallback kernels unchanged.",
+    "kernel_strategy": "Add separately named IQ2_S-only persistent kernels around the selected existing arithmetic bodies. Preserve row-to-warp/lane assignment, kb iteration, dp4a/sub_dot, fmaf, lanes_sum, swiglu and writes. Static stride over flattened work items, no atomics/work stealing. Preserve original <<<...>>> stream launches; no upstream PDL/fma_no_contract/EPI changes.",
+    "launch": "Explicit opt-in aliases STRATA_DS4_IQ_PERSIST then DS4_IQ_PERSIST; default OFF for this qualification. Accept only literal0/1, conflict rejected by config qualification. SM80+ guard, device-indexed per-specialization occupancy cap = min(items, SMcount*activeBlocksPerSM), fallback original kernels if query fails. Test-only override/reset/launch counters; production does not write counters.",
+    "files": "New candidate src/ds4/ds4_iq.cu/.cuh, shared pure launch-policy header and CPU test, correctness-only tests/ds4_gguf_test.cu with --iq2s-persist-check. No model/API/CPU-expert change.",
+    "excluded": [
+      "Held IMMA kernel/dispatch/counters",
+      "IQ1 code-table optimization",
+      "Light prompt persistent kernels",
+      "Q8_SHARE, head8, AVX512, per-device light scratch change",
+      "PDL, new restore/scheduler/protocol",
+      "Any cache policy/profile, placement, context, caps, sampler, image, ablation or DSpark change"
+    ]
+  },
+  "arithmetic_and_memory": {
+    "intended_order": "For each original work item, warp/lane and reduction order are unchanged. Upstream exactness comments are a claim to qualify, not proof for selected build.",
+    "shared_memory": "Gate-up 8192 + 2*NE*sizeof(int); down8192 + NE*sizeof(int), plus compiler padding. 256 threads (8warps), gate RW1/downRW2. Actual5120x2304 gate rows288blocks/group and down320blocks/group. No persistent VRAM/scratch added.",
+    "hazards": [
+      "A block must not overwrite shared es/xr until all warps complete previous item; first valid item codebook load must be fenced. Uniform group skipping and zero-live groups must not deadlock.",
+      "Dynamic *n_groups is device-resident; cap by host maximum; empty and overprovisioned groups must write nothing.",
+      "Per-specialization/device occupancy and changing devices/streams need distinct cached results; query failures must not admit unknown grid.",
+      "New kernel shape can change compiler register/spill choices despite unchanged arithmetic; validate exact GPU outputs and resources.",
+      "Changed timing may alter asynchronous expert-cache residency. Kernel exactness alone does not guarantee same whole-model sampled token path."
+    ]
+  },
+  "required_gates": [
+    "Manual all-source/test review, exact portable policy CPU proof both Mac and physical Ubuntu; no CUDA from CPU tests.",
+    "New selected-base build namespace; pin unchanged objects/toolchain/transitive dependencies, original92 relink control; compile only changed IQ/fixture and link. No bulk upgrade.",
+    "New separately admitted kernel window on each device: old fallback vs persistent exact bytes/finite values/canaries, token + grouped windows, NE1/4/8/16 boundaries, live groups zero/empty/tails, more work than resident grid, mixed/fallback types, real5120x2304 shape. Confirm persistent actually launched, not silent fallback.",
+    "Public GGUF integration/whole-model baseline and candidate fresh arms with identical1M/256K/images/ablation/Q8/mode1/chunk4096/CPU24/DSpark/sampler/seed; cache namespaces separated, positive drafts, state rewind/slot return, typed exact fixtures and all lifecycle exit/window/kernel/resource/public restore gates.",
+    "Freeze numerical and quality acceptance before data. No borrowed old tolerance or old failed-arm reuse; any unexpected numerical/path difference HOLD for review.",
+    "Only then distinct fixed-cap natural-stop decode panel and reversed confirmation; retain output lengths and common-prefix timing, client/prefill/draft/cache metrics; no speed inference from tensor count or upstream other-hardware claims."
+  ],
+  "state": "P/STATE selected_identity is current saved566f/native1853542; its production subobject is explicitly historical. Actual action-time fresh canonical guard remains required; no host observation performed here.",
+  "old_IMMA_gate": "HOLD_TOKEN_PATH_DIFFERS unchanged",
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/STATE.json": "eb7aa62db502fbee79799207142c5c3891110caaa447c2fae0b14b586824d2b4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/upstream-v1.1.37-FIRST.json": "5ba6531e289462b0b15292fe392161bf330362734454537242d54c04ad967006",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-pack-quant-inventory-FIRST.json": "55a170d4e8c2dc758f19fb21f4b36836b91b43036ddc213599954b5378011f07",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/upstream/ds4_iq.cu": "e33038018a87a31452de479ca0d51a9670c44a4e9c42b8c3d55a1d33f16a84f9",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/upstream/persist-default-commit.json": "2cb8c4c3b4f42366d8c5ca042dcc1df18896eff9a8cc337c3719ce205f3834b4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-base/src/ds4/ds4_iq.cu": "883cec5e4d26f37f61bf650fc3f123bf47d8bb456b84bedfbadb0152864b8234",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-base/src/ds4/ds4_iq.cuh": "0729227655e13d6406dc2a4b54b7ec4bdd2d864229f8c55cc3cb5efd9533ce01",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/cache-timing-source-astra-review.json": "6c5eaa496938cbc751a2ea6585752d9e8bdaa28d10f017e1204bfb3e1f251903"
+  }
+}

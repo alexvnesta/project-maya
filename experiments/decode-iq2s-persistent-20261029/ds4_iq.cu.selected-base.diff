@@ -1,0 +1,238 @@
+--- selected-base/src/ds4/ds4_iq.cu
++++ candidate/src/ds4/ds4_iq.cu
+@@ -1,6 +1,9 @@
+ // src/ds4/ds4_iq.cu - a GGUF's low-bit routed experts on the device (see ds4_iq.cuh).  The block layouts and grids are
+ // ggml's (ggml-common.h, MIT, third_party/ggml/LICENSE); the sign and grid tricks are llama.cpp's vecdotq.cuh.
+ #include "ds4_iq.cuh"
++#include "ds4_iq2s_persist_policy.hpp"
++#include <atomic>
++#include <climits>
+ 
+ #include <cuda_fp16.h>
+ #if !defined(STRATA_USE_HIP)
+@@ -664,6 +667,134 @@
+                     const float v = lanes_sum<RW>(ad[i]);
+                     if (lane == 0) a.part[(size_t) es[i] * a.n_embd + row] = v;
+                 }
++        }
++    }
++}
++
++// IQ2_S-only persistent variants. Original kernels above remain unchanged.
++template <int NE>
++__global__ void __launch_bounds__(kThreads) gate_up_kernel_persistent_iq2s(const Args a, int groups) {
++    constexpr int T = kIQ2_S, RP = 1, RW = kGuRW;
++    constexpr bool AH = false;
++    constexpr int LPR = 32 / RW;
++    __shared__ uint32_t tab[Ty<T>::TAB > 0 ? Ty<T>::TAB : 1];
++    __shared__ int es[NE], xr[NE];
++    const int lane32 = threadIdx.x & 31, lane = lane32 % LPR;
++    const size_t rb = row_bytes_t<T>(a.n_embd);
++    const int nsb = a.n_embd / 32;
++    const int nbx = a.n_ff / (kWarps * RW);
++    const int live = a.grp_ptr != nullptr ? min(groups, *a.n_groups) : groups;
++    const int items = live * nbx;
++    bool loaded = false;
++    for (long long it = blockIdx.x; it < items; it += gridDim.x) {
++        const int grp = (int) (it / nbx), bx = (int) (it % nbx);
++        const uint8_t* blob;
++        int m0, m1;
++        if (!group(a, grp, blob, m0, m1)) continue;
++        if (!loaded) { load_tab<T>(tab); loaded = true; }
++        for (int mm = m0; mm < m1; mm += NE) {
++            const int ne = min(NE, m1 - mm);
++            __syncthreads();
++            if ((int) threadIdx.x < ne) {
++                const int e = a.grp_ptr != nullptr ? a.grp_ent[mm + threadIdx.x] : mm + threadIdx.x;
++                es[threadIdx.x] = e;
++                xr[threadIdx.x] = a.grp_ptr != nullptr ? e >> 3 : 0;
++            }
++            __syncthreads();
++            for (int p = 0; p < RP; ++p) {
++                const int row = ((bx * RP + p) * kWarps + (threadIdx.x >> 5)) * RW + lane32 / LPR;
++                if (row >= a.n_ff) continue;   // (a whole warp: n_ff % (8 RW) == 0)
++                const uint8_t* g = blob + a.tr[0] + (size_t) row * rb;
++                const uint8_t* u = blob + a.tr[1] + (size_t) row * rb;
++                float ag[NE], au[NE];
++#pragma unroll
++                for (int i = 0; i < NE; ++i) ag[i] = au[i] = 0.0f;
++                Ahead<T, AH> pg, pu;
++                if (lane < nsb) pg.load(g, lane), pu.load(u, lane);
++                for (int kb = lane; kb < nsb; kb += LPR) {
++                    Ahead<T, AH> ng = pg, nu = pu;
++                    if (kb + LPR < nsb) ng.load(g, kb + LPR), nu.load(u, kb + LPR);
++                    Sub sg, su;
++                    pg.get(g, kb, tab, sg);
++                    pu.get(u, kb, tab, su);
++#pragma unroll
++                    for (int i = 0; i < NE; ++i)
++                        if (i < ne) {
++                            const int4* xp = (const int4*) (a.xq + (size_t) xr[i] * a.n_embd + (size_t) kb * 32);
++                            const int4 xa = xp[0], xb = xp[1];
++                            const float dx = a.xd[(size_t) xr[i] * nsb + kb];
++                            ag[i] = fmaf(dx, sub_dot<T>(sg, xa, xb), ag[i]);
++                            au[i] = fmaf(dx, sub_dot<T>(su, xa, xb), au[i]);
++                        }
++                    pg = ng;
++                    pu = nu;
++                }
++#pragma unroll
++                for (int i = 0; i < NE; ++i)
++                    if (i < ne) {
++                        const float gv = lanes_sum<RW>(ag[i]), uv = lanes_sum<RW>(au[i]);
++                        if (lane == 0) a.h[(size_t) es[i] * a.n_ff + row] = swiglu(gv, uv, a.limit);
++                    }
++            }
++        }
++    }
++}
++
++template <int NE>
++__global__ void __launch_bounds__(kThreads) down_kernel_persistent_iq2s(const Args a, int groups) {
++    constexpr int T = kIQ2_S, RP = 1, RW = kDnRW;
++    constexpr bool AH = false;
++    constexpr int LPR = 32 / RW;
++    __shared__ uint32_t tab[Ty<T>::TAB > 0 ? Ty<T>::TAB : 1];
++    __shared__ int es[NE];
++    const int lane32 = threadIdx.x & 31, lane = lane32 % LPR;
++    const size_t rb = row_bytes_t<T>(a.n_ff);
++    const int nsb = a.n_ff / 32;
++    const int nbx = a.n_embd / (kWarps * RW);
++    const int live = a.grp_ptr != nullptr ? min(groups, *a.n_groups) : groups;
++    const int items = live * nbx;
++    bool loaded = false;
++    for (long long it = blockIdx.x; it < items; it += gridDim.x) {
++        const int grp = (int) (it / nbx), bx = (int) (it % nbx);
++        const uint8_t* blob;
++        int m0, m1;
++        if (!group(a, grp, blob, m0, m1)) continue;
++        if (!loaded) { load_tab<T>(tab); loaded = true; }
++        for (int mm = m0; mm < m1; mm += NE) {
++            const int ne = min(NE, m1 - mm);
++            __syncthreads();
++            if ((int) threadIdx.x < ne) es[threadIdx.x] = a.grp_ptr != nullptr ? a.grp_ent[mm + threadIdx.x] : mm + threadIdx.x;
++            __syncthreads();
++            for (int p = 0; p < RP; ++p) {
++                const int row = ((bx * RP + p) * kWarps + (threadIdx.x >> 5)) * RW + lane32 / LPR;
++                if (row >= a.n_embd) continue;
++                const uint8_t* d = blob + a.tr[2] + (size_t) row * rb;
++                float ad[NE];
++#pragma unroll
++                for (int i = 0; i < NE; ++i) ad[i] = 0.0f;
++                Ahead<T, AH> pd;
++                if (lane < nsb) pd.load(d, lane);
++                for (int kb = lane; kb < nsb; kb += LPR) {
++                    Ahead<T, AH> nd = pd;
++                    if (kb + LPR < nsb) nd.load(d, kb + LPR);
++                    Sub sd;
++                    pd.get(d, kb, tab, sd);
++                    pd = nd;
++#pragma unroll
++                    for (int i = 0; i < NE; ++i)
++                        if (i < ne) {
++                            const int4* hp = (const int4*) (a.hq + (size_t) es[i] * a.n_ff + (size_t) kb * 32);
++                            const int4 ha = hp[0], hb = hp[1];
++                            ad[i] = fmaf(a.hd[(size_t) es[i] * nsb + kb], sub_dot<T>(sd, ha, hb), ad[i]);
++                        }
++                }
++#pragma unroll
++                for (int i = 0; i < NE; ++i)
++                    if (i < ne) {
++                        const float v = lanes_sum<RW>(ad[i]);
++                        if (lane == 0) a.part[(size_t) es[i] * a.n_embd + row] = v;
++                    }
++            }
+         }
+     }
+ }
+@@ -1092,9 +1223,64 @@
+     }();
+     return v;
+ }
++// Isolated opt-in token/window policy. No IQ1/light/IMMA or other upstream changes.
++std::atomic<int> g_iq2s_test_mode{-1};
++unsigned g_iq2s_test_cap = 0;  // test-only, single caller; production leaves mode -1
++Iq2sPersistTestCounts g_iq2s_counts{};
++bool iq2s_enabled() {
++    const int test = g_iq2s_test_mode.load(std::memory_order_relaxed);
++    if (test >= 0) return test == 1;
++    static const bool on = iq2s_policy::env_mode(std::getenv("STRATA_DS4_IQ_PERSIST"),
++                                                std::getenv("DS4_IQ_PERSIST")) == 1;
++    return on;
++}
++void iq2s_note(int kind) {
++    if (g_iq2s_test_mode.load(std::memory_order_relaxed) < 0) return;
++    if (kind == 0) ++g_iq2s_counts.gate;
++    else if (kind == 1) ++g_iq2s_counts.down;
++    else ++g_iq2s_counts.fallback;
++}
++// One process-wide dispatch receipt, never a throughput counter. Test overrides stay silent.
++void iq2s_production_notice(const char* kind, unsigned blocks) {
++    if (g_iq2s_test_mode.load(std::memory_order_relaxed) >= 0) return;
++    static std::atomic_flag once = ATOMIC_FLAG_INIT;
++    if (!once.test_and_set(std::memory_order_relaxed))
++        std::fprintf(stderr, "IQ2_S_PERSIST dispatch kind=%s blocks=%u\n", kind, blocks);
++}
++template <auto K>
++unsigned iq2s_grid(const Args& a, dim3 grid) {
++#if defined(STRATA_USE_HIP) || defined(MAYA_DS4_IQ_ONLY)
++    (void) a; (void) grid; return 0;
++#else
++    if (!iq2s_enabled()) return 0;
++    int dev = -1, major = 0;
++    if (cudaGetDevice(&dev) != cudaSuccess || dev < 0 || dev >= 64) { (void) cudaGetLastError(); return 0; }
++    static std::atomic<int> known[64]; // per kernel specialization and physical device; -1 query failed
++    int resident = known[dev].load(std::memory_order_relaxed);
++    if (resident == 0) {
++        int sms = 0, per = 0;
++        const bool ok = cudaDeviceGetAttribute(&major, cudaDevAttrComputeCapabilityMajor, dev) == cudaSuccess &&
++            major >= 8 && cudaDeviceGetAttribute(&sms, cudaDevAttrMultiProcessorCount, dev) == cudaSuccess &&
++            cudaOccupancyMaxActiveBlocksPerMultiprocessor(&per, K, kThreads, 0) == cudaSuccess;
++        resident = ok ? iq2s_policy::resident_blocks(sms, per) : 0;
++        if (resident <= 0) { (void) cudaGetLastError(); resident = -1; }
++        known[dev].store(resident, std::memory_order_relaxed);
++    }
++    if (!iq2s_policy::geometry(a.n_embd, a.n_ff, grid.y)) return 0;
++    const long long items = (long long) grid.x * grid.y;
++    const unsigned cap = g_iq2s_test_mode.load(std::memory_order_relaxed) >= 0 ? g_iq2s_test_cap : 0;
++    return iq2s_policy::grid_blocks(items, resident, cap);
++#endif
++}
++
+ // grid.x: the blocks of one pass (n / (kWarps RW))
+ template <int T, int NE>
+ void launch_gu(const Args& a, dim3 grid, cudaStream_t s) {
++    if constexpr (T == kIQ2_S) {
++        const unsigned blocks = iq2s_grid<gate_up_kernel_persistent_iq2s<NE>>(a, grid);
++        if (blocks) { iq2s_note(0); gate_up_kernel_persistent_iq2s<NE><<<blocks, kThreads, 0, s>>>(a, (int) grid.y); iq2s_production_notice("gate_up", blocks); return; }
++        iq2s_note(2);
++    }
+     if constexpr (T == kIQ1_S || T == kIQ1_M) {
+         const Iq1Var& v = iq1_var();
+         const bool rp = v.rp == 4 && grid.x % 4 == 0, ah = v.ah >= 0 ? v.ah != 0 : kAhead<T>;
+@@ -1107,6 +1293,11 @@
+ }
+ template <int T, int NE>
+ void launch_dn(const Args& a, dim3 grid, cudaStream_t s) {
++    if constexpr (T == kIQ2_S) {
++        const unsigned blocks = iq2s_grid<down_kernel_persistent_iq2s<NE>>(a, grid);
++        if (blocks) { iq2s_note(1); down_kernel_persistent_iq2s<NE><<<blocks, kThreads, 0, s>>>(a, (int) grid.y); iq2s_production_notice("down", blocks); return; }
++        iq2s_note(2);
++    }
+     if constexpr (T == kIQ1_S || T == kIQ1_M) {
+         const Iq1Var& v = iq1_var();
+         const bool rp = v.rp == 4 && grid.x % 4 == 0, ah = v.ah >= 0 ? v.ah != 0 : kAhead<T>;
+@@ -1222,6 +1413,13 @@
+ }
+ 
+ }  // namespace
++
++void set_iq2s_persist_for_test(int mode, unsigned block_cap) {
++    g_iq2s_test_cap = block_cap;
++    g_iq2s_counts = {};
++    g_iq2s_test_mode.store(mode < 0 ? -1 : mode == 1 ? 1 : 0, std::memory_order_relaxed);
++}
++Iq2sPersistTestCounts iq2s_persist_test_counts() { return g_iq2s_counts; }
+ 
+ bool supported(int t) { return block_bytes(t) > 0; }
+ 

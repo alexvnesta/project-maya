@@ -1,0 +1,85 @@
+{
+  "decision": "ACTUAL_PREPARE_INPUTS_REVIEWED_COMPILE_QUALIFICATION_JUSTIFIED_NOT_COMPILE_ADMISSION",
+  "discrepancies": [],
+  "actual_inputs": 489,
+  "actual_tools": 20,
+  "children": [
+    {
+      "name": "selected-relink",
+      "pid": 1980245,
+      "returncode": 0,
+      "dependency_count": 44,
+      "raw_dependency_names_match_saved_map": true
+    },
+    {
+      "name": "deps-iq",
+      "pid": 1980278,
+      "returncode": 0,
+      "dependency_count": 323,
+      "raw_dependency_names_match_saved_map": true
+    },
+    {
+      "name": "deps-test",
+      "pid": 1980324,
+      "returncode": 0,
+      "dependency_count": 292,
+      "raw_dependency_names_match_saved_map": true
+    }
+  ],
+  "original_selected_control_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "common_prior_input_hash_changes": {},
+  "tool_identities_unchanged": true,
+  "new_raw_input_names_and_hashes": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/candidate/src/ds4/ds4_iq.cu": "717b925659cf0c0212413e5c0ba7cdb40a2d7d9d79196dc1babd468b5d8e6d64",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/candidate/src/ds4/ds4_iq.cuh": "34a9755682ee0eed8f3383521b6bdfe0a66aa34c9348090ce228c81877ef1610",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/candidate/src/ds4/ds4_iq2s_persist_policy.hpp": "8d8d74977165eda350d8542207fd73228d8bae0a9e7855f34e09baf650116052",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/candidate/tests/../src/ds4/ds4_iq.cuh": "34a9755682ee0eed8f3383521b6bdfe0a66aa34c9348090ce228c81877ef1610",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/candidate/tests/../src/ds4/ds4_iq2s_persist_policy.hpp": "8d8d74977165eda350d8542207fd73228d8bae0a9e7855f34e09baf650116052",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/candidate/tests/ds4_gguf_test.cu": "daca15e6c37f45305399af3c9564502d063d13c35d07f31ff9f38c71d157bfd9"
+  },
+  "lexical_parent_aliases": {
+    "/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o": "75c40260f996747732aeaac415985947403f7992916bc5d35465e1f9e6c93082",
+    "/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o": "077ccb6c68db1794da3ee262c4a16a3c6f8e902845dd0829110ad4b7065e5aa3",
+    "/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o": "a2266079f95b84ccc2162ebbf279bcd78858a748aa1882e0bdb912316c76a58f",
+    "/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libc.so": "649e1aa91af2551216685f45effca270fcc09ef39e28acd4b22745f0ae77e7f2",
+    "/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libdl.a": "f0a17a43c74d2fe5474fa2fd29c8f14799e777d7d75a2cc4d11c20a6e7b161c5",
+    "/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libgcc_s.so.1": "9d339ecb409578d6a5d587e6c537a8f9589b8a13fefba30d167433a4b5758bee",
+    "/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so": "0789aa234121bb6b77f060e40577027323ae1e7531a430fe208d29e57a697e4a",
+    "/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libpthread.a": "f0a17a43c74d2fe5474fa2fd29c8f14799e777d7d75a2cc4d11c20a6e7b161c5",
+    "/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/librt.a": "f0a17a43c74d2fe5474fa2fd29c8f14799e777d7d75a2cc4d11c20a6e7b161c5",
+    "/home/alex/strata-deepseek-test-20261024/llama.cpp/ggml/src/../include/ggml.h": "12ee71f99db7db9b353bc02b1fbb57c344ee17c01ac5fb7952b41a637a747ea9",
+    "/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/include/../src/ds4/ds4_gguf.cuh": "1aab95ff58820ba9da9b05c1a056996df4d3442f1f5dfcbd65e8fbbc4578f34c",
+    "/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/include/../src/ds4/ds4_gguf_cpu.hpp": "a4a978f1d716596222daf97dbdb49a681c1cfcf9289a0365f49ac20f7861f267",
+    "/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/include/../src/ds4/ds4_kernels.cuh": "f0b40a200e54b818c4173305e50dad6201b2d538839ff17fbc7808ea7270ef78",
+    "/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/include/../src/ds4/ds4_pcie.cuh": "6e399f528b7398e4f59ddb1257c3c491f4caf57ce0635de17109697328170c2d",
+    "/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/include/../src/ds4/ds4_q6k.cuh": "07a319448e37cb4d8e056b8f12d784821c55f807dc637fb4a0ea71e56c937067",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/candidate/tests/../src/ds4/ds4_iq.cuh": "34a9755682ee0eed8f3383521b6bdfe0a66aa34c9348090ce228c81877ef1610",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/candidate/tests/../src/ds4/ds4_iq2s_persist_policy.hpp": "8d8d74977165eda350d8542207fd73228d8bae0a9e7855f34e09baf650116052"
+  },
+  "evidence_sha256": {
+    "prepare-FIRST/selected-relink-inputs.json": "5d1a0ec5b4ef3b222f090300fdd9f2ef872f86b8baaac0c22518d3e2bad32427",
+    "prepare-FIRST/plan.json": "f113f88a43432c727d916ec2b6c23ca8d829aafb756ba06db195fa8c9e2887ad",
+    "prepare-FIRST/deps-iq.json": "0a399e1c122a381db99a1b99f18fa698cc8b097b86cb100ef3ca04e83d1c7000",
+    "prepare-FIRST/deps-iq.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-test.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/selected-relink.link.d": "dfd5a23c5bc09ab491984df94c0cc506c842af2f9bc0c9f315c5d8b2c2bbd89b",
+    "prepare-FIRST/selected-relink.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-iq.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-test.json": "0742ed776c750b5db232ef6ca7240bc9ef3175b375ef2bb23e6b9c02d8e318be",
+    "prepare-FIRST/deps-test-inputs.json": "74a4d9a43c266882746aefba60cbb82fd11a4a3c1b50785f63c4422e3643a861",
+    "prepare-FIRST/selected-relink.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-test.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/iq.headers.d": "ec196b9c7110ed5b607c1a8e704fe35ad5c6e30c7f150ac0317cb819cf4b8a17",
+    "prepare-FIRST/selected-relink.json": "380d35b7428c618eaaafcce222d15db924bb52e35b7d3526b0ca788110de2b58",
+    "prepare-FIRST/deps-iq-inputs.json": "35b14d4313bd2d7f868894aead1f2d6057a2f4bf726bedfca29356fb5d9d3ec0",
+    "prepare-FIRST/test.headers.d": "a393a814a293bb9c7994f133a84c49ce8cbb92e9eec5490a981ed3781c54b9a0",
+    "prepare-FIRST/receipt.json": "4bb6856a97724200b7cfd8690779509ea1b54f744089d8fcae872604529033a8"
+  },
+  "prior_actual_inputs_sha256": "e5d2cf39632c2ea8465a63de7465c0e53c3aae67a1f8e29179eb015724e11ea4",
+  "source_CPU_review_sha256": "ad6e3d0504997174d7c7da2545e6ccf9f6d0b55c18e80ac82071143d0b26dc73",
+  "prepare_admission_sha256": "04bc5d7c4dbf076d18bef9a64aa8487a5e5b4a36e4144a416311c5f177220597",
+  "interpretation": "All three actual bounded children0 with empty stdout/stderr; actual .d raw names independently reconciled to44 linker/323 IQ/292 fixture dependencies. Full union489 and20 invoked/resolved tools. Only six new raw names: four new candidate files and two exact quoted-header aliases; all common prior hashes unchanged. Exact92 relink established by qualified controller receipt, no unchanged-source recompile equivalence claimed.",
+  "scope": "Read-only local receipts/data review. No compilation or binary execution by reviewer. No kernel/math/model/speed claim.",
+  "next_required": "Separately pinned compile qualification must include this actual receipt/input closure,20 tools,source/CPU/maps/all raw children and frozen proposed two nvcc-c plus two links. Fresh exact current owner/defaultidle/no phases/root132 guards before separate admission; new link dependencies fail closed.",
+  "old_IMMA_gate": "HOLD_TOKEN_PATH_DIFFERS unchanged"
+}

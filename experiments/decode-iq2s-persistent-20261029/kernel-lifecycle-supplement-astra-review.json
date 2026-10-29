@@ -1,0 +1,16 @@
+{
+  "decision": "KERNEL_PROOF_USABLE_AS_NUMERICAL_SOURCE_PREREQUISITE_WITH_EXPLICIT_API_EXIT_LIMITATION",
+  "utc": "2026-10-29T13:11:37.084272+00:00",
+  "arithmetic_kernel_result": "104 frozen cases passed; no replay needed to use this bounded arithmetic proof.",
+  "old_native_close0_independently_reviewed": true,
+  "old_API_stop_job_done_reviewed": true,
+  "old_API_process_ExecMainStatus0_independently_observed": false,
+  "private_API_server_in_kernel_phase": false,
+  "limitation": "The user-unit stop job completed; this is not an independent historical API process exit-status receipt. Replacement unit active/Restart=no cannot fill that missing historical field. No regrade or manufactured receipt.",
+  "new_numerical_requirement": "Prospective numerical caller must obtain stable bound old API inactive/MainPID0/ExecMainCode1/ExecMainStatus0/Resultsuccess plus exact native close0 BEFORE restoration, and private API/native/window exit0 afterward. Existing new runtime implements this stricter prospective gate. Kernel arithmetic proof may be pinned without claiming it met a nonapplicable private-API gate.",
+  "authority": "Source qualification only. Actual numerical CPU proof, concrete qualification and fresh separate arm admission remain required.",
+  "evidence_sha256": {
+    "kernel-old-owner-lifecycle-witness-FIRST.json": "5e89f7e985c72368f00b0540175685acea1ca0cb0f892cc724c7665e3fb400e3",
+    "kernel-result-astra-review.json": "423d814a7da6092a03d00bac8caeae00a870f25419d834c9fdc0ae235dfd88b2"
+  }
+}
