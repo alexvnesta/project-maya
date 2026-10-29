@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-B",
+    "-c",
+    "import json\nfrom pathlib import Path\nfrom iq2s_dependencies import controls\na=json.loads((Path('N0')/'terminal-audit.json').read_text())\nb=json.loads((Path('N1')/'terminal-audit.json').read_text())\nassert a['passed'] is True and b['passed'] is True\nprint(json.dumps(controls.compare_matched(a['rows'],b['rows']),sort_keys=True))\n"
+  ],
+  "pid": 2086379,
+  "returncode": 0,
+  "CPU_s": 30,
+  "wall_s": 90,
+  "nice": 15,
+  "CUDA_hidden": true,
+  "Linux_AS_MiB": 512,
+  "error": null,
+  "cleanup_errors": [],
+  "program_sha256": "7e4f8ec136db25d1251b5a219dbb6770efbc2758c377b41933f461b685a9f8c4",
+  "source_sha256": {
+    "iq2s_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+    "qualify_iq2s_numerical_cpu.py": "66f5e2b454739c5ac21d4d33b1925b8a71d9cfefe00c41f7aeee4c855dc85e95",
+    "../../model-v1/imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+    "../../model-v1/imma_config.py": "18691963f89027fd169877c0cd6307f54954de1353a577d4c8935c015ea84986",
+    "../../model-v1/imma_fixtures.py": "c70d008d3277166b8ff5276f22cb4547ab76a6688eab4647ff2d1a024ec89e4a",
+    "../../model-v1/imma_storage.py": "d03c8f6d69e198e648014b15a00a4a7c3dd986815dac4a391b747924239e0143"
+  },
+  "input_sha256": {
+    "N0/terminal-audit.json": "4a793c999370cef9d875edfe8056caad888904b4f99fe3d9c707d191b56a28c6",
+    "N1/terminal-audit.json": "2d200394641470c7190975aa4aabf5f49f5ef8dc05218a48529738a9ec02ca56"
+  },
+  "case_ids": [
+    "cold-text",
+    "rewind-text",
+    "two-images",
+    "restore-text"
+  ],
+  "native_or_GPU_execution": false
+}

@@ -1,0 +1,13 @@
+{
+  "model": "deepseek-v4.1-flash-iq2-xs",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Return exactly the text between the tags, excluding the tags. Add no punctuation or explanation.\n<answer>READY</answer>"
+    }
+  ],
+  "reasoning_effort": "none",
+  "temperature": 0,
+  "seed": 1,
+  "stream": true
+}
