@@ -1,0 +1,15 @@
+{
+  "utc_recorded": "2026-10-29T11:44:06.196524+00:00",
+  "status": "DEFERRED_BUSY_BEFORE_ALLOCATION_UNTOUCHED",
+  "qualification_sha256": "d2ea4a2417adc8f766f210ffb51bd23e5fb1e166a18472f32cefbbe814cdcc73",
+  "raw_error": "ValueError: DEFERRED_BUSY_UNTOUCHED_OR_STOP_OWNED_CHILD",
+  "raw_trace_location": "main()->execute()->guard()->host.idle; original full CLI traceback retained in chat tool receipt",
+  "main_q_verification_completed_before_second_execute_guard": true,
+  "output_leaf_created": false,
+  "CPU_reservation_claimed": false,
+  "tool_children_started": 0,
+  "GPU_model_service_action": false,
+  "not_fault_or_attempt": true,
+  "no_immediate_busy_poll": true,
+  "bounds_or_gate_relaxed": false
+}

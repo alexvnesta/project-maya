@@ -1,0 +1,57 @@
+{
+  "utc": "2026-10-29T11:35:13.439597+00:00",
+  "decision": "CONDITIONALLY_ADMIT_SINGLE_TWO_COMMAND_SYMBOL_INVENTORY_ONLY",
+  "qualification_sha256": "2b03353e3f88e5bb6fba39921c15ccd4c74125632ae046e5ba0434dde11a70b6",
+  "evidence_sha256": {
+    "qualification.json": "2b03353e3f88e5bb6fba39921c15ccd4c74125632ae046e5ba0434dde11a70b6",
+    "source-review-root.json": "aee3b5d9724dbef497fab8e613b7094abd8eb1d7b698f394b3590fa72ac0bf4f",
+    "source-astra-review.json": "b0395871a8a520e7923fc280ededf7a7f6bb3fa5bd9fef1f7bccd858ddab7fc0",
+    "static_diagnostic.py": "6215af10b05bb8b1078369928e6e00000d796e17d4f554d2e34763fef041d939",
+    "test_static_diagnostic.py": "2d83c3751f4cee7e60f223f34317243be44c9ccaa7b9cbfc34f75eaeaad85d4b",
+    "CPU-FIRST-darwin/receipt.json": "adf2ec3cb637ac4e90c9f8057cb218bb09d82f18e5485ae00c91f9fdd9140f64",
+    "CPU-FIRST-darwin/child.json": "8052632f788959d2eb64726ef0edbc29493b3e8efc773cdae513e02ad312b71c",
+    "CPU-FIRST-darwin/child.log": "ebf5c4b3d85469b9214972314ee76dce484fabea29d6a51d2312f1271fe8ad12",
+    "CPU-FIRST-linux/receipt.json": "adf2ec3cb637ac4e90c9f8057cb218bb09d82f18e5485ae00c91f9fdd9140f64",
+    "CPU-FIRST-linux/child.json": "3e9c05a7bff99b5421dec06f0e82994ff6474bf003e876967adc4849dd912650",
+    "CPU-FIRST-linux/child.log": "a288473bc190c7d65185cf8a3a3088456551d4f3d02f30268a236c9281f60341"
+  },
+  "source_sha256": {
+    "static_diagnostic.py": "6215af10b05bb8b1078369928e6e00000d796e17d4f554d2e34763fef041d939",
+    "test_static_diagnostic.py": "2d83c3751f4cee7e60f223f34317243be44c9ccaa7b9cbfc34f75eaeaad85d4b"
+  },
+  "CPU_review": {
+    "first_both_host_children_returncode": 0,
+    "exact_controls_each": 55,
+    "raw_log_ID_order_and_receipt_maps_match": true,
+    "payloads_identical": true,
+    "limits": "CPU30/wall90/nice15/CUDAhidden; LinuxAS512MiB",
+    "scope": "Mocked new-mode controls only, no actual tool outcome inferred."
+  },
+  "qualification_review": {
+    "file_pins": 1522,
+    "inherited_python_pins_unchanged": 1510,
+    "new2sources_reviews_sixrawproofs_verified_locally": true,
+    "actual_physical_rehash": "Required after fresh guard before claim; no remote access by reviewer."
+  },
+  "required_action_time_binding": {
+    "invocation": "566f3d34e59c43d29bb85c00e9854edd",
+    "main_pid": 1853509,
+    "native_pid": 1853542,
+    "native_start_ticks": 152326717
+  },
+  "commands_scope": "Exactly old-symbols then candidate-symbols: pinned cuobjdump --gpu-architecture sm_80 --dump-elf-symbols for the two fixed unchanged object paths. No arbitrary flags, ELF sections, SASS or resource dumps.",
+  "conditions": [
+    "Immediate fresh defaultDeepSeek/idle/no other build-private-pending-stopped phase, exact current566f/native1853542 binding, root>=132GiB, full current qualification/source and tool/object checks.",
+    "Own new symbol-inventory-v1/output-FIRST only; distinct cooperative STATIC_IQ_SYMBOL_INVENTORY_ONLY reservation, no overwrite/adoption.",
+    "Each serial child CPU30/LinuxAS512MiB/wall90/nice15/CUDAhidden; stdout64MiB/stderr1MiB, aggregate384MiB unchanged.",
+    "Any fault/busy/overflow/timeout: owned process-group cleanup and HOLD, no next child or retry; guarded post-custody, preserve original/secondary errors and foreign state.",
+    "Verify exact own reservation release and preserve raw first receipts. Both actual command results require subsequent independent review."
+  ],
+  "numerical_gate": "HOLD_TOKEN_PATH_DIFFERS",
+  "not_admitted": [
+    "Original whole-object SASS capture retry or cap relaxation.",
+    "Compiler, GPU/model/private window, services/restart, performance/promotion/replay.",
+    "Parser or semantic name normalization; equality or executable equivalence claims."
+  ],
+  "reviewer_actions": "Read raw logs/receipts/maps and wrote this local review; no reviewed module import, tests, remote/tool/service execution."
+}

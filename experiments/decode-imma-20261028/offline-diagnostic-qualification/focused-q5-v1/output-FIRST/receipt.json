@@ -1,0 +1,353 @@
+{
+  "status": "TWELVE_FOCUSED_Q5_CHILDREN_COMPLETE_UNINTERPRETED",
+  "children": [
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-sass",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi1EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o"
+      ],
+      "pid": 1960137,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 48931,
+        "stderr": 0
+      },
+      "aggregate_bytes": 48931,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-resource-usage",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi1EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o"
+      ],
+      "pid": 1960169,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 493,
+        "stderr": 0
+      },
+      "aggregate_bytes": 49424,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-sass",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi1EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o"
+      ],
+      "pid": 1960200,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 48935,
+        "stderr": 0
+      },
+      "aggregate_bytes": 98359,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-resource-usage",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi1EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o"
+      ],
+      "pid": 1960232,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 497,
+        "stderr": 0
+      },
+      "aggregate_bytes": 98856,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-sass",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi4EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o"
+      ],
+      "pid": 1960263,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 102499,
+        "stderr": 0
+      },
+      "aggregate_bytes": 201355,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-resource-usage",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi4EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o"
+      ],
+      "pid": 1960295,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 493,
+        "stderr": 0
+      },
+      "aggregate_bytes": 201848,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-sass",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi4EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o"
+      ],
+      "pid": 1960326,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 102503,
+        "stderr": 0
+      },
+      "aggregate_bytes": 304351,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-resource-usage",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi4EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o"
+      ],
+      "pid": 1960359,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 497,
+        "stderr": 0
+      },
+      "aggregate_bytes": 304848,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-sass",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi16EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o"
+      ],
+      "pid": 1960390,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 328868,
+        "stderr": 0
+      },
+      "aggregate_bytes": 633716,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-resource-usage",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi16EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o"
+      ],
+      "pid": 1960422,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 494,
+        "stderr": 0
+      },
+      "aggregate_bytes": 634210,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-sass",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi16EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o"
+      ],
+      "pid": 1960453,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 328872,
+        "stderr": 0
+      },
+      "aggregate_bytes": 963082,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-resource-usage",
+        "--function",
+        "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi16EEEvNS3_4JobsE",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o"
+      ],
+      "pid": 1960522,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 498,
+        "stderr": 0
+      },
+      "aggregate_bytes": 963580,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    }
+  ],
+  "qualification_sha256": "d2ea4a2417adc8f766f210ffb51bd23e5fb1e166a18472f32cefbbe814cdcc73",
+  "total_log_bytes": 963580,
+  "selected_binding": {
+    "invocation": "566f3d34e59c43d29bb85c00e9854edd",
+    "main_pid": 1853509,
+    "native_pid": 1853542,
+    "native_start_ticks": 152326717
+  },
+  "numerical_gate": "HOLD_TOKEN_PATH_DIFFERS",
+  "GPU_execution": false,
+  "compiler_execution": false,
+  "performance_admitted": false
+}

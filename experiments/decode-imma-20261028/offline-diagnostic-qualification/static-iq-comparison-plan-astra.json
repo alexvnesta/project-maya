@@ -1,0 +1,167 @@
+{
+  "utc": "2026-10-29T07:01:18.739631+00:00",
+  "decision": "STATIC_DIAGNOSTIC_PLAN_PREPARED_TOOL_IDENTITY_AND_RUNNER_REVIEW_REQUIRED",
+  "scope": "Retained original/new IQ object disassembly only. No compiler, linker, GPU, driver/model loading, service mutation or numerical-gate regrade. This is a prospective command contract, not proof of execution.",
+  "row1_review": {
+    "input_sha256": {
+      "offline-cold-row1-FIRST.json": "55c2211fc37121a8fea38a0128f00a7f3471c364e55b66a35edf023048b12cc4",
+      "offline-cold-row1-FIRST-child/child.json": "6bb7ef141634c123d19a3716373949556f8379f2fdec990f1152fc12967a6fdf",
+      "offline-cold-row1-FIRST-child/child.log": "72e337a095c2cf2e28a3b9681c18924bfd6b9e0d9902989e7720b2d99c047702",
+      "offline-first-rows-FIRST.json": "f93fcc06b65e023b6556e717c922f3cc2ed6111f6d8a1db0397637c295b3857a",
+      "N0/terminal-audit.json": "38ddffeb11a706bd70501a24cad3b95aaea043dbc8f4c63da7364f8e3d093bf3",
+      "N1/terminal-audit.json": "b0ea37f38e02e6421dbaf4fcd384faffdace18661b8dae7268b7641ecd2f3d31"
+    },
+    "child_exit0": true,
+    "same_helper_pinned_by_q": true,
+    "exact_pair_offset": 517120,
+    "exact_pair_bytes_each": 517120,
+    "same_first_token": 2581,
+    "byte_equal": true,
+    "slice_sha256": "556cdacf5e5a32d1babab23c3618f2b543d41011521ac6e07c6cae30f36aa4f1",
+    "RMS": 0,
+    "TV": 0,
+    "meaning": "First two identifiable target distributions match exactly. No assertion of later target rows, identical batch widths, hidden/KV/drafter states or sampling branches. Cold emitted divergence at index16 remains unexplained."
+  },
+  "rank": 1,
+  "objects": {
+    "old": {
+      "path": "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o",
+      "sha256": "b47a95712a6be578cc4afe3fc48db1e42db0c9bd8aad0b124029f91105202514"
+    },
+    "candidate": {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o",
+      "sha256": "19800554edcd3031e1876e335530d00693dd591844a87fa136a1f3bec8e85cfe"
+    }
+  },
+  "tool_contract": {
+    "invoked_path": "/usr/local/cuda/bin/cuobjdump",
+    "resolved_path": null,
+    "sha256": null,
+    "version": null,
+    "missing_identity_blocks_data_commands": true,
+    "discovery": "Parent may capture exact existing alias target/content hash then bounded --version and --help once; require matching installed CUDA13.3 documented capabilities. Do not assume alias resolves to previously pinned compiler directory, and do not install/change tools. Pin alias resolution/content before and after each data child.",
+    "why_new_pin": "PREPARE20 tool identities cover nvcc/ptxas/etc but not cuobjdump. Exact hash not known locally and deliberately not invented."
+  },
+  "official_reference": {
+    "url": "https://docs.nvidia.com/cuda/archive/13.3.0/cuda-binary-utilities/index.html",
+    "basis": "NVIDIA CUDA13.3 Binary Utilities documents cuobjdump accepting host object files and dumping SASS, resource usage and ELF sections, with sm_80 architecture selection. No cubin extraction or nvdisasm required for first pass."
+  },
+  "prospective_commands": [
+    {
+      "id": "old-sass",
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-sass",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o"
+      ],
+      "stdout": "old-sass.stdout",
+      "stderr": "old-sass.stderr"
+    },
+    {
+      "id": "old-resources",
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-resource-usage",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o"
+      ],
+      "stdout": "old-resources.stdout",
+      "stderr": "old-resources.stderr"
+    },
+    {
+      "id": "old-elf",
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-elf",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o"
+      ],
+      "stdout": "old-elf.stdout",
+      "stderr": "old-elf.stderr"
+    },
+    {
+      "id": "candidate-sass",
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-sass",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o"
+      ],
+      "stdout": "candidate-sass.stdout",
+      "stderr": "candidate-sass.stderr"
+    },
+    {
+      "id": "candidate-resources",
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-resource-usage",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o"
+      ],
+      "stdout": "candidate-resources.stdout",
+      "stderr": "candidate-resources.stderr"
+    },
+    {
+      "id": "candidate-elf",
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-elf",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o"
+      ],
+      "stdout": "candidate-elf.stdout",
+      "stderr": "candidate-elf.stderr"
+    }
+  ],
+  "runner_requirements": {
+    "serial_children": 1,
+    "CPU_seconds_per_child": 30,
+    "Linux_AS_MiB": 512,
+    "wall_seconds_per_child": 90,
+    "nice": 15,
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "stdout_and_stderr_separate": true,
+    "max_bytes_each_stdout": 67108864,
+    "max_bytes_each_stderr": 1048576,
+    "aggregate_output_ceiling_bytes": 402653184,
+    "fresh_output_leaf": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/static-iq-FIRST",
+    "no_inplace_output_or_overwrite": true,
+    "guard": "Before output/reservation and every child, fresh current canonical selected1853542/566f owner/idle/default/no phase/pending/build + root132; retain exact binding snapshot. Use already-qualified cooperative CPU reservation only if needed, ownPID release; never GPU lifetime lock or private maintenance window.",
+    "during_child": "Lightweight idle/phase/current-owner guard at existing supervisor interval; new user work or fault terminates only owned disassembler process group and preserves partial receipt. No native/user process signal.",
+    "checks": "Exact two object hashes and tool alias/resolved hash before/after each child. Preserve all argv/limits/stdout/stderr/rc and primary+cleanup errors. First timeout/overflow/parse fault HOLD; no silent limits relaxation, truncation or repeat."
+  },
+  "comparison_contract": {
+    "key": [
+      "arch=sm_80",
+      "exact mangled function name"
+    ],
+    "inventory": "Inventory all functions from both outputs, one unambiguous SM80 code image each; absent/duplicate image/function or missing matching resource record is INCOMPLETE/HOLD. Preserve old-only/new-only/common sets and all raw text. New-only names must reconcile to explicit new IMMA functions, never blanket-ignore unknown additions/removals.",
+    "first_pass": "Compare complete per-function SASS blocks and resource records exactly after only outer formatting/line-ending normalization. Retain instruction address, register operands, predicates, immediates, machine encodings/control words, stalls, barriers, branch targets and padding. No arithmetic/scheduling normalization.",
+    "ELF": "Bind text section sizes, symbols, relocations, referenced constant bytes and function metadata. Different whole-object/fatbin layout is expected and is not itself a changed kernel. Any relocation-address normalization must be a separately reviewed mapping to identical resolved symbols/addends; first pass should report rather than erase differences.",
+    "priority": "All common functions included; highlight original fallback Q5_K column1/4/16, activation quantizers and other IQ kernels actually retained by selected source. Names discovered from exact mangled inventory, not guessed or fuzzy matched.",
+    "outcomes": [
+      "COMMON_FUNCTION_SASS_AND_RESOURCES_IDENTICAL_WITH_RECORDED_ELF_SCOPE",
+      "COMMON_FUNCTION_DIFFERENCES_PRESENT_DIAGNOSTIC_ONLY",
+      "INCOMPLETE_OR_AMBIGUOUS_STATIC_COMPARISON_HOLD"
+    ],
+    "not_proven": "This cannot prove host dispatch equivalence, runtime numerical determinism, same inputs/batch shapes, absence of races or new IMMA correctness. Same SASS with different constant/relocation state is not executable equivalence. Differences do not themselves prove error."
+  },
+  "source_causal_conclusion": [
+    "Selected main andmodel were retained unchanged as old objects; only IQ translation unit was recompiled for candidate. Thus CUDA codegen changes in unchanged IQ functions are a useful distinct hypothesis.",
+    "N0 original-object control relink92 proves old object/link reproduction; it is not a recompile-original-IQ control. No such extra build/model trial is proposed here.",
+    "Same first two distributions and16 emitted tokens constrain the cold divergence, but do not locate first draft/proposal/confidence/batch-shape difference. Existing traces do not carry per-round drafts/width, so later flat-row comparisons stop.",
+    "Persistent RNG counter affects later requests; first cold starts counter0 in both. Distribution-preserving speculative sampling may use different acceptance/residual branches if drafts change. That does not meet frozen exact path gate."
+  ],
+  "unchanged_gate": "HOLD_TOKEN_PATH_DIFFERS",
+  "performance_or_promotion_admitted": false,
+  "reviewer_actions": "Local receipt/source review and report preparation plus official13.3 documentation lookup. No disassembler/compiler/test/native/remote execution."
+}

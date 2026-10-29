@@ -1,0 +1,18 @@
+--- /Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/focused-q5-v1/output-FIRST/old-q5-nc16-resources.stdout	2026-10-29 07:47:36
++++ /Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/focused-q5-v1/output-FIRST/candidate-q5-nc16-resources.stdout	2026-10-29 07:47:36
+@@ -6,7 +6,7 @@
+ host = linux
+ compile_size = 64bit
+ compressed
+-ptxasOptions = 
++ptxasOptions = -v  
+ 
+ Fatbin elf code:
+ ================
+@@ -18,5 +18,5 @@
+ Resource usage:
+  Common:
+   GLOBAL:26792 CONSTANT[4]:88
+- Function _ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi16EEEvNS3_4JobsE:
++ Function _ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi16EEEvNS3_4JobsE:
+   REG:58 STACK:0 SHARED:0 LOCAL:0 CONSTANT[2]:4 CONSTANT[0]:992 TEXTURE:0 SURFACE:0 SAMPLER:0
