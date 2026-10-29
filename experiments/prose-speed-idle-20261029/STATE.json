@@ -1,0 +1,33 @@
+{
+  "status": "P0_CLOSED_PROTECTIVE_YIELD_NO_QUALIFIED_PROSE_RATE_PENDING_NEW_IDLE_P1",
+  "CPU_qualified": true,
+  "GPU_or_model_run": true,
+  "production_changed": false,
+  "CPU_controls_each_host": 56,
+  "CPU_sources": 6,
+  "CPU_inputs": 992,
+  "qualification_sha256": "53b6521962e4522d31457dbe7aaecdf865f2193189a538b99b4716dfe8001afc",
+  "qualification_file_pins": 1650,
+  "model_or_GPU_run": true,
+  "prior_failed56proofs_each_host_preserved": true,
+  "prose_measured": false,
+  "qualified_prose_cases": 0,
+  "controller_exitcode": 0,
+  "selected_binding": {
+    "invocation": "f2b87ac5943049aca1ca6eff01607397",
+    "main_pid": 2427755,
+    "native_pid": 2427790,
+    "native_start_ticks": 156575799
+  },
+  "heartbeat": {
+    "id": "deepseek-idle-prose-speed-test",
+    "status": "ACTIVE",
+    "cadence_minutes": 10,
+    "same_chat": true,
+    "quiet_until_meaningful_change": true
+  },
+  "P0_closed": true,
+  "P0_replay_allowed": false,
+  "closeout_sha256": "9b688fba898520094342f29e04c49a4aa9f65765ad3e5d4e05c35830f8cfa081",
+  "pending_user_request": true
+}

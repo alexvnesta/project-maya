@@ -1,0 +1,104 @@
+{
+  "utc": "2026-10-29T19:52:54.164408+00:00",
+  "decision": "P0_EXPECTED_PROTECTIVE_YIELD_CLOSED_INCOMPLETE_NO_RATE_NO_RETRY",
+  "evidence_sha256": {
+    "P0-FIRST/attempt.json": "8c44891978c65a59248ee546ab0d2c356b82e89deda5dbe404ac39fc62c65fd4",
+    "P0-FIRST/expository-prose.json": "c7bbf4740a2d113602f3084f1a807c19f747d0b80addb4398ab371feca27f434",
+    "P0-FIRST/creative-prose.json": "0d66fc77935aa112c02392f5d7abe93aaf97b2388c3ed9f461ea2416d2dee945",
+    "P0-FIRST/controller-result.json": "d97685a8fd1bde656fd939d0485c09535c89c6cfc5959d8c0df7f6d68e08ea6c",
+    "prose_measure.py": "8d10d003bbbd7ffbb87251bacdf53d91af9f074151d34f06c957fa179f3108cf",
+    "transport.py": "cd026ab8cc86228500f606efb0913e55a63ba89b4e55fbfc33707b18c595bf37",
+    "qualification.json": "53b6521962e4522d31457dbe7aaecdf865f2193189a538b99b4716dfe8001afc",
+    "admission.json": "cae7a4ff6d871eeab55333647d993926bb9412dc5ce8d01397d99e831800fa06",
+    "CPU_V2_ASTRA_REVIEW.json": "2c1086bacde02c82306e4c9316b48ef503b88323554a38ea41206e39163c5be7"
+  },
+  "controller_pid": 2466570,
+  "selected_binding": {
+    "invocation": "f2b87ac5943049aca1ca6eff01607397",
+    "main_pid": 2427755,
+    "native_pid": 2427790,
+    "native_start_ticks": 156575799
+  },
+  "controller_evidence": {
+    "same_process_observed": true,
+    "native_restarts": 0,
+    "own_reservation_released": true,
+    "primary_error": null,
+    "reservation_release_error": null,
+    "post_owner_error": null,
+    "outer_exitcode_scope": "Parent reports exit0; saved controller-result has successful controller cleanup, not successful prose measurement."
+  },
+  "cases": [
+    {
+      "id": "expository-prose",
+      "status": "INCOMPLETE_HOLD_NO_RETRY",
+      "guard_error": "ValueError('FOREIGN_ROUTER_DEMAND')",
+      "own_socket_cancelled": true,
+      "own_reader_finished": true,
+      "reader_join_basis": "Pinned Stream.cancel joins its thread and raises if alive; cleanup_errors empty and partial.reader_finished true.",
+      "cleanup_errors": [],
+      "own_release_verified": false,
+      "unique_epoch_terminal_observed": true,
+      "qualified_metrics": null,
+      "manual_quality_passed": false
+    },
+    {
+      "id": "creative-prose",
+      "status": "UNRUN",
+      "retry_allowed": false
+    }
+  ],
+  "raw_SSE_review": {
+    "all_4518_lines_parsed_without_model_execution": true,
+    "single_chat_completion_ID": [
+      "chatcmpl-fa4fdf661e914ff6ad5febf1"
+    ],
+    "content_chars": 4022,
+    "reasoning_chars": 6548,
+    "assembly_equals_saved_partial": true,
+    "DONE_count": 0,
+    "finish_reasons": [],
+    "terminal_native_timings": [],
+    "interpretation": "Partial prose ends mid-explanation; no natural terminal completion, exact attributed native generation/decode counters or qualified speed. Partial bytes are not converted to a throughput claim."
+  },
+  "resources_reported": {
+    "root_free_bytes": 899310321664,
+    "swap_delta_bytes": 0,
+    "owned_log_bytes": 1534811
+  },
+  "source_classification": [
+    "FOREIGN_ROUTER_DEMAND originates in Epoch.safe router default/status/fault/inflight/waiting guard. Exception invokes only the Stream instance socket shutdown/close and reader join. There is no service stop/restart or shared/user cancellation call.",
+    "panel marks all later cases UNRUN after incomplete first case; P0 remains non-replayable because its exclusive output exists. Controller exit0 and summary manual-pending do not override case-level incomplete status.",
+    "Saved578 observations contain only redacted work IDs/state/aggregate counters; no shared user content/history was exported."
+  ],
+  "limitations": [
+    "Exact failing router values are not retained: epoch.safe(row) raises before observation append. The guard error is source-identifiable but its specific inflight/waiting/fault predicate cannot be reconstructed from saved snapshots.",
+    "Cleanup epoch terminal observation is a boolean without its raw snapshot. Own-reader join and reservation release are supported; attribution remains own_release_verified=false as required.",
+    "Pinned cancellation code acts only on its captured socket. Independent completion/cancellation status of the foreign user request and zero added latency are not established by these records.",
+    "No fresh remote verification by reviewer; parent final lightweight production receipt remains separate. No successful prose quality or timing result and no prior numerical-HOLD waiver."
+  ],
+  "prospective_P1_design_only": {
+    "status": "UNIMPLEMENTED_UNQUALIFIED_UNADMITTED",
+    "purpose": "Separate one-shot resumption of pending selected-hosted prose measurement; preserve closed P0 files, source, proof, admission and partial outcome byte-exact.",
+    "namespace": "New sibling prose-speed-p1-v1 with fresh P1-FIRST output, exact P1-specific qualification/admission/proof paths; no arbitrary repeat-count CLI or reopening P0.",
+    "minimal_source_delta": [
+      "Clone frozen six-file implementation into the separate namespace; only exact namespace/attempt/admission/proof names change, with all transport/limits/profile/fixture bytes preserved unless explicitly reviewed.",
+      "Retain already-redacted failure-trigger and cleanup observations before guard validation so cancellation reasons and epoch terminal evidence are auditable; no added endpoint, user content, protocol or sampling.",
+      "Update meaningful namespace/no-replay/custody tests and add failure-observation retention coverage; keep actual API own-cancel/user-not-cancelled/recovery controls."
+    ],
+    "qualification": [
+      "Manual full delta/source/test reads by Root and same reviewer, exact matching bounded CPU proof both physical hosts, inherited closure plus P0 closed evidence and unchanged literal/encoded fixtures.",
+      "Fresh exact selected binding, source/q, kernel, previous window, root, no phase and idle/default guards followed by separate P1-only admission. Busy produces no POST; user arrival yields again without automatic retry."
+    ],
+    "unchanged": [
+      "selected native92/configc43/chunk4096; context1048576/output262144/cap32768/effort100",
+      "two original synthetic prose prompts, observed length/no fitting, natural completion/manual quality",
+      "1000soft/200cleanup/1200overall; root132/120; swap<1GiB/log4GiB",
+      "best-effort own-socket cancellation, existing production lock observation, no restart/drain/second owner",
+      "prior numericalHOLD and no promotion/no candidate"
+    ],
+    "authorization_scope": "Parent identifies still-pending original user request; this source design report is not model admission and creates no automation."
+  },
+  "reviewer_model_test_remote_execution": false,
+  "source_edits": false
+}
