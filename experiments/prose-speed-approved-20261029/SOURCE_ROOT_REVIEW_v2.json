@@ -1,0 +1,23 @@
+{
+  "source_read": true,
+  "source_sha256": {
+    "approved.py": "76a955ec77effd615dadf8fc26696f65374d9538b1a626325dae4752d1fc9657",
+    "test_approved.py": "20292071e31c8884ca1ad957ab72a9eb5c8b5947d140808710612b9ad79e9ac7"
+  },
+  "test_ids": [
+    "test_approved.Contracts.test_claim_write_then_raise_releases_owned_record_and_checks_owner",
+    "test_approved.Contracts.test_complete_prose_keeps_full_answer_and_requires_manual_review",
+    "test_approved.Contracts.test_deadline_preserves_incomplete_no_extension",
+    "test_approved.Contracts.test_missing_done_length_boolean_and_nonfinite_counters_block",
+    "test_approved.Contracts.test_old_helpers_and_two_full_policy_fixtures_are_exact",
+    "test_approved.Contracts.test_owner_resource_fault_cancels_only_owned_socket",
+    "test_approved.Contracts.test_panel_preserves_remaining_UNRUN_after_failure",
+    "test_approved.Contracts.test_primary_and_release_failure_both_retained_owner_check_still_runs",
+    "test_approved.Contracts.test_rate_is_server_reported_not_recomputed_from_API_count",
+    "test_approved.Contracts.test_secondary_cleanup_failure_keeps_primary"
+  ],
+  "old_helpers_unchanged": true,
+  "user_override_foreign_demand_yield": true,
+  "prequalification_v1_not_used_as_current_proof": true,
+  "authorization": "Direct human: there is no work being done; I approve interrupting regardless. Complete one fresh selected-model prose panel, same quality/context/output."
+}
