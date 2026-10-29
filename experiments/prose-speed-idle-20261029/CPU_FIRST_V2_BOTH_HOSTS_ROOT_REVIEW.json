@@ -1,0 +1,70 @@
+{
+  "utc": "2026-10-29T19:41:55.759776+00:00",
+  "source_maps_exact": 6,
+  "input_maps_exact": 992,
+  "controls_each_physical_host": 56,
+  "test_IDs_exact": true,
+  "both_host_proof": {
+    "darwin": {
+      "child": {
+        "argv": [
+          "/opt/homebrew/opt/python@3.14/bin/python3.14",
+          "-B",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/prose-speed-v1/qualify_prose_cpu.py",
+          "--child"
+        ],
+        "pid": 23768,
+        "returncode": 0,
+        "CPU_s": 30,
+        "wall_s": 90,
+        "nice": 15,
+        "CUDA_hidden": true,
+        "Linux_AS_MiB": null,
+        "error": null,
+        "cleanup_errors": []
+      },
+      "raw_sha256": {
+        "child.json": "9dc59738fbb493dd0293b5718c33e857193720e8445952e55d29874cb5860ccd",
+        "child.log": "2ac59da841a9ccb2d1db4f81787aee57bc1275af733fa143c76c0b14e203129e",
+        "receipt.json": "b1b60b18295dfa8988c3c6c6059f07999ab053e87ea12df6564bd4414de56cf7",
+        "encoded-fixture.json": "c6f6410ca50b16dbda9341f765d6bbeaea86ec73ddbebf8085e58554e6e69ee9"
+      },
+      "prompt_tokens": [
+        169,
+        176
+      ]
+    },
+    "linux": {
+      "child": {
+        "argv": [
+          "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+          "-B",
+          "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/prose-speed-v1/qualify_prose_cpu.py",
+          "--child"
+        ],
+        "pid": 2462728,
+        "returncode": 0,
+        "CPU_s": 30,
+        "wall_s": 90,
+        "nice": 15,
+        "CUDA_hidden": true,
+        "Linux_AS_MiB": 512,
+        "error": null,
+        "cleanup_errors": []
+      },
+      "raw_sha256": {
+        "child.json": "cf4306356334cb4298874e7302b4d44c0062787aafcc494ae97abe8d3656c974",
+        "child.log": "eb4702fc14b7c448e65ce508fc57eeffcaeff2e263b35d8a637fe22822ce8f18",
+        "receipt.json": "b1b60b18295dfa8988c3c6c6059f07999ab053e87ea12df6564bd4414de56cf7",
+        "encoded-fixture.json": "c6f6410ca50b16dbda9341f765d6bbeaea86ec73ddbebf8085e58554e6e69ee9"
+      },
+      "prompt_tokens": [
+        169,
+        176
+      ]
+    }
+  },
+  "test_observer_v1_failures_preserved": true,
+  "model_or_GPU_admission": false,
+  "CPU_mock_model_rates_not_real_model_measurements": true
+}
