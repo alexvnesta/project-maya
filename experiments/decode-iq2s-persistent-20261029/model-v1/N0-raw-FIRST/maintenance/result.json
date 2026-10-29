@@ -1,0 +1,177 @@
+{
+  "utc": "2026-10-29 14:15:51 UTC",
+  "mode": "numerical",
+  "arm": "N0",
+  "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-iq2s-numerical-N0-20261029T141551Z",
+  "proof_path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-iq2s-numerical-N0-20261029T141551Z/proof.json",
+  "qualification_sha256": "11deaac7b10b7d53bd988acff210136b5e2107d533d1a13e28c315037810113e",
+  "running_status": "IQ2S_NUMERICAL_PRIVATE_RUNNING",
+  "complete_status": "IQ2S_NUMERICAL_COMPLETE_SELECTED4096_RESTORED",
+  "completion_scope": "Four full-cap natural numerical state paths only; no speed/general quality/promotion claim",
+  "status": "IQ2S_NUMERICAL_COMPLETE_SELECTED4096_RESTORED",
+  "window": "/home/alex/strata-deepseek-test-20261024/windows/20261029T141654Z.json",
+  "verified": {
+    "passed": true,
+    "selected_identity": {
+      "native_pid": 2026722,
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+      "context": 1048576,
+      "output_default": 262144,
+      "prompt_skip_mode": 1,
+      "prefill_chunk": 4096,
+      "Q8": [
+        1,
+        1
+      ],
+      "TP": 1,
+      "images": true,
+      "runtime_ablation": true,
+      "DSpark": true,
+      "CPU_experts": 4045,
+      "all_CPU_experts_RAM": true,
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.32,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2026
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.86,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2030
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "GPU_expert_slots_inferred": 11315,
+      "GPU_slots_direct_hosted_INFO": false,
+      "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+      "start_binding": {
+        "invocation": "bd93fdcd3807416891d063db6cf4498c",
+        "main_pid": 2026683,
+        "native_pid": 2026722,
+        "native_start_ticks": 155216304
+      },
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+    },
+    "public": {
+      "unauthenticated_models": 401,
+      "authenticated_models": 200,
+      "SSE_done": true,
+      "finish": "stop",
+      "known_answer_passed": true,
+      "content": "READY"
+    },
+    "health": {
+      "status": "ok",
+      "max_context": 1048576,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "images": true,
+      "api_key": false,
+      "image_generation": false,
+      "loaded": true,
+      "service": "strata",
+      "busy": false,
+      "switcher": {
+        "active_model": "deepseek",
+        "inflight": 0,
+        "waiting": 0,
+        "nondefault_idle_seconds": 900.0,
+        "default_model": "deepseek",
+        "fault": null
+      }
+    }
+  },
+  "scope": "Four full-cap natural numerical state paths only; no speed/general quality/promotion claim",
+  "controller_pid": 2021715,
+  "start_binding": {
+    "invocation": "bd93fdcd3807416891d063db6cf4498c",
+    "main_pid": 2026683,
+    "native_pid": 2026722,
+    "native_start_ticks": 155216304
+  },
+  "kernel_since": "2026-10-29 14:15:51 UTC",
+  "start_command_cleanup_error": null,
+  "selected_identity": {
+    "native_pid": 2026722,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "bd93fdcd3807416891d063db6cf4498c",
+      "main_pid": 2026683,
+      "native_pid": 2026722,
+      "native_start_ticks": 155216304
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  }
+}
