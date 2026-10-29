@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "controls": 8,
+  "test_ids": [
+    "test_approved.Contracts.test_complete_prose_keeps_full_answer_and_requires_manual_review",
+    "test_approved.Contracts.test_deadline_preserves_incomplete_no_extension",
+    "test_approved.Contracts.test_missing_done_length_boolean_and_nonfinite_counters_block",
+    "test_approved.Contracts.test_old_helpers_and_two_full_policy_fixtures_are_exact",
+    "test_approved.Contracts.test_owner_resource_fault_cancels_only_owned_socket",
+    "test_approved.Contracts.test_panel_preserves_remaining_UNRUN_after_failure",
+    "test_approved.Contracts.test_rate_is_server_reported_not_recomputed_from_API_count",
+    "test_approved.Contracts.test_secondary_cleanup_failure_keeps_primary"
+  ],
+  "source_sha256": {
+    "approved.py": "b4ed98c2b3cbbf60cb2fe0cf33d41abb88d4743988372cf5890743fe35a71acb",
+    "test_approved.py": "90a7a722698d48066a84c82abfcff62ab8a34b9b70fd888472bfa9f9c96bf0eb"
+  },
+  "input_sha256": {
+    "decode-optimization-20261028/prose-speed-approved-v1/approved.py": "b4ed98c2b3cbbf60cb2fe0cf33d41abb88d4743988372cf5890743fe35a71acb",
+    "decode-optimization-20261028/prose-speed-approved-v1/test_approved.py": "90a7a722698d48066a84c82abfcff62ab8a34b9b70fd888472bfa9f9c96bf0eb",
+    "decode-optimization-20261028/prose-speed-approved-v1/SOURCE_ROOT_REVIEW.json": "4f179ebcaa9692a2e86c6b85b95fe5e08c48e06b6603b6921ac7abf8b3ff8256",
+    "decode-optimization-20261028/prose-speed-v1/transport.py": "cd026ab8cc86228500f606efb0913e55a63ba89b4e55fbfc33707b18c595bf37",
+    "decode-optimization-20261028/prose-speed-v1/prose_measure.py": "8d10d003bbbd7ffbb87251bacdf53d91af9f074151d34f06c957fa179f3108cf",
+    "decode-optimization-20261028/prose-speed-v1/prose-fixtures.json": "8039ba7415335710ab481c5cd29f3c2c1bffb19b223d83ec586baf759a336faf",
+    "decode-optimization-20261028/prose-speed-v1/qualify_prose_cpu.py": "321cc064bc2790c067797e2333b100ae4d4f55b9d9593ca76f9eb71c09e32d15",
+    "decode-optimization-20261028/prose-speed-v1/CPU_V2_ASTRA_REVIEW.json": "2c1086bacde02c82306e4c9316b48ef503b88323554a38ea41206e39163c5be7",
+    "decode-optimization-20261028/prose-speed-v1/qualification.json": "53b6521962e4522d31457dbe7aaecdf865f2193189a538b99b4716dfe8001afc"
+  }
+}

@@ -1,0 +1,26 @@
+import sys,os,json,hashlib,subprocess,time
+from pathlib import Path
+base=Path('/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025') if sys.platform=='darwin' else Path('/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025')
+P=base/'decode-optimization-20261028/prose-speed-approved-v1';O=P.parent/'prose-speed-v1'
+sys.path.insert(0,str(O));import qualify_prose_cpu as d
+if sys.platform=='linux':
+ _,r,a,h,b=d.c.support();d.c.guard(r,h,b)
+review=json.loads((P/'SOURCE_ROOT_REVIEW.json').read_text());sources={n:d.c.sha(P/n)for n in ('approved.py','test_approved.py')};assert sources==review['source_sha256']
+deps={str(p.relative_to(base)):d.c.sha(p)for p in [P/'approved.py',P/'test_approved.py',P/'SOURCE_ROOT_REVIEW.json',O/'transport.py',O/'prose_measure.py',O/'prose-fixtures.json',O/'qualify_prose_cpu.py',O/'CPU_V2_ASTRA_REVIEW.json',O/'qualification.json']}
+out=P/('CPU-FIRST-'+sys.platform);assert not out.exists();out.mkdir()
+worker="import unittest,json,sys;from pathlib import Path;import approved as a\ns=unittest.defaultTestLoader.loadTestsFromName('test_approved');ids=[x.id()for group in s for x in group];r=unittest.TextTestRunner(verbosity=2).run(s);data={'passed':r.wasSuccessful(),'controls':r.testsRun,'test_ids':ids,'source_sha256':"+repr(sources)+",'input_sha256':"+repr(deps)+"};Path("+repr(str(out/'receipt.json'))+").write_text(json.dumps(data,indent=2)+'\\n');sys.exit(0 if r.wasSuccessful() else 1)"
+env=dict(os.environ,CUDA_VISIBLE_DEVICES='',OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',MALLOC_ARENA_MAX='1',PYTHONDONTWRITEBYTECODE='1')
+error=None;cleanup=[];proc=None
+with(out/'child.log').open('x')as log:
+ try:
+  proc=subprocess.Popen([sys.executable,'-B','-c',worker],cwd=P,env=env,preexec_fn=d.limits,start_new_session=True,stdout=log,stderr=subprocess.STDOUT)
+  proc.wait(timeout=90)
+ except BaseException as exc:
+  error=repr(exc)
+  if proc:cleanup=d.cleanup_child(proc)
+data={'pid':proc.pid if proc else None,'returncode':proc.returncode if proc else None,'CPU_s':30,'wall_s':90,'nice':15,'CUDA_hidden':True,'Linux_AS_MiB':512 if sys.platform=='linux' else None,'error':error,'cleanup_errors':cleanup}
+(out/'child.json').write_text(json.dumps(data,indent=2)+'\n')
+assert data['returncode']==0 and error is None and not cleanup,data
+assert sources=={n:d.c.sha(P/n)for n in sources}
+assert deps=={n:d.c.sha(base/n)for n in deps}
+print(json.dumps({'host':sys.platform,'passed':True,'pid':data['pid'],'sources':2,'inputs':len(deps),'controls':8}))

@@ -1,0 +1,145 @@
+{
+  "utc": "2026-10-29T20:20:21.350177+00:00",
+  "decision": "P1_TWO_NATURAL_PROSE_RESPONSES_REVIEWED_DESCRIPTIVE_RATES_ONLY",
+  "evidence_sha256": {
+    "P1-FIRST/attempt.json": "4510213e0c8242ccc49a5c8c64b15c7a4e33138164fc2cc1b5ff8283fa1993b1",
+    "P1-FIRST/expository-prose.json": "95b94e93c7cbd33660fd96939e45069fa4cd4e315a2f50a6af753f9f561a8da8",
+    "P1-FIRST/creative-prose.json": "8e786f01a2f31d05722b24efde036fc56370cd9ed232d9099e1df3474179dc93",
+    "P1-FIRST/summary.json": "b5ad5fd0d69e363ba223ef8853d0d728dd2dd4b89ba4f077e655841fe6455b3c",
+    "P1-FIRST/cleanup.json": "a059258439dee765d1cf6487da53d6744e63e132cdd1ba3b2805afd20c9abb5f",
+    "approved.py": "76a955ec77effd615dadf8fc26696f65374d9538b1a626325dae4752d1fc9657",
+    "test_approved.py": "20292071e31c8884ca1ad957ab72a9eb5c8b5947d140808710612b9ad79e9ac7",
+    "qualification.json": "84208bd83fab1605cc05d3cf87b6992a6c39fd45061baeb07f1100b927af47ea",
+    "admission.json": "b0ab9600f8c388e2edd0f7a7c051bf12705366684ea3a94d44df55b645bcffba",
+    "CPU_Q_ASTRA_REVIEW.json": "5454acbc1cf63e903c229278d3dc8d739dcb8367868055779444f366c434c5b4",
+    "../prose-speed-v1/prose-fixtures.json": "8039ba7415335710ab481c5cd29f3c2c1bffb19b223d83ec586baf759a336faf",
+    "../prose-speed-v1/transport.py": "cd026ab8cc86228500f606efb0913e55a63ba89b4e55fbfc33707b18c595bf37",
+    "FINAL_PRODUCTION_OBSERVATION.json": "e6f17762f784b074038490da504a1bdb08dc4baf7ffa22dd60b9aef7424d3a73"
+  },
+  "cases": [
+    {
+      "id": "expository-prose",
+      "server_reported_rounded_native_tokens_per_second": 43.0,
+      "API_completion_tokens": 5463,
+      "exact_native_generated_tokens": null,
+      "decode_ms_rounded": 127157.6,
+      "prefill_ms_rounded": 47.4,
+      "prompt_total": 169,
+      "prompt_read": 1,
+      "cache_tokens": 168,
+      "drafts_offered": 3692,
+      "drafts_accepted": 2868,
+      "client_full_seconds": 127.21113708801568,
+      "buffered_first_visible_seconds": 108.23706545191817,
+      "true_TTFT": null,
+      "visible_words": 931,
+      "content_chars": 5401,
+      "reasoning_chars": 20376,
+      "natural_stop": true,
+      "DONE_count": 1,
+      "raw_SSE_lines": 10930,
+      "JSON_events": 5463,
+      "single_own_completion_id": "chatcmpl-cabcd06a6d8b4f12951d21e5",
+      "all_SSE_reconstruction_and_counter_checks_passed": true,
+      "full_content_and_reasoning_manually_read": true,
+      "bounded_manual_task_compliance": true,
+      "raw_status_preserved": "COMPLETE_MANUAL_REVIEW_PENDING",
+      "raw_manual_quality_passed_preserved": false
+    },
+    {
+      "id": "creative-prose",
+      "server_reported_rounded_native_tokens_per_second": 46.2,
+      "API_completion_tokens": 10532,
+      "exact_native_generated_tokens": null,
+      "decode_ms_rounded": 227734.1,
+      "prefill_ms_rounded": 2368.9,
+      "prompt_total": 176,
+      "prompt_read": 176,
+      "cache_tokens": 0,
+      "drafts_offered": 6968,
+      "drafts_accepted": 5974,
+      "client_full_seconds": 230.10821306705475,
+      "buffered_first_visible_seconds": 206.65427116700448,
+      "true_TTFT": null,
+      "visible_words": 998,
+      "content_chars": 5551,
+      "reasoning_chars": 35347,
+      "natural_stop": true,
+      "DONE_count": 1,
+      "raw_SSE_lines": 21068,
+      "JSON_events": 10532,
+      "single_own_completion_id": "chatcmpl-0c47f9d968114e65a5eb23cd",
+      "all_SSE_reconstruction_and_counter_checks_passed": true,
+      "full_content_and_reasoning_manually_read": true,
+      "bounded_manual_task_compliance": true,
+      "raw_status_preserved": "COMPLETE_MANUAL_REVIEW_PENDING",
+      "raw_manual_quality_passed_preserved": false
+    }
+  ],
+  "manual_quality_findings": {
+    "expository-prose": "931 whitespace-delimited words; continuous paragraphs; correctly explains key/value bucket lookup, chaining, load factor/resizing, expected versus worst-case lookup and explicitly fictional cedar/maple/pine assignments. Required final sentence exact. Conventional simplifications: hash/key-comparison costs assume bounded key size; resizing can reuse stored hash values rather than obligatorily recomputing the hash function. No substantive failure of this general-reader task.",
+    "creative-prose": "998 whitespace-delimited words; complete realistic coastal Mara/Ilan clock-repair story, preservation/replacement disagreement, sensory detail and dialogue, mutual changed understanding and a resolved council compromise. No literal magic/sudden disaster/headings/lists/writing commentary in visible answer; exact final sentence. Mechanical clock details are fictional narrative, not independently validated repair advice.",
+    "reasoning": "Entire20376/35347-character reasoning read, including recovered truncated counting passage. Contains planning, repeated drafts and word counts; not treated as user-visible prose quality or visible-answer speed."
+  },
+  "lifecycle": {
+    "controller_pid": 2476430,
+    "selected_binding": {
+      "invocation": "f2b87ac5943049aca1ca6eff01607397",
+      "main_pid": 2427755,
+      "native_pid": 2427790,
+      "native_start_ticks": 156575799
+    },
+    "same_binding_as_admission_and_attempt": true,
+    "native_restarts": 0,
+    "settings_changed": false,
+    "cleanup": {
+      "primary_error": null,
+      "release_error": null,
+      "owner_error": null,
+      "retry": false
+    },
+    "basis": "Pinned with_custody records primary/release/owner errors separately; all null. Exact own reservation release and host binding guard returned. Outer process exit0 reported by parent; raw cleanup and summary independently checked.",
+    "normal_FIFO": true,
+    "explicit_user_interrupt_permission": true
+  },
+  "resources": {
+    "reported_final": {
+      "root_free_bytes": 899301068800,
+      "swap_delta_bytes": 0,
+      "owned_log_bytes": 6691199
+    },
+    "root_final_GiB": 837.5393867492676,
+    "local_five_raw_JSON_bytes": 13895009,
+    "scope": "Reported final snapshot and successful source runtime guards, not an independently sampled minimum/root trajectory."
+  },
+  "interpretation": [
+    "43.0/46.2 are each request server-reported rounded native decode rates including reasoning. They are not visible-only prose rates or independently recovered exact native token counts.",
+    "Full client times127.211/230.108seconds include any ordinary FIFO waiting; first visible content108.237/206.654seconds is buffered first-visible timing, not true native TTFT.",
+    "Expository prompt is warm:168of169tokens reused. Creative prompt is cold:0of176reused. Do not call both cold or compare their differing tasks/lengths/reasoning as a kernel effect.",
+    "Only two synthetic short prompts and naturally completed outputs under original32768request cap. Preserved1Mcontext/256Koutput configuration does not demonstrate near-full capacity or broad quality/performance.",
+    "No candidate comparison, throughput improvement, deployment qualification or old numerical-HOLD waiver. Closed incomplete P0 remains unchanged; this separate P1 has its own authorization and evidence."
+  ],
+  "raw_artifacts_modified": false,
+  "reviewer_test_model_remote_execution": false,
+  "further_model_requests_admitted": false,
+  "final_production_closure": {
+    "receipt_observed_UTC": "2026-10-29T20:19:23.840688+00:00",
+    "same_binding_and_exact_attempt_nonce_record": true,
+    "selected_native_pid": 2427790,
+    "selected_api_ready": {
+      "id": "9008ae63768a475d964a9608f8edd110",
+      "state": "ready"
+    },
+    "default_DeepSeek": true,
+    "native_work_queue_reserved_zero": true,
+    "router_inflight_waiting_zero": true,
+    "both_existing_units_active_Restart_no": true,
+    "phases_free": true,
+    "own_reservation_released": true,
+    "exact_config_flags_exe_cgroup_sole_owner_guard_reported": true,
+    "kernel_clean_since_reported": "2026-10-29 20:01:00 UTC",
+    "kernel_result": null,
+    "root_GiB": 837.5326614379883,
+    "review_scope": "Independent local receipt reconciliation against attempt/admission/source; no reviewer remote poll. kernel_result null is the recorded guard return, not raw kernel log content."
+  }
+}

@@ -1,0 +1,20 @@
+# Selected-hosted prose speed, October 29
+
+A distinct P1 panel completed two synthetic writing requests on the existing selected native92/configc43/chunk4096 process. Alex explicitly authorized finishing despite competing demand. Requests used the existing API FIFO; no service or model restart, candidate deployment, or setting change occurred. The earlier protective-yield P0 remains closed incomplete and unchanged.
+
+| Sample | Server-reported native generation tok/s | API completion tokens | Prose words | Full client seconds | Cached prompt tokens |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Expository hash-table explanation | 43.0 | 5463 | 931 | 127.211 | 168 |
+| Creative coastal-clock story | 46.2 | 10532 | 998 | 230.108 | 0 |
+
+Rates are the server native counter rounded to0.1 and include reasoning. API token counts are retained separately; exact native generated counts are unavailable. These samples do not establish prose generation in the50s. They are two different prompts with different generated lengths, not a controlled cold-prefill comparison, replication, general writing-speed guarantee, visible-only rate, true TTFT, p95 or causal optimization result. Reasoning was fully enabled at effort100 with the unchanged unlimited reasoning budget convention. Stream0 buffers visible output.
+
+Both responses naturally stopped with exactly one DONE marker. Their own SSE reconstructs all retained content and reasoning, terminal usage and timing fields. ROOT and the same Astra independently read the complete generated prose and reasoning and assessed bounded fixture compliance. Expository explains buckets, hashing, chaining, load factor, resizing and expected versus worst-case lookup using the requested invented assignments. Creative follows Mara and Ilan through a realistic clock repair and preservation disagreement with a complete ending. Both meet800–1000 words and their exact required final sentence. This is no broad quality or literary-ranking claim. Raw COMPLETE_MANUAL_REVIEW_PENDING records remain verbatim; reviews are separate.
+
+The selected native92/configc43 model and quality profile,1048576 TOTAL context,262144 output allowance, images,Q8/check1/1,mode1,L22/all40 projection,unchanged drafter,DSpark.65,TP1/automatic19–21,24CPU,allCPUexpertsRAM,stream0 and chunk4096 remain. The benchmark retained max_tokens32768 rather than reducing that cap. No near-filled1M or full256K generation bound is proved. All older cache namespaces and prior candidate HOLDs remain intact.
+
+Before P1, ROOT and the same Astra fully read new source/tests. FIRST10 bounded controls per physical Mac/Ubuntu passed with matching2-source/9-input maps and10 IDs. The reviewed first draft's lifecycle blocker and its earlier Mac8-control proof remain preserved; neither was used as current qualification. Corrected v2 proof paths are distinct. New qualification84208bd8 contains1664 file pins plus self; actual1665 checks and separate b0ab9600 admission preceded P1.
+
+The SSH/controller returned0, cleanup reports no primary/release/owner error, and its cooperative reservation was released. Final20:19:23UTC read-only verification bound the same f2b87ac5 invocation/native2427790, exact config/flags/executable/cgroup and sole GPU owner, active Restart=no units, ready/default DeepSeek,zero queued/active/reserved inference,no phase,and clean kernel since20:01UTC. No extra inference,restart or hash sweep was used for closure. Raw resource evidence shows zero swap delta and root free above the120GiB runtime floor. The idle prose heartbeat was deleted when Alex authorized the interactive completion; no new follow-up remains.
+
+The original workspace paths referenced by qualified source and inputs remain required. This archive is provenance, not an installer. It includes only owned synthetic fixtures/results, code, non-secret receipts and reviews; no model weights, native binaries, cache, user workloads, images or credentials. See ARCHIVE_MANIFEST.json for byte-exact source mapping.

@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "controls_each_host": 10,
+  "source_maps": 2,
+  "input_maps": 9,
+  "hosts": {
+    "darwin": {
+      "pid": 38510,
+      "returncode": 0,
+      "source_sha256": {
+        "approved.py": "76a955ec77effd615dadf8fc26696f65374d9538b1a626325dae4752d1fc9657",
+        "test_approved.py": "20292071e31c8884ca1ad957ab72a9eb5c8b5947d140808710612b9ad79e9ac7"
+      },
+      "input_sha256": {
+        "decode-optimization-20261028/prose-speed-approved-v1/approved.py": "76a955ec77effd615dadf8fc26696f65374d9538b1a626325dae4752d1fc9657",
+        "decode-optimization-20261028/prose-speed-approved-v1/test_approved.py": "20292071e31c8884ca1ad957ab72a9eb5c8b5947d140808710612b9ad79e9ac7",
+        "decode-optimization-20261028/prose-speed-approved-v1/SOURCE_ROOT_REVIEW_v2.json": "3a9db0808086c46dd5a1273d9c7da419b4bfe494218ab0f6046549231389e371",
+        "decode-optimization-20261028/prose-speed-v1/transport.py": "cd026ab8cc86228500f606efb0913e55a63ba89b4e55fbfc33707b18c595bf37",
+        "decode-optimization-20261028/prose-speed-v1/prose_measure.py": "8d10d003bbbd7ffbb87251bacdf53d91af9f074151d34f06c957fa179f3108cf",
+        "decode-optimization-20261028/prose-speed-v1/prose-fixtures.json": "8039ba7415335710ab481c5cd29f3c2c1bffb19b223d83ec586baf759a336faf",
+        "decode-optimization-20261028/prose-speed-v1/qualify_prose_cpu.py": "321cc064bc2790c067797e2333b100ae4d4f55b9d9593ca76f9eb71c09e32d15",
+        "decode-optimization-20261028/prose-speed-v1/CPU_V2_ASTRA_REVIEW.json": "2c1086bacde02c82306e4c9316b48ef503b88323554a38ea41206e39163c5be7",
+        "decode-optimization-20261028/prose-speed-v1/qualification.json": "53b6521962e4522d31457dbe7aaecdf865f2193189a538b99b4716dfe8001afc"
+      },
+      "test_ids": [
+        "test_approved.Contracts.test_claim_write_then_raise_releases_owned_record_and_checks_owner",
+        "test_approved.Contracts.test_complete_prose_keeps_full_answer_and_requires_manual_review",
+        "test_approved.Contracts.test_deadline_preserves_incomplete_no_extension",
+        "test_approved.Contracts.test_missing_done_length_boolean_and_nonfinite_counters_block",
+        "test_approved.Contracts.test_old_helpers_and_two_full_policy_fixtures_are_exact",
+        "test_approved.Contracts.test_owner_resource_fault_cancels_only_owned_socket",
+        "test_approved.Contracts.test_panel_preserves_remaining_UNRUN_after_failure",
+        "test_approved.Contracts.test_primary_and_release_failure_both_retained_owner_check_still_runs",
+        "test_approved.Contracts.test_rate_is_server_reported_not_recomputed_from_API_count",
+        "test_approved.Contracts.test_secondary_cleanup_failure_keeps_primary"
+      ],
+      "raw_sha256": {
+        "child.json": "ba09679b32ebd994741b2f478fc7f134b3e3fba729b8b8e4585265f563d28a58",
+        "receipt.json": "c343272cba6d73638b681e8cf54f8a4aea9ec3bf21e33115d6abe089cc13d2a8",
+        "child.log": "d12f032ee8afdb280bfa44279f96034885a5ea1cb45a627e2a340393392ce149"
+      }
+    },
+    "linux": {
+      "pid": 2475086,
+      "returncode": 0,
+      "source_sha256": {
+        "approved.py": "76a955ec77effd615dadf8fc26696f65374d9538b1a626325dae4752d1fc9657",
+        "test_approved.py": "20292071e31c8884ca1ad957ab72a9eb5c8b5947d140808710612b9ad79e9ac7"
+      },
+      "input_sha256": {
+        "decode-optimization-20261028/prose-speed-approved-v1/approved.py": "76a955ec77effd615dadf8fc26696f65374d9538b1a626325dae4752d1fc9657",
+        "decode-optimization-20261028/prose-speed-approved-v1/test_approved.py": "20292071e31c8884ca1ad957ab72a9eb5c8b5947d140808710612b9ad79e9ac7",
+        "decode-optimization-20261028/prose-speed-approved-v1/SOURCE_ROOT_REVIEW_v2.json": "3a9db0808086c46dd5a1273d9c7da419b4bfe494218ab0f6046549231389e371",
+        "decode-optimization-20261028/prose-speed-v1/transport.py": "cd026ab8cc86228500f606efb0913e55a63ba89b4e55fbfc33707b18c595bf37",
+        "decode-optimization-20261028/prose-speed-v1/prose_measure.py": "8d10d003bbbd7ffbb87251bacdf53d91af9f074151d34f06c957fa179f3108cf",
+        "decode-optimization-20261028/prose-speed-v1/prose-fixtures.json": "8039ba7415335710ab481c5cd29f3c2c1bffb19b223d83ec586baf759a336faf",
+        "decode-optimization-20261028/prose-speed-v1/qualify_prose_cpu.py": "321cc064bc2790c067797e2333b100ae4d4f55b9d9593ca76f9eb71c09e32d15",
+        "decode-optimization-20261028/prose-speed-v1/CPU_V2_ASTRA_REVIEW.json": "2c1086bacde02c82306e4c9316b48ef503b88323554a38ea41206e39163c5be7",
+        "decode-optimization-20261028/prose-speed-v1/qualification.json": "53b6521962e4522d31457dbe7aaecdf865f2193189a538b99b4716dfe8001afc"
+      },
+      "test_ids": [
+        "test_approved.Contracts.test_claim_write_then_raise_releases_owned_record_and_checks_owner",
+        "test_approved.Contracts.test_complete_prose_keeps_full_answer_and_requires_manual_review",
+        "test_approved.Contracts.test_deadline_preserves_incomplete_no_extension",
+        "test_approved.Contracts.test_missing_done_length_boolean_and_nonfinite_counters_block",
+        "test_approved.Contracts.test_old_helpers_and_two_full_policy_fixtures_are_exact",
+        "test_approved.Contracts.test_owner_resource_fault_cancels_only_owned_socket",
+        "test_approved.Contracts.test_panel_preserves_remaining_UNRUN_after_failure",
+        "test_approved.Contracts.test_primary_and_release_failure_both_retained_owner_check_still_runs",
+        "test_approved.Contracts.test_rate_is_server_reported_not_recomputed_from_API_count",
+        "test_approved.Contracts.test_secondary_cleanup_failure_keeps_primary"
+      ],
+      "raw_sha256": {
+        "child.json": "28c528c52f52998401adc91bfc7474239a313e4794a0475b33908ee5ed21ddba",
+        "receipt.json": "c343272cba6d73638b681e8cf54f8a4aea9ec3bf21e33115d6abe089cc13d2a8",
+        "child.log": "5b46792bde9f12b70f6c8ddd1067211d99e16662bb29c03ae614823a5d757d0c"
+      }
+    }
+  },
+  "model_execution": false,
+  "old_transport_CPU56_proofs_unchanged": true
+}

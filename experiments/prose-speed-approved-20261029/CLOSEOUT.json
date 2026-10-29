@@ -1,0 +1,48 @@
+{
+  "status": "COMPLETE_TWO_REVIEWED_PROSE_SAMPLES",
+  "time_UTC": "2026-10-29T20:21:36.834292+00:00",
+  "scope": "APPROVED_SELECTED_PROSE_P1",
+  "rates_including_reasoning_tok_s": {
+    "expository-prose": 43.0,
+    "creative-prose": 46.2
+  },
+  "rate_precision": "server-rounded native rate to0.1",
+  "reviewed_task_compliance": true,
+  "source_quality_profile_context_output_limits_changed": false,
+  "total_context": 1048576,
+  "output_allowance": 262144,
+  "benchmark_max_tokens": 32768,
+  "effort": 100,
+  "native_restarts": 0,
+  "retry": false,
+  "controller_exit_code": 0,
+  "start_binding": {
+    "invocation": "f2b87ac5943049aca1ca6eff01607397",
+    "main_pid": 2427755,
+    "native_pid": 2427790,
+    "native_start_ticks": 156575799
+  },
+  "selected_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "selected_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "candidate_promoted": false,
+  "previous_P0": "CLOSED_INCOMPLETE_UNCHANGED",
+  "previous_IQ2_numerical_HOLD": "PRESERVED",
+  "automation": "deepseek-idle-prose-speed-test deleted in this turn; no new follow-up",
+  "evidence_sha256": {
+    "P1_RESULT_ROOT_REVIEW.json": "57d27c6f04505c1da0c979cd5f58dfbfb7040461143368751f9263e0808937dd",
+    "P1_RESULT_ASTRA_REVIEW.json": "5d629bf78e6a31c7fd3929797514c475cffc72c9e59c2ccdfb50b0e5cee6e6a9",
+    "FINAL_PRODUCTION_OBSERVATION.json": "e6f17762f784b074038490da504a1bdb08dc4baf7ffa22dd60b9aef7424d3a73",
+    "EXECUTION_RECEIPT.json": "702f37e4ca8197b7f9220688a31ced58bffe29a356f3fc4378c46cd0cdc6c91a",
+    "P1-FIRST/summary.json": "b5ad5fd0d69e363ba223ef8853d0d728dd2dd4b89ba4f077e655841fe6455b3c",
+    "P1-FIRST/cleanup.json": "a059258439dee765d1cf6487da53d6744e63e132cdd1ba3b2805afd20c9abb5f",
+    "qualification.json": "84208bd83fab1605cc05d3cf87b6992a6c39fd45061baeb07f1100b927af47ea",
+    "admission.json": "b0ab9600f8c388e2edd0f7a7c051bf12705366684ea3a94d44df55b645bcffba"
+  },
+  "limitations": [
+    "Only two samples; no replication/statistical/p95 or general prose-speed claim.",
+    "Expository reused168 prompt tokens; creative reused0. No cold-prefill comparison.",
+    "No visible-only token rate or true TTFT; stream0 is buffered.",
+    "No near-filled1M or full256K generation bound proved.",
+    "No decode candidate promotion or causal speedup claim."
+  ]
+}

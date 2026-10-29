@@ -1,0 +1,26 @@
+{
+  "published": {
+    "closeout": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/prose-speed-approved-v1/CLOSEOUT.json",
+    "closeout_sha256": "5d8e18a56272039ec4a7c7ae9445f664806b09d5ebd881704a4d45d94e3f815c",
+    "heartbeat_deleted": true,
+    "old_P0_unchanged": true,
+    "rates_including_reasoning_tok_s": {
+      "creative-prose": 46.2,
+      "expository-prose": 43.0
+    },
+    "selected_binding": {
+      "invocation": "f2b87ac5943049aca1ca6eff01607397",
+      "main_pid": 2427755,
+      "native_pid": 2427790,
+      "native_start_ticks": 156575799
+    },
+    "status": "COMPLETE_TWO_REVIEWED_PROSE_SAMPLES"
+  },
+  "first_metadata_attempt": {
+    "exit_code": 1,
+    "error": "FileExistsError: exclusive emit refused existing canonical STATE",
+    "canonical_state_changed": false,
+    "model_inference": false
+  },
+  "corrected_publication": "Existing qualified compare-and-swap state writer; no model retry"
+}

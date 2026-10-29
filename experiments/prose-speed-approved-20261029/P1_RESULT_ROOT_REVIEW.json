@@ -1,0 +1,79 @@
+{
+  "reviewer": "ROOT",
+  "time_UTC": "2026-10-29T20:20:23.032335+00:00",
+  "status": "PASS_BOUNDED_PROSE_PANEL",
+  "rows": {
+    "expository-prose": {
+      "source_sha256": "95b94e93c7cbd33660fd96939e45069fa4cd4e315a2f50a6af753f9f561a8da8",
+      "entire_content_and_reasoning_manually_read": true,
+      "bounded_prompt_compliance": true,
+      "word_count": 931,
+      "required_last_sentence_passed": true,
+      "SSE_content_equal": true,
+      "SSE_reasoning_equal": true,
+      "one_natural_stop_and_DONE": true,
+      "terminal_usage_equal": true,
+      "terminal_timing_equal": true,
+      "completion_below_benchmarkcap": true,
+      "metrics": {
+        "server_reported_rounded_native_tokens_per_second": 43.0,
+        "rate_scope": "Server native counter rate rounded to0.1; includes reasoning",
+        "API_generated_tokens": 5463,
+        "exact_native_generated_tokens": null,
+        "decode_ms_rounded": 127157.6,
+        "prefill_ms_rounded": 47.4,
+        "prompt_read": 1,
+        "cache_tokens": 168,
+        "drafts_offered": 3692,
+        "drafts_accepted": 2868,
+        "client_full_seconds": 127.21113708801568,
+        "true_TTFT": null,
+        "exact_expert_hits": null,
+        "exact_expert_lookups": null
+      }
+    },
+    "creative-prose": {
+      "source_sha256": "8e786f01a2f31d05722b24efde036fc56370cd9ed232d9099e1df3474179dc93",
+      "entire_content_and_reasoning_manually_read": true,
+      "bounded_prompt_compliance": true,
+      "word_count": 998,
+      "required_last_sentence_passed": true,
+      "SSE_content_equal": true,
+      "SSE_reasoning_equal": true,
+      "one_natural_stop_and_DONE": true,
+      "terminal_usage_equal": true,
+      "terminal_timing_equal": true,
+      "completion_below_benchmarkcap": true,
+      "metrics": {
+        "server_reported_rounded_native_tokens_per_second": 46.2,
+        "rate_scope": "Server native counter rate rounded to0.1; includes reasoning",
+        "API_generated_tokens": 10532,
+        "exact_native_generated_tokens": null,
+        "decode_ms_rounded": 227734.1,
+        "prefill_ms_rounded": 2368.9,
+        "prompt_read": 176,
+        "cache_tokens": 0,
+        "drafts_offered": 6968,
+        "drafts_accepted": 5974,
+        "client_full_seconds": 230.10821306705475,
+        "true_TTFT": null,
+        "exact_expert_hits": null,
+        "exact_expert_lookups": null
+      }
+    }
+  },
+  "quality_scope": "Manual compliance for these two synthetic writing tasks only; no general quality or literary ranking. Hashing-cost and clock-mechanism descriptions are ordinary didactic/fictional simplifications.",
+  "rate_scope": "Server-reported native generation rate rounded to0.1 including reasoning. API counts are retained separately; exact native generated counts unavailable.",
+  "P0": "Original cancelled P0 remains incomplete/ungraded; no replay/regrade",
+  "source_and_settings_unchanged": true,
+  "cleanup_sha256": "a059258439dee765d1cf6487da53d6744e63e132cdd1ba3b2805afd20c9abb5f",
+  "final_observation_sha256": "e6f17762f784b074038490da504a1bdb08dc4baf7ffa22dd60b9aef7424d3a73",
+  "raw_statuses_unchanged": true,
+  "limitations": [
+    "Only two samples; no replication/statistical/p95 or general prose-speed claim.",
+    "Expository reused168 prompt tokens; creative reused0. No cold-prefill comparison.",
+    "No visible-only token rate or true TTFT; stream0 is buffered.",
+    "No near-filled1M or full256K generation bound proved.",
+    "No decode candidate promotion or causal speedup claim."
+  ]
+}

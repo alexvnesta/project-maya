@@ -1,0 +1,92 @@
+{
+  "utc": "2026-10-29T20:10:53.906327+00:00",
+  "decision": "FIRST_V2_BOTH_HOST_CPU_AND_QUALIFICATION_CONFIRMED",
+  "source_sha256": {
+    "approved.py": "76a955ec77effd615dadf8fc26696f65374d9538b1a626325dae4752d1fc9657",
+    "test_approved.py": "20292071e31c8884ca1ad957ab72a9eb5c8b5947d140808710612b9ad79e9ac7"
+  },
+  "test_ids": [
+    "test_approved.Contracts.test_claim_write_then_raise_releases_owned_record_and_checks_owner",
+    "test_approved.Contracts.test_complete_prose_keeps_full_answer_and_requires_manual_review",
+    "test_approved.Contracts.test_deadline_preserves_incomplete_no_extension",
+    "test_approved.Contracts.test_missing_done_length_boolean_and_nonfinite_counters_block",
+    "test_approved.Contracts.test_old_helpers_and_two_full_policy_fixtures_are_exact",
+    "test_approved.Contracts.test_owner_resource_fault_cancels_only_owned_socket",
+    "test_approved.Contracts.test_panel_preserves_remaining_UNRUN_after_failure",
+    "test_approved.Contracts.test_primary_and_release_failure_both_retained_owner_check_still_runs",
+    "test_approved.Contracts.test_rate_is_server_reported_not_recomputed_from_API_count",
+    "test_approved.Contracts.test_secondary_cleanup_failure_keeps_primary"
+  ],
+  "qualification_sha256": "84208bd83fab1605cc05d3cf87b6992a6c39fd45061baeb07f1100b927af47ea",
+  "file_pins": 1664,
+  "source_import_closure": "All1650 inherited pins unchanged, plus14 exact new artifacts; oldq53b link retained. Canonical absolute keys, no changed inherited digest.",
+  "evidence_sha256": {
+    "qualification.json": "84208bd83fab1605cc05d3cf87b6992a6c39fd45061baeb07f1100b927af47ea",
+    "SOURCE_ASTRA_REVIEW_v2.json": "ef09db908abac9e2416fb5dbcf4df2e94da21fb568f58bf180223666fe328415",
+    "SOURCE_ROOT_REVIEW_v2.json": "3a9db0808086c46dd5a1273d9c7da419b4bfe494218ab0f6046549231389e371",
+    "CPU_BOTH_ROOT_REVIEW.json": "32f683d77560765759f2a54aaccab4e2c9eeca1b447a03aabb4af15e80dc8f77",
+    "CPU_PROGRAM_v2.txt": "ce7e966c8c3eadecd395c6e24fc07dc268dab3c67080e929c6c48040b58fc341",
+    "authorization.json": "cf30de0ae29ce7f42ebc9227f551a36f375413792a0054277a5ec5983a2f6dc7",
+    "CPU-v2-darwin/receipt.json": "c343272cba6d73638b681e8cf54f8a4aea9ec3bf21e33115d6abe089cc13d2a8",
+    "CPU-v2-darwin/child.json": "ba09679b32ebd994741b2f478fc7f134b3e3fba729b8b8e4585265f563d28a58",
+    "CPU-v2-darwin/child.log": "d12f032ee8afdb280bfa44279f96034885a5ea1cb45a627e2a340393392ce149",
+    "CPU-v2-linux/receipt.json": "c343272cba6d73638b681e8cf54f8a4aea9ec3bf21e33115d6abe089cc13d2a8",
+    "CPU-v2-linux/child.json": "28c528c52f52998401adc91bfc7474239a313e4794a0475b33908ee5ed21ddba",
+    "CPU-v2-linux/child.log": "5b46792bde9f12b70f6c8ddd1067211d99e16662bb29c03ae614823a5d757d0c"
+  },
+  "hosts": {
+    "darwin": {
+      "child": {
+        "pid": 38510,
+        "returncode": 0,
+        "CPU_s": 30,
+        "wall_s": 90,
+        "nice": 15,
+        "CUDA_hidden": true,
+        "Linux_AS_MiB": null,
+        "error": null,
+        "cleanup_errors": []
+      },
+      "raw_SHA256": {
+        "child.json": "ba09679b32ebd994741b2f478fc7f134b3e3fba729b8b8e4585265f563d28a58",
+        "receipt.json": "c343272cba6d73638b681e8cf54f8a4aea9ec3bf21e33115d6abe089cc13d2a8",
+        "child.log": "d12f032ee8afdb280bfa44279f96034885a5ea1cb45a627e2a340393392ce149"
+      },
+      "ordered_IDs_match": true,
+      "sources_match": 2,
+      "inputs_match": 9
+    },
+    "linux": {
+      "child": {
+        "pid": 2475086,
+        "returncode": 0,
+        "CPU_s": 30,
+        "wall_s": 90,
+        "nice": 15,
+        "CUDA_hidden": true,
+        "Linux_AS_MiB": 512,
+        "error": null,
+        "cleanup_errors": []
+      },
+      "raw_SHA256": {
+        "child.json": "28c528c52f52998401adc91bfc7474239a313e4794a0475b33908ee5ed21ddba",
+        "receipt.json": "c343272cba6d73638b681e8cf54f8a4aea9ec3bf21e33115d6abe089cc13d2a8",
+        "child.log": "5b46792bde9f12b70f6c8ddd1067211d99e16662bb29c03ae614823a5d757d0c"
+      },
+      "ordered_IDs_match": true,
+      "sources_match": 2,
+      "inputs_match": 9
+    }
+  },
+  "raw_review": "Both full child logs show all10 exact ordered controls OK. Receipts identical. All9 inputs match current local bytes and prospective canonical qualification pins. Actual bounded mock tests only; no model generated.",
+  "source_review": "Full corrected2sources previously read; unchanged exact helper/API/fixture source and original56 actual API/socket proof remain separately pinned. Explicit human interruption authorization independently matches parent instruction.",
+  "findings": [],
+  "limitations": [
+    "Wrapper10control proof is separate from inherited actual API56 controls, not a re-run or broader integration claim.",
+    "Earlier prequalification-v1 Mac8 pass remains historical and unqualified; old P0 remains incomplete.",
+    "Qualification file-map review is local. Actual1664file+qself checks and fresh selected owner/root/kernel/previous-window/no-conflicting-phase checks remain mandatory before requests.",
+    "Rounded own-SSE server native rate only, API count separate; exact native generation count/true TTFT/expert hit counts unavailable. Prose quality and results require subsequent full raw review."
+  ],
+  "model_admission_in_this_report": false,
+  "reviewer_test_model_remote_execution": false
+}
