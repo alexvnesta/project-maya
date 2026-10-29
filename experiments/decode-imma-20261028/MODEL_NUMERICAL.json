@@ -1,0 +1,232 @@
+{
+  "observed_utc": "2026-10-29T06:51:27.345953+00:00",
+  "stage": "MODEL_NUMERICAL_TOKEN_PATH_HOLD_SPEED_UNRUN_NOT_PROMOTED",
+  "model_qualification": {
+    "new_CPU_controls_each_host": 90,
+    "new_source_files": 8,
+    "exact_source_input_maps": 898,
+    "matching_both_host_source_and_test_IDs": true,
+    "unchanged_component_controls_each_host": 63,
+    "Darwin_component_original_failure_preserved": "Linux-specific RLIM_INFINITY test mock;61 unchanged original passes plus FIRST2 corrected tests; LinuxFIRST63 passed. Native policy unchanged.",
+    "qualification_sha256": "6eb179b8b7edb7a87133c4e24bd99dc2f35863cfe6ef56f8385590bf50c6315b",
+    "actual_file_pins_plus_self_before_each_arm": 1669,
+    "source_sha256": {
+      "imma_model_runtime.py": "157b7750a2da5d495c08ece100d19432d48fe52aeaac9e982a63762dd742425e",
+      "test_imma_model_runtime.py": "2da6161c216cfbc63d08429697fed0b0664ab01caf659544d3bbc6074c10df14",
+      "imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+      "test_imma_numeric_controls.py": "0263512984c58029c1db0edfa30d756d3ee7a09d85eb3f4a6d6f3bc65a3cbd4a",
+      "imma_numerical.py": "d1368ace203e76147bbeafa13806956cae06df8add87ae9d5fbde60ac0b8bde5",
+      "imma_numerical_audit.py": "e7a12f92624e741f498b6f77319e1205cf9baf41215efd20d0ee5a56b2fec41b",
+      "test_imma_numerical.py": "bbaf853ec5597da946ce4d1e0102a3f1e67a6aa750474434998d1fbdd519db3c",
+      "qualify_numerical_cpu.py": "5bbcf41e6d932542e1cdf99caf1b64e02352458b6355e6f9d7457c6555a027f0"
+    }
+  },
+  "arms": [
+    {
+      "id": "N0",
+      "factor": "native92/IMMA0",
+      "native_pid": 1836317,
+      "API_pid": 1836291,
+      "window": "20261029T054409Z.json",
+      "native_API_window_exit0": true,
+      "all_four_answers_typed_correct_and_natural_stop": true,
+      "all_finite_dump_rows": 654,
+      "cases": [
+        {
+          "id": "cold-text",
+          "generated": 196,
+          "reused": 0,
+          "drafts_accepted": 139,
+          "drafts_offered": 157,
+          "logit_rows": 214,
+          "logit_bytes": 110663680,
+          "logits_sha256": "1b074089abccba832573557d96953bf155831c14e2cdc4f5a6d1a0c050393957"
+        },
+        {
+          "id": "rewind-text",
+          "generated": 156,
+          "reused": 8465,
+          "drafts_accepted": 118,
+          "drafts_offered": 128,
+          "logit_rows": 166,
+          "logit_bytes": 85841920,
+          "logits_sha256": "2df565f6c19f42775da1e065c21beba9041c59d43b2f19449cdf1a995c7db25f"
+        },
+        {
+          "id": "two-images",
+          "generated": 69,
+          "reused": 0,
+          "drafts_accepted": 40,
+          "drafts_offered": 47,
+          "logit_rows": 77,
+          "logit_bytes": 39818240,
+          "logits_sha256": "3dd253bc1490ddec189cc422851a638884fe113de66fae1ae536bcc1b11df93f"
+        },
+        {
+          "id": "restore-text",
+          "generated": 180,
+          "reused": 8465,
+          "drafts_accepted": 134,
+          "drafts_offered": 150,
+          "logit_rows": 197,
+          "logit_bytes": 101872640,
+          "logits_sha256": "69e7dedba0348ee5806e937ce97dd7d8f8aa5f39f289733975c75ce5241085c2"
+        }
+      ],
+      "resources": {
+        "root_min_GiB": 839.7045707702637,
+        "system_swapout_delta_bytes": 0
+      },
+      "terminal_audit_sha256": "38ddffeb11a706bd70501a24cad3b95aaea043dbc8f4c63da7364f8e3d093bf3",
+      "independent_review_sha256": "243dcbfe864db3ada1c45450a4cc2bdb88b07e00c444510abf6c7739703dba7b",
+      "selected_public_restored": {
+        "unauthenticated_models": 401,
+        "authenticated_models": 200,
+        "SSE_done": true,
+        "finish": "stop",
+        "known_answer_passed": true,
+        "content": "READY"
+      }
+    },
+    {
+      "id": "N1",
+      "factor": "nativebef0/IMMA2",
+      "native_pid": 1850915,
+      "API_pid": 1850871,
+      "window": "20261029T061639Z.json",
+      "native_API_window_exit0": true,
+      "all_four_answers_typed_correct_and_natural_stop": true,
+      "all_finite_dump_rows": 863,
+      "cases": [
+        {
+          "id": "cold-text",
+          "generated": 157,
+          "reused": 0,
+          "drafts_accepted": 119,
+          "drafts_offered": 131,
+          "logit_rows": 169,
+          "logit_bytes": 87393280,
+          "logits_sha256": "bc78e73f16bad97ba1925870a2d10370b916a96850e1a1f7e7c4e717ce16df13"
+        },
+        {
+          "id": "rewind-text",
+          "generated": 195,
+          "reused": 8465,
+          "drafts_accepted": 135,
+          "drafts_offered": 157,
+          "logit_rows": 218,
+          "logit_bytes": 112732160,
+          "logits_sha256": "ab8966e8f4a555a60358ea5374bf6888e72ba12c436633fa48432d227d4b6191"
+        },
+        {
+          "id": "two-images",
+          "generated": 224,
+          "reused": 0,
+          "drafts_accepted": 118,
+          "drafts_offered": 183,
+          "logit_rows": 290,
+          "logit_bytes": 149964800,
+          "logits_sha256": "2388e3457326e405c6837bf3c775b980367dd6d0a5d9735120f1f7b202896790"
+        },
+        {
+          "id": "restore-text",
+          "generated": 169,
+          "reused": 8465,
+          "drafts_accepted": 123,
+          "drafts_offered": 139,
+          "logit_rows": 186,
+          "logit_bytes": 96184320,
+          "logits_sha256": "76fbdf9db7d3467f31cdcf6cc60092705d93c4c119277e21ee7e1796ba765fde"
+        }
+      ],
+      "resources": {
+        "root_min_GiB": 839.2306365966797,
+        "system_swapout_delta_bytes": 0
+      },
+      "terminal_audit_sha256": "b0ea37f38e02e6421dbaf4fcd384faffdace18661b8dae7268b7641ecd2f3d31",
+      "independent_review_sha256": "5f3a451e08eaa413d30121f649ec155de9f47bcf6235f3e590681faaf327bd90",
+      "selected_public_restored": {
+        "unauthenticated_models": 401,
+        "authenticated_models": 200,
+        "SSE_done": true,
+        "finish": "stop",
+        "known_answer_passed": true,
+        "content": "READY"
+      }
+    }
+  ],
+  "frozen_comparison": {
+    "passed": false,
+    "status": "HOLD_TOKEN_PATH_DIFFERS",
+    "id": "cold-text",
+    "retry": false,
+    "utc": "2026-10-29T06:34:38.267698+00:00",
+    "source_sha256": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+    "baseline_terminal_sha256": "38ddffeb11a706bd70501a24cad3b95aaea043dbc8f4c63da7364f8e3d093bf3",
+    "candidate_terminal_sha256": "b0ea37f38e02e6421dbaf4fcd384faffdace18661b8dae7268b7641ecd2f3d31",
+    "case_inventory": [
+      {
+        "id": "cold-text",
+        "baseline_generated": 196,
+        "candidate_generated": 157,
+        "emitted_token_path_equal": false,
+        "dump_metadata_equal": false,
+        "both_typed_answers_correct": true
+      },
+      {
+        "id": "rewind-text",
+        "baseline_generated": 156,
+        "candidate_generated": 195,
+        "emitted_token_path_equal": false,
+        "dump_metadata_equal": false,
+        "both_typed_answers_correct": true
+      },
+      {
+        "id": "two-images",
+        "baseline_generated": 69,
+        "candidate_generated": 224,
+        "emitted_token_path_equal": false,
+        "dump_metadata_equal": false,
+        "both_typed_answers_correct": true
+      },
+      {
+        "id": "restore-text",
+        "baseline_generated": 180,
+        "candidate_generated": 169,
+        "emitted_token_path_equal": false,
+        "dump_metadata_equal": false,
+        "both_typed_answers_correct": true
+      }
+    ],
+    "speed_claim": false,
+    "performance_admitted": false,
+    "promotion_admitted": false,
+    "gate_unchanged": true,
+    "scope": "First exact frozen comparison of the two reviewed natural numerical runs. Token/row paths differ; no later-row alignment or tolerance regrade. This alone does not attribute a cause or establish general quality loss."
+  },
+  "offline_initial_row": {
+    "source_helper_sha256": "136e9572f535ae42bff54af8bddc851012bfaec005432606c169bab8688c2e9c",
+    "CPU_bounded_child_returncode": 0,
+    "input_bytes": 4136960,
+    "primary_cold_row_bytes_equal": true,
+    "primary_cold_row_RMS": 0.0,
+    "scope": "Byte0 pre-sample prompt row only. Equality does not establish later draft/verify/state equality. Secondary cache rows do not isolate arithmetic; no post-divergence row alignment."
+  },
+  "selected_deployment": {
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prefill_chunk": 4096,
+    "model_and_quantization_unchanged": true,
+    "quality_effort_and_images_unchanged": true,
+    "candidate_promoted": false
+  },
+  "limits": [
+    "Correct answers and finite rows on these four fixtures are not general quality or numerical-equivalence proof.",
+    "Token paths and speculative rows differ; frozen gate remains HOLD. No performance/confirmation/activation or numerical replay admitted.",
+    "Initial cold logits are equal before sampling. Persistent sampling counter carries across requests, so later cases are coupled to earlier output lengths; it does not explain the first cold divergence by itself.",
+    "No generation-speed gain, overall-task speed, near-filled1M or full256K generation bound is established.",
+    "Prior metadata/prechild refusals and original failed CPU mock remain preserved; no native/API/lifecycle retry occurred."
+  ]
+}
