@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-29T20:10:53.906770+00:00",
+  "decision": "APPROVED_SINGLE_P1_PROSE_PANEL",
+  "qualification_sha256": "84208bd83fab1605cc05d3cf87b6992a6c39fd45061baeb07f1100b927af47ea",
+  "binding": {
+    "invocation": "f2b87ac5943049aca1ca6eff01607397",
+    "main_pid": 2427755,
+    "native_pid": 2427790,
+    "native_start_ticks": 156575799
+  },
+  "interrupt_permission": true,
+  "kernel_since": "2026-10-29 20:01:00 UTC",
+  "evidence_sha256": {
+    "qualification.json": "84208bd83fab1605cc05d3cf87b6992a6c39fd45061baeb07f1100b927af47ea",
+    "SOURCE_ASTRA_REVIEW_v2.json": "ef09db908abac9e2416fb5dbcf4df2e94da21fb568f58bf180223666fe328415",
+    "SOURCE_ROOT_REVIEW_v2.json": "3a9db0808086c46dd5a1273d9c7da419b4bfe494218ab0f6046549231389e371",
+    "CPU_BOTH_ROOT_REVIEW.json": "32f683d77560765759f2a54aaccab4e2c9eeca1b447a03aabb4af15e80dc8f77",
+    "CPU_PROGRAM_v2.txt": "ce7e966c8c3eadecd395c6e24fc07dc268dab3c67080e929c6c48040b58fc341",
+    "authorization.json": "cf30de0ae29ce7f42ebc9227f551a36f375413792a0054277a5ec5983a2f6dc7",
+    "CPU-v2-darwin/receipt.json": "c343272cba6d73638b681e8cf54f8a4aea9ec3bf21e33115d6abe089cc13d2a8",
+    "CPU-v2-darwin/child.json": "ba09679b32ebd994741b2f478fc7f134b3e3fba729b8b8e4585265f563d28a58",
+    "CPU-v2-darwin/child.log": "d12f032ee8afdb280bfa44279f96034885a5ea1cb45a627e2a340393392ce149",
+    "CPU-v2-linux/receipt.json": "c343272cba6d73638b681e8cf54f8a4aea9ec3bf21e33115d6abe089cc13d2a8",
+    "CPU-v2-linux/child.json": "28c528c52f52998401adc91bfc7474239a313e4794a0475b33908ee5ed21ddba",
+    "CPU-v2-linux/child.log": "5b46792bde9f12b70f6c8ddd1067211d99e16662bb29c03ae614823a5d757d0c",
+    "CPU_Q_ASTRA_REVIEW.json": "5454acbc1cf63e903c229278d3dc8d739dcb8367868055779444f366c434c5b4",
+    "ACTUAL_PREFLIGHT.json": "cb086e2be627dbf895e32551f9ae86acd7f7a50a938b5540489deea262e4bb26"
+  },
+  "authorization_scope": "New explicit human request permits finishing this one selected-model prose measurement despite competing demand. Normal FIFO; no need to stop or cancel user requests.",
+  "attempt": "P1-FIRST",
+  "requests": [
+    "expository-prose",
+    "creative-prose"
+  ],
+  "conditions": [
+    "Before launch require actual qualification1664pins+self unchanged, same exact selected native/config/API/binding, root>=132GiB, clean kernel interval and previous canonical window, fresh clock and no other private/build/restoration phase. Controller must independently validate its qualified source/admission and own custody.",
+    "Use frozen approved.py once; no direct transport bypass, alternate flags, replay, replacement output or additional panel. P1-FIRST must be fresh.",
+    "No foreign-router-demand cancellation for this explicitly authorized panel. Retain normal FIFO. Owner/resource/deadline/protocol faults still close only own socket and retain partial/UNRUN; never restart/drain/kill native or cancel another request.",
+    "Maintain existing profile/model/context1048576/output262144/chunk4096, both literal requests cap32768/effort100/temp1/top_p1/seed1. No fitting/truncation or configuration changes.",
+    "One1000s soft request-panel deadline with bounded own-socket cleanup and outer1200s ceiling; root120GiB runtime, swapdelta<1GiB/log4GiB inherited. No automatic retry.",
+    "Save complete own synthetic SSE/answers/reasoning, own server-rounded native rate/API counts/client timing/cache/drafts and manual-quality pending. Verify same owner and exact own reservation cleanup afterward; user activity need not stop."
+  ],
+  "interpretation_limits": [
+    "Own SSE predicted_per_second is native server-rounded0.1 tokens/s; do not derive exact native rate from API predicted_n. Client time can include FIFO wait and first visible delta is not true TTFT.",
+    "No quality pass from word count or final sentence alone. Full manual outputs and raw terminal/cleanup review required.",
+    "No candidate, replication, deployment, general throughput guarantee, old P0 regrade or prior numerical-HOLD waiver."
+  ],
+  "physical_P1_preflight_scope": "Saved actual20:10:13UTC readonly receipt reviewed: exact binding/q,1665checks,root837.545GiB,no model request. Parent also reports previous-window/kernel/no-phase guards clean. Immediate action-time guards still mandatory; reviewer made no remote calls.",
+  "reviewer_model_execution": false
+}
