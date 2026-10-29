@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "2026-10-29T13:58:17.180184+00:00",
+  "snapshot_utc": "2026-10-29T14:44:26.806201+00:00",
   "candidate_scope": "Isolated IQ2_S token/window persistent scheduling from Maya1.1.37 around selected original arithmetic; bulkupdate/IMMA/lightprompts/IQ1/CPU/model/API excluded.",
   "candidate_native_sha256": "da28ca8b108048990f5950e76909cccacacb9f921d8e37fad9f16b440bb513a6",
   "candidate_deployed": false,
@@ -16,7 +16,10 @@
     "physical_Ubuntu": 109,
     "exact_source_files": 11,
     "input_maps": 931,
-    "model_windows": "UNRUN",
+    "model_windows": {
+      "N0": "COMPLETE_RESTORED_FULLY_REVIEWED",
+      "N1": "UNRUN"
+    },
     "independent_raw_review": "FIRST_109_BOTH_HOST_CPU_PROOF_REVIEWED_NO_MODEL_ADMISSION",
     "qualification_sha256": "11deaac7b10b7d53bd988acff210136b5e2107d533d1a13e28c315037810113e",
     "qualification_files": 2198,
@@ -48,5 +51,42 @@
   "original_IMMA": "HOLD_TOKEN_PATH_DIFFERS unchanged; separateclosedcandidate, notrerun/regraded.",
   "reproducibility": "Source/receipt snapshot requires originalqualifiedoperatorworkspace/assets. Absolutepins areprovenance, notaninstaller. No nativebinaries/modelweights/usercache oruserprompts included.",
   "archive_whitespace": "Verbatim qualified source/receipt bytes retained. git diff --check reported only extra blank EOF lines in7 archived Python files; no normalization after qualification.",
-  "last_lightweight_identity_observation": "2026-10-29T13:57:51.536577+00:00"
+  "last_lightweight_identity_observation": "2026-10-29T13:57:51.536577+00:00",
+  "whole_model_numerical": {
+    "N0_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "N0_native_pid": 2022226,
+    "N0_API_pid": 2022202,
+    "N0_window": "20261029T141654Z.json",
+    "N0_all_native_API_window_exit0": true,
+    "N0_independent_terminal_audit_sha256": "4a793c999370cef9d875edfe8056caad888904b4f99fe3d9c707d191b56a28c6",
+    "N0_astra_result_review_sha256": "25f72fd77cba3581c1ce611ad096f1d37f3d99eefe730223febfd4b18d07139d",
+    "N0_four_typed_answers_correct_natural": true,
+    "N0_reuse": [
+      0,
+      8465,
+      0,
+      8465
+    ],
+    "N0_generated": [
+      203,
+      171,
+      78,
+      169
+    ],
+    "N0_finite_rows": [
+      229,
+      178,
+      98,
+      188
+    ],
+    "N0_finite_bytes": 358364160,
+    "N0_root_min_GiB": 838.3350257873535,
+    "N0_swapout_delta_bytes": 0,
+    "N0_kernel_fault_lines": [],
+    "restored_selected_native_pid_dated_snapshot": 2026722,
+    "N1_actual_preflight": "2199_CHECKS_PASS_NO_ARM_ADMITTED_YET",
+    "N1_model_run": false,
+    "speed_claim": false,
+    "scope": "Baseline numerical acquisition only; no candidate equivalence or timing claim. Prospective old API/native closure passed separately; historical kernel API gap unchanged."
+  }
 }

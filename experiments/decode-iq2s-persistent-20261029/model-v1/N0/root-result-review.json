@@ -1,0 +1,179 @@
+{
+  "decision": "N0_ROOT_RAW_AND_FIRST_BOUNDED_TERMINAL_AUDIT_REVIEWED_NO_N1_ADMISSION",
+  "utc": "2026-10-29T14:38:06.359395+00:00",
+  "raw_file_map_count": 62,
+  "raw_payloads_sha256": {
+    "output/server-start.json": "a44811a6e824a263a86c1e95a3f0ad6a939b2d3a5dceb55ff2fa2bf7bd98dd74",
+    "output/candidate-config.json": "000d15563dda3b10beda3ade51961141db9ad2c1bc9445907c70ea6c0ab278a1",
+    "output/candidate-config.shared-settings.json": "9dccb6db4fd0d5e1596ad0845decb60c24aae2756a4eca216cb9b914d310fdc9",
+    "output/fixture.json": "976b0cf51e3cfc2950774714fb1a5fb075f08e7d8619b028b6d9b1b0f67ffe67",
+    "output/receipt.json": "5ef1ec04fb6ce7c94b15bf204c478ffea2141bd6aa0a6c92917c82b5cf74020d",
+    "output/startup-audit.json": "8d2eb4b2586281b77c8eb76e1d183d7fb40a8d3a5cefc268d863a04d76437bec",
+    "output/proof.json": "16fa07806fd23406d1d336d41f2f84159281ca7f587591d6ccd93fabf857a598",
+    "output/startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "output/startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c",
+    "output/native/engine.log": "18c1f7a0cd3e9de042d7677beb7bb17d813f597454b9612c455997d1746c9e71",
+    "output/native/native-ready.json": "a97e7eaf9d5a20680c3ab942173e720db89c8f9d6810830860e4e8ba0892bb2b",
+    "output/native/native-fsize-launch.json": "91c93c1c1ce377626be6edea21f3395353a20e2523f221d86552c78fae224bc8",
+    "output/native/native-close.jsonl": "24fc08570516bbd2be783511d799393b68626eca4eb61a59456390058477fef3",
+    "output/native/server-cleanup.json": "ad987faddea9565e9ee422c87586f68c9c6f7a3c31d47a84508a4c7093f5bb03",
+    "output/native/entry-audit.json": "99a05f5f1a9e0a8314a3d14e0dbdf61b9b257ee3262dcba7defc9388b35f235a",
+    "output/native/server.log": "26b1dc11f1f47c40c58b1531e833b7c2b4793740e2d1491f38833f73cfe16940",
+    "output/native/native-000/native-statistics.json": "f5824f2ce6bbd9207fce4019909a0dc26a183a534d98a95152ef6fcf349ac0e3",
+    "output/native/native-000/raw-done.txt": "d2d4ca99a4b5470c2e8dea6c0ba207ca4250bad38c54e9cb30ae728f943297ef",
+    "output/native/native-000/trace-receipt.json": "166bcaf45fecece8353aeb244302126b0fb13198f53de96a610dea366bcbd68f",
+    "output/native/native-000/tokens.jsonl": "9eb0839d9da1344654cdb170077ef60bb6a08654abfd5a6fa57e1afe77b03707",
+    "output/native/native-000/request.json": "16e1e7cfdb50c3d694adda3bd7abae0026050c1188b962ff09411c06492a2431",
+    "output/native/native-003/native-statistics.json": "840c4ab977dfea2f8da0d7457f173c183d9025521f544d04ae3d06abdf91f58a",
+    "output/native/native-003/raw-done.txt": "13c6b36fa789ab18da3ffd42306779cf2836a5c6efed21e5e19f1b951344beb3",
+    "output/native/native-003/trace-receipt.json": "efdddc433871b1c2df1c881a824351e47e915f7edea144aa48bf821d5a1bac1d",
+    "output/native/native-003/tokens.jsonl": "16b4b04525addf0adabe72c3403c91e6864825f5d704273914e04d0d07cef998",
+    "output/native/native-003/request.json": "16e1e7cfdb50c3d694adda3bd7abae0026050c1188b962ff09411c06492a2431",
+    "output/native/native-002/native-statistics.json": "a28ceaf7609f8f7300d10e9605edbe488acb6040a1d49c47eb8fc85cf9d0f03d",
+    "output/native/native-002/raw-done.txt": "1d8105c7ba966ec38867d690d990a38ab780e64ebad223ea9d89862df901b0d0",
+    "output/native/native-002/trace-receipt.json": "e597020fd02a4a3d0cf3050dc5813a14789008fb4c8fc099e086cbaf94c3f1e0",
+    "output/native/native-002/tokens.jsonl": "3d44eb09f555536e4fb0ea45b02ba4bf5e9520b8d0762a0d1effcc7aa924b8b7",
+    "output/native/native-002/request.json": "bace79b3f09fa5852386b71025c1ef55e656563cfea110b5ec8702711f56d11e",
+    "output/native/native-001/native-statistics.json": "a197db401e9b9c51fc21efa3b0f643d2504a4a2cf15e024729ff2b3dd6c72b54",
+    "output/native/native-001/raw-done.txt": "130da10200de43666b3b91272701d3f7e6efcf626e43fd08f17077c07257a65d",
+    "output/native/native-001/trace-receipt.json": "25da9913bee22e24b4deeba68217cdd211746c696874721166d7f72843fc7dfa",
+    "output/native/native-001/tokens.jsonl": "3df2f47473c90b65db44e8edd52dbd80bf88c873b7104afa8ef25b0265acbdf8",
+    "output/native/native-001/request.json": "16e1e7cfdb50c3d694adda3bd7abae0026050c1188b962ff09411c06492a2431",
+    "output/native/skip-controls/cold-text/native-audit.json": "5824bc1a2491472f9efe77209fe2abf1c2d4377f86d03030b9393324e267cead",
+    "output/native/skip-controls/cold-text/response.json": "a46066217644dd3dca5dd1b2a5a6c05dbb9c5839783d343311e7b396894a1f9d",
+    "output/native/skip-controls/cold-text/request.json": "53ca64415d327ef2cfffb0b254471c52c24c86b9688002efde0ed60b8828bae2",
+    "output/native/skip-controls/restore-text/native-audit.json": "06cba90ce27804b4db5527048eb1181a466f71af62cccd97afea59052bf0bfc2",
+    "output/native/skip-controls/restore-text/response.json": "3319e8917cba0eaf955e582e0efac4bbd3e8e8706197b33a3d8257e7659f8f85",
+    "output/native/skip-controls/restore-text/request.json": "53ca64415d327ef2cfffb0b254471c52c24c86b9688002efde0ed60b8828bae2",
+    "output/native/skip-controls/two-images/native-audit.json": "2d65e797243e610d10a7b9570305d93847416db0837613f08c9c9a190228e33b",
+    "output/native/skip-controls/two-images/response.json": "b53418518e1fd6c041b18b952a3c5e3f45ba3b10736f6111569f35fb032e1d61",
+    "output/native/skip-controls/two-images/request.json": "2531b55a874e01ad7454dc3774c88029bb7c8a88ae78f7cd7af9c79863acd4ef",
+    "output/native/skip-controls/rewind-text/native-audit.json": "385b36d49f2578c3cbe3f3f22eb9c2a3bfd883bc64673cab14ecb77e2862b5f7",
+    "output/native/skip-controls/rewind-text/response.json": "fba2800e535639d14bb75ca2a078608ac8d367315cddd60cdfcf353cc092ebf0",
+    "output/native/skip-controls/rewind-text/request.json": "53ca64415d327ef2cfffb0b254471c52c24c86b9688002efde0ed60b8828bae2",
+    "maintenance/old-owner-close.json": "f911a661c25a47b5d99d9e214c5dde67a87d64cbd4303150bbd9e06142336149",
+    "maintenance/public-default-output-request.json": "93bb8806b80adc0a4793b4302b8387e13ae2d02b04932ddd2b2f166be29a455a",
+    "maintenance/state.json": "7151efdad2abde95e6493ed8eb92b3af360f3311e48f5e251b024f0521de7370",
+    "maintenance/start-unit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "maintenance/public-default-output-sse.txt": "51515a84406634868b5ff3f256aae566e0fe50f6e2e26c7e7779b7d984d55fce",
+    "maintenance/target-placement.json": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "maintenance/proof.json": "16fa07806fd23406d1d336d41f2f84159281ca7f587591d6ccd93fabf857a598",
+    "maintenance/result.json": "7151efdad2abde95e6493ed8eb92b3af360f3311e48f5e251b024f0521de7370",
+    "maintenance/start-binding.json": "f2fb8a3d009358c3b8cadf9a6814869660e3b94ce2b65cf91edb1cf1876202ca",
+    "audit/terminal-audit.json": "4a793c999370cef9d875edfe8056caad888904b4f99fe3d9c707d191b56a28c6",
+    "audit-child/child.log": "9ab5f08d2f15009a2e69f8c26ccd13d58eb37234d0571aa1971012ee2515beee",
+    "audit-child/child.json": "4ee41038b92406a3108ab4f0cf6802c6c8f7ee0642930adbb872f87739765b67",
+    "window/20261029T141654Z.json": "d3eb05b3a7f91df767724fd81642eb7481841ec1ef94a9d155521a0ef2b2c6dc",
+    "window/20261029T141654Z.telemetry.jsonl": "227f44976e9c0a0ff5d3ef1fef74e6f673a659b1b8fc97cf60cc2ffb5d944093"
+  },
+  "native_pid": 2022226,
+  "private_API_pid": 2022202,
+  "actual_window": "20261029T141654Z.json",
+  "all_native_API_window_exit0": true,
+  "old_hosted_API_and_native_raw_close0": true,
+  "four_natural_typed_answers_manually_read": true,
+  "reused": [
+    0,
+    8465,
+    0,
+    8465
+  ],
+  "generated": [
+    203,
+    171,
+    78,
+    169
+  ],
+  "finite_logit_rows": [
+    229,
+    178,
+    98,
+    188
+  ],
+  "finite_logit_bytes": 358364160,
+  "activation": {
+    "mode": 1,
+    "source": 20,
+    "retained_rows": 2668,
+    "activation_early_rows": [
+      5798,
+      5985
+    ]
+  },
+  "IQ2S": {
+    "persistent": 0,
+    "eligible_dispatch_observed": false,
+    "per_model_kernel_launch_count_observed": false,
+    "scope": "One branch receipt after first launch, not completion/count; separate both-device exact fixture required"
+  },
+  "resources": {
+    "root_min_GiB": 838.3350257873535,
+    "system_swapout_delta_bytes": 0
+  },
+  "restored_selected_identity": {
+    "native_pid": 2026722,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "bd93fdcd3807416891d063db6cf4498c",
+      "main_pid": 2026683,
+      "native_pid": 2026722,
+      "native_start_ticks": 155216304
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "FIRST_terminal_audit_sha256": "4a793c999370cef9d875edfe8056caad888904b4f99fe3d9c707d191b56a28c6",
+  "purpose": "UNMEASURED_NUMERICAL_ONLY",
+  "speed_or_general_quality_or_equivalence_or_promotion_claim": false,
+  "next": "Same Astra raw result review; fresh exact same-source/current selected binding/idle/root/read-only N1 preflight and separate N1 admission only. N0 no replay."
+}
