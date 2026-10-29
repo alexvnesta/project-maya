@@ -1,0 +1,34 @@
+{
+  "decision": "FIRST_BOUNDED_DATA_ONLY_COMPARE_MATCHED_EACH_HOST_ELIGIBLE",
+  "utc": "2026-10-29T15:06:41.464717+00:00",
+  "command_sha256": "e2058f7c0891d1e1a691ac373d0e8f854719ba3cf5e286d942e4e945ed980045",
+  "child_program_sha256": "7e4f8ec136db25d1251b5a219dbb6770efbc2758c377b41933f461b685a9f8c4",
+  "source_sha256": {
+    "iq2s_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+    "qualify_iq2s_numerical_cpu.py": "66f5e2b454739c5ac21d4d33b1925b8a71d9cfefe00c41f7aeee4c855dc85e95",
+    "../../model-v1/imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+    "../../model-v1/imma_config.py": "18691963f89027fd169877c0cd6307f54954de1353a577d4c8935c015ea84986",
+    "../../model-v1/imma_fixtures.py": "c70d008d3277166b8ff5276f22cb4547ab76a6688eab4647ff2d1a024ec89e4a",
+    "../../model-v1/imma_storage.py": "d03c8f6d69e198e648014b15a00a4a7c3dd986815dac4a391b747924239e0143"
+  },
+  "input_sha256": {
+    "N0/terminal-audit.json": "4a793c999370cef9d875edfe8056caad888904b4f99fe3d9c707d191b56a28c6",
+    "N1/terminal-audit.json": "2d200394641470c7190975aa4aabf5f49f5ef8dc05218a48529738a9ec02ca56"
+  },
+  "N0_result_review_sha256": "25f72fd77cba3581c1ce611ad096f1d37f3d99eefe730223febfd4b18d07139d",
+  "N1_result_review_sha256": "256b463d48af7f2e2764b22153786dd33dc5269f4da7557653200abb78407890",
+  "unchanged_helper_tests_sha256": "0263512984c58029c1db0edfa30d756d3ee7a09d85eb3f4a6d6f3bc65a3cbd4a",
+  "review": "Read entire proposed program, exact compare_matched body, loader and full supplied21-control test file. No changed algorithm/threshold/source/tests. This is data invocation of previously qualified helper only. No reviewed code executed by reviewer.",
+  "conditions": [
+    "First single bounded invocation on each physicalhost only, exact cwd/source/program/input hashes before and after, fresh exclusive receipts/logs and retain actual result verbatim.",
+    "Same source-qualified limits/owned-process-group cleanup: CPU30/LinuxAS512MiB/wall90/nice15/CUDAhidden/threads1. Fresh Ubuntu defaultidle/current999f native2041169/no private/build/pending/root132 before hashing or child. Busy defers untouched.",
+    "No imports of prior controller/outcomes, no inference, dump scan, tokenization, new test run or GPU action. Exact pinned loader helpers only.",
+    "Compare requires exact four ordered cases, finite dump proofs, identical emitted token paths, full dump dictionaries and native prompt/generated/reuse/draft counters. Preserve first returned HOLD exactly; no tolerance/realignment/retry or timing/promotion authority."
+  ],
+  "limitations": [
+    "Program reads trusted terminal reports already independently audited and hash-bound; it does not independently rescan dumps.",
+    "Misnamed compare_arm_results in earlier prose is corrected to actual compare_matched; preserved unexecuted proposal is not an attempt."
+  ],
+  "GPU_admitted": false,
+  "performance_admitted": false
+}

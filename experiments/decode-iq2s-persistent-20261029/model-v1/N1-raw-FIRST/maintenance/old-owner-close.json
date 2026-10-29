@@ -1,0 +1,34 @@
+{
+  "binding": {
+    "invocation": "bd93fdcd3807416891d063db6cf4498c",
+    "main_pid": 2026683,
+    "native_pid": 2026722,
+    "native_start_ticks": 155216304
+  },
+  "before": {
+    "ActiveState": "inactive",
+    "InvocationID": "bd93fdcd3807416891d063db6cf4498c",
+    "MainPID": "0",
+    "Result": "success",
+    "ExecMainCode": "1",
+    "ExecMainStatus": "0"
+  },
+  "native_close": {
+    "utc": "2026-10-29T14:45:39.651591+00:00",
+    "server_pid": 2026683,
+    "native_pid": 2026722,
+    "returncode": 0,
+    "closed": true
+  },
+  "after": {
+    "ActiveState": "inactive",
+    "InvocationID": "bd93fdcd3807416891d063db6cf4498c",
+    "MainPID": "0",
+    "Result": "success",
+    "ExecMainCode": "1",
+    "ExecMainStatus": "0"
+  },
+  "passed": true,
+  "before_raw": "ActiveState=inactive\nInvocationID=bd93fdcd3807416891d063db6cf4498c\nMainPID=0\nResult=success\nExecMainCode=1\nExecMainStatus=0\n",
+  "after_raw": "ActiveState=inactive\nInvocationID=bd93fdcd3807416891d063db6cf4498c\nMainPID=0\nResult=success\nExecMainCode=1\nExecMainStatus=0\n"
+}

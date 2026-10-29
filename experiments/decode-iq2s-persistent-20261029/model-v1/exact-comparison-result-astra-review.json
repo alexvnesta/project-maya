@@ -1,0 +1,130 @@
+{
+  "utc": "2026-10-29T15:11:36.276201+00:00",
+  "decision": "STRICT_HOLD_TOKEN_PATH_DIFFERS_NO_TIMING_REPLAY_OR_PROMOTION",
+  "actual_result": {
+    "id": "cold-text",
+    "passed": false,
+    "retry": false,
+    "status": "HOLD_TOKEN_PATH_DIFFERS"
+  },
+  "scope": "Independent local review of FIRST unchanged compare_matched operation on each physical host; no code or comparison rerun by reviewer.",
+  "evidence_sha256": {
+    "EXACT_COMPARISON_COMMAND.json": "e2058f7c0891d1e1a691ac373d0e8f854719ba3cf5e286d942e4e945ed980045",
+    "EXACT_COMPARISON_FIRST_BOTH_HOSTS.json": "30115cf54e69ca896631fdaac8851e6c0ea2a0bcb8f11e4f0df57303df1fa8a6",
+    "exact-comparison-source-astra-review.json": "a74a5faef34a7e6f8fa9c57ff6b64019801745fd6f2b24f96d78afe5a734bade",
+    "N0/result-astra-review.json": "25f72fd77cba3581c1ce611ad096f1d37f3d99eefe730223febfd4b18d07139d",
+    "N1/result-astra-review.json": "256b463d48af7f2e2764b22153786dd33dc5269f4da7557653200abb78407890",
+    "exact-comparison-FIRST-darwin/child.json": "da22bc3029770fa2f8e36a474b2540c1d99f35e76c9de8a249ec7b123889d7dc",
+    "exact-comparison-FIRST-darwin/child.log": "4f1aef199159f2fbd0f3ad500445708ce5bcde5fe0b05de9ce6564fcd8f10683",
+    "exact-comparison-FIRST-darwin/result.json": "9d6c79d5c54e07d3508008ddb27dc3060613492c04aeb31e51d9e7e75a3e990d",
+    "exact-comparison-FIRST-linux/child.json": "1c33b018fee21309a13e1964fcf8f1575b1e6afabb49a98ff92a595d6cd2e283",
+    "exact-comparison-FIRST-linux/child.log": "4f1aef199159f2fbd0f3ad500445708ce5bcde5fe0b05de9ce6564fcd8f10683",
+    "exact-comparison-FIRST-linux/result.json": "9d6c79d5c54e07d3508008ddb27dc3060613492c04aeb31e51d9e7e75a3e990d"
+  },
+  "source_sha256": {
+    "iq2s_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+    "qualify_iq2s_numerical_cpu.py": "66f5e2b454739c5ac21d4d33b1925b8a71d9cfefe00c41f7aeee4c855dc85e95",
+    "../../model-v1/imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+    "../../model-v1/imma_config.py": "18691963f89027fd169877c0cd6307f54954de1353a577d4c8935c015ea84986",
+    "../../model-v1/imma_fixtures.py": "c70d008d3277166b8ff5276f22cb4547ab76a6688eab4647ff2d1a024ec89e4a",
+    "../../model-v1/imma_storage.py": "d03c8f6d69e198e648014b15a00a4a7c3dd986815dac4a391b747924239e0143"
+  },
+  "input_sha256": {
+    "N0/terminal-audit.json": "4a793c999370cef9d875edfe8056caad888904b4f99fe3d9c707d191b56a28c6",
+    "N1/terminal-audit.json": "2d200394641470c7190975aa4aabf5f49f5ef8dc05218a48529738a9ec02ca56"
+  },
+  "program_sha256": "7e4f8ec136db25d1251b5a219dbb6770efbc2758c377b41933f461b685a9f8c4",
+  "hosts": {
+    "darwin": {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-c",
+        "import json\nfrom pathlib import Path\nfrom iq2s_dependencies import controls\na=json.loads((Path('N0')/'terminal-audit.json').read_text())\nb=json.loads((Path('N1')/'terminal-audit.json').read_text())\nassert a['passed'] is True and b['passed'] is True\nprint(json.dumps(controls.compare_matched(a['rows'],b['rows']),sort_keys=True))\n"
+      ],
+      "pid": 33998,
+      "returncode": 0,
+      "CPU_s": 30,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "Linux_AS_MiB": null,
+      "error": null,
+      "cleanup_errors": [],
+      "program_sha256": "7e4f8ec136db25d1251b5a219dbb6770efbc2758c377b41933f461b685a9f8c4",
+      "source_sha256": {
+        "iq2s_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+        "qualify_iq2s_numerical_cpu.py": "66f5e2b454739c5ac21d4d33b1925b8a71d9cfefe00c41f7aeee4c855dc85e95",
+        "../../model-v1/imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+        "../../model-v1/imma_config.py": "18691963f89027fd169877c0cd6307f54954de1353a577d4c8935c015ea84986",
+        "../../model-v1/imma_fixtures.py": "c70d008d3277166b8ff5276f22cb4547ab76a6688eab4647ff2d1a024ec89e4a",
+        "../../model-v1/imma_storage.py": "d03c8f6d69e198e648014b15a00a4a7c3dd986815dac4a391b747924239e0143"
+      },
+      "input_sha256": {
+        "N0/terminal-audit.json": "4a793c999370cef9d875edfe8056caad888904b4f99fe3d9c707d191b56a28c6",
+        "N1/terminal-audit.json": "2d200394641470c7190975aa4aabf5f49f5ef8dc05218a48529738a9ec02ca56"
+      },
+      "case_ids": [
+        "cold-text",
+        "rewind-text",
+        "two-images",
+        "restore-text"
+      ],
+      "native_or_GPU_execution": false
+    },
+    "linux": {
+      "argv": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "-c",
+        "import json\nfrom pathlib import Path\nfrom iq2s_dependencies import controls\na=json.loads((Path('N0')/'terminal-audit.json').read_text())\nb=json.loads((Path('N1')/'terminal-audit.json').read_text())\nassert a['passed'] is True and b['passed'] is True\nprint(json.dumps(controls.compare_matched(a['rows'],b['rows']),sort_keys=True))\n"
+      ],
+      "pid": 2086379,
+      "returncode": 0,
+      "CPU_s": 30,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "Linux_AS_MiB": 512,
+      "error": null,
+      "cleanup_errors": [],
+      "program_sha256": "7e4f8ec136db25d1251b5a219dbb6770efbc2758c377b41933f461b685a9f8c4",
+      "source_sha256": {
+        "iq2s_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+        "qualify_iq2s_numerical_cpu.py": "66f5e2b454739c5ac21d4d33b1925b8a71d9cfefe00c41f7aeee4c855dc85e95",
+        "../../model-v1/imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+        "../../model-v1/imma_config.py": "18691963f89027fd169877c0cd6307f54954de1353a577d4c8935c015ea84986",
+        "../../model-v1/imma_fixtures.py": "c70d008d3277166b8ff5276f22cb4547ab76a6688eab4647ff2d1a024ec89e4a",
+        "../../model-v1/imma_storage.py": "d03c8f6d69e198e648014b15a00a4a7c3dd986815dac4a391b747924239e0143"
+      },
+      "input_sha256": {
+        "N0/terminal-audit.json": "4a793c999370cef9d875edfe8056caad888904b4f99fe3d9c707d191b56a28c6",
+        "N1/terminal-audit.json": "2d200394641470c7190975aa4aabf5f49f5ef8dc05218a48529738a9ec02ca56"
+      },
+      "case_ids": [
+        "cold-text",
+        "rewind-text",
+        "two-images",
+        "restore-text"
+      ],
+      "native_or_GPU_execution": false
+    }
+  },
+  "findings": [],
+  "conclusions": [
+    "Both original raw child logs and result JSONs independently return identical HOLD_TOKEN_PATH_DIFFERS at cold-text, passed false, retry false. Both child processes exited0 with no supervisor/cleanup error. Exit0 means the comparison ran successfully, not numerical acceptance.",
+    "Exact six-source maps, two terminal input pins, four ordered case IDs, literal eight-line program and each raw receipt hash reconcile with the reviewed command and both-host summary. Current local sources/input bytes still match those pins.",
+    "CPU30/wall90/nice15/CUDAhidden recorded on both hosts; physical LinuxAS512MiB, Darwin AS null. No native/GPU execution or dump scan occurred in this data-only comparison.",
+    "The unchanged strict gate stops at the first differing emitted token path. It does not align later rows, apply a tolerance or automatically retry. Timing and promotion remain blocked.",
+    "Both arms previously passed their four specific synthetic answers/natural stops/positive drafts/state and lifecycle gates. Those bounded successes do not override this separate exact-path failure."
+  ],
+  "limitations": [
+    "No inference about cause, broad model quality, harmlessness of token differences, numerical equivalence or speed. The comparison did not reach a matched-logit or later-case acceptance decision after the first cold-text token divergence.",
+    "Terminal finite/hash evidence comes from the prior bounded physical auditors; this comparison consumes their pinned JSON reports and does not rescan dump bytes.",
+    "Selected production92/c43/chunk4096/native2041169 invocation999f was publicly restored per the already-reviewed N1 lifecycle evidence. This report makes no new live production observation; parent final lightweight verification is separate.",
+    "The older IMMA HOLD and all failed/refused historical receipts remain unchanged. No further model arm, replay, timing run, deployment or promotion is authorized."
+  ],
+  "timing_admitted": false,
+  "replay_admitted": false,
+  "promotion_admitted": false
+}
