@@ -1,0 +1,486 @@
+--- a/src/ds4/ds4_iq.cu
++++ b/src/ds4/ds4_iq.cu
+@@ -35,6 +35,8 @@
+ #include "ggml-common.h"
+ 
+ #include <algorithm>
++#include <type_traits>
++#include "ds4_q5k_imma_policy.hpp"
+ #include <cstdio>
+ #include <cstdlib>
+ #include <cstring>
+@@ -907,6 +909,168 @@
+         }
+ }
+ 
++// (DS4_Q5K_IMMA) mv_kernel<kQ5_K>'s sums by int8 tensor cores: a block 16 rows x 8 activations (NG groups of 8),
++// mma m16n8k32 a 32-value sub-block for the exact integer dots and a second one against ones for the activations' half
++// sums, then each output's F32 terms exactly as mv_kernel takes them - lane kb % 32's running sum, then warp_sum's tree
++// over the 32 - so the same bits.  Those 32 sums are independent: warp q of the block's 4 keeps the 8 of the
++// super-blocks sb % 4 == q (lanes 8 q + ib) in registers; the tree reads all 32 from shared memory at the end.
++constexpr int kImmaWarps = 4;
++template <int NG>
++__global__ void __launch_bounds__(kImmaWarps * 32) mv_q5k_imma_kernel(const Jobs J) {
++#if !defined(STRATA_USE_HIP) && defined(__CUDA_ARCH__) && __CUDA_ARCH__ >= 800
++    extern __shared__ float accs[];   // [lane sum 8 q + ib][output j][NG][lane]: rows g, g + 8 x columns 2 t, 2 t + 1
++    const MvJob& b = J.j[blockIdx.y];
++    const int q = threadIdx.x >> 5, lane = threadIdx.x & 31, g = lane >> 2, t = lane & 3;
++    const int r0 = blockIdx.x * 16;
++    if (r0 >= b.n) return;
++    const int nsb = b.k / 32, ra = r0 + g, rb = r0 + g + 8;
++    const uint8_t* wa = b.w + (size_t) (ra < b.n ? ra : r0) * b.ld;   // (a row past n: row r0's bytes, not written)
++    const uint8_t* wb = b.w + (size_t) (rb < b.n ? rb : r0) * b.ld;
++    const uint32_t one_lo = t < 2 ? 0x01010101u : 0u, one_hi = t < 2 ? 0u : 0x01010101u;
++    float4 acc[8][NG];
++#pragma unroll
++    for (int ib = 0; ib < 8; ++ib)
++#pragma unroll
++        for (int G = 0; G < NG; ++G) acc[ib][G] = make_float4(0.0f, 0.0f, 0.0f, 0.0f);
++    for (int sb = q; sb < nsb / 8; sb += kImmaWarps) {   // a super-block (8 sub-blocks) a step, its loads first
++        // (thread t takes words 2 t, 2 t + 1 of each sub-block - values 8 t .. 8 t + 7 - in the mma's k slots 4 t and
++        //  16 + 4 t, the activations the same: the integer dot is the same sum in any order)
++        uint32_t hd[2], scw[2][3];
++        uint2 qh[2], qs[2][4];   // rows g, g + 8: d | dmin, scales, this thread's words
++#pragma unroll
++        for (int r = 0; r < 2; ++r) {
++            const uint8_t* bl = (r == 0 ? wa : wb) + (size_t) sb * Ty<kQ5_K>::B;
++            const uint4 hdr = *(const uint4*) bl;
++            hd[r] = hdr.x;
++            scw[r][0] = hdr.y;
++            scw[r][1] = hdr.z;
++            scw[r][2] = hdr.w;
++            qh[r] = *(const uint2*) (bl + 16 + 8 * t);
++#pragma unroll
++            for (int pr = 0; pr < 4; ++pr) qs[r][pr] = *(const uint2*) (bl + 48 + 32 * pr + 8 * t);
++        }
++        uint32_t xb[NG][8][2];
++        float xs[NG][8][2];
++#pragma unroll
++        for (int G = 0; G < NG; ++G) {
++            const int cb = G * 8 + g, c0 = G * 8 + 2 * t;
++#pragma unroll
++            for (int ib = 0; ib < 8; ++ib) {
++                const int kb = sb * 8 + ib;
++                xb[G][ib][0] = xb[G][ib][1] = 0;
++                if (cb < b.ncol) {
++                    const int8_t* xp = b.xq + (size_t) cb * b.k + (size_t) kb * 32;
++                    const uint2 xv = *(const uint2*) (xp + 8 * t);
++                    xb[G][ib][0] = xv.x;
++                    xb[G][ib][1] = xv.y;
++                }
++                xs[G][ib][0] = c0 < b.ncol ? b.xd[(size_t) c0 * nsb + kb] : 0.0f;
++                xs[G][ib][1] = c0 + 1 < b.ncol ? b.xd[(size_t) (c0 + 1) * nsb + kb] : 0.0f;
++            }
++        }
++#pragma unroll
++        for (int ib = 0; ib < 8; ++ib) {
++            const int sh = 4 * (ib & 1);
++            uint32_t a[2][2];   // [row][word]: decode<kQ5_K>'s words 2 t, 2 t + 1
++            int sc[2], mi[2];
++            float dd[2], mm[2];
++#pragma unroll
++            for (int r = 0; r < 2; ++r) {
++                a[r][0] = ((qs[r][ib >> 1].x >> sh) & 0x0f0f0f0fu) | (((qh[r].x >> ib) & 0x01010101u) << 4);
++                a[r][1] = ((qs[r][ib >> 1].y >> sh) & 0x0f0f0f0fu) | (((qh[r].y >> ib) & 0x01010101u) << 4);
++                uint8_t qb[12];   // (q4k_scale's bytes)
++#pragma unroll
++                for (int i = 0; i < 12; ++i) qb[i] = (uint8_t) (scw[r][i >> 2] >> (8 * (i & 3)));
++                q4k_scale(qb, ib, sc[r], mi[r]);
++                dd[r] = __half2float(__ushort_as_half((uint16_t) (hd[r] & 0xffffu)));
++                mm[r] = __half2float(__ushort_as_half((uint16_t) (hd[r] >> 16))) * (float) mi[r];
++            }
++#pragma unroll
++            for (int G = 0; G < NG; ++G) {
++                int d[4] = {0, 0, 0, 0}, h[4] = {0, 0, 0, 0};   // h: rows < 8 ones on values 0..15 (threads t < 2), the
++                                                                 // others on 16..31
++                asm("mma.sync.aligned.m16n8k32.row.col.s32.s8.s8.s32 {%0,%1,%2,%3}, {%4,%5,%6,%7}, {%8,%9}, {%0,%1,%2,%3};"
++                    : "+r"(d[0]), "+r"(d[1]), "+r"(d[2]), "+r"(d[3])
++                    : "r"(a[0][0]), "r"(a[1][0]), "r"(a[0][1]), "r"(a[1][1]), "r"(xb[G][ib][0]), "r"(xb[G][ib][1]));
++                asm("mma.sync.aligned.m16n8k32.row.col.s32.s8.s8.s32 {%0,%1,%2,%3}, {%4,%5,%6,%7}, {%8,%9}, {%0,%1,%2,%3};"
++                    : "+r"(h[0]), "+r"(h[1]), "+r"(h[2]), "+r"(h[3])
++                    : "r"(one_lo), "r"(one_hi), "r"(one_lo), "r"(one_hi), "r"(xb[G][ib][0]), "r"(xb[G][ib][1]));
++                auto term = [](float dv, int scv, int dot, float m, int sl, int shi) {   // sub_dot<kQ5_K>'s
++                    const float v = __fmul_rn(dv, (float) (scv * dot));
++                    return __fsub_rn(v, __fadd_rn(__fmul_rn(m, (float) sl), __fmul_rn(m, (float) shi)));
++                };
++                float4& v = acc[ib][G];
++                v.x = fmaf(xs[G][ib][0], term(dd[0], sc[0], d[0], mm[0], h[0], h[2]), v.x);
++                v.y = fmaf(xs[G][ib][1], term(dd[0], sc[0], d[1], mm[0], h[1], h[3]), v.y);
++                v.z = fmaf(xs[G][ib][0], term(dd[1], sc[1], d[2], mm[1], h[0], h[2]), v.z);
++                v.w = fmaf(xs[G][ib][1], term(dd[1], sc[1], d[3], mm[1], h[1], h[3]), v.w);
++            }
++        }
++    }
++#pragma unroll
++    for (int ib = 0; ib < 8; ++ib)
++#pragma unroll
++        for (int G = 0; G < NG; ++G) {
++            float* f = accs + ((size_t) (q * 8 + ib) * 4 * NG + G) * 32 + lane;
++            f[0] = acc[ib][G].x;
++            f[NG * 32] = acc[ib][G].y;
++            f[2 * NG * 32] = acc[ib][G].z;
++            f[3 * NG * 32] = acc[ib][G].w;
++        }
++    __syncthreads();
++    // the tree: warp q the lane's output j = q of each group
++    const int j = q, row = j < 2 ? ra : rb;
++#pragma unroll
++    for (int G = 0; G < NG; ++G) {
++        const int c = G * 8 + 2 * t + (j & 1);
++        if (row >= b.n || c >= b.ncol) continue;
++        float p[32];
++#pragma unroll
++        for (int l = 0; l < 32; ++l) p[l] = accs[(((size_t) l * 4 + j) * NG + G) * 32 + lane];
++#pragma unroll
++        for (int o = 16; o > 0; o >>= 1)   // (warp_sum's: lane 0's value after each xor step)
++#pragma unroll
++            for (int l = 0; l < o; ++l) p[l] += p[l + o];
++        const float v = p[0];
++        b.y[c * b.ycs + row] = b.alpha * v + (b.bias != nullptr ? b.bias[row] : 0.0f);
++    }
++#else
++    __builtin_trap();   // (never launched: imma_ok)
++#endif
++}
++
++int imma_set = -1;   // (tests: set_imma's value; -1: the environment's)
++ImmaTestCounts imma_counts;  // written only with an explicit single-caller test override
++// DS4_Q5K_IMMA=N (MAYA_DS4_Q5K_IMMA): Q5_K GEMVs of >= N activations on the tensor cores (0 / unset: off)
++int imma_min_cols() {
++    static const int env = [] {
++        const char* e = std::getenv("STRATA_DS4_Q5K_IMMA");
++        if (e == nullptr) e = std::getenv("DS4_Q5K_IMMA");
++        const int n = e != nullptr ? std::atoi(e) : 0;
++        if (n > 0)
++            std::fprintf(stderr, "ds4: Q5_K GEMVs of >= %d activations on the int8 tensor cores (DS4_Q5K_IMMA)\n", n);
++        return n;
++    }();
++    return imma_set >= 0 ? imma_set : env;
++}
++bool imma_ok(int max_c) {
++#if defined(STRATA_USE_HIP)
++    return false;
++#else
++    const int min_c = imma_min_cols();
++    if (min_c <= 0 || max_c < min_c || max_c > 16) return false;
++    static int cc[16] = {};   // (per device: sm_80 and later)
++    int dev = 0;
++    if (cudaGetDevice(&dev) != cudaSuccess || dev < 0 || dev >= 16) return false;
++    if (cc[dev] == 0) {
++        int major = 0;
++        cudaDeviceGetAttribute(&major, cudaDevAttrComputeCapabilityMajor, dev);
++        cc[dev] = major >= 8 ? 1 : -1;
++    }
++    return cc[dev] > 0;
++#endif
++}
++
+ // ---------------------------------------------------------------- the prompt sets' light experts
+ // A set's experts of a few rows (<= kLightRows: a prompt of a few hundred tokens spreads ~10 over most of 384 experts)
+ // in the token kernels' form: each weight sub-block decoded once and dotted with every row's int8 input (rounded per 32
+@@ -1215,6 +1379,27 @@
+ 
+ template <int T>
+ void mv_nc(const Jobs& J, int nj, int max_n, int max_c, cudaStream_t s) {
++    if constexpr (T == kQ5_K)
++        if (imma_ok(max_c) && std::all_of(J.j, J.j + nj, [](const MvJob& j) {
++                return q5k_imma_job_ok((uintptr_t) j.w, j.ld, (uintptr_t) j.xq,
++                                      j.ncol, imma_min_cols());
++            })) {
++            auto go = [&](auto ng) {
++                constexpr int NG = decltype(ng)::value;
++                const dim3 gi((unsigned) ((max_n + 15) / 16), (unsigned) nj);
++                mv_q5k_imma_kernel<NG><<<gi, kImmaWarps * 32, kImmaWarps * 8 * 32 * NG * 16, s>>>(J);
++            };
++            if (max_c <= 8) go(std::integral_constant<int, 1>{});
++            else go(std::integral_constant<int, 2>{});
++            if (imma_set > 0) {
++                if (max_c <= 8) ++imma_counts.ng1;
++                else ++imma_counts.ng2;
++            }
++            return;
++        }
++    if constexpr (T == kQ5_K) {
++        if (imma_set > 0) ++imma_counts.fallback;
++    }
+     const dim3 grid((unsigned) ((max_n + kWarps - 1) / kWarps), (unsigned) nj);
+     if (max_c <= 1) mv_kernel<T, 1><<<grid, kThreads, 0, s>>>(J);
+     else if (max_c <= 4) mv_kernel<T, 4><<<grid, kThreads, 0, s>>>(J);
+@@ -1222,6 +1407,9 @@
+ }
+ 
+ }  // namespace
++
++void set_imma(int min_cols) { imma_set = min_cols; imma_counts = {}; }
++ImmaTestCounts imma_test_counts() { return imma_counts; }
+ 
+ bool supported(int t) { return block_bytes(t) > 0; }
+ 
+--- a/src/ds4/ds4_iq.cuh
++++ b/src/ds4/ds4_iq.cuh
+@@ -110,6 +110,11 @@
+     float alpha = 1.0f;
+ };
+ bool mv(const MvJob* jobs, int n, cudaStream_t s);
++/// Test override for the opt-in Q5_K tensor-core threshold; -1 restores environment, 0 disables.
++void set_imma(int min_cols);
++struct ImmaTestCounts { unsigned ng1 = 0, ng2 = 0, fallback = 0; };
++/// Single-caller test accounting only; setter resets counts. Environment-controlled production does not count.
++ImmaTestCounts imma_test_counts();
+ 
+ /// (tests) every value of n rows of k (rows row_bytes(type, k) apart, on the device) as the kernels decode them: sub =
+ /// the token / window / light kernels' codes times their scales (d s q - m), tile = the prompt tiles' loader (F32,
+--- a/tests/ds4_gguf_test.cu
++++ b/tests/ds4_gguf_test.cu
+@@ -9,6 +9,7 @@
+ #include "../src/ds4/ds4_gguf.cuh"
+ #include "../src/ds4/ds4_gguf_cpu.hpp"
+ #include "../src/ds4/ds4_iq.cuh"
++#include "../src/ds4/ds4_q5k_imma_policy.hpp"
+ #include "../src/ds4/ds4_kernels.cuh"
+ #include "../src/ds4/ds4_pcie.cuh"
+ #include "../src/ds4/ds4_q6k.cuh"
+@@ -784,6 +785,141 @@
+     }
+ }
+ 
++// Correctness only: no timing loops, model files, cache data, or implicit benchmark.
++void test_mv_imma(cudaStream_t s) {
++    const int type = gg::iq::kQ5_K;
++    int cases = 0;
++    auto one = [&](int k, int n, int nc0, int nc1, int pad, int wo, int xo, int threshold, bool with_bias, int pattern = 0) {
++        const int jobs = nc1 ? 2 : 1, cs[2] = {nc0, nc1};
++        const size_t rb = gg::iq::row_bytes(type, k), ld = rb + pad, guard = 8, ycs = n + 3;
++        std::vector<uint8_t> packed = q_rand(type, n, k), weights(wo + ld * n, 0);
++        for (int row = 0; row < n; ++row)
++            std::memcpy(weights.data() + wo + row * ld, packed.data() + row * rb, rb);
++        const int maxc = std::max(nc0, nc1);
++        std::vector<int8_t> xq(xo + (size_t) k * maxc);
++        for (auto& v : xq) v = (int8_t) ((int) (rng() % 255) - 127);
++        std::vector<float> xd((size_t) (k / 32) * maxc), bias(n);
++        for (auto& v : xd) v = frand(0.05f);
++        if (pattern) {
++            for (size_t i = 0; i < xq.size(); ++i)
++                xq[i] = pattern == 4 ? 0 : pattern == 1 ? 127 : pattern == 2 ? -127 : (i % 2 ? -127 : 127);
++            for (auto& v : xd) v = pattern == 2 ? std::ldexp(1.0f, -140) : pattern == 3 ? 1.0e-20f : 0.125f;
++        }
++        for (auto& v : bias) v = frand(0.1f);
++        const float sentinel = 987.25f;
++        std::vector<float> initial(guard + ycs * maxc + guard, sentinel);
++        uint8_t* dw = dev(weights);
++        int8_t* dx = dev(xq);
++        float* ds = dev(xd), *db = dev(bias);
++        float *dy[2] = {dev(initial), jobs == 2 ? dev(initial) : nullptr};
++        gg::iq::MvJob j[2];
++        for (int i = 0; i < jobs; ++i) {
++            j[i].w = dw + wo; j[i].ld = ld; j[i].type = type; j[i].k = k; j[i].n = n;
++            j[i].ncol = cs[i]; j[i].xq = dx + xo; j[i].xd = ds;
++            j[i].y = dy[i] + guard; j[i].ycs = ycs;
++            j[i].bias = with_bias ? db : nullptr; j[i].alpha = with_bias ? -0.5f : 1.0f;
++        }
++        std::vector<float> want[2];
++        bool ok = true;
++        for (int on = 0; on < 2; ++on) {
++            for (int i = 0; i < jobs; ++i)
++                CU(cudaMemcpyAsync(dy[i], initial.data(), initial.size() * sizeof(float), cudaMemcpyHostToDevice, s));
++            gg::iq::set_imma(on ? threshold : 0);
++            if (!gg::iq::mv(j, jobs, s)) ok = false;
++            CU(cudaStreamSynchronize(s));
++            if (on) {
++                const auto counts = gg::iq::imma_test_counts();
++                const bool selected = nc0 >= threshold && (!nc1 || nc1 >= threshold) &&
++                                      pad % 16 == 0 && wo % 16 == 0 && xo % 8 == 0;
++                ok = ok && counts.ng1 == (unsigned) (selected && maxc <= 8) &&
++                     counts.ng2 == (unsigned) (selected && maxc > 8) &&
++                     counts.fallback == (unsigned) !selected;
++            }
++            for (int i = 0; i < jobs; ++i) {
++                auto got = host(dy[i], initial.size());
++                if (!on) want[i] = got;
++                else ok = ok && std::memcmp(want[i].data(), got.data(), got.size() * sizeof(float)) == 0;
++                for (size_t at = 0; at < got.size(); ++at) {
++                    const bool written = at >= guard && at < guard + ycs * cs[i] &&
++                                         (at - guard) % ycs < (size_t) n;
++                    if (!written) ok = ok && got[at] == sentinel;
++                    else ok = ok && std::isfinite(got[at]);
++                }
++            }
++        }
++        gg::iq::set_imma(0);
++        ++cases;
++        if (!ok) {
++            ++g_fail;
++            std::printf("IMMA FAIL k=%d n=%d columns=%d/%d pad=%d offsets=%d/%d threshold=%d bias=%d\n",
++                        k, n, nc0, nc1, pad, wo, xo, threshold, with_bias);
++        }
++        cudaFree(dw); cudaFree(dx); cudaFree(ds); cudaFree(db);
++        for (int i = 0; i < jobs; ++i) cudaFree(dy[i]);
++    };
++    // Include every column count and the full reduction widths used by the dense matrices.
++    for (const auto& shape : {std::pair<int,int>{768,136}, {1280,61}, {5120,40}, {8192,17}, {4096,33}})
++        for (int nc = 1; nc <= 16; ++nc) one(shape.first, shape.second, nc, 0, 0, 0, 0, 1, nc % 2);
++    for (int nc : {1,2,4,8,9,16}) {
++        one(5120, 17, nc, 0, 16, 0, 0, 1, true); // aligned padded weight stride: kernel
++        one(1280, 19, nc, 0, 4, 0, 0, 2, false); // weight stride fallback
++        one(1280, 19, nc, 0, 0, 4, 0, 2, true);  // weight pointer fallback
++        // Unaligned activations are checked by the CPU predicate only: the reference
++        // kernel also requires int4 alignment, so deliberately misaligning it is invalid.
++    }
++    for (const auto& cols : {std::pair<int,int>{1,5}, {2,5}, {2,16}, {8,9}})
++        one(1280, 33, cols.first, cols.second, 16, 0, 0, 2, true);
++    for (int pattern = 1; pattern <= 4; ++pattern)
++        for (int nc : {1, 16}) one(5120, 17, nc, 0, 16, 0, 0, 1, false, pattern);
++    std::printf("Q5_K IMMA correctness: %d cases, failures so far %d\n", cases, g_fail);
++}
++
++// Exercise the public GGUF GEMV's active batched-Q8 rounding before candidate dispatch.
++void test_mv_imma_q8(cudaStream_t s) {
++    const char* batch = std::getenv("STRATA_DS4_Q8_BATCH");
++    const char* check = std::getenv("DS4_Q8_CHECK");
++    if (batch == nullptr || std::strcmp(batch, "1") || check == nullptr || std::strcmp(check, "1")) {
++        std::fprintf(stderr, "IMMA gate requires STRATA_DS4_Q8_BATCH=1 and DS4_Q8_CHECK=1\n");
++        ++g_fail; return;
++    }
++    int cases = 0;
++    for (int k : {1280, 5120})
++        for (int nc : {1, 2, 5, 8, 9, 16}) {
++            const int n = 33, ycs = n + 3, xcs = k + 8;
++            auto weights = q_rand(gg::iq::kQ5_K, n, k);
++            std::vector<float> x((size_t) xcs * nc), initial((size_t) ycs * nc + 8, 987.25f);
++            for (auto& v : x) v = frand();
++            auto dw = dev(weights); auto dx = dev(x); auto dy = dev(initial);
++            x3::Mat m; m.fmt = gg::kFmtGG; m.gg_type = gg::iq::kQ5_K;
++            m.raw = dw; m.k = k; m.n = n;
++            x3::MvJob j; j.m = &m; j.xf = dx; j.y = dy; j.ncol = nc;
++            j.xf_cs = xcs; j.y_cs = ycs;
++            std::vector<float> want;
++            bool ok = true;
++            for (int on = 0; on < 2; ++on) {
++                CU(cudaMemcpyAsync(dy, initial.data(), initial.size()*sizeof(float), cudaMemcpyHostToDevice, s));
++                gg::iq::set_imma(on ? 2 : 0);
++                if (!gg::mv(&j, 1, s)) ok = false;
++                CU(cudaStreamSynchronize(s));
++                auto got = host(dy, initial.size());
++                if (!on) want = got;
++                else {
++                    const auto counts = gg::iq::imma_test_counts();
++                    ok = ok && std::memcmp(want.data(), got.data(), got.size()*sizeof(float)) == 0 &&
++                         counts.ng1 == (unsigned) (nc >= 2 && nc <= 8) &&
++                         counts.ng2 == (unsigned) (nc > 8) && counts.fallback == (unsigned) (nc == 1);
++                }
++                for (size_t i = 0; i < got.size(); ++i)
++                    if (i >= (size_t) ycs * nc || i % ycs >= (size_t) n) ok = ok && got[i] == 987.25f;
++                    else ok = ok && std::isfinite(got[i]);
++            }
++            gg::iq::set_imma(0); ++cases;
++            if (!ok) { ++g_fail; std::printf("IMMA Q8 FAIL k=%d columns=%d\n", k, nc); }
++            cudaFree(dw); cudaFree(dx); cudaFree(dy);
++        }
++    std::printf("Q5_K IMMA Q8-batch integration: %d cases, failures so far %d\n", cases, g_fail);
++}
++
+ struct QExperts {
+     int D, F, n_exp, tg, td;
+     x3::ExpertLayout lay;
+@@ -2140,6 +2276,32 @@
+ }
+ 
+ int main(int argc, char** argv) {
++    if (argc >= 2 && std::strcmp(argv[1], "--imma-check") == 0) {
++        if (argc != 3) return 2;
++        const int device = gg::iq::imma_check_device(argv[2]);
++        if (device < 0) return 2;
++        const char* batch = std::getenv("STRATA_DS4_Q8_BATCH");
++        const char* check = std::getenv("DS4_Q8_CHECK");
++        if (!gg::iq::imma_check_q8(batch, check)) {
++            std::fprintf(stderr, "IMMA gate requires Q8 batch/check 1/1 before CUDA setup\n"); return 2;
++        }
++        cudaDeviceProp prop;
++        CU(cudaGetDeviceProperties(&prop, device));
++        if (prop.major < 8) { std::fprintf(stderr, "IMMA check requires sm_80+\n"); return 2; }
++        CU(cudaSetDevice(device));
++        cudaStream_t stream;
++        CU(cudaStreamCreate(&stream));
++        if (!gg::prepare(stream)) return 1;
++        std::string q8_error;
++        if (!gg::q8_batch() || !gg::q8_batch_check(device, q8_error)) {
++            std::fprintf(stderr, "Q8 batch/check failed: %s\n", q8_error.c_str()); return 1;
++        }
++        test_mv_imma(stream);
++        test_mv_imma_q8(stream);
++        CU(cudaStreamDestroy(stream));
++        std::printf("device %d: %s (%d failed)\n", device, g_fail ? "FAILED" : "ALL OK", g_fail);
++        return g_fail ? 1 : 0;
++    }
+     cudaStream_t s;
+     CU(cudaStreamCreate(&s));
+     if (!gg::prepare(s)) return 1;
+--- /dev/null
++++ b/src/ds4/ds4_q5k_imma_policy.hpp
+@@ -0,0 +1,24 @@
++// CPU-visible dispatch policy for the opt-in Q5_K int8 tensor-core candidate.
++// This is also called by mv_nc; tests exercise its actual per-job predicate.
++#pragma once
++#include <cstddef>
++#include <cstdint>
++#include <cstring>
++
++namespace strata::ds4::gguf::iq {
++inline int imma_check_device(const char* value) {
++    if (value == nullptr) return -1;
++    if (std::strcmp(value, "0") == 0) return 0;
++    if (std::strcmp(value, "1") == 0) return 1;
++    return -1;
++}
++inline bool imma_check_q8(const char* batch, const char* check) {
++    return batch != nullptr && check != nullptr &&
++           std::strcmp(batch, "1") == 0 && std::strcmp(check, "1") == 0;
++}
++constexpr bool q5k_imma_job_ok(std::uintptr_t weights, std::size_t row_bytes,
++                              std::uintptr_t activations, int columns, int min_columns) {
++    return min_columns > 0 && min_columns <= 16 && columns >= min_columns && columns <= 16 &&
++           (weights & 15u) == 0 && row_bytes % 16 == 0 && (activations & 7u) == 0;
++}
++}
+--- /dev/null
++++ b/tests/ds4_q5k_imma_policy_test.cpp
+@@ -0,0 +1,39 @@
++// No CUDA, model, network, or timing assertions: exercise the actual dispatch predicate.
++#include "../src/ds4/ds4_q5k_imma_policy.hpp"
++#include <cstdio>
++#include <cstdlib>
++using strata::ds4::gguf::iq::q5k_imma_job_ok;
++static int checks = 0;
++static void check(bool value) {
++    ++checks;
++    if (!value) { std::fprintf(stderr, "dispatch policy failed at check %d\n", checks); std::exit(1); }
++}
++int main() {
++    const char* devices[] = {nullptr, "", "0", "1", "00", "01", "1junk", "-1", "2", "+1", " 1", "1 ", "bad"};
++    const int expected[] = {-1, -1, 0, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
++    for (int i = 0; i < 13; ++i)
++        check(strata::ds4::gguf::iq::imma_check_device(devices[i]) == expected[i]);
++    const char* values[] = {nullptr, "", "0", "1", "01"};
++    for (int i = 0; i < 5; ++i)
++        for (int j = 0; j < 5; ++j)
++            check(strata::ds4::gguf::iq::imma_check_q8(values[i], values[j]) == (i == 3 && j == 3));
++    for (int threshold = -1; threshold <= 18; ++threshold)
++        for (int columns = -1; columns <= 18; ++columns) {
++            const bool wanted = threshold >= 1 && threshold <= 16 &&
++                                columns >= threshold && columns <= 16;
++            check(q5k_imma_job_ok(0x1000, 176 * 20, 0x2000, columns, threshold) == wanted);
++        }
++    for (int offset = 1; offset < 16; ++offset)
++        check(!q5k_imma_job_ok(0x1000 + offset, 3520, 0x2000, 4, 2));
++    for (int offset = 1; offset < 8; ++offset)
++        check(!q5k_imma_job_ok(0x1000, 3520, 0x2000 + offset, 4, 2));
++    for (int padding = 1; padding < 16; ++padding)
++        check(!q5k_imma_job_ok(0x1000, 3520 + padding, 0x2000, 4, 2));
++    check(q5k_imma_job_ok(0x1000, 3536, 0x2000, 16, 2));
++    // A mixed batch may launch only if every job qualifies, including its smallest count.
++    check(!(q5k_imma_job_ok(0x1000, 3520, 0x2000, 1, 2) &&
++            q5k_imma_job_ok(0x3000, 3520, 0x4000, 5, 2)));
++    check(q5k_imma_job_ok(0x1000, 3520, 0x2000, 2, 2) &&
++          q5k_imma_job_ok(0x3000, 3520, 0x4000, 5, 2));
++    std::printf("Q5_K IMMA dispatch policy: %d checks passed\n", checks);
++}
