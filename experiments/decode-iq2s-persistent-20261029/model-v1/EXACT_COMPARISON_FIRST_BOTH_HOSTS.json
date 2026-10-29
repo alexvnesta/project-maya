@@ -1,0 +1,65 @@
+{
+  "decision": "HOLD_TOKEN_PATH_DIFFERS",
+  "scope": "FIRST unchanged strict compare_matched operation EACH physical host, source/program/input/caseIDs match; no timing/retry/promotion",
+  "utc": "2026-10-29T15:10:37.328124+00:00",
+  "hosts": {
+    "darwin": {
+      "child_pid": 33998,
+      "exit0": true,
+      "result": {
+        "id": "cold-text",
+        "passed": false,
+        "retry": false,
+        "status": "HOLD_TOKEN_PATH_DIFFERS"
+      },
+      "raw_sha256": {
+        "child.json": "da22bc3029770fa2f8e36a474b2540c1d99f35e76c9de8a249ec7b123889d7dc",
+        "child.log": "4f1aef199159f2fbd0f3ad500445708ce5bcde5fe0b05de9ce6564fcd8f10683",
+        "result.json": "9d6c79d5c54e07d3508008ddb27dc3060613492c04aeb31e51d9e7e75a3e990d"
+      }
+    },
+    "linux": {
+      "child_pid": 2086379,
+      "exit0": true,
+      "result": {
+        "id": "cold-text",
+        "passed": false,
+        "retry": false,
+        "status": "HOLD_TOKEN_PATH_DIFFERS"
+      },
+      "raw_sha256": {
+        "child.json": "1c33b018fee21309a13e1964fcf8f1575b1e6afabb49a98ff92a595d6cd2e283",
+        "child.log": "4f1aef199159f2fbd0f3ad500445708ce5bcde5fe0b05de9ce6564fcd8f10683",
+        "result.json": "9d6c79d5c54e07d3508008ddb27dc3060613492c04aeb31e51d9e7e75a3e990d"
+      }
+    }
+  },
+  "comparison_contract": {
+    "program_sha256": "7e4f8ec136db25d1251b5a219dbb6770efbc2758c377b41933f461b685a9f8c4",
+    "source_sha256": {
+      "iq2s_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+      "qualify_iq2s_numerical_cpu.py": "66f5e2b454739c5ac21d4d33b1925b8a71d9cfefe00c41f7aeee4c855dc85e95",
+      "../../model-v1/imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+      "../../model-v1/imma_config.py": "18691963f89027fd169877c0cd6307f54954de1353a577d4c8935c015ea84986",
+      "../../model-v1/imma_fixtures.py": "c70d008d3277166b8ff5276f22cb4547ab76a6688eab4647ff2d1a024ec89e4a",
+      "../../model-v1/imma_storage.py": "d03c8f6d69e198e648014b15a00a4a7c3dd986815dac4a391b747924239e0143"
+    },
+    "input_sha256": {
+      "N0/terminal-audit.json": "4a793c999370cef9d875edfe8056caad888904b4f99fe3d9c707d191b56a28c6",
+      "N1/terminal-audit.json": "2d200394641470c7190975aa4aabf5f49f5ef8dc05218a48529738a9ec02ca56"
+    },
+    "case_ids": [
+      "cold-text",
+      "rewind-text",
+      "two-images",
+      "restore-text"
+    ]
+  },
+  "source_plan_sha256": "e2058f7c0891d1e1a691ac373d0e8f854719ba3cf5e286d942e4e945ed980045",
+  "speed_or_promotion_admitted": false,
+  "N0_replay": false,
+  "N1_replay": false,
+  "cause": "UNKNOWN; different token paths do not establish causal mechanism or broad quality regression",
+  "correct_synthetic_answers_each_arm": 4,
+  "selected_production_preserved": true
+}

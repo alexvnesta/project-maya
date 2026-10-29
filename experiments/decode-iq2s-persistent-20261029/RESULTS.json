@@ -1,5 +1,5 @@
 {
-  "snapshot_utc": "2026-10-29T14:44:26.806201+00:00",
+  "snapshot_utc": "2026-10-29T15:16:38.023014+00:00",
   "candidate_scope": "Isolated IQ2_S token/window persistent scheduling from Maya1.1.37 around selected original arithmetic; bulkupdate/IMMA/lightprompts/IQ1/CPU/model/API excluded.",
   "candidate_native_sha256": "da28ca8b108048990f5950e76909cccacacb9f921d8e37fad9f16b440bb513a6",
   "candidate_deployed": false,
@@ -17,14 +17,14 @@
     "exact_source_files": 11,
     "input_maps": 931,
     "model_windows": {
-      "N0": "COMPLETE_RESTORED_FULLY_REVIEWED",
-      "N1": "UNRUN"
+      "N0": "COMPLETE_FULLY_REVIEWED",
+      "N1": "COMPLETE_FULLY_REVIEWED"
     },
     "independent_raw_review": "FIRST_109_BOTH_HOST_CPU_PROOF_REVIEWED_NO_MODEL_ADMISSION",
     "qualification_sha256": "11deaac7b10b7d53bd988acff210136b5e2107d533d1a13e28c315037810113e",
     "qualification_files": 2198,
     "actual_preflight": "READ_ONLY_PREFLIGHT_PASS_2199_CHECKS",
-    "launch": "DEFERRED_BUSY_UNTOUCHED_TWICE_NO_ARM_ATTEMPT"
+    "launch": "TWO_SEPARATE_IDLE_ADMISSIONS_COMPLETED_NO_REPLAY"
   },
   "production_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
   "production_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
@@ -39,7 +39,7 @@
     "kernel_fault_lines": []
   },
   "known_compiler_cost": "Persistent gate NE4/8 each have8Bstack/spillstores+loads; no speed inference.",
-  "lifecycle_limit": "KernelhasnoprivateAPIchild. Oldnativeclose0/userAPIstopjobdone; independenthistoricalAPIprocessstatusunobserved. ProspectiveunqualifiedmodelsourcecapturesrawboundoldunitandprivateAPI/native/window0.",
+  "lifecycle_limit": "Historical kernel window had no private API and did not independently capture old hosted API process exit status; not retrofitted. Later distinct N0/N1 model windows prospectively captured their own old hosted API/native and private API/native/window clean exits.",
   "historical_window_metadata": "InheritedGLMfields describeoldrootwindow state; thisrun didnotactivateGLM/Qwen. SelectedDeepSeekrestoredandpublicREADY/stop/DONEverified.",
   "unqualified_claims": [
     "Wholemodel equivalence",
@@ -51,7 +51,7 @@
   "original_IMMA": "HOLD_TOKEN_PATH_DIFFERS unchanged; separateclosedcandidate, notrerun/regraded.",
   "reproducibility": "Source/receipt snapshot requires originalqualifiedoperatorworkspace/assets. Absolutepins areprovenance, notaninstaller. No nativebinaries/modelweights/usercache oruserprompts included.",
   "archive_whitespace": "Verbatim qualified source/receipt bytes retained. git diff --check reported only extra blank EOF lines in7 archived Python files; no normalization after qualification.",
-  "last_lightweight_identity_observation": "2026-10-29T13:57:51.536577+00:00",
+  "last_lightweight_identity_observation": "2026-10-29T15:11:32.772729+00:00",
   "whole_model_numerical": {
     "N0_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
     "N0_native_pid": 2022226,
@@ -83,10 +83,54 @@
     "N0_root_min_GiB": 838.3350257873535,
     "N0_swapout_delta_bytes": 0,
     "N0_kernel_fault_lines": [],
-    "restored_selected_native_pid_dated_snapshot": 2026722,
-    "N1_actual_preflight": "2199_CHECKS_PASS_NO_ARM_ADMITTED_YET",
-    "N1_model_run": false,
+    "restored_selected_native_pid_dated_snapshot": 2041169,
+    "N1_actual_preflight": "2199_CHECKS_PASS_THEN_SEPARATELY_ADMITTED_AND_COMPLETED",
+    "N1_model_run": true,
     "speed_claim": false,
-    "scope": "Baseline numerical acquisition only; no candidate equivalence or timing claim. Prospective old API/native closure passed separately; historical kernel API gap unchanged."
-  }
+    "scope": "Two numerical acquisitions and both-host strictHOLD only; no candidate equivalence, numerical error cause, quality-regression or timing claim. Prospective old API/native closure passed in each arm; historical kernel API gap unchanged.",
+    "N1_native_pid": 2038276,
+    "N1_API_pid": 2038240,
+    "N1_window": "20261029T144639Z.json",
+    "N1_all_native_API_window_exit0": true,
+    "N1_independent_terminal_audit_sha256": "2d200394641470c7190975aa4aabf5f49f5ef8dc05218a48529738a9ec02ca56",
+    "N1_astra_result_review_sha256": "256b463d48af7f2e2764b22153786dd33dc5269f4da7557653200abb78407890",
+    "N1_four_typed_answers_correct_natural": true,
+    "N1_reuse": [
+      0,
+      8465,
+      0,
+      8465
+    ],
+    "N1_generated": [
+      157,
+      185,
+      96,
+      181
+    ],
+    "N1_finite_rows": [
+      169,
+      199,
+      113,
+      195
+    ],
+    "N1_finite_bytes": 349573120,
+    "N1_root_min_GiB": 837.9508094787598,
+    "N1_swapout_delta_bytes": 0,
+    "N1_kernel_fault_lines": []
+  },
+  "outcome": "HOLD_TOKEN_PATH_DIFFERS",
+  "strict_comparison": {
+    "each_host": "FIRST_CHILD_EXIT0_DATA_HOLD_TOKEN_PATH_DIFFERS",
+    "first_case": "cold-text",
+    "passed": false,
+    "retry": false,
+    "source_maps": 6,
+    "terminal_input_maps": 2,
+    "case_ids": 4,
+    "plan_sha256": "e2058f7c0891d1e1a691ac373d0e8f854719ba3cf5e286d942e4e945ed980045",
+    "final_astra_review_sha256": "6c181cf865d5dd01cfc166c986164ecd00dbc95533875ce0850de12728342e6d",
+    "timing_replication_activation": "UNRUN_BLOCKED",
+    "no_later_logit_acceptance_after_first_token_divergence": true
+  },
+  "idle_followup": "DELETED_AFTER_CLOSED_HOLD"
 }
