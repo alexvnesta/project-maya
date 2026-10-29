@@ -1,0 +1,125 @@
+{
+  "sha": "c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc",
+  "node_id": "C_kwDOU-xXotoAKGM1ZmZiOTc0MDc5ZTc1YTNhN2MwNDFmZTMyZjliY2NmNmE4OGI4Y2M",
+  "commit": {
+    "author": {
+      "name": "mw00",
+      "email": "mw00@users.noreply.github.com",
+      "date": "2026-10-29T02:52:57Z"
+    },
+    "committer": {
+      "name": "mw00",
+      "email": "mw00@users.noreply.github.com",
+      "date": "2026-10-29T03:58:37Z"
+    },
+    "message": "DeepSeek: the persistent i-quant grids by default only on compute capability 8.0 and up (a V100 is about 2% slower with them)",
+    "tree": {
+      "sha": "3392b1f0345815917fb2378341d148e475bcf017",
+      "url": "https://api.github.com/repos/mw00/project-maya/git/trees/3392b1f0345815917fb2378341d148e475bcf017"
+    },
+    "url": "https://api.github.com/repos/mw00/project-maya/git/commits/c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/mw00/project-maya/commits/c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc",
+  "html_url": "https://github.com/mw00/project-maya/commit/c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc",
+  "comments_url": "https://api.github.com/repos/mw00/project-maya/commits/c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc/comments",
+  "author": {
+    "login": "mw00",
+    "id": 14845178,
+    "node_id": "MDQ6VXNlcjE0ODQ1MTc4",
+    "avatar_url": "https://avatars.githubusercontent.com/u/14845178?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mw00",
+    "html_url": "https://github.com/mw00",
+    "followers_url": "https://api.github.com/users/mw00/followers",
+    "following_url": "https://api.github.com/users/mw00/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mw00/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mw00/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mw00/subscriptions",
+    "organizations_url": "https://api.github.com/users/mw00/orgs",
+    "repos_url": "https://api.github.com/users/mw00/repos",
+    "events_url": "https://api.github.com/users/mw00/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mw00/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "mw00",
+    "id": 14845178,
+    "node_id": "MDQ6VXNlcjE0ODQ1MTc4",
+    "avatar_url": "https://avatars.githubusercontent.com/u/14845178?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mw00",
+    "html_url": "https://github.com/mw00",
+    "followers_url": "https://api.github.com/users/mw00/followers",
+    "following_url": "https://api.github.com/users/mw00/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mw00/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mw00/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mw00/subscriptions",
+    "organizations_url": "https://api.github.com/users/mw00/orgs",
+    "repos_url": "https://api.github.com/users/mw00/repos",
+    "events_url": "https://api.github.com/users/mw00/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mw00/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "d97630634fce72162dfc69d1a04360f0483b934d",
+      "url": "https://api.github.com/repos/mw00/project-maya/commits/d97630634fce72162dfc69d1a04360f0483b934d",
+      "html_url": "https://github.com/mw00/project-maya/commit/d97630634fce72162dfc69d1a04360f0483b934d"
+    }
+  ],
+  "stats": {
+    "total": 42,
+    "additions": 31,
+    "deletions": 11
+  },
+  "files": [
+    {
+      "sha": "667b1d6609b9c8939762b07191aea217df96b7ce",
+      "filename": "docs/SETTINGS.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/mw00/project-maya/blob/c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc/docs%2FSETTINGS.md",
+      "raw_url": "https://github.com/mw00/project-maya/raw/c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc/docs%2FSETTINGS.md",
+      "contents_url": "https://api.github.com/repos/mw00/project-maya/contents/docs%2FSETTINGS.md?ref=c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc",
+      "patch": "@@ -906,7 +906,7 @@ other types, MiniMax's kernels and AMD (HIP) are unchanged.\n \n | Setting | Default | |\n | --- | --- | --- |\n-| `MAYA_DS4_IQ_PERSIST` | on (CUDA) | `0`: the full grids for IQ1_S / IQ1_M / IQ2_S as before (a block a tile, each loading the codebook); the same answers. `DS4_IQ_RP=4` or `DS4_IQ_AHEAD=1` also keep the full grids for the IQ1 types' token kernels |\n+| `MAYA_DS4_IQ_PERSIST` | on (CUDA, compute capability 8.0 and up) | `0`: the full grids for IQ1_S / IQ1_M / IQ2_S as before (a block a tile, each loading the codebook); the same answers; `1` turns them on for older cards too (a V100 runs about 2% slower with them). `DS4_IQ_RP=4` or `DS4_IQ_AHEAD=1` also keep the full grids for the IQ1 types' token kernels |\n \n ## DeepSeek: IQ4_NL experts\n "
+    },
+    {
+      "sha": "65f1e4abe124b8cf7d079055e33653f46b95dcf0",
+      "filename": "src/ds4/ds4_iq.cu",
+      "status": "modified",
+      "additions": 28,
+      "deletions": 9,
+      "changes": 37,
+      "blob_url": "https://github.com/mw00/project-maya/blob/c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc/src%2Fds4%2Fds4_iq.cu",
+      "raw_url": "https://github.com/mw00/project-maya/raw/c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc/src%2Fds4%2Fds4_iq.cu",
+      "contents_url": "https://api.github.com/repos/mw00/project-maya/contents/src%2Fds4%2Fds4_iq.cu?ref=c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc",
+      "patch": "@@ -1392,17 +1392,34 @@ const Iq1Var& iq1_var() {\n     return v;\n }\n \n-// the persistent grids (kPersist): DS4_IQ_PERSIST (MAYA_DS4_IQ_PERSIST, read as STRATA_DS4_IQ_PERSIST), on unless 0;\n-// set_persist over it (tests)\n+// the persistent grids (kPersist): DS4_IQ_PERSIST (MAYA_DS4_IQ_PERSIST, read as STRATA_DS4_IQ_PERSIST): 0 off, 1 on,\n+// unset: on for a device of compute capability 8.0 and up (measured about 2% slower on a V100); set_persist over it (tests)\n std::atomic<int> g_persist_set{-1};\n #if DS4_IQ_PERSIST_BUILD\n-bool persist_env() {\n-    static const bool on = [] {\n-        const char* v = std::getenv(\"STRATA_DS4_IQ_PERSIST\");\n-        if (v == nullptr) v = std::getenv(\"DS4_IQ_PERSIST\");\n-        return v == nullptr || std::atoi(v) != 0;\n+int persist_env() {   // -1: not set\n+    static const int v = [] {\n+        const char* e = std::getenv(\"STRATA_DS4_IQ_PERSIST\");\n+        if (e == nullptr) e = std::getenv(\"DS4_IQ_PERSIST\");\n+        return e == nullptr ? -1 : (std::atoi(e) != 0 ? 1 : 0);\n     }();\n-    return on;\n+    return v;\n+}\n+// the current device's default: compute capability 8.0 and up\n+bool persist_dev_default() {\n+    static std::atomic<signed char> known[64];   // 0: not asked yet, 1: off, 2: on\n+    int dev = 0;\n+    if (cudaGetDevice(&dev) != cudaSuccess || dev < 0 || dev >= 64) { (void) cudaGetLastError(); return false; }\n+    int v = known[dev].load(std::memory_order_relaxed);\n+    if (v == 0) {\n+        int major = 0;\n+        if (cudaDeviceGetAttribute(&major, cudaDevAttrComputeCapabilityMajor, dev) != cudaSuccess) {\n+            (void) cudaGetLastError();\n+            return false;\n+        }\n+        v = major >= 8 ? 2 : 1;\n+        known[dev].store((signed char) v, std::memory_order_relaxed);\n+    }\n+    return v == 2;\n }\n #endif\n // the token kernels' persistent form: their plain variant (RP 1, no early loads - DS4_IQ_RP=4 / DS4_IQ_AHEAD=1 keep\n@@ -1714,7 +1731,9 @@ bool persist_on() {\n     return false;\n #else\n     const int t = g_persist_set.load(std::memory_order_relaxed);\n-    return t >= 0 ? t != 0 : persist_env();\n+    if (t >= 0) return t != 0;\n+    const int e = persist_env();\n+    return e >= 0 ? e != 0 : persist_dev_default();\n #endif\n }\n void set_persist(int on) { g_persist_set.store(on < 0 ? -1 : on != 0 ? 1 : 0, std::memory_order_relaxed); }"
+    },
+    {
+      "sha": "8719f66163eb3554a81689597c744de3a7170ad6",
+      "filename": "src/ds4/ds4_iq.cuh",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1,
+      "changes": 3,
+      "blob_url": "https://github.com/mw00/project-maya/blob/c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc/src%2Fds4%2Fds4_iq.cuh",
+      "raw_url": "https://github.com/mw00/project-maya/raw/c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc/src%2Fds4%2Fds4_iq.cuh",
+      "contents_url": "https://api.github.com/repos/mw00/project-maya/contents/src%2Fds4%2Fds4_iq.cuh?ref=c5ffb974079e75a3a7c041fe32f9bccf6a88b8cc",
+      "patch": "@@ -156,7 +156,8 @@ bool decode_values(int type, const uint8_t* w, int k, int n, float* sub, float*\n /// IQ1_M, IQ2_S: 8 KiB and more), maya-ds4's on CUDA: a grid of the blocks the device holds at once, each block loading\n /// its codebook once and taking work items (a group, a tile of rows) round it - IQ1_M's codes then from a table of 4096\n /// entries (ds4_iq1_codes.hpp).  Each output the same lanes' sums in the same order as the full grid's: the same bits.\n-/// DS4_IQ_PERSIST=0 (MAYA_DS4_IQ_PERSIST): the full grids, as before (HIP and maya-mm3: always).  (tests)\n+/// DS4_IQ_PERSIST=0 (MAYA_DS4_IQ_PERSIST): the full grids, as before (HIP and maya-mm3: always); unset: on for a device of\n+/// compute capability 8.0 and up, off below (a V100 is about 2% slower with them); 1: on everywhere.  (tests)\n /// set_persist(1 / 0): on / off for the calls after it, -1: the environment's again.\n bool persist_on();\n void set_persist(int on);"
+    }
+  ]
+}

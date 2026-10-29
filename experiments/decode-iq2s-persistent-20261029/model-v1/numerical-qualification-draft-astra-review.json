@@ -1,0 +1,26 @@
+{
+  "decision": "DRAFT_CANONICALIZATION_REVIEWED_MODEL_INPUT_ADDITIONS_REQUIRED_BEFORE_FREEZE",
+  "utc": "2026-10-29T13:41:13.817296+00:00",
+  "qualification_draft_sha256": "45b21157fe1ad354808e20b7a99c6c867e5ba52d0982f8445064b8b42c548953",
+  "CPU_review_sha256": "1d8f7e95dc342ae6c4a916592a1e23be277405b9b186eeac78f0fe73d6fc2cc5",
+  "canonical_file_count": 2188,
+  "recorded_alias_count": 250,
+  "original_CPU_raw_input_map_count": 931,
+  "source_count": 11,
+  "test_count": 109,
+  "checks": [
+    "Every prior GPU qualification file, all 931 raw CPU inputs and kernel prerequisite raw/review files are present after lexical normpath with identical digest.",
+    "No conflicting digest found in checked unions. Every draft file key is canonical absolute; all 250 alias records equal lexical normpath and point to a pinned canonical key.",
+    "Both raw CPU child/log/receipt sets and current source maps are included. Historical terminal kernel state is pinned; no live global STATE/PLAN or new numerical attempt registry is pinned.",
+    "No reviewed module imported; no system/remote artifact rehash performed. Local source/input hashes were checked in separate CPU report."
+  ],
+  "required_before_freeze": [
+    "Pin this final CPU review.",
+    "Add exact D/profile-seed.bin consumed by iq2s_numerical.py:176-177. The existing post-copy seed hash is a guard but preflight should verify original immutable seed before drain. Do not pin mutable live state/expert-profile.bin.",
+    "Add exact D/runtime-direction-L22.gguf (f3033...) and actual selected pack-native-vision-v1/ds4.txt (48c01d...) and tensors.txt (bc5229...) from existing model qualification/source receipts. Copied geometry is not the physical native input path.",
+    "Include selected release proof at its exact existing path, or explicitly bind source-qualified target_identity release validation in actual preflight. Do not guess release filename or retroactively claim kernel qualification covered model inputs.",
+    "Preserve original draft and metadata prewrite refusal; update only prospective metadata, leaving source/CPU proofs unchanged. Revalidate final qualification bytes and every actual pin under fresh idle/current owner guard before seeking N0 admission."
+  ],
+  "GPU_admitted": false,
+  "scope": "Metadata map review only, not a model admission or remote custody proof."
+}
