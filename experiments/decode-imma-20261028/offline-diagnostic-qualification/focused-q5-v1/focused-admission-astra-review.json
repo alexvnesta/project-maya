@@ -1,0 +1,74 @@
+{
+  "utc": "2026-10-29T11:42:45.548816+00:00",
+  "decision": "CONDITIONALLY_ADMIT_SINGLE_TWELVE_EXACT_Q5_FALLBACK_CAPTURES_ONLY",
+  "qualification_sha256": "d2ea4a2417adc8f766f210ffb51bd23e5fb1e166a18472f32cefbbe814cdcc73",
+  "evidence_sha256": {
+    "qualification.json": "d2ea4a2417adc8f766f210ffb51bd23e5fb1e166a18472f32cefbbe814cdcc73",
+    "source-review-root.json": "617d058c654a207b33c37c78dddf63ce7c1c2eeafda48c76999f96b41157f388",
+    "source-astra-review.json": "4079f9dc2afed18c21557c9bce8e265d754f1871716a990c3a13f275ea480a44",
+    "static_diagnostic.py": "152744a8e029b7e092bb268f637d5223f32cc586c4ed36aec946f5c9b0129882",
+    "test_static_diagnostic.py": "013936e0199148f81c68a00f37064432f7874bc18faf6de6b1516b69b3e4d2ff",
+    "CPU-FIRST-darwin/receipt.json": "474801cb7b62855b88ab4866847fb9801f2556affa6c205fb8a830649d2d6d4e",
+    "CPU-FIRST-darwin/child.json": "8052632f788959d2eb64726ef0edbc29493b3e8efc773cdae513e02ad312b71c",
+    "CPU-FIRST-darwin/child.log": "57aa1e73513abd19029a5b396fa8d873b38ad6a745e38f29affb810d9d2ed077",
+    "CPU-FIRST-linux/receipt.json": "474801cb7b62855b88ab4866847fb9801f2556affa6c205fb8a830649d2d6d4e",
+    "CPU-FIRST-linux/child.json": "3e9c05a7bff99b5421dec06f0e82994ff6474bf003e876967adc4849dd912650",
+    "CPU-FIRST-linux/child.log": "f0ae8045e26001d6d726703a9c24aa7a183b84c07294a7b2ea93cebdf985d383",
+    "mapping_original_local": "a58e27b923304ee3320d8bf693d0aaa1de6c4f0fd1687e063bf0df53b5504faf"
+  },
+  "source_sha256": {
+    "static_diagnostic.py": "152744a8e029b7e092bb268f637d5223f32cc586c4ed36aec946f5c9b0129882",
+    "test_static_diagnostic.py": "013936e0199148f81c68a00f37064432f7874bc18faf6de6b1516b69b3e4d2ff"
+  },
+  "CPU_review": {
+    "first_both_host_returncode": 0,
+    "exact_controls_each": 55,
+    "all_raw_test_ID_order_matches": true,
+    "receipt_payloads_identical": true,
+    "exact_resource_receipts_verified": true,
+    "scope": "Mocked focused-mode qualification only."
+  },
+  "qualification_review": {
+    "files": 1535,
+    "inherited_Python_pins_unchanged": 1510,
+    "local_current_new_sources_reviews_six_CPU_proofs_match": true,
+    "all_eight_symbol_raw_pins_match": true,
+    "selected_and_candidate_source_mapping_basis_pins_match": true,
+    "mapping_alias": "Remote focused-q5-v1/symbol-mapping-astra.json pin equals local original symbol-inventory-v1/symbol-result-and-q5-mapping-astra.json; local alias absent. Initial reviewer metadata check stopped at absent alias before report, then used exact original file, no runtime action.",
+    "actual_Ubuntu_rehash": "Required after fresh default/idle guard; no remote access by reviewer."
+  },
+  "required_action_time_binding": {
+    "invocation": "566f3d34e59c43d29bb85c00e9854edd",
+    "main_pid": 1853509,
+    "native_pid": 1853542,
+    "native_start_ticks": 152326717
+  },
+  "exact_functions": {
+    "1": {
+      "old": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi1EEEvNS3_4JobsE",
+      "candidate": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi1EEEvNS3_4JobsE"
+    },
+    "4": {
+      "old": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi4EEEvNS3_4JobsE",
+      "candidate": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi4EEEvNS3_4JobsE"
+    },
+    "16": {
+      "old": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi16EEEvNS3_4JobsE",
+      "candidate": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi16EEEvNS3_4JobsE"
+    }
+  },
+  "admitted_scope": "Single ordered NC1/4/16 x old/candidate x SASS/resources plan,12commands. Each exactly one --function with full actual object-specific symbol, sm_80 and pinned object/tool.",
+  "conditions": [
+    "Fresh current566f/native1853542/defaultDeepSeek/idle/no private-pending-stopped-build phase, root132, actual1535pins+qself/tool/object verification before reservation/command; repeat inside qualified main and eachchild.",
+    "Fresh focused-q5-v1/output-FIRST only, cooperative STATIC_Q5_FALLBACK_CAPTURE_ONLY reservation; no adoption/overwrite/retry.",
+    "Unchanged childCPU30/LinuxAS512MiB/wall90/nice15/CUDAhidden/stdout64MiB/stderr1MiB/aggregate384MiB.",
+    "Firstfault/busy/overflow/timeout stops owned childPG andremainingplan, preservesprimary/secondaryerrors, guardedpostcustody, ownreservationreleaseverified/foreignstateuntouched.",
+    "Review actual returned architecture, exactfunction and completecapture before comparison. Success is uninterpreted; resourcecommonsections may accompany selectedfunction and must remain raw."
+  ],
+  "numerical_gate": "HOLD_TOKEN_PATH_DIFFERS",
+  "not_admitted": [
+    "Whole-object SASS retry/cap increase, additionalfunctions/flags, parser/name normalization or equality claims.",
+    "Compiler/GPU/model/performance/privatewindow/servicechanges/promotion/replay."
+  ],
+  "reviewer_actions": "Local evidence/source/hash-map reads and report only; no reviewedmodule/test/tool/remote execution."
+}

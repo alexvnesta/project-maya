@@ -1,0 +1,99 @@
+{
+  "utc": "2026-10-29T11:15:36.864403+00:00",
+  "tensors_metadata_sha256": "bc5229fa509356053d07bbcc97e1245f05ac29934c9f92605b21659b4675c966",
+  "tensor_counts_by_exact_type": {
+    "IQ2_XXS": 29184,
+    "IQ2_S": 6144,
+    "IQ2_XS": 10368,
+    "IQ3_XXS": 384,
+    "Q5_K": 524,
+    "F32": 531,
+    "Q8_0": 126,
+    "BF16": 339,
+    "IQ4_NL": 2,
+    "MXFP4": 1152
+  },
+  "routed_expert_tensor_counts": {
+    "IQ2_XXS": 29184,
+    "IQ2_S": 6144,
+    "IQ2_XS": 10368,
+    "IQ3_XXS": 384,
+    "MXFP4": 1152
+  },
+  "routed_expert_layers_by_type": {
+    "IQ2_XXS": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      21,
+      22,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      39
+    ],
+    "IQ2_S": [
+      8,
+      10,
+      16,
+      17,
+      21,
+      22,
+      24,
+      25,
+      30,
+      32,
+      38,
+      39
+    ],
+    "IQ2_XS": [
+      9,
+      11,
+      12,
+      14,
+      17,
+      18,
+      23,
+      24,
+      26,
+      27,
+      28,
+      29,
+      31,
+      34,
+      38
+    ],
+    "IQ3_XXS": [
+      23
+    ]
+  },
+  "selected_binding": {
+    "invocation": "566f3d34e59c43d29bb85c00e9854edd",
+    "main_pid": 1853509,
+    "native_pid": 1853542,
+    "native_start_ticks": 152326717
+  },
+  "scope": "Metadata only, no weights or GPU execution. Tensor inventory does not prove actual routed traffic or GPU residency."
+}

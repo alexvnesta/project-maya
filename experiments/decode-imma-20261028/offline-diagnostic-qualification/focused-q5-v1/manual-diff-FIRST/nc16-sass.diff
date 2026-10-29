@@ -1,0 +1,20 @@
+--- /Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/focused-q5-v1/output-FIRST/old-q5-nc16-sass.stdout	2026-10-29 07:47:35
++++ /Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/focused-q5-v1/output-FIRST/candidate-q5-nc16-sass.stdout	2026-10-29 07:47:36
+@@ -6,7 +6,7 @@
+ host = linux
+ compile_size = 64bit
+ compressed
+-ptxasOptions = 
++ptxasOptions = -v  
+ 
+ Fatbin elf code:
+ ================
+@@ -16,7 +16,7 @@
+ compile_size = 64bit
+ 
+ 	code for sm_80
+-		Function : _ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi16EEEvNS3_4JobsE
++		Function : _ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi16EEEvNS3_4JobsE
+ 	.headerflags	@"EF_CUDA_64BIT_ADDRESS EF_CUDA_SM80 EF_CUDA_VIRTUAL_SM(EF_CUDA_SM80)"
+ 	.headerflags	@"EF_CUDA_64BIT_ADDRESS EF_CUDA_SM80 EF_CUDA_VIRTUAL_SM(EF_CUDA_SM80)"
+         /*0000*/                   MOV R1, c[0x0][0x28] ;                          /* 0x00000a0000017a02 */

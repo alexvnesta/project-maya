@@ -1,0 +1,133 @@
+{
+  "utc": "2026-10-29T06:52:39.136559+00:00",
+  "decision": "INITIAL_COLD_ROW_IDENTICAL_NUMERICAL_GATE_REMAINS_HOLD_OFFLINE_DIAGNOSTIC_ONLY",
+  "evidence_sha256": {
+    "offline-first-rows-FIRST.json": "f93fcc06b65e023b6556e717c922f3cc2ed6111f6d8a1db0397637c295b3857a",
+    "offline-first-rows-FIRST-child/child.json": "6bb7ef141634c123d19a3716373949556f8379f2fdec990f1152fc12967a6fdf",
+    "offline-first-rows-FIRST-child/child.log": "7bd29b5e9475a27362c4e614e607e4ac85bff4c5c9d065558497bdfeadeb7a35",
+    "N0/terminal-audit.json": "38ddffeb11a706bd70501a24cad3b95aaea043dbc8f4c63da7364f8e3d093bf3",
+    "N1/terminal-audit.json": "b0ea37f38e02e6421dbaf4fcd384faffdace18661b8dae7268b7641ecd2f3d31",
+    "N1/result-astra-review.json": "5f3a451e08eaa413d30121f649ec155de9f47bcf6235f3e590681faaf327bd90",
+    "numerical-comparison-FIRST-darwin.json": "53efef66ae3ef50034a0f280ee4191238c75b943e85622f6c002bafe547c654e",
+    "numerical-comparison-FIRST-linux.json": "ed5f260f443bd27b691ae53e6b450b6b680a63af76c943bd6dd6342db97f5529",
+    "numerical-qualification.json": "6eb179b8b7edb7a87133c4e24bd99dc2f35863cfe6ef56f8385590bf50c6315b"
+  },
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/candidate/src/ds4/ds4_main.cpp": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/candidate/src/ds4/ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-candidate/src/ds4/ds4_iq.cu": "2192b5b19346c42919b0516da649d1bd82795ba523598a3b469848c9654d6616",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/prepare-r2/prepare-inputs.json": "e5d2cf39632c2ea8465a63de7465c0e53c3aae67a1f8e29179eb015724e11ea4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/receipt.json": "1c599ae62072762c029c8d22df6fc4e16f58ff4852d4afe9a357b09d982de84c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/plan.json": "e8f7175fd142ae15bb9d2237e12b7301e3fc90c2b0cbc6d70b854e63c7f7e3e5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-candidate-source.json": "1a0703ae84523238c78efa95bd339efa8e4059ddcf14a52e5b60912eb654095d"
+  },
+  "diagnostic_review": {
+    "FIRST_offline_child_exit0": true,
+    "CPU_seconds": 30,
+    "Linux_AS_MiB": 512,
+    "wall_seconds": 90,
+    "nice": 15,
+    "CUDA_hidden": true,
+    "source_helper_hash_matches_frozen_q": true,
+    "exact_slice_count": 8,
+    "bytes_per_slice": 517120,
+    "total_input_bytes": 4136960,
+    "offsets_all_zero": true,
+    "cold_initial_row_byte_equal": true,
+    "cold_initial_row_sha256": "be433d045addf8b4035db0add554a524724d16d285e348a84d5e189cdae2a83a",
+    "cold_centered_RMS_and_TV": 0,
+    "secondary_centered_RMS": [
+      0.1793937605850809,
+      0.6176961240660636,
+      3.7297387880265956e-07
+    ],
+    "full_dump_rehash_by_reviewer": false,
+    "scope": "Receipt review; parent executed bounded existing-row diagnostic. Exact full-dump identities remain bound by prior terminal audits, not inferred from slice SHA."
+  },
+  "interpretation": [
+    "Cold prompt-head output is identical before sampling, and both first emitted tokens are2581. First observed emitted-path difference is zero-based token16. The present data do not locate the first arithmetic/hidden-state difference.",
+    "Identical final prompt logits do not imply identical KV, residual streams, Engram state, drafter taps or drafter confidences. The two native processes may reach different draft proposals or batch shapes while sharing emitted target prefix.",
+    "Later request RNG starts depend on persistent serve counter; that is not an explanation for first cold divergence. Secondary pre-sample logit differences are genuine raw differences, not caused directly by RNG sampling of that row; preceding cache/routing/history and compiled dispatch remain confounders.",
+    "Speculative sampling uses draft-dependent acceptance/residual paths. Distribution-preserving sampling does not guarantee sample-by-sample identity for changed draft proposals, even with equal seed and target distribution. The frozen stricter exact-token/logit/native-path gate nevertheless remains failed."
+  ],
+  "ranked_next_steps": [
+    {
+      "rank": 1,
+      "kind": "Smallest additional offline slice, separately bounded source-reviewed reader",
+      "data": "ONLY N0 andN1 cold-text logits.1.f32 row1: offset517120,length517120 each; total1034240bytes. Preserve row0 result and original HOLD.",
+      "source_framing": [
+        {
+          "file": "ds4_main.cpp",
+          "lines": [
+            875,
+            890,
+            931,
+            946
+          ],
+          "meaning": "Initial final prompt feed asks for1row; writes exactly that initial row before first sample."
+        },
+        {
+          "file": "ds4_main.cpp",
+          "lines": [
+            208,
+            235,
+            1029,
+            1041
+          ],
+          "meaning": "First decode round consumes first emitted token y2581. It either step(y,true) or verify(y,drafts); then dump_rows executes once."
+        },
+        {
+          "file": "ds4_model.cu",
+          "lines": [
+            9353,
+            9362,
+            9418,
+            9432,
+            9492,
+            11322,
+            11357,
+            12092,
+            12102
+          ],
+          "meaning": "Verification forward input begins[y,drafts], n_logits=T. Rollback changes retained positions/rings but does not reorder or truncate logits. First serialized row is target output at y, even when following speculative rows are unaccepted. Plain step gives the same semantic position with T1."
+        }
+      ],
+      "limits": "This row has the same supplied target prefix but possibly different batch width/speculative proposal path and internal state; any difference localizes a post-prefill computation difference, not necessarily IMMA fault. Equality does not locate later failure. No arbitrary row2+ mapping or extension across the first emitted divergence.",
+      "metrics": "Exact bytes/value equality, unequal count/first index and descriptive max/RMS only; no threshold or pass regrade."
+    },
+    {
+      "rank": 2,
+      "kind": "Bounded static binary comparison of existing objects, no compiler/model execution",
+      "inputs": {
+        "old_IQ_object": "R/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o",
+        "old_SHA256": "b47a95712a6be578cc4afe3fc48db1e42db0c9bd8aad0b124029f91105202514",
+        "new_IQ_object": "P/build-FIRST/ds4_iq.cu.o",
+        "new_SHA256": "19800554edcd3031e1876e335530d00693dd591844a87fa136a1f3bec8e85cfe"
+      },
+      "procedure": "After independent source/command review, pin existing object hashes and actual disassembler identity; inventory SM80 device functions and compare the common unchanged kernels function-by-function (quantization, fallback Q5_K1/4/16 and other IQ paths). Retain exact instruction, relocation/constant reference and register/shared/stack metadata differences. Exclude intentional new IMMA functions from unchanged-function assertions; never remove arithmetic/scheduling instructions as cosmetic. Compare resolved symbolic relocation targets, not raw whole-object hashes or addresses alone. Bounded output/CPU, no GPU/runtime load.",
+      "interpretation": "Same function machine code narrows compiler-regeneration alternatives for those functions only, not host dispatch, new IMMA, data races or state. Different unchanged function code establishes codegen difference, not a numerical defect. Original unchanged-object relink92 verifies linking and old objects; it does NOT verify recompilation of original IQ source.",
+      "why_before_new_model": "This uses already-retained artifacts and may expose unintended changes without another build, inference or restart."
+    },
+    {
+      "rank": 3,
+      "kind": "Source-only sampler/drafter causal audit, no MonteCarlo or sampler replay",
+      "focus": "Trace selected Model::draft/verify/sample seed+counter, greedy draft confidence/keep, proposed batch width and accepted+1 counter updates. Identify exactly which facts existing token/draft totals do and do not record. Existing totals cannot reconstruct per-round proposals or the first diverging internal tensor.",
+      "provenance": "Selected main1efa andmodeldfe are pinned. Ownfork sampler.cu was inspected as a lead but its exact selected-source identity was not established in this turn; do not elevate its source content to selected proof until pinned. Actual sampler library object was reused unchanged according to reviewed link plan.",
+      "stop": "If existing traces cannot establish draft/round boundaries, record that missing evidence and stop offline reconstruction. Do not fabricate alignment or relax exact gate."
+    }
+  ],
+  "compiler_question": {
+    "answer": "Yes, recompiling a changed CUDA translation unit can regenerate unchanged device/host code, so it is a concrete alternative to inspect rather than assume away. Current evidence has not demonstrated any such difference.",
+    "dispatch": "Candidate mv_nc lines1381-1406 intentionally diverts eligible Q5_K multi-column jobs to IMMA while retaining fallback launches. This can change draft or verifier behavior even if a sampled test matrix agrees; model kernels/tensors/shape coverage are not exhaustive.",
+    "no_claim": "Neither the244 kernel cases nor equal initial prompt logits proves every model arithmetic path equivalent."
+  },
+  "preserved_gate": {
+    "status": "HOLD_TOKEN_PATH_DIFFERS",
+    "retry": false,
+    "performance_admitted": false,
+    "promotion_admitted": false,
+    "tolerance_or_regrade": false
+  },
+  "production": "Leave selected92/c43 native1853542/invocation566f3d34e59c43d29bb85c00e9854edd available. No reviewer remote/model/service/build/test action performed.",
+  "upstream_scope": "Parent reports unchanged openPR624; no new upstream update or fix independently fetched for this local evidence review."
+}

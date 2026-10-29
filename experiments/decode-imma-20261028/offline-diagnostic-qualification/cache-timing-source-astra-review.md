@@ -1,0 +1,11 @@
+The selected source permits timing-dependent expert placement, but the N0/N1 cause remains unknown. The frozen numerical gate remains **HOLD_TOKEN_PATH_DIFFERS**.
+
+At ordinary post-forward cache ticks, Maya publishes swaps already completed by background copy workers. It does not wait for every pending copy. The swap changes which expert occupies VRAM and which returns to RAM; the total 11,315 GPU / 4,045 CPU capacities can stay unchanged. Heat is based on routes and processed-token counts. Completion readiness and the shared inflight limit are timing-sensitive. See `ds4_model.cu` 6876–6891, 7190–7218, 7249–7388 and 11375.
+
+The same profile seeds initial sorting and heat, not the entire subsequent placement history. The selected config enables expert caching. `DS4_STREAM=0` disables a separate PCIe compute lane. GGUF keeps `file_experts=true` even when CPU experts are copied into RAM, so recent slots are disabled here; the non-GGUF idle-turn copy gate is also not the applicable mechanism.
+
+CPU and GPU expert implementations and accumulation grouping differ, but this review does **not** establish different result bits on the actual inputs. A timing-to-token causal chain would require a different completion boundary, changed placement used before divergence, a real arithmetic/state difference, and propagation into subsequent model or speculative-sampling decisions. None of those events was traced in these arms.
+
+Speculative verification processes proposed rows before acceptance/rollback. Its cache/profile effects are not undone by token/KV rollback. This can amplify different histories after divergence, and makes secondary-case differences particularly weak evidence of an initial cause. The byte-identical first two cold target-logit rows and shared first 16 tokens remain important bounded facts.
+
+The separate focused raw diff review found only ptxas verbosity metadata and the three explicitly mapped function labels changed; printed Q5 fallback instructions, encodings and resource fields match. That does not cover constants, relocations, other functions, runtime dispatch or executable equivalence. No replay, changed tolerance, performance qualification or promotion follows from either report. Exact source and evidence hashes are in the adjacent JSON.

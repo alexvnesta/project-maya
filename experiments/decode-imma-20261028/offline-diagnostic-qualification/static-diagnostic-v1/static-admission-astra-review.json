@@ -1,0 +1,61 @@
+{
+  "utc": "2026-10-29T11:26:59.396944+00:00",
+  "decision": "CONDITIONALLY_ADMIT_SINGLE_SIX_COMMAND_STATIC_CAPTURE_ONLY",
+  "qualification_sha256": "073879360fc8715bcd81ee1e2a9248e12eb525f4abff8259f037659e2aaded9a",
+  "evidence_sha256": {
+    "qualification.json": "073879360fc8715bcd81ee1e2a9248e12eb525f4abff8259f037659e2aaded9a",
+    "source-review-root.json": "3633388dcb4b8213375103a9a9081d533e7fe64e2eb82cc967ae1a9f2d2e4df3",
+    "source-astra-review-v2.json": "5f62b7bb7686eb29554bd134d59bcbca7beb14cfcb2fe908d5acd29e767315ba",
+    "static_diagnostic.py": "aca05d3833d1c1902f65c8f98e95d8334fb6eb8eba30bd3bcc7f53bb60616be5",
+    "test_static_diagnostic.py": "b1a8350ba36e38f9c7855a499f3d38b01d6f48b66e6aa6f8911f3d67b8529d53",
+    "CPU-FIRST-darwin/receipt.json": "68ca9112fd81202179d6ca12a4b86947d4474fc1015409a165ab334581a86513",
+    "CPU-FIRST-darwin/child.json": "8052632f788959d2eb64726ef0edbc29493b3e8efc773cdae513e02ad312b71c",
+    "CPU-FIRST-darwin/child.log": "a4bf46e79b3a8bdcbf68cbc696ecd29b9a16e8ab1ff86f3e43e7f56cee2b3e57",
+    "CPU-FIRST-linux/receipt.json": "68ca9112fd81202179d6ca12a4b86947d4474fc1015409a165ab334581a86513",
+    "CPU-FIRST-linux/child.json": "3e9c05a7bff99b5421dec06f0e82994ff6474bf003e876967adc4849dd912650",
+    "CPU-FIRST-linux/child.log": "ccc02e6b4c4c31c5895f4472ab318419185e81ee276b89d23fd057d91d17d688"
+  },
+  "source_sha256": {
+    "static_diagnostic.py": "aca05d3833d1c1902f65c8f98e95d8334fb6eb8eba30bd3bcc7f53bb60616be5",
+    "test_static_diagnostic.py": "b1a8350ba36e38f9c7855a499f3d38b01d6f48b66e6aa6f8911f3d67b8529d53"
+  },
+  "CPU_review": {
+    "both_first_children_returncode": 0,
+    "exact_controls_each": 54,
+    "raw_log_ID_order_matches": true,
+    "receipt_payloads_identical": true,
+    "CPU_seconds": 30,
+    "wall_seconds": 90,
+    "Linux_AS_MiB": 512,
+    "nice": 15,
+    "CUDA_hidden": true,
+    "proof_scope": "Mocked supervisor/process/ownership/qualification controls; no actual cuobjdump outcome inferred."
+  },
+  "qualification_review": {
+    "files": 1522,
+    "inherited_python_pins_exact": 1510,
+    "new_source_review_and_all_six_raw_CPU_pins_verified_locally": true,
+    "remote_full_rehash": "Required inside qualified controller after fresh guard; reviewer did not access Ubuntu."
+  },
+  "required_action_time_binding": {
+    "invocation": "566f3d34e59c43d29bb85c00e9854edd",
+    "main_pid": 1853509,
+    "native_pid": 1853542,
+    "native_start_ticks": 152326717
+  },
+  "admitted_scope": [
+    "Exactly old/candidate x SASS/resource-usage/ELF, six serial existing source-fixed cuobjdump commands for sm_80.",
+    "Only existing cooperative CPU reservation, fresh exclusive output-FIRST; no overwrite or retry.",
+    "Each child CPU30/LinuxAS512MiB/wall90/nice15/CUDAhidden; stdout64MiB/stderr1MiB, aggregate384MiB.",
+    "Immediate fresh default/idle/no private-pending-build phase, same current canonical selected binding as this report, root132 and source/q/tool/object checks before claim and children.",
+    "Busy/fault/timeout/overflow stops owned process group, preserves primary and cleanup receipts, then HOLD; no further child. Post-custody hashing only if fresh admission passes.",
+    "Release only exact own reservation and verify release; foreign state untouched."
+  ],
+  "not_admitted": [
+    "Compiler, linker, binary execution, model/API inference, GPU/private window, service changes, numerical replay, performance tests or promotion.",
+    "No SASS/parser-based equivalence claim or numerical-gate regrade."
+  ],
+  "numerical_gate": "HOLD_TOKEN_PATH_DIFFERS",
+  "remaining_review": "All six actual process receipts, output byte budgets, object/tool post-custody and reservation release must be independently reviewed. Raw ELF is uninterpreted; later parser requires separate source/CPU qualification.",
+  "reviewer_actions": "Local source/raw receipt/metadata reads and report write only. No reviewed module import, test, disassembler, remote or serving execution."
+}
