@@ -1,0 +1,91 @@
+{
+  "decision": "SOURCE_PERMITS_TIMING_DEPENDENT_EXPERT_IDENTITIES_CAUSE_UNPROVEN_HOLD_UNCHANGED",
+  "scope": "Bounded local frozen-source review only. No runtime/source modification, remote access, test, compiler, GPU, model, profiling or instrumentation action.",
+  "answer": "Yes, under enabled expert caching and eligible mixed-residency layers, asynchronously completed swaps can be published at different forward boundaries. Identical total GPU/CPU capacities and seed profile do not prove identical per-expert residency throughout a request.",
+  "certainty_levels": {
+    "source_confirmed": "Worker completion queues are sampled without draining all inflight copies at ordinary cache ticks; swaps change expert identity mappings while preserving capacities.",
+    "conditional_mechanism": "Different execution/copy scheduling could put a completion on opposite sides of a tick, changing later mapping or inflight admission. A faster new kernel is one possible timing perturbation, not a measured fact in these unmeasured arms.",
+    "unknown_arithmetic": "Whether a CPU/GPU execution reassignment changes any result bits for the actual expert inputs is unproven. Separate implementations and reduction grouping do not alone establish inequality.",
+    "unknown_causation": "No saved per-expert residency, copy-completion/round timings, or draft IDs/shapes establish this mechanism in N0/N1 before divergence."
+  },
+  "necessary_conditions": [
+    "Expert cache enabled and at least one mixed-residency layer with spare slot.",
+    "Heat threshold crossed for an eligible CPU expert and sufficient inflight capacity.",
+    "Relevant copy completion/admission differs across a boundary, and a later computation uses a changed mapping (or downstream cache history differs).",
+    "Any numerical causal chain additionally requires an actual arithmetic/state difference and propagation into routing/draft/verification/sampling; none is established here."
+  ],
+  "cases_where_this_explanation_does_not_apply": [
+    "Caching disabled, all relevant experts GPU-resident, no eligible swap, or no threshold crossed.",
+    "Completions occur before the same boundaries and mappings remain identical.",
+    "Changed expert is never used before the divergent event.",
+    "Changed execution placement is bit-equivalent on the relevant inputs."
+  ],
+  "source_anchors": [
+    {
+      "lines": "model.hpp:33; main.cpp:1164; model-v1/base-config.json",
+      "finding": "Expert cache defaults true; --no-expert-cache disables it. Selected frozen config omits this disable, retains expert-profile and DS4_STREAM=0."
+    },
+    {
+      "lines": "model.cu:3113-3122,4918-4923,4972-5009",
+      "finding": "Profile is loaded once into prof/prof_load, initial experts sorted stably by heat then index; mixed CPU/GPU layers reserve a spare. Heat starts from profile counts scaled to roughly 512 hits/layer. Same seed fixes this input, not future async completion."
+    },
+    {
+      "lines": "model.cu:1210-1216,7352-7388",
+      "finding": "Queue chooses hottest recently CPU-used expert and coldest GPU expert, requires heat_in > heat_out*1.25+1 by default, spare available, no layer swap pending, global inflight<8. Consumed CPU-hit batches are not kept waiting indefinitely for admission. Timing changes readiness/capacity, which can change later admitted swaps."
+    },
+    {
+      "lines": "model.cu:3306-3321,6876-6891,7190-7218",
+      "finding": "Background workers pop swaps, complete GGUF H2D and optional evicted-expert D2H/RAM copy, then push ready records. The GGUF helper name swap_in_mx is not limited to MXFP4 expert quantization: it handles GGUF layouts dispatched through the same container."
+    },
+    {
+      "lines": "model.cu:7249-7279,7280-7350,11165,11375",
+      "finding": "At post-forward boundaries cache_tick publishes only entries currently present in ready queues; it does not wait for all inflight copies. CPU/GPU slot and pointer mappings are changed, spare rotates, inflight is released. Explicit cache_drain waits all pending swaps only at its special caller before prompt buffer borrowing (10696)."
+    },
+    {
+      "lines": "model.cu:2525-2552,4974-4976,7027-7140",
+      "finding": "GGUF sets file_experts=true even with copied RAM experts. Therefore recent slots are disabled by the !file_experts allocation condition; do not attribute this configuration to recent-slot timing. Non-GGUF copy_open/idle-event gating (1426-1432,6895-6899) is bypassed by the earlier GGUF branch; it is not needed for the supported asynchronous-swap mechanism."
+    },
+    {
+      "lines": "model.cu:7258-7264,7931-7961,11982-12022",
+      "finding": "Heat increments per processed expert route and decays by processed-token counts. No wall-clock-based heat selection was found. Actual CPU/GPU execution choice depends on current slot[e], not merely aggregate counts."
+    },
+    {
+      "lines": "model.cu:6545-6546,6632-6706,8037-8058,12030-12061",
+      "finding": "CPU IQ experts use iq_cpu quant/gate_up/down and CPU weighted partial accumulation; GPU residents use device matrix paths and device combination. Different implementations and grouping exist. Their complete bit equivalence for every selected expert/input is UNKNOWN from this source review; no measured CPU-vs-GPU discrepancy is claimed."
+    },
+    {
+      "lines": "model.cu:8079-8083,8171-8174; model-v1/base-config.json",
+      "finding": "DS4_STREAM=0 disables the separate decode PCIe compute lane. Expert-cache swap workers have their own expert_cache guard and remain eligible."
+    },
+    {
+      "lines": "model.cu:12134-12140",
+      "finding": "INFO expert_slots/cpu_experts are derived from per-layer allocated n_vram counts. A successful swap exchanges identities while preserving these counts, and can preserve all CPU experts in RAM."
+    },
+    {
+      "lines": "model.cu:9353-9362,9418-9427,9432-9490;1137-1150;5883-5910",
+      "finding": "Speculative verify forwards T=n+1 rows, and forward calls cache_tick before verification acceptance/rollback. Rollback restores ring/compressor/token position, not heat/profile/slot mappings. Checkpoint restore likewise does not reset expert-cache placement. Different draft work can consequently feed different heat/cache histories after paths differ; this is not evidence of the initial cause."
+    }
+  ],
+  "N0_N1_limits": [
+    "Cold prompt row0 and first decode-round row1 are byte-identical; first 16 emitted tokens shared. This excludes a visible discrepancy in those two compared target-logit rows, not all hidden state, draft distributions, cache placement or later rounds.",
+    "Aggregate 11315 GPU/4045 CPU counters and equal profile seed hashes do not encode expert identities or their time sequence.",
+    "After emitted/draft paths diverge, different heat, sampling counters and residency can be consequences rather than the cause. Do not align later flat dump rows by ordinal.",
+    "The full frozen exact-match gate failed and remains HOLD_TOKEN_PATH_DIFFERS; all typed answers correct is a separate bounded observation."
+  ],
+  "consequence": "This keeps asynchronous expert placement as a source-supported alternative hypothesis. It does not exonerate the IMMA path or identify a root cause. Together with matching printed fallback SASS it narrows claims, not acceptance. No new GPU run, tolerance, replay, instrumentation or protocol work is proposed or admitted.",
+  "numerical_gate": "HOLD_TOKEN_PATH_DIFFERS",
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/candidate/src/ds4/ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/candidate/src/ds4/ds4_main.cpp": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/candidate/src/ds4/ds4_model.hpp": "a72692259ef9c69581054ad53e4184f112579693599921b4150ea8859c4c1a77",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-base/src/ds4/ds4_iq.cu": "883cec5e4d26f37f61bf650fc3f123bf47d8bb456b84bedfbadb0152864b8234",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-base/src/ds4/ds4_iq.cuh": "0729227655e13d6406dc2a4b54b7ec4bdd2d864229f8c55cc3cb5efd9533ce01"
+  },
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/N0/terminal-audit.json": "38ddffeb11a706bd70501a24cad3b95aaea043dbc8f4c63da7364f8e3d093bf3",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/N1/terminal-audit.json": "b0ea37f38e02e6421dbaf4fcd384faffdace18661b8dae7268b7641ecd2f3d31",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/offline-first-rows-astra-review.json": "e706e6fdb8da1d41376b6e78fafb6a994897f642bd99b5c06d0776d25ed834f4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/focused-q5-v1/focused-result-astra-review.json": "fb3cc9a884bf356c0aad3d28792b2c1749e39eb4085c617a332e19a5e2753b0d"
+  }
+}

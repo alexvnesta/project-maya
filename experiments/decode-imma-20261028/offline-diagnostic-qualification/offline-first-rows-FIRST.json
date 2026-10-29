@@ -1,0 +1,276 @@
+{
+  "helper_source_sha256": "136e9572f535ae42bff54af8bddc851012bfaec005432606c169bab8688c2e9c",
+  "rows": [
+    {
+      "id": "cold-text",
+      "before_sampling": true,
+      "first_row_bytes_equal": true,
+      "inputs": [
+        {
+          "arm": "N0",
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-imma-numerical-N0-20261029T054305Z/native/logits.1.f32",
+          "offset": 0,
+          "bytes": 517120,
+          "first_row_sha256": "be433d045addf8b4035db0add554a524724d16d285e348a84d5e189cdae2a83a",
+          "terminal_audit_sha256": "38ddffeb11a706bd70501a24cad3b95aaea043dbc8f4c63da7364f8e3d093bf3"
+        },
+        {
+          "arm": "N1",
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-imma-numerical-N1-20261029T061532Z/native/logits.1.f32",
+          "offset": 0,
+          "bytes": 517120,
+          "first_row_sha256": "be433d045addf8b4035db0add554a524724d16d285e348a84d5e189cdae2a83a",
+          "terminal_audit_sha256": "b0ea37f38e02e6421dbaf4fcd384faffdace18661b8dae7268b7641ecd2f3d31"
+        }
+      ],
+      "distribution_diagnostic": {
+        "values_equal": true,
+        "argmax_equal": true,
+        "KL_baseline_to_candidate": 0.0,
+        "KL_candidate_to_baseline": 0.0,
+        "total_variation": 0.0,
+        "centered_logit_RMS": 0.0,
+        "centered_logit_max_abs": 0.0,
+        "constant_logit_shift": 0.0,
+        "centered_logit_p99_abs": 0.0,
+        "baseline_top_ids": [
+          2581,
+          128822,
+          50249,
+          671,
+          53
+        ],
+        "candidate_top_ids": [
+          2581,
+          128822,
+          50249,
+          671,
+          53
+        ],
+        "baseline_top_probabilities": [
+          0.9991571067277641,
+          0.0006187979496284888,
+          0.000110569387095812,
+          5.2715480554001166e-05,
+          8.470678335887458e-06
+        ],
+        "candidate_top_probabilities": [
+          0.9991571067277641,
+          0.0006187979496284888,
+          0.000110569387095812,
+          5.2715480554001166e-05,
+          8.470678335887458e-06
+        ],
+        "baseline_top2_margin": 7.38688850402832,
+        "candidate_top2_margin": 7.38688850402832,
+        "acceptance_threshold": null,
+        "automatic_equivalence_or_quality_pass": false
+      }
+    },
+    {
+      "id": "rewind-text",
+      "before_sampling": true,
+      "first_row_bytes_equal": false,
+      "inputs": [
+        {
+          "arm": "N0",
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-imma-numerical-N0-20261029T054305Z/native/logits.2.f32",
+          "offset": 0,
+          "bytes": 517120,
+          "first_row_sha256": "ec0b08ed5c7a1b9c4fdd3c4a0a5f90ff56c2b848c7d9e22e6f6ce3bf420b725c",
+          "terminal_audit_sha256": "38ddffeb11a706bd70501a24cad3b95aaea043dbc8f4c63da7364f8e3d093bf3"
+        },
+        {
+          "arm": "N1",
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-imma-numerical-N1-20261029T061532Z/native/logits.2.f32",
+          "offset": 0,
+          "bytes": 517120,
+          "first_row_sha256": "fe07529a1b04eeb8726bb4dd7b59e8db7085b80e5f09c13ddd841bb0fc4d913c",
+          "terminal_audit_sha256": "b0ea37f38e02e6421dbaf4fcd384faffdace18661b8dae7268b7641ecd2f3d31"
+        }
+      ],
+      "distribution_diagnostic": {
+        "values_equal": false,
+        "argmax_equal": true,
+        "KL_baseline_to_candidate": 2.9653893147023352e-05,
+        "KL_candidate_to_baseline": 2.6905668736435677e-05,
+        "total_variation": 0.0002095742547947486,
+        "centered_logit_RMS": 0.1793937605850809,
+        "centered_logit_max_abs": 0.9468704713165004,
+        "constant_logit_shift": 0.05019244082562515,
+        "centered_logit_p99_abs": 0.478538368862943,
+        "baseline_top_ids": [
+          2581,
+          128822,
+          50249,
+          671,
+          43
+        ],
+        "candidate_top_ids": [
+          2581,
+          128822,
+          50249,
+          671,
+          53
+        ],
+        "baseline_top_probabilities": [
+          0.9989945248799723,
+          0.0006870596159398893,
+          0.00019592517041252844,
+          6.39099123003317e-05,
+          7.022207026055237e-06
+        ],
+        "candidate_top_probabilities": [
+          0.9992017596373725,
+          0.000557800173747237,
+          0.00013092388153650812,
+          5.327195051254904e-05,
+          7.822889550772238e-06
+        ],
+        "baseline_top2_margin": 7.282083511352539,
+        "candidate_top2_margin": 7.490711212158203,
+        "acceptance_threshold": null,
+        "automatic_equivalence_or_quality_pass": false
+      }
+    },
+    {
+      "id": "two-images",
+      "before_sampling": true,
+      "first_row_bytes_equal": false,
+      "inputs": [
+        {
+          "arm": "N0",
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-imma-numerical-N0-20261029T054305Z/native/logits.3.f32",
+          "offset": 0,
+          "bytes": 517120,
+          "first_row_sha256": "3711c6e4a2c617f6dbed010ff320ca07ce797917efec1118040a6f565c89f5dc",
+          "terminal_audit_sha256": "38ddffeb11a706bd70501a24cad3b95aaea043dbc8f4c63da7364f8e3d093bf3"
+        },
+        {
+          "arm": "N1",
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-imma-numerical-N1-20261029T061532Z/native/logits.3.f32",
+          "offset": 0,
+          "bytes": 517120,
+          "first_row_sha256": "f64eeb680bdca41686c4758357d2c419c2f820fad5e860140559d0d8ba5515f4",
+          "terminal_audit_sha256": "b0ea37f38e02e6421dbaf4fcd384faffdace18661b8dae7268b7641ecd2f3d31"
+        }
+      ],
+      "distribution_diagnostic": {
+        "values_equal": false,
+        "argmax_equal": true,
+        "KL_baseline_to_candidate": 7.495287627879338e-05,
+        "KL_candidate_to_baseline": 7.069351962987726e-05,
+        "total_variation": 0.0004587429208709384,
+        "centered_logit_RMS": 0.6176961240660636,
+        "centered_logit_max_abs": 2.9427055875216332,
+        "constant_logit_shift": -0.33397717870815685,
+        "centered_logit_p99_abs": 1.7495607892428249,
+        "baseline_top_ids": [
+          2581,
+          671,
+          128822,
+          50249,
+          47625
+        ],
+        "candidate_top_ids": [
+          2581,
+          671,
+          128822,
+          43,
+          47625
+        ],
+        "baseline_top_probabilities": [
+          0.9970034762670046,
+          0.0021953265266751705,
+          0.000567381562492113,
+          3.60296768377463e-05,
+          3.44236549411969e-05
+        ],
+        "candidate_top_probabilities": [
+          0.9973045230988514,
+          0.0017829446706309443,
+          0.0007096014905676951,
+          3.952675172334112e-05,
+          2.884099685001678e-05
+        ],
+        "baseline_top2_margin": 6.1184234619140625,
+        "candidate_top2_margin": 6.326789855957031,
+        "acceptance_threshold": null,
+        "automatic_equivalence_or_quality_pass": false
+      }
+    },
+    {
+      "id": "restore-text",
+      "before_sampling": true,
+      "first_row_bytes_equal": false,
+      "inputs": [
+        {
+          "arm": "N0",
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-imma-numerical-N0-20261029T054305Z/native/logits.4.f32",
+          "offset": 0,
+          "bytes": 517120,
+          "first_row_sha256": "be7fdd41f80ced4eba05efabe43cd26b44089c3acf90a195c12f0f2139e4246f",
+          "terminal_audit_sha256": "38ddffeb11a706bd70501a24cad3b95aaea043dbc8f4c63da7364f8e3d093bf3"
+        },
+        {
+          "arm": "N1",
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-imma-numerical-N1-20261029T061532Z/native/logits.4.f32",
+          "offset": 0,
+          "bytes": 517120,
+          "first_row_sha256": "155355837faabd69a5bcbda64da210466d2f35335cb856d3d8e258e4ebccfce9",
+          "terminal_audit_sha256": "b0ea37f38e02e6421dbaf4fcd384faffdace18661b8dae7268b7641ecd2f3d31"
+        }
+      ],
+      "distribution_diagnostic": {
+        "values_equal": false,
+        "argmax_equal": true,
+        "KL_baseline_to_candidate": 1.0779813169899056e-15,
+        "KL_candidate_to_baseline": 1.754078433582316e-15,
+        "total_variation": 1.4854609015903855e-09,
+        "centered_logit_RMS": 3.7297387880265956e-07,
+        "centered_logit_max_abs": 1.9289118625076102e-06,
+        "constant_logit_shift": -2.1563229695110037e-08,
+        "centered_logit_p99_abs": 9.7523754610136e-07,
+        "baseline_top_ids": [
+          2581,
+          128822,
+          50249,
+          671,
+          53
+        ],
+        "candidate_top_ids": [
+          2581,
+          128822,
+          50249,
+          671,
+          53
+        ],
+        "baseline_top_probabilities": [
+          0.9992141723810705,
+          0.00047822922827184884,
+          0.00016385163100954384,
+          7.936778496208376e-05,
+          9.978099125488269e-06
+        ],
+        "candidate_top_probabilities": [
+          0.9992141708956163,
+          0.0004782301397116358,
+          0.00016385194328844032,
+          7.936793622627412e-05,
+          9.97811814238645e-06
+        ],
+        "baseline_top2_margin": 7.644634246826172,
+        "candidate_top2_margin": 7.644632339477539,
+        "acceptance_threshold": null,
+        "automatic_equivalence_or_quality_pass": false
+      }
+    }
+  ],
+  "first_cold_text_is_primary": true,
+  "total_input_bytes": 4136960,
+  "existing_dumps_only": true,
+  "new_model_or_GPU_execution": false,
+  "quality_or_speed_or_equivalence_pass": false,
+  "frozen_gate_unchanged": "HOLD_TOKEN_PATH_DIFFERS",
+  "scope": "Initial prompt-logit row at byte0 only, before sampling/generated-token feedback. Secondary cached paths do not isolate arithmetic. No later-row alignment or posthoc tolerance."
+}

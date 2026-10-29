@@ -1,0 +1,20 @@
+{
+  "scope": "Human review of standard diff -u output, without input normalization or a new parser. All6 diff exits1: raw files differ.",
+  "findings": [
+    "Only2 changed source lines per diff: ptxasOptions verbosity metadata and the explicitly mapped object-specific Function label.",
+    "For the3selectedSM80Q5 fallback specializations NC1/4/16, all other printed instruction addresses/opcodes/operands/encoding/control words and resource text are unchanged.",
+    "Registers40/47/58; stack/shared/local0 for these3functions. Common GLOBAL26792/CONSTANT[4]88 match as returned, without assigning common bytes to a function."
+  ],
+  "not_proven": [
+    "Device constant bytes, relocations, linkage, otherIQkernels and newIMMAkernels are not compared.",
+    "No executable equivalence, causal attribution, quality or speed gain; frozenHOLD_TOKEN_PATH_DIFFERS unchanged."
+  ],
+  "input_files_copied_byteexact": 38,
+  "actual_collector_children": 12,
+  "all_collector_exit0": true,
+  "raw_stdout_bytes": 963580,
+  "stderr_bytes": 0,
+  "CPU_reservation_released": true,
+  "production_binding_unchanged": 1853542,
+  "early_read_note": "An initial local diff read occurred before all SCP files arrived and reported a missing resources file. Original CLI error is retained in the chat; the38-file transfer then completed with every size/hash verified before these6complete raw comparisons."
+}

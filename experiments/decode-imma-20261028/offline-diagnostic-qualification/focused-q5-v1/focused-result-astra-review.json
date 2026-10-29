@@ -1,0 +1,126 @@
+{
+  "decision": "FOCUSED_STATIC_OBSERVATION_REVIEWED_HOLD_UNCHANGED",
+  "scope": "Offline local receipt/hash and standard raw diff review only; no normalization or new parser. No native, compiler, GPU, remote or service action.",
+  "raw_files_verified": 38,
+  "children": 12,
+  "stdout_bytes": 963580,
+  "stderr_bytes": 0,
+  "all_children_exit0_and_post_custody_verified": true,
+  "qualification_sha256": "d2ea4a2417adc8f766f210ffb51bd23e5fb1e166a18472f32cefbbe814cdcc73",
+  "selected_binding_receipt": {
+    "invocation": "566f3d34e59c43d29bb85c00e9854edd",
+    "main_pid": 1853509,
+    "native_pid": 1853542,
+    "native_start_ticks": 152326717
+  },
+  "pair_observations": [
+    {
+      "nc": 1,
+      "kind": "sass",
+      "old_sha256": "10191135979be578d5b2a6148c0c4eaac22c7ecf4bf57fb9f6dba1a407e9b631",
+      "candidate_sha256": "d1046d69f2f2886ea00e215f251809a13af0bd4afef94d78586f1ed829be1910",
+      "raw_diff_exit": 1,
+      "changed_lines_excluding_headers": [
+        "-ptxasOptions = ",
+        "+ptxasOptions = -v  ",
+        "-\t\tFunction : _ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi1EEEvNS3_4JobsE",
+        "+\t\tFunction : _ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi1EEEvNS3_4JobsE"
+      ]
+    },
+    {
+      "nc": 1,
+      "kind": "resources",
+      "old_sha256": "5c53f69b4b4bf64b773657b64d62b28feb8e4c010d8478675ea3c34569ddcd86",
+      "candidate_sha256": "8c8f3f14da078a775a9977a60b60a05783e34fbd9c046dec1181f9a3c11921f9",
+      "raw_diff_exit": 1,
+      "changed_lines_excluding_headers": [
+        "-ptxasOptions = ",
+        "+ptxasOptions = -v  ",
+        "- Function _ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi1EEEvNS3_4JobsE:",
+        "+ Function _ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi1EEEvNS3_4JobsE:"
+      ]
+    },
+    {
+      "nc": 4,
+      "kind": "sass",
+      "old_sha256": "9e439a25be34b3b3910d59e6e0360cb8e3ce8b4a8ec5b6af4338b62c4379ff38",
+      "candidate_sha256": "539556bdb9c189cf15f63ee8f31684fead466720bd116f1978de43928a178df3",
+      "raw_diff_exit": 1,
+      "changed_lines_excluding_headers": [
+        "-ptxasOptions = ",
+        "+ptxasOptions = -v  ",
+        "-\t\tFunction : _ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi4EEEvNS3_4JobsE",
+        "+\t\tFunction : _ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi4EEEvNS3_4JobsE"
+      ]
+    },
+    {
+      "nc": 4,
+      "kind": "resources",
+      "old_sha256": "067fd9fb9f0687d398315d6a8999600383d9abbf5cceaa734d681c769610d1c8",
+      "candidate_sha256": "4a12b23efd71347e2ac25b18dca6039e02ca8720126c0d155993802c3da94fed",
+      "raw_diff_exit": 1,
+      "changed_lines_excluding_headers": [
+        "-ptxasOptions = ",
+        "+ptxasOptions = -v  ",
+        "- Function _ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi4EEEvNS3_4JobsE:",
+        "+ Function _ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi4EEEvNS3_4JobsE:"
+      ]
+    },
+    {
+      "nc": 16,
+      "kind": "sass",
+      "old_sha256": "ed31dab4b589c61739f7ee3537bc46cff552ec9ed0064b7fcd9983172c8dc9a4",
+      "candidate_sha256": "80008caaa411afd2640ac6fa8686fc14f63c4071c29fb357fa0f01719f47a20e",
+      "raw_diff_exit": 1,
+      "changed_lines_excluding_headers": [
+        "-ptxasOptions = ",
+        "+ptxasOptions = -v  ",
+        "-\t\tFunction : _ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi16EEEvNS3_4JobsE",
+        "+\t\tFunction : _ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi16EEEvNS3_4JobsE"
+      ]
+    },
+    {
+      "nc": 16,
+      "kind": "resources",
+      "old_sha256": "9d8be4e7f244c400dcfe9255e02387306708c5194124cf156fe02abc7569f92a",
+      "candidate_sha256": "10612db6afab948dd3640bfae9456b5be30fdb856b60ec8bbaea8d93a507bd8c",
+      "raw_diff_exit": 1,
+      "changed_lines_excluding_headers": [
+        "-ptxasOptions = ",
+        "+ptxasOptions = -v  ",
+        "- Function _ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi16EEEvNS3_4JobsE:",
+        "+ Function _ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi16EEEvNS3_4JobsE:"
+      ]
+    }
+  ],
+  "resource_observation": {
+    "NC1_REG": 40,
+    "NC4_REG": 47,
+    "NC16_REG": 58,
+    "STACK_SHARED_LOCAL": 0,
+    "common_GLOBAL": 26792,
+    "common_CONSTANT_4": 88,
+    "note": "Common fields are reported as common, not allocated to one function."
+  },
+  "interpretation": "For the three explicitly mapped SM80 Q5 fallback functions, all other printed SASS addresses, instruction operands, instruction/control encodings and resource text match. Raw files differ. This reduces support for regenerated fallback instruction text as the explanation; it does not prove runtime equivalence.",
+  "not_proven": [
+    "ELF constant bytes, relocations, linkage, host dispatch, other IQ functions and new IMMA functions were not compared.",
+    "Neither complete executable/numerical equivalence nor a causal explanation for token divergence is established.",
+    "No quality/speed/performance/promotion/replay authority."
+  ],
+  "numerical_gate": "HOLD_TOKEN_PATH_DIFFERS",
+  "historical_notes": [
+    "Original whole-SASS 64 MiB overflow remains a separate preserved HOLD. This fixed-function capture is a distinct scoped question.",
+    "Parent READING.json preserves an early local missing-file read before transfer completed. All 38 raw files now verify.",
+    "Reservation release/current service observation is parent-reported; reviewer performed no live host check."
+  ],
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/focused-q5-v1/output-FIRST/receipt.json": "fd23bb06aa05a73c4b9c2134e13028c79047f58a02b99757328f40d2a4ea20f5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/focused-q5-v1/output-FIRST/plan.json": "fad77a477e7c73c747fe408e7898104b07e8870b229e000be19b9ac8a6de55af",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/focused-q5-v1/actual-raw-file-hashes.json": "54fd6d7f98f259b9e6aa83134e25f84791a22cd5dc48f84e0f72b7d75c030c9f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/focused-q5-v1/manual-diff-FIRST/READING.json": "c625356ae349b6066529a2370a23876bf03a5192448069d019aa3e7ec088b052",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/focused-q5-v1/qualification.json": "d2ea4a2417adc8f766f210ffb51bd23e5fb1e166a18472f32cefbbe814cdcc73",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/focused-q5-v1/focused-admission-astra-review.json": "a511e7b55dde64cca981c7fbadb7d09af50999533e5823444adadc1ce210fc9a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/symbol-inventory-v1/symbol-result-and-q5-mapping-astra.json": "a58e27b923304ee3320d8bf693d0aaa1de6c4f0fd1687e063bf0df53b5504faf"
+  }
+}
