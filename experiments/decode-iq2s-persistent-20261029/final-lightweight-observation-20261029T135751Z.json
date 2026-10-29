@@ -1,0 +1,28 @@
+{
+  "observed_utc": "2026-10-29T13:57:51.536577+00:00",
+  "source": "Operator transcription of actual lightweight SSH stdout; full raw output retained in tool transcript",
+  "status": "IQ2S_KERNEL_COMPLETE_SELECTED4096_RESTORED",
+  "binding": {
+    "invocation": "443172a350014f4bbcb11df8b9895b17",
+    "main_pid": 1989302,
+    "native_pid": 1989341,
+    "native_start_ticks": 154686925
+  },
+  "actual_native_start_ticks": 154686925,
+  "actual_native_exe": "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+  "actual_cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/deepseek-hosted.service",
+  "both_units_active_running_Restart_no": true,
+  "sole_GPU_owner": 1989341,
+  "flags": {
+    "DS4_YOCO": "1",
+    "STRATA_DS4_PROMPT_SKIP": "1",
+    "STRATA_DS4_Q8_BATCH": "1",
+    "DS4_Q8_CHECK": "1",
+    "DS4_STREAM": "0",
+    "DS4_REQUIRE_ALL_RAM": "1"
+  },
+  "private_or_build_or_pending_or_stopped": false,
+  "numerical_registry": {},
+  "no_new_generation_or_hash_or_idle_poll": true,
+  "scope": "Current light process/lifecycle evidence only; selected source/config were exactly pinned by earlier13:44 actual preflight. No new full release audit or current public SSE asserted."
+}
