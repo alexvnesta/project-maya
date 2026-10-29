@@ -1,0 +1,128 @@
+{
+  "decision": "COMPILE_RECEIPTS_REVIEWED_ELIGIBLE_FOR_SEPARATE_KERNEL_QUALIFICATION_REVIEW",
+  "utc": "2026-10-29T12:50:25.723118+00:00",
+  "findings": [],
+  "raw_children_reconciled": 4,
+  "child_pids": [
+    1983227,
+    1983652,
+    1983727,
+    1983758
+  ],
+  "link_inputs_counts": {
+    "candidate": 44,
+    "test": 36
+  },
+  "link_inputs_match_PREPARE_plus_new_outputs": true,
+  "outputs_reported_by_physical_host": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/ds4_iq.cu.o": "359d0c3666a55cb3bcf17b1aeebe3bd380cc5e1a66e1ea968d7c741d3dbcd8f4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/ds4_gguf_test.cu.o": "bd702be3a74f682036a3490db6cadb989d897e803599b509a23c6b6d78925ac7",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/maya-ds4-candidate": "da28ca8b108048990f5950e76909cccacacb9f921d8e37fad9f16b440bb513a6",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/ds4_gguf_test-candidate": "1e86117f24c435e6630d57f858628ea019ff0a36adc9495b5c141113c76fd0a4"
+  },
+  "persistent_resources": [
+    {
+      "kind": "down",
+      "NE": 16,
+      "registers": 64,
+      "shared_bytes": 8256,
+      "stack_bytes": 0,
+      "spill_store_bytes": 0,
+      "spill_load_bytes": 0
+    },
+    {
+      "kind": "down",
+      "NE": 8,
+      "registers": 64,
+      "shared_bytes": 8224,
+      "stack_bytes": 0,
+      "spill_store_bytes": 0,
+      "spill_load_bytes": 0
+    },
+    {
+      "kind": "down",
+      "NE": 4,
+      "registers": 58,
+      "shared_bytes": 8208,
+      "stack_bytes": 0,
+      "spill_store_bytes": 0,
+      "spill_load_bytes": 0
+    },
+    {
+      "kind": "down",
+      "NE": 1,
+      "registers": 47,
+      "shared_bytes": 8196,
+      "stack_bytes": 0,
+      "spill_store_bytes": 0,
+      "spill_load_bytes": 0
+    },
+    {
+      "kind": "gate_up",
+      "NE": 16,
+      "registers": 98,
+      "shared_bytes": 8320,
+      "stack_bytes": 0,
+      "spill_store_bytes": 0,
+      "spill_load_bytes": 0
+    },
+    {
+      "kind": "gate_up",
+      "NE": 8,
+      "registers": 80,
+      "shared_bytes": 8256,
+      "stack_bytes": 8,
+      "spill_store_bytes": 8,
+      "spill_load_bytes": 8
+    },
+    {
+      "kind": "gate_up",
+      "NE": 4,
+      "registers": 80,
+      "shared_bytes": 8224,
+      "stack_bytes": 8,
+      "spill_store_bytes": 8,
+      "spill_load_bytes": 8
+    },
+    {
+      "kind": "gate_up",
+      "NE": 1,
+      "registers": 64,
+      "shared_bytes": 8200,
+      "stack_bytes": 0,
+      "spill_store_bytes": 0,
+      "spill_load_bytes": 0
+    }
+  ],
+  "material_note": "Gate NE4 and NE8 each have 8-byte stack frames and 8-byte spill stores/loads. These are real compiler resources, not a runtime fault; their speed effect is unmeasured.",
+  "scope": [
+    "Local raw compiler/link receipts and dependency texts reviewed; no native, fixture or GPU execution by reviewer.",
+    "Physical artifact hashes are receipt evidence, not locally rehashed binary contents; actual kernel qualification must rehash them.",
+    "Original control relink exact92 proves unchanged object/link control, not numerical equivalence of rebuilt IQ functions.",
+    "No model correctness, speed, deployment or GPU-window admission."
+  ],
+  "evidence_sha256": {
+    "build-FIRST/candidate-link-inputs.json": "20e79b69b284d13b068959588e6115678d77ead5eda3a443aabe44a6542aa760",
+    "build-FIRST/candidate-link.json": "45d622ae55fed636c6bdadffa90d69afb6ef4fc91e782697dcca3108db4a113a",
+    "build-FIRST/candidate-link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/candidate-link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/compile-iq.json": "a60584ec60b5021bc2350abb0a844012c79acc133254ef789576b33fd03a4ef5",
+    "build-FIRST/compile-iq.stderr": "58932ae00491d567ff26130480691188e11592a30e09f45ddf0b5939d97ccff6",
+    "build-FIRST/compile-iq.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/compile-test.json": "0d271f9ef4c85ac6ffab7c864fb86ec192013cc6822a34910cf76aaa645a86b4",
+    "build-FIRST/compile-test.stderr": "2ef72a8a5c7aa5ee85b4ae329a78228de740e971dcce6a52f2b8b6da1af2f0cc",
+    "build-FIRST/compile-test.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/ds4_gguf_test-candidate.link.d": "2aed3d1b603c8d086f1750f76d46f977a3a29be86bb6c7c8ca17f158e40d1c30",
+    "build-FIRST/maya-ds4-candidate.link.d": "5a5c41f30eab5c9057191f9067f325d4dbb5d8339259bf200da7c7b407afbad2",
+    "build-FIRST/plan.json": "850aac9cc1abfd0f14ff0d929829ad7235d62c0e58c0341f85c606016e4c7881",
+    "build-FIRST/receipt.json": "fbf494d1169b821bad207661d99a1d3175d9dd1007cf770b5a1f0a65a97e6a1b",
+    "build-FIRST/test-link-inputs.json": "fa77d874448707d63f6759ada06c0b369dc48566eb4e7c892a3b5b578e03af53",
+    "build-FIRST/test-link.json": "aaf51f462471e373d3b856f3fa9d99c86a2f6bee02f0fac5d4c4ea109fef2cf9",
+    "build-FIRST/test-link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/test-link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compile-qualification.json": "b6048090cd264de4328ae5e100dbc925962ed38c1f1e7579352e8aeac959f73a",
+    "compile-admission-astra-review.json": "927a8f2e444f8280f1f77397571597d8439372f8fad56a03086965a328ddd944",
+    "prepare-FIRST/receipt.json": "4bb6856a97724200b7cfd8690779509ea1b54f744089d8fcae872604529033a8",
+    "candidate-files.json": "4a500fb2955a5162d3d447be21d660946bcc2faa20b37c9597e85c939a4e0800"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "snapshot_utc": "2026-10-29T13:43:18.138204+00:00",
+  "candidate_scope": "Isolated IQ2_S token/window persistent scheduling from Maya1.1.37 around selected original arithmetic; bulkupdate/IMMA/lightprompts/IQ1/CPU/model/API excluded.",
+  "candidate_native_sha256": "da28ca8b108048990f5950e76909cccacacb9f921d8e37fad9f16b440bb513a6",
+  "candidate_deployed": false,
+  "real_GPU_kernel_cases": 104,
+  "actual_kernel_children_exit0": 2,
+  "kernel_window": "20261029T125632Z.json",
+  "source_controls_each_physical_host": {
+    "build_controller": 59,
+    "CXX_policy": 46,
+    "kernel_controller": 68
+  },
+  "numerical_source_CPU": {
+    "Mac_FIRST": 109,
+    "physical_Ubuntu": 109,
+    "exact_source_files": 11,
+    "input_maps": 931,
+    "model_windows": "UNRUN",
+    "independent_raw_review": "FIRST_109_BOTH_HOST_CPU_PROOF_REVIEWED_NO_MODEL_ADMISSION",
+    "qualification_sha256": "11deaac7b10b7d53bd988acff210136b5e2107d533d1a13e28c315037810113e",
+    "qualification_files": 2198,
+    "actual_preflight": "DEFERRED_BUSY_BEFORE_HASH_BIND_METADATA_OR_DRAIN"
+  },
+  "production_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "production_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "context_total": 1048576,
+  "output_allowance": 262144,
+  "prefill_chunk": 4096,
+  "quality_and_capacity_settings_preserved": true,
+  "resources": {
+    "sampled_root_min_GiB": 838.8367881774902,
+    "swapout_delta_bytes": 0,
+    "owned_cgroup_peak_bytes": 197935104,
+    "kernel_fault_lines": []
+  },
+  "known_compiler_cost": "Persistent gate NE4/8 each have8Bstack/spillstores+loads; no speed inference.",
+  "lifecycle_limit": "KernelhasnoprivateAPIchild. Oldnativeclose0/userAPIstopjobdone; independenthistoricalAPIprocessstatusunobserved. ProspectiveunqualifiedmodelsourcecapturesrawboundoldunitandprivateAPI/native/window0.",
+  "historical_window_metadata": "InheritedGLMfields describeoldrootwindow state; thisrun didnotactivateGLM/Qwen. SelectedDeepSeekrestoredandpublicREADY/stop/DONEverified.",
+  "unqualified_claims": [
+    "Wholemodel equivalence",
+    "Generation speed gain",
+    "Nearfilled1M context throughput",
+    "Full256K generation bound",
+    "Promotion"
+  ],
+  "original_IMMA": "HOLD_TOKEN_PATH_DIFFERS unchanged; separateclosedcandidate, notrerun/regraded.",
+  "reproducibility": "Source/receipt snapshot requires originalqualifiedoperatorworkspace/assets. Absolutepins areprovenance, notaninstaller. No nativebinaries/modelweights/usercache oruserprompts included.",
+  "archive_whitespace": "Verbatim qualified source/receipt bytes retained. git diff --check reported only extra blank EOF lines in7 archived Python files; no normalization after qualification."
+}

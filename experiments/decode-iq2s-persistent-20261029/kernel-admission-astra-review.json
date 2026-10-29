@@ -1,0 +1,87 @@
+{
+  "decision": "CONDITIONALLY_ADMIT_SINGLE_IQ2S_KERNEL_ONLY_WINDOW",
+  "utc": "2026-10-29T12:54:26.650765+00:00",
+  "qualification_sha256": "cd146a86438054e664b6dfb953341fc65ecb34d9ab6d9d22851009c239713580",
+  "qualification_file_count": 2105,
+  "selected_binding_from_fresh_physical_receipt": {
+    "invocation": "566f3d34e59c43d29bb85c00e9854edd",
+    "main_pid": 1853509,
+    "native_pid": 1853542,
+    "native_start_ticks": 152326717
+  },
+  "fixture_sha256": "1e86117f24c435e6630d57f858628ea019ff0a36adc9495b5c141113c76fd0a4",
+  "scope": {
+    "commands": [
+      [
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/ds4_gguf_test-candidate",
+        "--iq2s-persist-check",
+        "0"
+      ],
+      [
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/ds4_gguf_test-candidate",
+        "--iq2s-persist-check",
+        "1"
+      ]
+    ],
+    "cases_each_device": 52,
+    "total_cases": 104,
+    "native_model_execution": false,
+    "performance_or_promotion": false,
+    "replay": false,
+    "window_seconds": 1200,
+    "child_CPU_seconds": 120,
+    "child_wait_seconds": 120
+  },
+  "findings": [],
+  "required_immediate_guards": [
+    "Same qualified source/files/binary and exact qualification bytes, fresh default DeepSeek idle/no active or pending phase or CPU build, current canonical selected binding unchanged, root>=132GiB, fresh output and absent durable gpu-attempt. Busy means untouched deferral.",
+    "Only existing canonical window/owner/coordinate, exact command/device arguments and actual cgroup/executable/PID/startticks. Preserve first fault; no retry or second device after first failure.",
+    "Both ordered52-case receipts must pass with exact dispatch/canary/memcmp assertions, fixture+window exit0, kernel/resource guards; then selected native92/configc43/chunk4096/1M/256K restored through existing bound owner and authenticated/unauthenticated public checks with assembled READY/stop/DONE.",
+    "No source edits/review/hash/staging/heavy CPU outside the owning controller during private window/restoration."
+  ],
+  "limits": [
+    "Compiler gateNE4/8 have8-byte stack/spill stores/loads; no speed inference.",
+    "Fresh preflight verified on physical host by controller; this reviewer only reconciled saved local receipts/map and exact current local prerequisite hashes. No live action by reviewer.",
+    "First summary null fields were wrong result-key extraction; detailed receipt reads same unchanged raw preflight, no rerun or regraded failure.",
+    "Kernel proof cannot establish whole-model sampling/state/numerical equivalence, quality or performance. Old IMMA HOLD unchanged."
+  ],
+  "evidence_sha256": {
+    "iq2s_gpu_check.py": "91b6266fe7b24d299b3cc5511674c30b53f23431d578c313e14b414b8de3fcbe",
+    "test_iq2s_gpu_check.py": "a147f188db9b6f9362f0f9f7eeb1c46c8f6227231d9d590b3ac9357bfadda67f",
+    "qualify_iq2s_gpu_cpu.py": "26c9b419f84c5214eac575f3f774f0f6c58eb7a64eadd5e394b552689ef6d0aa",
+    "gpu-source-astra-review-v2.json": "9c67493ae06898ca45c4c90d9894c58207cb95d30e1e041a511b0dc97bd53797",
+    "gpu-CPU-astra-review.json": "596ec79579f6c5c9af4263956ae6a77026d4d93bc03320f18d923335f4d37e3f",
+    "compile-result-astra-review.json": "bfb9ca2972a4b41efcdd8ef8af2fd9c8ae1c02c2242b6447654140d9997997a3",
+    "compile-qualification.json": "b6048090cd264de4328ae5e100dbc925962ed38c1f1e7579352e8aeac959f73a",
+    "build-FIRST/receipt.json": "fbf494d1169b821bad207661d99a1d3175d9dd1007cf770b5a1f0a65a97e6a1b",
+    "candidate-files.json": "4a500fb2955a5162d3d447be21d660946bcc2faa20b37c9597e85c939a4e0800",
+    "gpu-CPU-darwin/receipt.json": "e91a4a1878f9a31e5d8ba48bc39750a2a9e1431c032a243d2cd49770445e0dec",
+    "gpu-CPU-darwin/child.json": "126808a3b1f3bfa6e6ac66bf1dbe379219feea3c1829631815d371c743a6000e",
+    "gpu-CPU-darwin/child.log": "d2b6c15019f0b5d476922fab4117179a009f41cf6e2979c942a9c68a9322a6d3",
+    "gpu-CPU-linux/receipt.json": "e91a4a1878f9a31e5d8ba48bc39750a2a9e1431c032a243d2cd49770445e0dec",
+    "gpu-CPU-linux/child.json": "c490b666f2735337d9bb4ca9a9c380f5c87be37e3eec874dcc7cbf97ffe39389",
+    "gpu-CPU-linux/child.log": "521c8d4c8f20bdf814154e90d96b92c125315e608e0dd2a730561053535df128",
+    "build-FIRST/compile-iq.stderr": "58932ae00491d567ff26130480691188e11592a30e09f45ddf0b5939d97ccff6",
+    "build-FIRST/candidate-link-inputs.json": "20e79b69b284d13b068959588e6115678d77ead5eda3a443aabe44a6542aa760",
+    "build-FIRST/plan.json": "850aac9cc1abfd0f14ff0d929829ad7235d62c0e58c0341f85c606016e4c7881",
+    "build-FIRST/compile-iq.json": "a60584ec60b5021bc2350abb0a844012c79acc133254ef789576b33fd03a4ef5",
+    "build-FIRST/compile-test.json": "0d271f9ef4c85ac6ffab7c864fb86ec192013cc6822a34910cf76aaa645a86b4",
+    "build-FIRST/compile-iq.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/test-link.json": "aaf51f462471e373d3b856f3fa9d99c86a2f6bee02f0fac5d4c4ea109fef2cf9",
+    "build-FIRST/candidate-link.json": "45d622ae55fed636c6bdadffa90d69afb6ef4fc91e782697dcca3108db4a113a",
+    "build-FIRST/candidate-link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/compile-test.stderr": "2ef72a8a5c7aa5ee85b4ae329a78228de740e971dcce6a52f2b8b6da1af2f0cc",
+    "build-FIRST/ds4_gguf_test-candidate.link.d": "2aed3d1b603c8d086f1750f76d46f977a3a29be86bb6c7c8ca17f158e40d1c30",
+    "build-FIRST/maya-ds4-candidate.link.d": "5a5c41f30eab5c9057191f9067f325d4dbb5d8339259bf200da7c7b407afbad2",
+    "build-FIRST/test-link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/test-link-inputs.json": "fa77d874448707d63f6759ada06c0b369dc48566eb4e7c892a3b5b578e03af53",
+    "build-FIRST/test-link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/candidate-link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/compile-test.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gpu-qualification.json": "cd146a86438054e664b6dfb953341fc65ecb34d9ab6d9d22851009c239713580",
+    "kernel-preflight-FIRST-detailed.json": "562cfddc0ee68643a20cedfec3b17cc880821f0ae8f3a8ac5823c9c0337fa19a",
+    "kernel-preflight-FIRST-raw/result.json": "001d821b116afa2ddd6afc2196579e299d64a88f3180a3af90216b9e05cbd27f",
+    "kernel-preflight-FIRST-raw/state.json": "4318c0802f8a6e76232645f39a7cd2a0c0054647fd2537b31bc1e4cb633f209f",
+    "kernel-preflight-FIRST-raw/target-placement.json": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6"
+  }
+}

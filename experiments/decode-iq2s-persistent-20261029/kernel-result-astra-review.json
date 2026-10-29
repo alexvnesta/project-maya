@@ -1,0 +1,132 @@
+{
+  "decision": "KERNEL_104_CASES_AND_SELECTED_RESTORATION_REVIEWED_NO_MODEL_ADMISSION",
+  "utc": "2026-10-29T13:11:00.245703+00:00",
+  "qualification_sha256": "cd146a86438054e664b6dfb953341fc65ecb34d9ab6d9d22851009c239713580",
+  "fixture_sha256": "1e86117f24c435e6630d57f858628ea019ff0a36adc9495b5c141113c76fd0a4",
+  "cases_each_device": 52,
+  "total_cases": 104,
+  "actual_fixture_pids": [
+    1989204,
+    1989214
+  ],
+  "window": "/home/alex/strata-deepseek-test-20261024/windows/20261029T125632Z.json",
+  "window_exit0": true,
+  "kernel_capture_returncode": 0,
+  "kernel_fault_lines": [],
+  "root_min_sampled_bytes": 900694142976,
+  "root_min_sampled_GiB": 838.8367881774902,
+  "system_swapout_delta_bytes": 0,
+  "owned_cgroup_peak_bytes": 197935104,
+  "selected_identity": {
+    "native_pid": 1989341,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "443172a350014f4bbcb11df8b9895b17",
+      "main_pid": 1989302,
+      "native_pid": 1989341,
+      "native_start_ticks": 154686925
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "public_stream": {
+    "assembled_content": "READY",
+    "fragments": [
+      "READ",
+      "Y"
+    ],
+    "finish": "stop",
+    "DONE": true,
+    "unauthenticated_models": 401,
+    "authenticated_models": 200,
+    "request_omits_max_tokens": true
+  },
+  "scope": [
+    "Exact fixture finite/memcmp/dispatch/canary checks passed for frozen52cases each device, including real dimensions and public Q8 token/window path. This is bounded kernel correctness only.",
+    "Both stderr files contain the expected Q8_BATCH activation and successful actual Q8_CHECK comparison, not errors.",
+    "No candidate model inference, whole-model exactness, task quality, timing benefit or deployment established. Original IMMA HOLD remains unchanged.",
+    "GPU11315 is inferred hosted residency from exact CPU/human counts and fixed drafter basis, not direct hosted INFO.",
+    "Historical window health_before/glm_unit fields are copied root-maintenance metadata, not current GLM state.",
+    "Transient user-unit collection and earlier system-unit query are not used to infer exitstatus. Durable canonical window exit0 and actual fixture child exit0 are used.",
+    "Old native1853542/server1853509 close0 is parent-observed at12:55:35.997154 but separate raw closure witness is not yet local; this report does not independently claim historical API ExecMainStatus0. Supplemental closure evidence remains needed before future model admission.",
+    "Parent subsequent host-idle deferral means production is serving user work; no remote polling or action by this reviewer."
+  ],
+  "reviewer_metadata_check_note": "An initial local reconciliation assertion incorrectly expected empty stderr and stopped before report creation. Direct inspection shows two intended Q8 success lines/device. Corrected only that offline assumption; no fixture or native rerun and no raw outcome regrade.",
+  "findings": [],
+  "evidence_sha256": {
+    "kernel-FIRST-output/gpu0-exit.json": "6d68f2c2867b072215de7aa6a62087855f0d962a5c9583fbb9f1b38bfaebf827",
+    "kernel-FIRST-output/gpu0-start.json": "afa5c6978f4bd289fed44f33314120d176abb5b6bc160c868df6598fb3d4f1a5",
+    "kernel-FIRST-output/gpu0.stderr": "1352d167957e284ba2b09a7ba2079069d92ba1becf745a9e7933c4d22110f250",
+    "kernel-FIRST-output/gpu0.stdout": "162d7c9e2abe6bf78a7508394200952d926cfcc33c79cdb035b29869900b8f96",
+    "kernel-FIRST-output/gpu1-exit.json": "f4432ea3d0b83aa5fff62aa7a3765b78ae3de1db6076281899a51038960238e3",
+    "kernel-FIRST-output/gpu1-start.json": "766a7e69866734c48d1d4208d0df1d8f19f5ab0360e216f66c53b428f41d922d",
+    "kernel-FIRST-output/gpu1.stderr": "1307f200f95b1d23fc426a325b3472a934b814bdc5fa19de6c0ad1aae0ce4ac8",
+    "kernel-FIRST-output/gpu1.stdout": "342141b446588d05bd4cb74561ba8a942f16051077222103b2b953e71e9322f5",
+    "kernel-FIRST-output/kernel-receipt.json": "8692959a476332bf03c440fe9acd2478210e57acbeb2465f6b07e51af2122795",
+    "kernel-FIRST-maintenance/proof.json": "35bfbebade9a53a5e2730117cbccb5aa09075f4c8af510e6600d54a5aa389991",
+    "kernel-FIRST-maintenance/public-default-output-request.json": "93bb8806b80adc0a4793b4302b8387e13ae2d02b04932ddd2b2f166be29a455a",
+    "kernel-FIRST-maintenance/public-default-output-sse.txt": "27837540639424a32e81b81cc5a345d33a65236ded589f86dcf7579ea2213c63",
+    "kernel-FIRST-maintenance/result.json": "d87893c2e2af6dd228cc940c90f7a91523bf87e34bde495f690a8802b679c3c8",
+    "kernel-FIRST-maintenance/start-binding.json": "6682691bcf9ec27019da3d27ba55e923f153e4243c4a751ce2333d62c724d05d",
+    "kernel-FIRST-maintenance/start-unit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "kernel-FIRST-maintenance/state.json": "d87893c2e2af6dd228cc940c90f7a91523bf87e34bde495f690a8802b679c3c8",
+    "kernel-FIRST-maintenance/target-placement.json": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "kernel-FIRST-window.json": "27043219b9c434b7d13e93605347417384f404fff23fd80e709b1357b9fd3824",
+    "kernel-FIRST-telemetry.jsonl": "703f91f5e16a99a480e6708e13ca50a0fc072e5f950af5a545f6a4f0a9703a71",
+    "gpu-qualification.json": "cd146a86438054e664b6dfb953341fc65ecb34d9ab6d9d22851009c239713580",
+    "kernel-admission-astra-review.json": "0c83a01bcb5a04f106c094001762cb942fc8661fb1b763f39af6d754a0c4a15a",
+    "candidate-files.json": "4a500fb2955a5162d3d447be21d660946bcc2faa20b37c9597e85c939a4e0800",
+    "compile-result-astra-review.json": "bfb9ca2972a4b41efcdd8ef8af2fd9c8ae1c02c2242b6447654140d9997997a3",
+    "gpu-CPU-astra-review.json": "596ec79579f6c5c9af4263956ae6a77026d4d93bc03320f18d923335f4d37e3f"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "old_native_close": {
+    "utc": "2026-10-29T12:55:35.997154+00:00",
+    "server_pid": 1853509,
+    "native_pid": 1853542,
+    "returncode": 0,
+    "closed": true
+  },
+  "old_API_unit_lifecycle_only": [
+    {
+      "__REALTIME_TIMESTAMP": "1793278530930084",
+      "MESSAGE": "Stopping deepseek-hosted.service - Qualified DeepSeek V4.1 Flash IQ2_XS API on the CMP170HX pair..."
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1793278536112282",
+      "MESSAGE": "Stopped deepseek-hosted.service - Qualified DeepSeek V4.1 Flash IQ2_XS API on the CMP170HX pair.",
+      "JOB_RESULT": "done"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1793278536112606",
+      "MESSAGE": "deepseek-hosted.service: Consumed 2h 19min 46.885s CPU time over 6h 32min 19.615s wall clock time, 77G memory peak."
+    }
+  ],
+  "current_units_readonly": {
+    "hosted": "ActiveState=active\nRestart=no\nMainPID=1989302\n",
+    "router": "ActiveState=active\nRestart=no\n"
+  },
+  "scope": "Lightweight boundedoldlifecycle receipts only; nouserrequestorHost.idle/sourcehash/stage/restart.",
+  "local_capture_utc": "2026-10-29T13:09:48.641217+00:00"
+}
