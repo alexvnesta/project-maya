@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-30T09:37:31.034374+00:00",
+  "superseded_report_sha256": "514cc6ce0a32b05fae4da1fa8dce2e1a599ae7ef60cb620db1f9bc68b24ef199",
+  "correction": "Initial HOLD findings were based on the full32-control read and subsequent42-control read. ROOT edited concurrently before hashes/ASTIDs were captured, so that report contains55-control source snapshots not yet fully read at its creation. Its all-source-manually-read claim does not apply to those finalhashes. Do notuse it for execution admission. Preserve historicalHOLD and use a distinct finalv2 fullread report.",
+  "current_read_progress": "The complete stable55-control revision and allsixsources were subsequently read in full; no execution. Awaiting small requested actualbuildpath coverage and post-inputproof checks beforefinalv2."
+}

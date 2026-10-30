@@ -1,0 +1,11 @@
+--- health.cu (failed FIRST preserved)
++++ PROPOSED_health_synchronized_v2.cu (UNQUALIFIED UNBUILT UNRUN)
+@@ -34,6 +34,8 @@
+  j.y=static_cast<float*>(y.p)+G;j.y_cs=ys;j.ncol=rows;j.alpha=1;
+  // One original selected dispatch, <=4 columns. No comparison or new loop.
+  require(rows==1 || rows==2 || rows==4,"original column bound");
++ // Explicitly finish default-stream initialization before the nonblocking kernel.
++ ck(cudaDeviceSynchronize());
+  require(gg::mv(&j,1,stream),"original mv refused");ck(cudaGetLastError());ck(cudaStreamSynchronize(stream));
+  ck(cudaMemcpy(out.data(),y.p,out.size()*4,cudaMemcpyDeviceToHost));
+  for(size_t i=0;i<out.size();++i) {

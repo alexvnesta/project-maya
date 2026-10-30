@@ -1,0 +1,4 @@
+ds4: a GEMV call's int8 inputs rounded in one launch (DS4_Q8_BATCH)
+ds4: CUDA0 Q8 batch check: 8 jobs (k 32 .. 5120, rows 1 .. 16, strided, one input shared): 42784 int8 and 1337 scales the per-job launches' bit for bit, every guard intact (DS4_Q8_CHECK)
+BASELINE_HEALTH_BAD kind=value index=129312 row=16 col=1 actual=7fa12345 expected=c91ec000 rows=2 pad=0 pattern=1
+BASELINE_HEALTH FAIL: baseline output mismatch

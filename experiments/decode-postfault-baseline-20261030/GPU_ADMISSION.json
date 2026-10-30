@@ -1,0 +1,95 @@
+{
+  "utc": "2026-10-30T09:49:52.119133+00:00",
+  "decision": "CONDITIONAL_SINGLE_BASELINE_HEALTH_CANONICAL_WINDOW_ONLY",
+  "single_window": true,
+  "baseline_only": true,
+  "source_sha256": {
+    "recovery.py": "f8dc0d49d695cccf51e652b98a4b36c4556c744d57beb88ef537eada192ecf8e",
+    "health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "test_contract.cpp": "e11174d915794b4c2bd4065ea855c6cde05d25b4043b9600754a8f0662811c96",
+    "test_recovery.py": "8c12e765cd1f04f71e54cf7cb9393efee2053d6c586b8424882727e6c2ba0a22",
+    "qualify_cpu.py": "5d6f97807bdc0780942e5c234bc6995944fb87531e8d0afbffeb9c52d6b36d83"
+  },
+  "failed_window_sha256": "49a395da2a435562498e058bcf0da56dcf50ec4a0f0aae96dba745971759ed40",
+  "clean_window_sha256": "73a5570f9e4022755a753a35c5e50a7be65bc8bcffcee5da59358222277e2e54",
+  "binary_sha256": "95f3ef30272fbbe3cfdf121ea91468919ac3b98fbc40c05bb1e80d99e04ca7a5",
+  "identity_observer_sha256": "7869ca8561c85f8770321a07a87c2b55bbbe7382b4cafe5f7a2613b715ad9d7e",
+  "input_map_path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/GPU_INPUT_MAP.json",
+  "input_map_sha256": "0d5e85e02d84dddaf56168e17133740708ca2110e48d76bf1d88b756e4d686e2",
+  "input_map_file_count": 2285,
+  "original_qualification_sha256": "e8fa4acbcbaa9482f8a5b6695e562596400c91004329b2503220e13d3bc97e9e",
+  "build_actual_audit_sha256": "6558004c146d58f3d9886fdf95c91d0ffa2ce94fde62e1aa4838226737823e40",
+  "independent_build_audit_sha256": "8004ad562c2a686c83a1bed580b79084cc4854559e046d4e08a2223c5e458861",
+  "source_review_sha256": "6a75f50cffb08789650cdd7f953afa2295b5870b11caa0a568f3e20bf72c958f",
+  "CPU_review_sha256": "a92b0d426fc8408f29efbf02acf7857e8bd5a4202e75dc4b3af77100feafd6e5",
+  "human_authorization_sha256": "50d553d0d6cfff8d4379e756050328a0432ecdf646650974b3e7f6ab89d10a75",
+  "canonical_window_sha256": "170722b54e0245e7268bffe2f39f8e30bee2fc79c056544f4f9b03942c48f25f",
+  "canonical_coordinate_sha256": "276a78f6f62d9ae7760e9b436863a6279715d58ea0960bb396bdb7adcc3776dd",
+  "command_template": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-B",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/recovery.py",
+    "entry",
+    "--admission-pin",
+    "<SHA256_OF_THIS_FILE>"
+  ],
+  "prior_clean_window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T024056Z.json",
+  "prior_failed_window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T041001Z.json",
+  "clean_telemetry_sha256": "1a2ed5a8fd215a20b5a117a4f8a024f45e44e6f2dd0f5bab837aba1eb68c532e",
+  "maintenance_hold_sha256": "e180ec3848c3f1a099836927cf974a8e9d2e7cc0fbeef7460668c7dff8a9561c",
+  "prospective_scope": {
+    "devices": [
+      0,
+      1
+    ],
+    "analytic_cases_per_device": 12,
+    "Q8_reader_check_each_device": true,
+    "K": 5120,
+    "N": 129280,
+    "columns": [
+      1,
+      2,
+      4
+    ],
+    "head8": false,
+    "model_requests": false,
+    "service_start": false,
+    "restoration": false,
+    "candidate_execution": false,
+    "timing_or_promotion": false
+  },
+  "bounds": {
+    "window_s": 1200,
+    "window_soft_s": 1000,
+    "cleanup_reserve_s": 200,
+    "fixture_CPU_s_each": 120,
+    "fixture_wall_s_each": 120,
+    "fixture_AS_limit": null,
+    "nice": 15,
+    "root_start_GiB": 132,
+    "root_runtime_GiB": 120,
+    "swapout_delta_bytes_strictly_less_than": 1073741824,
+    "log_budget_GiB": 4
+  },
+  "mandatory_immediate_action_conditions": [
+    "Stage onlynew immutablemetadata; verify ALL2285files, mapself andthisadmission exactdigests physically beforewindow. Theseconditionsarenotassertedcompletedbylocalreview.",
+    "Freshstoppedguard mustagainshowexactfailed27f9/MainPID0/Resultexit-code, currentnativeNULL/productionstopped, nootherprivate/build/pending, competingunitsinactive, noGPUowners/twoGPUsfree, root>=132GiB/kernelclean andexperimentlockavailable.",
+    "Latestwindow remains exactfailed041001; clean024056/telemetry/policy/rootlineage andfailedraw/refusedstartup unchanged. Explicitnewauthorizationonly.",
+    "FreshGPU-FIRST absent andrealownedpath; invokeonce throughunchangedHost.launch_owned withexactcleanprior/exactentryargv/timeout1200. Canonicalwindowownslock/cgroup; noalternateowner/directfixturelaunch.",
+    "CUDAvisibility mustexpose bothphysicalSM80devices; unchangedQ8_BATCH1/CHECK1, nohead8/Q8share/IQ2/IMMAfactormixture.",
+    "Beforelaunch bind ownpostfaultdiagnostic controller/attempt in separatecanonicalcustody whilepreservingalloldHOLD/failurefields; do notoverwritehistoricalcurrentnativebindingasiflive. Preserveforeigncustody.",
+    "CapturefixturePID/exe/argv/startticks/cgroup/start/exit. Requireexact12rawPASSIDs andsummary eachdevice plusQ8check; anyerror/incomplete/guard/resource/kernel/cleanupfailure stops withoutGPU1ifGPU0failed andwithoutretry.",
+    "Onlylightweightreceipts duringactivewindow; noother source/hash/staging/heavyCPU ormodelaction byreviewer/parent.",
+    "Afterterminal require actualwindowexit0/cleanheldresume/kernelcapture0/faults[]/swap/root/ownedcleanup andfreeGPUs. Preserveallrawfirstresults; do not setpassfields manually.",
+    "Do NOT restore/startselectedunit orCPUrouter underthisadmission, evenifhealthpasses. Independentterminalreview andseparatebaseline-restorationdecision follow."
+  ],
+  "preserved_failures": {
+    "head_window041001": "test1/HOLD unchanged",
+    "refused_start27f9": "oneattempt/refused unchanged",
+    "original_build_controller": "exit1 duepost-linkparser remainsfailed, separateactualaudit doesnotregradeit"
+  },
+  "current_result": "UNRUN",
+  "GPU_replay_allowed": false,
+  "restoration_admitted": false
+}
