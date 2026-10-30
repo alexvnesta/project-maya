@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-30T02:54:29.077884+00:00",
+  "decision": "N0_HOLD_EXISTING_BOUND_PRIMITIVES_IDENTIFIED_NO_QUALIFIED_LATE_ADOPTION_ENTRYPOINT",
+  "scope": "Local source and copied failure traceback only; no remote operations/imports/tests/service/model actions.",
+  "confirmed_failure": "Actual copied traceback reaches selected owner capture_pending_start line324 after clean phase, before restore_router. The stable unit invocation/MainPID sandwich differed and no start_binding was saved.",
+  "causal_limit": "A 0-to-positive MainPID change while native_snapshot returnsNone can produce this exact error because sandwich equality is checked before actualNone return. Actual before/after values were not saved; legitimate startup transition versus another change is not established.",
+  "ownership_limit": "Current observed38b087689f5f4888b155c99a8bc74f10/main2612003/native2612033 is parent-reported, not independently observed here. Absence of frozen startup binding means no automatic cleanup/adoption authority. Original attempt remainsSTOPPED/HOLD regardless subsequent recovery.",
+  "qualified_paths_reviewed": {
+    "current_capture": "F/activate_chunk4096.py313-329 refuses unstable/replaced owner; restore_ds379-408 issues single start and only terminates owned systemctl command on failure.",
+    "pending": "legacy.finish_pending only exact TARGET_RUNNING_PUBLIC_VERIFICATION_DEFERRED plus saved expectedPID; model verify_pending additionally requires exact canonical pending state/q/start_binding. Neither accepts this STOPPED/unbound failure.",
+    "baseline": "chunk4096_runtime.bind_current_baseline explicitly prohibits use after startup failure/pending; not a recovery workaround.",
+    "historical_wait_only": "decode-profile-v1/diagnosis-ownership-env-224039Z/recover_baseline.py waits existingunitACTIVE thenrouter+verify without native restart, but is hardcoded to obsolete windows/profile/canonicalfields and lacks current identity custody. Cannot execute unchanged.",
+    "historical_starting": "q8-batch-v1/activation-v1/recover.py starts native and uses obsoleteQ8activationprofile; wrong action/scope."
+  },
+  "minimal_separate_recovery_design": [
+    "Preserve original failed source/trace/canonicalN0receipt unchanged and ensure original controller/owned start command ended; preserve unit startup journal and exact owner observations.",
+    "Use fresh separate recovery record, require exact same reported invocation/main/native plus proc startticks/exe/env/argv/cgroup and stable before/after unit snapshots; any change refuses without adoption/stop/restart. This binding authorization is a NEW recovery decision, not already-qualified pending continuation.",
+    "Bounded read-only wait for this SAME existing unit to become ACTIVE with readyreceipt tied to its current startup offset/invocation. No new systemctl start deepseek/no capture_pending_start retry/no native request until readiness. If inactive/failed/replaced or deadline passes, retain HOLD. Historical wait has1200s ceiling; do not reset existing systemd1200sstartup deadline or extend by restart.",
+    "After explicit frozen recovery binding, existing selected ChunkProductionHost guard_binding/target_identity verify exact92/c43/b15/release972pins, 1M262K/Q8/mode1/chunk4096/images/projection/4045RAM and kernel/resource evidence. Audit_dir must be fresh recovery-owned metadata.",
+    "Only then existing inherited restore_router starts existing CPU router (command180s plus GET readiness60s); guard same binding before/after. Existing verify_target(expected_pid) can perform one qualified public401/auth200/READYstopDONE when idle or defer verification if busy. No legacy Host.verify old262144context check.",
+    "Save recovery result separately; update current selected canonical identity under exact custody comparison only after successful recovery verification, preserve N0failedexperiment state/HOLD and noN1/timing. No broadstop, no replacement cleanup, no replay."
+  ],
+  "tests_existing_scope": "Current test_start_error_before_binding_never_adopts_late_owner deliberately expects no binding and no cleanup; qualified CPU controls do not establish a late-adoption recovery controller.",
+  "evidence_sha256": {
+    "autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/activate_chunk4096.py": "b2bb7676969661f98bf77d9969a840a4fcb44367f9644ab6f05ac19d70709056",
+    "autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/test_activate_chunk4096.py": "c9c5f17779c8a50601e3d94cefef3713c6a5a06935b3684503381bafcade3af3",
+    "decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_model_runtime.py": "9bd594247cecc13980d864780b778a66da08fcaf2b0a3ff5b386e84e33a1ad2c",
+    "decode-optimization-20261028/q8-sharing-v1/model-v1/controller-N0-FIRST.log": "fa65845ffd50dcf59f0c0b44c0607d448524368c4fe2602febf0baaecab0b1aa",
+    "autonomous-optimization-12h-20261028/chunk4096-v1/chunk4096_runtime.py": "72e645e700f28f91884dafcd4cbe491595c2e94af608a7b8c5f685021b44c6d3",
+    "prefill-cache-improvements-20261027/activation-v1/activate.py": "4df43d04ae0fb9b2f67faf20e9750471e964c539d97ed81af7f3ad36cc0b9fd2",
+    "decode-profile-v1/maintenance.py": "276a78f6f62d9ae7760e9b436863a6279715d58ea0960bb396bdb7adcc3776dd",
+    "decode-profile-v1/diagnosis-ownership-env-224039Z/recover_baseline.py": "e0b0f1ac3f1e5a5656fb9516bfc8b5976f4f159d8305b7bdaf3f5ea655e088cf",
+    "q8-batch-v1/activation-v1/recover.py": "f253ea2de649c96b7e5bcb2632fb9447c7059a3f449ecf34d8e36f231a6c7e92"
+  }
+}

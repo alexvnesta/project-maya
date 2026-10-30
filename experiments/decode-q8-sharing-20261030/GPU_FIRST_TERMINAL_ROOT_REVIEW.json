@@ -1,0 +1,121 @@
+{
+  "utc": "2026-10-30T02:21:34.403237+00:00",
+  "decision": "KERNEL_242_CASES_AND_SELECTED_RESTORATION_REVIEWED_NO_MODEL_ADMISSION",
+  "passed": true,
+  "devices": [
+    {
+      "device": 0,
+      "pid": 2594479,
+      "start_ticks": 159456311,
+      "cases": 121,
+      "exit0": true
+    },
+    {
+      "device": 1,
+      "pid": 2594489,
+      "start_ticks": 159456414,
+      "cases": 121,
+      "exit0": true
+    }
+  ],
+  "actual_window_exit0": true,
+  "SSH_controller_exit0": true,
+  "root_min_GiB": 837.2915153503418,
+  "swapout_delta_bytes": 0,
+  "kernel_faults": [],
+  "old_native_API_close0": true,
+  "selected_identity": {
+    "native_pid": 2594596,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "f771173697d844e080eecd0647b78899",
+      "main_pid": 2594556,
+      "native_pid": 2594596,
+      "native_start_ticks": 159457134
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "public": {
+    "unauthenticated_models": 401,
+    "authenticated_models": 200,
+    "SSE_done": true,
+    "finish": "stop",
+    "known_answer_passed": true,
+    "content": "READY"
+  },
+  "kernel_only_not_speed_or_model_equivalence": true,
+  "raw_local_sha256": {
+    "kernel-FIRST/gpu1-exit.json": "9eae5f9f4620e22a6583885b8e1db81e2e9d9b7a5f651f38331695f8214cca39",
+    "kernel-FIRST/gpu0.stdout": "b139cdfce876660ceb246e0ea3473ea80f54325c9b5ebf4212feb390419bb63e",
+    "kernel-FIRST/20261030T021134Z.kernel.log": "19c4e28b2f54ea8f217db4e622b0a5c758efa7b77ce2dc0394b6d159568c0b2e",
+    "kernel-FIRST/gpu0-exit.json": "672a7697cd088e1c186a594f3811e2681f2cfbf33ebc2e79e81ac2a4d0631ec7",
+    "kernel-FIRST/kernel-receipt.json": "0affae5892cd93b69a8ab24490370699759f3d7f2695084262ea88e8d972e4f5",
+    "kernel-FIRST/gpu1-start.json": "7a478c4c77b68984fe3cc13334c355f24283d643373a9f1e15141fef5e022fdd",
+    "kernel-FIRST/gpu0.stderr": "36c8ed75603782d093588400f07dc7762ecc900d7b76d60f3d36d2f16bfbb849",
+    "kernel-FIRST/gpu1.stdout": "41de8e7c2fb89e0b64d7af51c042a434356a8789a9548c8e9a4c146da137b4c6",
+    "kernel-FIRST/20261030T021134Z.telemetry.jsonl": "cb6e6ff2411a5352e2cac10e9b41b4404b8e0e1a656590163c19fce37ebd83df",
+    "kernel-FIRST/20261030T021134Z.json": "96b49a43b1726ce64d7163589272bfb3fd6a659be2c758d0ac31a52531fa8a7c",
+    "kernel-FIRST/gpu0-start.json": "9978db3d196dd3e0e2735f0e19d2db480cbb381f71b029316faa574e45fb3a57",
+    "kernel-FIRST/gpu1.stderr": "d06eb4b6e82e1fb7b31d21e4dbfa48829fb9c2f362b13d7dc77b2f85ea0edbee",
+    "kernel-FIRST-maintenance/state.json": "e9ac56f7bcb088329ea79a11a7504a443be1e7f1f26f513bece76592caa394ea",
+    "kernel-FIRST-maintenance/result.json": "e9ac56f7bcb088329ea79a11a7504a443be1e7f1f26f513bece76592caa394ea",
+    "kernel-FIRST-maintenance/target-placement.json": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "kernel-FIRST-maintenance/public-default-output-sse.txt": "55c2bcb47bd158c78a0dbd5043be0cbcb6f26b94c5a550b0d9633734e4be09d3",
+    "kernel-FIRST-maintenance/old-owner-close.json": "24ebf879d5eb956a0e075422011a882e3e23960e703abc6d9c2d676ea9376230",
+    "kernel-FIRST-maintenance/public-default-output-request.json": "93bb8806b80adc0a4793b4302b8387e13ae2d02b04932ddd2b2f166be29a455a",
+    "kernel-FIRST-maintenance/start-binding.json": "0a564c604286d66176547b1c16989238a38be75358f5999d6165a578396cfba2",
+    "kernel-FIRST-maintenance/start-unit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "kernel-FIRST-maintenance/proof.json": "bfe71809a087420469d5115ac6351c1fb416438aa17c8c72c3a277ef0453bba1"
+  }
+}

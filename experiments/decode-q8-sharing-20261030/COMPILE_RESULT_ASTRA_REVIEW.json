@@ -1,0 +1,114 @@
+{
+  "utc": "2026-10-30T02:06:20.961532+00:00",
+  "decision": "COMPILE_ARTIFACT_EVIDENCE_REVIEWED_NO_GPU_ADMISSION",
+  "qualification_sha256": "c0d54c2c6a93451f32043cf2ad0bbda99310cea807c32cd19f09cc782961d7b7",
+  "source_scope": "Only GGUF object replaced in selected native; standalone fixture object replaces test entry. Original IQ/model/kernels/vision objects and link libraries retained.",
+  "children": [
+    {
+      "pid": 2590271,
+      "exit": 0
+    },
+    {
+      "pid": 2590370,
+      "exit": 0
+    },
+    {
+      "pid": 2590612,
+      "exit": 0
+    },
+    {
+      "pid": 2590642,
+      "exit": 0
+    }
+  ],
+  "all_four_exact_argv_bounds_exit0_no_faults": true,
+  "outputs": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/build-FIRST/ds4_gguf.cu.o": "4797bd229a7db87008191db6ae44ff8d52abfd627837568e1efe6e407af94d84",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/build-FIRST/q8_share_check.cu.o": "8468707fc71ae84a61aedabf81c12bb19236848aaf1c942a2977f6307832531a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/build-FIRST/maya-ds4-candidate": "067778a5be5584300bc860f02ba3b1e06e7600d2a3641d173433bcc8ed9e158f",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/build-FIRST/q8_share_check": "5a14b7bc4d7f356a246990a9c34833ccd1c043115383986ff60e431ce04de90a"
+  },
+  "outputs_are_frozen_physical_controller_hashes_not_local_binary_rehash": true,
+  "original_control_relink_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "link_review": {
+    "native_actual_inputs": 44,
+    "fixture_actual_inputs": 36,
+    "unknown": [],
+    "existing_input_digest_changes": [],
+    "raw_ld_dependencies_match_saved_maps": true,
+    "compile_plan_matches_prepared_frozen_plan": true
+  },
+  "compiler_diagnostics": {
+    "warnings_or_errors_observed": [],
+    "all_stdout_empty": true,
+    "link_stderr_empty": true,
+    "fixture_stderr": "ptxas info: 0 bytes gmem",
+    "GGUF_function_resource_records": 57,
+    "nonzero_stack_or_spill_records": [
+      {
+        "symbol": "_ZN6strata3ds44gguf44_GLOBAL__N__c31d7c4f_11_ds4_gguf_cu_1d909ef614mx_down_kernelILi16ELb1EEEvNS2_6MxArgsE",
+        "stack_bytes": 8,
+        "spill_store_bytes": 8,
+        "spill_load_bytes": 8,
+        "registers": 64
+      },
+      {
+        "symbol": "_ZN6strata3ds44gguf44_GLOBAL__N__c31d7c4f_11_ds4_gguf_cu_1d909ef614mx_down_kernelILi8ELb0EEEvNS2_6MxArgsE",
+        "stack_bytes": 8,
+        "spill_store_bytes": 8,
+        "spill_load_bytes": 8,
+        "registers": 48
+      },
+      {
+        "symbol": "_ZN6strata3ds44gguf44_GLOBAL__N__c31d7c4f_11_ds4_gguf_cu_1d909ef613mx_set_kernelILb1EEEvNS2_4SetKE",
+        "stack_bytes": 8,
+        "spill_store_bytes": 4,
+        "spill_load_bytes": 4,
+        "registers": 80
+      },
+      {
+        "symbol": "_ZN6strata3ds44gguf44_GLOBAL__N__c31d7c4f_11_ds4_gguf_cu_1d909ef617mx_combine_kernelENS2_8CombArgsE",
+        "stack_bytes": 32,
+        "spill_store_bytes": 0,
+        "spill_load_bytes": 0,
+        "registers": 32
+      }
+    ],
+    "Q8_quant_jobs_registers": 25,
+    "Q8_quant_jobs_stack_spills": 0,
+    "Q8_single_quant_registers": 24,
+    "Q8_single_quant_stack_spills": 0
+  },
+  "limits_and_scope": [
+    "Compiler CPU120/AS4GiB per process; wall300 per process group, nice15, CUDA hidden.",
+    "No resource equality versus original GGUF object inferred; unchanged source kernels can regenerate different machine code.",
+    "Nonzero MX spill/stack records are preserved observations, not hidden and not speed evidence.",
+    "Successful compilation and exact original-object relink do not establish GPU numerical equality, whole-model quality, speed, or deployment readiness.",
+    "Separate controller CPU qualification, concrete kernel qualification map, fresh actual preflight and deliberate single kernel admission remain required."
+  ],
+  "evidence_sha256": {
+    "build-FIRST/q8_share_check.link.d": "f158a49068b4e8a7f02041dd4d0633e30e04e105b59288db690707f0083617a8",
+    "build-FIRST/candidate-link-inputs.json": "bef21bb1d9bb906ce75309e42e04150cacb0ba8ea48f46595475f1115f2a8720",
+    "build-FIRST/plan.json": "7adf7c93085d48cfa05a1db9aa8e3df6aca1cca7b6ce226fdce7ae47e9321f1a",
+    "build-FIRST/compile-test.json": "aeed352d0907de844108e8fd1832aa6faacccb03b67845d141c04678ecb7334a",
+    "build-FIRST/test-link.json": "ce65df5f046b7ecb71eb39029484af379061d8a41928ab498ac0c654f3519ded",
+    "build-FIRST/candidate-link.json": "7abefb4993c7e0223380208599994e40e67162f6875f6337715280de503f95a6",
+    "build-FIRST/candidate-link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/compile-test.stderr": "2ef72a8a5c7aa5ee85b4ae329a78228de740e971dcce6a52f2b8b6da1af2f0cc",
+    "build-FIRST/compile-gguf.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/maya-ds4-candidate.link.d": "ba458306b04580d0ece0f4630225dec84e4246f0ba240acf31c5b2176ba9b9d5",
+    "build-FIRST/test-link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/compile-gguf.json": "31dccc0bde114c18b71cb69c3853dc318f595b50d6da7add5e11389a2f9874b4",
+    "build-FIRST/test-link-inputs.json": "4b172c30e2416ad5a0cfde1210f2212dfe0530e3ae3cff969bdc617305268b8f",
+    "build-FIRST/test-link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/compile-gguf.stderr": "fdbca525e52cd301a19fd4079140c70f8988dfe5aa12c310da945095b58f4ffe",
+    "build-FIRST/candidate-link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/receipt.json": "4506a3cf6c5188239425604e103917debbd95c33cdb82af672cae99c4e78f2ec",
+    "build-FIRST/compile-test.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compile-qualification.json": "c0d54c2c6a93451f32043cf2ad0bbda99310cea807c32cd19f09cc782961d7b7",
+    "COMPILE_INPUT_MAP_ASTRA_REVIEW.json": "ebb9719461b15333ed5ac4d7ab487c528931b835170bd63b9cb18fba46c35619",
+    "COMPILE_RESULT_ROOT_REVIEW.json": "a98e21f20f82ad1fccb3c3d5588bc40000f1145c46ea43a2740ba2b9a6c84970",
+    "candidate-files.json": "c68cce9897083cacab686001e3fb8d77e358a9463307556282c38aa9463cb7ed"
+  },
+  "reviewer_executed_compiler_GPU_model": false
+}

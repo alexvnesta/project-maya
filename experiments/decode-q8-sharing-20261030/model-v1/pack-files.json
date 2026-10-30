@@ -1,0 +1,44 @@
+{
+  "pack": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1",
+  "model_dir": "/home/alex/strata-deepseek-test-20261024/models/ista-iq2-xs",
+  "tensors_txt_sha256": "bc5229fa509356053d07bbcc97e1245f05ac29934c9f92605b21659b4675c966",
+  "tensors_txt_bytes": 3711383,
+  "pk_files": [
+    {
+      "name": "DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf",
+      "size_bytes": 39535776992
+    },
+    {
+      "name": "DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf",
+      "size_bytes": 39494617536
+    },
+    {
+      "name": "DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf",
+      "size_bytes": 39423838496
+    },
+    {
+      "name": "DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf",
+      "size_bytes": 36771591232
+    },
+    {
+      "name": "../shared/DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf",
+      "size_bytes": 110595290816
+    },
+    {
+      "name": "../shared/dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf",
+      "size_bytes": 7976914240
+    },
+    {
+      "name": "../../reliability-optimization-20261025/vision-assets-1017/vision.bin",
+      "size_bytes": 970536960
+    }
+  ],
+  "slot_identity_named_file_sizes": {
+    "ds4.txt": 1444,
+    "engram.bin": 517980,
+    "tensors.txt": 3711383
+  },
+  "engine_version": "0.1.27",
+  "engine_version_basis": "Pinned original selected main object and reviewed original CMake STRATA_VERSION define reused byte for byte in candidate; no binary invocation.",
+  "source_scope": "Complete seven original pack file records, exact known selected relative paths; weight files not read, metadata stat only."
+}

@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_numerical.py", line 249, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_numerical.py", line 248, in main
+    print(json.dumps(controller(args)),flush=True);return 0
+                     ~~~~~~~~~~^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_numerical.py", line 237, in controller
+    result=runtime.coordinate_mode(a,host,out,state,save,preflight_only=not args.run)
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_model_runtime.py", line 431, in coordinate_mode
+    return a.m.runtime.old.coordinate(host, output, state, tracked, preflight_only=preflight_only,
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        post_drain_root_free_bytes=root_free or (lambda: shutil.disk_usage('/').free))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-profile-v1/maintenance.py", line 169, in coordinate
+    save(dict(state,status='CLEAN_PHASE_RESTORING_SELECTED_DS',window=window));host.restore_ds();host.restore_router();router_stopped=False;verified=host.verify()
+                                                                               ~~~~~~~~~~~~~~~^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_model_runtime.py", line 312, in restore_ds
+    return super().restore_ds()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/activate_chunk4096.py", line 396, in restore_ds
+    self.capture_pending_start(before['invocation'])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/activate_chunk4096.py", line 324, in capture_pending_start
+    raise ValueError('Unstable startup invocation; refuse capture')
+ValueError: Unstable startup invocation; refuse capture

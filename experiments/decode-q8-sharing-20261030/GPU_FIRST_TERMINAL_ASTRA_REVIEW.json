@@ -1,0 +1,189 @@
+{
+  "utc": "2026-10-30T02:23:54.563427+00:00",
+  "decision": "KERNEL_242_CASES_AND_SELECTED_RESTORATION_REVIEWED_NO_MODEL_ADMISSION",
+  "qualification_sha256": "73e8d03149b0a2ddcf4a03ee1805e5bc2b878998e79f069f066cd9edb03a4e56",
+  "fixture_sha256": "5a14b7bc4d7f356a246990a9c34833ccd1c043115383986ff60e431ce04de90a",
+  "independent_raw_checks": {
+    "each_device_exact121_unique_ordered_PASS_and_one_summary": true,
+    "each_start_identity_equals_exit_identity": true,
+    "fixture_argv_exe_cgroup_startticks_exact": true,
+    "both_exit0_primary_null_cleanup_empty_no_retry": true,
+    "proof_full2141_map_equals_qualification": true,
+    "all21_local_raw_hashes_match_root_inventory": true,
+    "old_unit_stable_inactive_MainPID0_Code1_Status0_success_and_native_close0": true,
+    "public_sameID_READ_plus_Y_READY_one_stop_one_DONE": true,
+    "window_exit0_kernel_capture0_faults_empty": true,
+    "raw_result_equals_state": true
+  },
+  "devices": [
+    {
+      "pid": 2594479,
+      "same_executable": true,
+      "argv": [
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/build-FIRST/q8_share_check",
+        "--q8-share-check",
+        "0"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service\n",
+      "start_ticks": 159456311
+    },
+    {
+      "pid": 2594489,
+      "same_executable": true,
+      "argv": [
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/build-FIRST/q8_share_check",
+        "--q8-share-check",
+        "1"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service\n",
+      "start_ticks": 159456414
+    }
+  ],
+  "old_owner_close": {
+    "binding": {
+      "invocation": "f2b87ac5943049aca1ca6eff01607397",
+      "main_pid": 2427755,
+      "native_pid": 2427790,
+      "native_start_ticks": 156575799
+    },
+    "before": {
+      "ActiveState": "inactive",
+      "InvocationID": "f2b87ac5943049aca1ca6eff01607397",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainCode": "1",
+      "ExecMainStatus": "0"
+    },
+    "native_close": {
+      "utc": "2026-10-30T02:10:37.872472+00:00",
+      "server_pid": 2427755,
+      "native_pid": 2427790,
+      "returncode": 0,
+      "closed": true
+    },
+    "after": {
+      "ActiveState": "inactive",
+      "InvocationID": "f2b87ac5943049aca1ca6eff01607397",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainCode": "1",
+      "ExecMainStatus": "0"
+    },
+    "passed": true,
+    "before_raw": "ActiveState=inactive\nInvocationID=f2b87ac5943049aca1ca6eff01607397\nMainPID=0\nResult=success\nExecMainCode=1\nExecMainStatus=0\n",
+    "after_raw": "ActiveState=inactive\nInvocationID=f2b87ac5943049aca1ca6eff01607397\nMainPID=0\nResult=success\nExecMainCode=1\nExecMainStatus=0\n"
+  },
+  "resources": {
+    "root_min_sampled_GiB": 837.2915153503418,
+    "swapout_pages_delta": 0,
+    "owned_cgroup_peak_bytes": 200462336
+  },
+  "restored_selected": {
+    "native_pid": 2594596,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "f771173697d844e080eecd0647b78899",
+      "main_pid": 2594556,
+      "native_pid": 2594596,
+      "native_start_ticks": 159457134
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "public": {
+    "unauthenticated_models": 401,
+    "authenticated_models": 200,
+    "SSE_done": true,
+    "finish": "stop",
+    "known_answer_passed": true,
+    "content": "READY"
+  },
+  "scope_limits": [
+    "Finite Q8 byte/scale/GEMV OFF-ON/canary fixture coverage only. No candidate model execution, model equality, timing, promotion or numerical-arm admission.",
+    "Known Q8 batch/check stderr only; no runtime faults observed.",
+    "Hosted11315GPUslots remain inferred from CPU/human startup counts, not direct hosted INFO.",
+    "Window units/health_before/glm_unit are inherited Oct25 snapshots, not current GLM ownership. Window restored=false refers to retained GLM maintenance; current selected DeepSeek restoration is separately verified.",
+    "Kernel fixture creates no privateAPI; old hosted API exit status0 and native close0 were prospectively captured before restoration.",
+    "Prior numerical HOLDs unchanged. Reviewer executed no tests, model, GPU or services."
+  ],
+  "evidence_sha256": {
+    "kernel-FIRST/gpu1-exit.json": "9eae5f9f4620e22a6583885b8e1db81e2e9d9b7a5f651f38331695f8214cca39",
+    "kernel-FIRST/gpu0.stdout": "b139cdfce876660ceb246e0ea3473ea80f54325c9b5ebf4212feb390419bb63e",
+    "kernel-FIRST/20261030T021134Z.kernel.log": "19c4e28b2f54ea8f217db4e622b0a5c758efa7b77ce2dc0394b6d159568c0b2e",
+    "kernel-FIRST/gpu0-exit.json": "672a7697cd088e1c186a594f3811e2681f2cfbf33ebc2e79e81ac2a4d0631ec7",
+    "kernel-FIRST/kernel-receipt.json": "0affae5892cd93b69a8ab24490370699759f3d7f2695084262ea88e8d972e4f5",
+    "kernel-FIRST/gpu1-start.json": "7a478c4c77b68984fe3cc13334c355f24283d643373a9f1e15141fef5e022fdd",
+    "kernel-FIRST/gpu0.stderr": "36c8ed75603782d093588400f07dc7762ecc900d7b76d60f3d36d2f16bfbb849",
+    "kernel-FIRST/gpu1.stdout": "41de8e7c2fb89e0b64d7af51c042a434356a8789a9548c8e9a4c146da137b4c6",
+    "kernel-FIRST/20261030T021134Z.telemetry.jsonl": "cb6e6ff2411a5352e2cac10e9b41b4404b8e0e1a656590163c19fce37ebd83df",
+    "kernel-FIRST/20261030T021134Z.json": "96b49a43b1726ce64d7163589272bfb3fd6a659be2c758d0ac31a52531fa8a7c",
+    "kernel-FIRST/gpu0-start.json": "9978db3d196dd3e0e2735f0e19d2db480cbb381f71b029316faa574e45fb3a57",
+    "kernel-FIRST/gpu1.stderr": "d06eb4b6e82e1fb7b31d21e4dbfa48829fb9c2f362b13d7dc77b2f85ea0edbee",
+    "kernel-FIRST-maintenance/state.json": "e9ac56f7bcb088329ea79a11a7504a443be1e7f1f26f513bece76592caa394ea",
+    "kernel-FIRST-maintenance/result.json": "e9ac56f7bcb088329ea79a11a7504a443be1e7f1f26f513bece76592caa394ea",
+    "kernel-FIRST-maintenance/target-placement.json": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "kernel-FIRST-maintenance/public-default-output-sse.txt": "55c2bcb47bd158c78a0dbd5043be0cbcb6f26b94c5a550b0d9633734e4be09d3",
+    "kernel-FIRST-maintenance/old-owner-close.json": "24ebf879d5eb956a0e075422011a882e3e23960e703abc6d9c2d676ea9376230",
+    "kernel-FIRST-maintenance/public-default-output-request.json": "93bb8806b80adc0a4793b4302b8387e13ae2d02b04932ddd2b2f166be29a455a",
+    "kernel-FIRST-maintenance/start-binding.json": "0a564c604286d66176547b1c16989238a38be75358f5999d6165a578396cfba2",
+    "kernel-FIRST-maintenance/start-unit.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "kernel-FIRST-maintenance/proof.json": "bfe71809a087420469d5115ac6351c1fb416438aa17c8c72c3a277ef0453bba1",
+    "GPU_FIRST_TERMINAL_ROOT_REVIEW.json": "1022090fac50d1463dd99a253bb0013d955c93287f3eedd942c31f0873d5e99a",
+    "gpu-qualification.json": "73e8d03149b0a2ddcf4a03ee1805e5bc2b878998e79f069f066cd9edb03a4e56",
+    "GPU_CPU_MAP_ASTRA_ADMISSION.json": "59ff0dccde59c0fbd27dbe9756892e2d3ff1c71043ccad01a57dd111e88f61d9",
+    "gpu_check.py": "86e434d3246182dcefad7197921a8a7e817460ded6975bf24dbb9cb2bd17fe35",
+    "test_gpu_check.py": "392797d5884b6694f6b1a9b93b73f6f4af564f2f8c22d3dce18173ef2eded6ea",
+    "qualify_gpu_cpu.py": "7603bd5eb37ac99077087a332fc01711d18fb07329740a10aa90185aea075670",
+    "candidate-files.json": "c68cce9897083cacab686001e3fb8d77e358a9463307556282c38aa9463cb7ed"
+  }
+}

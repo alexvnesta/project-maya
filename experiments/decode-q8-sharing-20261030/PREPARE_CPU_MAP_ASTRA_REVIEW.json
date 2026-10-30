@@ -1,0 +1,84 @@
+{
+  "utc": "2026-10-30T01:57:07.813478+00:00",
+  "decision": "CONDITIONAL_FIRST_PREPARE_THREE_CHILDREN_ONLY",
+  "qualification_sha256": "c16925513a81b2663db737d31cd084836e5a733c03282711588ab6eb40bd1aca",
+  "file_pins": 2073,
+  "CPU_review": {
+    "physical_hosts": [
+      "darwin",
+      "linux"
+    ],
+    "Python_controls_each": 65,
+    "CXX_policy_checks_each": 46,
+    "children_each": 3,
+    "exact_ordered_IDs_sources_inputs": true,
+    "all_raw_logs_read": true,
+    "all_child_rc0_no_errors_cleanup": true,
+    "policy_stderr_empty": true,
+    "source_files": 9,
+    "input_maps": 2
+  },
+  "map_review": {
+    "inherited_Python_closure_complete": true,
+    "mandatory_candidate_manifest_source_driver_reviews_raw_proofs_present": true,
+    "prior_actual_inputs_complete_except_six_unrelated_IMMA_candidate_paths": true,
+    "prior_tool_identities": 20,
+    "retained_lexical_aliases": 15,
+    "normalized_digest_conflicts": 0,
+    "physical_actual_hash_verification_still_required": true
+  },
+  "binding": {
+    "invocation": "f2b87ac5943049aca1ca6eff01607397",
+    "main_pid": 2427755,
+    "native_pid": 2427790,
+    "native_start_ticks": 156575799
+  },
+  "allowed_children": [
+    "selected-relink",
+    "deps-gguf",
+    "deps-test"
+  ],
+  "conditions": [
+    "Fresh actual selected binding/native92/configc43, idle/default, no private/restoration/pending/foreign CPU reservation and root>=132GiB before qualification work and each child.",
+    "Actual verify_q must validate all2073 pins and exact qSHA before claim; source/object073598/1aab95/73a17 custody remains exact.",
+    "Use existing qualified CPU supervision serial120sCPU perprocess/4GiB AS perprocess/300s wall pergroup/nice15/CUDAhidden/threads1; owned group cleanup only on fault/busy.",
+    "Fresh owned prepare-FIRST output only; original object relink must reproduce native92 byte-exact. Capture actual ld and two nvcc-M dependency maps with tool aliases/resolved contents.",
+    "Stop after PREPARE for independent actual input review. No CUDA-c compile, candidate link, executable launch, kernel/model/private window or deployment.",
+    "First failure HOLD; retain raw failure and exact own-reservation release/selectedowner evidence. No automatic retry."
+  ],
+  "findings": [],
+  "limitations": [
+    "CPU tests exercise mocked build stages and actual pure C++ policy only; they do not establish CUDA arithmetic, native behavior, performance or quality.",
+    "Prestage guard is historical evidence, not substitute for action-time physical guard.",
+    "Retained compiler lexical aliases are explicit original actual-input paths; no alias digest conflict observed."
+  ],
+  "evidence_sha256": {
+    "build-CPU-FIRST-darwin/receipt.json": "0019de70e5a24607034a13c2a725dc8fcab1d299d40f2bba540a213345bb348e",
+    "build-CPU-FIRST-darwin/child.json": "9b4ce123318869b36b2b9dbc181db2f2e35b838c6e17daae20cc81dc6ab6254d",
+    "build-CPU-FIRST-darwin/child.log": "faae239390bad341f9861b147e957983cd60cb940d197e934bec337c285eba32",
+    "policy-CPU-FIRST-darwin/receipt.json": "7d43d1718f5e04d863727a97e0f0096164b9b5d086626630aa61e44efd34b06d",
+    "policy-CPU-FIRST-darwin/compile.json": "6e38c8576060dbbf4c0ca090858ba615de5118352294d18855b0ee84d20dafd4",
+    "policy-CPU-FIRST-darwin/run.json": "32a050945f61f07a3d7d29c782c5d4b3dba80dfe6f429752a57de8218af131a4",
+    "policy-CPU-FIRST-darwin/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "policy-CPU-FIRST-darwin/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "policy-CPU-FIRST-darwin/run.stdout": "4c161803567715a642c827e9884cb1ef1941af852da5c0a3570574861181ce58",
+    "policy-CPU-FIRST-darwin/run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-CPU-FIRST-linux/receipt.json": "0019de70e5a24607034a13c2a725dc8fcab1d299d40f2bba540a213345bb348e",
+    "build-CPU-FIRST-linux/child.json": "6112de97d7b9094ccf56c7de42724ee661eeeefdaec55fc87858514635424628",
+    "build-CPU-FIRST-linux/child.log": "02ce48fdd5fbf6596bdcb10de6bf82b00b81c33e2cff287cec1e23f445fca69e",
+    "policy-CPU-FIRST-linux/receipt.json": "44b6b97c00337e4e5577c8bf58edde72af56280c23ffcfb3eee7b45af6f3a6a2",
+    "policy-CPU-FIRST-linux/compile.json": "89b2df43872e0805d29710a87806a2c5dd69aaef2a98ed509883329858e53013",
+    "policy-CPU-FIRST-linux/run.json": "28f53ca2657ab6e30bc11bd455d9ff5655257ba402a2b97824030ca0f41b2e4c",
+    "policy-CPU-FIRST-linux/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "policy-CPU-FIRST-linux/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "policy-CPU-FIRST-linux/run.stdout": "4c161803567715a642c827e9884cb1ef1941af852da5c0a3570574861181ce58",
+    "policy-CPU-FIRST-linux/run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-qualification.json": "c16925513a81b2663db737d31cd084836e5a733c03282711588ab6eb40bd1aca",
+    "CPU_BOTH_ROOT_REVIEW.json": "af31387521c7399da28391ffccd9fa7d277cce6d33735a4287a04316422f9dbf",
+    "PRESTAGE_GUARD.json": "7f4a21b1ba258d8ea1c9228cd8157fb414ec91687f20bfbeb9106c499feeae5a",
+    "BUILD_CPU_SOURCE_REVIEW.json": "82d79ef85ec275abd59fb1f7a13515ca23e67f5e032c3b282dadf8d7c393db8d",
+    "BUILD_SOURCE_ASTRA_REVIEW_v2.json": "b713ab8dce8c28cf84bf889b98df24f3e38ca08ca4d63248d38e3d230a8afb9a",
+    "candidate-files.json": "c68cce9897083cacab686001e3fb8d77e358a9463307556282c38aa9463cb7ed"
+  },
+  "reviewer_executed_tests_compiler_GPU": false
+}

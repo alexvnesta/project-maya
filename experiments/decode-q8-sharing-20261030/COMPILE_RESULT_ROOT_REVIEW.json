@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-30T02:04:29.215646+00:00",
+  "decision": "FOUR_COMPILE_LINK_CHILDREN_REVIEWED_STOP_FOR_GPU_QUALIFICATION",
+  "SSH_exit0": true,
+  "all_four_exit0": true,
+  "four_PIDs": [
+    2590271,
+    2590370,
+    2590612,
+    2590642
+  ],
+  "outputs": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/build-FIRST/ds4_gguf.cu.o": "4797bd229a7db87008191db6ae44ff8d52abfd627837568e1efe6e407af94d84",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/build-FIRST/q8_share_check.cu.o": "8468707fc71ae84a61aedabf81c12bb19236848aaf1c942a2977f6307832531a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/build-FIRST/maya-ds4-candidate": "067778a5be5584300bc860f02ba3b1e06e7600d2a3641d173433bcc8ed9e158f",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/build-FIRST/q8_share_check": "5a14b7bc4d7f356a246990a9c34833ccd1c043115383986ff60e431ce04de90a"
+  },
+  "original_SM80_O3_CPP20_threads1_no_fastmath_reviewed": true,
+  "only_original_GGUF_object_replaced_in_native": true,
+  "GPU_model_execution": false,
+  "production_changed": false,
+  "raw_file_sha256": {
+    "q8_share_check.link.d": "f158a49068b4e8a7f02041dd4d0633e30e04e105b59288db690707f0083617a8",
+    "candidate-link-inputs.json": "bef21bb1d9bb906ce75309e42e04150cacb0ba8ea48f46595475f1115f2a8720",
+    "plan.json": "7adf7c93085d48cfa05a1db9aa8e3df6aca1cca7b6ce226fdce7ae47e9321f1a",
+    "compile-test.json": "aeed352d0907de844108e8fd1832aa6faacccb03b67845d141c04678ecb7334a",
+    "test-link.json": "ce65df5f046b7ecb71eb39029484af379061d8a41928ab498ac0c654f3519ded",
+    "candidate-link.json": "7abefb4993c7e0223380208599994e40e67162f6875f6337715280de503f95a6",
+    "candidate-link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compile-test.stderr": "2ef72a8a5c7aa5ee85b4ae329a78228de740e971dcce6a52f2b8b6da1af2f0cc",
+    "compile-gguf.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "maya-ds4-candidate.link.d": "ba458306b04580d0ece0f4630225dec84e4246f0ba240acf31c5b2176ba9b9d5",
+    "test-link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compile-gguf.json": "31dccc0bde114c18b71cb69c3853dc318f595b50d6da7add5e11389a2f9874b4",
+    "test-link-inputs.json": "4b172c30e2416ad5a0cfde1210f2212dfe0530e3ae3cff969bdc617305268b8f",
+    "test-link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compile-gguf.stderr": "fdbca525e52cd301a19fd4079140c70f8988dfe5aa12c310da945095b58f4ffe",
+    "candidate-link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "receipt.json": "4506a3cf6c5188239425604e103917debbd95c33cdb82af672cae99c4e78f2ec",
+    "compile-test.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

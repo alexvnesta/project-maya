@@ -1,0 +1,87 @@
+{
+  "utc": "2026-10-30T01:37:23.409487+00:00",
+  "decision": "SOURCE_PROVENANCE_RECOVERED_ISOLATED_SHARING_PORT_DESIGN_ONLY",
+  "execution": {
+    "tests": false,
+    "compiler": false,
+    "GPU": false,
+    "remote_actions": false,
+    "deployment": false
+  },
+  "source_commit": "4615f346d9311dd1ce9f5738ab04446f023a6e42",
+  "selected_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "original_gguf_object_sha256": "73a17c545856ae15975f4e334201985071a3fa7ae8a5e20200e039091ad78455",
+  "base_files": {
+    "selected-base/src/ds4/ds4_gguf.cu": "0735989826d5a9a8a9ec101ef2fbe1017ab7604c9f1e17e4217740104e107033",
+    "selected-base/src/ds4/ds4_gguf.cuh": "1aab95ff58820ba9da9b05c1a056996df4d3442f1f5dfcbd65e8fbbc4578f34c"
+  },
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/q8-batch-v1/source-profile-audit-ubuntu.json": "09ca8826c18b40212c194c37913bb7a975abc33df16344ccca647855f0319965",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/q8-batch-v1/PLAN.json": "cd43c30851632308d250d6b7dd74d5477b033d0d56d4aef65f701e3f5fb39e3e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/isolated-build-state.json": "18d5cddd14516144c4b717a675937b4165e7dc3749a4c000e3717caded1e3a90",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/static-build-audit.json": "f39b1acc22bb210d38f6b4be6f1ad743c018b8d978cb0a844ca5aa19fe623a3f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/prepare-r2/plan.json": "1748eb869d8afeb0f5052dbd0eaa4af628cf79f1f654e5e959c081650d38b125",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/prepare-r2/prepare-inputs.json": "e5d2cf39632c2ea8465a63de7465c0e53c3aae67a1f8e29179eb015724e11ea4"
+  },
+  "provenance": [
+    "Historical physical source audit pins GGUF CU073598 from4615.",
+    "Selected native92 build state records4615 as base.",
+    "Static build audit compared1019 tracked files; GGUF CU/header absent from complete changed-file list.",
+    "Recovered git header1aab95 matches original selected compiler dependency map; original GGUF object73a17 remains pinned.",
+    "This is retained build provenance, not mathematical inversion of an object hash or a fresh physical source check. Action-time physical CU/header verification remains required."
+  ],
+  "upstream": {
+    "commit": "50a3313b43db8a60e6f9fffa79f9939e7014b085",
+    "url": "https://github.com/mw00/project-maya/commit/50a3313b43db8a60e6f9fffa79f9939e7014b085",
+    "scope": "Only Q8Round same-input sharing from ds4_gguf.cu and matching tests; not wholesale patch."
+  },
+  "selected_source_findings": [
+    "CU190-232 retains exact per32 F32/int8 rounding and batched launch.",
+    "CU1344-1435 quantizes each low-bit dense/Q8_0 job into its own scratch; no input deduplication.",
+    "Pinned modeldfe11601-11605 groups wq_a/wkv/compressor jobs sharing x,rows,k; shared-expert inputs provide another expected reuse opportunity.",
+    "Ownfork9f3a GGUF has parked HC_FUSE/PreQ8 additions absent from selected073598 and must not be used as base."
+  ],
+  "minimal_port": [
+    "Add per-mv-call Q8Round list of unique inputs; exact x/effective_ldx/rows/k equality only.",
+    "Use first matching job quantized q/d pointer for Q8_0 or kFmtGG readers. Same original scratch allocation and same stream; no retained cross-call cache.",
+    "Keep original q8_quant_block, quant kernels, GEMV/dot/reduction code, IQ source and model source byte-identical.",
+    "Keep Q8_BATCH existing default and selected runtime1; add explicit opt-in STRATA_DS4_Q8_SHARE/DS4_Q8_SHARE with default0, fixed aliases in candidate config.",
+    "Extend existing q8_batch_check to verify shared readers, untouched twin scratch and guards against non-sharing reference; retain existing Q8_CHECK=1 on both devices.",
+    "Test-only mode override/counters if needed, no production per-request profiling. A single first-effective-sharing diagnostic may prove branch use, without changing protocol.",
+    "No HEAD_COLS/HC/route/IMMA/IQ2/TC/scratch-map/global-default changes. Output-head candidate must remain separate."
+  ],
+  "gates": {
+    "CPU": [
+      "Same production dedup-key predicate in pure bounded controls: identical key shares; each pointer/stride/rows/k mismatch refuses; transitive duplicates and maximum8 jobs; normalized single-row stride; zero/invalid job checks and env aliases.",
+      "All source/tests manually read by ROOT and same Astra before exact matching bounded first controls on Mac and physical Ubuntu."
+    ],
+    "GPU": [
+      "Both devices, isolated admitted finite correctness-only fixture. Batch1 share0 versus batch1 share1 bytewise int8/scales and full GGUF mv output comparison; no tolerance.",
+      "Cover k32/256/2304/5120 and actual selected caller dimensions, ncols1/2/4/8/16, row tails, strided inputs/output guards, duplicate/nonduplicate/mixed-format jobs, first/middle/last duplicates, signed zero/rounding ties/tiny and large finite inputs.",
+      "Prove expected sharing occurred, no nonmatching share, sharing twin scratch untouched, every output written, errors0 and finite outputs. No benchmark in correctness fixture."
+    ],
+    "build": [
+      "Fresh qualified build uses selected original object set, unmodified-object relink must reproduce native92; only GGUF object plus correctness fixture rebuilt. Pin all transitive inputs/toolchain/actual link dependencies; preserve compiler diagnostics.",
+      "Before build action, independently confirm recovered073598CU/1aab95header against actual selected files. No inference from ownfork HEAD."
+    ],
+    "model": [
+      "Fresh separately qualified numerical mode/namespace using same model/pack/projection/Q8batch1/check1/chunk4096/mode1/TP1/CPU24/DSpark.65max4/1Mtotal/256Koutput/effort100/cap32768. No inherited old arm replay.",
+      "Known-answer text cold/rewind/images/return; positive actual drafted+accepted counts; exact generated-token path AND source-aligned finite logit-row equality. Any mismatch HOLD before timing; no later-row alignment after divergence/no tolerance regrade.",
+      "Old/private native and API close0, canonical window0, resources/kernel, selected public restoration and independent terminal audit required."
+    ],
+    "performance": [
+      "Only after new strict correctness/quality gates pass: separately frozen fixed useful tasks and reversed-order matched pairs, preserve full outputs/reasoning and cache/draft/native/client counts.",
+      "Predeclare practical rate gain and prefill/client regression criteria before data; do not turn differing tokenlength or hidden-reasoning totals into matched-work speedup.",
+      "Deployment is separately gated by reproduced useful improvement, quality, lifecycle and release qualification."
+    ]
+  },
+  "limitations": [
+    "No new test/source implementation yet beyond exact local base extraction and this plan.",
+    "Arithmetic-preserving sharing is a design claim to test; different scratch addresses/scheduling/build regeneration can still change behavior.",
+    "No speed magnitude established. Existing IMMA/IQ2S strict HOLDs and old Q8 batch studies unchanged."
+  ],
+  "git_blob_ids": {
+    "ds4_gguf.cu": "63c14635c6ce366cfabb4ef20294fc7df433edb4",
+    "ds4_gguf.cuh": "3e49920d85171cda63a0318362a83b751b9c22fc"
+  }
+}
