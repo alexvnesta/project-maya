@@ -1,0 +1,116 @@
+{
+  "utc": "2026-10-30T10:19:31.406789+00:00",
+  "decision": "SYNC_V2_ACTUAL_FIXTURE_BUILD_AND_DEPENDENCY_CLOSURE_REVIEWED",
+  "evidence_sha256": {
+    "BUILD_ACTUAL_AUDIT.json": "8976e729a2250934dc1c32a52703b2d39fec514704a5ee0a616b0ee1fc4f71ae",
+    "source-review.json": "a917a13c371e95c1412d81ec23f6cca52b0aea3e47b0e1c597035d94b6834d03",
+    "SOURCE_ASTRA_REVIEW.json": "92676c2d30c50171dd6c9efcc1bd8f317cb9a9f2adf14cec6495b1753b611959",
+    "CPU_BUILD_ADMISSION_ASTRA.json": "f20382a3060fb281266f16215964b3de85ae1ad8e2ebae94862eaf5c7741e4a8",
+    "build-FIRST/link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/deps-inputs.json": "be149fc3cdbebea06cc30f85aaad75677675d0f0ce0934145b95bce1993d734a",
+    "build-FIRST/health.headers.d": "6d50f14c3d5bf91915142d84d21f91ce489470a7efffaa7761c70b3e1d507768",
+    "build-FIRST/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/receipt.json": "08176791c85410f0b587096bd2b60cf5feca00856f7c6573caf4f8e28cff36af",
+    "build-FIRST/deps-exit.json": "3c98c5fb03606de86a1eac4bdb6d2af5ff4b6c7c754ee309b751746d9096f129",
+    "build-FIRST/health.link.d": "16ced8e2759c32c7294d6021f74f3c4d2638285d7e251ee451862c803848f1f4",
+    "build-FIRST/link-inputs.json": "2eabcabf9e1fe7a4e415aa34d880822d6b1e2175b549709503eb7f9a0187fdb0",
+    "build-FIRST/link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/compile.stderr": "2ef72a8a5c7aa5ee85b4ae329a78228de740e971dcce6a52f2b8b6da1af2f0cc",
+    "build-FIRST/link-exit.json": "4150aa1ad0d9b47d5a357e8c9efa6b8b1a4a62ddf4fa19d26faf08070348d212",
+    "build-FIRST/compile-exit.json": "d611d0ebea9868f0245d8537c289af000643c5fad4a2f35a8f8d67950e419791",
+    "build-FIRST/plan.json": "41033fe6a9f156d3c3b57711582712d6640d5e50cdfc4e20d595fcc6ae685e10",
+    "build-FIRST/deps.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/deps.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source_sha256": {
+    "recovery.py": "5c0037d71f6ba61ae36b1ac02d9404cba748fb77db1d04b4ab45b6d40bd59084",
+    "health.cu": "e53b38389d0a507d9efc434cc8fbee6ea28f55aad4d131383ec4dae4c2a77194",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "test_contract.cpp": "e11174d915794b4c2bd4065ea855c6cde05d25b4043b9600754a8f0662811c96",
+    "test_recovery.py": "ebed6721d2c619a1eb87d31c0d751a0748ff316e9aedf0a4a7a89c9dfe4c50ec",
+    "qualify_cpu.py": "07020b77db94b0f435d09f6aecba1252ae1399b7f8142cc0c14e64c699c6ddb6"
+  },
+  "input_sha256": {
+    "prepare-FIRST/plan.json": "35fd7f677e2f716d3cd2b517cd99d3c4b7a6e56caacfe41d2889033859a5c6ac",
+    "selected_build.py": "b72f16217878714132fa4e161de52208567e23a7189c1e5781dc3375ec9c6491",
+    "prior-link.d": "e8cce536a500dd0eefda92cd0bc4a3aa20907ca3a26b0499b6026aa7e3a4a1ac",
+    "prior-health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee"
+  },
+  "children": [
+    {
+      "pid": 2978220,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "CPU_s": 120,
+      "AS_MiB": 4096,
+      "wall_s": 300,
+      "nice": 15,
+      "CUDA_hidden": true
+    },
+    {
+      "pid": 2978256,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "CPU_s": 120,
+      "AS_MiB": 4096,
+      "wall_s": 300,
+      "nice": 15,
+      "CUDA_hidden": true
+    },
+    {
+      "pid": 2978308,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "CPU_s": 120,
+      "AS_MiB": 4096,
+      "wall_s": 300,
+      "nice": 15,
+      "CUDA_hidden": true
+    }
+  ],
+  "build_receipt_passed": true,
+  "compile_stderr": "ptxas info : 0 bytes gmem only; no warnings/errors",
+  "all_other_child_stdout_stderr": "empty",
+  "actual_headers": {
+    "count": 280,
+    "original_exact": 278,
+    "new_fixture_inputs": {
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/health.cu": "e53b38389d0a507d9efc434cc8fbee6ea28f55aad4d131383ec4dae4c2a77194",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f"
+    },
+    "full_saved_rules_reconciled": true
+  },
+  "actual_link_inputs": {
+    "count": 36,
+    "original_exact": 35,
+    "new_only": "health.o",
+    "full_saved_rules_reconciled": true,
+    "unknown": []
+  },
+  "artifact_sha256": {
+    "health.o": "f1784d5a7171f4a0f4287444a5136bc3a4060da8c6806488b9760f87c5f9e994",
+    "baseline-health": "250157320079ca4a263e152ecd09dd7b7c8f2a9504e583a0f64e6c53a7a67b4c"
+  },
+  "stopped_unit_before_after": {
+    "ActiveState": "failed",
+    "InvocationID": "27f9b1951f494c47a5f6de81f7323ba6",
+    "MainPID": "0",
+    "Result": "exit-code"
+  },
+  "stopped_unit_unchanged": true,
+  "bounds_and_fresh_guards": "Actualphysicalaudit reports exactstopped27f9 before/after; finalactiontime guard required separately.",
+  "GPU_execution": false,
+  "model_execution": false,
+  "service_start": false,
+  "GPU_admission_in_this_report": false,
+  "restoration_admission_in_this_report": false,
+  "limits": [
+    "Metadata/hash and rawbuild proof do not establish CUDAfixture correctness or diagnose earlierfailurecause.",
+    "Originalhead041001 andbaseline095101 remainfailed; the changedfixture is a distinct synchronizedrevision, not a regrade.",
+    "OriginalselectedGGUF/IQ/otherfixtureobjects retained; no candidateModel or experimentalhead/Q8sharing native execution."
+  ],
+  "reviewer_actions": "Localraw/metadata/sourcehash reading and saveddependency reconciliation only. No imports/tests/build/remote/GPU/services."
+}

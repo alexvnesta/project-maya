@@ -1,0 +1,109 @@
+{
+  "utc": "2026-10-30T10:16:47.333595+00:00",
+  "decision": "CONDITIONAL_SINGLE_V2_FIXTURE_ONLY_DEPS_COMPILE_LINK",
+  "source_sha256": {
+    "recovery.py": "5c0037d71f6ba61ae36b1ac02d9404cba748fb77db1d04b4ab45b6d40bd59084",
+    "health.cu": "e53b38389d0a507d9efc434cc8fbee6ea28f55aad4d131383ec4dae4c2a77194",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "test_contract.cpp": "e11174d915794b4c2bd4065ea855c6cde05d25b4043b9600754a8f0662811c96",
+    "test_recovery.py": "ebed6721d2c619a1eb87d31c0d751a0748ff316e9aedf0a4a7a89c9dfe4c50ec",
+    "qualify_cpu.py": "07020b77db94b0f435d09f6aecba1252ae1399b7f8142cc0c14e64c699c6ddb6"
+  },
+  "input_sha256": {
+    "prepare-FIRST/plan.json": "35fd7f677e2f716d3cd2b517cd99d3c4b7a6e56caacfe41d2889033859a5c6ac",
+    "selected_build.py": "b72f16217878714132fa4e161de52208567e23a7189c1e5781dc3375ec9c6491",
+    "prior-link.d": "e8cce536a500dd0eefda92cd0bc4a3aa20907ca3a26b0499b6026aa7e3a4a1ac",
+    "prior-health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee"
+  },
+  "evidence_sha256": {
+    "source-review.json": "a917a13c371e95c1412d81ec23f6cca52b0aea3e47b0e1c597035d94b6834d03",
+    "SOURCE_ASTRA_REVIEW.json": "92676c2d30c50171dd6c9efcc1bd8f317cb9a9f2adf14cec6495b1753b611959",
+    "CPU_RESULT_ROOT_REVIEW.json": "78aad92645aec491360f37485a68f36b76a319cbbc8196102ae811abca37ec60",
+    "CPU-FIRST-darwin/receipt.json": "54830950c674f6f8ef533ad99da6ab3a1d6c81fb119ba4d662c9968d0c51fc0b",
+    "CPU-FIRST-darwin/child.json": "5caeae29eb1e538dfa26b563874628ba408e1e8ca77dd9ca489e3c7ac57657ed",
+    "CPU-FIRST-darwin/child.log": "f97fb865ca91953c81db9ce3869bccc26bf62190dd14a45d387136e51b0b5b59",
+    "CPU-FIRST-darwin/CXX-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "CPU-FIRST-darwin/CXX-run.log": "d7923a5b95dad44dd508f8174cd70ff0f75c51c540e8a18485435853aea3de9f",
+    "CPU-FIRST-linux/receipt.json": "602e7a1bf0ca6cfce072b56d9b65ee86d4077c01fcbd4f15d419971a29ba31d4",
+    "CPU-FIRST-linux/child.json": "4dac559a06a1108271584b39121f7edbe174e31781cef6c11c1d12b260498059",
+    "CPU-FIRST-linux/child.log": "fd302a02c003154edf2c3a5e20af9176e9c82a65fa4bc33196551820a924a343",
+    "CPU-FIRST-linux/CXX-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "CPU-FIRST-linux/CXX-run.log": "d7923a5b95dad44dd508f8174cd70ff0f75c51c540e8a18485435853aea3de9f"
+  },
+  "independent_actual_CPU_review": {
+    "hosts": [
+      "darwin",
+      "physicalUbuntu"
+    ],
+    "child_pids": [
+      89440,
+      2977132
+    ],
+    "Python_each": 63,
+    "ordered_IDs_exactly_match_raw_logs_receipts_AST_and_manual_freeze": true,
+    "actual_CXX_each": 19,
+    "CXX_compile_and_run_each_returncode": 0,
+    "CXX_compile_logs_empty_each": true,
+    "CXX_stdout_exact_each": "ALL 19 HOST_CONTRACT controls passed\n",
+    "child_returncodes": [
+      0,
+      0
+    ],
+    "error_each": null,
+    "cleanup_errors_each": [],
+    "sources_equal_each": true,
+    "inputs_equal_each": true,
+    "receipt_only_host_difference": "compiler_argv host-specificabsoluteCPUfixture/outputpaths",
+    "source_current_unchanged": true,
+    "limits": {
+      "CPU_seconds": 30,
+      "Linux_AS_MiB": 512,
+      "wall_seconds": 90,
+      "nice": 15,
+      "CUDA_hidden": true
+    }
+  },
+  "scope_limit": "CPU/source/oracle/parser proof only. Newbarrier controls checksourceorder andcheckedcall, notactualCUDAordering. NoGPUfailurecausality orhealthpass established.",
+  "original_qualification": {
+    "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/gpu-qualification.json",
+    "sha256": "e8fa4acbcbaa9482f8a5b6695e562596400c91004329b2503220e13d3bc97e9e",
+    "files": 2228
+  },
+  "allowed_action": {
+    "single_invocation": "physical health-sync-v2/recovery.py build",
+    "fresh_output": "physical health-sync-v2/build-FIRST",
+    "children": [
+      "deps",
+      "compile",
+      "link"
+    ],
+    "source": "health.cu e53b plusunchangedhealth_contract.hpp; originalselected GGUF/IQ/otherfixtureobjects only",
+    "CUDA_native_or_model_binary_rebuild": false,
+    "baseline_health_fixture_compile": true,
+    "artifact_execution": false
+  },
+  "build_limits_each_child": {
+    "CPU_seconds": 120,
+    "Linux_AS_MiB": 4096,
+    "wall_seconds": 300,
+    "nice": 15,
+    "CUDA_hidden": true,
+    "threads": 1,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1
+  },
+  "mandatory_fresh_conditions": [
+    "Exact6source/current4inputs andbothhostrawproofmaps/IDs/digests remainunchanged; currentRootmanualfreeze matches thisreport.",
+    "Freshphysicalguard: exactfailed27f9/MainPID0/Resultexit-code, canonicalproductionstopped/currentnativeNone/latestfailed095101 andcanonicalpostfaultwindowmatch, nootheractive/private/build/pending/competingunit, noGPUowners/twoGPUsfree/root132/kernelclean.",
+    "Acquire andhold existingexperiment.lock acrossentire3step build; no additionalnativeowner/lock/service. Reject reused/symlink build-FIRST; no oldoutputadoption.",
+    "Verify olde8fa qself/all2228inputpins and current6source/progressivelyproducedartifacts beforeandaftereachserialchild; repeatguard aroundeachstep asimplemented.",
+    "Use reviewedoriginalrecipe35fd, originalflags/toolchain/selectedobjects. No heldheadModel/Q8share/IQ2/IMMA candidateobject; onlynewhealthfixtureobject.",
+    "Use exactqualified dependencyparserAST fromb72 withactualNVCC/ldinputs; missing/unknown/mutatedinputs refuse, emptyphony rules accepted. Preservefullactualmaps/raw3children/stdout/stderr.",
+    "Firsterror/timeout/guard/custody/unknowninput/cleanupfailure stops without furtherchildren orretry; preserveprimaryandcleanup.",
+    "Afterbuild stop forindependent actualdependency/artifact review andseparateGPUadmission. No model/native/GPUfixtureexecution orrestoration underthisfile."
+  ],
+  "prior_failures": "Head041001, baselinehealth095101, refusedbaseline27f9, andoriginalpost-linkobserverexit1 remainpreserved withoutregrade/replay.",
+  "GPU_admitted": false,
+  "restoration_admitted": false,
+  "reviewer_actions": "Readlocalfullrawlogs/receipts and metadata/sourcehash reconciliation; no reviewedmoduleimports/tests/compiler/remote/GPU/service actions."
+}
