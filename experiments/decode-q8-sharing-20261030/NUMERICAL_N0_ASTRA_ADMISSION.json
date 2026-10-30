@@ -1,0 +1,130 @@
+{
+  "utc": "2026-10-30T02:39:16.776799+00:00",
+  "decision": "CONDITIONAL_SINGLE_N0_NUMERICAL_ONLY",
+  "qualification_sha256": "a8462131c310a23780d603e517b8dc1dd5e91c73c760c3e8d77331f5aef0a0fb",
+  "arm": "N0",
+  "mode": "numerical",
+  "allowed_factor": {
+    "exe": "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "share": 0
+  },
+  "baseline_identity": {
+    "native_pid": 2594596,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "f771173697d844e080eecd0647b78899",
+      "main_pid": 2594556,
+      "native_pid": 2594596,
+      "native_start_ticks": 159457134
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "reviewed_actual_preflight": {
+    "status": "READ_ONLY_PREFLIGHT_PASS",
+    "actual_file_map_exactly_matches_frozen_qualification": true,
+    "files": 2231,
+    "qualification_self_additional": true,
+    "source_count": 11,
+    "input_map_count": 911,
+    "ordered_CPU_controls_each_host": 109,
+    "fixture_sha256": "557dbc8c23ecd9f52f06130082b4a2db80596c3014de7057034f601c7742acb6",
+    "registry_empty_local_snapshot": true,
+    "resource_idle_previous_gate_evidence": "Returned PASS from exact frozen preflight implementation, which checks idle, canonical phase/state/binding, root132, full pins, stable target identity and previous window. Raw log does not serialize separate root/clock/idle telemetry; action-time checks must still be repeated."
+  },
+  "metadata_findings_resolved": {
+    "five_model_inputs_added_exact": {
+      "/home/alex/deepseek-hosted-20261025/release.json": "b921b85827fa63fd448cadc808fafb3e027c192ddaa2af45c5dcf0f373d1bed8",
+      "/home/alex/deepseek-hosted-20261025/profile-seed.bin": "8db93e483b34b15dbf63a0826601f1db2107a8cfea73774e7d21d8559e0a9568",
+      "/home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf": "f3033f6a14e34f7133417e298efb62482c7ca0d4dcfddc3a9619599c3b2f98db",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1/ds4.txt": "48c01d890cbe53efafdacf50bf704437439f738f86787e6e529f6b5a62cd001c",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1/tensors.txt": "bc5229fa509356053d07bbcc97e1245f05ac29934c9f92605b21659b4675c966"
+    },
+    "prior2224pins_unchanged": true,
+    "additional_two_pins": "Preserved a958 map plus independent CPU/map review. No source, fixture, test, limits or CPU result changes.",
+    "original_readonly_refusal_and_map_HOLD_preserved": true
+  },
+  "conditions_before_one_launch": [
+    "Fresh exact current invocation/main/native/startticks/exe/config/cgroup/sole-owner and canonical no phase/pending/build; default idle with no active/queued/reserved/inflight user work; busy leaves production untouched.",
+    "Reverify a846 qualification including all2231 pins plus self, frozen fixture557d, exact empty N0 registry/fresh real owned results+maintenance namespace and current clock/resource/previous clean window/kernel evidence.",
+    "Use only frozen q8share_numerical --arm N0 --run through existing canonical coordinate/owned window; selected92 with both sharing aliases0; no candidate/N1 or altered settings.",
+    "Preserve 1200s window/1000s soft/200s cleanup; root132 admission/root120 runtime, swapdelta below1GiB, cache8GiB/log4GiB; numerical-only native FSIZE512MiB and exact source-derived storage/dump bounds.",
+    "Capture old bound native close0 and stable inactive API ExecMainCode1/Status0/Resultsuccess before restoration; capture private native/API/window exit0, resources/kernel and selected92 public401/auth200/assembledREADY/stop/DONE restoration. First fault HOLD with owned cleanup, no retry or foreign-owner adoption.",
+    "During private phase/restoration only lightweight receipts; complete finite dump hashing/independent audit after selected restoration and fresh idle. Full raw content/state/drafts/reuse/source-aligned finite-array audit and independent review required before any later N1 admission."
+  ],
+  "limits_and_interpretation": {
+    "context": 1048576,
+    "output_allowance": 262144,
+    "request_cap": 32768,
+    "effort": 100,
+    "four_synthetic_state_cases": true,
+    "variable_batch_logits_dump_not_per_token_framed": true,
+    "strict_compare_no_tolerance_or_regrade": true,
+    "N1_timing_performance_activation_promotion_admitted": false,
+    "old_HOLDs_unchanged": true
+  },
+  "evidence_sha256": {
+    "model-v1/numerical-qualification.json": "a8462131c310a23780d603e517b8dc1dd5e91c73c760c3e8d77331f5aef0a0fb",
+    "model-v1/numerical-qualification-v2-map-HOLD.json": "a9585ebc2b499549009c81fe024b3088348db1b67a1b2952d677bd71507867f8",
+    "model-v1/preflight-N0-corrected-FIRST.log": "5de745084fcecefceb8915388bfbd0372383ce489a4a9a91312fbef0e0c168a9",
+    "model-v1/numerical-arms.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "model-v1/numerical-fixtures.json": "557dbc8c23ecd9f52f06130082b4a2db80596c3014de7057034f601c7742acb6",
+    "model-v1/kernel-prerequisite.json": "e58f6936076c47eb02b068a39b9d5e68780709b1e9a297c1b47f7b948fd7d217",
+    "model-v1/numerical-CPU-source-review.json": "69d9ff1059fb32483e619f13f67c451de5cc7626ad25b8b794316c8773bc91ce",
+    "NUMERICAL_CPU_MAP_ASTRA_REVIEW.json": "f09b3ec87db4db972e721e3e65de186f946a736d273c04ca90e61cfe89b32962",
+    "MODEL_SOURCE_ASTRA_REVIEW_v1.json": "60ce27940a40762f9b0342c3e28d6fdc8e1dd86b6444096bc432115528586440",
+    "GPU_FIRST_TERMINAL_ASTRA_REVIEW.json": "ff091aac717cc944d52757e3f62c4e6bd8ee649508bb6ad691eaa182d3a0be35"
+  },
+  "reviewer_actions": "Local evidence/source read and report only; no tests/imports/native/GPU/remote operations."
+}

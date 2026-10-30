@@ -1,0 +1,56 @@
+{
+  "utc": "2026-10-30T02:35:42.352717+00:00",
+  "decision": "CPU109_BOTH_HOSTS_VERIFIED_METADATA_MAP_HOLD",
+  "reviewed_qualification_sha256": "a9585ebc2b499549009c81fe024b3088348db1b67a1b2952d677bd71507867f8",
+  "CPU": {
+    "each_host_controls": 109,
+    "source_files": 11,
+    "input_map_entries": 911,
+    "exact_ordered_IDs_maps_current_sources": true,
+    "raw_children": [
+      98879,
+      2604489
+    ],
+    "exit0_error_null_cleanup_empty": true,
+    "CPU30_wall90_nice15_CUDAhidden_LinuxAS512": true,
+    "actual_API_scope": "Four synthetic full-cap HTTP requests via scripted CPU MockEngine; finite fixture bytes and lifecycle mocks. No GPU/model evidence."
+  },
+  "prior_refusal": {
+    "original_qualification_sha256": "09d69dd5b579db14fc6736166a5d4cd08660f4b5764ae7ead5b23f9fbbae117f",
+    "classification": "Read-only required native/config metadata gate refusal before source hash loop, owner identity/drain/model/window. Not a model attempt or CPU failure.",
+    "correction_seen": "Exactly two selected binary/config pins plus three preserved failure-evidence pins; all prior file digests unchanged.",
+    "original_failure_remains_preserved": true
+  },
+  "remaining_findings": [
+    {
+      "id": "M1",
+      "severity": "metadata_hold_before_corrected_preflight",
+      "detail": "The corrected2224-pin map still omits five immutable model/release inputs explicitly required by the source review. Add exact prior canonical inputs; do not pin mutable live expert profile.",
+      "required_file_sha256": {
+        "/home/alex/deepseek-hosted-20261025/release.json": "b921b85827fa63fd448cadc808fafb3e027c192ddaa2af45c5dcf0f373d1bed8",
+        "/home/alex/deepseek-hosted-20261025/profile-seed.bin": "8db93e483b34b15dbf63a0826601f1db2107a8cfea73774e7d21d8559e0a9568",
+        "/home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf": "f3033f6a14e34f7133417e298efb62482c7ca0d4dcfddc3a9619599c3b2f98db",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1/ds4.txt": "48c01d890cbe53efafdacf50bf704437439f738f86787e6e529f6b5a62cd001c",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1/tensors.txt": "bc5229fa509356053d07bbcc97e1245f05ac29934c9f92605b21659b4675c966"
+      }
+    }
+  ],
+  "conditional_next_step": "Preserve a958 map, add these five known immutable pins to a distinct reviewed revision, then allow corrected READ_ONLY preflight under freshidle/default/currentbinding/no phases/root guards. No code or CPU repetition necessary for this metadata-only repair. Separate actual preflight evidence and deliberate N0-only admission remain required.",
+  "GPU_model_timing_promotion_admission": false,
+  "evidence_sha256": {
+    "numerical-CPU-darwin/receipt.json": "6e3979bb223670787061ed7ade833dc61a9b685ec1e86d532ad496b3b676ebe7",
+    "numerical-CPU-darwin/child.json": "bf77f0b9d82039aa558933f346ac3913a5a42ce0e0ef257457039c136c8823fc",
+    "numerical-CPU-darwin/child.log": "dbbf6187f40c93b33243106ab9103fbb7e1f0ab6dd9e5084e380aae895996cb5",
+    "numerical-CPU-linux/receipt.json": "6e3979bb223670787061ed7ade833dc61a9b685ec1e86d532ad496b3b676ebe7",
+    "numerical-CPU-linux/child.json": "84c40f77d747bf1a6fe700bedcfd4d415f72897635f71f3eb47885e5151a7086",
+    "numerical-CPU-linux/child.log": "bf21a6ca7e073f4fc7f1b627701af1ff9e7eae69ee2252d69826bd4047beaa4f",
+    "numerical-qualification.json": "a9585ebc2b499549009c81fe024b3088348db1b67a1b2952d677bd71507867f8",
+    "numerical-qualification-FIRST-rejected.json": "09d69dd5b579db14fc6736166a5d4cd08660f4b5764ae7ead5b23f9fbbae117f",
+    "numerical-CPU-source-review.json": "69d9ff1059fb32483e619f13f67c451de5cc7626ad25b8b794316c8773bc91ce",
+    "NUMERICAL_CPU_ROOT_REVIEW.json": "6a5f481592a4a4bdf3cb1557eb82fc520005497b4153096975ac6b7b438565b9",
+    "PREFLIGHT_REJECTION_DIAGNOSIS.json": "1aeb1737cacfbe1b848e58d223400158a6aaef61da3f6e922daaebac44719004",
+    "preflight-N0-FIRST.log": "c56f93479555e2d8994fc382df1937d11206b357753752b4b4aa2e96f189668d"
+  },
+  "prior_model_input_map_sha256": "6eb179b8b7edb7a87133c4e24bd99dc2f35863cfe6ef56f8385590bf50c6315b",
+  "source_review_sha256": "60ce27940a40762f9b0342c3e28d6fdc8e1dd86b6444096bc432115528586440"
+}
