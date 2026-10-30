@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-30T09:50:19.661455+00:00",
+  "status": "READ_ONLY_POSTFAULT_GPU_INPUT_PREFLIGHT_PASS_NO_GPU_ADMISSION",
+  "file_checks": 2286,
+  "map_sha256": "0d5e85e02d84dddaf56168e17133740708ca2110e48d76bf1d88b756e4d686e2",
+  "source_sha256": {
+    "recovery.py": "f8dc0d49d695cccf51e652b98a4b36c4556c744d57beb88ef537eada192ecf8e",
+    "health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "test_contract.cpp": "e11174d915794b4c2bd4065ea855c6cde05d25b4043b9600754a8f0662811c96",
+    "test_recovery.py": "8c12e765cd1f04f71e54cf7cb9393efee2053d6c586b8424882727e6c2ba0a22",
+    "qualify_cpu.py": "5d6f97807bdc0780942e5c234bc6995944fb87531e8d0afbffeb9c52d6b36d83"
+  },
+  "stopped_unit": {
+    "ActiveState": "failed",
+    "InvocationID": "27f9b1951f494c47a5f6de81f7323ba6",
+    "MainPID": "0",
+    "Result": "exit-code"
+  },
+  "GPU_owners": [],
+  "used_MiB": [
+    0,
+    0
+  ],
+  "root_free_GiB": 835.7068252563477,
+  "GPU_FIRST_absent": true,
+  "kernel": "Oct 30 04:09:20 ubuntuserver kernel: docker0: port 1(veth48cb561) entered blocking state\nOct 30 04:09:20 ubuntuserver kernel: docker0: port 1(veth48cb561) entered disabled state\nOct 30 04:09:20 ubuntuserver kernel: veth48cb561: entered allmulticast mode\nOct 30 04:09:20 ubuntuserver kernel: veth48cb561: entered promiscuous mode\nOct 30 04:09:21 ubuntuserver kernel: eth0: renamed from veth7c2fee3\nOct 30 04:09:21 ubuntuserver kernel: docker0: port 1(veth48cb561) entered blocking state\nOct 30 04:09:21 ubuntuserver kernel: docker0: port 1(veth48cb561) entered forwarding state\nOct 30 04:09:54 ubuntuserver kernel: docker0: port 1(veth48cb561) entered disabled state\nOct 30 04:09:54 ubuntuserver kernel: veth7c2fee3: renamed from eth0\nOct 30 04:09:54 ubuntuserver kernel: docker0: port 1(veth48cb561) entered disabled state\nOct 30 04:09:54 ubuntuserver kernel: veth48cb561 (unregistering): left allmulticast mode\nOct 30 04:09:54 ubuntuserver kernel: veth48cb561 (unregistering): left promiscuous mode\nOct 30 04:09:54 ubuntuserver kernel: docker0: port 1(veth48cb561) entered disabled state\nOct 30 04:13:16 ubuntuserver kernel: br-63f69f389f32: port 1(veth6f3cb60) entered disabled state\nOct 30 04:13:16 ubuntuserver kernel: veth7152eac: renamed from eth0\nOct 30 04:13:16 ubuntuserver kernel: br-63f69f389f32: port 1(veth6f3cb60) entered disabled state\nOct 30 04:13:16 ubuntuserver kernel: veth6f3cb60 (unregistering): left allmulticast mode\nOct 30 04:13:16 ubuntuserver kernel: veth6f3cb60 (unregistering): left promiscuous mode\nOct 30 04:13:16 ubuntuserver kernel: br-63f69f389f32: port 1(veth6f3cb60) entered disabled state\nOct 30 04:13:17 ubuntuserver kernel: br-63f69f389f32: port 1(veth33e6514) entered blocking state\nOct 30 04:13:17 ubuntuserver kernel: br-63f69f389f32: port 1(veth33e6514) entered disabled state\nOct 30 04:13:17 ubuntuserver kernel: veth33e6514: entered allmulticast mode\nOct 30 04:13:17 ubuntuserver kernel: veth33e6514: entered promiscuous mode\nOct 30 04:13:17 ubuntuserver kernel: eth0: renamed from vethe89e0f7\nOct 30 04:13:17 ubuntuserver kernel: br-63f69f389f32: port 1(veth33e6514) entered blocking state\nOct 30 04:13:17 ubuntuserver kernel: br-63f69f389f32: port 1(veth33e6514) entered forwarding state\n"
+}

@@ -1,0 +1,136 @@
+{
+  "utc": "2026-10-30T09:30:28.834822+00:00",
+  "decision": "BASELINE_ONLY_POSTFAULT_HEALTH_WITNESS_DESIGN_SUPPORTED_PENDING_NEW_SOURCE_CPU_BUILD_AND_ACTION_QUALIFICATION",
+  "human_authorization": "Parent records new direct Alex authorization: I authorize- yes, for separately qualified baseline-only recovery diagnosis. No candidate retry/deployment authorization inferred.",
+  "raw_evidence_sha256": {
+    "kernel-FIRST/20261030T041001Z.json": "49a395da2a435562498e058bcf0da56dcf50ec4a0f0aae96dba745971759ed40",
+    "kernel-FIRST/20261030T041001Z.kernel.log": "19c4e28b2f54ea8f217db4e622b0a5c758efa7b77ce2dc0394b6d159568c0b2e",
+    "kernel-FIRST/20261030T041001Z.telemetry.jsonl": "08240b709186a79c55739fc1e68f2982a6ca4ec953fbb0c3c5fe3bf69cb20a32",
+    "kernel-FIRST/gpu0-exit.json": "1361b6b87218b6b3701f1e44525a55d115cc620086ddab2669051e331fbccf29",
+    "kernel-FIRST/gpu0-start.json": "810de600590a428f534d34cc6b611526271d2347155cae5615997a24e31b206b",
+    "kernel-FIRST/gpu0.stderr": "05eb1646c501c0b0ff621f2d2430b31af9dcd08e91b7ff17114364e4fc1ceeb5",
+    "kernel-FIRST/gpu0.stdout": "c9de5e5ec87916eae86b4be931ad28e7d3d9896b77e998a27ae0465ae58de453",
+    "kernel-FIRST-maintenance/old-owner-close.json": "f2370537547b8b8cf0926abecae3ad9ad0473a289b5bcdc64720db8983327bd4",
+    "kernel-FIRST-maintenance/proof.json": "37d4257277928a1835e44f8221c36c1d122134d9ae684aa4454dedeca9ce8922",
+    "kernel-FIRST-maintenance/state.json": "475994f14086c09c8e3c5e80c8d0b51d3ea1b55d8390630736c2914f7d31c63d",
+    "kernel-FIRST-maintenance/target-placement.json": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "separate-selected-recovery-FIRST/admission.json": "014d3aa131fae1b3fb8e0a6ea35cdb99c82ae10af63449d628a5cc07c193ed08",
+    "separate-selected-recovery-FIRST/failure.json": "be83b5ee90a68f406053c7733396713a17fdd167e1e1648caefbbc9a348ae560",
+    "separate-selected-recovery-FIRST/start-unit.log": "74d449eb213276d82aa06e5d852f009d9fc1cb1e664cc806b9d7e114fe5bbf7f",
+    "FINAL_CANONICAL_HOLD_OBSERVATION.json": "5956e76f0ca90c87f4963d3f6b022f4f12623a42c39a234393b51098971bb227",
+    "HEAD_KERNEL_FAILURE_OFFLINE_ASTRA_DIAGNOSIS.json": "7c5408c47f022882be9a7a44f473b69fafd7d97393a101dd7ba3b002efdb1a13"
+  },
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/runtime-source/window.py": "170722b54e0245e7268bffe2f39f8e30bee2fc79c056544f4f9b03942c48f25f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/candidate/hosting_preflight.py": "b15c66b2fb7d96f689995525618583f12b30b890f7f713a1e4323718093ffc26",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/selected-base/src/ds4/ds4_gguf.cu": "0735989826d5a9a8a9ec101ef2fbe1017ab7604c9f1e17e4217740104e107033",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-base/src/ds4/ds4_iq.cu": "883cec5e4d26f37f61bf650fc3f123bf47d8bb456b84bedfbadb0152864b8234",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/head_startup.py": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/gpu_check.py": "7869ca8561c85f8770321a07a87c2b55bbbe7382b4cafe5f7a2613b715ad9d7e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-profile-v1/diagnosis-ownership-env-224039Z/diagnose.py": "ab5cf17eab993a35e88acdd99344aa08da178b4bd772f51c3d4b850147f1a2f0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-profile-v1/diagnosis-ownership-env-224039Z/recover_baseline.py": "e0b0f1ac3f1e5a5656fb9516bfc8b5976f4f159d8305b7bdaf3f5ea655e088cf",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-profile-v1/diagnosis-ownership-env-224039Z/20261025T224700Z.json": "b7c5668c982280bde2e439753ca6b211188a5bb426c00a06a035481f5742ad3d"
+  },
+  "raw_review": {
+    "all_small_raw_json_stderr_logs_read": true,
+    "full_stdout_exact_prefix_reconciled": true,
+    "PASS_lines": 261,
+    "next_uncompleted_case": "head-k5120-n129280-pad0-r2-p0",
+    "GPU0": {
+      "pid": 2845478,
+      "startticks": 160166964,
+      "exit": 1,
+      "cgroup": "strata-deepseek-window.service",
+      "error": "finite outputs/canaries",
+      "cleanup_errors": []
+    },
+    "GPU1": "UNRUN",
+    "window": "20261030T041001Z",
+    "window_test_returncode": 1,
+    "maintenance_resume_allowed": false,
+    "kernel_capture_returncode": 0,
+    "kernel_fault_lines": [],
+    "swapout_page_delta": 0,
+    "minimum_sampled_root_GiB": 836.6450271606445,
+    "old_hosted_close": "Exact38b/main2612003/native2612033 stableunitinactive/MainPID0/ExecMainCode1/Status0/Resultsuccess and rawnativeclose0.",
+    "recovery_refusal": "Firstone-startsystemctl returned1, no newbinding/restoredPID, cleanupnull. Finalobservation recordsfailed27f9/MainPID0/noGPUowner and deploymentpreflightlatestwindowblock.",
+    "historical_fields": "window.units/health_before/glm_unit are inherited historicalOct25context, notcurrentGLMownership.",
+    "proof_map": "Actualheadproof matches frozen2228map/qe8fa exactly.",
+    "cause": "Not established; genericmessage cannot distinguish invalidcomputedvalue, unwrittensentinel or alteredguard. No evidence for largeNfat/Ltbranch in exact selectedGGUF/IQ."
+  },
+  "recommended_witness": {
+    "purpose": "Independent selected-baseline GPU arithmetic/output-write/guard health after a fixture assertion, not head4vs8 comparison or failed-arm retry.",
+    "native_model_execution": false,
+    "objects": "Only originalselectedGGUF73a17/IQb47a and other originalselectedtestlink objects. New standalonehealthentry only. No candidateModel72ced/modelbb60, Q8sharing, IQ2persistent, IMMA or headpolicyheader.",
+    "unchanged_runtime": "OriginalQ8_BATCH1/CHECK1; physicaldevices0/1 sequential; samecuda13.3/sm80/O3/C++20 toolchain and knownlinkclosure.",
+    "operation": "Direct originalgg::mv calls partitioned at maximum4columns; rows1,2,4 only. gg::prepare and existingq8_batch_check eachdevice.",
+    "geometry": {
+      "K": 5120,
+      "N": 129280,
+      "column_counts": [
+        1,
+        2,
+        4
+      ],
+      "strides": [
+        "dense",
+        "padded input/weight/output"
+      ],
+      "patterns": [
+        "zero activations with legalfiniteQ5weights",
+        "signedexactinteger activations with legalanalytic nonzeroQ5weights"
+      ],
+      "proposed_arithmetic_cases_per_device": 12,
+      "device_count": 2,
+      "additional_Q8_reader_check_per_device": 1,
+      "final_ID_count_policy": "Enumerate actualfinalsourceIDs; proposed12arithmetic+1reader perdevice is design, not executedcoverage."
+    },
+    "analytic_expected_values": "Use independently packed/decoded finite Q5_K d1,dmin0,scales1,codes1 (or rowcoded1/2), with activation0 or \u00b1127 and knownsignpatterns. Q8scale isexactly1 for nonzero127blocks; allsumproducts areexactlyrepresentable F32 integers, e.g5120*127=650240 and twice1300480. Verify this packing/reference in pureCPUcontrols beforeGPU. Do not use approximate1/127 reference or tolerance.",
+    "assertions": [
+      "Allfulloutputcells equal independentexpectedF32bits; zero-sign expectations explicitlydefined/sourcechecked.",
+      "Input and weight bytes unchanged; prefix/suffix/paddingguards intact.",
+      "Every outputcell written, noNaN/Inf/sentinel left, allcuda/runtimeexit checks0.",
+      "Firstfailure recordsdevice/case/row/column/index/value-vs-guard/expectedbits/actualbits; no continue/retry."
+    ],
+    "distinctness": "Does not replay original385 headcomparison or arbitrarypriorpattern0. Tests baseline<=4 only with new analyticinputs. Passing supports boundedbaselinehealth/recovery, not explanation/regrade of priorfailure or candidatequalification."
+  },
+  "why_smallest": {
+    "ready_existing_path": "No alreadybuilt qualified originalbaseline-only fullshape analyticfixture found. Existingheadfixture has failed and includescandidatepartitioncomparison; oldIQ2/IMMA/Q8fixtures carry candidateobjects or differentquestions.",
+    "selected_native_alternative": "Loading selected92 andrunningmodelchecks would be larger andwould stillneed ownwindowadmission; it is not needed for this minimal originalkernel healthquestion.",
+    "build_delta": "Compile only newfixtureentry, link originalselectedGGUF/IQ/testobjects; no native/model rebuild. Reuse exact known selectedtoolchain/link input rules and bounded supervisor.",
+    "source_surface": "Small baseline-specific fixture/reference helper plus minimal controller/parser/tests/CPUdriver; reuse unchangedqualified command/PGcleanup/identity/startup primitives with pinnedorigins. Do not fork generalframework orchangewindow/preflight/unit."
+  },
+  "canonical_window_plan": {
+    "failed_evidence": "Pin failed041001JSON/telemetry/kernel log/device0raw and refusedone-start recovery27f9. Require unchangedfailurebytes before/after.",
+    "clean_lineage": "Pin actual R/windows/20261030T024056Z.json andtelemetry, whose path is failed041001.continued_from. Independently verify test0/resumeAllowed/held/notrestored, commonmaintenance_root_window20261025T032914Z, clean capture/resources; pin currentmaintenance-hold policy andexplicitnewauthorization. Thesecleanrawfiles were not available in inspectedlocalQ; fetch/readbeforeadmission.",
+    "mechanism": "Unchangedwindow170722 launch --continue-maintenance exact024056 --extended --timeout1200 -- newqualifiedbaselinehealthentry. continuation_state explicitly accepts a cleanheldsource and does not require it be thelatest; it will inherit only historicalcontextfields. This is an explicitlyreviewed separatepostfault diagnostic branch, not an assertion failed041001is resumable.",
+    "necessary_outer_guard": "Beforethatlaunch, newqualifiedcontroller must bind latestfailed041001 and exactstoppedcanonicalstate/refused27f9/noowners/nootherphase; verify bothfailed+cleanlineage and source/fixtureproofs. Existingwindow alone doesnot perform this postfaultdiagnosis guard.",
+    "real_terminal_gate": "Only genuinely executedbothdeviceanalytichealthPASS, child/window0, ownedcleanup/free/kernel/resourcePASS may create the newcleanwindow through normalwindowExecStopPost. Neverwrite pass/resumeAllowed fields ormodifymtime manually.",
+    "old_failures_retained": "041001test1/resumeFalse, GPU1UNRUN and refusedrecovery remainclosed/HOLD underseparatecanonicalfailurefields. Newhealthpass is not a headresult."
+  },
+  "minimal_controller_contract": [
+    "Use freshpostfault-baseline-recovery-v1 output/metadata/attempt andownPIDcanonicalCAS. Currentmode isstopped/recovery, nothost.idle() orhistorical38b treatedaslivebinding.",
+    "Require actualfailed27f9/MainPID0, inactiveCPUrouter/noGLM/Qwen/watchdog, nofixture/controller/otherwindow, bothGPUsfree andexperimentlockavailable. Neverresetsystemdfailuretohidehistory.",
+    "Pin selectedDnative92/configc43/preflightb15/releaseb921/972releasefiles and originalobjects; actualsource/hashguards beforephase.",
+    "CanonicalwindowownsGPUlock/cgroup; twoexactfixturecommands/immutablebinary, eachCPU120/wall120/FSIZE512MiB; totalwindow1200/soft1000/cleanup200/root132admission120runtime/swapdelta<1GiB/log4GiB.",
+    "RecordactualPID/exe/argv/startticks/cgroup/start/exit forboth; firstfaultownedcleanupHOLD/noreplay/norestore.",
+    "Healthsuccess must beparsedfromrawexactIDs/expectedbits andactualnewwindowlatest/faultfree. Checkcanonicalcustodyunchanged before nextstage.",
+    "After successfulhealth underseparatelyqualifiedcondition, oneexistingselectedunitstart mayusehead_startup53988 withoriginal1250sbound, freshauditdir andactualoldcloseproof; unchangedpreflight now sees realnewcleanwindow. No automaticsecondstart.",
+    "RestoreCPUrouter andboundpublicverification401/auth200/assembledREADYstopDONE/972pins/resources; updatecurrentselectedbinding onlyafterverifiedCAS, or explicitownedpendingpublic state. Never adopt a foreignreplacement."
+  ],
+  "CPU_qualification_requirements": [
+    "FullmanualROOT+sameAstra read ofallnewsource/tests, then FIRSTboundedcontrols eachphysicalhost CPU30/LinuxAS512/wall90/nice15/CUDAhidden.",
+    "AnalyticQ5pack/decode/reference/strides/indexrange/IDs andwrongexpectednegativecontrols; realcompiledCPUreference helper ifused byGPUfixture.",
+    "Postfaultguardnegativecases: changedfailedreceipt, unclean/unrelatedlineage, missingexplicitauthorization, live/foreignowner, latestwindowchange, partialclaim/foreignCAS, source/fixturemismatch, subsetPASS/guardfailure, timeout/descendantcleanup.",
+    "Positiveactualcontrollerbodywithmockedsystemedges: newhealthsuccess permitsonebaseline start; anyGPU/receipt/kernel/resourcefailure permitszero starts; startup/preflightrefusalneverretries; independentcleanuperrorspreserved.",
+    "Newcompile/linkproofwithactualdeps/artifacts beforekernelq; freshphysicalqualificationandseparateactionadmission. NoCPU/sourceprooftransfers beyondexactunchangedhelpers."
+  ],
+  "scope_limits": [
+    "A baselineanalytichealthpass doesnot identifyheadfailurecause or prove generalhardware/modelquality.",
+    "Selected92/code/config/limits remainunchanged; finalactualstartupandpublicverification provide deploymentavailability evidence.",
+    "No model/timing/headcandidate/Q8/IQ2/IMMA acceptance, rerun orpromotion.",
+    "No tests/import/compiler/GPU/remote/service action executedbyreviewer."
+  ],
+  "current_admission": false,
+  "implementation_authority_from_this_report": false
+}

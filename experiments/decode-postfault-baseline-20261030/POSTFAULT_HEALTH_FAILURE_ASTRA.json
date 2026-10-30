@@ -1,0 +1,119 @@
+{
+  "utc": "2026-10-30T09:56:11.959532+00:00",
+  "decision": "ACTUAL_BASELINE_HEALTH_FAIL_HOLD_WITH_SOURCE_CONFIRMED_FIXTURE_ORDERING_GAP",
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/GPU_FAILURE.json": "47856f86db0bf0c220cd8b0dfa2362d1c27cebc07949b6695965eb1499019c90",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/GPU-FIRST/gpu0-start.json": "e59da63c82525841e7671ae93e4adbd520aa2be1fe2aeb14a75978f25feda334",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/GPU-FIRST/gpu0-exit.json": "ffffd4ee2f7958294cd644fb04f73871ff60f2b941a490861e05b0d57376fb12",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/GPU-FIRST/gpu0.stdout": "f4a7854867c0e15fe840723aa5692cf3ee9bf82018c81b64b87a430f22de51d6",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/GPU-FIRST/gpu0.stderr": "05295219c3d3ff793508b91b6f05852c0b3625de6e9f2e88492b926dcd1c8ee7",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/window-FIRST/20261030T095101Z.json": "ba433b6a6e349b96b9d3697bb6bffd25e54e365dd0caa89822733ace13d89bbe",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/window-FIRST/20261030T095101Z.telemetry.jsonl": "102e327e802ae6f6be5440f3ec5ecc030e51c3cacd1c50e646affe8f332a6209",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/window-FIRST/20261030T095101Z.kernel.log": "19c4e28b2f54ea8f217db4e622b0a5c758efa7b77ce2dc0394b6d159568c0b2e"
+  },
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/candidate/tests/head_batch_check.cu": "1f5b0b0389f4378390f9261662b2eba41047c03300e301d359d0834016b2979f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/selected-base/src/ds4/ds4_gguf.cu": "0735989826d5a9a8a9ec101ef2fbe1017ab7604c9f1e17e4217740104e107033"
+  },
+  "admission_sha256": "e7d71a06d65cf52209f329c8d3049ef619a89d4d45f770421890e08e3566b946",
+  "actual": {
+    "window": "20261030T095101Z",
+    "test_returncode": 1,
+    "maintenance_resume_allowed": false,
+    "GPU0": {
+      "pid": 2967984,
+      "start_ticks": 162212885,
+      "returncode": 1,
+      "cleanup_errors": [],
+      "elapsed_s": 3.381380646955222,
+      "canonical_cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service",
+      "passes": [
+        "PASS baseline-k5120-n129280-r1-pad0-pattern0",
+        "PASS baseline-k5120-n129280-r1-pad0-pattern1",
+        "PASS baseline-k5120-n129280-r1-pad1-pattern0",
+        "PASS baseline-k5120-n129280-r1-pad1-pattern1",
+        "PASS baseline-k5120-n129280-r2-pad0-pattern0"
+      ],
+      "failure": {
+        "kind": "value",
+        "index": 129312,
+        "row": 16,
+        "col": 1,
+        "rows": 2,
+        "pad": 0,
+        "pattern": 1,
+        "actual_bits": "7fa12345",
+        "expected_bits": "c91ec000",
+        "expected_float": -650240.0,
+        "is_initial_output_sentinel": true
+      }
+    },
+    "GPU1": "UNRUN",
+    "Q8_reader_GPU0": "Raw stderr reports 8jobs,42784int8,1337scales exact andguards intact beforefailedanalyticcase. Thisdoesnotqualify the laterfixtureordering.",
+    "kernel_capture_returncode": 0,
+    "kernel_fault_lines": [],
+    "swapout_delta_pages": 0,
+    "minimum_sampled_root_bytes": 897333305344,
+    "cgroup_peak_bytes": 549928960,
+    "final_gpu_telemetry": "0, 0, 41, 37\n1, 0, 0, 35",
+    "no_completed_health_receipt": true
+  },
+  "poststate_limit": "Parent reports exactfailed27f9 unchanged/unitinactive/noGPUowners/nootherphase. Localterminalraw independentlyshowsfailedheldwindow, clean kernelcapture, fixtureexit1/cleanup[], finalGPUmemory0; no service start is authorized or performed byreviewer.",
+  "source_findings": [
+    {
+      "fact": "Both health.cu and head_batch_check.cu use pageable std::vector HtoD cudaMemcpy on thedefaultstream; selected gg::mv kernels use cudaStreamNonBlocking. There is no explicit completion dependency between final output-sentinel initialization and kernel dispatch.",
+      "locations": "health.cu24,29-30,36,62; head_batch_check.cu40,59,64,75,78,109"
+    },
+    {
+      "fact": "Selected gg::mv at1344 onward enqueues Q8 quantization and iq::mv on the suppliedstream. prepare allocates scratch once, but doesnot establish the missing default-stream dependency for each later output initialization."
+    },
+    {
+      "fact": "Existing checked cudaStreamSynchronize(stream) completes kernels before DtoH readback. The evident missingedge is initialization-to-kernel, not an absent kernel-to-readback wait."
+    },
+    {
+      "fact": "The reported index equals guard16+129280+row16. The oracle is -127*5120=-650240 for evenrow16, matching c91ec000. Actualbits exactly match the fixture sentinel. This suggests incomplete/overwritten output but doesnotidentify which event occurred."
+    }
+  ],
+  "documentation": {
+    "version": "Official CUDA13.3 runtime documentation, matching installed13.3 family",
+    "urls": {
+      "api_sync": "https://docs.nvidia.com/cuda/archive/13.3.0/cuda-runtime-api/api-sync-behavior.html",
+      "stream_sync": "https://docs.nvidia.com/cuda/archive/13.3.0/cuda-runtime-api/stream-sync-behavior.html"
+    },
+    "api_rule": "Pageable HtoD cudaMemcpy may return after host staging but before final DMA completes; synchronous-form copies use the default stream.",
+    "stream_rule": "A stream created with cudaStreamNonBlocking does not implicitly synchronize with the legacy default stream."
+  },
+  "inferences_and_limits": [
+    "A late sentinel-initialization DMA overwriting completed kernel writes is consistent with source and observation, but has not been demonstrated by an execution trace or a qualified changed fixture.",
+    "No source-established permission to attribute the failure to hardware, selectedkernel arithmetic, head4vs8 factor, or actual model correctness. Both oldhead and newbaselinefailedrecords remain actual FAIL/HOLD.",
+    "A pageable hostvector going outofscope after synchronous cudaMemcpy is not byitself a demonstrated host use-after-free: the documented host staging completes before return.",
+    "The earlier manualfixture review and CPUcontrols missed this GPUstream dependency. CPUproof doesnotexercise deviceordering; retain its exacthistoricalscope.",
+    "No blanket revocation or validation of unrelated previouslypassedkernels is inferred. Any lateruse of this specificfixture pattern requires explicitorderingreview."
+  ],
+  "minimal_prospective_repair": {
+    "code_delta": "In a preserved new baseline-only fixture revision, insert checked cudaDeviceSynchronize() immediately after final y sentinel HtoD cudaMemcpy and before gg::mv. Keep the existing checked postkernel stream wait and DtoH readbacks.",
+    "scope": "Fixture-only happens-before edge; same originalGGUF/IQ objects, analyticdata/oracle/K5120/N129280/rows1,2,4/padding/12cases perdevice/Q8reader/bounds. No productionkernel/model/profile/config/preflight/unit/window edits.",
+    "why_device_sync": "One explicit current-device barrier makes preceding initialization complete before kernelissue; acceptable for a correctness-only standalone witness with no otherGPUowner and no performanceclaim.",
+    "alternative_not_required": "Same-stream cudaMemcpyAsync for alloperations is also a design option, but requires explicit hostbuffer lifetime management; it is a larger repair and unnecessary for this diagnostic.",
+    "qualification": [
+      "Preserve all firstsource/build/CPU/window/admission/rawFAIL files before anychanges. Freshnamespace and new exactsource/binary/proof; no in-place retry or reinterpretation.",
+      "Manuallyread exact narrowdelta and wholefixture/caller. Add small meaningful mocked ordering/control checks: no launch before successfulinitbarrier, barriererror stopsdispatch; preserve oracle andcase inventory. SuchCPUcontrols do not proveGPUorder.",
+      "Qualify changedsource/control revision on bothphysicalhosts underexistingboundedCPU rules; do not blindly rerun unchangedcontrols as iftheyproveddeviceordering.",
+      "Newfixture-only bounded compile/link with original35linkinputs; revalidateactualdependencies with the alreadyqualified parser thatacceptsldphonyrules. Do not reintroduce the broken whole-filecolonparser or rebuildselectednative.",
+      "New frozenmetadata/guard must bind latestfailed095101 plus earlierfailed041001/refused27f9 and realclean024056/policy. Oldconstant041001 isnotcurrentlatest; do not edit oldreceipt to make it pass.",
+      "Separate admission required for any changed GPUwitness, with samefreshstopped/free/root/phase/lock/source checks, firstfaultHOLD and rawPID/cgroup/exit/kernel/resources. No GPU run authorized by this report.",
+      "Even if a future properlyordered witness passes, require its independentterminalreview and separatebaseline-restorationdecision; noautomaticservice restart and nocandidate reopening."
+    ]
+  },
+  "no_actions": {
+    "tests_imports": true,
+    "compiler_or_GPU": true,
+    "Ubuntu_or_services": true,
+    "source_edits": true
+  },
+  "restoration_admitted": false,
+  "GPU_retest_admitted": false,
+  "old_head_and_health_statuses_changed": false
+}

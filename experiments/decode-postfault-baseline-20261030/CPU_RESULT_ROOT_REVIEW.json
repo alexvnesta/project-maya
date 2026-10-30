@@ -1,0 +1,60 @@
+{
+  "utc": "2026-10-30T09:41:13.505926+00:00",
+  "passed": true,
+  "source_sha256": {
+    "recovery.py": "f8dc0d49d695cccf51e652b98a4b36c4556c744d57beb88ef537eada192ecf8e",
+    "health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "test_contract.cpp": "e11174d915794b4c2bd4065ea855c6cde05d25b4043b9600754a8f0662811c96",
+    "test_recovery.py": "8c12e765cd1f04f71e54cf7cb9393efee2053d6c586b8424882727e6c2ba0a22",
+    "qualify_cpu.py": "5d6f97807bdc0780942e5c234bc6995944fb87531e8d0afbffeb9c52d6b36d83"
+  },
+  "input_sha256": {
+    "prepare-FIRST/plan.json": "35fd7f677e2f716d3cd2b517cd99d3c4b7a6e56caacfe41d2889033859a5c6ac"
+  },
+  "exact_Python_test_IDs": 58,
+  "actual_CXX_controls": 19,
+  "hosts": {
+    "darwin": {
+      "child": {
+        "pid": 71116,
+        "returncode": 0,
+        "error": null,
+        "cleanup_errors": [],
+        "CPU_s": 30,
+        "wall_s": 90,
+        "nice": 15,
+        "CUDA_hidden": true,
+        "Linux_AS_MiB": null
+      },
+      "files": {
+        "receipt.json": "614201dd3a53b83419f18c5e4e7a2f26a917777c1ee43b2ab3251b9555796558",
+        "child.json": "e8f91056a66e0d351d90b2697696b9bc6f57a110d9838325e62562d6d05bdba0",
+        "child.log": "2d1f0a18080f1e8b2e93ba75fcdfdc12ddb596936d69825e63683d2a35633e19",
+        "CXX-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "CXX-run.log": "d7923a5b95dad44dd508f8174cd70ff0f75c51c540e8a18485435853aea3de9f"
+      }
+    },
+    "linux": {
+      "child": {
+        "pid": 2960947,
+        "returncode": 0,
+        "error": null,
+        "cleanup_errors": [],
+        "CPU_s": 30,
+        "wall_s": 90,
+        "nice": 15,
+        "CUDA_hidden": true,
+        "Linux_AS_MiB": 512
+      },
+      "files": {
+        "receipt.json": "ded121573f368d83a4e4d829b729b91db829544a18a110423851b85552665a45",
+        "child.json": "46d3d411720a83186016388c4b3d41e31d07589b1390c80d023c43b3a8ffaee1",
+        "child.log": "2d1f0a18080f1e8b2e93ba75fcdfdc12ddb596936d69825e63683d2a35633e19",
+        "CXX-compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "CXX-run.log": "d7923a5b95dad44dd508f8174cd70ff0f75c51c540e8a18485435853aea3de9f"
+      }
+    }
+  },
+  "scope": "Source/CPU proof only. No GPU health, no selected restart performed, no candidate admitted."
+}

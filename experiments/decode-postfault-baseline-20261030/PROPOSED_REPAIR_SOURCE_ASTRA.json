@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-30T09:57:21.238392+00:00",
+  "decision": "PROPOSED_FIXTURE_ONLY_ORDERING_REPAIR_REVIEWED_UNQUALIFIED_UNBUILT_UNRUN",
+  "manual_entire_proposed_source_read": true,
+  "manual_entire_diff_read": true,
+  "manual_root_diagnosis_read": true,
+  "evidence_sha256": {
+    "health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "PROPOSED_health_synchronized_v2.cu": "e53b38389d0a507d9efc434cc8fbee6ea28f55aad4d131383ec4dae4c2a77194",
+    "PROPOSED_fixture_ordering_fix.diff": "be262faa1bd6f705216775aaefb24431a40ac33908cf0723bdcac00e496eba21",
+    "OFFLINE_ORDERING_DIAGNOSIS_ROOT.json": "2a389420d82efaed6ecbdde440d9b4f5c07a1e7217fce9bbe37172644ddf3eac",
+    "POSTFAULT_HEALTH_FAILURE_ASTRA.json": "24138141e671f02301f9916bc71a7f05342da0d9ebb3df4083db68649d9f9c01",
+    "GPU-FIRST/gpu0-exit.json": "ffffd4ee2f7958294cd644fb04f73871ff60f2b941a490861e05b0d57376fb12",
+    "GPU-FIRST/gpu0.stderr": "05295219c3d3ff793508b91b6f05852c0b3625de6e9f2e88492b926dcd1c8ee7",
+    "window-FIRST/20261030T095101Z.json": "ba433b6a6e349b96b9d3697bb6bffd25e54e365dd0caa89822733ace13d89bbe"
+  },
+  "exact_delta": {
+    "added_lines": 2,
+    "deleted_lines": 0,
+    "reverting_only_two_added_lines_recovers_failed_original_bytes": true,
+    "code": "ck(cudaDeviceSynchronize());",
+    "position": "After all3 HtoD initializations and rows1/2/4 bound; before first gg::mv.",
+    "error_behavior": "ck throws on synchronizationerror, so gg::mv is not issued; existing catch reportsFAIL and returns1."
+  },
+  "assessment": [
+    "The proposed checked device-wide barrier establishes completion of preceding initialization on the current device before nonblocking-stream kernel dispatch.",
+    "The existing post-kernel stream wait/readback remains. Analyticpacking/oracle/inputs/outputs/canaries/12cases/device/CLI/Q8reader/SM80 checks and originalGGUF/IQ dispatch remain byte-unchanged.",
+    "This is an appropriate small correctness-fixture proposal when no otherGPUowner exists; no productionkernel, arithmetic, model, profile, unit, window or settings change.",
+    "No new execution validates either this source proposal or the causal hypothesis. A future pass would not erase or regrade either historical failed window."
+  ],
+  "remaining_requirements_before_any_execution": [
+    "Separate preserved revision with exact source/test/driver/fixture/build/output namespaces and latestfailed095101 custody.",
+    "Independent fullmanualreview and bounded both-host CPUqualification of changed source/ordering controls, with limits and originalproof lineage retained.",
+    "New fixture-only bounded build and actual dependency/artifact audit; unchanged selectedGGUF/IQ inputs.",
+    "Fresh explicit baseline-only GPUadmission after stopped/free/root/phase/lock/fullsource checks. No implicit restoration; terminalreview and separate restorationdecision afterward."
+  ],
+  "qualified": false,
+  "built": false,
+  "run": false,
+  "CPU_execution_admitted": false,
+  "GPU_execution_admitted": false,
+  "service_restoration_admitted": false,
+  "old_041001_and_095101_status": "FAIL/HOLD unchanged",
+  "reviewer_actions": "Localread and exacttext/hash comparison plus thismetadatareport only; no sourceedit/import/test/build/remote/GPU/service action."
+}

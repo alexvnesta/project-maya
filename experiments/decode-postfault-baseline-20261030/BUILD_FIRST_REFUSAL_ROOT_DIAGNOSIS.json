@@ -1,0 +1,57 @@
+{
+  "status": "HOLD_DEPENDENCY_METADATA_PARSER_BEFORE_COMPILE",
+  "deps_child": {
+    "argv": [
+      "/usr/local/cuda/bin/nvcc",
+      "-forward-unknown-to-host-compiler",
+      "-DSTRATA_NATIVE_EXPERTS=1",
+      "-DSTRATA_VERSION=\"0.1.27\"",
+      "-I/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/src/ds4",
+      "-I/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1",
+      "--options-file",
+      "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/includes_CUDA.rsp",
+      "-O3",
+      "-DNDEBUG",
+      "-std=c++20",
+      "--generate-code=arch=compute_80,code=[compute_80,sm_80]",
+      "--threads",
+      "1",
+      "-x",
+      "cu",
+      "-M",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health.cu",
+      "-o",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/build-FIRST/health.headers.d"
+    ],
+    "pid": 2961973,
+    "returncode": 0,
+    "error": null,
+    "cleanup_errors": [],
+    "CPU_s": 120,
+    "AS_MiB": 4096,
+    "wall_s": 300,
+    "nice": 15,
+    "CUDA_hidden": true,
+    "elapsed_s": 0.26668690517544746,
+    "retry": false
+  },
+  "logical_Make_rules": 1,
+  "rule_targets": [
+    "health.o"
+  ],
+  "parser_refusal": "ValueError: malformed dependency",
+  "compile": "UNRUN",
+  "link": "UNRUN",
+  "GPU": "UNRUN",
+  "service_restart": "UNRUN",
+  "first_source_archive": {
+    "health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "recovery.py": "f8dc0d49d695cccf51e652b98a4b36c4556c744d57beb88ef537eada192ecf8e",
+    "test_recovery.py": "8c12e765cd1f04f71e54cf7cb9393efee2053d6c586b8424882727e6c2ba0a22",
+    "qualify_cpu.py": "5d6f97807bdc0780942e5c234bc6995944fb87531e8d0afbffeb9c52d6b36d83",
+    "test_contract.cpp": "e11174d915794b4c2bd4065ea855c6cde05d25b4043b9600754a8f0662811c96",
+    "source-review.json": "db602085b90fb9420aa1fbf2687693d755b82a4250a4f4d7d44a1da129feb24d"
+  },
+  "preserved_scan_sha256": "6c7e9384616246cf0a9f70e63649221a8cccb17be1f320cd5225d714d9bfc52b"
+}

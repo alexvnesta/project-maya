@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-30T09:56:45.010915+00:00",
+  "status": "HOLD_BASELINE_HEALTH_FAILED_OFFLINE_ORDERING_DIAGNOSIS",
+  "window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T095101Z.json",
+  "window_test_returncode": 1,
+  "GPU0_native_pid": 2967984,
+  "GPU0_exit": 1,
+  "GPU0_passed_prefix_cases": 5,
+  "GPU1": "UNRUN",
+  "actual_bits": "0x7fa12345",
+  "expected_bits": "0xc91ec000",
+  "bad_index": 129312,
+  "bad_row": 16,
+  "bad_column": 1,
+  "fixture_cleanup_errors": [],
+  "kernel": {
+    "kernel_capture_returncode": 0,
+    "kernel_fault_lines": []
+  },
+  "root_min_GiB": 835.7067642211914,
+  "swapout_delta_bytes": 0,
+  "unit": "ActiveState=failed\nInvocationID=27f9b1951f494c47a5f6de81f7323ba6\nMainPID=0\nResult=exit-code\n",
+  "window_unit": "ActiveState=inactive\nMainPID=0\n",
+  "router": "inactive",
+  "GPU_owners": [],
+  "GPU_used_MiB": [
+    0,
+    0
+  ],
+  "production_started": false,
+  "current_native_pid": null,
+  "model_quality_limits_changed": false,
+  "source_ordering_defect": "defaultstream pageable HtoD initialization lacks completion edge to nonblocking GEMV; actual causal attribution remains unproven",
+  "automatic_retry": false,
+  "restoration_admitted": false
+}
