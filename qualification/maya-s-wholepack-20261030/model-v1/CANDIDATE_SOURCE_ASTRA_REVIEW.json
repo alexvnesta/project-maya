@@ -1,0 +1,68 @@
+{
+  "utc": "2026-10-30T17:28:12.171266+00:00",
+  "decision": "FIRST_BOUNDED_CANDIDATE_CPU_ONLY_CONDITIONALLY_READY",
+  "entire_three_new_files_all_test_bodies_and_existing_fixture_support_read": true,
+  "source_sha256": {
+    "ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "ms_candidate_inputs.py": "64157b6421b1bf1bcb8be66e9da69944e286044f0d2a9ba0c47a6ed9a48b40e1",
+    "test_ms_candidate_inputs.py": "b4d9b575b140ff97fc3206295104c79433d0d9b5a1a1ece208348de732d04348",
+    "ms_candidate_cpu.py": "a0d77b18b05ae7dfbb85c710c8a5a418680499568be860f9defc2bf3cca3a649"
+  },
+  "test_ids": [
+    "test_ms_candidate_inputs.Candidate.test_actual_triplet_has_all_fixed_requests_and_capacities",
+    "test_ms_candidate_inputs.Candidate.test_baseline_or_foreign_pack_substitution_refused",
+    "test_ms_candidate_inputs.Candidate.test_candidate_metadata_source_is_explicit_not_baseline",
+    "test_ms_candidate_inputs.Candidate.test_encoded_prompt_corruption_refused",
+    "test_ms_candidate_inputs.Candidate.test_missing_candidate_metadata_never_borrows_baseline",
+    "test_ms_candidate_inputs.Candidate.test_missing_family_or_unmeasured_lifecycle_refused",
+    "test_ms_candidate_inputs.Candidate.test_resized_request_or_effort_refused",
+    "test_ms_candidate_inputs.Candidate.test_tokenizer_drift_between_families_refused",
+    "test_ms_candidate_inputs.Candidate.test_uniform_fallback_or_wrong_template_path_refused",
+    "test_ms_candidate_inputs.Candidate.test_uniform_tokenizer_drift_refused",
+    "test_ms_candidate_inputs.Candidate.test_uniform_wrong_picker_or_policy_refused",
+    "test_ms_candidate_inputs.Candidate.test_uniform_wrong_template_hash_refused",
+    "test_ms_candidate_inputs.Candidate.test_wrong_total_or_output_limit_refused"
+  ],
+  "controls": 13,
+  "candidate_tokenizer_sha256": {
+    "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+    "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+    "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+    "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16"
+  },
+  "constructed_pack_result_sha256": "9d42caa2d48361b4c176df2453e5bf1d97f405deb1080f0242db23769164ae9e",
+  "constructed_actual_astra_review_sha256": "ea4744a195c06f620621e4f387e85b9d950919cb7d32a653c91c201659d558a8",
+  "inherited_import_inventory": {
+    "path": "decode-optimization-20261028/prose-speed-v1/prose-CPU-v2-source-review.json",
+    "sha256": "829413a7f31bcd60a31297472283244c3a38b7956f7a64b9c51b8ecbc79442a6"
+  },
+  "template_full_read": {
+    "bytes": 18498,
+    "sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+    "scope": "Entire candidate Jinja read; normal message/reasoning/tools/image construction. Actual picker compatibility and each-pack token-ID normalization remain prospective CPU proof, not source-only outcome."
+  },
+  "resolved_pre_FIRST_findings": [
+    "Uniform wrong tokenizer/template metadata across all families was not anchored; final literal five hashes match actual constructed outputs, exact seven-field typed template contract fixes this. Four new negative controls cover uniform pins/fallback/path/hash/picker/policy.",
+    "candidate_pack_encoded now reports actual completed manifest triplet rather than unconditional true after setup error.",
+    "CPU driver doc and BASE_CONFIG indentation corrected without policy change."
+  ],
+  "manual_checks": [
+    "Exactly three families4/3/3; prose lifecycle4 retained, requests/full cap/effort unchanged and not resized.",
+    "Once-per-host setUpClass performs actual candidate manifests only; negative provenance controls copy already encoded data.",
+    "Explicit candidate directory five files; no baseline tokenizer or fallback template accepted in resulting manifest.",
+    "Inherited input closure normalized only within evidence root with collision/alias gates; support API/test/ST/dsml/vision pins included before import; four new sources pinned separately.",
+    "Driver pre/post source/input/ordered-ID checks; fresh exclusive proof directory; CPU30/LinuxAS512MiB/wall90/nice15/CUDAhidden/thread1; owned process group cleanup and primary/error receipts retained."
+  ],
+  "conditions": [
+    "Root independently full-reads these exact bytes and freezes a new matching source-review map/13 orderedIDs with both manual flags true before any CPU.",
+    "Fresh authorized physical host/source/phase/binding guard before Linux CPU; source-closure hashes before import and after completion.",
+    "One FIRST candidate CPU child per physical host; no automatic retry or silent regrade after failure. Compare actual returned manifest bytes/provenance across hosts afterward."
+  ],
+  "limitations": [
+    "No new source imports, encoding, tests or model execution by reviewer.",
+    "Pure source and encoding readiness only. No whole-model compatibility, numerical/quality, capacity, speed or service admission.",
+    "Third-party Python runtime/library behavior is exercised by bounded actual CPU proof, not inferred solely from source."
+  ],
+  "open_blockers": []
+}

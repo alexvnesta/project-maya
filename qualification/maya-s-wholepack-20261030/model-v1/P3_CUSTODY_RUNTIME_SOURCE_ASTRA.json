@@ -1,0 +1,101 @@
+{
+  "utc": "2026-10-30T17:32:56.888730+00:00",
+  "decision": "SOURCE_FROZEN_FOR_ROOT_MANUAL_REVIEW_NEW_BOTH_HOST_CPU_REQUIRED",
+  "scope": "Only successful P3 package custody and focused tests; no lifecycle/controller/CPU-driver edit.",
+  "source_sha256": {
+    "ms_runtime.py": "da770c494cd9f9e921144a469d8241a531540b673213b96f3b4a5e8d8ea666a3",
+    "test_ms_runtime.py": "46b90563c75d5ceb4c295eaa9df7e4c106a3f435a942f258b11a075ccac3b2de"
+  },
+  "preserved_prior_sha256": {
+    "ms_runtime.py": "2813cd2e129c191c2f4c447f66dc4ed624d537fc2fc6fc968e9a59a31d2bfc22",
+    "test_ms_runtime.py": "e1e9a258ddbb38b862a40c7f847681e309f52b2d9d65dfcb1254af9f6508649b"
+  },
+  "AST_changed_functions_or_classes": {
+    "ms_runtime.py": [
+      "pack_custody",
+      "pack_file",
+      "cpu_membership"
+    ],
+    "test_ms_runtime.py": [
+      "PackCustodyTests"
+    ]
+  },
+  "all_other_function_and_class_AST_unchanged": true,
+  "test_ids": [
+    "test_ms_runtime.CPUMembershipTests.test_changed_raw_child_refused",
+    "test_ms_runtime.CPUMembershipTests.test_input_pin_omission_refused",
+    "test_ms_runtime.CPUMembershipTests.test_one_host_not_qualification",
+    "test_ms_runtime.CPUMembershipTests.test_raw_log_omission_refused",
+    "test_ms_runtime.CPUMembershipTests.test_source_input_and_all_six_raw_proofs_pinned",
+    "test_ms_runtime.CPUMembershipTests.test_source_pin_omission_refused",
+    "test_ms_runtime.HostTests.test_collection_failure_prevents_clean_restore_path",
+    "test_ms_runtime.HostTests.test_different_default_blocks",
+    "test_ms_runtime.HostTests.test_explicit_authorization_allows_healthy_active",
+    "test_ms_runtime.HostTests.test_poststop_low_memory_refuses_before_attempt",
+    "test_ms_runtime.HostTests.test_poststop_observed_memory_allows",
+    "test_ms_runtime.HostTests.test_postwindow_cleanup_does_not_repeat_admission",
+    "test_ms_runtime.HostTests.test_restored_public_verification_preserves_busy_deferral",
+    "test_ms_runtime.HostTests.test_startup_adapter_composed_without_legacy_launch",
+    "test_ms_runtime.HostTests.test_wrong_context_blocks",
+    "test_ms_runtime.PackCustodyTests.test_changed_actual_output_bytes_blocks",
+    "test_ms_runtime.PackCustodyTests.test_changed_asset_identity_blocks_without_rehash",
+    "test_ms_runtime.PackCustodyTests.test_changed_constructor_contract_blocks",
+    "test_ms_runtime.PackCustodyTests.test_changed_vision_identity_blocks",
+    "test_ms_runtime.PackCustodyTests.test_completed_p3_all125_controls_and_original_target",
+    "test_ms_runtime.PackCustodyTests.test_constructor_original_closure_missing_from_model_q_refused",
+    "test_ms_runtime.PackCustodyTests.test_duplicate_asset_row_refused",
+    "test_ms_runtime.PackCustodyTests.test_exact_eight_outputs_no_omission_or_extra",
+    "test_ms_runtime.PackCustodyTests.test_failed_constructor_cpu_child_refused",
+    "test_ms_runtime.PackCustodyTests.test_failed_or_wrong_actual_constructor_child_refused",
+    "test_ms_runtime.PackCustodyTests.test_missing_constructed_metadata_pin_blocks",
+    "test_ms_runtime.PackCustodyTests.test_missing_constructor_cpu_group_refused",
+    "test_ms_runtime.PackCustodyTests.test_missing_physical_constructor_proof_refused",
+    "test_ms_runtime.PackCustodyTests.test_missing_qualification_or_result_review_refused",
+    "test_ms_runtime.PackCustodyTests.test_old_failed_p1_result_not_relabelled_success",
+    "test_ms_runtime.PackCustodyTests.test_output_ancestor_alias_blocks",
+    "test_ms_runtime.PackCustodyTests.test_p3_raw_log_alias_refused_before_read",
+    "test_ms_runtime.PackCustodyTests.test_payload_hardlink_alias_blocks",
+    "test_ms_runtime.PackCustodyTests.test_pinned_wrong_output_target_refused",
+    "test_ms_runtime.PackCustodyTests.test_unapproved_cpu_source_base_refused",
+    "test_ms_runtime.PackCustodyTests.test_wrong_actual_command_or_contract_refused",
+    "test_ms_runtime.PackCustodyTests.test_wrong_cpu_ordered_ids_refused",
+    "test_ms_runtime.PackCustodyTests.test_wrong_cpu_source_map_refused",
+    "test_ms_runtime.RuntimeTests.test_attempted_arm_not_replayed",
+    "test_ms_runtime.RuntimeTests.test_cleanup_fault_retained_beside_primary",
+    "test_ms_runtime.RuntimeTests.test_confirmation_requires_first_pair_permission",
+    "test_ms_runtime.RuntimeTests.test_confirmation_requires_full_previous_review",
+    "test_ms_runtime.RuntimeTests.test_coordinate_primary_fault_kept",
+    "test_ms_runtime.RuntimeTests.test_coordinate_resource_refusal_separate",
+    "test_ms_runtime.RuntimeTests.test_emit_disallows_nan",
+    "test_ms_runtime.RuntimeTests.test_emit_retains_residue",
+    "test_ms_runtime.RuntimeTests.test_every_active_key_blocks",
+    "test_ms_runtime.RuntimeTests.test_first_quality_arm_unattempted",
+    "test_ms_runtime.RuntimeTests.test_foreign_namespace_rejected",
+    "test_ms_runtime.RuntimeTests.test_foreign_target_not_cleaned",
+    "test_ms_runtime.RuntimeTests.test_leaf_symlink_rejected",
+    "test_ms_runtime.RuntimeTests.test_owned_new_namespace",
+    "test_ms_runtime.RuntimeTests.test_owned_restored_target_cleanup",
+    "test_ms_runtime.RuntimeTests.test_phase_free",
+    "test_ms_runtime.RuntimeTests.test_replay_directory_rejected",
+    "test_ms_runtime.RuntimeTests.test_second_quality_requires_accepted_previous",
+    "test_ms_runtime.RuntimeTests.test_second_quality_reviewed_previous",
+    "test_ms_runtime.RuntimeTests.test_timing_requires_both_quality_screens"
+  ],
+  "runtime_test_count": 58,
+  "pack_custody_test_count": 23,
+  "manual_entire_changed_functions_and_all_new_test_bodies_read": true,
+  "tests_or_imports_executed": false,
+  "production_actions": false,
+  "metadata_contract": "Exact seven named evidence fields from PACK_CUSTODY_FILES; exact P3 q/contract/result/child/log/independent actual review and terminal acquisition. Production output remains pack-v1/pack-FIRST. All132 constructor q pins must be members of new model q; actual94+31 ordered proofs revalidated at exact P3 raw paths.",
+  "tests_scope": "Small real temporary files and actual metadata hashes; published immutable pins replaced only in synthetic fixtures so semantic negative gates can be reached. No model, native, assets, services or real encode in these controls.",
+  "new_checks": [
+    "Full positive P3 custody with125 synthetic ordered CPU IDs matching both proof groups.",
+    "Refuse failed P1 success substitution, missing P3 evidence/closure/rawlog, unapproved source base, missing physical proof/group, failed CPU child, wrong source and ordered IDs.",
+    "Refuse bad actual metadata child status/argv/cleanup/AS/actions/deadline, wrong target, mutated assets/vision/output, omitted/extra metadata, duplicate acquired row, hardlink and ancestor aliases."
+  ],
+  "limits": [
+    "Actual physical constructor proof remains inherited source/CPU result; these new controls qualify the changed runtime checker only.",
+    "No source changes to old P1/P2/P3 metadata construction, no re-encoding or failed-attempt replay.",
+    "Root full read and new exact owner/audit both-host CPU qualification plus prospective model q/action-time admission are still required."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-30T17:44:13.181047+00:00",
+  "model_controls_each_host": 145,
+  "model_passed": true,
+  "audit_original83_each_host_passed": false,
+  "audit_original83_each_host": {
+    "passed_cases": 82,
+    "errors": 1
+  },
+  "failure": "Supplied test reused mutable observed() Mock return dict across calls; source review diagnosis pending",
+  "native_model_executed": false,
+  "production_changed": false,
+  "raw_sha256": {
+    "boundary-darwin": {
+      "child.json": "9937ca60557671128b04d883ef4ccf2999a6ea1e82f194916a91e1a356684da9",
+      "receipt.json": "6b8121fff119a75c99d9707587aa65b481063a4aba62fd561f2398d7af46f3bd",
+      "child.log": "31f0b6413a55b29f4bf8288ad4c4d7fdf72215205c5f838f6e3dece1b9ca7901"
+    },
+    "boundary-linux": {
+      "child.json": "7882410fee067d82068ed48a30a599cb51f48ec2f110353f9517c92fdea02c4a",
+      "receipt.json": "d3fa0fdde1b61d7ae3a0b7806e60aa83f7764f60321a9300164981b4856e7580",
+      "child.log": "ea153ca4620ecde0c7c2bfa4701fe5bcbc622273d2581557a97ab993d905dc1d"
+    },
+    "http-darwin": {
+      "child.json": "c62b466742759f56e718b7ef1bce7e97193ae31e5b8d0e23862a7bd101969599",
+      "receipt.json": "65d55341c36b7d081ca48f6a7730814826e402c9c8be398af8f4ef7b2bb58bc4",
+      "child.log": "8c65950f359af1780294e3033a54ef270ad45b81fc000d7e6b5e805174494568"
+    },
+    "http-linux": {
+      "child.json": "93906847d5de10f43447e56bac317aa1203f0dcff4bbcd5c54a7c69e2db679df",
+      "receipt.json": "04f6f7409ebf02321402669dec57887d670e41fa049f56efa2b900a3caa029cf",
+      "child.log": "8529d4ddeea0d9a96674e90b4fe0f7d4b42cbd23e3012229439e2f5970e31a87"
+    },
+    "audit-darwin": {
+      "child.json": "3e0a13fe128f6ff601349d08f91c7ac6541d86520132c5937a9ce04ff3df04a3",
+      "receipt.json": "a5c704ed9ae8c87241277d2d50a8acc51269f0347e048c861a2ef69529e58a51",
+      "child.log": "93b565d96813605b3dca5b4ed385ba4fa7ee11c49643b60a8c8e042160856657"
+    },
+    "audit-linux": {
+      "child.json": "1928a508e60c9b1f8ebd6227a0babb89e02fcedd172dc7fa7726a71697177780",
+      "receipt.json": "59d4652268c99efc11ec7a966aaf64f46212f42db93397ee6926b525a944e60f",
+      "child.log": "904149d775527555e982ed0e020932b66ead15819eecf4f361ea1ec4e8bebcb3"
+    }
+  }
+}

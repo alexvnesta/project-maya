@@ -1,0 +1,89 @@
+{
+  "utc": "2026-10-30T17:45:11.892731+00:00",
+  "decision": "FAILED_FIRST83_PRESERVED_TEST_OBSERVER_ALIAS_DEFECT",
+  "raw_sha256": {
+    "audit-CPU-P3-FIRST-darwin/receipt.json": "a5c704ed9ae8c87241277d2d50a8acc51269f0347e048c861a2ef69529e58a51",
+    "audit-CPU-P3-FIRST-darwin/child.json": "3e0a13fe128f6ff601349d08f91c7ac6541d86520132c5937a9ce04ff3df04a3",
+    "audit-CPU-P3-FIRST-darwin/child.log": "93b565d96813605b3dca5b4ed385ba4fa7ee11c49643b60a8c8e042160856657",
+    "audit-CPU-P3-FIRST-linux/receipt.json": "59d4652268c99efc11ec7a966aaf64f46212f42db93397ee6926b525a944e60f",
+    "audit-CPU-P3-FIRST-linux/child.json": "1928a508e60c9b1f8ebd6227a0babb89e02fcedd172dc7fa7726a71697177780",
+    "audit-CPU-P3-FIRST-linux/child.log": "904149d775527555e982ed0e020932b66ead15819eecf4f361ea1ec4e8bebcb3"
+  },
+  "source_sha256": {
+    "ms_config.py": "94339ce9e2479a79e8d38f8428f4d0d09f88f63c2c6c2bb1caac94c1d737b22d",
+    "ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "ms_runtime.py": "faa5bc30d2070c5d31eedd8439cc7529dd41e93b36953634ee7970c340672f07",
+    "ms_controls.py": "bec61db8733964af590f12d84044d6dbe6c30ea36014e394da64dc95b48bb20a",
+    "ms_audit.py": "fc36ab4832652ba8b99d151e0162f3e492a04257e356344bf33bff69eedb255b",
+    "ms_quality_audit.py": "9ce588341f83e0aa4a4aa7292d8641a8683a95af96214074f37fe50acf1db737",
+    "ms_audit_dispatch.py": "8858c1d2f70cd7e97d416fa1535cb1af18f1a2647731c2d88e7c36d66b0e5bad",
+    "test_ms_quality_audit.py": "04eba87b31b7d9654e118890d21bf3084a65dd0f85660282856250c640ae23af",
+    "test_ms_audit_helpers.py": "82ab3ff10f5a211962554287a5a2a56db04e36489d909db13fbff8456baff0ed",
+    "test_ms_audit_dispatch.py": "11ce93ad0605f3a2c76b88aed1399f66768d27f58dd169589b540788c7a5ffa4",
+    "ms_audit_cpu_p3.py": "4713654fb6cd262267dd3b9712b71411bd3939402c5a367fbed333ffe5af35dd"
+  },
+  "input_count": 850,
+  "ordered_ids_match_review": true,
+  "hosts": {
+    "darwin": {
+      "pid": 54389,
+      "returncode": 1,
+      "passed_controls": 82,
+      "error_controls": 1,
+      "wall_seconds": 0.6735762499738485,
+      "CPU_seconds": [
+        30,
+        30
+      ],
+      "Linux_AS_bytes": null,
+      "nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "cleanup_errors": []
+    },
+    "linux": {
+      "pid": 3391260,
+      "returncode": 1,
+      "passed_controls": 82,
+      "error_controls": 1,
+      "wall_seconds": 0.8854688140563667,
+      "CPU_seconds": [
+        30,
+        30
+      ],
+      "Linux_AS_bytes": [
+        536870912,
+        536870912
+      ],
+      "nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "cleanup_errors": []
+    }
+  },
+  "same_only_error": "test_ms_audit_dispatch.Dispatch.test_child_records_observation_before_exact_auditor_entry",
+  "classification": "Source-determined supplied mock ownership/alias defect; no evidence of actual child limit drift, native/model fault or cleanup failure in these CPU results. These failed proofs remain failed.",
+  "source_reasoning": [
+    "Production observed() constructs a fresh five-field dictionary each call.",
+    "Test patches observed(return_value=self.actual), returning the same mutable object on both calls.",
+    "child() attaches arm/stage/qualification to its first observation via actual.update(). That mutates the test shared return object, adding three keys.",
+    "The second mocked observed() returns that eight-field dictionary; comparison against the five-field projection correctly fails. Real observed() does not retain those extra keys. No execution/reproduction needed for this alias analysis."
+  ],
+  "minimal_repair": "Change only that mocked observer to side_effect returning copy.deepcopy(self.actual) each time. Leave production observer/checks, budgets, transport, fixtures and runtime unchanged. Preserve exact first83 source/reviews/raw before edit; freeze corrected tests/new proof driver namespace and manually review before FIRST corrected both-host CPU.",
+  "qualification_limits": [
+    "Old83 result is not regraded and does not establish successful complete audit qualification.",
+    "Owner143+HTTP2 is a separate unchanged proof; this defect does not imply its failure, but its raw result review is separate.",
+    "Any split56+27 new proof must explicitly bind its exact sources/testIDs/raw contracts in final mode qualification, with failure lineage retained.",
+    "No actual model run, source imports/tests, device/service action or GPU admission by reviewer."
+  ]
+}
