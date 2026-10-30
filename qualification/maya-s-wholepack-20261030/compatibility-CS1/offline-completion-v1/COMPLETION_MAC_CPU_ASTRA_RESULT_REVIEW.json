@@ -1,0 +1,60 @@
+{
+  "decision": "MAC_FIRST_COMPLETION_61_CPU_CONTROLS_REVIEWED_LINUX_PENDING",
+  "groups": {
+    "completion": {
+      "controls": 18,
+      "pid": 73006,
+      "wall_seconds": 0.7468270410317928,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "source_count": 5,
+      "input_count": 869,
+      "ordered_ids_match": true,
+      "entire_log_read": true
+    },
+    "supervision": {
+      "controls": 43,
+      "pid": 73016,
+      "wall_seconds": 0.31348958396119997,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "source_count": 5,
+      "input_count": 869,
+      "ordered_ids_match": true,
+      "entire_log_read": true
+    }
+  },
+  "raw_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-darwin/child.json": "4440a841717678f3b52a84ae9a3cb45a77dc85f1822c3e528c8cfe0bcc3b0d66",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-darwin/receipt.json": "ccbfd014539d2ab526a3323b73cbd285571512520aa433ec697ef32e9def9e0b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-darwin/child.log": "b1f9ff4ed055a4f807be7a8af86bbd71c373f2789f4a2ff3d4d05ac84c44b980",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-darwin/child.json": "97e8ba1806be7ad5dd0e85f1e81ebcb50dcf39f25425b0c6717b1dd635e4562c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-darwin/receipt.json": "c37feb05ae0906b395988f097e026384e837bd022f25e3806478b912ee0e3008",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-darwin/child.log": "ce1cd8bdf8c7b92396fc539a1f8be92aee8f5541a919d3edb1ea0f738d1eedfe"
+  },
+  "source_sha256": {
+    "ms_compat_completion.py": "5528fa400afaf1901cbf0057138289aa6aa731a2cbb01b1fcffbc7a0c502cd4e",
+    "test_ms_compat_completion.py": "639c0769d7bc3bc3eb86bcd7209808a5ece83bacc2b082c1517230415e5b3c3c",
+    "ms_compat_completion_dispatch.py": "dd71f59a3a42d58de52ca140214668a3789b35e55ada5f301a66e012579ba182",
+    "test_ms_compat_completion_dispatch.py": "1abfc5da4dc181c4e394f99a7aed8d49e330e316577ccec12567a38182c0a94c",
+    "ms_completion_cpu.py": "94af6fe4e9e8b954dd047f9e0ee18d7412b1334e0c54fef3be7cbe0096b99989"
+  },
+  "source_review_sha256": "c7da1d4898f10669fb5f07060694b200aeb14bdb7d1221840bb433fd2ce02709",
+  "root_source_review_sha256": "263c4d291d58aa1466d8961ffe918c1c0c731d0f80308e0905053fd0072d1d2c",
+  "Linux_proof_status": "PENDING; parent reports user-busy deferral before CPU child/output, not a test failure",
+  "scope": "CPU-only synthetic source/consumer/supervisor controls. No actual offline audit completion, inference, model or next-arm admission. Original failed audit not regraded.",
+  "bounds": {
+    "CPU_seconds": 30,
+    "wall_seconds": 90,
+    "nice": 15,
+    "Linux_AS_bytes": null,
+    "Mac_AS_claim": false,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    }
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "decision": "CONDITIONAL_SINGLE_EXISTING_CS1_OFFLINE_COMPLETION_ONLY",
+  "draft_qualification_sha256": "5ae46da12e82ab86971b1b6a97f22d4a2314e0124ad512bb81a2227fb0d236cc",
+  "draft_file_count": 1064,
+  "original_model_qualification_sha256": "a8d5ff19fa187f46adf70b53287b652241a5f4b256a61811643d750cd770c090",
+  "original998_files_exactly_inherited": true,
+  "new66_files_local_copy_bytes_checked": true,
+  "new_file_categories": {
+    "output": 26,
+    "maintenance": 11,
+    "other": 29
+  },
+  "both_CPU_group_contracts_exact": {
+    "completion": 18,
+    "supervision": 43,
+    "source_count": 5,
+    "input_count": 869,
+    "physical_hosts": [
+      "darwin",
+      "linux"
+    ]
+  },
+  "CPU_review_sha256": "0505849a7919c519e8e8bec1430ed629853fb261e2162ab3345a31758ea32cc0",
+  "source_review_sha256": "c7da1d4898f10669fb5f07060694b200aeb14bdb7d1221840bb433fd2ce02709",
+  "new_file_mapping_checks": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/compatibility-qualification.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/compatibility-qualification.json",
+      "sha256": "a8d5ff19fa187f46adf70b53287b652241a5f4b256a61811643d750cd770c090"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_completion.py": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_completion.py",
+      "sha256": "5528fa400afaf1901cbf0057138289aa6aa731a2cbb01b1fcffbc7a0c502cd4e"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/test_ms_compat_completion.py": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/test_ms_compat_completion.py",
+      "sha256": "639c0769d7bc3bc3eb86bcd7209808a5ece83bacc2b082c1517230415e5b3c3c"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_completion_dispatch.py": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_completion_dispatch.py",
+      "sha256": "dd71f59a3a42d58de52ca140214668a3789b35e55ada5f301a66e012579ba182"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/test_ms_compat_completion_dispatch.py": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/test_ms_compat_completion_dispatch.py",
+      "sha256": "1abfc5da4dc181c4e394f99a7aed8d49e330e316577ccec12567a38182c0a94c"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_completion_cpu.py": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_completion_cpu.py",
+      "sha256": "94af6fe4e9e8b954dd047f9e0ee18d7412b1334e0c54fef3be7cbe0096b99989"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/COMPLETION_SOURCE_ROOT_REVIEW.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/COMPLETION_SOURCE_ROOT_REVIEW.json",
+      "sha256": "263c4d291d58aa1466d8961ffe918c1c0c731d0f80308e0905053fd0072d1d2c"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/COMPLETION_SOURCE_ASTRA_REVIEW.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/COMPLETION_SOURCE_ASTRA_REVIEW.json",
+      "sha256": "c7da1d4898f10669fb5f07060694b200aeb14bdb7d1221840bb433fd2ce02709"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/COMPLETION_CPU_ROOT_RESULT_REVIEW.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/COMPLETION_CPU_ROOT_RESULT_REVIEW.json",
+      "sha256": "f6b0c3a43040b033d28ad34a2fa0bbe3c3bedca91e8256fc283cf63bc6a708a1"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/COMPLETION_MAC_CPU_ASTRA_RESULT_REVIEW.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/COMPLETION_MAC_CPU_ASTRA_RESULT_REVIEW.json",
+      "sha256": "254e15bcd2671062f578f35506be2573482a0fe2b651d291522fe5ad22730ee8"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1_AUDIT_FAILURE_DIAGNOSIS_ASTRA.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1_AUDIT_FAILURE_DIAGNOSIS_ASTRA.json",
+      "sha256": "83e48b60210e53e790d80a823db5fb6f0a2efb1fe9332db367b5cef08e1f7034"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-darwin/receipt.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-darwin/receipt.json",
+      "sha256": "ccbfd014539d2ab526a3323b73cbd285571512520aa433ec697ef32e9def9e0b"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-darwin/child.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-darwin/child.json",
+      "sha256": "4440a841717678f3b52a84ae9a3cb45a77dc85f1822c3e528c8cfe0bcc3b0d66"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-darwin/child.log": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-darwin/child.log",
+      "sha256": "b1f9ff4ed055a4f807be7a8af86bbd71c373f2789f4a2ff3d4d05ac84c44b980"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-linux/receipt.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-linux/receipt.json",
+      "sha256": "ef8af62e35f76e0796fcf79e71f94fe2757a9f29188b48d9627966a0ca633c0a"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-linux/child.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-linux/child.json",
+      "sha256": "4ea9191a8e8e42efed2c22b5a882b2b8cdbc40fb7f66bffd1ffbf1ef7bac0349"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-linux/child.log": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/completion-CPU-COMPLETION-FIRST-linux/child.log",
+      "sha256": "bf2474e1748e4d179d68b39f4dd26c4fa28e4bbd7fbf0b624c6fc3faab00ae36"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-darwin/receipt.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-darwin/receipt.json",
+      "sha256": "c37feb05ae0906b395988f097e026384e837bd022f25e3806478b912ee0e3008"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-darwin/child.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-darwin/child.json",
+      "sha256": "97e8ba1806be7ad5dd0e85f1e81ebcb50dcf39f25425b0c6717b1dd635e4562c"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-darwin/child.log": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-darwin/child.log",
+      "sha256": "ce1cd8bdf8c7b92396fc539a1f8be92aee8f5541a919d3edb1ea0f738d1eedfe"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-linux/receipt.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-linux/receipt.json",
+      "sha256": "a130ccd0ef877be71d7062568588f3fd06bc3161f02cd6081ef8dba4aeafd579"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-linux/child.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-linux/child.json",
+      "sha256": "f6fb51252c3e7a3ea5e630b4115bd4448d68bc708625c787b36ff85e42357ad3"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-linux/child.log": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/supervision-CPU-COMPLETION-FIRST-linux/child.log",
+      "sha256": "8ed71ecbec731ad761c68abf43339d9260f3a288649dee030e21a98651b4bb16"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/child.log": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/child.log",
+      "sha256": "18b46bd9df075f9b86ee6c05e1c3b599d04b2cfd70f3c6724084723c72792fd9"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/dispatch-attempt.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/dispatch-attempt.json",
+      "sha256": "0517fea5cacb771c651d9cd4bafa35be66710fc110d5af58984b1963a8273d61"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/child-observed.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/child-observed.json",
+      "sha256": "ba13e96b264b2a979c4eb1ef1fed47677592b1eec1884fe9f036dafa2e150a4a"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/audit-started.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/audit-started.json",
+      "sha256": "9b9b34da4a0c4c28ee8399150c5d93b23dacc21409a94b906efff15a72548a7a"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/attempt.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/attempt.json",
+      "sha256": "7ec03a30f3de3fcffc547c495f353ae4c5056d3497a266107d722e8d87a11b21"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/supervision.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/offline-audit-FIRST/supervision.json",
+      "sha256": "2dcc98429f4d68d590961e636e0aa7d531c7ded8e75ea4e24c5008fe5180825c"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/private-memory-fence.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/private-memory-fence.json",
+      "sha256": "ee3fbab4f3952b5111f2669d17deb8d604145fc1c316d6f12a1d6c4690ecaf47"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/case-progress.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/case-progress.json",
+      "sha256": "5d50b71ce1c0263f246061776e706bfdccc9fad1faea267e7ded04a0e6f29692"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/private-memory-fence-restored.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/private-memory-fence-restored.json",
+      "sha256": "1bfb543331924673446597bb29c3539fcdef5cf9af90d5d4c165d5b600eb8db3"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/startup-health.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/startup-health.json",
+      "sha256": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/candidate-config.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/candidate-config.json",
+      "sha256": "242b298d6013ba8e20a83b41070e5b44b1019ac7ab5f98e9a62484e7fbcb0bdc"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/fixtures.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/fixtures.json",
+      "sha256": "45f93b5c701a2f782388571b1d99d4a440836ddf0ae9cac03d7fd612f722009d"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/server-start.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/server-start.json",
+      "sha256": "eaa8722526a94dc3b1ba042ad0f23000db71010def8103737d16e003afef1416"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/startup-models.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/startup-models.json",
+      "sha256": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/candidate-config.shared-settings.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/candidate-config.shared-settings.json",
+      "sha256": "9dccb6db4fd0d5e1596ad0845decb60c24aae2756a4eca216cb9b914d310fdc9"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/startup-audit.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/startup-audit.json",
+      "sha256": "2f218ccef3817a48418f8bbe07d11bd5aef7f8ffcbb9c29163319038112ab934"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/receipt.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/receipt.json",
+      "sha256": "6e6dc1f1b407534b75546ef967fa317a45cfcc9c653a0f046b73dad0efa14008"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/proof.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/proof.json",
+      "sha256": "edae0414403ad20677abeac680d90baa38ff764fa1c32f04acb53e7563a59b00"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-close.jsonl": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/native-close.jsonl",
+      "sha256": "71d3a02cbd50dc04c200c10a81435fa782d2e709380127b3d8140426d6035ac8"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/entry-audit.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/entry-audit.json",
+      "sha256": "fca7a6565ec9a9ae35fcf6c6f8dc2fbcb814fd0e8701bbaf8eeccc9a61f2fcc4"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-ready.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/native-ready.json",
+      "sha256": "bb5a167d61efaecc6dffeea6007778a49f51037546223a2f8511009b4cc6377c"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/server-cleanup.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/server-cleanup.json",
+      "sha256": "ca5655209c6d604a57b7f2bacd5d0de998d2e1e99fa6090c820c9966ff1502a9"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/engine.log": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/engine.log",
+      "sha256": "77184891b5d5c794f2f60184ffaeb633cee299684a46928c8b25b19900152bf4"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/server.log": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/server.log",
+      "sha256": "1cbffddb8de0dcda92d529902c9a3b395e193db89fea1a28020f0387a6492d57"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-000/request.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/native-000/request.json",
+      "sha256": "770894141d9289c09fa989ec687ba424b4525c1fcbf37a324ce745cecafe78ed"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-000/tokens.jsonl": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/native-000/tokens.jsonl",
+      "sha256": "28b7fa01fed8ad0ebcedf3a16cc01dbbef386c6b1b5ff97d92504fa614c55337"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-000/trace-receipt.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/native-000/trace-receipt.json",
+      "sha256": "1ade6a7ec5132b9c498e8dc8257ef860d08a58e5f4e8b2949a3c0d94075a8e92"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-000/raw-done.txt": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/native-000/raw-done.txt",
+      "sha256": "8a663602143033e2541b156b21982e2561b9b1045feeb13306732cb2c870c9b7"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-000/native-statistics.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/native-000/native-statistics.json",
+      "sha256": "9956af4315ff64ff4dda8c1bf35f2311fb9996c4e47337d76ea16bd5f045175c"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/skip-controls/ms-compatibility-short-cold/request.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/skip-controls/ms-compatibility-short-cold/request.json",
+      "sha256": "8c1dc93f6df05c33ab8dea1b5eba704dd1728ba5af2b4edaf08b30ff121d3e16"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/skip-controls/ms-compatibility-short-cold/native-audit.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/skip-controls/ms-compatibility-short-cold/native-audit.json",
+      "sha256": "a40d3bbbf6d1c403054c1a0525b530758417650614b4ef158c19194ed66cb8ae"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/skip-controls/ms-compatibility-short-cold/response.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/output-raw/native/skip-controls/ms-compatibility-short-cold/response.json",
+      "sha256": "af9d3c437c5089033d739a8818fb7427fde0344d998b308b86b97a3c9f973c1b"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/state.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/maintenance-raw/state.json",
+      "sha256": "85a4f4a96a0e5de3f89612e87418499a22a3e376ad0de616f9199e37a44b0ae8"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/result.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/maintenance-raw/result.json",
+      "sha256": "39893651529c465a5c2059cbe8c837d5a526ce37820d86b4e9ddcd61fc9b0944"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/target-placement.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/maintenance-raw/target-placement.json",
+      "sha256": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/post-stop-memory.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/maintenance-raw/post-stop-memory.json",
+      "sha256": "619c953fd1acbd043ac26de276c254cac7e692e286b2b41cdeba8dd00c395f8d"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/private-memory-fence-collected.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/maintenance-raw/private-memory-fence-collected.json",
+      "sha256": "821aa0eb9f6bad09c2711f20448c6800c99a31595e7a971eaf791b70f0437156"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/public-default-output-sse.txt": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/maintenance-raw/public-default-output-sse.txt",
+      "sha256": "c53b0d8d60469e0824e4e3a2a4d66a623798a6b23313b1915af285af24fc469d"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/old-owner-close.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/maintenance-raw/old-owner-close.json",
+      "sha256": "beb8bcd7434a0c672e7101f49a51d5589414f2e7f1333982ec2f6f6128f43e8a"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/public-default-output-request.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/maintenance-raw/public-default-output-request.json",
+      "sha256": "93bb8806b80adc0a4793b4302b8387e13ae2d02b04932ddd2b2f166be29a455a"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/start-binding.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/maintenance-raw/start-binding.json",
+      "sha256": "0bb1e8bebbf2a166b94369b25c973acee2fd91eb3597cd7826f768e624aa6600"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/start-unit.log": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/maintenance-raw/start-unit.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/proof.json": {
+      "local_copy": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/CS1/maintenance-raw/proof.json",
+      "sha256": "edae0414403ad20677abeac680d90baa38ff764fa1c32f04acb53e7563a59b00"
+    }
+  },
+  "selected_binding": {
+    "invocation": "c913c003e08649078ebd7279ef4beae7",
+    "main_pid": 3535523,
+    "native_pid": 3535559,
+    "native_start_ticks": 165605174
+  },
+  "permitted_finalization_only": [
+    "Set astra_manual_review from false to true.",
+    "Add exact COMPLETION_CPU_BOTH_ASTRA_RESULT_REVIEW.json SHA0505849a7919c519e8e8bec1430ed629853fb261e2162ab3345a31758ea32cc0 and this map review as file pins. No source/runtime/raw/other metadata changes.",
+    "Freeze final qualification and record exact final SHA; expected1066filepins plus qualification self check."
+  ],
+  "action_time_conditions": [
+    "Fresh genuine idle/default/phase-free/current exact c913 selected binding before full hashing.",
+    "Physically verify every finalized qualification file plus self and exact finalization delta before imports; use unchanged parent which independently verifies original qa8d5 and exact both-host CPU memberships.",
+    "New CS1/offline-completion-FIRST and CS1/terminal-completion.json absent; original offline-audit-FIRST failure remains unchanged.",
+    "One isolated owned Linux CPU30/AS512MiB/wall90/nice15/CUDAhidden/thread1 child only; original bounds/owned-group cleanup/no retries.",
+    "Post-child genuine idle/current binding, qualification/source/raw evidence rechecks and successful actualchild0/cleanup/resource/custody before separate terminal-completion publication. Busy/fault preserves attempt/raw without success/replay."
+  ],
+  "canonical_window_scope": {
+    "observed_sha_matches_saved_local_bytes": true,
+    "new_q_preimport_file_member": false,
+    "enforced_scope": "Original qualified child Recorder validates canonical window/telemetry and records actual hashes; parent rechecks recorded evidence hashes. Draft observational SHA fields do not create an additional preimport hash gate. No false independent-prepin claim."
+  },
+  "limitations": [
+    "This is a separately qualified saved-byte consumer completion, not model replay or a regrade of original rc1 audit.",
+    "Full original physical20 pins remain physical action-time obligations; no macOS assertion they were freshly checked here.",
+    "No inference, restart, service change, GPU, next quality arm, performance, general quality, deployment or automatic advancement admitted.",
+    "Terminal completion must still be independently reviewed; CS1 pressure/budget limitations remain visible."
+  ],
+  "reviewer_project_imports_tests_remote_actions": false
+}

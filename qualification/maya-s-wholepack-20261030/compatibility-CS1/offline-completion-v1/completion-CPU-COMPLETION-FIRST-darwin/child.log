@@ -1,0 +1,23 @@
+test_alias_public_evidence_refused (test_ms_compat_completion.Completion.test_alias_public_evidence_refused) ... ok
+test_capped_changed_or_wrong_typed_public_request_refused (test_ms_compat_completion.Completion.test_capped_changed_or_wrong_typed_public_request_refused) ... ok
+test_changed_current_binding_refused (test_ms_compat_completion.Completion.test_changed_current_binding_refused) ... ok
+test_changed_public_prompt_refused (test_ms_compat_completion.Completion.test_changed_public_prompt_refused) ... ok
+test_completion_is_read_only_and_does_not_publish (test_ms_compat_completion.Completion.test_completion_is_read_only_and_does_not_publish) ... ok
+test_duplicate_or_nonfinite_public_request_refused (test_ms_compat_completion.Completion.test_duplicate_or_nonfinite_public_request_refused) ... ok
+test_exact_producer_membership_required (test_ms_compat_completion.Completion.test_exact_producer_membership_required) ... ok
+test_full_saved_terminal_with_actual_filename_and_fragmented_READY_contracts (test_ms_compat_completion.Completion.test_full_saved_terminal_with_actual_filename_and_fragmented_READY_contracts) ... ok
+test_incomplete_wrong_or_duplicate_DONE_public_stream_refused (test_ms_compat_completion.Completion.test_incomplete_wrong_or_duplicate_DONE_public_stream_refused) ... ok
+test_missing_default_request_refused (test_ms_compat_completion.Completion.test_missing_default_request_refused) ... ok
+test_missing_default_stream_refused (test_ms_compat_completion.Completion.test_missing_default_stream_refused) ... ok
+test_old_filename_only_cannot_clear_completion (test_ms_compat_completion.Completion.test_old_filename_only_cannot_clear_completion) ... ok
+test_original_model_qualification_still_required (test_ms_compat_completion.Completion.test_original_model_qualification_still_required) ... ok
+test_private_native_exit_failure_retained (test_ms_compat_completion.Completion.test_private_native_exit_failure_retained) ... ok
+test_raw_old_API_exit_failure_not_hidden_by_producer_pass (test_ms_compat_completion.Completion.test_raw_old_API_exit_failure_not_hidden_by_producer_pass) ... ok
+test_transient_fence_collection_required (test_ms_compat_completion.Completion.test_transient_fence_collection_required) ... ok
+test_wrong_model_literal_still_refused (test_ms_compat_completion.Completion.test_wrong_model_literal_still_refused) ... ok
+test_request_and_filenames_match_exact_producer_source_without_execution (test_ms_compat_completion.ProducerContract.test_request_and_filenames_match_exact_producer_source_without_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.494s
+
+OK
