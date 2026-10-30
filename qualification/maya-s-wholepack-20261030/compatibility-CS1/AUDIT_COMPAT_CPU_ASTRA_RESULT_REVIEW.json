@@ -1,0 +1,451 @@
+{
+  "utc": "2026-10-30T18:36:15.848844+00:00",
+  "decision": "FIRST_150_AUDIT_CPU_CONTROLS_BOTH_PHYSICAL_HOSTS_REVIEWED_NO_MODEL_ADMISSION",
+  "passed": true,
+  "same_reviewer_full_raw_logs_read": true,
+  "truncated_combined_log_output_recovered_by_full_dedicated_reads": true,
+  "source_review_sha256": "03a6b2edf0a6d2f36bf46cea68fd294ae3a93c87b35d672f1314d64d70a8b41a",
+  "final_root_source_review_sha256": "1bf8ca7e06f0e9229611733a08d1f32d875e8d3cf0b4a9a56e1b6def23d8188d",
+  "root_result_review_sha256": "a2f09a91874601505adf00f291d008e2e870abdeb883892ee54ff7759f7054c2",
+  "source_sha256": {
+    "ms_config.py": "8bb87901179135bf01f852b7a4e5c2a57dadd4033199ece802cb624196484176",
+    "ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "ms_runtime.py": "ea789de73b4a9b8cb3b8887360bc40573efc600544f1c47980ee25deb22860ca",
+    "ms_controls.py": "bec61db8733964af590f12d84044d6dbe6c30ea36014e394da64dc95b48bb20a",
+    "ms_audit.py": "fc36ab4832652ba8b99d151e0162f3e492a04257e356344bf33bff69eedb255b",
+    "ms_quality_audit.py": "9ce588341f83e0aa4a4aa7292d8641a8683a95af96214074f37fe50acf1db737",
+    "ms_audit_dispatch.py": "8858c1d2f70cd7e97d416fa1535cb1af18f1a2647731c2d88e7c36d66b0e5bad",
+    "test_ms_quality_audit.py": "04eba87b31b7d9654e118890d21bf3084a65dd0f85660282856250c640ae23af",
+    "test_ms_audit_helpers.py": "82ab3ff10f5a211962554287a5a2a56db04e36489d909db13fbff8456baff0ed",
+    "test_ms_audit_dispatch.py": "2fb9fc8f3abcce873cc2540090142b914706a29fcfe2d336177fd50f4e7bc6b0",
+    "ms_compat_audit.py": "a55f6a71c42a2b6de4d4dcb2207b213fa4b579ab7f2118cb0ef53f0f1311cad6",
+    "test_ms_compat_audit.py": "1a7f48624d075640fd4b402f6905ffab06e0eab2cde8221117b1824008d248dc",
+    "ms_compat_audit_dispatch.py": "8d0c166d08d3d13e21a9d6b57eb654012aa4658abbc5bb958c91e4efe5efb5d8",
+    "test_ms_compat_audit_dispatch.py": "3df8a804c2ebfb8751171e1657b64098a29186b9baa582f9289583654464d883",
+    "ms_audit_cpu_compat.py": "a8e36fee208a878e72c27ff3f3a70812e5c4a1bd5ab92bb16a6bd45f00eb52bc"
+  },
+  "source_count": 15,
+  "input_count": 852,
+  "input_map_sha256": "8815eeb19fb0ba5015e7028223b2fbec90e3e29540568cb2cfe4356eb1c0178c",
+  "test_ids": {
+    "dispatch": [
+      "test_ms_audit_dispatch.Dispatch.test_actual_observed_limits_are_required",
+      "test_ms_audit_dispatch.Dispatch.test_bootstrap38_positive_and_changed_helper_before_import",
+      "test_ms_audit_dispatch.Dispatch.test_busy_after_initial_hash_prevents_child_and_outputs",
+      "test_ms_audit_dispatch.Dispatch.test_busy_guard_precedes_hash_output_and_child",
+      "test_ms_audit_dispatch.Dispatch.test_changed_dispatch_source_needs_cpu_group_membership",
+      "test_ms_audit_dispatch.Dispatch.test_changed_qualification_precedes_outputs_and_child",
+      "test_ms_audit_dispatch.Dispatch.test_child_failure_keeps_its_observation",
+      "test_ms_audit_dispatch.Dispatch.test_child_records_observation_before_exact_auditor_entry",
+      "test_ms_audit_dispatch.Dispatch.test_cleanup_exception_preserves_terminal_failed_receipt",
+      "test_ms_audit_dispatch.Dispatch.test_cleanup_only_owned_group_after_timeout",
+      "test_ms_audit_dispatch.Dispatch.test_cpu_limits_set_only_child",
+      "test_ms_audit_dispatch.Dispatch.test_exact_metadata_scan_and_assembly_names",
+      "test_ms_audit_dispatch.Dispatch.test_existing_attempt_blocks_replay",
+      "test_ms_audit_dispatch.Dispatch.test_existing_result_never_adopted",
+      "test_ms_audit_dispatch.Dispatch.test_invalid_arm_stage_bool_or_index_rejected",
+      "test_ms_audit_dispatch.Dispatch.test_launch_exception_preserves_attempt",
+      "test_ms_audit_dispatch.Dispatch.test_missing_actual_child_attempt_refused",
+      "test_ms_audit_dispatch.Dispatch.test_missing_config_pin_blocks_before_support_import",
+      "test_ms_audit_dispatch.Dispatch.test_nonzero_child_cannot_certify_existing_output",
+      "test_ms_audit_dispatch.Dispatch.test_observer_rejects_real_unbounded_context",
+      "test_ms_audit_dispatch.Dispatch.test_output_ancestor_symlink_rejected",
+      "test_ms_audit_dispatch.Dispatch.test_post_stage_map_drift_blocks_success",
+      "test_ms_audit_dispatch.Dispatch.test_postchild_busy_preserves_result_without_posthash",
+      "test_ms_audit_dispatch.Dispatch.test_regular_symlink_or_hardlink_refused",
+      "test_ms_audit_dispatch.Dispatch.test_scan_selects_one_file_no_multi_scan_switch",
+      "test_ms_audit_dispatch.Dispatch.test_success_pins_actual_child_and_result",
+      "test_ms_audit_dispatch.Dispatch.test_timeout_preserved_as_failed_child"
+    ],
+    "saved": [
+      "test_ms_audit_helpers.Helpers.test_decode_regression_blocks",
+      "test_ms_audit_helpers.Helpers.test_matched_natural_decode_gain_and_prefill_screen",
+      "test_ms_audit_helpers.Helpers.test_nonfinite_or_boolean_prefill_metrics_refused",
+      "test_ms_audit_helpers.Helpers.test_nonfinite_or_boolean_primary_rates_refused",
+      "test_ms_audit_helpers.Helpers.test_output_lengths_are_kept_not_normalized_away",
+      "test_ms_audit_helpers.Helpers.test_prefill_regression_blocks",
+      "test_ms_audit_helpers.Helpers.test_public_READY_can_span_serialized_chunks",
+      "test_ms_audit_helpers.Helpers.test_resource_counter_and_floor_exact",
+      "test_ms_audit_helpers.Helpers.test_swap_limit_and_regression_refused",
+      "test_ms_audit_helpers.Helpers.test_unmatched_prompts_cannot_pass_prefill_gate",
+      "test_ms_audit_helpers.Helpers.test_unreviewed_or_cross_family_result_refused",
+      "test_ms_audit_helpers.Helpers.test_wrong_capped_or_boolean_output_count_refused",
+      "test_ms_audit_helpers.Helpers.test_wrong_prompt_count_type_refused",
+      "test_ms_quality_audit.Admission.test_actual_audit_phase_refusal_before_qualification",
+      "test_ms_quality_audit.Admission.test_busy_before_binding_scan",
+      "test_ms_quality_audit.Admission.test_old_arm_refused_before_support",
+      "test_ms_quality_audit.Admission.test_phase_before_host_or_heavy_hash",
+      "test_ms_quality_audit.Cases.test_actual_raw_native_SSE_typed_state_reconciliation",
+      "test_ms_quality_audit.Cases.test_busy_blocks_before_any_finite_scan",
+      "test_ms_quality_audit.Cases.test_changed_native_pid_request_or_DONE_refused",
+      "test_ms_quality_audit.Cases.test_nonfinite_or_changed_size_stops_scan",
+      "test_ms_quality_audit.Cases.test_saved_phase_row_mutation_refused",
+      "test_ms_quality_audit.Cases.test_scan_keeps_variable_batch_rows_not_token_alignment",
+      "test_ms_quality_audit.Cases.test_stored_rate_uses_source_operation_order",
+      "test_ms_quality_audit.Cases.test_typed_answer_float_is_not_integer",
+      "test_ms_quality_audit.Cases.test_wrong_reuse_or_zero_draft_refused",
+      "test_ms_quality_audit.Contracts.test_alias_and_hardlink_refused",
+      "test_ms_quality_audit.Contracts.test_dependency_pin_and_origin_before_import",
+      "test_ms_quality_audit.Contracts.test_four_case_no_partial_retry_or_unrun",
+      "test_ms_quality_audit.Contracts.test_unique_JSON_and_no_nonfinite",
+      "test_ms_quality_audit.Contracts.test_window_exact_command_and_clean_exit",
+      "test_ms_quality_audit.Fence.test_OOM_not_cleared_by_success_label",
+      "test_ms_quality_audit.Fence.test_changed_limits_or_counter_types",
+      "test_ms_quality_audit.Fence.test_complete_fence_and_collection",
+      "test_ms_quality_audit.Fence.test_foreign_invocation_or_children_still_open",
+      "test_ms_quality_audit.Fence.test_old_properties_and_collection_are_required",
+      "test_ms_quality_audit.Fence.test_restoration_cannot_substitute_prior_or_unit_identity",
+      "test_ms_quality_audit.SSE.test_edited_content_or_reasoning_refused",
+      "test_ms_quality_audit.SSE.test_error_length_or_tool_delta_refused",
+      "test_ms_quality_audit.SSE.test_missing_or_duplicate_DONE_refused",
+      "test_ms_quality_audit.SSE.test_saved_events_usage_timings_cannot_diverge",
+      "test_ms_quality_audit.SSE.test_split_content_and_reasoning_reconstructed",
+      "test_ms_quality_audit.Terminal.test_changed_dump_identity_rejected_before_scan",
+      "test_ms_quality_audit.Terminal.test_changed_raw_evidence_or_source_refuses_scan",
+      "test_ms_quality_audit.Terminal.test_child_bounds_and_result_map_cannot_be_invented",
+      "test_ms_quality_audit.Terminal.test_first_attempt_marker_blocks_replay",
+      "test_ms_quality_audit.Terminal.test_full_terminal_success_keeps_real_byte_and_case_checks",
+      "test_ms_quality_audit.Terminal.test_missing_or_failed_child_prevents_advancement",
+      "test_ms_quality_audit.Terminal.test_one_scan_reads_only_its_exact_dump",
+      "test_ms_quality_audit.Terminal.test_terminal_nonfinite_bytes_fail_without_mocking_scan",
+      "test_ms_quality_audit.Terminal.test_terminal_raw_public_SSE_failure_not_hidden_by_passed_state",
+      "test_ms_quality_audit.Tokenizer.test_changed_current_bytes_or_mismatched_pin_refused",
+      "test_ms_quality_audit.Tokenizer.test_every_tokenizer_and_template_pin_is_required",
+      "test_ms_quality_audit.Tokenizer.test_exact_fallback_and_unswapped_template_bytes",
+      "test_ms_quality_audit.Tokenizer.test_template_traversal_and_selection_substitution_refused",
+      "test_ms_quality_audit.Tokenizer.test_tokenizer_extra_file_or_alias_refused"
+    ],
+    "compatibility": [
+      "test_ms_compat_audit.Contracts.test_actual_child_limits_observed_before_project_import",
+      "test_ms_compat_audit.Contracts.test_actual_observed_environment_and_limits",
+      "test_ms_compat_audit.Contracts.test_all_new_auditor_controls_must_be_qualified",
+      "test_ms_compat_audit.Contracts.test_duplicate_nonfinite_and_alias_receipts_refused",
+      "test_ms_compat_audit.Contracts.test_foreign_origin_or_missing_pin_blocks_import",
+      "test_ms_compat_audit.Contracts.test_large_receipt_rejected_without_payload_read",
+      "test_ms_compat_audit.Contracts.test_receipt_bytes_changed_during_audit_refused",
+      "test_ms_compat_audit.Contracts.test_source_aligned_case_44_and_policy_required",
+      "test_ms_compat_audit.Dispatch.test_attempt_mutation_or_foreign_arm_refused",
+      "test_ms_compat_audit.Dispatch.test_busy_prevents_qualification_import_and_claim",
+      "test_ms_compat_audit.Dispatch.test_failed_audit_retained_and_not_retried",
+      "test_ms_compat_audit.Dispatch.test_one_bounded_saved_audit_and_no_replay",
+      "test_ms_compat_audit.Dispatch.test_post_audit_busy_prevents_heavy_posthash",
+      "test_ms_compat_audit.Dispatch.test_post_audit_mutation_keeps_started_attempt",
+      "test_ms_compat_audit.Dispatch.test_preimport_support_omission_refused",
+      "test_ms_compat_audit.Terminal.test_config_output_policy_change_refused",
+      "test_ms_compat_audit.Terminal.test_current_binding_cannot_be_substituted",
+      "test_ms_compat_audit.Terminal.test_effective_template_hash_cannot_be_substituted",
+      "test_ms_compat_audit.Terminal.test_extra_native_trace_even_non_three_digit_refused",
+      "test_ms_compat_audit.Terminal.test_fence_restore_and_collection_required",
+      "test_ms_compat_audit.Terminal.test_foreign_native_cgroup_refused",
+      "test_ms_compat_audit.Terminal.test_full_saved_terminal_success_with_actual_byte_contracts",
+      "test_ms_compat_audit.Terminal.test_kernel_fault_or_window_nonzero_refused",
+      "test_ms_compat_audit.Terminal.test_logits_rejected_without_scan",
+      "test_ms_compat_audit.Terminal.test_memory_oom_or_root_resource_failure_refused",
+      "test_ms_compat_audit.Terminal.test_missing_DONE_or_changed_native_count_refused",
+      "test_ms_compat_audit.Terminal.test_private_API_nonzero_cannot_be_overridden_by_pass",
+      "test_ms_compat_audit.Terminal.test_private_native_nonzero_is_not_hidden_by_cleanup_label",
+      "test_ms_compat_audit.Terminal.test_producer_retry_or_automatic_advance_refused",
+      "test_ms_compat_audit.Terminal.test_public_READY_must_be_reconstructed",
+      "test_ms_compat_audit.Terminal.test_raw_old_API_unit_exit_failure_refused",
+      "test_ms_compat_audit.Terminal.test_raw_old_native_close_failure_refused",
+      "test_ms_compat_audit.Terminal.test_tokenizer_missing_membership_refused",
+      "test_ms_compat_audit.Terminal.test_wrong_literal_not_cleared_by_producer_pass"
+    ],
+    "supervision": [
+      "test_ms_compat_audit_dispatch.Artifacts.test_auditor_claim_pid_and_attempt_are_bound",
+      "test_ms_compat_audit_dispatch.Artifacts.test_foreign_evidence_path_refused_before_payload_hash",
+      "test_ms_compat_audit_dispatch.Artifacts.test_matching_real_saved_hashes_and_actual_child_observations",
+      "test_ms_compat_audit_dispatch.Artifacts.test_pass_label_cannot_override_nonzero_or_cleanup_error",
+      "test_ms_compat_audit_dispatch.Artifacts.test_performance_or_advance_claim_refused_even_with_matching_bytes",
+      "test_ms_compat_audit_dispatch.Artifacts.test_raw_evidence_mutation_refused",
+      "test_ms_compat_audit_dispatch.Artifacts.test_wrong_actual_pid_or_missing_limits_refused",
+      "test_ms_compat_audit_dispatch.Child.test_audit_failure_keeps_observer_and_never_finishes",
+      "test_ms_compat_audit_dispatch.Child.test_changed_observed_bounds_keeps_raw_but_prevents_finished_proof",
+      "test_ms_compat_audit_dispatch.Child.test_child_observes_before_import_calls_exact_source_entry_once",
+      "test_ms_compat_audit_dispatch.Child.test_foreign_parent_or_command_cannot_enter_auditor",
+      "test_ms_compat_audit_dispatch.Child.test_post_auditor_busy_preserves_raw_without_finished_proof",
+      "test_ms_compat_audit_dispatch.Child.test_real_observer_requires_own_group_and_actual_environment",
+      "test_ms_compat_audit_dispatch.Child.test_resource_refusal_precedes_any_bootstrap_import",
+      "test_ms_compat_audit_dispatch.Qualification.test_bootstrap_member_omission_refused",
+      "test_ms_compat_audit_dispatch.Qualification.test_failed_existing_runtime_CPU_contract_not_accepted",
+      "test_ms_compat_audit_dispatch.Qualification.test_full_q_membership_then_delegated_actual_both_host_contract",
+      "test_ms_compat_audit_dispatch.Qualification.test_missing_config_prevents_runtime_import",
+      "test_ms_compat_audit_dispatch.Qualification.test_missing_new_auditor_or_dispatcher_source_refused_before_import",
+      "test_ms_compat_audit_dispatch.Qualification.test_omitted_ordered_control_ID_refused",
+      "test_ms_compat_audit_dispatch.Qualification.test_source_change_and_leaf_alias_refused",
+      "test_ms_compat_audit_dispatch.Qualification.test_wrong_mode_or_missing_manual_review_refused",
+      "test_ms_compat_audit_dispatch.Supervisor.test_busy_blocks_hashes_directories_and_child",
+      "test_ms_compat_audit_dispatch.Supervisor.test_existing_attempt_never_starts_second_child",
+      "test_ms_compat_audit_dispatch.Supervisor.test_exited_child_still_has_owned_group_cleanup",
+      "test_ms_compat_audit_dispatch.Supervisor.test_nonzero_child_never_certifies_success",
+      "test_ms_compat_audit_dispatch.Supervisor.test_partial_parent_receipt_failure_prevents_child",
+      "test_ms_compat_audit_dispatch.Supervisor.test_popen_failure_keeps_attempt_without_cleanup_foreign_process",
+      "test_ms_compat_audit_dispatch.Supervisor.test_post_child_busy_preserves_raw_without_posthash_or_publish",
+      "test_ms_compat_audit_dispatch.Supervisor.test_post_child_custody_failure_keeps_raw_unpublished",
+      "test_ms_compat_audit_dispatch.Supervisor.test_success_one_isolated_child_then_supervision_then_publication",
+      "test_ms_compat_audit_dispatch.Supervisor.test_terminal_write_failure_never_rewrites_supervision_or_raw",
+      "test_ms_compat_audit_dispatch.Supervisor.test_timeout_and_cleanup_failure_both_preserved"
+    ]
+  },
+  "controls_each_host": 150,
+  "group_counts": {
+    "dispatch": 27,
+    "saved": 56,
+    "compatibility": 34,
+    "supervision": 33
+  },
+  "all_receipt_and_child_source_input_maps_equal_frozen_review": true,
+  "all_log_ordered_test_ids_equal_frozen_review": true,
+  "all_24_actual_raw_hashes_match_root_inventory": true,
+  "raw_sha256": {
+    "dispatch-CPU-COMPAT-AUDIT-FIRST-darwin": {
+      "receipt.json": "34e5e4b3fc41bb4e17029ca92f3ceb576e521bd098a3769364c23fcfa2759935",
+      "child.json": "99779231bf7d688d708dc67ff4e709cabdacbe35e7ae0d6302b091fc74a8623d",
+      "child.log": "e4a6d8101c24d4e1f2efac5ba4558bc063b54986d0b34a332dd897d043e9748b"
+    },
+    "saved-CPU-COMPAT-AUDIT-FIRST-darwin": {
+      "receipt.json": "069462c02c603df00d9fbefb4804527ad20b6832e81ab935e3ed96a7ac1069f6",
+      "child.json": "1805f29cde0fc80fa644283cf0b109923792f0f50e35e39d2a99ec062b2f08c3",
+      "child.log": "8bfdd79fadbad0e582ab06dfb751a8e9e9fe3276874fa5ae30c5203e49c7cfce"
+    },
+    "compatibility-CPU-COMPAT-AUDIT-FIRST-darwin": {
+      "receipt.json": "60eaa2f2470ce5327e5237dd181233d4febaa92c1753b6aa6877f1af01e74202",
+      "child.json": "3c64651c422f23845e0977a4d6afb946c3a91d4df88d3d81a499f6ba061408bd",
+      "child.log": "62bf92d60579b47ad54e8be61f89de12c1b4b78052f85cc265c30060cedcf6ce"
+    },
+    "supervision-CPU-COMPAT-AUDIT-FIRST-darwin": {
+      "receipt.json": "655dbf7534ab45eac10d56898d8961391e60109545bc09edc13b7004c75004be",
+      "child.json": "212242171b9f70736bbf7fafa2b7b2bfe34748331461d50d07a7083630af71a4",
+      "child.log": "98f5d49d83dae56f308d436c0d13c3b7afd4ae800251c01a3b5448d2e155ed07"
+    },
+    "dispatch-CPU-COMPAT-AUDIT-FIRST-linux": {
+      "receipt.json": "f9e4c9f51099973784a351cecb41826eccfd845c242f8bd4f01788e2f787f3c9",
+      "child.json": "6f3b39617948d510cafd43bb52b54f452c425dc86c9063dcfa89e06bae37fc10",
+      "child.log": "9733f57d542ab7f8bc84e25ddb81126aa93e229a1def9e942f1a5bed35bb6ce0"
+    },
+    "saved-CPU-COMPAT-AUDIT-FIRST-linux": {
+      "receipt.json": "6a7cb8c0678ecb96a4e3b53cd9cf3c9dc7714d8b7d34d6ed14c9375cb93e6f0b",
+      "child.json": "17d11a7540d3ff4b95d489edb943bfdf0071b1b963360fdc8f0a3d8fb4019d62",
+      "child.log": "bee99e5a0b088d2ca4cc2f22a5bb2d3ebcd8b7a54a4aa3ae5bb189a96375a1df"
+    },
+    "compatibility-CPU-COMPAT-AUDIT-FIRST-linux": {
+      "receipt.json": "124d7f7e7ad02c2becfcd3851a1b5a2e18f274ab0620531248b08e064c8e4cf9",
+      "child.json": "0775bdb35eff7562380033486366c6abc5dc6d2333e74e82097c024910b3dff8",
+      "child.log": "0906e61c053699304537b92dd9f101dca8a62c401602124891b46b3e4fb218a4"
+    },
+    "supervision-CPU-COMPAT-AUDIT-FIRST-linux": {
+      "receipt.json": "0a4927352d1c6bf333c7e55afd070b20ec358eb4982d0d66da6f7b6b19646cb0",
+      "child.json": "36f00639e093c6ce5c983d7864adf99d797ee1441e6f36a1dbe847611b0068d7",
+      "child.log": "b0653aba5fb752d102d6c1738d6d5060e9dd5754e40dc67d6f28e7d5a98d94b0"
+    }
+  },
+  "children": {
+    "dispatch-CPU-COMPAT-AUDIT-FIRST-darwin": {
+      "pid": 46232,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 0.7353393750381656,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": null,
+      "observed_CPU_seconds": [
+        30,
+        30
+      ],
+      "observed_Linux_AS_bytes": null,
+      "observed_nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "controls": 27
+    },
+    "saved-CPU-COMPAT-AUDIT-FIRST-darwin": {
+      "pid": 47564,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 1.0336204170016572,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": null,
+      "observed_CPU_seconds": [
+        30,
+        30
+      ],
+      "observed_Linux_AS_bytes": null,
+      "observed_nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "controls": 56
+    },
+    "compatibility-CPU-COMPAT-AUDIT-FIRST-darwin": {
+      "pid": 40419,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 1.571625208016485,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": null,
+      "observed_CPU_seconds": [
+        30,
+        30
+      ],
+      "observed_Linux_AS_bytes": null,
+      "observed_nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "controls": 34
+    },
+    "supervision-CPU-COMPAT-AUDIT-FIRST-darwin": {
+      "pid": 41645,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 0.6554214580100961,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": null,
+      "observed_CPU_seconds": [
+        30,
+        30
+      ],
+      "observed_Linux_AS_bytes": null,
+      "observed_nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "controls": 33
+    },
+    "dispatch-CPU-COMPAT-AUDIT-FIRST-linux": {
+      "pid": 3414510,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 0.4735082369297743,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "observed_CPU_seconds": [
+        30,
+        30
+      ],
+      "observed_Linux_AS_bytes": [
+        536870912,
+        536870912
+      ],
+      "observed_nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "controls": 27
+    },
+    "saved-CPU-COMPAT-AUDIT-FIRST-linux": {
+      "pid": 3414601,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 0.8395783558953553,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "observed_CPU_seconds": [
+        30,
+        30
+      ],
+      "observed_Linux_AS_bytes": [
+        536870912,
+        536870912
+      ],
+      "observed_nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "controls": 56
+    },
+    "compatibility-CPU-COMPAT-AUDIT-FIRST-linux": {
+      "pid": 3414297,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 1.0262842800002545,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "observed_CPU_seconds": [
+        30,
+        30
+      ],
+      "observed_Linux_AS_bytes": [
+        536870912,
+        536870912
+      ],
+      "observed_nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "controls": 34
+    },
+    "supervision-CPU-COMPAT-AUDIT-FIRST-linux": {
+      "pid": 3414406,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 0.5786275931168348,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "observed_CPU_seconds": [
+        30,
+        30
+      ],
+      "observed_Linux_AS_bytes": [
+        536870912,
+        536870912
+      ],
+      "observed_nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "controls": 33
+    }
+  },
+  "findings": [],
+  "limitations": [
+    "All tests use synthetic saved evidence or mocked process/live authority edges; no actual CS1 saved-result audit or Maya-S model inference occurred.",
+    "Successful fixture-level CPU controls do not establish model fit, kernel correctness, broad quality, speed or deployment readiness.",
+    "Darwin observations do not substitute for Linux AS512MiB observations.",
+    "Preserved original failed83 and passed owner179 results are not edited or regraded."
+  ],
+  "reviewer_executed_tests_or_project_code": false,
+  "source_changed": false,
+  "model_or_GPU_admission": false,
+  "next_required": "Exact full compatibility qualification and actual physical preflight, pause/stop proof for competing acquisition, and a separate single-CS1-only admission."
+}

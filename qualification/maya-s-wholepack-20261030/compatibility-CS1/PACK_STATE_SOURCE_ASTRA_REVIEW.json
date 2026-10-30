@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-30T18:00:42.930563+00:00",
+  "decision": "SOURCE_AND_METADATA_REVIEWED_FOR_FIRST_BOUNDED_CPU_ONLY",
+  "manual_entire_test_and_both_states_read": true,
+  "files_sha256": {
+    "decode-optimization-20261028/maya-s-comparison-v1/model-v1/test_ms_pack_state.py": "900a51b9749f267b815ac079abdd7e4540ab8f7943575dd11e141a562e401206",
+    "decode-optimization-20261028/maya-s-comparison-v1/model-v1/pack-state-A.json": "5ad3c46fd35167ab51b29b9e4f8af58005b2b3adf65691922e3f3de54885d195",
+    "decode-optimization-20261028/maya-s-comparison-v1/model-v1/pack-state-B.json": "e17311967e6cbb807281ba3f998c80aeefa9e9a7505c99017fbc92e37b56dcb7",
+    "decode-optimization-20261028/model-v1/imma_storage.py": "d03c8f6d69e198e648014b15a00a4a7c3dd986815dac4a391b747924239e0143",
+    "decode-optimization-20261028/model-v1/pack-geometry.ds4.txt": "48c01d890cbe53efafdacf50bf704437439f738f86787e6e529f6b5a62cd001c",
+    "decode-optimization-20261028/model-v1/pack-files.json": "7e0cf26e0f0555688fa95710ce745fbfc9d59c9296b187bde9c790ee7d684e66",
+    "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/ds4.txt": "a075c437417cf74926702badea9737eeb19d2ebc8d9a0ce1fcecc383bc98e709",
+    "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tensors.txt": "ed50bff5a053206f7b26396e0a3226d3a59848e39edc6c2eea91d5865f1b6d88",
+    "decode-optimization-20261028/maya-s-comparison-v1/pack-v3/construct-CPU-FIRST/pack-result.json": "9d42caa2d48361b4c176df2453e5bf1d97f405deb1080f0242db23769164ae9e"
+  },
+  "test_ids": [
+    "test_ms_pack_state.PackStates.test_actual_constructor_result_binds_candidate_metadata",
+    "test_ms_pack_state.PackStates.test_baseline_actual_selected_geometry_and_complete_files",
+    "test_ms_pack_state.PackStates.test_both_exact_geometries_and_prospective_write_bounds",
+    "test_ms_pack_state.PackStates.test_candidate_actual_constructed_geometry_and_all_eight_file_rows",
+    "test_ms_pack_state.PackStates.test_different_geometry_never_inherits_selected_storage_bounds",
+    "test_ms_pack_state.PackStates.test_native_bound_factory_is_excluded_from_timed_modes"
+  ],
+  "findings": [],
+  "observations": [
+    "Both states contain the same exact 43-layer cache geometry, 512/128 head dimensions,128 window, exact source/ratio arrays and384 profile experts.",
+    "A inventory seven exact selected relative file names; B eight exact actual constructed file rows. B geometry/tensor hashes match independently reviewed actual P3 result.",
+    "The existing numerical FSIZE factory only returns a child callback; these tests do not invoke it or change current process limits.",
+    "Engine version0.1.27 is retained metadata/source provenance, not a new binary invocation.",
+    "No weight payload, capacity-fit, cross-pack arithmetic equivalence, near-full-context or output-length result is implied."
+  ],
+  "reviewer_imported_or_executed_controls": false,
+  "model_or_GPU_admission": false
+}

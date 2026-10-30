@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-30T18:35:05.215613+00:00",
+  "passed": true,
+  "controls_each_physical_host": 150,
+  "groups": [
+    27,
+    56,
+    34,
+    33
+  ],
+  "source_count": 15,
+  "input_count": 852,
+  "raw_sha256": {
+    "compatibility-darwin": {
+      "receipt.json": "60eaa2f2470ce5327e5237dd181233d4febaa92c1753b6aa6877f1af01e74202",
+      "child.json": "3c64651c422f23845e0977a4d6afb946c3a91d4df88d3d81a499f6ba061408bd",
+      "child.log": "62bf92d60579b47ad54e8be61f89de12c1b4b78052f85cc265c30060cedcf6ce"
+    },
+    "compatibility-linux": {
+      "receipt.json": "124d7f7e7ad02c2becfcd3851a1b5a2e18f274ab0620531248b08e064c8e4cf9",
+      "child.json": "0775bdb35eff7562380033486366c6abc5dc6d2333e74e82097c024910b3dff8",
+      "child.log": "0906e61c053699304537b92dd9f101dca8a62c401602124891b46b3e4fb218a4"
+    },
+    "supervision-darwin": {
+      "receipt.json": "655dbf7534ab45eac10d56898d8961391e60109545bc09edc13b7004c75004be",
+      "child.json": "212242171b9f70736bbf7fafa2b7b2bfe34748331461d50d07a7083630af71a4",
+      "child.log": "98f5d49d83dae56f308d436c0d13c3b7afd4ae800251c01a3b5448d2e155ed07"
+    },
+    "supervision-linux": {
+      "receipt.json": "0a4927352d1c6bf333c7e55afd070b20ec358eb4982d0d66da6f7b6b19646cb0",
+      "child.json": "36f00639e093c6ce5c983d7864adf99d797ee1441e6f36a1dbe847611b0068d7",
+      "child.log": "b0653aba5fb752d102d6c1738d6d5060e9dd5754e40dc67d6f28e7d5a98d94b0"
+    },
+    "dispatch-darwin": {
+      "receipt.json": "34e5e4b3fc41bb4e17029ca92f3ceb576e521bd098a3769364c23fcfa2759935",
+      "child.json": "99779231bf7d688d708dc67ff4e709cabdacbe35e7ae0d6302b091fc74a8623d",
+      "child.log": "e4a6d8101c24d4e1f2efac5ba4558bc063b54986d0b34a332dd897d043e9748b"
+    },
+    "dispatch-linux": {
+      "receipt.json": "f9e4c9f51099973784a351cecb41826eccfd845c242f8bd4f01788e2f787f3c9",
+      "child.json": "6f3b39617948d510cafd43bb52b54f452c425dc86c9063dcfa89e06bae37fc10",
+      "child.log": "9733f57d542ab7f8bc84e25ddb81126aa93e229a1def9e942f1a5bed35bb6ce0"
+    },
+    "saved-darwin": {
+      "receipt.json": "069462c02c603df00d9fbefb4804527ad20b6832e81ab935e3ed96a7ac1069f6",
+      "child.json": "1805f29cde0fc80fa644283cf0b109923792f0f50e35e39d2a99ec062b2f08c3",
+      "child.log": "8bfdd79fadbad0e582ab06dfb751a8e9e9fe3276874fa5ae30c5203e49c7cfce"
+    },
+    "saved-linux": {
+      "receipt.json": "6a7cb8c0678ecb96a4e3b53cd9cf3c9dc7714d8b7d34d6ed14c9375cb93e6f0b",
+      "child.json": "17d11a7540d3ff4b95d489edb943bfdf0071b1b963360fdc8f0a3d8fb4019d62",
+      "child.log": "bee99e5a0b088d2ca4cc2f22a5bb2d3ebcd8b7a54a4aa3ae5bb189a96375a1df"
+    }
+  },
+  "native_or_service_actions": 0,
+  "actual_saved_model_audit_executed": false,
+  "GPU_or_CS1_admitted": false,
+  "original_failed83_preserved": true
+}
