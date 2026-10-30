@@ -1,0 +1,87 @@
+{
+  "utc": "2026-10-30T03:08:15.580987+00:00",
+  "decision": "DISTINCT_HEAD_BATCHING_SOURCE_CANDIDATE_SUPPORTED_PENDING_EXACT_HEAD_METADATA_AND_NEW_QUALIFICATION",
+  "scope": "Local assessment only; no source copies/implementation/build/test/tokenizer/GPU/service actions. Q8sharingN0restoration fault/HOLD preserved, candidate0677 excluded.",
+  "selected_provenance": {
+    "base_commit": "4615f346d9311dd1ce9f5738ab04446f023a6e42",
+    "selected_model_source_sha256": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "selected_model_object": "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_model.cu.o",
+    "selected_model_object_sha256": "9ebe2978ebcd97c1757670984cfd2a7985a102ff153018c95cb79c515fe7888c",
+    "selected_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "corroboration": [
+      "source-correction.json identifies actual PR-only nine-file patch to4615 and retained tested loader/main-layer/startup corrections.",
+      "All9 named candidate source files freshly locally match source-correction pins. Seven existing trackedfiles retain original lines/order; two new ablation files are part of selected source.",
+      "static-build-audit.json and isolated-build-state.json bind corrected build to native92. Recent Q8prepare exact unchanged-object control relinks92 while pinning original model.o9ebe2978.",
+      "build_corrected.py documents original isolated configure/build underCUDAhidden, SM80, selectedflags; current prepare plan documents nvccO3/C++20/SM80/STRATA_VERSION0.1.27 and original includes. Exact MODEL compilation command/dependencies must still be captured from its actual original target before preparing replacement."
+    ],
+    "limits": "Documentary source/object/build receipt chain plus exact relink, not freshly recompiled originalmodel bit reproducibility or machine-code equivalence. PlainGit4615model/ownforkhead would omit selected ablation/runtime edits."
+  },
+  "preserve_selected_files": {
+    "CMakeLists.txt": "a86987b3ff43b883451a7725458f4f8825c415ab61114af74ff56dc0cc6c7478",
+    "tests/ds4_ablate_test.cpp": "82b85841d402c845afa917d3c562167efd6719e4c007d87966403a7d978799e9",
+    "docs/SETTINGS.md": "b7c723cf24a760f459387e31398977c3b062b35f6c4d4b5ed3f120c7cf0a384c",
+    "src/ds4/ds4_kernels.cuh": "f0b40a200e54b818c4173305e50dad6201b2d538839ff17fbc7808ea7270ef78",
+    "src/ds4/ds4_model.hpp": "a72692259ef9c69581054ad53e4184f112579693599921b4150ea8859c4c1a77",
+    "src/ds4/ds4_kernels.cu": "d0ac9dc4ddb3a234c2f499c5980a5e21c68100a8ba62bfccbf7b8013b94bc901",
+    "src/ds4/ds4_ablate.hpp": "6af30f3ad1f79eccbcf0f42b6a8b97dab9d9fb9e4a65ea2afb5bfe0bb3ba8599",
+    "src/ds4/ds4_main.cpp": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+    "src/ds4/ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350"
+  },
+  "source_factor": {
+    "head_share": "selected ds4_model.cu11250-11266: GGUF fmt!=0 per=4, EXL3 per=x3::mv_cols unchanged; loop slices rows by per with exact xn/y offsets and min tail.",
+    "dispatch": "selectedmodel9025-9047 sends GGUF to gg::mv; selected ds4_gguf.cu1310-1331 already dispatches NC1/2/4/8/16. No GGUF/IQ/kernel object replacement required.",
+    "caller_scope": [
+      "draft_9130 onward uses g.d_block rows, calls head_share at9213 before draft() truncates max_drafts at9134-ish. Frozen pack dspark_block_size5 means head handles5 even with maxdrafts4;4+1 passes become one5-column NC8 pass.",
+      "Trunk head_rows_dev11297-11304 uses n_logits lastwindow rows. Verification may present token plus up to4drafts; other chunked/flow head_share callers also affected forrows>4.",
+      "TP1selectedheadGPU1 means no multi-member gather; unchanged head_share gather/ack semantics mustremainbyte-exact. Drafter runsGPU0 and transfers normedheadinputs toGPU1 asbefore."
+    ],
+    "geometry": {
+      "hidden_size": 5120,
+      "vocab_size": 129280,
+      "dspark_block_size": 5,
+      "max_window_rows": 16
+    },
+    "actual_head_dtype": "Not yet established from local aggregate quant inventory. Obtain exact head tensor metadata row from pinned actualtensorsbc5229 before fixture/buildscope. GGUFpack alone is insufficient to nameQ8_0/BF16/etc.",
+    "possible_mechanism": "Reuse weight loads across up to8 activation rows, fewer head GEMV and quant launches forrows5..16. One-row calls unchanged. No quantified end-to-end gain or trafficfrequency claim.",
+    "arithmetic_risk": "Existing NC8 specialization keeps independent per-column accumulation, but differenttemplate/registerallocation/scheduling may change codegeneration/occupancy. Fullcompiled exact finite output comparison required, no inference from upstream samebits claim."
+  },
+  "minimal_port_proposal": [
+    "Start exact selecteddfe326model plus allselected7existing/2new files unchanged; single defaultOFF opt-in controlling only GGUFhead batch4->8; EXL3path untouched. Prefer strict4/8 policy parsed once with explicit observedfactor; do not alter DSparkbudget/confidence/sampler/context/output/TP/modelpack.",
+    "Only replace original ds4_model.cu.o in original native92objectset; selectedGGUF073598/object73a17 andIQ883cec remain untouched. Q8_SHAREabsent/off, noIQpersistent/IMMA/HC/otherupstream changes.",
+    "Separate immutable source/candidate/test map, exact originalobjects/controlrelink92, actual compiler dependency capture/toolchain/links and artifactreview. ModelTUrecompile broaderthan one hostline so compile/resources/warnings mustbe retained.",
+    "Freeze new family criterion beforefirstdata. Output-head baseline selected92; notheldQ8sharingcandidate. No reuse/replayoldQ8/IMMA/IQ2arms."
+  ],
+  "qualification_requirements": [
+    "First manually read full delta/tests plus build/lifecycle adapter. BothphysicalCPU control proofs before anybuild/window; preserved startup-capture fault requires separately qualified newcaller adapter, never edit oldF or Q8mode.",
+    "Finite exact kernelfixture on bothdevices: selected headformat(s), actualK5120 andvocab129280 plus smallrowtails; compare split4againstsplit8 forrows1..16, paddedinput/output/weightstride, canaries, repeatedstream/device calls, zeros/extremes/subnormals; unchangedQ8_BATCH1/CHECK1; finitebit-exact fulloutputs, positive effectiveNC8coverage. No tolerance orbenchmark in kernelproof.",
+    "Kernelproofdoesnotprovewholemodel. New separately frozen fullcap natural fourstate text/image/cache fixture with positives drafts, exacttokens/fullfinite source-defined dump equality/counters; anydifferenceHOLD withno timing/regrade/replay. Variablebatchdumpnotper-tokenframed.",
+    "Onlyafterstrictnumericalpass andseparateadmission, freshpairedA1/B1/B2/A2 performance windows using selected92betweenarms, allquality/lifecycle/resource/publicrestoregates. Nativegenerationrates mustretain outputlength/reasoning/draft/cache; unmatchedgeneratedwork cannot establish overallclient/taskgain.",
+    "Keepmodel1M/output262144/cap32768/effort100/chunk4096/mode1/CPU24/TP1auto19-21/projection/images/DSpark.65max4 unchanged; noqualitypack/TP2/contextchanges fromexternalrecipe."
+  ],
+  "upstream_scope": {
+    "pinned_release_head": "7ee8f2777c754229605a8c19ca985cbb68540419",
+    "PR639_claim": "GGUFhead8rows perpass samebits; savedprimaryPRbody inspected. Fullupstreammodelpatchnotavailable in this localpacket, so proposal anchored in exact selectedsource, not claimedbyte-exactupstreamport."
+  },
+  "evidence_sha256": {
+    "ablation-pr469-v2/source-correction.json": "afe2e805490202b4be4d13dc2efa67a4e90329208fa728eb21d0bfc34e466ec7",
+    "ablation-pr469-v2/static-build-audit.json": "f39b1acc22bb210d38f6b4be6f1ad743c018b8d978cb0a844ca5aa19fe623a3f",
+    "ablation-pr469-v2/isolated-build-state.json": "18d5cddd14516144c4b717a675937b4165e7dc3749a4c000e3717caded1e3a90",
+    "ablation-pr469-v2/build_corrected.py": "3249bb9e75e0b16e33ecd0320be52a1f12e1f7ca75197e6bbd8d0b9cde3968d7",
+    "ablation-pr469-v2/candidate/src/ds4/ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "ablation-pr469-v2/candidate/src/ds4/ds4_main.cpp": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+    "decode-optimization-20261028/q8-sharing-v1/selected-base/src/ds4/ds4_gguf.cu": "0735989826d5a9a8a9ec101ef2fbe1017ab7604c9f1e17e4217740104e107033",
+    "decode-optimization-20261028/q8-sharing-v1/prepare-FIRST/receipt.json": "53a26a32b2099bc6d61d7012daed8c47870c99acad4c107c061bd2d5825370b3",
+    "decode-optimization-20261028/q8-sharing-v1/prepare-FIRST/plan.json": "a3ca785cf4503a69ac6466c0480b4fd011cc07e36d0e1b6c28317622c78ef649",
+    "decode-optimization-20261028/model-v1/pack-geometry.ds4.txt": "48c01d890cbe53efafdacf50bf704437439f738f86787e6e529f6b5a62cd001c",
+    "decode-optimization-20261028/selected-pack-quant-inventory-FIRST.json": "55a170d4e8c2dc758f19fb21f4b36836b91b43036ddc213599954b5378011f07",
+    "decode-optimization-20261028/upstream-v1.1.37-FIRST.json": "5ba6531e289462b0b15292fe392161bf330362734454537242d54c04ad967006"
+  },
+  "admission": {
+    "implementation": false,
+    "CPU": false,
+    "build": false,
+    "GPU": false,
+    "model": false,
+    "deployment": false
+  }
+}

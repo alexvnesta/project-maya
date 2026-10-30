@@ -1,0 +1,43 @@
+--- selected-dfe326/src/ds4/ds4_model.cu
++++ candidate/src/ds4/ds4_model.cu
+@@ -12,6 +12,7 @@
+ // and after the last layer logits = head(rmsnorm(sum_s pre[s] h[s])).
+ #include "ds4_model.hpp"
+ #include "ds4_ablate.hpp"
++#include "ds4_head_batch_policy.hpp"
+ #include "ds4_engram_io.hpp"
+ 
+ #include "ds4_gguf.cuh"
+@@ -11256,12 +11257,27 @@
+         float* out = mi == 0 ? d.logits : d.logits_part;
+         const size_t ld = mi == 0 ? (size_t) V : (size_t) vn;
+         cudaSetDevice(d.id);
+-        // (an EXL3 head: as many activations at a time as its split-K partials fit the scratch - 8 for a shared head, 4
+-        // for a whole one, each pass reading the whole share; a GGUF's: 4 at a time, as before)
+-        const int per = d.head.fmt != 0 ? 4 : std::max(1, x3::mv_cols(d.head));
+-        for (int c = 0; c < rows; c += per)
+-            if (!mv(d, {job(d.head, xn + (size_t) c * D, out + (size_t) c * ld, std::min(per, rows - c), D, ld)}, err))
++        // GGUF-only opt-in. The shared helper also drives the finite exact fixture.
++        // EXL3 scratch policy and all gather/ACK code below are unchanged.
++        if (d.head.fmt != 0) {
++            static const int per = head_batch::width(std::getenv("STRATA_DS4_HEAD_BATCH"),
++                                                    std::getenv("DS4_HEAD_BATCH"));
++            if (per < 0) { err = "HEAD_BATCH requires matching literal 0 or 1 flags"; return false; }
++            static std::atomic<bool> announced{false};
++            if (per == 8 && rows > 4 && !announced.exchange(true, std::memory_order_relaxed))
++                std::fprintf(stderr, "ds4: HEAD_BATCH=8 effective GGUF head rows=%d (default4; selected GEMV)\n", rows);
++            if (!head_batch::each(rows, per, [&](int c, int count) {
++                    return mv(d, {job(d.head, xn + (size_t) c * D, out + (size_t) c * ld, count, D, ld)}, err);
++                })) {
++                if (err.empty()) err = "HEAD_BATCH rows outside the selected window";
+                 return false;
++            }
++        } else {
++            const int per = std::max(1, x3::mv_cols(d.head));
++            for (int c = 0; c < rows; c += per)
++                if (!mv(d, {job(d.head, xn + (size_t) c * D, out + (size_t) c * ld, std::min(per, rows - c), D, ld)}, err))
++                    return false;
++        }
+         if (nm == 1 || !gather) return true;
+         const unsigned seq = ++d.head_seq;
+         const int slot = (int) (seq % 2);

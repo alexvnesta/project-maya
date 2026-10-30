@@ -1,0 +1,44 @@
+{
+  "scope": "Separate qualified selected92 baseline recovery, no kernel retry/regrade/candidate",
+  "source_review": "HEAD_KERNEL_BASELINE_RECOVERY_ASTRA_REVIEW.json/742b50f718c734a466a0674f357ccda0983acc3b454e3bc53e270705afaeec7c",
+  "old_close": {
+    "binding": {
+      "invocation": "38b087689f5f4888b155c99a8bc74f10",
+      "main_pid": 2612003,
+      "native_pid": 2612033,
+      "native_start_ticks": 159680913
+    },
+    "before": {
+      "ActiveState": "inactive",
+      "InvocationID": "38b087689f5f4888b155c99a8bc74f10",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainCode": "1",
+      "ExecMainStatus": "0"
+    },
+    "native_close": {
+      "utc": "2026-10-30T04:09:05.381883+00:00",
+      "server_pid": 2612003,
+      "native_pid": 2612033,
+      "returncode": 0,
+      "closed": true
+    },
+    "after": {
+      "ActiveState": "inactive",
+      "InvocationID": "38b087689f5f4888b155c99a8bc74f10",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainCode": "1",
+      "ExecMainStatus": "0"
+    },
+    "passed": true,
+    "before_raw": "ActiveState=inactive\nInvocationID=38b087689f5f4888b155c99a8bc74f10\nMainPID=0\nResult=success\nExecMainCode=1\nExecMainStatus=0\n",
+    "after_raw": "ActiveState=inactive\nInvocationID=38b087689f5f4888b155c99a8bc74f10\nMainPID=0\nResult=success\nExecMainCode=1\nExecMainStatus=0\n"
+  },
+  "inactive_unit_before": {
+    "invocation": "38b087689f5f4888b155c99a8bc74f10",
+    "main_pid": 0,
+    "state": "inactive"
+  },
+  "original_failure": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-head-batching-kernel-20261030T040858Z/state.json"
+}

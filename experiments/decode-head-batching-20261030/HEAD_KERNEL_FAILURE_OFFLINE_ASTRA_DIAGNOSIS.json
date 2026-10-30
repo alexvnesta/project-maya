@@ -1,0 +1,113 @@
+{
+  "utc": "2026-10-30T04:26:35.384127+00:00",
+  "decision": "HOLD_GENUINE_KERNEL_ASSERTION_AND_EXHAUSTED_BASELINE_START_NO_IMMEDIATE_RECOVERY_ADMISSION",
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/candidate/tests/head_batch_check.cu": "1f5b0b0389f4378390f9261662b2eba41047c03300e301d359d0834016b2979f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/candidate/src/ds4/ds4_head_batch_policy.hpp": "97f72ceb40eca1417349cbd292d314cf08db53851e8e62711f97f7e102ad238b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/selected-base/src/ds4/ds4_gguf.cu": "0735989826d5a9a8a9ec101ef2fbe1017ab7604c9f1e17e4217740104e107033",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/selected-base/src/ds4/ds4_gguf.cuh": "1aab95ff58820ba9da9b05c1a056996df4d3442f1f5dfcbd65e8fbbc4578f34c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-base/src/ds4/ds4_iq.cu": "883cec5e4d26f37f61bf650fc3f123bf47d8bb456b84bedfbadb0152864b8234",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-base/src/ds4/ds4_iq.cuh": "0729227655e13d6406dc2a4b54b7ec4bdd2d864229f8c55cc3cb5efd9533ce01",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/candidate/src/ds4/ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/runtime-source/window.py": "170722b54e0245e7268bffe2f39f8e30bee2fc79c056544f4f9b03942c48f25f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/candidate/hosting_preflight.py": "b15c66b2fb7d96f689995525618583f12b30b890f7f713a1e4323718093ffc26",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-profile-v1/diagnosis-ownership-env-224039Z/recover_baseline.py": "e0b0f1ac3f1e5a5656fb9516bfc8b5976f4f159d8305b7bdaf3f5ea655e088cf",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-profile-v1/diagnosis-ownership-env-224039Z/diagnose.py": "ab5cf17eab993a35e88acdd99344aa08da178b4bd772f51c3d4b850147f1a2f0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-profile-v1/diagnosis-ownership-env-224039Z/diagnosis.json": "fd0d401f5381d748c974a50f8b012209b7eba399d9f09ced80dfa4e3bcb2f74a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-profile-v1/diagnosis-ownership-env-224039Z/20261025T224700Z.json": "b7c5668c982280bde2e439753ca6b211188a5bb426c00a06a035481f5742ad3d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/q8-batch-v1/activation-v1/recover.py": "f253ea2de649c96b7e5bcb2632fb9447c7059a3f449ecf34d8e36f231a6c7e92"
+  },
+  "raw_evidence_limit": "Actual failed GPU/window and refused startup raw receipts not yet copied locally. Reported sequence/PIDs/error text are parent observations, not independently reviewed physical raw evidence.",
+  "reported_sequence": [
+    "Head fixture GPU0 cb49 exited1 with finite outputs/canaries; device1UNRUN; canonicalwindow041001test1/resumeAllowedfalse. No model/timing result.",
+    "Separate one-start selected92 recovery refused in ExecStartPre b15c at mandatorylatestwindowguard, before native started; reported newfailedunitinvocation27f9/MainPID0/noGPUowner. No retry."
+  ],
+  "previous_review_correction": "HEAD_KERNEL_BASELINE_RECOVERY_ASTRA_REVIEW742b composition omitted the independent deployed ExecStartPre latest-window admission dependency. Its one-start authority is exhausted by the preserved refusal; it is not authority to retry, alter preflight or bypass failedwindow.",
+  "selected_dispatch_findings": [
+    {
+      "path": "GGUF073598 mv lines1344-1434",
+      "finding": "kFmtGG Q5_K job quantizes inputs in selected Q8scratch and forwards to iq::mv. There is no large-N/fat-GEMM/Lt branch here."
+    },
+    {
+      "path": "IQ883cec mv lines1319-1343 and mv_nc1217-1222",
+      "finding": "Selected launch grid ceil(max_n/8),jobs; NC1 for<=1 column,NC4 for2..4,NC16 for5..16. N affects grid extent only. At fullN129280/rows2, per4 and per8 both submit one identical2-column NC4 job, grid16160blocks."
+    },
+    {
+      "path": "Modeldfe326 head_share11250-11267 and mv/mv_any~9028-9046",
+      "finding": "Production GGUF head uses the same job forwarding; fat expert GEMMs elsewhere in Model are not called by standalone fixture. Missing Lt/model initialization is not supported as this fixture failure explanation."
+    },
+    {
+      "path": "GGUF prepare1095/scratch1067-1085",
+      "finding": "prepare allocates the Q8/GEMV scratch. The traced GGUF/IQ route references no external Lt initialization."
+    },
+    {
+      "path": "head_batch_check.cu one_case",
+      "finding": "Generic assertion checks everyvaluefinite and everyguard/paddingword unchanged after each per4 orper8 pass; it occurs before finaloff/onmemcmp. It does not retain pass width/index/actualbits or whether invalidvalue versus alteredcanary. Cannotattribute candidate4->8 factor or exactcause."
+    }
+  ],
+  "case_position_source_inference": {
+    "if_last_stdout_is_fullN_pad0_r1_p3": "Expectedprefix261PASS lines:1Q8check+256smallNcases+4fullNrows1cases. Nextcaseposition262 isN129280/pad0/rows2/pattern0. Exact actualprefix mustbe checked against raw, not inferred as257.",
+    "full_case_geometry": {
+      "K": 5120,
+      "N": 129280,
+      "rows": 2,
+      "weight_row_bytes": 3520,
+      "weight_total_bytes": 455065600,
+      "input_allocation_bytes": 41088,
+      "output_allocation_bytes": 1034368,
+      "actual8widepartition": false
+    },
+    "finite_input_construction": "Pattern0 inputs abs<=125/127; Q5_K d=.125,dmin=.0625 and legal finite scale/code bytes. No intended NaN/Inf operand. This does not establish what the failed output actually was.",
+    "not_established": [
+      "GPU hardware fault",
+      "incorrect candidateheadarithmetic",
+      "largeNfatdispatch",
+      "missingLtinitialization",
+      "purefixtureobserverbug",
+      "productionbaseline defect"
+    ]
+  },
+  "recovery_source_findings": [
+    {
+      "path": "hosting_preflight.py latestwindow check",
+      "finding": "Unconditionally selects latestwindow bymtime, requires test_returncode0, maintenance_resume_allowed true, kernelcapture0/faults[]. No diagnosis token, recoveryoverride or alternate baseline path."
+    },
+    {
+      "path": "window.py continuation_state",
+      "finding": "Failed041001 cannot be continued: it requires an alreadycleanheldsource. Generic noncontinuation requires GLM+router serving and readsGLMhealth, so is not appropriate for this stoppedDeepSeek state."
+    },
+    {
+      "path": "historical recover_baseline/diagnose224039",
+      "finding": "Earlier recovery followed a genuinely executed CPUdiagnosis window224700 for a proven pre-nativeownership pointer failure; it continued from olderclean183040. This is historical precedent for separate substantive diagnosis, not qualification for a current GPUassertion or a blank passingwindow."
+    },
+    {
+      "path": "q8-batch activation recover.py",
+      "finding": "Targets a different pre-nativeportTIME_WAIT refusal with alreadycleanwindow, datedconfig/source and oldowner. Not directly applicable or admitted here."
+    }
+  ],
+  "safe_recovery_plan": {
+    "status": "PROPOSAL_ONLY_REQUIRES_PARENT_REVIEW_NEW_SOURCE_BOTH_HOST_CPU_AND_SEPARATE_ACTION_ADMISSION",
+    "immediate_offline_steps": [
+      "Copy andpin failedGPUstdout/stderr/start/exit/window/telemetry/oldclose and refusedrecoveryExecStartPre/unit/command receipts; keep exactfirststatuses.",
+      "Reconcile raw PASS prefix and actualfixture/object/source/link identities. Do not assume the failed branch or numericalvalue from genericmessage.",
+      "Inspect available preexisting failed output data only; no GPU rerun or model request for this diagnosis."
+    ],
+    "required_substantive_followon": "If no existing rawdata identifies a fixture-only issue, an independently frozen selected-baseline health/diagnostic witness is needed before declaring baseline restart safe. It must run actual originalselectedGPU operations with explicit expectedresults and guards, retain failingindices/bits, cover relevant fullheadgeometry and multirowoutput writes, bothdevices, exit0/kernel/resources/ownedcleanup. Candidate head8/model72ced must not execute. A trivialCPU/no-op/passreceipt cannot establish post-GPUfault safety.",
+    "new_witness_custody": "Use newnamespace and actualcanonicalwindow/lock/cgroup/bounds. Existing window can only enter from a cleanhandoff, notfailed041001; using any historicalcleancontext for this distinctpostfaultwitness requires explicit reviewed admission that pins BOTHfailedattempt and cleanlineage and asserts actualfreeownership. It must not conceal/relabel failedlatest or be treated as automatically authorized by oldcleanstatus. No such new admission is issued here.",
+    "qualification_required": "ManualROOT+sameAstra entire newsource/tests; exactboundedCPU bothphysicalhosts; separateactualsource/currentnoowner/kernel/root/phasefree preflight and admission before anynewhealthGPUwork. No unqualified diagnosticcode or broadframework change.",
+    "after_genuine_health_pass": "Only actual newwindowtest0/resumeAllowedtrue/clean capture plus independentrawreview may satisfy unchanged deployedpreflight; then separately admit one selected92 restoration with qualifiedstartupadapter, exactprofile/972release/publicREADY andCAS recoveryrecord. Preserve failedheadwindow and refusedfirstrecovery unchanged.",
+    "if_health_unavailable_or_fails": "RemainHOLD/stopped and report unavailable baseline; no fabricatedreceipt, no preflight/unit edit, no implicit retry."
+  },
+  "prohibitions": [
+    "No failedwindow/testreturn/timestamp edits or deletion.",
+    "No fake passingwindow or /bin/true as recovery evidence.",
+    "No disabledpreflight/changedunit/security/limits/config/model.",
+    "No replayhead385fixture, secondGPUcaseattempt, candidate model/timing/promotion.",
+    "No claim oldqualifiedCPU or priorhealthyhost proves currentpostfaultGPUhealth."
+  ],
+  "actions_by_reviewer": "Local source/metadata reads and this report only; no tests/import/compiler/Ubuntu/GPU/service action.",
+  "findings_open": [
+    "Actual fault rootcause remains unknown.",
+    "No already-qualified immediately usable recovery path was found among inspected exactlocal sources."
+  ]
+}
