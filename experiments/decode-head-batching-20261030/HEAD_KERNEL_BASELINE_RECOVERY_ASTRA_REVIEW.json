@@ -1,0 +1,69 @@
+{
+  "utc": "2026-10-30T04:15:35.745744+00:00",
+  "decision": "CONDITIONAL_SEPARATE_SELECTED92_BASELINE_RECOVERY_WITH_UNCHANGED_QUALIFIED_PRIMITIVES",
+  "scope": "Recover baseline after genuine first head kernel failure, never replay fixture/model or regrade failed kernel.",
+  "manual_source_read": true,
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/gpu_check.py": "7869ca8561c85f8770321a07a87c2b55bbbe7382b4cafe5f7a2613b715ad9d7e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/head_startup.py": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/activate_chunk4096.py": "b2bb7676969661f98bf77d9969a840a4fcb44367f9644ab6f05ac19d70709056",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-profile-v1/maintenance.py": "276a78f6f62d9ae7760e9b436863a6279715d58ea0960bb396bdb7adcc3776dd",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/STARTUP_CPU_RESULT_ASTRA_REVIEW_r2.json": "d8673dc54825042d86d565ede19a8d49b280d6e428e0824e37a9c93eafb9b5a4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/GPU_CPU_RESULT_ASTRA_REVIEW.json": "aee5c877a8c0faa7408ee3acbc3236c2ef581c77e3094291b3754eb7da9874bf",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/gpu-qualification.json": "e8fa4acbcbaa9482f8a5b6695e562596400c91004329b2503220e13d3bc97e9e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/GPU_MAP_ASTRA_ADMISSION.json": "94429712ee3944d9766d46edf51f016a4ba7630965ff62f80dd13b3af81b166f"
+  },
+  "actual_failure_evidence_status": "Parent report only; raw receipts still remote and not independently read by this reviewer. All following actual conditions must be checked by recovery operator before action.",
+  "reported_fault": {
+    "window": "20261030T041001Z",
+    "test_returncode": 1,
+    "fixture_device0_pid": 2845478,
+    "fixture_returncode": 1,
+    "stderr": "HEAD_BATCH FAIL: finite outputs/canaries",
+    "device1": "UNRUN",
+    "interpretation": "Genuine fixture correctness/canary failure until offline diagnosis; no numerical/performance/deployment qualification. Exact cause not established."
+  },
+  "expected_old_binding": {
+    "invocation": "38b087689f5f4888b155c99a8bc74f10",
+    "main_pid": 2612003,
+    "native_pid": 2612033,
+    "native_start_ticks": 159680913
+  },
+  "required_preconditions": [
+    "Frozen g7869/a b2/head_startup53988 hashes and origins match their actual qualified CPU proof. No source mutation.",
+    "Original controller exited, fixture children/window terminal, no active private/GPU phase, no foreign owner or pending restorer; canonicalSTOPPED matches exact failed attempt and productiontemporarystopped.",
+    "Read preserved old-owner-close.json, verify its binding equals expectedold38b and g.close_contract(binding,native_close,before,after) passes stable oldAPI inactive/MainPID0/ExecMainCode1/Status0/Resultsuccess plus native/server/return0/closedtrue. Boolean passed alone insufficient.",
+    "Before start, selected unit inactive/failed MainPID0, nvidia compute owner setempty, bothGPUs<=10MiB, experimentlock available using existing h.free; do not retain/create new lock/owner.",
+    "Exact selectedDnative92/configc43/releaseb921/hostingpreflight/source contracts and unchanged settings; clean h.kernel(since), root/resources suitable for known selected restoration.",
+    "Fresh real non-symlink E/maintenance/decode-head-kernel-separate-selected-recovery-UTC directory, exclusiveleaf/start-unit.log; separate recovery receipt with frozen source/binding/failure references."
+  ],
+  "composition": [
+    "a=g.load_owner(); h=g.host_class(a)(); assign fresh audit_dir, baseline_binding fromvalidatedpreservedoldclose, since2026-10-30 04:08:58UTC. No start_binding/restored_pid invented or adopted.",
+    "Only after exact close_contract success set h.old_close_verified=True. Run h.free() and h.kernel(h.since), source/currentstate guards.",
+    "Call h.restore_ds() ONCE. Inherited1250s single-start supervisor owns systemctl CLI; correctedadapter waits initialMainPID0 before native_snapshot but freezes invocation/positivePID/native and refuses replacement or lateadoption.",
+    "Call existing h.restore_router() CPUrouter only after selectedstart success. Call h.verify_target(expected_pid=h.restored_pid), requiring boundowner/config/exe/release972/placement/readiness/public401/auth200/assembledREADYstopDONE/kernel/resources.",
+    "Persist recovery result separately. CAS canonical against unchangedfailedattempt/ownrecovery record; update currentselectedbinding and recovery status only after verified result. Preserve original failedkernel/window/device0/device1UNRUN/HOLD and attemptledger exactly."
+  ],
+  "failure_handling": [
+    "Record primary, ownedtargetcleanup and startcommandcleanup errors independently; do not hide initialfault.",
+    "If restore/verify fails and exact captured owned start_binding/restored_pid is present, only existing cleanup_owned_target for that matchingPID may be used. If binding absent/foreign, HOLD without broad stop or lateadoption; no automatic second start.",
+    "If verify_target returns pending_public_probe due userwork, retain exact newlycapturedbinding in separate pending-recovery record; do not claim fullyverified or replayfixture. Only sameowned verify continuation may finish.",
+    "If canonicalcustody changes, do not overwrite foreignstate. Preserve local recovery evidence and HOLD."
+  ],
+  "bounds": {
+    "existing_single_start_deadline_s": 1250,
+    "owned_systemctl_TERM_wait_s": 5,
+    "owned_systemctl_KILL_wait_s": 5,
+    "router_start_timeout_s": 180,
+    "router_HTTP_wait_s": 60,
+    "kernel_since": "2026-10-30 04:08:58 UTC"
+  },
+  "why_no_new_experiment": "No gpu_entry/fixture/controller --run/launch_owned/newcanonicalwindow, no candidate/modeltest. The failedwindow is retained; no requirement to relabel it clean to restore baseline.",
+  "proof_limit": "Startup22 corrected-r2 and controller109 controls qualify these source paths with mocked system boundaries; this manual composition itself is an operational invocation, not a new tested controller. Actual new binding/exit/public receipts remain required.",
+  "GPU_fixture_retry_admitted": false,
+  "candidate_execution_admitted": false,
+  "model_arm_admitted": false,
+  "promotion_admitted": false,
+  "reviewer_executed_actions": false,
+  "findings": []
+}

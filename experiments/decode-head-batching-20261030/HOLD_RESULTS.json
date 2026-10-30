@@ -1,0 +1,49 @@
+{
+  "utc": "2026-10-30T04:27:57.532259+00:00",
+  "status": "HOLD_HEAD_GPU_ASSERTION_PRODUCTION_RECOVERY_BLOCKED",
+  "kernel": {
+    "window": "20261030T041001Z",
+    "test_returncode": 1,
+    "device0_pid": 2845478,
+    "recorded_PASS_rows": 261,
+    "next_case_inferred_from_frozen_order": "head-k5120-n129280-pad0-r2-p0",
+    "assertion": "HEAD_BATCH FAIL: finite outputs/canaries",
+    "per4_vs8_or_index_value_not_recorded": true,
+    "device1": "UNRUN",
+    "all385perdevice_gate": "FAILED",
+    "cleanup_errors": [],
+    "kernel_capture_returncode": 0,
+    "kernel_fault_lines": [],
+    "window_resume_allowed": false
+  },
+  "source_diagnosis": "Atrows2 per4/per8 share the same NC4 low-bit job; this path has no large-N Lt/fat-GEMM branch. Cannot infer cause or factor attribution from generic assertion; no replay/regrade. Earlier broad NC8 backend interpretation was inaccurate for low-bit Q5_K (NC16 at>4).",
+  "selected_native_and_profile": "Unchanged92/c43/b921/chunk4096, same model/quality/context1048576/output262144; candidate72 neveractivated",
+  "baseline_recovery": {
+    "attempt": "One separate existing-unit start",
+    "utc": "2026-10-30T04:17:15Z",
+    "outcome": "ExecStartPre refused latest failedwindow; no native started; not retried",
+    "invocation": "27f9b1951f494c47a5f6de81f7323ba6",
+    "currentMainPID": 0,
+    "unitState": "failed",
+    "guard_source": "/home/alex/deepseek-hosted-20261025/hosting_preflight.py:35",
+    "guard_requirement": "Latesttest0 AND maintenance_resume_allowed AND cleankernel; immutablefailedwindowtest1/resumefalse",
+    "raw": "separate-selected-recovery-FIRST/"
+  },
+  "current_availability": "DeepSeek stopped by existing failed-window startup guard; CPUrouter remains stopped. NoGPUowner observed.",
+  "future_execution": "BLOCKED_FOR_NEW_POSTFAULT_RECOVERY_DECISION",
+  "not_done": [
+    "Head modelnumericalN0/N1",
+    "head timing",
+    "confirmation",
+    "deployment",
+    "kernelretry",
+    "guard/unit/failedreceipt modification"
+  ],
+  "raw_preservation": {
+    "failed_kernel": "kernel-FIRST/ andkernel-FIRST-maintenance/",
+    "failed_recovery": "separate-selected-recovery-FIRST/ andfirstoperatorlog",
+    "original_qualification": "gpu-qualification.json e8fa4a unchanged",
+    "independent_diagnosis": "HEAD_KERNEL_FAILURE_OFFLINE_ASTRA_DIAGNOSIS.json 7c5408"
+  },
+  "recovery_proposal": "Separatelyreview/qualify substantive selected-baseline diagnostic/health witness with explicit postfault admission lineage, bothhostCPUproof andactualexpectedbothGPUresults; onlythen unchangedpreflight+selectedbaseline restoration. Requires new decision; no immediate execution admission."
+}

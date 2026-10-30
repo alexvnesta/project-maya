@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-30T03:44:39.497048+00:00",
+  "decision": "CONDITIONAL_SINGLE_HEAD_PREPARE_THREE_CHILDREN_ONLY",
+  "qualification_sha256": "95dbb540fc70c1c6fa6e6ea2f7e222d67bb1940dfb09ee1071dd01005abde777",
+  "file_pins": 2082,
+  "qualification_self_checks": 2083,
+  "source_sha256": {
+    "candidate/src/ds4/ds4_head_batch_policy.hpp": "97f72ceb40eca1417349cbd292d314cf08db53851e8e62711f97f7e102ad238b",
+    "candidate/src/ds4/ds4_model.cu": "9c68204ecc0e76e128f01f29f2c5e4f8cdf4ad4cb6114d597d4fa643c109fcfe",
+    "candidate/tests/head_batch_check.cu": "1f5b0b0389f4378390f9261662b2eba41047c03300e301d359d0834016b2979f",
+    "candidate/tests/head_batch_policy_test.cpp": "f1700f88f17d21f923e240edd79fa246cd62c388fabf013ba44b34bfc2f75730",
+    "head_build.py": "5ad8adba6085391f069f4565a80b29e375c929a8279f37a33bd58a823e07f1d4",
+    "qualify_build_cpu.py": "d76c9c8fc175a235c1311687d12a698777e0c96aad0c074a34ea4fe159e28767",
+    "test_head_build.py": "b5fff82fb6f93d6bb136e876f52d33816e8b89eda30e087c5323fa954331fe8f"
+  },
+  "source_input_sha256": {
+    "ablation-pr469-v2/source-correction.json": "afe2e805490202b4be4d13dc2efa67a4e90329208fa728eb21d0bfc34e466ec7",
+    "decode-optimization-20261028/head-batching-v1/ACTUAL_MODEL_COMPILER_RECIPE_FIRST.json": "6d7f0cba7b5a943e72e5582e4bfcac5b2f7632fb021f3f7cf57626391f3ff24a",
+    "decode-optimization-20261028/head-batching-v1/candidate-files.json": "fb17fad28bf7d5642dedd18a55b7580847bb04a7df8d0fa99c1a35a10891987e",
+    "decode-optimization-20261028/selected_build.py": "b72f16217878714132fa4e161de52208567e23a7189c1e5781dc3375ec9c6491"
+  },
+  "evidence_sha256": {
+    "BUILD_CPU_RESULT_ASTRA_REVIEW.json": "d0d1718dd11ae5200f001dac99e80c8b663c25ed9a5d3e13bcc9899cd159c05d",
+    "HEAD_BUILD_SOURCE_ASTRA_REVIEW.json": "122dba70edef64b065f583762e93d46aea2478b19e3418f04234ceead5df9904",
+    "ACTUAL_MODEL_COMPILER_RECIPE_FIRST.json": "6d7f0cba7b5a943e72e5582e4bfcac5b2f7632fb021f3f7cf57626391f3ff24a",
+    "candidate-files.json": "fb17fad28bf7d5642dedd18a55b7580847bb04a7df8d0fa99c1a35a10891987e",
+    "SOURCE_ASSESSMENT.json": "2a50974007f9719c8494590690f285b10f589c592f5eeea89007e2e387b13205"
+  },
+  "map_review": {
+    "inherited_required_python_closure_complete": true,
+    "original_actual_prepare_inputs_outside_candidate_workspace_complete": true,
+    "actual_five_recipe_inputs_and_nine_selected_source_pins_complete": true,
+    "model_object_9ebe_pinned": true,
+    "all_new_remote_head_pins_match_local_reviewed_files": true,
+    "normalization_duplicate_aliases": 4,
+    "normalization_digest_conflicts": 0,
+    "old_q8_tree_entries": [
+      "build.py6745templateonly"
+    ],
+    "source_controls": "7sources/4inputs/81Python+91CXX eachhost, individuallyreviewedraw."
+  },
+  "admitted_commands": [
+    "selected-relink alloriginalobjects; require exactnative92",
+    "deps-model nvcc-M only",
+    "deps-test nvcc-M only"
+  ],
+  "conditions": [
+    "Beforestage/claim/children, freshphysicalidle/default/noactiveprivate/build/pending, exactcurrent38b/main2612003/native2612033/ticks159680913 (or separatelyverifiedcanonicalcurrentbinding), root>=132GiB andfull2082+qselfphysicalchecks. Busy preservesuserwork.",
+    "Currentqualifiedhead_build5ad8 only; exactqualification95dbb540; currentowner mustremainfrozenforeachchild. Freshprepare-FIRST leaf; no replay/adoption.",
+    "ExistingcooperativeownPIDreservation, freshguardforeachchild/whilechildruns, CPU120s/AS4GiBperprocess/wall300sprocessgroup/nice15/CUDAhidden/threads1. FirstfaultkillsownedcompilerPGonly/HOLD, retainsallrawandreleasesonlyownreservation.",
+    "ActualcontrolrelinkmustSHA92; alloriginalobjects/tools unchanged. Recordactualld+nvcc-Mdependencies. STOPforindependentactualinputreviewafter3children; noCUDAcompile/candidatelink/nativeexecution/GPU/modelpermission."
+  ],
+  "findings": [],
+  "scope_limits": "Localmapreview cannot attestfreshphysicalfilecontents or actualcompileroutcome; thoseactiontimeguards/receipts remainmandatory. Q8N0remainsHOLD."
+}

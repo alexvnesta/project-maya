@@ -1,0 +1,102 @@
+{
+  "scope": "Read-only local git object bytes versus recorded physical nvcc-M header pins; no compiler execution",
+  "commit": "4615f346d9311dd1ce9f5738ab04446f023a6e42",
+  "headers": {
+    "include/strata/artifact/gguf_reader.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "24a60e37994da37ed54efac1eccdf9aea61ae40a7739ae60272616dc433e3a99",
+      "git4615_sha256": "24a60e37994da37ed54efac1eccdf9aea61ae40a7739ae60272616dc433e3a99",
+      "matches": true
+    },
+    "include/strata/kernels/cpu/exl3_cpu.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "6ef069222eb1ceb8103a8d73ae9f36ed1a7076f3b60a256d287470d7e2eaa740",
+      "git4615_sha256": "6ef069222eb1ceb8103a8d73ae9f36ed1a7076f3b60a256d287470d7e2eaa740",
+      "matches": true
+    },
+    "include/strata/kernels/f16_bits.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "0f74e6dd832da427b681c9971265a0af1a91198694fdef3654d860b98863fc8c",
+      "git4615_sha256": "0f74e6dd832da427b681c9971265a0af1a91198694fdef3654d860b98863fc8c",
+      "matches": true
+    },
+    "include/strata/kernels/glm_fast.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "f4aa9e8b2d20981422e245dcff9558a1790f5d86f207d7013a7c65e01178a7b3",
+      "git4615_sha256": "f4aa9e8b2d20981422e245dcff9558a1790f5d86f207d7013a7c65e01178a7b3",
+      "matches": true
+    },
+    "include/strata/platform/dedicated.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "57a02b5722246934991167d7ce8478b384d4b404a5e04bac4da1ac5b7c09a4d1",
+      "git4615_sha256": "57a02b5722246934991167d7ce8478b384d4b404a5e04bac4da1ac5b7c09a4d1",
+      "matches": true
+    },
+    "src/ds4/ds4_engram_io.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "5df6bb8f432c15f8855c40f359527374f45c2c9a06a81332d4515c58a0c7a084",
+      "git4615_sha256": "5df6bb8f432c15f8855c40f359527374f45c2c9a06a81332d4515c58a0c7a084",
+      "matches": true
+    },
+    "src/ds4/ds4_gguf_cpu.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "a4a978f1d716596222daf97dbdb49a681c1cfcf9289a0365f49ac20f7861f267",
+      "git4615_sha256": "a4a978f1d716596222daf97dbdb49a681c1cfcf9289a0365f49ac20f7861f267",
+      "matches": true
+    },
+    "src/ds4/ds4_iq.cuh": {
+      "git_read_rc": 0,
+      "actual_sha256": "0729227655e13d6406dc2a4b54b7ec4bdd2d864229f8c55cc3cb5efd9533ce01",
+      "git4615_sha256": "0729227655e13d6406dc2a4b54b7ec4bdd2d864229f8c55cc3cb5efd9533ce01",
+      "matches": true
+    },
+    "src/ds4/ds4_lt.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "0682703bbe7e3e670f8f9fe93b9fa7a0e1a1661e101c638a425916f5f466dc80",
+      "git4615_sha256": "0682703bbe7e3e670f8f9fe93b9fa7a0e1a1661e101c638a425916f5f466dc80",
+      "matches": true
+    },
+    "src/ds4/ds4_os.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "e25f4381ec1bb573f5ea0dedc35b7fb922ddf1f704cbef2f860bb9e5636c05a1",
+      "git4615_sha256": "e25f4381ec1bb573f5ea0dedc35b7fb922ddf1f704cbef2f860bb9e5636c05a1",
+      "matches": true
+    },
+    "src/ds4/ds4_pcie.cuh": {
+      "git_read_rc": 0,
+      "actual_sha256": "6e399f528b7398e4f59ddb1257c3c491f4caf57ce0635de17109697328170c2d",
+      "git4615_sha256": "6e399f528b7398e4f59ddb1257c3c491f4caf57ce0635de17109697328170c2d",
+      "matches": true
+    },
+    "src/ds4/ds4_pcie.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "652fd38ad00dd84687d7c3570eaacaced7eaa520c243f47b2817eaa926908227",
+      "git4615_sha256": "652fd38ad00dd84687d7c3570eaacaced7eaa520c243f47b2817eaa926908227",
+      "matches": true
+    },
+    "src/ds4/ds4_pool.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "6b115cbafcff60c0e497657df10680f0c1387c384999b38cf3c74878be0e5730",
+      "git4615_sha256": "6b115cbafcff60c0e497657df10680f0c1387c384999b38cf3c74878be0e5730",
+      "matches": true
+    },
+    "src/ds4/ds4_prefill_stats.hpp": {
+      "git_read_rc": 0,
+      "actual_sha256": "1537542e0c0d9d7a859738a19470a9827623f89b2133037325987013fabd37a8",
+      "git4615_sha256": "1537542e0c0d9d7a859738a19470a9827623f89b2133037325987013fabd37a8",
+      "matches": true
+    },
+    "src/ds4/ds4_q6k.cuh": {
+      "git_read_rc": 0,
+      "actual_sha256": "07a319448e37cb4d8e056b8f12d784821c55f807dc637fb4a0ea71e56c937067",
+      "git4615_sha256": "07a319448e37cb4d8e056b8f12d784821c55f807dc637fb4a0ea71e56c937067",
+      "matches": true
+    },
+    "src/ds4/ds4_vision.cuh": {
+      "git_read_rc": 0,
+      "actual_sha256": "170e4bbd437724c9f3fa75f8dab904911835a759d6cd60276a789d8502ba8199",
+      "git4615_sha256": "170e4bbd437724c9f3fa75f8dab904911835a759d6cd60276a789d8502ba8199",
+      "matches": true
+    }
+  }
+}

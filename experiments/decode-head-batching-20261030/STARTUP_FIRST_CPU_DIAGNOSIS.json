@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-30T03:26:18.162914+00:00",
+  "classification": "CPU_ONLY_TEST_DOUBLE_DEFECT_BEFORE_NATIVE_OR_GPU",
+  "first_outcomes": {
+    "each_host": 22,
+    "passed": 20,
+    "errors": 2,
+    "error": "Mocked subprocess namespace lacked DEVNULL and STDOUT used by exact original supervisor."
+  },
+  "runtime_adapter_source_changed": false,
+  "test_double_fix": "Add actual stdlib constant values DEVNULL=-3/STDOUT=-2 to fake namespace and assert forwardedstdin/stderr. Actual original supervisor/adapter unchanged.",
+  "prior_source_and_both_raw_first_proofs_preserved": true,
+  "corrected_proof_namespace": "startup-CPU-r2-{platform}",
+  "no_native_model_GPU_run_or_regrade": true,
+  "requires_independent_source_review_before_new_CPU_proof": true
+}

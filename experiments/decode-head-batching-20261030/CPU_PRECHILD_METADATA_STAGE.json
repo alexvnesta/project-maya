@@ -1,0 +1,25 @@
+{
+  "first_parent_refusal": "FileNotFoundError before child creation: canonical E/ablation-pr469-v2/source-correction.json missing. FIRST Linux Python/CXX controls still UNRUN; no source/code changes or regrade.",
+  "actual_stage": {
+    "exact_metadata_staged_only": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/ablation-pr469-v2/source-correction.json",
+    "nine_actual_selected_source_files_match": {
+      "CMakeLists.txt": "a86987b3ff43b883451a7725458f4f8825c415ab61114af74ff56dc0cc6c7478",
+      "tests/ds4_ablate_test.cpp": "82b85841d402c845afa917d3c562167efd6719e4c007d87966403a7d978799e9",
+      "docs/SETTINGS.md": "b7c723cf24a760f459387e31398977c3b062b35f6c4d4b5ed3f120c7cf0a384c",
+      "src/ds4/ds4_kernels.cuh": "f0b40a200e54b818c4173305e50dad6201b2d538839ff17fbc7808ea7270ef78",
+      "src/ds4/ds4_model.hpp": "a72692259ef9c69581054ad53e4184f112579693599921b4150ea8859c4c1a77",
+      "src/ds4/ds4_kernels.cu": "d0ac9dc4ddb3a234c2f499c5980a5e21c68100a8ba62bfccbf7b8013b94bc901",
+      "src/ds4/ds4_ablate.hpp": "6af30f3ad1f79eccbcf0f42b6a8b97dab9d9fb9e4a65ea2afb5bfe0bb3ba8599",
+      "src/ds4/ds4_main.cpp": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+      "src/ds4/ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350"
+    },
+    "source_changed": false,
+    "prior_Linux_child_or_policy_created": false,
+    "binding": {
+      "invocation": "38b087689f5f4888b155c99a8bc74f10",
+      "main_pid": 2612003,
+      "native_pid": 2612033,
+      "native_start_ticks": 159680913
+    }
+  }
+}
