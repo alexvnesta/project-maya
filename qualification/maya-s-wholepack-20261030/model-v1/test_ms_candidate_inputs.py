@@ -44,6 +44,31 @@ class Candidate(unittest.TestCase):
         m=copy.deepcopy(ACTUAL_MANIFESTS);m['coding']['tokenizer_source_sha256']['vocab.json']='0'*64
         with self.assertRaises(ValueError):c.validate(m)
 
+    def test_uniform_tokenizer_drift_refused(self):
+        m=copy.deepcopy(ACTUAL_MANIFESTS)
+        for family in m.values():family['tokenizer_source_sha256']['vocab.json']='0'*64
+        with self.assertRaises(ValueError):c.validate(m)
+
+    def test_uniform_fallback_or_wrong_template_path_refused(self):
+        for key,value in (('pack_template_replaced',True),('pack_template_replaced',0),
+                          ('effective_template_relative_to_E',c.fixtures.FALLBACK_TEMPLATE),
+                          ('pack_template_relative_to_E',c.fixtures.FALLBACK_TEMPLATE)):
+            m=copy.deepcopy(ACTUAL_MANIFESTS)
+            for family in m.values():family['effective_template'][key]=value
+            with self.subTest(key=key,value=value),self.assertRaises(ValueError):c.validate(m)
+
+    def test_uniform_wrong_template_hash_refused(self):
+        for key in ('pack_template_sha256','effective_template_sha256'):
+            m=copy.deepcopy(ACTUAL_MANIFESTS)
+            for family in m.values():family['effective_template'][key]='0'*64
+            with self.subTest(key=key),self.assertRaises(ValueError):c.validate(m)
+
+    def test_uniform_wrong_picker_or_policy_refused(self):
+        for key,value in (('api_picker_sha256','0'*64),('selection_policy','borrow baseline')):
+            m=copy.deepcopy(ACTUAL_MANIFESTS)
+            for family in m.values():family['effective_template'][key]=value
+            with self.subTest(key=key),self.assertRaises(ValueError):c.validate(m)
+
     def test_encoded_prompt_corruption_refused(self):
         m=copy.deepcopy(ACTUAL_MANIFESTS);m['quality']['cases'][0]['prompt_ids'][0]=129280
         with self.assertRaises(ValueError):c.validate(m)

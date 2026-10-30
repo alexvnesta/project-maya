@@ -1,6 +1,6 @@
 {
   "utc": "2026-10-30T13:50:08.359200+00:00",
-  "status": "MAYA_S_ASSETS_VERIFIED_PACK_V3_FULL_METADATA_CPU_PASSED_ACTUAL_CONSTRUCTION_PENDING",
+  "status": "MAYA_S_METADATA_AND_IDENTICAL_INPUTS_VERIFIED_SHORT_COMPATIBILITY_SOURCE_PENDING",
   "user_authorization": "Stock Maya-S comparison first; isolated at1048576 totalcontext/262144output. No production activation in this step.",
   "factors": {
     "baseline": "current selected92/c43pack and currentdrafter",
@@ -71,14 +71,14 @@
     "partial_bytes": 519041441
   },
   "next": [
-    "Finish separatepack-v2 sparse-split metadata validator source/manualreview/newbounded CPUproof eachphysicalhost before new metadata-only admission.",
-    "Finish candidate pack/tokenizer/geometry/RAM custody and exact both-host CPUencoding after successfulconstruction.",
-    "Finish independent audit and actualbounded dispatcher qualification; only then separately admit QS0/QS1 and matchedprose/coding windows at1048576/262144.",
-    "Pause and verify Unslothworker stopped before anyprivatephase; retainselected92/c43 deployment outsideadmitted windows."
+    "Separately qualify and admit one short-only candidate compatibility CS1 at same1M/262144/32768/effort100 and existing76GiB fence; no inference has run yet.",
+    "Preserve all source/failed/CPU evidence; new compatibility code is not covered by archived P3 proofs.",
+    "After compatibility restoration and independent review, qualify four-state quality and then separately qualified timing; no automatic advancement/promotion.",
+    "Cooperatively pause Unsloth before any private model phase and resume afterwards under original download authorization."
   ],
   "no_GPU_test_or_build_started": true,
   "production_changed": false,
-  "updated_utc": "2026-10-30T17:12:17.343755+00:00",
+  "updated_utc": "2026-10-30T17:51:54.345008+00:00",
   "acquisition_cpu": {
     "controls_each_host": 43,
     "sources": {
@@ -119,7 +119,7 @@
   },
   "source_preparation": {
     "pack_guard_cpu_controls_each_physical_host": 60,
-    "actual_pack_constructed": false,
+    "actual_pack_constructed": true,
     "model_runtime_prototypes": "SOURCE_AND128_CPU_CONTROLS_PASSED_EACH_HOST_NO_MODEL_ADMISSION",
     "input_split_revision": "quality/prose/coding before FIRST CPU or GPU",
     "private_model_phase_started": false,
@@ -152,9 +152,10 @@
     "controls_each_physical_host": 40,
     "model_executed": false,
     "pause_before_private_comparison_required": true,
-    "retained_bytes_snapshot": 57163274251,
-    "retained_snapshot_utc": "2026-10-30T16:53:14Z",
-    "full_shards_verified_snapshot": 2
+    "retained_bytes_snapshot": 107714915806,
+    "retained_snapshot_utc": "2026-10-30T17:46:20.717723Z",
+    "full_shards_verified_snapshot": 3,
+    "worker_pid_dated_snapshot": 3325505
   },
   "metadata_construction_pack_v2": {
     "status": "FAILED_PRESERVED_NO_MODEL_RUN",
@@ -167,7 +168,7 @@
     "additional_source_supported_layout": "public drafter has12 source-writer alignment gaps totaling2424bytes; payloads remain untouched"
   },
   "metadata_construction_pack_v3": {
-    "status": "NEW_SOURCE_FULL_METADATA_CPU_PASSED_EACH_PHYSICAL_HOST_NO_ACTUAL_CONSTRUCTION",
+    "status": "ACTUAL_METADATA_CONSTRUCTION_PASSED_NO_MODEL_ADMISSION",
     "controls_each_host": 125,
     "groups": [
       94,
@@ -177,6 +178,52 @@
     "full_public_expanded_tensor_count": 48795,
     "exact_metadata_outputs": 8,
     "template_retained_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
-    "actual_pack_constructed": false
+    "actual_pack_constructed": true,
+    "actual_child_returncode": 0,
+    "actual_child_pid_dated_snapshot": 3379286,
+    "actual_child_seconds": 2.221887483028695,
+    "actual_result_sha256": "9d42caa2d48361b4c176df2453e5bf1d97f405deb1080f0242db23769164ae9e",
+    "actual_result": "pack-v3/construct-CPU-FIRST/pack-result.json",
+    "qualification_sha256": "9ac9ff14bb0e9ae77ac3caa38ef75ed5e5dc5d39afceee1de77430af8490d692",
+    "limitations": "Metadata output validated; no RAM/VRAM fit, model execution, speed or quality claim."
+  },
+  "candidate_input_CPU": {
+    "controls_each_physical_host": 13,
+    "source_count": 4,
+    "input_count": 772,
+    "actual_candidate_artifacts_byte_identical_each_host": true,
+    "full_A_B_requests_and_prompt_ID_arrays_match": true,
+    "raw_review": "model-v1/CANDIDATE_CPU_ASTRA_RESULT_REVIEW.json",
+    "general_template_or_model_equivalence_proved": false
+  },
+  "model_P3_CPU": {
+    "controls_each_physical_host": 145,
+    "groups": [
+      143,
+      2
+    ],
+    "source_count": 10,
+    "input_count": 850,
+    "runtime_source_sha256": "faa5bc30d2070c5d31eedd8439cc7529dd41e93b36953634ee7970c340672f07",
+    "review": "model-v1/MODEL_P3_CPU_ASTRA_RESULT_REVIEW.json",
+    "new_compatibility_source_qualified": false
+  },
+  "audit_P3_CPU": {
+    "original83_each_host_passed": false,
+    "original83_scores": {
+      "passed": 82,
+      "errors": 1
+    },
+    "diagnosis": "Supplied observed() test Mock reused mutable dictionary; real observed returns a fresh dictionary",
+    "diagnosis_review": "model-v1/AUDIT_P3_FIRST_FAILURE_ASTRA_DIAGNOSIS.json",
+    "regraded": false,
+    "corrected_groups_each_host": [
+      27,
+      56
+    ],
+    "corrected_source_count": 11,
+    "corrected_input_count": 850,
+    "corrected_review": "model-v1/AUDIT_P3_V2_CPU_ASTRA_RESULT_REVIEW.json",
+    "actual_model_logit_scan_performed": false
   }
 }

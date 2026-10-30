@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-30T16:31:33.947522+00:00",
+  "passed": true,
+  "source_map_count": 10,
+  "input_map_count": 766,
+  "FIRST_controls_each_physical_host": 128,
+  "groups": [
+    {
+      "group": "boundary",
+      "host": "darwin",
+      "controls": 126,
+      "seconds": 0.3790903339977376,
+      "raw_sha256": {
+        "receipt.json": "3095128d590a805b04385fb2658bdb954f9b0a3420ccd86715efcb84652b5cca",
+        "child.json": "b5276a96f00cca969c751dd0a07e81b8fdb3b78f3e4f14276db2d7316501f54d",
+        "child.log": "e7f65f1d14d234b13df0b2fb187f5f121b76d8e552725a6c51996bcb4efcdd8c"
+      }
+    },
+    {
+      "group": "boundary",
+      "host": "linux",
+      "controls": 126,
+      "seconds": 0.529314560815692,
+      "raw_sha256": {
+        "receipt.json": "ac3689526e272f92bb219694bb873cb47e54c03f7ce41e91f62d693bf391d94d",
+        "child.json": "9a4c2495f1e41fd98689dc8db9f99ff4df2f8f7f2c458a5098044009787a6db8",
+        "child.log": "e2715b512731d0ec9b222bb14c6495bf1322b57deb7430811cd22633fdf1b982"
+      }
+    },
+    {
+      "group": "http",
+      "host": "darwin",
+      "controls": 2,
+      "seconds": 4.048944833048154,
+      "raw_sha256": {
+        "receipt.json": "491f10b92902e0fbc221cd4f9260a594ec758327de82ce90be005ca93f7eca2b",
+        "child.json": "1801597dd61a85e2f9b2715d45d4a36e494925844ce41e17f0d0e4eabd983b64",
+        "child.log": "f29cf01f7b7b85e35e5617967d1e7175cf2b72ddb9356c8e4eafa5b3c43e041a"
+      }
+    },
+    {
+      "group": "http",
+      "host": "linux",
+      "controls": 2,
+      "seconds": 4.362005670787767,
+      "raw_sha256": {
+        "receipt.json": "7165690bf7d2bb140eb5fcfabc8d13e91b91b3b8825b973c94655a13289dfe75",
+        "child.json": "560728c1a4534ed1ff1dda54e6645de9f1cee51de752377e5e46ec9aff657815",
+        "child.log": "141f4965097251c3c51d191117521d6d6f207f4371e788c8e7a0d67ece5f057c"
+      }
+    }
+  ],
+  "scope": "NEW_OWNER_BOUNDARY_AND_REAL_B1_CPU_MOCK_ENGINE_HTTP_CONTROLS_ONLY; not a model/GPU/fit/speed admission"
+}

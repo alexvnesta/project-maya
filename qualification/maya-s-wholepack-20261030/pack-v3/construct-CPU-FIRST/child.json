@@ -1,0 +1,33 @@
+{
+  "command": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-B",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v3/construct_pack.py",
+    "--child",
+    "--qualification",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v3/construct-qualification-FIRST.json",
+    "--qualification-sha256",
+    "9ac9ff14bb0e9ae77ac3caa38ef75ed5e5dc5d39afceee1de77430af8490d692",
+    "--contract",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v3/construct-contract-FIRST.json",
+    "--output",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v3/construct-CPU-FIRST"
+  ],
+  "returncode": 0,
+  "error": null,
+  "cleanup_errors": [],
+  "CPU_limit_seconds": 30,
+  "wall_limit_seconds": 90,
+  "nice_increment": 15,
+  "Linux_AS_bytes": 536870912,
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MALLOC_ARENA_MAX": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "GPU_or_service_actions": 0,
+  "pid": 3379286,
+  "seconds": 2.221887483028695
+}
