@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-30T23:51:04.296541+00:00",
+  "decision": "SOURCE_ONLY_NEXT_PERFORMANCE_FAMILY_DESIGN_NO_EXECUTION_ADMISSION",
+  "QS1_review_sha256": "619b4d0e875fd9017e1fc94385b72d255b4befd00aa5c25f66c4426155b33230",
+  "source_pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_mode.py": "59b095f70a000fa68680114f8a93de7bc9daef3f307bff489dd53b54b294b3c0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/prose-fixtures-A.json": "72f1634f0c651dfd6e59f84b5f26f9fcdb957a599440e546097278b7b455c897",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/prose-fixtures-B.json": "d572147c2f668b7702531ec62a90b5ba9fe8e0b47ac864f05ecca8c73402c601",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/coding-fixtures-A.json": "b822da75ecc1ff7db0f0264b45ea71ce8b99687aa3ed6b0380277d67d2244f31",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/coding-fixtures-B.json": "513cebf5837290ef69171d2274240afaa8f38cc441373fb52a6c140ce3e3f4dd"
+  },
+  "budget": {
+    "startup_limit": 800,
+    "soft_total": 1000,
+    "window": 1200,
+    "cleanup": 200,
+    "QS1_native_load_observed": 746.7,
+    "QS1_actual_phase": 794.8204783247784,
+    "nominal_remaining_after_native_load": 253.3,
+    "qualification": "253.3 is arithmetic headroom before phase overhead, not an inference-time guarantee. Load may approach800 leaving less than200 for remaining work; natural fullcap outputs can exceed the window."
+  },
+  "recommended_next": "New distinct performance namespace based on current QV verified lifecycle/fence/public restoration, separate prose and coding modes; no direct old ms_mode launch. Qualify and admit prose A1 then B1 individually first, preserving original three main cases and all four first-pair lifecycle cases; reverse B2/A2 only after frozen first-pair completeness/quality criteria are met and separate admission. Coding remains its own family/window, never combined with prose.",
+  "required_delta": [
+    "Reuse exact QV outer fenced_phase/handle capture/cleanup/fault ownership and current selected restoration. Original ms_mode uses obsolete fence phase form and only runs m[cases]; it validates lifecycle_cases but never issues them.",
+    "Disable native logit dump and native dump FSIZE only for timed family; all model/context/output/effort/vision/projection/drafter/cache/chunk/RAM/fence/clock settings stay fixed.",
+    "Preserve exact frozen per-pack prose/coding manifests, no reencoding/fitting/truncation. Each mode cold8469/warm8469 then its unchanged main(169 prose or140 coding).",
+    "Prose A1/B1 append four explicit separately-scored lifecycle entries using existing pinned actual-call normalization, confirmed-prefill cancellation and recovery protocols. Run after main so they do not prewarm/change the timed sequence; do not include lifecycle in speed aggregates. Same phase clock; incomplete lifecycle means the arm/pair is not fully accepted.",
+    "Count actual native traces/IDs and tools/cancel recovery distinctly, retain raw requests/responses/T/PID/DONE/drafts/cache and output lengths. Positive draft requirement must follow existing task contracts, not be invented for short literal recovery.",
+    "Never infer natural completion from remaining seconds or alter cap32768/effort100 to fit. On deadline, cancel only own request, preserve partial/UNRUN/no retry and restore selected. No new per-case/window clock.",
+    "Freeze source/tests for owner, literal lifecycle integration, independent terminal consumer and bounded parent before both-host CPU qualification. Include full synthetic main+tool/followup+prefill-cancel/recovery success, deadline before each remaining case, cancellation/cleanup/fence restoration and no partial performance acceptance controls.",
+    "Independent audit: actual natural complete work, manual prose adequacy/ending, bounded isolated supplied+independent code correctness tests after frozen source qualification; never execute generated code in serving process. Source/pack/request equality and rates/client lengths/draft/cache explicit; unequal token paths cannot support matched-token/kernel causal gains."
+  ],
+  "no_model_or_source_implementation_performed": true,
+  "old_sources_and_failures_unchanged": true,
+  "no_performance_GPU_admission": true
+}

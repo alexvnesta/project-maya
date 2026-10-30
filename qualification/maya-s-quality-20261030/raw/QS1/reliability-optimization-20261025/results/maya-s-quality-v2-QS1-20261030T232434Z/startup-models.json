@@ -1,0 +1,24 @@
+{
+  "object": "list",
+  "data": [
+    {
+      "id": "deepseek-v4.1-flash-iq2-xs",
+      "object": "model",
+      "status": {
+        "value": "loaded"
+      },
+      "meta": {
+        "n_ctx": 1048576
+      },
+      "architecture": {
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ]
+      }
+    }
+  ]
+}

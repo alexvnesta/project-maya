@@ -1,0 +1,32 @@
+{
+  "stage": "FINITE_SCAN",
+  "passed": true,
+  "arm": "QS0",
+  "qualification_sha256": "14d2f954bfe20186561b3e0f19a2773e110871f5907623c4d291629e94f118af",
+  "native_pid": 3743014,
+  "metadata_sha256": "41f545abebf56f062107fbb376f7af1b2709f4448d2907409992d0fd0cf6ec8f",
+  "index": 2,
+  "case_id": "ms-quality-warm-text",
+  "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS0-20261030T225711Z/native/logits.2.f32",
+  "identity_before": {
+    "device": 64513,
+    "inode": 14946399,
+    "bytes": 102389760,
+    "mtime_ns": 1793401577153098308,
+    "ctime_ns": 1793401577153098308
+  },
+  "identity_after": {
+    "device": 64513,
+    "inode": 14946399,
+    "bytes": 102389760,
+    "mtime_ns": 1793401577153098308,
+    "ctime_ns": 1793401577153098308
+  },
+  "dump": {
+    "bytes": 102389760,
+    "rows": 198,
+    "sha256": "3b7c4365e52b0a778526dc953f790f16b61c67cafddf288d1bd4206dfe3d5b47",
+    "all_finite": true,
+    "token_row_alignment_claimed": false
+  }
+}
