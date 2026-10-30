@@ -1,0 +1,44 @@
+{
+  "utc": "2026-10-30T15:40:25.347891+00:00",
+  "root_entire_source_and_tests_read": true,
+  "astra_entire_source_and_tests_read": false,
+  "source_sha256": {
+    "acquire_unsloth.py": "f5d6dfc3fe1951c0f778db961f7c040184af29277a824aa4df7232a9450a3370",
+    "test_acquire_unsloth.py": "71686bee71124c11c9016734860bb9fd7ed0352e2d754920c4fa64fcac011d05",
+    "run_cpu.py": "da8453c99d49583eb136e0ec92e602f1269cffc9b1d9ab20f85b3d1120d69427"
+  },
+  "input_sha256": {
+    "decode-optimization-20261028/maya-s-comparison-v1/acquisition-authorized-v2/acquire.py": "6a399f4eec7b9cb23b7ff7aa03d60deb490787825ae92e43ccde8d40065885b5",
+    "decode-optimization-20261028/maya-s-comparison-v1/acquisition-authorized-v2/acquisition-qualification.json": "3f89fe089d629bb65b5c517908ae76a731b9020fb0a8cb02a1b1ef58472596b0",
+    "decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/ASSET_MANIFEST.json": "4fb4c0ff9c0b55f46afa15c2cbc84ee09372c85944efafb63e36a5ca6e73c73c",
+    "decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/AUTHORIZATION.json": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648"
+  },
+  "test_ids": [
+    "test_acquire_unsloth.Gate.test_combined_disk_shortfall_before_writes",
+    "test_acquire_unsloth.Gate.test_current_selected_gate_rechecked",
+    "test_acquire_unsloth.Gate.test_explicit_pause_cooperatively_defers",
+    "test_acquire_unsloth.Gate.test_foreign_or_private_owner_before_asset_mutation",
+    "test_acquire_unsloth.Gate.test_foreign_pause_policy_rejected",
+    "test_acquire_unsloth.Pure.test_bad_counter_types_sizes",
+    "test_acquire_unsloth.Pure.test_both_downloads_and_comparison_space_reserved",
+    "test_acquire_unsloth.Pure.test_changed_manifest_pin_before_parse",
+    "test_acquire_unsloth.Pure.test_changed_owner_source_before_import",
+    "test_acquire_unsloth.Pure.test_comparison_reserve_survives_download_completion",
+    "test_acquire_unsloth.Pure.test_download_progress_preserves_space_equation",
+    "test_acquire_unsloth.Pure.test_exact_current_six_shards",
+    "test_acquire_unsloth.Pure.test_new_qualification_pin_required",
+    "test_acquire_unsloth.Pure.test_rate_and_socket_deadline_not_model_timeouts",
+    "test_acquire_unsloth.Snapshot.test_ambiguous_different_inodes_rejected",
+    "test_acquire_unsloth.Snapshot.test_atomic_link_unlink_publication_not_double_counted",
+    "test_acquire_unsloth.Snapshot.test_final_budget",
+    "test_acquire_unsloth.Snapshot.test_missing_leaf_over_reserves",
+    "test_acquire_unsloth.Snapshot.test_oversize_rejected",
+    "test_acquire_unsloth.Snapshot.test_partial_budget",
+    "test_acquire_unsloth.Snapshot.test_symlink_rejected",
+    "test_acquire_unsloth.Transfer.test_new_repo_revision_and_every_byte_checksum",
+    "test_acquire_unsloth.Transfer.test_original_running_module_source_unchanged",
+    "test_acquire_unsloth.Transfer.test_transport_fault_not_retried",
+    "test_acquire_unsloth.Transfer.test_wrong_hash_retains_partial_no_publish"
+  ],
+  "scope": "FIRST new six-shard parallel downloader source/CPU only. No actual download started; no model/service/GPU action. Existing primitive source and51-control proof unchanged. Both full pending download bytes+144GiBcomparisonfloor+256MiBcushion reserved."
+}

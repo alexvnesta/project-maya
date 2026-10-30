@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-30T15:22:54.039444+00:00",
+  "decision": "BOTH_PHYSICAL_FIRST_CPU_RESULTS_REVIEWED_NO_PACK_OR_MODEL_ADMISSION",
+  "raw_pins": {
+    "INPUTS_SOURCE_ROOT_REVIEW_v2.json": "0185a981dcd4efd611363ac68909a5d14704d506938399c95ec147e5ca79e1f1",
+    "inputs-CPU-v2-darwin/receipt.json": "e7471f94ec1e0b95ff78dde37196f177041804469b6a918c17745f32a64dbee1",
+    "inputs-CPU-v2-darwin/child.json": "b86785c77d724d3bfb90bef686ef0d6548be5e549a4a746406eb1c910b60f824",
+    "inputs-CPU-v2-darwin/child.log": "0b8979229316234e44d48407e17eed09196ce88b066cd470d8e7a1b87685fcff",
+    "inputs-CPU-v2-linux/receipt.json": "ae8537a0f5a09647dd8b94f78911517df9b1a6f8892116736c3029d2bbe77dad",
+    "inputs-CPU-v2-linux/child.json": "2d933377b02bda28527299da49e7470031f0ba19b9eba79c04d07bc5985a25de",
+    "inputs-CPU-v2-linux/child.log": "8c5daf7bb4b4906d4e8714369e413653fa1e69c1581332300c874935f6435f7f",
+    "inputs-CPU-v2-darwin/encoded-baseline-fixtures.json": "01bf6bdfb1eadc2e637d83d00b57c5691d4b319e3c92028da1ce511afc14b1f3",
+    "inputs-CPU-v2-linux/encoded-baseline-fixtures.json": "01bf6bdfb1eadc2e637d83d00b57c5691d4b319e3c92028da1ce511afc14b1f3",
+    "inputs-unqualified-v1/ARCHIVE.json": "60c3ab983015e616ba5910f71779c09b276bfee38b01b7fa9109aad5d49131f7"
+  },
+  "hosts": [
+    {
+      "host": "darwin",
+      "pid": 73634,
+      "exit": 0,
+      "controls": 50,
+      "sources": 4,
+      "inputs": 762,
+      "ordered_IDs_and_maps_match": true,
+      "CPU_seconds": [
+        30,
+        30
+      ],
+      "AS_bytes": null,
+      "nice": 15,
+      "wall_seconds": 1.7314498329651542,
+      "cleanup_errors": []
+    },
+    {
+      "host": "linux",
+      "pid": 3201696,
+      "exit": 0,
+      "controls": 50,
+      "sources": 4,
+      "inputs": 762,
+      "ordered_IDs_and_maps_match": true,
+      "CPU_seconds": [
+        30,
+        30
+      ],
+      "AS_bytes": [
+        536870912,
+        536870912
+      ],
+      "nice": 15,
+      "wall_seconds": 3.1097435019910336,
+      "cleanup_errors": []
+    }
+  ],
+  "full_raw_logs_read": true,
+  "new_tests_or_imports_by_reviewer": false,
+  "source_sha256": {
+    "ms_config.py": "94339ce9e2479a79e8d38f8428f4d0d09f88f63c2c6c2bb1caac94c1d737b22d",
+    "ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "ms_inputs_cpu.py": "b4857752523db4a880caa75a57a469ee40ac87d2581ebb0139d9939f8ea9073e",
+    "test_ms_inputs.py": "5ae2e783df9a19a82c15cfd69aa3dfd653090dcece533096d3baafb926ed4aef"
+  },
+  "limits": "CPU30/LinuxAS512MiB/wall90/nice15/CUDAhidden/threads1",
+  "scope": "Baseline actual API MockEngine prompt encoding plus pureconfig/template/lifecycle guards. No candidate pack encoding, model/GPU/capacity/runtime outcome.",
+  "encoded_manifests_equal": true,
+  "encoded_bytes_equal": true,
+  "prompt_counts": {
+    "coding": [
+      8469,
+      8469,
+      140
+    ],
+    "prose": [
+      8469,
+      8469,
+      169
+    ],
+    "quality": [
+      8469,
+      8469,
+      8656,
+      8469
+    ]
+  },
+  "prose_lifecycle_counts": [
+    372,
+    465,
+    8471,
+    44
+  ],
+  "tool_call_ID_invariance_each_baseline_pack_encoder_proved": true,
+  "template_policy": {
+    "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+    "effective_template_relative_to_E": "native-vision-v2/runtime/serve/fixtures/deepseek41/chat_template.jinja",
+    "effective_template_sha256": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b",
+    "pack_template_relative_to_E": "native-vision-v2/tokenizer/chat_template.jinja",
+    "pack_template_replaced": true,
+    "pack_template_sha256": "6f9bd1f87d9dad376b4c79683934b4254396d826ae514ab0244efa904ce1d1a4",
+    "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+  },
+  "old_failed45_bothhosts_preserved_not_regraded": true
+}

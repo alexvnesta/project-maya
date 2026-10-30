@@ -1,0 +1,103 @@
+{
+  "decision": "FIRST_BOUNDED_CPU_ONLY_SOURCE_REVIEWED",
+  "source_sha256": {
+    "acquire_unsloth.py": "f20084778b5c68fbb810326643b6cb1236e953c277637560425300772578ddf1",
+    "test_acquire_unsloth.py": "9a87075484423423218dff3bec97784165a213b4cbfa89a5f9054e75a2a67e01",
+    "run_cpu.py": "9150c2acc372055d295503fc461f5319415c3223592449be1d0e2e4db6381665"
+  },
+  "input_sha256": {
+    "decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+    "decode-optimization-20261028/maya-s-comparison-v1/acquisition-authorized-v2/acquire.py": "6a399f4eec7b9cb23b7ff7aa03d60deb490787825ae92e43ccde8d40065885b5",
+    "decode-optimization-20261028/maya-s-comparison-v1/acquisition-authorized-v2/acquisition-qualification.json": "3f89fe089d629bb65b5c517908ae76a731b9020fb0a8cb02a1b1ef58472596b0",
+    "decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/ASSET_MANIFEST.json": "4fb4c0ff9c0b55f46afa15c2cbc84ee09372c85944efafb63e36a5ca6e73c73c",
+    "decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/AUTHORIZATION.json": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648"
+  },
+  "controls": 40,
+  "test_ids": [
+    "test_acquire_unsloth.Driver.test_child_only_cpu_nice_AS_bounds",
+    "test_acquire_unsloth.Driver.test_only_owned_test_group_cleanup",
+    "test_acquire_unsloth.Driver.test_source_review_checked_before_test_import",
+    "test_acquire_unsloth.Gate.test_combined_disk_shortfall_before_writes",
+    "test_acquire_unsloth.Gate.test_current_selected_gate_rechecked",
+    "test_acquire_unsloth.Gate.test_explicit_pause_cooperatively_defers",
+    "test_acquire_unsloth.Gate.test_foreign_or_private_owner_before_asset_mutation",
+    "test_acquire_unsloth.Gate.test_foreign_pause_policy_rejected",
+    "test_acquire_unsloth.Gate.test_pause_alias_checked_before_read",
+    "test_acquire_unsloth.Main.test_actual_main_success_receipt_no_service_actions",
+    "test_acquire_unsloth.Main.test_changed_selected_binding_no_lock_or_assets_write",
+    "test_acquire_unsloth.Main.test_first_transport_failure_no_second_transfer",
+    "test_acquire_unsloth.Main.test_lock_alias_rejected_before_open",
+    "test_acquire_unsloth.Pure.test_bad_counter_types_sizes",
+    "test_acquire_unsloth.Pure.test_both_downloads_and_comparison_space_reserved",
+    "test_acquire_unsloth.Pure.test_changed_manifest_pin_before_parse",
+    "test_acquire_unsloth.Pure.test_changed_owner_source_before_import",
+    "test_acquire_unsloth.Pure.test_comparison_reserve_survives_download_completion",
+    "test_acquire_unsloth.Pure.test_download_progress_preserves_space_equation",
+    "test_acquire_unsloth.Pure.test_exact_current_six_shards",
+    "test_acquire_unsloth.Pure.test_new_qualification_pin_required",
+    "test_acquire_unsloth.Pure.test_rate_and_socket_deadline_not_model_timeouts",
+    "test_acquire_unsloth.Qualification.test_actual_current_qualification_positive",
+    "test_acquire_unsloth.Qualification.test_empty_test_ids_rejected",
+    "test_acquire_unsloth.Qualification.test_executing_source_cannot_be_omitted",
+    "test_acquire_unsloth.Qualification.test_manual_source_review_required",
+    "test_acquire_unsloth.Qualification.test_raw_log_cannot_be_omitted",
+    "test_acquire_unsloth.Qualification.test_required_input_omission_rejected",
+    "test_acquire_unsloth.Qualification.test_unbounded_child_rejected",
+    "test_acquire_unsloth.Snapshot.test_ambiguous_different_inodes_rejected",
+    "test_acquire_unsloth.Snapshot.test_atomic_link_unlink_publication_not_double_counted",
+    "test_acquire_unsloth.Snapshot.test_final_budget",
+    "test_acquire_unsloth.Snapshot.test_missing_leaf_over_reserves",
+    "test_acquire_unsloth.Snapshot.test_oversize_rejected",
+    "test_acquire_unsloth.Snapshot.test_partial_budget",
+    "test_acquire_unsloth.Snapshot.test_symlink_rejected",
+    "test_acquire_unsloth.Transfer.test_new_repo_revision_and_every_byte_checksum",
+    "test_acquire_unsloth.Transfer.test_original_running_module_source_unchanged",
+    "test_acquire_unsloth.Transfer.test_transport_fault_not_retried",
+    "test_acquire_unsloth.Transfer.test_wrong_hash_retains_partial_no_publish"
+  ],
+  "astra_entire_source_and_tests_read": true,
+  "root_review_seen_before_astra_flag_freeze_sha256": "f9a9a38931f33d478a8760a83caeb2129e463c280a8df8baf1d6f7018010bcca",
+  "prior_findings_sha256": "a850c57f20987ba4d21159e51218a1bc312a1a58f13d1f1ad3188a9cfec5c004",
+  "all_prior_findings_addressed": true,
+  "findings": [],
+  "changes_reviewed": [
+    "Exact current3 source hashes,5 input hashes and40 nonempty AST IDs required by accepted qualification; exact source-review and both raw CPU triples pinned.",
+    "Own lock and pause leaf validated with unchanged safe_file; directory validation before own lock open.",
+    "Positive qualification and omission/ID/bounds negatives; actual main success, first-fault no next transfer, binding-before-write and lock-alias controls; driver bound/cleanup controls."
+  ],
+  "CPU_scope": {
+    "command": "python3 -B run_cpu.py --review-sha <final CPU_SOURCE_ROOT_REVIEW.json SHA>",
+    "outputs": [
+      "CPU-FIRST-darwin",
+      "CPU-FIRST-linux"
+    ],
+    "CPU_seconds": 30,
+    "Linux_AS_MiB": 512,
+    "wall_seconds": 90,
+    "nice_increment": 15,
+    "CUDA_hidden": true,
+    "no_actual_network": true,
+    "model_or_service_execution": false
+  },
+  "limits": [
+    "No tests/imports/transfers or remote operations executed by reviewer.",
+    "This decision admits only the exact new bounded CPU controls after ROOT final manual freeze; actual transfer requires both successful physical proofs, exact acquisition qualification and fresh physical preflight/admission.",
+    "Before support imports or large closure hashing, the parent launch must recheck no private/build/restoration phase and current selected healthy bound owner.",
+    "Long download uses separately enforced external AS512MiB/nice15/CUDA-hidden/thread limits. Six-hour deadline and periodic yielding are cooperative.",
+    "Before any private comparison, request pause and observe this process absent/own lock released. A pause marker alone does not prove I/O stopped.",
+    "Maya retained-byte snapshots are budgeting evidence only; no Maya checksum, model quality,1M capacity or performance claim.",
+    "Live Maya-S source/process and production experiment.lock are unchanged."
+  ],
+  "acquisition_contract": {
+    "repo": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
+    "revision": "8a6ec9cf118e785a362ea94ee123c61c70553be6",
+    "files": 6,
+    "bytes": 300475464795,
+    "rate_MiB_per_second": 16,
+    "wall_seconds": 21600,
+    "combined_reserve_GiB": 144,
+    "concurrent_write_cushion_MiB": 256
+  },
+  "new_code_executed": false,
+  "GPU_model_service_admission": false
+}

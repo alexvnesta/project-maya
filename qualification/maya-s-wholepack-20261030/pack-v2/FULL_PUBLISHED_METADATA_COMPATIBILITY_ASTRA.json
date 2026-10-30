@@ -1,0 +1,262 @@
+{
+  "actual_export": {
+    "base_architecture": "deepseek41",
+    "bytes": 7961638,
+    "drafter_records": 1224,
+    "integer_metadata_tensor_count": 0,
+    "later_metadata_keys": [
+      "split.count",
+      "split.no",
+      "split.tensors.count"
+    ],
+    "ple_split_needed": false,
+    "public_metadata_only": true,
+    "sha256": "50d2ee88c136d7cbbde62ef62b908571741e8fed94f6ac055cda5c65608029f9",
+    "shards": 6,
+    "tensor_directory_counts": [
+      33,
+      35,
+      35,
+      939,
+      1,
+      1
+    ],
+    "tensor_directory_total": 1044,
+    "vision_records": 266
+  },
+  "blocking_assumptions": [
+    {
+      "actual": "joyai-llm",
+      "classification": "overly narrow wrapper label assertion, not evidence of malformed tokenizer",
+      "current_requirement": "deepseek3",
+      "id": "TOKENIZER_PRE_LABEL",
+      "minimal_proposal": "Explicitly recognize only reviewed deepseek3 and joyai-llm for deepseek41/gpt2, retain raw incoming label and mapping provenance, and bind exact actual fixture/tokenizer outputs. Reject unknown/null/foreign labels/model; do not generic-prefix whitelist or edit GGUF.",
+      "source_basis": "Pinned pack_gguf.py394-409 emits deepseek3 regardless of incoming label; pinned ST69-78 explicitly documents shared DeepSeek3/JoyAI sequential regex. Independent immutable llama.cpp branch agrees at commit listed below. Exact generated four tokenizer files match selected baseline bytes."
+    },
+    {
+      "actual": {
+        "bin_bytes": 7967616768,
+        "gaps": [
+          {
+            "bytes": 160,
+            "end": 173466624,
+            "next": "mtp.0.hc_attn_fn",
+            "previous": "mtp.0.hc_attn_base",
+            "start": 173466464
+          },
+          {
+            "bytes": 244,
+            "end": 175432960,
+            "next": "mtp.0.hc_ffn_base",
+            "previous": "mtp.0.hc_attn_scale",
+            "start": 175432716
+          },
+          {
+            "bytes": 160,
+            "end": 175433216,
+            "next": "mtp.0.hc_ffn_fn",
+            "previous": "mtp.0.hc_ffn_base",
+            "start": 175433056
+          },
+          {
+            "bytes": 244,
+            "end": 177399552,
+            "next": "mtp.0.main_norm.weight",
+            "previous": "mtp.0.hc_ffn_scale",
+            "start": 177399308
+          },
+          {
+            "bytes": 160,
+            "end": 2840916736,
+            "next": "mtp.1.hc_attn_fn",
+            "previous": "mtp.1.hc_attn_base",
+            "start": 2840916576
+          },
+          {
+            "bytes": 244,
+            "end": 2842883072,
+            "next": "mtp.1.hc_ffn_base",
+            "previous": "mtp.1.hc_attn_scale",
+            "start": 2842882828
+          },
+          {
+            "bytes": 160,
+            "end": 2842883328,
+            "next": "mtp.1.hc_ffn_fn",
+            "previous": "mtp.1.hc_ffn_base",
+            "start": 2842883168
+          },
+          {
+            "bytes": 244,
+            "end": 2844849664,
+            "next": "mtp.1.ffn.experts.0.w1.weight",
+            "previous": "mtp.1.hc_ffn_scale",
+            "start": 2844849420
+          },
+          {
+            "bytes": 160,
+            "end": 5424808960,
+            "next": "mtp.2.hc_attn_fn",
+            "previous": "mtp.2.hc_attn_base",
+            "start": 5424808800
+          },
+          {
+            "bytes": 244,
+            "end": 5426775296,
+            "next": "mtp.2.hc_ffn_base",
+            "previous": "mtp.2.hc_attn_scale",
+            "start": 5426775052
+          },
+          {
+            "bytes": 160,
+            "end": 5426775552,
+            "next": "mtp.2.hc_ffn_fn",
+            "previous": "mtp.2.hc_ffn_base",
+            "start": 5426775392
+          },
+          {
+            "bytes": 244,
+            "end": 5428741888,
+            "next": "mtp.2.markov_head.embed.weight",
+            "previous": "mtp.2.hc_ffn_scale",
+            "start": 5428741644
+          }
+        ],
+        "padding_bytes": 2424,
+        "tensor_bytes": 7967614344
+      },
+      "classification": "valid source-defined writer alignment rejected by wrapper",
+      "current_requirement": "Perfect adjacent coverage with no gaps",
+      "id": "DRAFTER_ALIGNMENT",
+      "minimal_proposal": "Drafter-only exact JSON-order alignment rule: beginning0; each ordinary/new-role offset=align_up(previous_end,256); same-role expert offset=previous_end; exact block/role/expert coverage/order/shape/type; no overlap/trailing bytes. Preserve gap manifest. Vision remains contiguous. Do not assert observed padding bytes are zero (payload not read), or accept arbitrary holes.",
+      "source_basis": "Pinned drafter_pack.py ALIGN=256; requant() pads before every dense/new expert-role group and keeps same-role experts adjacent, with no final pad. Actual JSON dense=Q8_0, experts=keep matches this path; all gaps are 160 or244 bytes following HC base/scale."
+    }
+  ],
+  "complete_tokenizer_asset_comparison": {
+    "add_bos": false,
+    "add_eos": false,
+    "candidate_template": {
+      "characters": 18390,
+      "content_blocks_image_and_tool_result_paths_present": true,
+      "effort100_integer_supported_in_source": true,
+      "existing_API_picker_expected": "pack path, swappedFalse because template contains spaced DSML calls marker; confirm by actual bounded CPU encoding later",
+      "same_as_API_fallback": false,
+      "same_as_baseline": false,
+      "sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16"
+    },
+    "derived_file_sha256": {
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+    },
+    "emitted_pre": "deepseek3",
+    "four_packer_derived_files_byte_identical_to_baseline": true,
+    "incoming_model": "gpt2",
+    "incoming_pre": "joyai-llm",
+    "merge_bad_pair_count": 0,
+    "merge_duplicate_count": 0,
+    "merge_unknown_vocab_components": 0,
+    "merges_count": 127741,
+    "native_path": "Selected ds4_main serve accepts GEN/GENI token IDs; API ST performs text tokenization. No new native tokenizer mapping is required.",
+    "special_ids": {
+      "bos": 0,
+      "eos": 1,
+      "pad": 1
+    },
+    "token_type_counts": {
+      "1": 127997,
+      "3": 1278,
+      "4": 5
+    },
+    "vocab_count": 129280,
+    "vocab_unique": 129280
+  },
+  "decision": "SOURCE_DIAGNOSIS_AND_BOUNDED_REPAIR_PROPOSAL_ONLY_NO_CONSTRUCTOR_OR_MODEL_ADMISSION",
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/candidate/src/ds4/ds4_main.cpp": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/candidate/src/ds4/ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v2/construct-CPU-FIRST/child.json": "1dcea2d7397e96012c22f1efb796ff7464a0884694071d405e47709cc8a36e48",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v2/construct-CPU-FIRST/child.log": "9450145828ee7f04c41e4a01961cddd0c9f1c7eafbfdc8eca0f039c2179f574d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v2/construct-qualification-FIRST.json": "e4d97a1ac5b8afd383b806028fa3746d689e140c2432e7db76ad5d576501cedc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v2/construct_pack.py": "5aea393ce529ea361888688387164a1a3d3c092275e3d630887b6ec01fb688aa",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v2/pack_guard.py": "8fe864d885162a55bd936a072889cd5ba44743e26434c1878419fe2efd728a2b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v2/published-metadata-EXPORTED-v2-receipt.json": "0824f9412145f8854eff7951bcc63f2525a08991829cdb692bdbb3497d18b60b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v2/published-metadata-EXPORTED-v2.json": "50d2ee88c136d7cbbde62ef62b908571741e8fed94f6ac055cda5c65608029f9",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v2/published-metadata-FIRST-export.json": "d0c870d2e79defa3d5e2943039533c0578d05337854a33060ff8918c84b01ed6",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/runtime/serve/dsml.py": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/runtime/serve/fixtures/deepseek41/chat_template.jinja": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/runtime/serve/server.py": "b1be40294f6c49692829ad5f85a7aa2867218180fdc8fbc9bef7710371ba3b9f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/runtime/tools/dsv41/drafter_pack.py": "c2acc64df00fd4157409890b4fcec485876ba9fb4b266303bd8e9ee97b2084c5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/runtime/tools/dsv41/pack_gguf.py": "6784a50c4252f0d3af36cf04f5d212524dbf0800dac2d3ea633290d044a18fdf",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/runtime/tools/strata_tokenizer.py": "6db1ea62d3edbaa64dce139088146ccf370933998d5f997cd5f41a39300075a6",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/tokenizer/chat_template.jinja": "6f9bd1f87d9dad376b4c79683934b4254396d826ae514ab0244efa904ce1d1a4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/tokenizer/merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/tokenizer/token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/native-vision-v2/tokenizer/vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+  },
+  "file_payload_counts_not_memory_fit": {
+    "Engram_tables": 161284798500,
+    "dense_trunk": 9167339968,
+    "drafter_padding": 2424,
+    "drafter_tensors": 7967614344,
+    "routed": 169019965440,
+    "vision": 970536960
+  },
+  "limitations": [
+    "No tensor payload values examined; source offsets/geometry alone cannot certify weights or quantization quality.",
+    "No new controlled code execution. Source-only review cannot guarantee future CPU/constructor success.",
+    "Primary upstream regex branch and tokenizer byte equality do not establish arbitrary input equivalence across implementations.",
+    "Candidate template is materially different; future actual CPU fixture rendering is required.",
+    "No additional live production observation was made by reviewer."
+  ],
+  "other_static_constructor_blockers_found": [],
+  "p2_actual_failure": {
+    "GPU_or_service_actions": 0,
+    "cleanup_errors": [],
+    "error": null,
+    "output_creation_not_reached": true,
+    "pid": 3364695,
+    "returncode": 1,
+    "seconds": 1.4187258090823889,
+    "site": "pack_guard.header_set line170 tokenizer.ggml.pre literal deepseek3"
+  },
+  "preservation": "P1 and P2 actual failed attempts remain failed. This report neither regrades nor authorizes repeating them. Export SyntaxError and successful separately bounded public-metadata read remain separately preserved.",
+  "remaining_constructor_paths_reviewed": {
+    "Engram": "Layers1,14; tables Q6_K with256columns/384006168 and384016682rows; complete token_map129280/head8/head_dim256/ngram4/mult8/primes48/offsets48 in KV. No supplemental Engram search, PLE split or integer payload extraction needed.",
+    "Header": "All six parsed before observed pre-label failure. Split/index/count, duplicate/OOB/block/alignment/type guards retained. Export sizes and asset hashes remain subordinate to fresh actual custody checks.",
+    "cache": "43 compress ratios; KV source2,8,14,20; index source2,8,14,20,24,28,32,36. Matching actual compressor/index tensor layers present. Does not prove buffer fit.",
+    "expected_output": "48,795 expanded tensor records predicted by source arithmetic. Four tokenizer output bytes independently equal baseline; candidate template must remain its own. Exact ds4.txt/tensors.txt/engram.bin/all8 output bytes still require actual-fixture controlled CPU end-to-end proof, not a claim from source-only review.",
+    "geometry": "Actual1,048,576 context; vocab129280; hidden5120;40layers;384experts/top6/FF2304;64heads/512head/64rope;Qrank1280/Orank1024/groups8/HC4/window128;DSpark5/128/top3/rank256/noise128799/targets37,38,39. All current strict GEOMETRY fields present and consistent.",
+    "inventory": "Explicit six-shard + public dspark + selected vision sources only; preserve exact inventory exclusion of sibling drafterGGUF/mmproj/Engram/overrides and immutable acquired full-asset SHA/stat custody.",
+    "supplemental": "All1224 drafter records are mtp.0..2;128expertsx3roles per block MXFP4, Q8_0 matrix/BF16/F32 dense fields, valid head shapes;266 selected vision records, contiguous970536960bytes/image129264. Drafter adjacency assertion is the explicit unresolved blocker above.",
+    "tensor_mapping": "All38 raw role/shape families supported by pinned LAYER/GLOBAL; unique1044 raw names; exactly40x3 routed containers,384experts each with proper w1/w3[2304,5120] andw2[5120,2304]; dense/global shapes match selected load_dense requirements. No unsupported type or foreign mapped role found in static metadata."
+  },
+  "required_next_CPU_proof_before_constructor": [
+    "New separately frozen repair namespace preserving failed P1/P2 sources, raw attempts, quals and export receipts; target only still-absent original pack-FIRST.",
+    "Pin entire actual 50d2 metadata fixture, all6 actual asset SHA/size/data-start directories, drafter/vision JSON, packer/tokenizer/drafter-writer/DSML sources and normalization provenance.",
+    "Use full actual metadata as header fixtures, no tensor payload/huge sparse file creation. Exercise ALL header/geometry/normalization/supplemental/mapping/expected-output paths and actual pinned packer main in fresh temporary metadata directories with only file/header access substituted; compare ALL8 outputs byte-for-byte and complete source-file map.",
+    "Meaningful negatives: unknown/null/pre/model; malformed merge/type/special/template; sparse split conflicts/duplicates/OOB; changed DSpark geometry/roles; padding shifted, nonalignment/overlap/trailing, expert-role internal gap/ordering/count; missing dense/cache/Engram/vision role; exact current custody/path aliases.",
+    "Each physical host must execute matching new bounded source/IDs/maps and actual metadata fixture; use original CPU30/AS512Linux/wall90/nice15 bounds. No constructor retry until raw proofs reviewed and new immutable qualification/actual fresh guard admitted.",
+    "After metadata pack exists, separately run already planned candidate-specific actual tokenizer/API fixture encoding, including images, typed tools/followup callID invariance, full cap/effort100. Record candidate effective template and per-pack prompt IDs; do not force baseline prompt IDs.",
+    "Preserve1M/262144 profile but no1M allocation, allRAM fit, numerical-quality, throughput or deployment claim. Resource admission and model comparison remain separate."
+  ],
+  "review_method": "Full guard/packer path source review; complete exported scalar/array geometry, all 38 raw tensor role/shape families, supplemental role/shape families and offset summaries, complete candidate template manual read; stdlib JSON/AST-literal/data comparisons only. No guard/packer/tokenizer module imports, model load or test execution. Not a substitute for future exact real-metadata CPU fixture execution.",
+  "reviewed_code_imports_tests_encoding_constructor_model_or_remote_host_actions": 0,
+  "reviewer": "same Astra architecture reviewer",
+  "schema": "published-maya-s-full-metadata-source-assessment-v1",
+  "source_or_test_edits": false,
+  "upstream_primary_source": {
+    "commit": "05fa625eac5bbdbe88b43f857156c35501421d6e",
+    "repository": "ggml-org/llama.cpp",
+    "reviewed_locations": [
+      "288-295 same sequential regex list for DEEPSEEK3_LLM/HUNYUAN_DENSE/JOYAI_LLM",
+      "1914-1916 joyai-llm name selects JOYAI_LLM with clean_spaces=false"
+    ],
+    "scope": "Regex source compatibility only; not full tokenizer implementation or model numerical equivalence.",
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/05fa625eac5bbdbe88b43f857156c35501421d6e/src/llama-vocab.cpp"
+  },
+  "utc": "2026-10-30T16:56:56.523203+00:00"
+}

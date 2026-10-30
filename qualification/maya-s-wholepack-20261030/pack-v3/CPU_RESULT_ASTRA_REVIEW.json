@@ -1,0 +1,108 @@
+{
+  "utc": "2026-10-30T17:11:47.723745+00:00",
+  "decision": "FIRST_125_CONTROLS_EACH_PHYSICAL_HOST_REVIEWED_CPU_ONLY",
+  "passed": true,
+  "source_sha256": {
+    "pack_guard.py": "8d143f00667032a37bd7fc0f26be7ce3e2cf117fbf1cfed7339e742dd4d39bfb",
+    "test_pack_guard.py": "c67243584aec60b213cb34716376bc5f131e53b14c6fd95a89018a0469a0dc26",
+    "run_cpu.py": "65619eb8273dfe6df63ac603ec40c70f084bab6a762c3a3c5ccd46ea544f4893",
+    "construct_pack.py": "8d6c9a76c433f3f4663980dfcb6f455960ed2fba557f16908decd7ae992528b5",
+    "test_construct_pack.py": "80fe9029e5a002f6e80f6034ed7f3342c4492dcc6025b1026cbf14862003319a",
+    "construct_cpu.py": "20b4e7a93c3026649d52473968f1e8714f445769aea4aa8251bae4a9a0214888"
+  },
+  "source_review_sha256": "8d58982dd38598a97dc8ce18f4427e30a40fc7d0b5b4450a198df3d236819448",
+  "root_source_review_sha256": {
+    "CPU_SOURCE_ROOT_REVIEW.json": "8dbbcda7ca8e66c93ae776dfd0aa12ebdbf105e95670e5e8cc6be9d0acfa842b",
+    "CONSTRUCT_SOURCE_ROOT_REVIEW.json": "36b09b77e17d2e84f2e4a370e86152d4aff4f4f32a4ca07060da5211d760aa0f"
+  },
+  "root_result_review_sha256": "c2859fe103e14cfa56e421f9786f8b2358d093926563b9ad91c24ee2cbe6d141",
+  "raw": [
+    {
+      "group": "CPU-FIRST",
+      "host": "darwin",
+      "controls": 94,
+      "pid": 36548,
+      "returncode": 0,
+      "wall_seconds": 2.643264749960508,
+      "error": null,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "receipt.json": "1a8d23e578d6af0fb960965f839c0e6089ce01a2b6e81a248804dced71622dc3",
+        "child.json": "2443238db802c0c9b992510a86783a7e39c679b03802bea1692e511f96a45003",
+        "child.log": "f20cfce55469aba9ad43d0d06236e7795dd4d5367ccaf295f5bdc126c5bbe2e3"
+      }
+    },
+    {
+      "group": "CPU-FIRST",
+      "host": "linux",
+      "controls": 94,
+      "pid": 3374171,
+      "returncode": 0,
+      "wall_seconds": 5.345601334935054,
+      "error": null,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "receipt.json": "57217668b2fe3cee648a72c92f86248e8cad234f49c24c9211ec891798a68316",
+        "child.json": "5970e679e9c5cb6a58dfdd0ff20471b7ab311f5061567301e1ee86f540516f8b",
+        "child.log": "76985f19e2bd8dd39c477c51da35a022afe45c49edd582e18abb24922308976d"
+      }
+    },
+    {
+      "group": "CONSTRUCT-FIRST",
+      "host": "darwin",
+      "controls": 31,
+      "pid": 36547,
+      "returncode": 0,
+      "wall_seconds": 0.26482954097446054,
+      "error": null,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "receipt.json": "af3a02696b3ea95ef0c66666aca26c368501e5bf846a28096ed0d862e04f3133",
+        "child.json": "d978ddb7fe5a1d16535cbbed1b7eb46d9e4946a949a684b108643d10299066cd",
+        "child.log": "d688dbb8ac8ab07918af7a306c126c3606d9c054dd2cd9b9382e390102e14fb4"
+      }
+    },
+    {
+      "group": "CONSTRUCT-FIRST",
+      "host": "linux",
+      "controls": 31,
+      "pid": 3374170,
+      "returncode": 0,
+      "wall_seconds": 0.43085820018313825,
+      "error": null,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "receipt.json": "18fafa9b8b3b21c2a0d31fa503241d8f3f481d30f7893f948c9f78d28ca8c100",
+        "child.json": "e51c229fa6cb57f5ce6f512e59032e83dd96dd7243b84877065d6457413e9aca",
+        "child.log": "9f520f3b3aeb004ff7f9cd40926b5de0d987bb7f4069d675278bb22cbd03e7ba"
+      }
+    }
+  ],
+  "checks": {
+    "all_four_full_logs_manually_read": true,
+    "all_receipts_children_full_maps_and_fields_read": true,
+    "exact_ordered_94_and_31_ids_match_frozen_source_each_host": true,
+    "actual_current_six_source_and_seven_input_hashes_match": true,
+    "receipt_child_source_input_id_maps_match_root_and_astra_freezes": true,
+    "all_twelve_raw_hashes_match_root_result": true,
+    "all_children_exit0_error_null_cleanup_empty": true,
+    "CPU30_wall90_nice15_CUDAhidden_thread_limits_observed": true,
+    "Linux_AS512MiB_observed_Darwin_no_AS_claim": true,
+    "no_source_import_or_test_execution_by_reviewer": true
+  },
+  "evidence_scope": [
+    "94 guard controls per host include complete acquired public metadata,48,795 mapped rows,eight expected output files, exact JoyAI tokenizer/template fingerprint, writer-aligned12 gaps totaling2424 bytes, and altered metadata negatives.",
+    "Actual pinned packer.main ran in CPU tests against metadata substitutions/tiny placeholders with payload-open rejection and independent complete output-byte comparison.",
+    "31 constructor controls per host cover qualification, source/receipt custody, fresh namespaces, phase rejection, bounds, first failure and process-group cleanup under mocks."
+  ],
+  "limitations": [
+    "This is source/CPU evidence only; no actual pack-v3 production constructor is admitted by this report. A separate immutable qualification and fresh physical guarded metadata-constructor admission remain required.",
+    "No weight payloads, native model, serving actions, GPU, candidate encoding or model quality/performance were exercised.",
+    "Actual production GGUF directory parsing remains required during separately admitted construction; CPU complete-metadata tests use the exported directory objects.",
+    "No tokenizer/model numerical-equivalence or 1M allocation/256K generation/RAM/VRAM-fit claim. Published template remains distinct and requires pack-specific encoding.",
+    "Earlier pack-v1/pack-v2 actual failed attempts remain failed and unchanged. Future runtime path/custody edits require their own exact source/CPU proof; this result does not qualify those edits."
+  ],
+  "findings": [],
+  "constructor_admitted": false,
+  "model_or_GPU_admitted": false
+}

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/construct_pack.py", line 213, in <module>
+    if args.child: raise SystemExit(child(Path(args.contract), Path(args.qualification), args.qualification_sha256, Path(args.output)))
+                                    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/construct_pack.py", line 184, in child
+    result = g.construct(value, gate, run=True)
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack_guard.py", line 351, in construct
+    guard();p=load_packer();gs=[Header(root/x['path'],guard) for x in m['files'][:6]];kv=header_set(gs)
+                                                                                         ~~~~~~~~~~^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack_guard.py", line 156, in header_set
+    k=g.kv;require(k.get('general.architecture')=='deepseek41','architecture')
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack_guard.py", line 44, in require
+    if not ok: raise ValueError(message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: architecture

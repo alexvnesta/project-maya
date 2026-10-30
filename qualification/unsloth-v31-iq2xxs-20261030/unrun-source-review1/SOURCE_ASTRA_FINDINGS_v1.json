@@ -1,0 +1,75 @@
+{
+  "decision": "PRE_FIRST_SOURCE_FINDINGS_NO_TRANSFER_ADMISSION",
+  "source_and_asset_sha256": {
+    "acquire_unsloth.py": "f5d6dfc3fe1951c0f778db961f7c040184af29277a824aa4df7232a9450a3370",
+    "test_acquire_unsloth.py": "71686bee71124c11c9016734860bb9fd7ed0352e2d754920c4fa64fcac011d05",
+    "run_cpu.py": "da8453c99d49583eb136e0ec92e602f1269cffc9b1d9ab20f85b3d1120d69427",
+    "ASSET_MANIFEST.json": "4fb4c0ff9c0b55f46afa15c2cbc84ee09372c85944efafb63e36a5ca6e73c73c",
+    "AUTHORIZATION.json": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648"
+  },
+  "root_review_sha256": "3da931118adc77db484fd969980ddaf83c87d79c25ca8ec04ef9a4a4252a87d5",
+  "ordered_test_ids": [
+    "test_acquire_unsloth.Gate.test_combined_disk_shortfall_before_writes",
+    "test_acquire_unsloth.Gate.test_current_selected_gate_rechecked",
+    "test_acquire_unsloth.Gate.test_explicit_pause_cooperatively_defers",
+    "test_acquire_unsloth.Gate.test_foreign_or_private_owner_before_asset_mutation",
+    "test_acquire_unsloth.Gate.test_foreign_pause_policy_rejected",
+    "test_acquire_unsloth.Pure.test_bad_counter_types_sizes",
+    "test_acquire_unsloth.Pure.test_both_downloads_and_comparison_space_reserved",
+    "test_acquire_unsloth.Pure.test_changed_manifest_pin_before_parse",
+    "test_acquire_unsloth.Pure.test_changed_owner_source_before_import",
+    "test_acquire_unsloth.Pure.test_comparison_reserve_survives_download_completion",
+    "test_acquire_unsloth.Pure.test_download_progress_preserves_space_equation",
+    "test_acquire_unsloth.Pure.test_exact_current_six_shards",
+    "test_acquire_unsloth.Pure.test_new_qualification_pin_required",
+    "test_acquire_unsloth.Pure.test_rate_and_socket_deadline_not_model_timeouts",
+    "test_acquire_unsloth.Snapshot.test_ambiguous_different_inodes_rejected",
+    "test_acquire_unsloth.Snapshot.test_atomic_link_unlink_publication_not_double_counted",
+    "test_acquire_unsloth.Snapshot.test_final_budget",
+    "test_acquire_unsloth.Snapshot.test_missing_leaf_over_reserves",
+    "test_acquire_unsloth.Snapshot.test_oversize_rejected",
+    "test_acquire_unsloth.Snapshot.test_partial_budget",
+    "test_acquire_unsloth.Snapshot.test_symlink_rejected",
+    "test_acquire_unsloth.Transfer.test_new_repo_revision_and_every_byte_checksum",
+    "test_acquire_unsloth.Transfer.test_original_running_module_source_unchanged",
+    "test_acquire_unsloth.Transfer.test_transport_fault_not_retried",
+    "test_acquire_unsloth.Transfer.test_wrong_hash_retains_partial_no_publish"
+  ],
+  "controls": 25,
+  "full_source_tests_driver_manifest_authorization_manually_read": true,
+  "tests_or_imports_executed": false,
+  "model_GPU_or_remote_actions": false,
+  "findings": [
+    {
+      "id": "Q-EXACT-MAP",
+      "scope": "qualified()",
+      "finding": "Accepted qualification checks only maps and IDs supplied by q. It does not require current exact executing source inventory/hashes, current exact CPU inputs or current nonempty AST test IDs. Missing current source or empty IDs may internally match supplied receipts.",
+      "required": "Bind exact three source names/current hashes, explicit current input names/current hashes, root source review and actual ordered AST IDs. Add actual positive qualification and source/input omission, empty-ID and bound negatives."
+    },
+    {
+      "id": "OWN-LOCK-ALIAS",
+      "scope": "main()/Gate",
+      "finding": "download.lock is opened without unchanged primitive safe_file validation. The mutable pause leaf is also read without alias validation.",
+      "required": "Validate HERE directory and own lock leaf with unchanged real_directory/safe_file before open, and pause leaf before read. Preserve no production experiment.lock access."
+    },
+    {
+      "id": "MAIN-COVERAGE",
+      "scope": "tests/CPU input map",
+      "finding": "Current25 tests do not exercise actual main() or accepted qualification. Gate tests read the Maya-S manifest beyond the four declared CPU inputs.",
+      "required": "Small actual main mocks: success, first transfer fault with no next transfer, changed binding before write; add exact Maya manifest to declared CPU input map."
+    }
+  ],
+  "confirmed_design": [
+    "Private imported immutable range/SHA module leaves running Maya-S source and process untouched.",
+    "Exact six new shards/revision300475464795 bytes,16MiB/s,21600s cooperative deadline.",
+    "Combined reservation formula includes remaining bytes of both downloads plus144GiB and256MiB cushion; other-model retained snapshot is budgeting only, not checksum custody.",
+    "Same-inode link/unlink publication is counted once; inconsistent dual leaves reject.",
+    "No native/build/model/service entry point; own acquisition lock only after alias correction."
+  ],
+  "operational_limits": [
+    "Parent must perform fresh phase/selected-binding/root and external preimport full closure verification before starting new source.",
+    "Download AS512MiB/nice15/CUDA-hidden/thread controls are prospective external launcher requirements; CPU proof limits do not themselves apply to long transfer.",
+    "Before a private comparison, write a qualified pause marker and wait for the download process to terminate/release its own lock. Periodic cooperative gates are not atomic cancellation.",
+    "No new transfer admission or source edits by reviewer."
+  ]
+}

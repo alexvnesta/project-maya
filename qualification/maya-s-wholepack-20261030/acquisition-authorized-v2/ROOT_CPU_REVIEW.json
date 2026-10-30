@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-30T14:15:04.574000+00:00",
+  "decision": "ROOT_FIRST51_EACH_PHYSICAL_HOST_PASSED_RAW_LOGS_AND_SOURCE_IDS_LIMITS_REVIEWED",
+  "source_map": {
+    "acquire.py": "6a399f4eec7b9cb23b7ff7aa03d60deb490787825ae92e43ccde8d40065885b5",
+    "test_acquire.py": "912efc6c733ee1a1d61e4ae7e12a6ac84c3fe882446ac8b90f2c1a08c2f5163a",
+    "run_cpu.py": "38461168f90848950dbca0279fb54f129063e2c860892a40ef8dbdc82b57c319",
+    "ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+    "AUTHORIZATION.json": "cb2698ff10b5bd42b029968f20f59aa78d3d6924b4b8a4b5548bc3b28e78ce5a"
+  },
+  "raw": {
+    "CPU-FIRST-mac.json": "c27ed87ff18d377f3f94760fb8a879a331fc498cb5d6dd1e02790e74fbc7887d",
+    "CPU-FIRST-mac.log": "b740f748087d55dbce15e679ffeb95af06817d8a43d90381966cae2ae281a81c",
+    "CPU-FIRST-ubuntu.json": "a27c6bc46323f95e4c29245eea0d3b5367b3682d552872dbbd6a92b038a5b6c1",
+    "CPU-FIRST-ubuntu.log": "17f9d678bd510785c37b72a5b295e80f9713bfedb855b3b342bb2c78c28ea7f5"
+  },
+  "before_after_exact_sources_checked": true,
+  "scope": "New active-inference authorization and versioned retained-asset resume; no GPU/model qualification."
+}

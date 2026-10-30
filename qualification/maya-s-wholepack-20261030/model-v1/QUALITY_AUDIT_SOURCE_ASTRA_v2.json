@@ -1,0 +1,148 @@
+{
+  "decision": "SOURCE_FROZEN_FOR_ROOT_FULL_READ_BEFORE_FIRST_CPU",
+  "source_sha256": {
+    "ms_quality_audit.py": "9ce588341f83e0aa4a4aa7292d8641a8683a95af96214074f37fe50acf1db737",
+    "test_ms_quality_audit.py": "04eba87b31b7d9654e118890d21bf3084a65dd0f85660282856250c640ae23af"
+  },
+  "test_ids": [
+    "test_ms_quality_audit.Admission.test_actual_audit_phase_refusal_before_qualification",
+    "test_ms_quality_audit.Admission.test_busy_before_binding_scan",
+    "test_ms_quality_audit.Admission.test_old_arm_refused_before_support",
+    "test_ms_quality_audit.Admission.test_phase_before_host_or_heavy_hash",
+    "test_ms_quality_audit.Cases.test_actual_raw_native_SSE_typed_state_reconciliation",
+    "test_ms_quality_audit.Cases.test_busy_blocks_before_any_finite_scan",
+    "test_ms_quality_audit.Cases.test_changed_native_pid_request_or_DONE_refused",
+    "test_ms_quality_audit.Cases.test_nonfinite_or_changed_size_stops_scan",
+    "test_ms_quality_audit.Cases.test_saved_phase_row_mutation_refused",
+    "test_ms_quality_audit.Cases.test_scan_keeps_variable_batch_rows_not_token_alignment",
+    "test_ms_quality_audit.Cases.test_stored_rate_uses_source_operation_order",
+    "test_ms_quality_audit.Cases.test_typed_answer_float_is_not_integer",
+    "test_ms_quality_audit.Cases.test_wrong_reuse_or_zero_draft_refused",
+    "test_ms_quality_audit.Contracts.test_alias_and_hardlink_refused",
+    "test_ms_quality_audit.Contracts.test_dependency_pin_and_origin_before_import",
+    "test_ms_quality_audit.Contracts.test_four_case_no_partial_retry_or_unrun",
+    "test_ms_quality_audit.Contracts.test_unique_JSON_and_no_nonfinite",
+    "test_ms_quality_audit.Contracts.test_window_exact_command_and_clean_exit",
+    "test_ms_quality_audit.Fence.test_OOM_not_cleared_by_success_label",
+    "test_ms_quality_audit.Fence.test_changed_limits_or_counter_types",
+    "test_ms_quality_audit.Fence.test_complete_fence_and_collection",
+    "test_ms_quality_audit.Fence.test_foreign_invocation_or_children_still_open",
+    "test_ms_quality_audit.Fence.test_old_properties_and_collection_are_required",
+    "test_ms_quality_audit.Fence.test_restoration_cannot_substitute_prior_or_unit_identity",
+    "test_ms_quality_audit.SSE.test_edited_content_or_reasoning_refused",
+    "test_ms_quality_audit.SSE.test_error_length_or_tool_delta_refused",
+    "test_ms_quality_audit.SSE.test_missing_or_duplicate_DONE_refused",
+    "test_ms_quality_audit.SSE.test_saved_events_usage_timings_cannot_diverge",
+    "test_ms_quality_audit.SSE.test_split_content_and_reasoning_reconstructed",
+    "test_ms_quality_audit.Terminal.test_changed_dump_identity_rejected_before_scan",
+    "test_ms_quality_audit.Terminal.test_changed_raw_evidence_or_source_refuses_scan",
+    "test_ms_quality_audit.Terminal.test_child_bounds_and_result_map_cannot_be_invented",
+    "test_ms_quality_audit.Terminal.test_first_attempt_marker_blocks_replay",
+    "test_ms_quality_audit.Terminal.test_full_terminal_success_keeps_real_byte_and_case_checks",
+    "test_ms_quality_audit.Terminal.test_missing_or_failed_child_prevents_advancement",
+    "test_ms_quality_audit.Terminal.test_one_scan_reads_only_its_exact_dump",
+    "test_ms_quality_audit.Terminal.test_terminal_nonfinite_bytes_fail_without_mocking_scan",
+    "test_ms_quality_audit.Terminal.test_terminal_raw_public_SSE_failure_not_hidden_by_passed_state",
+    "test_ms_quality_audit.Tokenizer.test_changed_current_bytes_or_mismatched_pin_refused",
+    "test_ms_quality_audit.Tokenizer.test_every_tokenizer_and_template_pin_is_required",
+    "test_ms_quality_audit.Tokenizer.test_exact_fallback_and_unswapped_template_bytes",
+    "test_ms_quality_audit.Tokenizer.test_template_traversal_and_selection_substitution_refused",
+    "test_ms_quality_audit.Tokenizer.test_tokenizer_extra_file_or_alias_refused"
+  ],
+  "controls": 43,
+  "manual_read_entire_new_source_and_all_test_bodies": true,
+  "AST_parse_only": true,
+  "tests_imports_or_generated_code_executed": false,
+  "live_model_remote_or_service_actions": false,
+  "supersedes_unexecuted_source_review_sha256": "c0e774cdfd67f94b2a9095c8adac31ab99b8164a70b9b6a8865c273a1d9f6752",
+  "changes": [
+    "Explicit exact five tokenizer source membership plus current bytes, pack/effective template path and SHA, unchanged API picker and fallback SHA membership. Reject omission, mutation, extra names, aliases, foreign template and untyped swap flag.",
+    "Fence matches normalized max/decimal properties to raw before/after unit properties; binds same invocation/cgroup/fragment and collection receipt to original invocation/exact drop-in directory.",
+    "Metadata audit now reads only metadata/stat/token/trace bytes, no float arrays; passed=false until all four separate scan results and successful bounded child receipts assemble.",
+    "Synthetic full-terminal orchestration exercises actual raw JSON/SSE/native reconciliation, tokenizer/config/fence/resource/public close validators, small exact real float scans, and final assembly. Live owner/qualification/source-observation/fixture-size-range adapters explicitly mocked."
+  ],
+  "offline_stage_contract": {
+    "module": "ms_quality_audit.py",
+    "common_argv": [
+      "--arm",
+      "QS0|QS1"
+    ],
+    "stages": [
+      {
+        "argv": [
+          "--stage",
+          "metadata"
+        ],
+        "result": "<arm>/offline-audit-FIRST/metadata.json",
+        "parent_child_receipt": "metadata.child.json"
+      },
+      {
+        "argv": [
+          "--stage",
+          "scan",
+          "--index",
+          "1..4"
+        ],
+        "result": "<arm>/offline-audit-FIRST/scan-N.json",
+        "parent_child_receipt": "scan-N.child.json",
+        "serial": true,
+        "full_finite_scans_per_child": 1
+      },
+      {
+        "argv": [
+          "--stage",
+          "assemble"
+        ],
+        "result": "<arm>/terminal-audit.json",
+        "parent_child_receipt": "independent final parent child receipt retained by dispatcher"
+      }
+    ],
+    "claims": "Exclusive stage.attempt.json before work; any failed/missing child blocks next stage. Preserve first artifacts; no automatic repeat. Metadata and finite evidence bind arm/q/PID/output/case/index/source/stat identity. Final assembly does not rescan dumps.",
+    "limits_each_real_child": {
+      "CPU_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "wall_seconds": 90,
+      "nice_increment": 15,
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "parent_receipt_wrapper_fields": [
+      "stage",
+      "arm",
+      "qualification_sha256",
+      "metadata_sha256",
+      "result_path",
+      "result_sha256",
+      "audit_source_sha256",
+      "child"
+    ],
+    "child_raw_required_fields": [
+      "pid",
+      "returncode",
+      "error",
+      "cleanup_errors",
+      "wall_seconds",
+      "CPU_limit_seconds",
+      "Linux_AS_bytes",
+      "wall_limit_seconds",
+      "nice_increment",
+      "environment"
+    ],
+    "requires_dispatcher": "Root-owned separately reviewed bounded serial dispatcher must verify full exact qualification/source inputs before imports, fresh current owner/genuine idle before each child, and recurring admission while child runs; cancel only owned process group on busy/private/fault/deadline. No actor may issue all-dump scan_cases as an operational shortcut. Actual production scan artifacts remain physical Linux only; source controls use synthetic Linux receipt values on both CPU hosts."
+  },
+  "additional_explicit_CPU_inputs": {
+    "decode-optimization-20261028/model-v1/imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+    "decode-optimization-20261028/model-v1/imma_storage.py": "d03c8f6d69e198e648014b15a00a4a7c3dd986815dac4a391b747924239e0143",
+    "q8-batch-v1/q8_audit.py": "59c396154604496ec01a0ef8d0e3dddf677e31e9b57d91472fb0e0965af3dcd1"
+  },
+  "limitations": [
+    "Full terminal success is synthetic data and mocked live-authority/qualification/bootstrap/startup-observation/binding/skip adapters; no real model or full-range prompt reencoding. Those separate source/CPU contracts remain required.",
+    "The tests use exactly AST-extracted unchanged four saved-data finite/storage functions after source hash validation, plus unchanged storage module and q8 reconcile. Actual finite arrays are small (one129280-float row per synthetic file); they do not establish throughput for512MiB or1GiB.",
+    "Physical future per-file scan may still fail its fixed30CPU/90wall budget; any such failure remains incomplete, with no automatic wider limit or retry.",
+    "Recorded finite rows are unframed variable native batches. No emitted-token row alignment, cross-pack numerical equality, general quality, speed, near1M context/full262144 output exercise, or deployment inference."
+  ],
+  "next": "Root full manual read of exact2 files/allcontrols plus final root10 sources/driver and exactnewinputmap, then separately frozen bounded FIRST CPU bothhosts. No model admission here."
+}

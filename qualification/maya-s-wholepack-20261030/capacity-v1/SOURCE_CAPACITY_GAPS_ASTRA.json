@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-30T14:36:45.328763+00:00",
+  "decision": "SOURCE_FORMULAS_PARTIALLY_ESTABLISHED_CAPACITY_NOT_YET_PROVED_NO_STARTUP_ADMISSION",
+  "source_sha256": {
+    "ablation-pr469-v2/candidate/src/ds4/ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "ablation-pr469-v2/candidate/src/ds4/ds4_kernels.cuh": "f0b40a200e54b818c4173305e50dad6201b2d538839ff17fbc7808ea7270ef78"
+  },
+  "code_or_tests_created": false,
+  "code_imports_tests_assets_remote_gpu_or_service_actions": false,
+  "scope": "Selected dfe326 source, TP1/two devices, chunk4096, total context1048576/output262144, same images/Q8/DSpark/projection/all-RAM policy. No candidate or runtime change.",
+  "why_no_full_calculator": "A complete conservative bound cannot yet be instantiated: actual Maya-S tensor metadata/geometry and frozen complete allocation-affecting environment are not supplied, exact per-device post-context/vision free memory and profile-dependent expert placement are runtime inputs, and library/vision/lazy allocation overhead has not been bounded. The source auto-split estimates are not proven upper bounds. Creating an executable fit predicate now would fabricate missing terms.",
+  "findings": [
+    {
+      "id": "STRICT_RAM_NOT_A_MARGIN_GUARD",
+      "source_lines": [
+        5259,
+        5358
+      ],
+      "finding": "copy_experts computes can=min(max(0,ram_avail-8GiB),commit_room), but strict_ram selects budget=all, bypassing can. Strict means no disk fallback on missing copies/allocation failure, not prevention of overcommit/OOM or proof of an8GiB remaining margin."
+    },
+    {
+      "id": "PLACEMENT_ESTIMATES_NOT_ALLOCATION_UPPER_BOUNDS",
+      "source_lines": [
+        2626,
+        2724,
+        4645,
+        4870
+      ],
+      "finding": "dense_bytes includes selected matrices plus ring and2MiB; auto split subtracts400MiB and an extra1.1GiB chunk estimate. Actual placement re-queries mem_info after dense/scratch/chunk allocations and follows seed-profile priorities. Neither estimate establishes full nonexpert VRAM capacity or the final CPU count."
+    },
+    {
+      "id": "GGUF_RAM_STILL_HAS_FILE_AND_FLOW_STAGING",
+      "source_lines": [
+        2525,
+        2552,
+        3140,
+        3268,
+        3463,
+        3548
+      ],
+      "finding": "GGUF sets file_experts=true before placement/copy_experts. mmap-experts off plus strict RAM does not eliminate chunk rings, flow buffers or pinned staging. Two-device borrow defaults off unless DS4_BORROW is set. Default recent_n is0 for file_experts. Pin actual environment, do not substitute a generic all-RAM formula."
+    },
+    {
+      "id": "EMBEDDING_HOST_EXPANSION",
+      "source_lines": [
+        2985,
+        3025
+      ],
+      "finding": "Embedding always allocates pinned BF16 vocab*dim plus64 bytes even when file is Q8_0/Q5_K. For129280x5120 this payload is1323827200bytes before allocator/page overhead."
+    },
+    {
+      "id": "LATE_AND_TRANSIENT_TERMS",
+      "source_lines": [
+        3573,
+        3609,
+        5096,
+        5160,
+        8210,
+        8265
+      ],
+      "finding": "Include up to24*max expert blob pinned VRAM-load staging bytes transiently, lane slots if enabled, late flow metadata, and lazy fat GEMM buffers if eligible. fat_ready payload =4*FF*D +2*R*D +8*R*FF bytes per participating device; defaults FF2304,D5120,R1024 if unchanged. cuBLAS/CUDA and vision overhead require their own bound; a reserve is not evidence of its maximum."
+    },
+    {
+      "id": "CONTEXT_IS_SOURCE_CAPACITY_NOT_FULL_REQUEST_PROOF",
+      "source_lines": [
+        2590,
+        2625,
+        2895,
+        2945,
+        3340,
+        3401
+      ],
+      "finding": "Compressed cache sources allocate capacity ceil(context/ratio)+1 and are replicated on consuming devices, not simply one cache per layer or ordinary full KV. Scratch scores and chunk slabs also scale with total context. Successful short requests at configured1M do not prove near-filled1M or262144-token generation."
+    }
+  ],
+  "exact_accounting_terms": {
+    "alignment": "A256(n)=(n+255)&~255. dalloc<T>(n) requests A256(n*sizeof(T)); halloc/hmap<T>(n) request n*sizeof(T)+64 before CUDA/OS overhead.",
+    "expert_blob_TP1": "B_l=sum_{r in gate,up,down} A256(n_l,r * gg_type_row_bytes(type_l,r,k_l,r)); gate/up n=ff,k=dim; down n=dim,k=ff. Actual record types and offsets must pass expert_layout_mx.",
+    "CPU_copy_payload": "For actual hot_l CPU experts and actual spare_l (expert_cache && spare_vram>=0), ns_l=hot_l+(hot_l>0?spare_l:0); bytes=sum_l NH*ns_l*sum_r A256((n_l,r/NH)*row_bytes_l,r). Add per-node OS page rounding/metadata/pinning and all other resident/transient host terms. NH derives cores/DS4_COPY_NUMA and divisibility; do not assume2 on single-node host.",
+    "effective_expert_slots": "place_experts n_slots is not effective GPU-resident expert count: on a mixed RAM/VRAM layer with cache and >=2 slots, one slot is reserved plus optional recent slots. copy_experts may then add a RAM spare as well. Use actual state-derived hot counts, not total-minus-rawslots only.",
+    "compressed_cache": "For each source s, cap_s=ceil(context/ratio_s)+1; on each consuming device add A256(cap_s*kvrow(FP4,hd)); if indexed add A256(cap_s*kvrow(FP4p,ixhd)). FP4row=align16(d/2+d/16); FP4prow=align16(d/2+d/32); slidingwindow FP8row=align16(d+d/32). Add per-layer rings and compressor state, host cross-group handoff staging.",
+    "chunk": "Mirror exact lay_chunk typed-pointer widths and align256 calls, chunk_dims A/AI/w16, ring_n=max(4,floor(floor((ringMiB<<20)/stride)/4)*4), ringbytes=ring_n*stride, flow_down_bytes, pinned stage_stride*ring_n, two chunk hands, embedding/Engram staging, events/library workspace. Do not use1.1GiB as replacement.",
+    "embedding_known_payload_bytes": 1323827200,
+    "minimum_post_stop_admission": "Actual post-owned-stop MemAvailable and commit_room must cover conservative peak newly-resident host bytes with an additional8GiB margin. Fresh per-device free budget must cover conservative peak GPU bytes and unchanged2048MiB reserve. Do not count current RssShmem as guaranteed reclaim or swap as RAM. All required values must be typed, pinned and contemporaneous; missing terms => unproved, not0."
+  },
+  "required_next_inputs": [
+    "Completed8asset verification and actual qualified pack metadata/tensor map: per-layer3expert type/bytes/n_exp, all dense/head/embedding/drafter/vision/Engram roles, cache ratios/sources, geometry. No weights read needed for this metadata stage.",
+    "Exact full native argv/env including reserve, vram_experts, DS4_BORROW/FLOW/RING_MB/CHUNK_ATTN_MB/CHUNK_W16_MB/CHUNK_INDEX_ROWS, lane/STREAM/sync, DS4_COPY_NUMA/RECENT/ENGRAM_CACHE_MB/ENGRAM_RAM/FAT_ROWS/FAT_PIECE and inherited defaults. Snapshot unspecified versus explicitly0 distinctly.",
+    "Pinned seed profile counts and lane calibration policy; actual device capacity/free inputs and selectedsource geometry; do not force old19/21 or4045CPU counts onto new wholepack.",
+    "Complete source inventory for dense dtype conversions, model Dev/Chunk typed buffers, vision load/runtime allocations, gguf prepare/q8 workspace, allocator page rounding and lazy first-request branches. Current report enumerates material terms but does not claim whole-allocation closure.",
+    "Owned-stop actual RAM/commit/kernel/resource gate remains mandatory after source preflight; availability before stopping only gives a prospective estimate. If conservative peak exceeds margin, preserve profile and do not attempt allocation hoping strictRAM will protect it."
+  ],
+  "physical_snapshot_context": {
+    "ram_total_KiB_parent_report": 127304152,
+    "current_native_RssAnon_KiB_parent_report": 40520256,
+    "RssShmem_KiB_not_guaranteed_reclaimable": 5161652,
+    "MemAvailable_parent_report": "approximately47GiB; not an action-time capacity witness",
+    "rough_prospective_cpu_only_ceiling_GiB": "approximately77.6 =47+38.6-8, BEFORE embedding/host staging/transient/process overhead and subject to new actual availability. Not an admission bound."
+  },
+  "author_notes": "Petri fixed-hot-VRAM/MXFP4 CPU/PDEP claims remain author notes, not measured on this host. No hybrid or format/config changes proposed before the stock whole Maya-S comparison.",
+  "cpu_pack_proof": "pack-v1/CPU_RESULT_ASTRA_REVIEW.json fe758408a1485715e7f002baae3a3df37eea67066f72a0892ca0ad3c82ab61ea;60eachphysicalhost. This does not establish actual pack geometry or RAM/VRAM fit."
+}

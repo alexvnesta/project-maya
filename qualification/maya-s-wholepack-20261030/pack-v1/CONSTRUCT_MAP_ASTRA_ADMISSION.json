@@ -1,0 +1,71 @@
+{
+  "decision": "CONDITIONAL_SINGLE_METADATA_ONLY_CONSTRUCTION",
+  "qualification_sha256": "0e9fe26ae5f3f132d3dbefb4cceac3cb165ac5a8ff473b2bd299547a65d7cb98",
+  "file_pins": 113,
+  "required_physical_checks_including_self": 114,
+  "actual_contract_sha256": "b7a25b3db67e30af7ed1ef4b3746093b5b476e3fc144eb47648c575ce8eda02e",
+  "acquisition_terminal_sha256": "829dc2974aefd88d1c0adb65a799dc1b35bc1076eb21e4e5119e761b61cfa577",
+  "source_or_tests_changed": false,
+  "prior_full_manual_source_reviews_retained": true,
+  "CPU_groups": {
+    "pack_guard": {
+      "controls_each_physical_host": 60,
+      "ordered_IDs_and_source_input_maps_reconciled": true,
+      "raw_proof_sha256": {
+        "darwin": {
+          "receipt": "63f9cf8ce0230d6244ca7e095b63baad9b5d3b000dbfe796748cd427b72d4b46",
+          "child": "183808ee8a623955effbd55fdb7abb940d379ec50c9903d1372112d89d3fed09",
+          "log": "c4af9ac5f47f8a7485d19169151accddaf02d5767689cbba3fa66cc1bae9137e"
+        },
+        "linux": {
+          "receipt": "f4f0aa06d050f83009b66a9e6928fdeda2ef4577f09446fcc615575b6b166d9a",
+          "child": "92a86c6069aae0c4772f3e401c10c3a00c0fc3dab7b1202c33df744dc20c2044",
+          "log": "d0ed28c9f924ea6073a9a64fc837f4ac87401fcd6fea2ca75500d880dd8c088c"
+        }
+      }
+    },
+    "construct_controller": {
+      "controls_each_physical_host": 28,
+      "ordered_IDs_and_source_input_maps_reconciled": true,
+      "raw_proof_sha256": {
+        "darwin": {
+          "receipt": "f4b1be31b1056f773143d3ad24486b6aa8b010fc351d9d8060f28908266d72e9",
+          "child": "d88d49f91dbf4660b3644738d39e7823c0d2c3de809062382f63a3fcb1169997",
+          "log": "4eda123b1e103acf0db72e1802b8ae21b5a692367206119d697809d50a9c9b4b"
+        },
+        "linux": {
+          "receipt": "701abe560307c96fa108e405503b953181c29d3df105b6ec4f4f29bd4e79e54d",
+          "child": "be8a4270df4301d6bc7127a45bd0bd6c24ae25f36bb22830083bec6ff756f24b",
+          "log": "7dee289fc607ca82ba541867b5c2661a8042f468b2105c07b4d49e7b1b2a68c4"
+        }
+      }
+    }
+  },
+  "local_exact_pin_matches": 100,
+  "physical_only_selected_pins": 13,
+  "acquisition": {
+    "status": "ALL_EIGHT_ASSETS_VERIFIED_NO_MODEL_RUN",
+    "returncode": 0,
+    "assets": 8,
+    "bytes": 347445667721,
+    "receipt_matches_exact_manifest": true,
+    "stat_contract_sizes_match": true,
+    "reviewer_payload_hash_or_reads": false,
+    "vision": "Exact earlier selected vision 3b682353 json/685d9359 bin custody and both stat records; no new vision factor."
+  },
+  "conditions": [
+    "All113 physical input hashes plus qself verified before support imports. Thirteen deployed selected pins were not locally available and remain mandatory action-time checks.",
+    "Fresh authorized selected health/default/current fcc9 binding/sole owner/root gate; no private/build/restoration phase; completed worker3166208 absent; shared acquisition.lock acquired nonblocking.",
+    "Exact terminal receipt and unchanged eight asset identity/stat records plus selected vision records; no partial assets or payload rehash.",
+    "Fresh pack-FIRST and construct-CPU-FIRST only; one reviewed metadata child CPU30/LinuxAS512MiB/wall90/nice15/CUDAhidden/thread1; owned process-group cleanup and preserved first failure.",
+    "Unchanged construct_pack.py with exact qualification pin; no model/native process, inference, service/compiler action, weight copy, cache pruning or automatic retry."
+  ],
+  "limits": [
+    "Permission is limited to actual GGUF header/tensor-directory parsing and generated pack/tokenizer/template/Engram metadata validation.",
+    "Actual pack/header/format checks may fail and must retain the first failed attempt. No completed construction is claimed.",
+    "No1M allocation, broad quality, equivalence, speed, model or deployment admission. Candidate encoding, actual output closure and capacity/model gates remain separate.",
+    "Unsloth remains a separately authorized I/O task; this review does not alter or admit private phases."
+  ],
+  "reviewer_actions": "Local source/JSON/raw receipt/log review and metadata hash/AST checks only; no imports/tests/remote/model actions.",
+  "report_prewrite_note": "Initial local report-generation check used manifest bytes instead of its actual size key and stopped before report creation; corrected metadata interpretation only, no experimental action or source change."
+}

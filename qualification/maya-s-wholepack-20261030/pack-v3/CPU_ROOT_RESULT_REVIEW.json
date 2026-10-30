@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-30T17:10:59.392569+00:00",
+  "passed": true,
+  "FIRST_new_controls_each_physical_host": 125,
+  "raw": [
+    {
+      "group": "CPU-FIRST",
+      "host": "darwin",
+      "controls": 94,
+      "seconds": 2.643264749960508,
+      "raw_sha256": {
+        "receipt.json": "1a8d23e578d6af0fb960965f839c0e6089ce01a2b6e81a248804dced71622dc3",
+        "child.json": "2443238db802c0c9b992510a86783a7e39c679b03802bea1692e511f96a45003",
+        "child.log": "f20cfce55469aba9ad43d0d06236e7795dd4d5367ccaf295f5bdc126c5bbe2e3"
+      }
+    },
+    {
+      "group": "CPU-FIRST",
+      "host": "linux",
+      "controls": 94,
+      "seconds": 5.345601334935054,
+      "raw_sha256": {
+        "receipt.json": "57217668b2fe3cee648a72c92f86248e8cad234f49c24c9211ec891798a68316",
+        "child.json": "5970e679e9c5cb6a58dfdd0ff20471b7ab311f5061567301e1ee86f540516f8b",
+        "child.log": "76985f19e2bd8dd39c477c51da35a022afe45c49edd582e18abb24922308976d"
+      }
+    },
+    {
+      "group": "CONSTRUCT-FIRST",
+      "host": "darwin",
+      "controls": 31,
+      "seconds": 0.26482954097446054,
+      "raw_sha256": {
+        "receipt.json": "af3a02696b3ea95ef0c66666aca26c368501e5bf846a28096ed0d862e04f3133",
+        "child.json": "d978ddb7fe5a1d16535cbbed1b7eb46d9e4946a949a684b108643d10299066cd",
+        "child.log": "d688dbb8ac8ab07918af7a306c126c3606d9c054dd2cd9b9382e390102e14fb4"
+      }
+    },
+    {
+      "group": "CONSTRUCT-FIRST",
+      "host": "linux",
+      "controls": 31,
+      "seconds": 0.43085820018313825,
+      "raw_sha256": {
+        "receipt.json": "18fafa9b8b3b21c2a0d31fa503241d8f3f481d30f7893f948c9f78d28ca8c100",
+        "child.json": "e51c229fa6cb57f5ce6f512e59032e83dd96dd7243b84877065d6457413e9aca",
+        "child.log": "9f520f3b3aeb004ff7f9cd40926b5de0d987bb7f4069d675278bb22cbd03e7ba"
+      }
+    }
+  ],
+  "metadata_model_or_GPU_admitted": false
+}

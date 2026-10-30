@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-30T14:16:02.109481+00:00",
+  "decision": "CONDITIONAL_SINGLE_AUTHORIZED_ASSET_RESUME_ONLY",
+  "qualification_sha256": "3f89fe089d629bb65b5c517908ae76a731b9020fb0a8cb02a1b1ef58472596b0",
+  "CPU_map_review_sha256": "292ed60147dea493ea94d44b9a33f1a828c3c8e79915e5804f623780d6c3fdab",
+  "authorization_sha256": "cb2698ff10b5bd42b029968f20f59aa78d3d6924b4b8a4b5548bc3b28e78ce5a",
+  "selected_binding": {
+    "invocation": "fcc9a5fdb61740ef887ddf2b5bf9bcf8",
+    "main_pid": 2984652,
+    "native_pid": 2984691,
+    "native_start_ticks": 162440848
+  },
+  "source_map": {
+    "acquire.py": "6a399f4eec7b9cb23b7ff7aa03d60deb490787825ae92e43ccde8d40065885b5",
+    "test_acquire.py": "912efc6c733ee1a1d61e4ae7e12a6ac84c3fe882446ac8b90f2c1a08c2f5163a",
+    "run_cpu.py": "38461168f90848950dbca0279fb54f129063e2c860892a40ef8dbdc82b57c319",
+    "ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+    "AUTHORIZATION.json": "cb2698ff10b5bd42b029968f20f59aa78d3d6924b4b8a4b5548bc3b28e78ce5a"
+  },
+  "prior_deferral_evidence": {
+    "acquisition-state.json": "a246bd12ad253807489ea17864745fc5c2c061edc766ad3a32d7647df6d68c6b",
+    "acquisition-controller-FIRST.log": "1be6f258221909c28331a8ba9895033d4dbd5f6f762ca8e7b11fc627634d7c1d",
+    "acquisition-controller.pid.json": "3930d8f4c783aac60bebaa231fcae07adb37ad65c3f1f6c6dd9bde1d52671db5"
+  },
+  "physical_preflight_pending": true,
+  "required_checks_before_execution": [
+    "Freshcanonicalno private/GPU/build/restoration/pending phase, healthyloaded1M/images/defaultDeepSeek typednonnegativework/switchercounters, exactfcc9 currentowner/solePID/argv/config andguard_binding; ACTIVEINFERENCEALLOWED underexplicitnewAUTHORIZATION, do notcallidle asadmissionrequirement.",
+    "Verifyall81canonicalimmutablefilepins plusqself82checks BEFOREsupportimports; recheckphase/health/qbinding/source/rootafterhash. Recordactualpreflightreceipt.",
+    "Proveprior3161145acquisitionprocessabsent andonlysharedparentacquisition.lock canbeowned nonblockingly; newversionattempt/state output. Preserveoldrc75raw/stateand519041441-byteprefix.",
+    "Strictinventory ofexact8allowedfinal/partials, noaliases/foreignoutputs; recomputeavailabledisk>=132GiB+remainingtotal andvalidateprefixduringresume.",
+    "InvokeONLY newversionacquire.py --qualification-pin 3f89fe089d629bb65b5c517908ae76a731b9020fb0a8cb02a1b1ef58472596b0 withnice15/LinuxAS512MiB/CUDAhidden/OMP1/OpenBLAS1/arena1; cooperative14400s/64MiBps/5snetworktimeout unchanged.",
+    "Noautomaticretry ontransportfaultorphase/health/resource/bindingrefusal. Activeinferencealone no longerdefers. Noexperiment.lock, native/model/service/build/pack action orconcurrentprivatephase."
+  ],
+  "scope": "One newlyauthorizedresume ofsame8pinnedassets; onlyownedI/O. ExactassetSHAcompletionneededbeforefuturepackwork.",
+  "GPU_model_service_or_deployment_admitted": false,
+  "hard_four_hour_supervisor_claim": false
+}

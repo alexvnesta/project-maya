@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-30T15:10:43.818890+00:00",
+  "root_entire_source_and_tests_read": true,
+  "astra_entire_source_and_tests_read": false,
+  "source_sha256": {
+    "pack_guard.py": "774610e0e1d85834aefaf1192e5676ac02dbf5797bd745405a3a1efd094956dc",
+    "construct_pack.py": "4b8b9d835f1cf44dcea21f6ee154a2b5740ae9c7ea58c425da00077cab42c987",
+    "test_construct_pack.py": "507b65d832b65005971f9441828b0b0d640ef31a63afd1d46d32c4816c906f64",
+    "construct_cpu.py": "e18fa1aa7bccae7356ac45fa743f137b6f299bc5ceb33b50d9ffefd80e2e737c"
+  },
+  "input_sha256": {
+    "native-vision-v2/runtime/tools/dsv41/pack_gguf.py": "6784a50c4252f0d3af36cf04f5d212524dbf0800dac2d3ea633290d044a18fdf",
+    "decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+    "decode-optimization-20261028/maya-s-comparison-v1/baseline-vision.json": "3b682353a9bf572ae2736ec17b946179b24b83319de46c54950f0c442fd13053",
+    "decode-optimization-20261028/maya-s-comparison-v1/BASELINE_VISION_CUSTODY.json": "a5b048a5d98e8786356a0d77be918c284254953ef7e1910e0ab8da03faa42183"
+  },
+  "test_ids": [
+    "test_construct_pack.ConstructTests.test_both_exact_physical_proofs",
+    "test_construct_pack.ConstructTests.test_changed_acquisition_source_before_import",
+    "test_construct_pack.ConstructTests.test_changed_input_map",
+    "test_construct_pack.ConstructTests.test_changed_test_ids",
+    "test_construct_pack.ConstructTests.test_empty_source_map_rejected",
+    "test_construct_pack.ConstructTests.test_environment_literal_no_global_change",
+    "test_construct_pack.ConstructTests.test_exact_child_paths_before_actions",
+    "test_construct_pack.ConstructTests.test_failed_child_kept",
+    "test_construct_pack.ConstructTests.test_first_receipt_preserved",
+    "test_construct_pack.ConstructTests.test_foreign_source_path_rejected",
+    "test_construct_pack.ConstructTests.test_missing_AS_observation",
+    "test_construct_pack.ConstructTests.test_missing_other_host",
+    "test_construct_pack.ConstructTests.test_no_manual_source_review",
+    "test_construct_pack.ConstructTests.test_source_pin_checks_content",
+    "test_construct_pack.ConstructTests.test_symlink_source_rejected",
+    "test_construct_pack.ConstructTests.test_terminal_attempt_path_not_mutable_state",
+    "test_construct_pack.ConstructTests.test_terminal_attempt_requires_complete_eight"
+  ],
+  "review": "Full new caller, all18 test bodies and bounded driver read. No actual metadata construction or CPU controls yet. Await same Astra source review."
+}
