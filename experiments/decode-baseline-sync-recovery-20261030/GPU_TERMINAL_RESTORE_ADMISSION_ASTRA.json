@@ -1,0 +1,127 @@
+{
+  "utc": "2026-10-30T10:26:22.732272+00:00",
+  "decision": "BASELINE_HEALTH_ACTUAL_PASS_WITH_RECORDED_ATTESTATION_LIMIT_CONDITIONAL_SINGLE_SELECTED_RESTORE",
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU_INPUT_MAP.json": "9855deb4e3ece337a778a9995836a316fb4a3754d8c1d8ad616562ed7473d449",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU_ADMISSION.json": "9379bc6ca0b3c7c76d950371bd4a4e112e13d84eb3b9052d4bf3daf10ed5f7ce",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU_ATTEMPT.json": "c2e873481b6d21da9ebb9c8fe38bffe533815fc1d8b3cdb049dbeda6b7793678",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU_TERMINAL.json": "79a92d50dc9a4f5053ceea38b71f69a3666d2d2473d3ea8eac6b3673e403fd5e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU_TERMINAL_ROOT_REVIEW.json": "706e240ae0d3b13a23cc3381921e11ba822f8efb11155b73308112e94586f1c0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/BUILD_ACTUAL_AUDIT.json": "8976e729a2250934dc1c32a52703b2d39fec514704a5ee0a616b0ee1fc4f71ae",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/BUILD_RESULT_ASTRA_REVIEW.json": "4edacdc5b27b2708c3e68b5e28bcd401c599a66a66494c488498de3da0845dc7",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/CPU_BUILD_ADMISSION_ASTRA.json": "f20382a3060fb281266f16215964b3de85ae1ad8e2ebae94862eaf5c7741e4a8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/AUTHORIZATION.json": "59487eccda7577d5af10152b84e8192e3f5d3f8481348cefffb63923ce6fc864",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU-FIRST/gpu1-exit.json": "c767d1d7492f550f5a59c12f60df8e707298165fd4c8a7ef6c4a8d3a7ed127f4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU-FIRST/gpu0-exit.json": "a6c81483a850df9bd8f009c57537cb0864f774fcbd05ea99a531bb8602154544",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU-FIRST/gpu1-start.json": "f25cde1a1f01c52286e09abb35692d53f99fcbd37ac066908fc1d3745a66a57d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU-FIRST/gpu0-start.json": "a548df0d4ccdfe04541ba2bac7109a9d80d02052e0f2ea69fae77f99c320caf6",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU-FIRST/receipt.json": "42669d1701aff4e29061e4e1a51ad521be9a3bee0b552e86d6dc4a52efb453d0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU-FIRST/gpu0.stdout": "edc06f3cd6bd38ee3d4438785a8168aa33cabca1540f844805d6136c9ddfab50",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU-FIRST/gpu1.stdout": "fc341d2657eaf8c1d6383d30acacafb6dbb14d2bc450e8356173e3a9319642d4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU-FIRST/gpu0.stderr": "1352d167957e284ba2b09a7ba2079069d92ba1becf745a9e7933c4d22110f250",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU-FIRST/gpu1.stderr": "1307f200f95b1d23fc426a325b3472a934b814bdc5fa19de6c0ad1aae0ce4ac8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/window-FIRST/20261030T102137Z.json": "2e56d2b45603c2c12c4da1362ede8b447f8ab86baa616ca851c6d654a7860431",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/window-FIRST/20261030T102137Z.telemetry.jsonl": "a744eb18d8ecdbafb6962fc632f60dd6f48d98ba5d75e732e9a19149d3c7a8d7",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/window-FIRST/20261030T102137Z.kernel.log": "19c4e28b2f54ea8f217db4e622b0a5c758efa7b77ce2dc0394b6d159568c0b2e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/gpu_check.py": "7869ca8561c85f8770321a07a87c2b55bbbe7382b4cafe5f7a2613b715ad9d7e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/head_startup.py": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/STARTUP_CPU_RESULT_ASTRA_REVIEW_r2.json": "d8673dc54825042d86d565ede19a8d49b280d6e428e0824e37a9c93eafb9b5a4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/kernel-FIRST-maintenance/old-owner-close.json": "f2370537547b8b8cf0926abecae3ad9ad0473a289b5bcdc64720db8983327bd4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/activate_chunk4096.py": "b2bb7676969661f98bf77d9969a840a4fcb44367f9644ab6f05ac19d70709056"
+  },
+  "actual_terminal": {
+    "window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T102137Z.json",
+    "window_sha256": "2e56d2b45603c2c12c4da1362ede8b447f8ab86baa616ca851c6d654a7860431",
+    "telemetry_sha256": "a744eb18d8ecdbafb6962fc632f60dd6f48d98ba5d75e732e9a19149d3c7a8d7",
+    "actual_held_utc": "2026-10-30T10:21:49.049325+00:00",
+    "parent_message_time_correction": "Raw durable completion is10:21:49.049325UTC, not the preliminary10:21:44 message.",
+    "test_returncode": 0,
+    "maintenance_held": true,
+    "maintenance_resume_allowed": true,
+    "children": [
+      {
+        "device": 0,
+        "pid": 2980920,
+        "start_ticks": 162396444,
+        "exit": 0,
+        "cleanup": [],
+        "analytic_cases": 12,
+        "Q8_reader": {
+          "jobs": 8,
+          "int8": 42784,
+          "scales": 1337,
+          "guards_intact": true
+        },
+        "elapsed_s": 5.697538655018434
+      },
+      {
+        "device": 1,
+        "pid": 2980934,
+        "start_ticks": 162397013,
+        "exit": 0,
+        "cleanup": [],
+        "analytic_cases": 12,
+        "Q8_reader": {
+          "jobs": 8,
+          "int8": 42784,
+          "scales": 1337,
+          "guards_intact": true
+        },
+        "elapsed_s": 5.737647322937846
+      }
+    ],
+    "total_analytic_cases": 24,
+    "kernel_capture_returncode": 0,
+    "kernel_fault_lines": [],
+    "root_min_bytes": 897304797184,
+    "root_min_GiB": 835.6802139282227,
+    "swapout_delta_pages": 0,
+    "cgroup_peak_bytes": 551170048,
+    "private_API": "N/A kernel-only fixture, no privateAPI server",
+    "no_service_start_yet": true
+  },
+  "independent_scope": "Both full stdout/stderr/start/exit receipts, actual window/telemetry, old API/nativeclose and qualified restoration primitives read. Source/raw identities reconciled. No reviewer execution.",
+  "attestation_limit": {
+    "prospective_condition_missing": "A separate action-time digest assertion for the nonexecuted BUILD_RESULT_ASTRA_REVIEW.json was omitted.",
+    "reported_postterminal_digest": "4edacdc5b27b2708c3e68b5e28bcd401c599a66a66494c488498de3da0845dc7",
+    "runtime_map_self_admission_prospective_verified": "Reported by operator, with exact runtime source/artifact map and admission bound by actual window.",
+    "not_retrofitted": true,
+    "assessment": "Preserve this historical admission-process omission. The runtime map included source, artifacts, actual buildaudit and CPU proofs; the omitted separate review metadata is now verified and bound here. Actual24casepass is supported, but do not claim every prospective metadata attestation was completed. No repeat witness is needed solely to manufacture that missing historical assertion."
+  },
+  "limitations": [
+    "The clean synchronized analyticwitness supports this baseline recovery decision; it is not a general model-quality/hardware certificate or proof of the exact cause of prior failures.",
+    "Originalhead041001, unsynchronizedhealth095101, refusedstartup27f9 and oldparserexit1 remain preserved without regrade.",
+    "Window units/health_before/GLM fields are inherited historicalOct25 snapshots, not current GPUownership evidence.",
+    "Hosted GPU expert count11315 is inferred from exact human startup counts minus384drafter, not directhostedINFO."
+  ],
+  "restoration_admitted": true,
+  "single_existing_selected_start": true,
+  "human_permission_already_present": true,
+  "allowed_primitives": [
+    "g.load_owner() and g.host_class(a) using exact g7869/startup539/ownerb2bb.",
+    "Fresh real exclusive audit directory under canonical E/maintenance, separately owned restoration custody.",
+    "Set historical baseline_binding from old-owner-close38b; validate exact g.close_contract(binding,native_close,before,after) before setting old_close_verified=True. This is historical closedowner proof, not a claim that38b or27f9 is live.",
+    "Verify h.free(), h.kernel(since), latest clean102137 and current stopped27f9 before mutation.",
+    "Call h.restore_ds() ONCE: unchanged existing deepseek-hosted.service, original1250s deadline and corrected qualifiedMainPID0 capture.",
+    "Restore only existing CPUrouter with h.restore_router(); call h.verify_target(expected_pid=h.restored_pid) with frozen prospective binding."
+  ],
+  "required_fresh_checks": [
+    "Verify map9855 all2334 files, mapself, source6, this review, buildreview4edacdc5 and qualifiedstartup22/bothhostraw evidence; no source or config change.",
+    "Latest window is exact clean102137/test0/resumeTrue/kernelcapture0/faults[]; all previous failures remain unchanged. No active private/build/pending/foreign restoration, freeGPU/noowners/root>=132GiB, exactfailed27f9/MainPID0/currentnativeabsent and experimentlock available.",
+    "Verify selectednative92abb8/configc43/preflightb15/releaseb921 and original profile; no heldhead/Q8/IQ2/IMMA candidate or newparameter. Existingpreflight must remainenabled and pass naturally against realclean102137.",
+    "Record since at or before witness start10:21:36UTC and fresh kernel/resources baseline. Before start claim ownrestoration custody preserving alloldfailure fields; do not run the oldcandidatecontroller/main/activationpublisher.",
+    "One start only, no reset/retry/newunit/newnativeowner. Capture invocation/mainPID/nativePID/startticks prospectively with qualifiedadapter; guardthe same binding throughout.",
+    "On any startup/verifyfault preserve firstfailure and owned CLI cleanup. Stop only a positively bound owned target using existing cleanup primitives if required; never broadstop/restart a foreign or unknown owner. Pending public verification preserves the exactrunningowner and allows verify-only continuation, never another start.",
+    "Verify actualtarget972releasepins/processcontract/config/exe/cgroup/soleowner, native92/chunk4096/1M totalcontext/262144 output/TP1/Q8_BATCH1CHECK1/mode1/images/projection/DSpark/CPU4045allRAM and exactplacementbasis.",
+    "Require existingstartupready plus public401/authmodels200, assembledREADY/stop/DONE, kernelclean/rootreserve/swapbounded. Only authorizedexistingreadiness/publicverification, no benchmark or candidate requests.",
+    "Update canonical currentselectedbinding and release restoration custody only after completeverification using owncustody checks; preserve oldHOLD and witness histories. Do not rewrite old receipts orpublish a newrelease/profile."
+  ],
+  "selected_pins": {
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "preflight_sha256": "b15c66b2fb7d96f689995525618583f12b30b890f7f713a1e4323718093ffc26",
+    "release_sha256": "b921b85827fa63fd448cadc808fafb3e027c192ddaa2af45c5dcf0f373d1bed8"
+  },
+  "future_candidate_or_health_replay_admitted": false,
+  "reviewer_actions": "Localraw/source/hash and metadata review only; no test/import/build/GPU/remote/service action."
+}
