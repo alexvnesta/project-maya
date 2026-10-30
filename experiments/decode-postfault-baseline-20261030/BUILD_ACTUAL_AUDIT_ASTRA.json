@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-30T09:49:52.118632+00:00",
+  "decision": "INDEPENDENT_ACTUAL_BUILD_AUDIT_AND_FROZEN_INPUT_MAP_REVIEWED",
+  "build_actual_audit_sha256": "6558004c146d58f3d9886fdf95c91d0ffa2ce94fde62e1aa4838226737823e40",
+  "input_map_sha256": "0d5e85e02d84dddaf56168e17133740708ca2110e48d76bf1d88b756e4d686e2",
+  "input_map_files": 2285,
+  "original2228preserved_unchanged": true,
+  "canonical_alias_conflicts": [],
+  "lexical_alias_count": 16,
+  "source_sha256": {
+    "recovery.py": "f8dc0d49d695cccf51e652b98a4b36c4556c744d57beb88ef537eada192ecf8e",
+    "health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "test_contract.cpp": "e11174d915794b4c2bd4065ea855c6cde05d25b4043b9600754a8f0662811c96",
+    "test_recovery.py": "8c12e765cd1f04f71e54cf7cb9393efee2053d6c586b8424882727e6c2ba0a22",
+    "qualify_cpu.py": "5d6f97807bdc0780942e5c234bc6995944fb87531e8d0afbffeb9c52d6b36d83"
+  },
+  "actual_header_map": {
+    "count": 280,
+    "matches_saved_nvcc_map": true
+  },
+  "actual_link_map": {
+    "count": 36,
+    "original_inputs": 35,
+    "new_object_only": "health.o",
+    "all35original_actual_digests_match_originalq": true,
+    "unknown_inputs": []
+  },
+  "artifact_sha256": {
+    "health.o": "519ebca29787ac18b99ecff3d122e1d177a23839976acad0be0e67d7b89e35fa",
+    "baseline-health": "95f3ef30272fbbe3cfdf121ea91468919ac3b98fbc40c05bb1e80d99e04ca7a5"
+  },
+  "all3actualchildren_match_raw_and_pass": true,
+  "all_raw_metadata_local_hashes_match_physical_audit": true,
+  "stopped_unit_before_after": {
+    "ActiveState": "failed",
+    "InvocationID": "27f9b1951f494c47a5f6de81f7323ba6",
+    "MainPID": "0",
+    "Result": "exit-code"
+  },
+  "no_GPU_owners": true,
+  "lock_available_after": true,
+  "original_build_controller_exit": 1,
+  "original_build_receipt_absent": true,
+  "no_rebuild_or_regrade": true,
+  "source_limits": [
+    "GPUfixture is originalGGUF/IQ only; no candidateModel/headhelper execution.",
+    "Analytic12cases/device plusQ8readercheck, not generalhardware/modelproof.",
+    "Inputbytes/outputguards checked; fullweightimmutability not checked.",
+    "CPU58+19 proof is not GPUresult; freshactionconditions remain."
+  ],
+  "qualified_launch_primitive": "Unchanged maintenance.Host.launch_owned(prior,command,1200) explicitly accepts suppliedprior andexecutes canonicalwindow170722; its own clean_prior check authenticatesactualterminalwindow/kernel. Do not call its dated profilepreflight/idle or restore methods aspartofthishealth-onlyadmission.",
+  "postfault_lineage": "Explicitnewdiagnostic branches from realclean024056 while separatelybindingfailed041001/refused27f9; no failedreceipt modification. Priorcleanwindowalone isnotfaultclearance.",
+  "reviewer_actions": "Localsource/raw/metadatainspection only, no tests/imports/remote/GPU/service action."
+}
