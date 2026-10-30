@@ -1,0 +1,39 @@
+{
+  "decision": "SOURCE_REVIEW_COMPLETE_TWO_PRE_CPU_CORRECTIONS_REQUIRED",
+  "source_sha256": {
+    "lc_audit.py": "04c74fdbed213ea037e94827fe5fdd6c52af3981cca7d59b64219bfc78960334",
+    "test_lc_audit.py": "6eeb1ff6688c694a9898a9adc3df2745924c4c838df5c4bd67399e85c6751bf5",
+    "lc_audit_dispatch.py": "3da6d73bd682ced960d5ed99e3a0b500b2379617aece87e1f24a93a082c07758",
+    "test_lc_audit_dispatch.py": "94e2aff8d7378f49f26580fefdd8916d7d16a51cfa6224546b7f3e3f8081184b",
+    "lc_cpu.py": "d401af4b0238bba9b90cac3f0869bca067be3c39f896f655a77e3c2e178fedd5"
+  },
+  "all_five_files_and_supplied_test_bodies_manually_read": true,
+  "project_imports_or_tests_executed": false,
+  "model_admitted": false,
+  "findings": [
+    {
+      "id": "CPU_DISCOVERY_ORDER",
+      "scope": "lc_cpu.child",
+      "finding": "ids() globally sorts IDs but owner module tuple is config/runtime/controls/owner. unittest preserves tuple suite order and will refuse discovered IDs before test bodies.",
+      "correction": "Sort GROUPS[group] for unittest suite construction, retaining exact sorted AST IDs."
+    },
+    {
+      "id": "ACTUAL_BASE_CONFIG_CLOSURE",
+      "scope": "L/base-config.json and CPU/q maps",
+      "finding": "New auditor reads L/base-config.json, which is currently absent; inherited M1/base-config.json is a different path.",
+      "correction": "Copy only exact c43 bytes to L/base-config.json and explicitly pin this new input in CPU input assembly and actual mode q before source freeze."
+    }
+  ],
+  "otherwise_reviewed": [
+    "Strict source-aligned 8469-token JSON64, positive drafts, cold0, exact mode1 skip5801, no dump/no performance acceptance.",
+    "Pure 80GiB/swap0 fence reconciliation with captured-property restoration and transient collection.",
+    "Actual public-default-output request and fragmented READY/stop/DONE consumer.",
+    "Unique LC1 owner/arm/window identity, raw private API/native/old-owner exit0, resource/kernel/tokenizer/source evidence.",
+    "One bounded audit child, observed resources before project imports, genuine-idle checks before and after qualification/audit, cleanup before publication, no replay or advancement."
+  ],
+  "counts": {
+    "new_auditor": 18,
+    "new_audit_supervision": 34
+  },
+  "requires_after_fix": "Manual final changed-line/input-map verification before FIRST CPU; no CPU/GPU actions by reviewer."
+}

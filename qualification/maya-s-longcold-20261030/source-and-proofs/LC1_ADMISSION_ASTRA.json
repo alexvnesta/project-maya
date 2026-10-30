@@ -1,0 +1,86 @@
+{
+  "decision": "CONDITIONAL_SINGLE_LC1_LONGCOLD_DIAGNOSTIC_ONLY",
+  "qualification_sha256": "ca406101a1b47dfb5ad713db67ae44c65318b2169a19a176c3f46f7f5fe395df",
+  "completion_receipt_sha256": "33ebf3bf93b61b3eb991dc7d34de9b8b618a044ae963f99de8348d9d11a89d5e",
+  "original_partial_receipt_sha256": "8015b6767dda0d43d4c0d91163a8e284c2d8b1d43c87918126c5570326e44929",
+  "observer_failure_review_sha256": "97a2436c68caac0161a8554cfa6e5f3cbf7da9e2a69932c5f2250ebdbed09c2c",
+  "CPU_review_sha256": "0d513f4f87d5e33c88b879ff631e0f6aede99290970e12ae206e0876ea60039d",
+  "q_map_review_sha256": "540e032f2c6d4cfa6d596544965386d456b85c8db202565e56c218e09626609d",
+  "source_sha256": {
+    "lc_runtime.py": "edcb0aa48a842f355793bcab7de6d4fdc4c3e8e7f4841926fa36f862b2f5f62b",
+    "lc_owner.py": "985e564d003ef69be135ae14d3cc1a5d4c4ca0497a02cf2c2186614bf58e7f4f",
+    "lc_config.py": "db2bf57e7276a6f6f813f56f8f83a2d337906e8fbfa886a75553edd130e1d057",
+    "lc_controls.py": "9164b5f8a986c14be4b6a37ce82e9cc484d2d4efd0a266bc9cd4e0064bd6224e",
+    "lc_audit.py": "04c74fdbed213ea037e94827fe5fdd6c52af3981cca7d59b64219bfc78960334",
+    "lc_audit_dispatch.py": "3da6d73bd682ced960d5ed99e3a0b500b2379617aece87e1f24a93a082c07758"
+  },
+  "selected_binding": {
+    "invocation": "c913c003e08649078ebd7279ef4beae7",
+    "main_pid": 3535523,
+    "native_pid": 3535559,
+    "native_start_ticks": 165605174
+  },
+  "previous_window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T190500Z.json",
+  "previous_sha256": {
+    "/home/alex/strata-deepseek-test-20261024/windows/20261030T190500Z.json": "7a97d8d025350a9e127a141f84b0d4c3399da7ee91ef3a80f97f3cf6d9b3a658",
+    "/home/alex/strata-deepseek-test-20261024/windows/20261030T190500Z.telemetry.jsonl": "04578eae6c11da2ceb99844e6752e7d97d3b84b73076f5c7443ad4dd60bbe501"
+  },
+  "kernel_since": "2026-10-30 19:03:56 UTC",
+  "source_backed_kernel_helper_passed": true,
+  "original_observer_exit": 1,
+  "original_observer_regraded": false,
+  "completion_scope": "Separately recorded downstream read-only observations; full original q/h.preflight not repeated; preserved complete proof and source maps reconciled.",
+  "verified": {
+    "full_original1062_file_proof_plus_qself": 1063,
+    "recovered_fields_exact_match_original_prefix": true,
+    "fresh_binding_equals_original_proof": true,
+    "previous_window_matches_reviewed_CS1_raw_and_terminal_evidence": true,
+    "default_idle_phase_free": true,
+    "root_free_bytes": 375444324352,
+    "empty_registry_and_fresh_namespace": true,
+    "download_worker_absent_and_pause_marker_recorded": true
+  },
+  "scope": {
+    "mode": "longcold",
+    "arm": "LC1",
+    "requests": 1,
+    "request_prompt_tokens": 8469,
+    "unchanged_request_and_ids": true,
+    "typed_answer": "JSON values integers1..64",
+    "request_cap": 32768,
+    "effort": 100,
+    "total_context": 1048576,
+    "default_output_allowance": 262144,
+    "private_memory_max_bytes": 85899345920,
+    "private_swap_max_bytes": 0,
+    "post_owned_stop_required_MemAvailable_bytes": 94489280512,
+    "startup_seconds": 800,
+    "soft_seconds": 1000,
+    "window_seconds": 1200,
+    "cleanup_seconds": 200,
+    "root_start_bytes": 141733920768,
+    "root_runtime_bytes": 128849018880,
+    "cache_bytes": 8589934592,
+    "logs_bytes": 4294967296,
+    "swapout_delta_limit_bytes": 1073741824,
+    "images_and_all_remaining_policy_preserved": true,
+    "no_dumps_or_finite_equivalence_claim": true
+  },
+  "conditions_before_drain": [
+    "Repeat fresh exact selected binding/config/native/default/phase-free/root/clock/previous-clean/kernel and paused-download checks; no foreign owner or active phase.",
+    "Source and q must remain exact and controller must repeat source-qualified preflight; fresh timestamped LC1 namespace and empty registry.",
+    "Use existing qualified lc_owner controller --mode longcold --arm LC1 --run exactly once. No extra request, manual bypass, second owner, clock reset, timeout/cap change or cache pruning."
+  ],
+  "conditions_during_and_after": [
+    "After raw bound old hosted API/native clean close, observe actual MemAvailable>=88GiB before private launch; if below, follow qualified pre-window resource-refusal baseline restoration, no resized/private retry.",
+    "Private80GiB/swap0 fence must be installed and verified before API/native launch; preserve raw request/token/native/cgroup/exit/resource evidence, limits and actual fence restore/collection.",
+    "One unchanged8469-token request only; any noncompletion/fault remains HOLD/partial with no replay or automatic further arm.",
+    "Require privateAPI/native/window exit0, raw old-owner close0, source-qualified selected92/c43 restoration and public401/auth200/assembledREADY-stopDONE before successful terminal review.",
+    "Only after phase/restoration ends may the independently qualified bounded auditor examine saved evidence; genuine idle required before audit hashing."
+  ],
+  "human_authority": "Existing explicit instruction to test Maya-S with same1M/262144 settings and interruption permission; this is a distinct bounded long-cold diagnostic, not a completed quality or speed panel.",
+  "general_quality_performance_or_deployment_admitted": false,
+  "automatic_next_arm": false,
+  "reviewer_live_actions_performed": false,
+  "reviewer_pause": "After this source/evidence review and admission is delivered, pause all reviewer source/hash/tool work throughout private/restoration until parent reports terminal state."
+}

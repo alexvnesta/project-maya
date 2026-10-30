@@ -1,0 +1,40 @@
+{
+  "utc": "2026-10-30T22:26:05.274690+00:00",
+  "root_manual_full_response_reasoning_native_SSE_window_cleanup_and_resource_review": true,
+  "all34_audited_raw_hashes_match": true,
+  "terminal_sha256": "b0ec6af73900a819df73bd3f3fe686f739952f88b3ee8e5c5eaf9c2670a3089e",
+  "controller_original_OS_exit": 0,
+  "controller_original_exec_session": 17768,
+  "native_API_window_exits": [
+    0,
+    0,
+    0
+  ],
+  "native_load_seconds": 751.5,
+  "phase_including_load_seconds": 776.9008007701486,
+  "cold_prompt_tokens": 8469,
+  "prompt_ms": 11850.9,
+  "generated_tokens": 169,
+  "decode_ms": 3260.1,
+  "decode_tokens_per_second": 51.83890064721941,
+  "client_seconds": 15.13624920300208,
+  "known_answer_typed_JSON64_passed": true,
+  "reused": 0,
+  "drafts_accepted": 126,
+  "drafts_offered": 141,
+  "selected_restored_binding": {
+    "invocation": "286e06f090ce4137833bb684b77027d7",
+    "main_pid": 3722282,
+    "native_pid": 3722318,
+    "native_start_ticks": 166665220
+  },
+  "poststop_memory_raw_sha256": "be9742edec82720a883720eb81b1473c77bd143fe6edb2a6f7530a7ecc27c351",
+  "poststop_memory": {
+    "available_bytes": 98387820544,
+    "required_bytes": 94489280512,
+    "passed": true
+  },
+  "scope": "One cold long-text diagnostic only; not a model comparison, prose/coding qualification, nearfull1M/fulloutput demonstration or deployment acceptance",
+  "production_changed": false,
+  "no_retry_or_automatic_next_arm": true
+}

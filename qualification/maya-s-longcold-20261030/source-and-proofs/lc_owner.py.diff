@@ -1,0 +1,185 @@
+--- model-v1/ms_compat.py
++++ long-cold-v1/lc_owner.py
+@@ -1,4 +1,4 @@
+-"""Single candidate-only short cold compatibility screen; no quality or speed acceptance.
++"""Single unchanged long-input candidate diagnostic; no quality or speed acceptance.
+ 
+ This source is prospective until exact CPU, pack, compatibility and recovery
+ qualification is complete. There is no promotion or automatic next-arm loop.
+@@ -14,9 +14,9 @@
+ import sys
+ import time
+ 
+-import ms_config as config
+-import ms_controls as controls
+-import ms_runtime as runtime
++import lc_config as config
++import lc_controls as controls
++import lc_runtime as runtime
+ 
+ P, E, R, D = runtime.P, runtime.E, runtime.R, runtime.D
+ 
+@@ -33,8 +33,8 @@
+ 
+ 
+ def manifest(mode, arm):
+-    runtime.require(mode == 'compatibility' and arm == 'CS1', 'Only the separately admitted CS1 screen')
+-    return runtime.compatibility_manifest()
++    runtime.require(mode == 'longcold' and arm == 'LC1', 'Only the separately admitted LC1 diagnostic')
++    return runtime.longcold_manifest()
+ 
+ 
+ def read_proof(output, mode, arm, proofpath, *, present=False):
+@@ -59,7 +59,7 @@
+ 
+ def window_contract(old, output, mode, arm, proofpath):
+     path, window = old.owned_window()
+-    expected = [str(R / 'venv/bin/python3.14'), '-B', str(P / 'ms_compat.py'), '--phase', '--mode', mode,
++    expected = [str(R / 'venv/bin/python3.14'), '-B', str(P / 'lc_owner.py'), '--phase', '--mode', mode,
+                 '--arm', arm, '--output', str(output), '--proof', str(proofpath)]
+     runtime.require(Path(path).parent == R / 'windows' and window.get('command') == expected
+                     and window.get('continued_from') and window.get('test_returncode') is None
+@@ -69,7 +69,7 @@
+ 
+ 
+ def entry(args):
+-    runtime.require(args.mode == 'compatibility' and args.arm == 'CS1', 'This frozen owner is short compatibility only')
++    runtime.require(args.mode == 'longcold' and args.arm == 'LC1', 'This frozen owner is long-cold diagnostic only')
+     a, old, base, legacy, startup, numerical, storage = helpers()
+     folder = Path(args.trace_directory); output = folder.parent
+     runtime.require(folder == output / 'native' and Path(args.config) == output / 'candidate-config.json', 'Exact private entry paths')
+@@ -85,7 +85,7 @@
+     spec = importlib.util.spec_from_file_location('maya_s_hosting_defaults', D / 'hosting_defaults.py')
+     defaults = importlib.util.module_from_spec(spec); spec.loader.exec_module(defaults)
+     audit = old.prepare_server(server, c, folder, defaults.install)
+-    runtime.require('DS4_SERVE_DUMP' not in c['env'], 'No numerical dump or native FSIZE hook in compatibility')
++    runtime.require('DS4_SERVE_DUMP' not in c['env'], 'No numerical dump or native FSIZE hook in long-cold diagnostic')
+     audit.update(server_pid=os.getpid(), owned_window=str(window), native_sha256=config.BASE_NATIVE,
+                  config_sha256=args.config_sha256, context=1048576, output_allowance=262144,
+                  whole_pack_factor=config.factor(args.mode, args.arm))
+@@ -95,7 +95,7 @@
+ 
+ 
+ def phase(output, mode, arm, proofpath):
+-    runtime.require(mode == 'compatibility' and arm == 'CS1', 'This frozen phase is short compatibility only')
++    runtime.require(mode == 'longcold' and arm == 'LC1', 'This frozen phase is long-cold diagnostic only')
+     began = time.monotonic()
+     a, old, base, legacy, startup, numerical, storage = helpers()
+     output = Path(output); proof = read_proof(output, mode, arm, proofpath)
+@@ -120,7 +120,7 @@
+     path = output / 'candidate-config.json'; runtime.emit(path, c)
+     runtime.emit(output / 'candidate-config.shared-settings.json', {'max_tokens': 262144})
+     runtime.emit(output / 'proof.json', proof); runtime.emit(output / 'fixtures.json', m)
+-    command = [str(R / 'venv/bin/python3.14'), '-u', '-B', str(P / 'ms_compat.py'), '--entry', '--mode', mode,
++    command = [str(R / 'venv/bin/python3.14'), '-u', '-B', str(P / 'lc_owner.py'), '--entry', '--mode', mode,
+                '--arm', arm, '--config', str(path), '--config-sha256', runtime.sha(path), '--trace-directory', str(folder)]
+     with (folder / 'server.log').open('x') as log:
+         proc = subprocess.Popen(command, cwd=P, env=old.q8_phase.environment(folder, window),
+@@ -155,14 +155,13 @@
+             result['native_request_count'] = len(old.q8_phase.native_paths(folder))
+             runtime.require(result['native_request_count'] in (0, 1)
+                             and (not result['complete'] or result['native_request_count'] == 1),
+-                            'Compatibility permits at most one native request, exactly one on success')
+-            # Selected dfe326 forward_chunks only sets Run::yoco (initially -1)
+-            # when n-keep >= kYocoMin. This 44-token cold prompt cannot exercise it.
++                            'Long-cold permits at most one native request, exactly one on success')
++            # Exactly this frozen 8,469-token prompt exercises the selected mode1 skip.
+             text = (folder / 'engine.log').read_text(errors='replace')
+-            observed = skip_controls.activation(text, 1, required=False)
+-            runtime.require(observed['activation_early_rows'] == [], 'Unexpected long-prompt skip in short screen')
++            observed = skip_controls.activation(text, 1, required=True)
++            runtime.require(observed['activation_early_rows'] == [5801], 'Exact source-aligned mode1 skip required')
+             result['mode1_activation'] = observed
+-            runtime.require(not list(folder.glob('logits*.f32')), 'No dump files in compatibility screen')
++            runtime.require(not list(folder.glob('logits*.f32')), 'No dump files in long-cold diagnostic screen')
+             result['DSI1_leftovers'] = sorted(str(x.relative_to(folder)) for x in (folder / 'tmp').glob('deepseek-native-pictures-*/req-*.dsi'))
+             result['complete'] = result['complete'] and not result['DSI1_leftovers']
+             return result
+@@ -175,17 +174,18 @@
+         except BaseException as exc:
+             try:
+                 runtime.emit(output / 'phase-error.json', {'error': repr(exc), 'secondary': getattr(exc, '__notes__', []), 'retry': False})
+-            except BaseException as secondary: exc.add_note('Compatibility error receipt: ' + repr(secondary))
++            except BaseException as secondary: exc.add_note('Long-cold error receipt: ' + repr(secondary))
+             raise
+ 
+ 
+ def run_one(case, folder, pid, deadline, *, issue, save_progress=lambda value: None):
+-    runtime.require(case['id'] == runtime.COMPAT_CASE_ID and case['kind'] == 'literal'
+-                    and case['prompt_tokens'] == 44 and case['expected_reuse'] == 'zero'
+-                    and case['expected'] == 'RECOVERED_Q8_LITERAL'
+-                    and config.normalized(case['request']) == 'da06aa190c3a42a5abe68d10e6c86a233ce09a3b8a7e000282031c08dec8375e'
+-                    and config.normalized(case['prompt_ids']) == '0f51ef0261a3e5cb81f4434bfe4a056af8f1e6d040fbe186370c553ba24beff7',
+-                    'One frozen short cold case')
++    runtime.require(case['id'] == runtime.LONG_CASE_ID and case['kind'] == 'json'
++                    and type(case['prompt_tokens']) is int and case['prompt_tokens'] == 8469
++                    and case['expected_reuse'] == 'zero'
++                    and config.packed(case['expected']) == config.packed({'values': list(range(1, 65))})
++                    and config.normalized(case['request']) == runtime.LONG_REQUEST_SHA
++                    and config.normalized(case['prompt_ids']) == runtime.LONG_IDS_SHA,
++                    'One frozen long cold case')
+     value = {'complete': False, 'scores': [{'id': case['id'], 'passed': False, 'status': 'UNRUN'}],
+              'rows': [], 'retry': False, 'automatic_next_arm': False,
+              'quality_or_performance_pass': False, 'manual_review_required': True}
+@@ -193,19 +193,17 @@
+     try:
+         value['scores'][0]['status'] = 'ISSUED_REVIEW_PENDING'; save_progress(value)
+         response, proof = issue(case, folder, pid, deadline)
+-        row = controls.score(case, response, proof, quality=False)
+-        if response.get('content', '').strip() != case['expected']:
+-            raise controls.Incomplete('Exact literal answer required; no compatibility pass')
+-        runtime.require(proof.get('prompt_tokens') == 44 and type(proof['prompt_tokens']) is int,
++        row = controls.score(case, response, proof, quality=True)  # positive drafts, no dump operation
++        runtime.require(proof.get('prompt_tokens') == 8469 and type(proof['prompt_tokens']) is int,
+                         'Actual prompt must match frozen candidate encoding')
+         value['rows'] = [row]; value['complete'] = True
+-        value['scores'][0].update(passed=True, status='SHORT_LITERAL_SOURCE_AND_STATE_PASSED')
++        value['scores'][0].update(passed=True, status='LONGCOLD_JSON_SOURCE_AND_STATE_PASSED')
+     except controls.Incomplete as exc:
+         value['scores'][0].update(status='INCOMPLETE_HOLD', reason=str(exc))
+     except BaseException as exc:
+         value['scores'][0].update(status='FAULT_HOLD', reason=repr(exc))
+         try: save_progress(value)
+-        except BaseException as secondary: exc.add_note('Compatibility progress: ' + repr(secondary))
++        except BaseException as secondary: exc.add_note('Long-cold progress: ' + repr(secondary))
+         raise
+     save_progress(value)
+     return value
+@@ -220,7 +218,7 @@
+ 
+ 
+ def controller(args):
+-    runtime.require(args.mode == 'compatibility' and args.arm == 'CS1', 'This frozen owner is short compatibility only')
++    runtime.require(args.mode == 'longcold' and args.arm == 'LC1', 'This frozen owner is long-cold diagnostic only')
+     a, old, base, legacy, startup, numerical, storage = helpers()
+     current = json.loads((E / 'STATE.json').read_text()); runtime.require(runtime.phase_free(current), 'Another active phase/restoration')
+     stamp = datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+@@ -236,16 +234,16 @@
+         q = runtime.qualified(args.mode, qpin)
+         runtime.require(q['recovery_capability_prospectively_qualified'] is True, 'Prospective baseline fault recovery required')
+         m = manifest(args.mode, args.arm)
+-        return {'case_count': len(m['cases']), 'short_cold_only': True, 'no_claim_of_prior_Maya_S_fit': True}
++        return {'case_count': len(m['cases']), 'single_long_cold_only': True, 'no_claim_of_prior_Maya_S_fit': True}
+     h.extra_preflight = extra
+     h.reserve_attempt = lambda output, proof: reserve(args.mode, args.arm, output, proof)
+-    h.phase_argv = lambda output, proof: [str(R / 'venv/bin/python3.14'), '-B', str(P / 'ms_compat.py'), '--phase',
++    h.phase_argv = lambda output, proof: [str(R / 'venv/bin/python3.14'), '-B', str(P / 'lc_owner.py'), '--phase',
+              '--mode', args.mode, '--arm', args.arm, '--output', str(output), '--proof', str(proof)]
+     state = {'utc': datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC'),
+              'mode': args.mode, 'arm': args.arm, 'output': str(out), 'proof_path': str(meta / 'proof.json'),
+              'qualification_sha256': qpin, 'running_status': runtime.statuses(args.mode)['running'],
+              'complete_status': runtime.statuses(args.mode)['complete'],
+-             'completion_scope': 'Short cold startup/one-literal compatibility only; independent review pending, no quality, timing or automatic next arm'}
++             'completion_scope': 'Single unchanged long-input diagnostic only; unknown completion feasibility, no full quality panel, timing acceptance or automatic next arm'}
+     save = runtime.saver(h, args.mode, args.arm)
+     try:
+         result = runtime.coordinate(old, h, out, state, save, preflight_only=not args.run)
+@@ -270,7 +268,7 @@
+ 
+ 
+ def main():
+-    p = argparse.ArgumentParser(); p.add_argument('--mode', required=True, choices=['compatibility'])
++    p = argparse.ArgumentParser(); p.add_argument('--mode', required=True, choices=['longcold'])
+     p.add_argument('--arm', required=True)
+     for name in ('run', 'entry', 'phase'): p.add_argument('--' + name, action='store_true')
+     for name in ('output', 'proof', 'config', 'config-sha256', 'trace-directory', 'verify-pending'): p.add_argument('--' + name)

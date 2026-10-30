@@ -1,0 +1,66 @@
+{
+  "decision": "SOURCE_BOUND_CPU_PROOFS_REVIEWED_NO_MODEL_ADMISSION",
+  "groups": {
+    "owner-darwin": {
+      "pid": 26514,
+      "returncode": 0,
+      "wall_seconds": 0.5527535419678316,
+      "controls": 160,
+      "raw_sha256": {
+        "receipt.json": "519957daa2d6dedecf4cb77e41199be1910a13a278f9837e48b7890ce381bfa5",
+        "child.json": "142a959bfd86cba6401c7f624b6a78f97e98ec8c51512902c2231fbfc55cf835",
+        "child.log": "2901c7b1673f244477bd128d46c72984f2be98d1e82fabe12defd58f64c474ce"
+      }
+    },
+    "owner-linux": {
+      "pid": 3710157,
+      "returncode": 0,
+      "wall_seconds": 0.7109271900262684,
+      "controls": 160,
+      "raw_sha256": {
+        "receipt.json": "604af8f7367f73b0d36287555d269f37171a42bd5b68bfe9aea7162b58047554",
+        "child.json": "a357dbadb09c54c30321b420937de6d3a50e0de56121f5c78bd01953bd6047ed",
+        "child.log": "7c0cebdccca1c73856355a181c02f7820b5442aea74d31487567ab5902d5ecbc"
+      }
+    },
+    "audit-darwin": {
+      "pid": 27098,
+      "returncode": 0,
+      "wall_seconds": 1.0212713749497198,
+      "controls": 98,
+      "raw_sha256": {
+        "receipt.json": "8738232a6d858557feefcf6ab1bd26ae039fd0e1796100bbb1a695e21086ed49",
+        "child.json": "189931e75042e41aa6f0a2b6107ef148bef0ab5c86ea36761430ac28d4753bbc",
+        "child.log": "d8171dbd90a731b537090ec1e7fb1fd49aebd724b76dd467bdbd1e40ed487b6b"
+      }
+    },
+    "audit-linux": {
+      "pid": 3711692,
+      "returncode": 0,
+      "wall_seconds": 1.3062862080987543,
+      "controls": 98,
+      "raw_sha256": {
+        "receipt.json": "040fd71821a6b3c9b22df07ab88ee9684f62e05cbf459004756f9c863b90afa3",
+        "child.json": "364856947cf9ab241475d046c14c8668585c0d7d7f78e920cf0aff28dc8240a0",
+        "child.log": "b1c86ab625c01aa435bf3adb914c42689465fb17b43bd6dee055dd25a790f06f"
+      }
+    }
+  },
+  "counts_per_host": {
+    "original_owner": 160,
+    "fixture_v2_runtime_and_audit": 98
+  },
+  "source_maps_separate": true,
+  "original_owner_source_base": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/long-cold-v1/source-FIRST",
+  "current_audit_source_base": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/long-cold-v1",
+  "input_map_count_each": 880,
+  "entire_raw_logs_read": "All log bytes read; every success line parsed and matched exact ordered receipt/child IDs, all remaining summary text manually read. No additional log text or errors.",
+  "limits_verified": "Actual observed CPU30/nice15/env; LinuxAS512MiB; parent wall90; actual child0/errornull/cleanup[] on all four children.",
+  "source_input_and_IDs_match_both_hosts": true,
+  "historical_owner_sources_match_archive": true,
+  "current_audit_sources_match_live": true,
+  "original_failed52_audit": "FAILED and preserved; synthetic SSE usage mismatch repair does not regrade it.",
+  "no_project_execution_by_reviewer": true,
+  "no_native_model_execution_in_CPU_proofs": true,
+  "GPU_admission": false
+}

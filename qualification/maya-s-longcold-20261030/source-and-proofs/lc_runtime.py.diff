@@ -1,0 +1,410 @@
+--- model-v1/ms_runtime.py
++++ long-cold-v1/lc_runtime.py
+@@ -14,7 +14,7 @@
+ import shutil
+ import sys
+ 
+-import ms_config as config
++import lc_config as config
+ 
+ P = Path(__file__).resolve().parent
+ E = P.parents[2]
+@@ -22,7 +22,7 @@
+ D = Path('/home/alex/deepseek-hosted-20261025')
+ Q = E / 'decode-optimization-20261028/maya-s-comparison-v1'
+ F = E / 'autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1'
+-MEMORY_MAX = 76 * 2**30
++MEMORY_MAX = 80 * 2**30
+ HOST_MARGIN = 8 * 2**30
+ PHASE_KEYS = ('active_private_phase', 'active_GPU_phase', 'active_gpu_experiment',
+               'private_window', 'active_cpu_build', 'production_restore_in_progress',
+@@ -32,18 +32,25 @@
+     'decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_model_runtime.py': '9bd594247cecc13980d864780b778a66da08fcaf2b0a3ff5b386e84e33a1ad2c',
+     'decode-optimization-20261028/head-batching-v1/head_startup.py': '53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4',
+ }
+-PACK_CUSTODY_FILES = {
+-    'constructor_qualification': ('pack-v3/construct-qualification-FIRST.json', '9ac9ff14bb0e9ae77ac3caa38ef75ed5e5dc5d39afceee1de77430af8490d692'),
+-    'constructor_contract': ('pack-v3/construct-contract-FIRST.json', 'b7a25b3db67e30af7ed1ef4b3746093b5b476e3fc144eb47648c575ce8eda02e'),
+-    'constructor_result': ('pack-v3/construct-CPU-FIRST/pack-result.json', '9d42caa2d48361b4c176df2453e5bf1d97f405deb1080f0242db23769164ae9e'),
+-    'constructor_child': ('pack-v3/construct-CPU-FIRST/child.json', '315442dbf5280bbefb13bd77cff6756224fce5ae650e5cb331c2e5443af1eb35'),
+-    'constructor_log': ('pack-v3/construct-CPU-FIRST/child.log', 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),
+-    'constructor_result_review': ('pack-v3/CONSTRUCT_RESULT_ASTRA_REVIEW.json', 'ea4744a195c06f620621e4f387e85b9d950919cb7d32a653c91c201659d558a8'),
+-    'acquisition_receipt': ('acquisition-authorized-v2/acquisition-attempt-20261030T141645810845Z-3166208.json', '829dc2974aefd88d1c0adb65a799dc1b35bc1076eb21e4e5119e761b61cfa577'),
+-}
+-PACK_OUTPUTS = {'ds4.txt', 'tensors.txt', 'engram.bin', 'tokenizer/vocab.json',
+-                'tokenizer/merges.txt', 'tokenizer/token_type.json',
+-                'tokenizer/tokenizer.json', 'tokenizer/chat_template.jinja'}
++original_model_dir = Q / 'model-v1'
++ORIGINAL_PINS = {'ms_config': '8bb87901179135bf01f852b7a4e5c2a57dadd4033199ece802cb624196484176',
++ 'ms_runtime': 'ea789de73b4a9b8cb3b8887360bc40573efc600544f1c47980ee25deb22860ca',
++ 'ms_fixtures': '76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869',
++ 'ms_audit': 'fc36ab4832652ba8b99d151e0162f3e492a04257e356344bf33bff69eedb255b',
++ 'ms_quality_audit': '9ce588341f83e0aa4a4aa7292d8641a8683a95af96214074f37fe50acf1db737',
++ 'ms_compat_audit': 'a55f6a71c42a2b6de4d4dcb2207b213fa4b579ab7f2118cb0ef53f0f1311cad6'}
++CS1_PINS = {'compatibility-qualification.json': 'a8d5ff19fa187f46adf70b53287b652241a5f4b256a61811643d750cd770c090',
++ 'compatibility-completion-qualification.json': 'dd2b17daaf5a2d905163972848e08410296f20838bc66cb9c9875fa0065c05f8',
++ 'CS1/terminal-completion.json': '878b1b96d874a2d324f558ad3463f22fb950acc758594fc394299c0deccfc299',
++ 'CS1_COMPLETION_ASTRA_RESULT_REVIEW.json': '19774af77d7c6d6f91c0dd5344dd723b70be2a785fe62e133d3f7d995bd1f559',
++ 'CS1/compatibility-arms-at-terminal.json': '6425be5db6c0429243a093331ffb4d8387b348a99978838b709d5edf4bd5fcbb',
++ 'CS1/offline-audit-FIRST/attempt.json': '7ec03a30f3de3fcffc547c495f353ae4c5056d3497a266107d722e8d87a11b21',
++ 'CS1/offline-audit-FIRST/audit-started.json': '9b9b34da4a0c4c28ee8399150c5d93b23dacc21409a94b906efff15a72548a7a',
++ 'CS1/offline-audit-FIRST/child-observed.json': 'ba13e96b264b2a979c4eb1ef1fed47677592b1eec1884fe9f036dafa2e150a4a',
++ 'CS1/offline-audit-FIRST/child.log': '18b46bd9df075f9b86ee6c05e1c3b599d04b2cfd70f3c6724084723c72792fd9',
++ 'CS1/offline-audit-FIRST/dispatch-attempt.json': '0517fea5cacb771c651d9cd4bafa35be66710fc110d5af58984b1963a8273d61',
++ 'CS1/offline-audit-FIRST/supervision.json': '2dcc98429f4d68d590961e636e0aa7d531c7ded8e75ea4e24c5008fe5180825c'}
++PINS.update({str((original_model_dir / (name + '.py')).relative_to(E)): pin for name, pin in ORIGINAL_PINS.items()})
+ 
+ 
+ class ResourceAdmissionDeferred(RuntimeError): pass
+@@ -79,20 +86,30 @@
+             'pending': prefix + '_PUBLIC_VERIFY_PENDING'}
+ 
+ 
++def original_module(name):
++    """Verify immutable M1 helpers before importing; never replace a module/global."""
++    require(name in ORIGINAL_PINS, 'Unreviewed original module')
++    for key, pin in ORIGINAL_PINS.items():
++        path = original_model_dir / (key + '.py')
++        require(path.is_file() and not path.is_symlink() and path.resolve() == path
++                and sha(path) == pin, 'Original M1 helper changed')
++        loaded = sys.modules.get(key)
++        require(loaded is None or Path(loaded.__file__) == path, 'Foreign original module')
++    sys.path.insert(0, str(original_model_dir))
++    module = importlib.import_module(name)
++    require(Path(module.__file__) == original_model_dir / (name + '.py'), 'Original module origin')
++    return module
++
++
++def audit_modules():
++    return {key: original_module(name) for key, name in
++            (('fixtures', 'ms_fixtures'), ('saved', 'ms_audit'),
++             ('qa', 'ms_quality_audit'), ('original', 'ms_compat_audit'))}
++
++
+ def support():
+     for relative, pin in PINS.items(): require(sha(E / relative) == pin, 'Qualified support changed')
+-    paths = [('iq2s_model_runtime', E / next(k for k in PINS if k.endswith('/iq2s_model_runtime.py'))),
+-             ('q8share_model_runtime', E / next(k for k in PINS if k.endswith('/q8share_model_runtime.py'))),
+-             ('head_startup', E / next(k for k in PINS if k.endswith('/head_startup.py')))]
+-    modules = []
+-    for name, path in paths:
+-        loaded = sys.modules.get(name)
+-        require(loaded is None or Path(loaded.__file__) == path, 'Foreign helper module')
+-        sys.path.insert(0, str(path.parent)); module = importlib.import_module(name)
+-        require(Path(module.__file__) == path, 'Helper origin mismatch'); modules.append(module)
+-    base, legacy, startup = modules
+-    a, old = base.support()
+-    return a, old, base, legacy, startup
++    return original_module('ms_runtime').support()
+ 
+ 
+ def owned_paths(output, mode, arm, *, present=False):
+@@ -143,6 +160,7 @@
+ 
+ 
+ def qualified(mode, expected):
++    require(mode == 'longcold', 'Only the separately qualified LC1 mode')
+     path = P / (mode + '-qualification.json')
+     require(re.fullmatch('[0-9a-f]{64}', expected or '') and sha(path) == expected, 'Exact mode qualification pin')
+     q = json.loads(path.read_text())
+@@ -153,9 +171,7 @@
+         path = Path(name)
+         require(path.is_absolute() and '..' not in path.parts and not path.is_symlink()
+                 and re.fullmatch('[0-9a-f]{64}', pin or '') and sha(path) == pin, 'Immutable mode input changed: ' + name)
+-    entry = {'quality': 'ms_quality.py', 'compatibility': 'ms_compat.py'}.get(mode, 'ms_mode.py')
+-    for name in ('ms_config.py', 'ms_fixtures.py', 'ms_runtime.py', 'ms_controls.py', 'ms_audit.py',
+-                 'ms_quality_audit.py', 'ms_audit_dispatch.py', entry):
++    for name in ('lc_config.py', 'lc_runtime.py', 'lc_controls.py', 'lc_owner.py', 'lc_audit.py', 'lc_audit_dispatch.py'):
+         pin = sha(P / name)
+         require(q['files'].get(str(P / name)) == pin
+                 and any(g['source_sha256'].get(name) == pin for g in q['CPU_groups']),
+@@ -171,6 +187,9 @@
+                                json.loads(Path(paths['child']).read_text()), label)
+     require(q['CPU_groups'] and q['pack_and_resource_prerequisite_reviewed'] is True,
+             'Pack/resource prerequisite not reviewed')
++    for relative, helper_pin in PINS.items():
++        require(q['files'].get(str(E / relative)) == helper_pin, 'Original helper omitted from qualification')
++    closed_cs1(q)
+     pack_custody(q)
+     encoded_custody(q, mode)
+     require(q['private_memory_max'] == MEMORY_MAX and q['host_margin'] == HOST_MARGIN,
+@@ -179,192 +198,97 @@
+     return q
+ 
+ 
+-def pack_file(path):
+-    """Exact evidence-root paths, including ancestors, must not be aliases."""
+-    path = Path(path)
+-    require(path.is_absolute() and path.is_relative_to(E) and '..' not in path.parts
+-            and not E.is_symlink(), 'Foreign pack evidence path')
+-    current = E
+-    for part in path.relative_to(E).parts:
+-        current = current / part
+-        require(not current.is_symlink(), 'Pack evidence ancestor/leaf alias')
+-    require(path.is_file(), 'Pack evidence file missing')
+-    return path
+-
+-
+ def pack_custody(q):
+-    """Bind successful P3 metadata, leaving the two failed constructors intact.
+-
+-    Only small metadata is hashed here. Acquisition already hashed tensor assets;
+-    their exact stat identities are retained rather than rehashed in a phase.
+-    """
+-    evidence = q['pack_custody']
+-    require(set(evidence) == set(PACK_CUSTODY_FILES), 'Exact P3 custody fields required')
+-    rows = {}
+-    for name, (relative, pin) in PACK_CUSTODY_FILES.items():
+-        require(evidence[name] == str(Q / relative), 'Successful P3 evidence path changed')
+-        path = pack_file(evidence[name])
+-        require(q['files'].get(str(path)) == pin == sha(path), 'Exact P3 evidence omitted/changed')
+-        if name != 'constructor_log': rows[name] = json.loads(path.read_text())
+-    cq = rows['constructor_qualification']; base = Q / 'pack-v3'
+-    require(cq['root_manual_review'] is True and cq['astra_manual_review'] is True
+-            and cq['pack_guard_both_physical_hosts_passed'] is True
+-            and cq['construct_controller_both_physical_hosts_passed'] is True
+-            and cq['actual_contract'] == evidence['constructor_contract']
+-            and cq['actual_contract_sha256'] == PACK_CUSTODY_FILES['constructor_contract'][1]
+-            and cq['pack_output_is_original_never_created_fresh_target'] == str(Q / 'pack-v1/pack-FIRST'),
+-            'Exact completed P3 qualification/contract/target required')
+-    require(cq['files'] and all(q['files'].get(name) == pin for name, pin in cq['files'].items()),
+-            'Constructor source/input/proof closure missing from model qualification')
+-    groups = cq['CPU_groups']
+-    require(len(groups) == 2 and {g['name'] for g in groups} == {'pack_guard', 'construct_controller'},
+-            'Both original P3 CPU groups required')
+-    for group in groups:
+-        count, prefix = (94, 'CPU-FIRST') if group['name'] == 'pack_guard' else (31, 'CONSTRUCT-FIRST')
+-        require(len(group['test_ids']) == count and group['test_ids'] == sorted(group['test_ids']),
+-                'Exact ordered P3 CPU control inventory required')
+-        require(set(group['proofs']) == {'darwin', 'linux'}, 'Both physical P3 proofs required')
+-        for platform, paths in group['proofs'].items():
+-            for key, leaf in (('receipt', 'receipt.json'), ('child', 'child.json'), ('log', 'child.log')):
+-                require(paths[key] == str(base / (prefix + '-' + platform) / leaf), 'P3 raw proof path changed')
+-                pack_file(paths[key])
+-        cpu_membership(group, cq['files'], source_base=base)
+-        for platform, paths in group['proofs'].items():
+-            cpu_group_contract(group, json.loads(Path(paths['receipt']).read_text()),
+-                               json.loads(Path(paths['child']).read_text()), platform)
+-    child = rows['constructor_child']
+-    expected_command = [str(R / 'venv/bin/python3.14'), '-B', str(base / 'construct_pack.py'), '--child',
+-        '--qualification', evidence['constructor_qualification'], '--qualification-sha256',
+-        PACK_CUSTODY_FILES['constructor_qualification'][1], '--contract', evidence['constructor_contract'],
+-        '--output', str(base / 'construct-CPU-FIRST')]
+-    require(child['command'] == expected_command and type(child['returncode']) is int and child['returncode'] == 0
+-            and child['error'] is None and child['cleanup_errors'] == []
+-            and type(child['pid']) is int and child['pid'] > 0
+-            and type(child['seconds']) in (int, float) and 0 <= child['seconds'] <= 90
+-            and child['CPU_limit_seconds'] == 30 and child['Linux_AS_bytes'] == 512 * 2**20
+-            and child['wall_limit_seconds'] == 90 and child['nice_increment'] == 15
+-            and child['environment'] == {'CUDA_VISIBLE_DEVICES': '', 'OMP_NUM_THREADS': '1',
+-                'OPENBLAS_NUM_THREADS': '1', 'MALLOC_ARENA_MAX': '1', 'PYTHONDONTWRITEBYTECODE': '1'}
+-            and type(child['GPU_or_service_actions']) is int and child['GPU_or_service_actions'] == 0,
+-            'Actual P3 constructor child failed or differs from admitted metadata command')
+-    review = rows['constructor_result_review']
+-    require(review['passed'] is True and review['model_or_GPU_admitted'] is False
+-            and review['qualification_sha256'] == PACK_CUSTODY_FILES['constructor_qualification'][1],
+-            'Independent actual P3 result review missing')
+-    contract, result, acquired = (rows[k] for k in ('constructor_contract', 'constructor_result', 'acquisition_receipt'))
+-    require(contract['output'] == str(Q / 'pack-v1/pack-FIRST') and contract['assets_root'] == str(Q / 'assets')
+-            and contract['vision_dir'] == str(E / 'vision-assets-1017')
+-            and contract['acquisition_receipt'] == evidence['acquisition_receipt']
+-            and contract['acquisition_receipt_sha256'] == q['files'][evidence['acquisition_receipt']]
+-            and acquired.get('status') == 'ALL_EIGHT_ASSETS_VERIFIED_NO_MODEL_RUN'
+-            and type(acquired.get('returncode')) is int and acquired['returncode'] == 0
+-            and result['status'] == 'PACK_METADATA_VERIFIED_NO_MODEL_ADMISSION'
+-            and type(acquired.get('model_or_service_actions')) is int and acquired['model_or_service_actions'] == 0
+-            and result['asset_stats'] == contract['asset_stats'] and result['vision_stats'] == contract['vision_stats']
+-            and result['capacity_inputs']['limits_preserved'] == contract['profile']
+-            and set(result['output_sha256']) == PACK_OUTPUTS,
+-            'Completed acquisition/pack construction custody differs')
+-    assets = Q / 'assets'; seen = set()
+-    require(len(acquired['files']) == 8, 'Exact eight acquisition rows required')
+-    for row in acquired['files']:
+-        relative = Path(row['path'])
+-        require(not relative.is_absolute() and '..' not in relative.parts
+-                and row['status'] in ('DOWNLOADED_VERIFIED', 'VERIFIED_EXISTING'), 'Acquisition path/status changed')
+-        path = pack_file(assets / relative); seen.add(str(path))
+-        st = path.stat(); actual = [st.st_dev, st.st_ino, st.st_size, st.st_mtime_ns, st.st_ctime_ns]
+-        require(st.st_nlink == 1 and contract['asset_stats'].get(str(path)) == actual
+-                and row['bytes'] == st.st_size and result['asset_sha256'].get(row['path']) == row['sha256'],
+-                'Acquired asset identity changed; no inherited payload hash claim')
+-    require(len(seen) == 8 and seen == set(contract['asset_stats'])
+-            and set(result['asset_sha256']) == {row['path'] for row in acquired['files']},
+-            'Exact eight asset identities required')
+-    for relative, digest in result['output_sha256'].items():
+-        path = pack_file(Q / 'pack-v1/pack-FIRST' / relative)
+-        require('..' not in Path(relative).parts and not Path(relative).is_absolute()
+-                and q['files'].get(str(path)) == digest == sha(path), 'Constructed metadata omitted/changed')
+-    require(set(contract['vision_stats']) == {str(E / 'vision-assets-1017' / n) for n in ('vision.json', 'vision.bin')},
+-            'Both selected vision identities required')
+-    for name, original in contract['vision_stats'].items():
+-        path = pack_file(name)
+-        require(path.parent == E / 'vision-assets-1017' and path.name in ('vision.json', 'vision.bin')
+-                and not path.is_symlink(), 'Exact selected vision asset required')
+-        st = path.stat()
+-        require(st.st_nlink == 1 and original == [st.st_dev, st.st_ino, st.st_size, st.st_mtime_ns, st.st_ctime_ns],
+-                'Selected vision stat custody changed')
+-    return result
+-
+-
+-COMPAT_SOURCE_SHA = 'd572147c2f668b7702531ec62a90b5ba9fe8e0b47ac864f05ecca8c73402c601'
+-COMPAT_CASE_ID = 'ms-compatibility-short-cold'
+-
+-
+-def compatibility_manifest():
+-    """Derive only the already encoded candidate 44-token literal; never encode/resize."""
+-    import ms_fixtures as fixtures
+-    path = P / 'prose-fixtures-B.json'
+-    require(sha(path) == COMPAT_SOURCE_SHA, 'Exact previously encoded candidate artifact required')
++    # Exact P3 asset/stat/tokenizer/constructor CPU custody already qualified in M1.
++    return original_module('ms_runtime').pack_custody(q)
++
++
++def closed_cs1(q):
++    for relative, pin in CS1_PINS.items():
++        path = original_model_dir / relative
++        require(q['files'].get(str(path)) == pin and sha(path) == pin,
++                'Preserve closed CS1 proof and failed first audit bytes')
++    terminal = json.loads((original_model_dir / 'CS1/terminal-completion.json').read_text())
++    require(terminal.get('passed') is True and terminal.get('original_audit_regraded') is False
++            and terminal.get('model_execution_performed') is False
++            and terminal.get('automatic_next_arm') is False, 'Bounded CS1 completion only')
++    snapshot = json.loads((original_model_dir / 'CS1/compatibility-arms-at-terminal.json').read_text())['CS1']
++    require(snapshot.get('fully_reviewed') is False and snapshot.get('accepted') is False,
++            'At-terminal registry evidence must remain historical')
++    current_path = original_model_dir / 'compatibility-arms.json'
++    require(str(current_path) not in q['files'], 'Do not hash mutable reviewed registry as historical evidence')
++    current = json.loads(current_path.read_text())['CS1']
++    require(current.get('attempted') is True and current.get('fully_reviewed') is True
++            and current.get('accepted') is False and current.get('short_literal_compatibility_passed') is True
++            and current.get('quality_or_performance_qualified') is False
++            and current.get('original_audit_returncode') == 1 and current.get('original_audit_regraded') is False
++            and current.get('no_automatic_next_arm') is True
++            and current.get('completion_sha256') == CS1_PINS['CS1/terminal-completion.json']
++            and current.get('completion_review_sha256') == CS1_PINS['CS1_COMPLETION_ASTRA_RESULT_REVIEW.json']
++            and all(current.get(k) == snapshot[k] for k in ('output', 'proof', 'controller_pid')),
++            'CS1 closure is not quality acceptance or automatic LC1 permission')
++    return True
++
++
++LONG_SOURCE_SHA = 'c77c34d85a59f4696bb82397a20df97f92235a7ad752d8d3ad80ccfa38377707'
++LONG_CASE_ID = 'ms-longcold-single-text'
++LONG_REQUEST_SHA = '400196a1ffde50b4258720e5ded806c91c546d1c9b5affc78a55e4fc8a586487'
++LONG_IDS_SHA = '010205e8f361a49baf7182628639afd8114a55a40224b5a06f86487d87ac3e65'
++
++
++def longcold_manifest():
++    """Derive the unchanged first quality-B request and actual IDs, without encoding."""
++    fixtures = original_module('ms_fixtures')
++    path = original_model_dir / 'quality-fixtures-B.json'
++    require(sha(path) == LONG_SOURCE_SHA, 'Exact previously encoded candidate artifact required')
+     source = json.loads(path.read_text())
+-    require(source['mode'] == 'prose' and source['context'] == 1048576
++    require(source['mode'] == 'quality' and source['context'] == 1048576
+             and source['default_output'] == 262144 and source['policy'] == fixtures.POLICY
+             and source['pack_relative_to_E'] == str(config.CANDIDATE_PACK.relative_to(config.E)),
+             'Candidate whole-pack encoding and unchanged full policy required')
+-    fixtures.validate_encoded(source['lifecycle_cases'], 'lifecycle')
+-    rows = [c for c in source['lifecycle_cases'] if c['id'] == 'ms-prose-prefill-recovery']
+-    require(len(rows) == 1, 'One exact prior encoded literal source required')
+-    case = copy.deepcopy(rows[0])
+-    require(case['prompt_tokens'] == 44 and case['kind'] == 'literal'
+-            and case['expected'] == 'RECOVERED_Q8_LITERAL' and case['image_spans'] == []
+-            and case['request_sha256'] == 'da06aa190c3a42a5abe68d10e6c86a233ce09a3b8a7e000282031c08dec8375e'
+-            and case['prompt_ids_sha256'] == '0f51ef0261a3e5cb81f4434bfe4a056af8f1e6d040fbe186370c553ba24beff7',
+-            'Frozen short request/actual candidate IDs changed')
+-    case.pop('dependency'); case.update(id=COMPAT_CASE_ID, expected_reuse='zero')
++    fixtures.validate_encoded(source['cases'], 'quality')
++    case = copy.deepcopy(source['cases'][0])
++    require(len(source['cases']) == 4 and case['id'] == 'ms-quality-cold-text'
++            and case['prompt_tokens'] == 8469 and case['kind'] == 'json'
++            and config.packed(case['expected']) == config.packed({'values': list(range(1, 65))})
++            and case['image_spans'] == [] and case['expected_reuse'] == 'zero'
++            and case['request_sha256'] == LONG_REQUEST_SHA and case['prompt_ids_sha256'] == LONG_IDS_SHA
++            and config.normalized(case['request']) == LONG_REQUEST_SHA
++            and config.normalized(case['prompt_ids']) == LONG_IDS_SHA,
++            'Frozen long request/actual candidate IDs changed')
++    case.update(id=LONG_CASE_ID)
+     keep = ('context', 'default_output', 'policy', 'pack_relative_to_E', 'tokenizer_source_sha256',
+             'effective_template', 'API_sha256', 'CPU_only', 'native_model_executed')
+     result = {k: copy.deepcopy(source[k]) for k in keep}
+-    result.update(id='maya-s-short-cold-compatibility-v1', mode='compatibility', cases=[case],
+-                  source_manifest='prose-fixtures-B.json', source_manifest_sha256=COMPAT_SOURCE_SHA,
+-                  source_case_id='ms-prose-prefill-recovery', derived_without_reencoding=True,
+-                  quality_or_performance_pass=False, automatic_next_arm=False)
++    result.update(id='maya-s-single-long-cold-v1', mode='longcold', cases=[case],
++                  source_manifest='model-v1/quality-fixtures-B.json', source_manifest_sha256=LONG_SOURCE_SHA,
++                  source_case_id='ms-quality-cold-text', derived_without_reencoding=True,
++                  quality_or_performance_pass=False, automatic_next_arm=False,
++                  completion_feasibility_established=False)
+     return result
+ 
+ 
+ def encoded_custody(q, mode):
+-    import ms_fixtures as fixtures
+-    if mode == 'compatibility':
+-        compatibility_manifest()  # derive one already encoded request; no tokenizer execution
+-        manifests = [('prose', 'B', 'CS1')]
+-    else:
+-        manifests = [(mode, 'A', config.MODE_ARMS[mode][0]), (mode, 'B', config.MODE_ARMS[mode][1])]
+-    for source_mode, which, arm in manifests:
+-        path = P / (source_mode + '-fixtures-' + which + '.json')
+-        require(q['files'].get(str(path)) == sha(path), 'Exact encoded pack-specific manifest required')
+-        manifest = json.loads(path.read_text()); directory = fixtures.tokenizer_directory(config.factor(mode, arm)['pack'])
+-        pins = manifest['tokenizer_source_sha256']; template = manifest['effective_template']
+-        require(set(pins) == set(fixtures.TOKENIZER_NAMES), 'Exact encoded tokenizer file inventory required')
+-        for name, pin in pins.items():
+-            require(q['files'].get(str(directory / name)) == pin, 'Tokenizer source omitted from qualification')
+-        pack_template = directory / 'chat_template.jinja'
+-        expected = fixtures.E / fixtures.FALLBACK_TEMPLATE if template['pack_template_replaced'] else pack_template
+-        require(type(template['pack_template_replaced']) is bool
+-                and template['effective_template_relative_to_E'] == str(expected.relative_to(fixtures.E))
+-                and q['files'].get(str(expected)) == template['effective_template_sha256'],
+-                'Effective API template omitted from qualification')
++    require(mode == 'longcold', 'Only LC1 manifest')
++    manifest = longcold_manifest(); fixtures = original_module('ms_fixtures')
++    path = original_model_dir / 'quality-fixtures-B.json'
++    require(q['files'].get(str(path)) == LONG_SOURCE_SHA, 'Exact encoded pack-specific manifest required')
++    directory = fixtures.tokenizer_directory(config.factor('longcold', 'LC1')['pack'])
++    pins = manifest['tokenizer_source_sha256']; template = manifest['effective_template']
++    require(set(pins) == set(fixtures.TOKENIZER_NAMES), 'Exact encoded tokenizer inventory')
++    for name, pin in pins.items():
++        require(q['files'].get(str(directory / name)) == pin, 'Tokenizer source omitted from qualification')
++    expected = directory / 'chat_template.jinja'
++    require(template['pack_template_replaced'] is False
++            and template['effective_template_relative_to_E'] == str(expected.relative_to(fixtures.E))
++            and q['files'].get(str(expected)) == template['effective_template_sha256'],
++            'Exact candidate template; no baseline substitution')
+ 
+ 
+ def prerequisite(mode, arm, registry):
+-    config.factor(mode, arm); require(arm not in registry, 'Preserve original arm; never replay')
+-    order = config.MODE_ARMS[mode]; index = order.index(arm)
+-    if index:
+-        previous = registry.get(order[index - 1], {})
+-        require(previous.get('fully_reviewed') is True and previous.get('accepted') is True,
+-                'Previous arm must pass independent review; failed outcomes block advancement')
+-    if mode not in ('quality', 'compatibility'):
+-        quality = json.loads((P / 'quality-arms.json').read_text())
+-        require(all(quality.get(a, {}).get('fully_reviewed') is True and quality[a].get('accepted') is True
+-                    for a in config.MODE_ARMS['quality']), 'Both quality/resource screens must pass')
+-        if arm in ('B2', 'A2'):
+-            require(json.loads((P / ('first-pair-' + mode + '.json')).read_text()).get('confirmation_admitted') is True,
+-                    'Matched first pair must admit reversed confirmation')
++    config.factor(mode, arm)
++    require(type(registry) is dict and arm not in registry, 'Preserve original arm; never replay')
++    require(not registry, 'Single LC1 registry only; no foreign or previous arm')
+ 
+ 
+ def memory_available():
+@@ -417,8 +341,8 @@
+             output = self.private_output
+             path = Path(output) / 'private-memory-fence.json'
+             if path.is_file():
+-                import ms_controls
+-                ms_controls.fence_collected(output, self.audit_dir)
++                import lc_controls
++                lc_controls.fence_collected(output, self.audit_dir)
+ 
+         def launch(self, prior, output, proofpath):
+             qualified(self.mode, self.qualification_sha256)

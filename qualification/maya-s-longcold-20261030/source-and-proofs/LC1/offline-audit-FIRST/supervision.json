@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "arm": "LC1",
+  "stage": "longcold-terminal",
+  "qualification_sha256": "ca406101a1b47dfb5ad713db67ae44c65318b2169a19a176c3f46f7f5fe395df",
+  "attempt_sha256": "a3fd9d3e1e1f1f35c24337f8ff4f9c7c648ebf2ec760ea2d9378804485ba0d01",
+  "dispatch_sha256": "ea8467005178c696fce586b8d94920d22639c70e58c1958f4af0a49d43e26c2b",
+  "binding": {
+    "invocation": "286e06f090ce4137833bb684b77027d7",
+    "main_pid": 3722282,
+    "native_pid": 3722318,
+    "native_start_ticks": 166665220
+  },
+  "child": {
+    "pid": 3730077,
+    "returncode": 0,
+    "error": null,
+    "cleanup_errors": [],
+    "wall_seconds": 0.9188175941817462,
+    "CPU_limit_seconds": 30,
+    "Linux_AS_bytes": 536870912,
+    "wall_limit_seconds": 90,
+    "nice_increment": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "command": [
+      "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+      "-B",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/long-cold-v1/lc_audit_dispatch.py",
+      "--qualification-sha",
+      "ca406101a1b47dfb5ad713db67ae44c65318b2169a19a176c3f46f7f5fe395df",
+      "--attempt-sha",
+      "a3fd9d3e1e1f1f35c24337f8ff4f9c7c648ebf2ec760ea2d9378804485ba0d01",
+      "--dispatch-sha",
+      "ea8467005178c696fce586b8d94920d22639c70e58c1958f4af0a49d43e26c2b",
+      "--child"
+    ]
+  },
+  "retry": false,
+  "terminal_publication": "NOT_YET_ATTEMPTED"
+}
