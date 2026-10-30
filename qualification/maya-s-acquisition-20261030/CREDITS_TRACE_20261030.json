@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-30T14:02:07.689541+00:00",
+  "document": "/Users/alex/Downloads/DS4-S2-BUILD.md",
+  "document_sha256": "f19ddb36008ad553f38c12c80620e8698522be1b84e9d3c848d63f9ca735e992",
+  "finding": "Credits identify public ingredients, not a downloadable complete S2 artifact. A similar hybrid can be reconstructed with new engineering and evaluation; exact replication is not established.",
+  "public_components": {
+    "base": "https://huggingface.co/peasantsmith/DeepSeek-V4.1-Flash-1017-Maya-GGUF",
+    "original_precision_experts": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "T16_codebook": "https://github.com/lxe/dsx",
+    "trellis_methods": [
+      "exllamav3",
+      "QTIP"
+    ]
+  },
+  "unpublished_per_document": [
+    "author encoded T16 gate/up L24-28 strips and calibration",
+    "exact native MXFP4 1870 expert lane selection/pack",
+    "author TP2/prompt-lane/fusion/loader engine changes"
+  ],
+  "next_scope": "Continue published Maya-S whole-pack baseline first, with 1048576 total context and262144 output allowance. No hybrid construction or deployment now."
+}
