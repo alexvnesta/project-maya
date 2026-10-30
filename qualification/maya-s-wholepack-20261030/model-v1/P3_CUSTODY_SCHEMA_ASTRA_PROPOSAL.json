@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-30T17:28:12.171266+00:00",
+  "decision": "PROPOSED_EXACT_P3_RUNTIME_CUSTODY_SCHEMA_SOURCE_ONLY",
+  "current_runtime_sha256": "2813cd2e129c191c2f4c447f66dc4ed624d537fc2fc6fc968e9a59a31d2bfc22",
+  "preserve_prior_128_56_source_and_raw_proofs": true,
+  "no_edits_or_tests_by_reviewer": true,
+  "exact_evidence_paths_relative_to_Q": {
+    "constructor_qualification": "pack-v3/construct-qualification-FIRST.json",
+    "constructor_contract": "pack-v3/construct-contract-FIRST.json",
+    "constructor_result": "pack-v3/construct-CPU-FIRST/pack-result.json",
+    "constructor_child": "pack-v3/construct-CPU-FIRST/child.json",
+    "constructor_log": "pack-v3/construct-CPU-FIRST/child.log",
+    "constructor_result_review": "pack-v3/CONSTRUCT_RESULT_ASTRA_REVIEW.json"
+  },
+  "known_pins": {
+    "construct-qualification-FIRST.json": "9ac9ff14bb0e9ae77ac3caa38ef75ed5e5dc5d39afceee1de77430af8490d692",
+    "construct-contract-FIRST.json": "b7a25b3db67e30af7ed1ef4b3746093b5b476e3fc144eb47648c575ce8eda02e",
+    "construct-CPU-FIRST/pack-result.json": "9d42caa2d48361b4c176df2453e5bf1d97f405deb1080f0242db23769164ae9e",
+    "construct-CPU-FIRST/child.json": "315442dbf5280bbefb13bd77cff6756224fce5ae650e5cb331c2e5443af1eb35",
+    "construct-CPU-FIRST/child.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "CONSTRUCT_RESULT_ASTRA_REVIEW.json": "ea4744a195c06f620621e4f387e85b9d950919cb7d32a653c91c201659d558a8"
+  },
+  "keep_output_target": "pack-v1/pack-FIRST",
+  "validation": [
+    "Use exact named evidence paths, not any pack-v1 or pack-v* subtree allowance; reject aliases/traversal. Keep existing exact acquisition receipt path from contract and terminal hash.",
+    "Bind constructor q9ac9 immutable SHA, manual flags, actual_contract path/hash b7a25 and target P1pack-FIRST. Require every canonical constructor q.files pair in new model q unchanged; require constructor qself and all new actual child/log/result/review pins too.",
+    "Verify constructor CPU groups exactly named pack_guard and construct_controller with94 and31 IDs, exact currentP3 source/input maps and both physical receipt/child/log hashes from pinned q. Resolve source basenames to exactP3 directory, not model-v1; do not borrow generic M-root cpu_membership unchanged. No controls rerun required solely for unchanged package proof.",
+    "Verify typed actual constructor rc0/errornull/cleanup[], exact admitted child command/q/contract/output, CPU30/AS512/wall90/nice15/env and metadata-only GPU_or_service_actions0. Empty child.log is expected because packer stdout is captured in result.",
+    "Keep exact terminal acquisition8 file names/status/size/hash, asset stat identity+singlelink and exact selected two vision stats. No weight payload rehash within model private phase.",
+    "Require exact eight output names and q file hashes equal successful result; candidate tokenizer five hashes/template are a subset. Reject omitted/extra output names and changed pack target.",
+    "Keep P1/P2 failed constructor evidence in model q as immutable history; never move successful P3 receipts into old failed namespace.",
+    "Requalify changed runtime/model and audit sources on both hosts before any actual model admission. Add omittedP3q/rawCPU/log, substitutedfailedP1result, wrongtarget, extra/missingoutput, nonzerochild, changedcontract/stat/source negative controls."
+  ],
+  "scope": "Narrow custody schema proposal only; no model or construction execution/admission."
+}

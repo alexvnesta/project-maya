@@ -1,7 +1,7 @@
 """FIRST actual published Maya-S candidate CPU encodings; no model.
 
 No native/model/downloaded payload. Parent guards selected production before Linux CPU work.
-Two explicit groups use separate bounded children; nothing runs a model or private service.
+One explicit group uses a bounded child; nothing runs a model or private service.
 """
 import argparse
 import ast
@@ -76,7 +76,7 @@ def input_pins(review):
         pin=metadata['output_sha256']['tokenizer/'+name]
         key=str((HERE.parent/'pack-v1/pack-FIRST/tokenizer'/name).relative_to(E));required[key]=pin
     # Frozen request pins are explicit below; no fixture import before custody.
-        required[BASE_CONFIG]='c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa'
+    required[BASE_CONFIG]='c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa'
     for name,pin in literals['SUPPORT_PINS'].items():required[name]=pin
     for name,pin in literals['BASE_TOKENIZER_PINS'].items():required['native-vision-v2/tokenizer/'+name]=pin
     required.update({'prefill-cache-improvements-20261027/numerical-fixtures/manifest.json':'251f89c1949f43308994a2a08805195ff7069eb4f11642920ed442168db10061',
@@ -139,7 +139,7 @@ def child(pin,out,group):
     if result.wasSuccessful():require(set(manifests)=={'quality','prose','coding'},'Sole actual candidate encodings missing')
     encoded=json.dumps(manifests,sort_keys=True,separators=(',',':'),allow_nan=False).encode()
     with (out/'encoded-candidate-fixtures.json').open('xb') as f:f.write(encoded)
-    receipt={'group':group,'candidate_pack_encoded':True,'encoded_candidate_fixtures_sha256':hashlib.sha256(encoded).hexdigest(),'passed':result.wasSuccessful(),'controls':result.testsRun,'test_ids':before[2],'source_sha256':before[0],'input_sha256':before[1],'CPU_seconds':list(resource.getrlimit(resource.RLIMIT_CPU)),'Linux_AS_bytes':list(resource.getrlimit(resource.RLIMIT_AS)) if sys.platform=='linux' else None,'nice':os.getpriority(os.PRIO_PROCESS,0),'environment':ENV,'CPU_only':True,'native_model_executed':False}
+    receipt={'group':group,'candidate_pack_encoded':set(manifests)=={'quality','prose','coding'},'encoded_candidate_fixtures_sha256':hashlib.sha256(encoded).hexdigest(),'passed':result.wasSuccessful(),'controls':result.testsRun,'test_ids':before[2],'source_sha256':before[0],'input_sha256':before[1],'CPU_seconds':list(resource.getrlimit(resource.RLIMIT_CPU)),'Linux_AS_bytes':list(resource.getrlimit(resource.RLIMIT_AS)) if sys.platform=='linux' else None,'nice':os.getpriority(os.PRIO_PROCESS,0),'environment':ENV,'CPU_only':True,'native_model_executed':False}
     with (out/'receipt.json').open('x') as f:json.dump(receipt,f,indent=2)
     return 0 if result.wasSuccessful() else 1
 

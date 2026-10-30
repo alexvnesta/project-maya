@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-30T17:26:20.107477+00:00",
+  "decision": "ACTUAL_PACK_V3_METADATA_CONSTRUCTION_REVIEWED_NO_MODEL_ADMISSION",
+  "passed": true,
+  "qualification_sha256": "9ac9ff14bb0e9ae77ac3caa38ef75ed5e5dc5d39afceee1de77430af8490d692",
+  "conditional_admission_sha256": "19cab0e2194bf7ed95f98b9b10e2a555e790c4d29de989afdad9768cc7e7562c",
+  "evidence_sha256": {
+    "construct-actual-preflight-FIRST.json": "69212798493babce60746c4fc66c40e70c4c3617c82149376d57acdafcb8a602",
+    "construct-contract-FIRST.json": "b7a25b3db67e30af7ed1ef4b3746093b5b476e3fc144eb47648c575ce8eda02e",
+    "construct-CPU-FIRST/child.json": "315442dbf5280bbefb13bd77cff6756224fce5ae650e5cb331c2e5443af1eb35",
+    "construct-CPU-FIRST/child.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "construct-CPU-FIRST/pack-result.json": "9d42caa2d48361b4c176df2453e5bf1d97f405deb1080f0242db23769164ae9e",
+    "CONSTRUCT_ROOT_RESULT_REVIEW.json": "743d631935ba49953a21f5a7b0fc007140bd439efa0671a75ea7072fa68a7c24"
+  },
+  "actual_child_pid": 3379286,
+  "returncode": 0,
+  "error": null,
+  "cleanup_errors": [],
+  "seconds": 2.221887483028695,
+  "output_sha256": {
+    "ds4.txt": "a075c437417cf74926702badea9737eeb19d2ebc8d9a0ce1fcecc383bc98e709",
+    "tensors.txt": "ed50bff5a053206f7b26396e0a3226d3a59848e39edc6c2eea91d5865f1b6d88",
+    "engram.bin": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142",
+    "tokenizer/vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+    "tokenizer/merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+    "tokenizer/token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+    "tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "tokenizer/chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16"
+  },
+  "source_linked_checks": {
+    "preflight133_same_binding": true,
+    "exact_single_child_arguments_bounds_environment": true,
+    "captured_stdout_in_pack_result_empty_child_log_expected": true,
+    "actual_output_eight_local_metadata_hashes_match": true,
+    "mapped_rows": 48795,
+    "mapped_files": 8,
+    "per_expert_entries": 15360,
+    "per_expert_sum_matches_routed_bytes": true,
+    "asset_vision_stat_contract_unchanged": true,
+    "full_profile_preserved": true,
+    "tokenizer_original_template_retained": true,
+    "drafter_writer_layout_12_gaps_2424_bytes": true
+  },
+  "limitations": [
+    "Successful metadata construction, not model initialization or inference.",
+    "No tensor payload reread/rehash, test execution, remote action or service action by reviewer. Asset hashes are inherited terminal acquisition custody, with constructor stat bracketing.",
+    "File payload and expert byte totals do not prove RAM/VRAM fit.1M allocation/full output/quality/speed remain unproved.",
+    "Actual candidate template encoding remains separately unexecuted/unqualified; template differs from baseline.",
+    "P1 and P2 failed constructor attempts remain unchanged; P3 success belongs to separate namespace.",
+    "Physical preflight is a compact attestation; detailed operational lock/worker checks derive from admitted source/control and Root record, not independent live observation by reviewer."
+  ],
+  "model_or_GPU_admitted": false,
+  "findings": []
+}

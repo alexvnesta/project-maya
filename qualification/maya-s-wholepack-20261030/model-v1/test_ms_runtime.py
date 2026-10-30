@@ -150,38 +150,178 @@ class CPUMembershipTests(unittest.TestCase):
 
 
 class PackCustodyTests(unittest.TestCase):
+    """Small real files exercise P3 custody; only published literal pins are synthetic."""
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
-        self.e=Path(self.tmp.name);self.q=self.e/'q';self.pack=self.q/'pack-v1';self.acq=self.q/'acquisition-authorized-v2'
-        self.assets=self.q/'assets';self.pack.mkdir(parents=True);self.acq.mkdir();self.assets.mkdir()
-        self.vision=self.e/'vision-assets-1017';self.vision.mkdir()
-        self.stats={};self.rows=[]
-        for i in range(8):
-            path=self.assets/str(i);path.write_bytes(b'asset')
-            st=path.stat();self.stats[str(path)]=[st.st_dev,st.st_ino,st.st_size,st.st_mtime_ns,st.st_ctime_ns]
-            self.rows.append({'path':str(i),'bytes':5,'sha256':r.sha(path)})
-        vision_stats={}
-        for n in ('vision.json','vision.bin'):
-            path=self.vision/n;path.write_bytes(b'v');st=path.stat()
-            vision_stats[str(path)]=[st.st_dev,st.st_ino,st.st_size,st.st_mtime_ns,st.st_ctime_ns]
-        self.receipt=self.acq/'acquisition-attempt-FIRST.json'
-        self.receipt.write_text(json.dumps({'status':'ALL_EIGHT_ASSETS_VERIFIED_NO_MODEL_RUN','returncode':0,'files':self.rows}))
-        self.contract={'acquisition_receipt':str(self.receipt),'acquisition_receipt_sha256':r.sha(self.receipt),'asset_stats':self.stats,'vision_stats':vision_stats}
-        self.result={'status':'PACK_METADATA_VERIFIED_NO_MODEL_ADMISSION','asset_stats':self.stats,'vision_stats':vision_stats,
-                     'asset_sha256':{x['path']:x['sha256'] for x in self.rows},'output_sha256':{'pack.json':'d'*64}}
-        self.cp=self.pack/'construct-contract-FIRST.json';self.rp=self.pack/'pack-result.json'
-        self.cp.write_text(json.dumps(self.contract));self.rp.write_text(json.dumps(self.result))
-        self.value={'pack_custody':{'constructor_contract':str(self.cp),'constructor_result':str(self.rp),'acquisition_receipt':str(self.receipt)},
-                    'files':{str(x):r.sha(x) for x in (self.cp,self.rp,self.receipt)}}
-        self.value['files'][str(self.pack/'pack-FIRST/pack.json')]='d'*64
-        for field,value in (('E',self.e),('Q',self.q)):
+        self.e=Path(self.tmp.name).resolve();self.q=self.e/'q';self.pack=self.q/'pack-v1/pack-FIRST'
+        self.p3=self.q/'pack-v3';self.assets=self.q/'assets';self.vision=self.e/'vision-assets-1017'
+        for path in (self.pack,self.p3,self.assets,self.vision):path.mkdir(parents=True)
+        self.value={'pack_custody':{},'files':{}};self.pins={};self.paths={}
+        for key,(relative,_) in r.PACK_CUSTODY_FILES.items():
+            path=self.q/relative;path.parent.mkdir(parents=True,exist_ok=True)
+            self.paths[key]=path;self.value['pack_custody'][key]=str(path)
+            self.pins[key]=(relative,'pending')
+        self.rows=[];self.stats={}
+        for name in [*('Maya-S/shard'+str(i)+'.gguf' for i in range(6)),'dspark.json','dspark.bin']:
+            path=self.assets/name;path.parent.mkdir(exist_ok=True);path.write_bytes(b'asset')
+            self.stats[str(path)]=self.stat(path)
+            self.rows.append({'path':name,'bytes':5,'sha256':r.sha(path),'status':'DOWNLOADED_VERIFIED'})
+        self.vision_stats={}
+        for name in ('vision.json','vision.bin'):
+            path=self.vision/name;path.write_bytes(b'v');self.vision_stats[str(path)]=self.stat(path)
+        self.acquired={'status':'ALL_EIGHT_ASSETS_VERIFIED_NO_MODEL_RUN','returncode':0,
+                       'model_or_service_actions':0,'files':self.rows}
+        self.record('acquisition_receipt',self.acquired)
+        self.contract={'acquisition_receipt':str(self.paths['acquisition_receipt']),
+             'acquisition_receipt_sha256':self.pins['acquisition_receipt'][1],
+             'asset_stats':self.stats,'vision_stats':self.vision_stats,'output':str(self.pack),
+             'assets_root':str(self.assets),'vision_dir':str(self.vision),'profile':{'context':1048576}}
+        self.record('constructor_contract',self.contract)
+        outputs={}
+        for name in sorted(r.PACK_OUTPUTS):
+            path=self.pack/name;path.parent.mkdir(exist_ok=True);path.write_bytes(b'metadata')
+            outputs[name]=r.sha(path);self.value['files'][str(path)]=r.sha(path)
+        self.result={'status':'PACK_METADATA_VERIFIED_NO_MODEL_ADMISSION','asset_stats':self.stats,
+             'vision_stats':self.vision_stats,'asset_sha256':{x['path']:x['sha256'] for x in self.rows},
+             'output_sha256':outputs,'capacity_inputs':{'limits_preserved':self.contract['profile']}}
+        self.record('constructor_result',self.result)
+        self.env={'CUDA_VISIBLE_DEVICES':'','OMP_NUM_THREADS':'1','OPENBLAS_NUM_THREADS':'1',
+                  'MALLOC_ARENA_MAX':'1','PYTHONDONTWRITEBYTECODE':'1'}
+        self.cq={'root_manual_review':True,'astra_manual_review':True,
+             'pack_guard_both_physical_hosts_passed':True,'construct_controller_both_physical_hosts_passed':True,
+             'actual_contract':str(self.paths['constructor_contract']),
+             'actual_contract_sha256':self.pins['constructor_contract'][1],
+             'pack_output_is_original_never_created_fresh_target':str(self.pack),'files':{},'CPU_groups':[]}
+        inp=self.e/'input.json';inp.write_text('{}');self.add_cq_file(inp)
+        for name,count,prefix,sources in (
+            ('pack_guard',94,'CPU-FIRST',('pack_guard.py','test_pack_guard.py','run_cpu.py')),
+            ('construct_controller',31,'CONSTRUCT-FIRST',('pack_guard.py','construct_pack.py','test_construct_pack.py','construct_cpu.py'))):
+            sm={}
+            for source in sources:
+                path=self.p3/source;path.write_text('# synthetic pinned source\n')
+                sm[source]=r.sha(path);self.add_cq_file(path)
+            group={'name':name,'source_sha256':sm,'input_sha256':{'input.json':r.sha(inp)},
+                   'test_ids':[name+'.test_'+str(i).zfill(3) for i in range(count)],'proofs':{}}
+            for host in ('darwin','linux'):
+                folder=self.p3/(prefix+'-'+host);folder.mkdir()
+                receipt={'passed':True,'controls':count,'test_ids':group['test_ids'],
+                     'source_sha256':sm,'input_sha256':group['input_sha256'],'CPU_seconds':[30,30],
+                     'Linux_AS_bytes':[512*2**20]*2 if host=='linux' else None,'nice':15,'environment':self.env}
+                child={'returncode':0,'error':None,'cleanup_errors':[],'CPU_limit_seconds':30,
+                     'wall_limit_seconds':90,'nice_increment':15,'environment':self.env}
+                paths={}
+                for key,leaf,data in (('receipt','receipt.json',receipt),('child','child.json',child),('log','child.log',None)):
+                    path=folder/leaf;path.write_text(json.dumps(data) if data is not None else 'Ran controls OK\n')
+                    paths[key]=str(path);self.add_cq_file(path)
+                group['proofs'][host]=paths
+            self.cq['CPU_groups'].append(group)
+        for key in ('constructor_contract','acquisition_receipt'):self.add_cq_file(self.paths[key])
+        self.record('constructor_qualification',self.cq)
+        self.child={'command':[str(r.R/'venv/bin/python3.14'),'-B',str(self.p3/'construct_pack.py'),'--child',
+             '--qualification',str(self.paths['constructor_qualification']),'--qualification-sha256',
+             self.pins['constructor_qualification'][1],'--contract',str(self.paths['constructor_contract']),
+             '--output',str(self.p3/'construct-CPU-FIRST')], 'returncode':0,'error':None,'cleanup_errors':[],
+             'pid':123,'seconds':2.2,'CPU_limit_seconds':30,'wall_limit_seconds':90,'nice_increment':15,
+             'Linux_AS_bytes':512*2**20,'environment':self.env,'GPU_or_service_actions':0}
+        self.record('constructor_child',self.child);self.record('constructor_log',None)
+        self.review={'passed':True,'model_or_GPU_admitted':False,'qualification_sha256':self.pins['constructor_qualification'][1]}
+        self.record('constructor_result_review',self.review)
+        for field,value in (('E',self.e),('Q',self.q),('PACK_CUSTODY_FILES',self.pins)):
             patcher=patch.object(r,field,value);patcher.start();self.addCleanup(patcher.stop)
 
-    def test_acquired_full_hash_and_current_stat_custody(self):
+    @staticmethod
+    def stat(path):
+        s=path.stat();return [s.st_dev,s.st_ino,s.st_size,s.st_mtime_ns,s.st_ctime_ns]
+
+    def record(self,key,value):
+        path=self.paths[key];path.write_text(json.dumps(value) if value is not None else '')
+        self.pins[key]=(str(path.relative_to(self.q)),r.sha(path));self.value['files'][str(path)]=r.sha(path)
+
+    def add_cq_file(self,path):
+        self.cq['files'][str(path)]=r.sha(path);self.value['files'][str(path)]=r.sha(path)
+
+    def refresh_cq(self):
+        self.record('constructor_qualification',self.cq)
+        self.child['command'][7]=self.pins['constructor_qualification'][1];self.record('constructor_child',self.child)
+        self.review['qualification_sha256']=self.pins['constructor_qualification'][1];self.record('constructor_result_review',self.review)
+
+    def test_completed_p3_all125_controls_and_original_target(self):
         self.assertEqual(r.pack_custody(self.value)['asset_stats'],self.stats)
+        self.assertEqual(sum(len(g['test_ids']) for g in self.cq['CPU_groups']),125)
+
+    def test_old_failed_p1_result_not_relabelled_success(self):
+        old=self.q/'pack-v1/pack-result.json';old.write_text(json.dumps(self.result))
+        self.value['pack_custody']['constructor_result']=str(old);self.value['files'][str(old)]=r.sha(old)
+        with self.assertRaisesRegex(ValueError,'P3 evidence path'):r.pack_custody(self.value)
+
+    def test_missing_qualification_or_result_review_refused(self):
+        for key in ('constructor_qualification','constructor_result_review'):
+            value=copy.deepcopy(self.value);value['pack_custody'].pop(key)
+            with self.subTest(key=key),self.assertRaises(ValueError):r.pack_custody(value)
+
+    def test_constructor_original_closure_missing_from_model_q_refused(self):
+        for path in (self.p3/'pack_guard.py',self.e/'input.json',Path(self.cq['CPU_groups'][0]['proofs']['linux']['log'])):
+            value=copy.deepcopy(self.value);value['files'].pop(str(path))
+            with self.subTest(path=path),self.assertRaises(ValueError):r.pack_custody(value)
+
+    def test_unapproved_cpu_source_base_refused(self):
+        with self.assertRaisesRegex(ValueError,'source base'):
+            r.cpu_membership(self.cq['CPU_groups'][0],self.value['files'],source_base=self.q/'pack-v1')
+
+    def test_missing_physical_constructor_proof_refused(self):
+        self.cq['CPU_groups'][1]['proofs'].pop('linux');self.refresh_cq()
+        with self.assertRaises(ValueError):r.pack_custody(self.value)
+
+    def test_missing_constructor_cpu_group_refused(self):
+        self.cq['CPU_groups'].pop();self.refresh_cq()
+        with self.assertRaises(ValueError):r.pack_custody(self.value)
+
+    def test_failed_constructor_cpu_child_refused(self):
+        path=Path(self.cq['CPU_groups'][1]['proofs']['linux']['child'])
+        child=json.loads(path.read_text());child['returncode']=1;path.write_text(json.dumps(child))
+        self.add_cq_file(path);self.refresh_cq()
+        with self.assertRaisesRegex(ValueError,'CPU supervision'):r.pack_custody(self.value)
+
+    def test_wrong_cpu_source_map_refused(self):
+        path=Path(self.cq['CPU_groups'][0]['proofs']['darwin']['receipt'])
+        receipt=json.loads(path.read_text());receipt['source_sha256']['pack_guard.py']='0'*64
+        path.write_text(json.dumps(receipt));self.add_cq_file(path);self.refresh_cq()
+        with self.assertRaisesRegex(ValueError,'Exact new CPU proof'):r.pack_custody(self.value)
+
+    def test_wrong_cpu_ordered_ids_refused(self):
+        path=Path(self.cq['CPU_groups'][0]['proofs']['linux']['receipt'])
+        receipt=json.loads(path.read_text());receipt['test_ids'].reverse()
+        path.write_text(json.dumps(receipt));self.add_cq_file(path);self.refresh_cq()
+        with self.assertRaisesRegex(ValueError,'Exact new CPU proof'):r.pack_custody(self.value)
+
+    def test_p3_raw_log_alias_refused_before_read(self):
+        path=Path(self.cq['CPU_groups'][0]['proofs']['linux']['log']);other=self.e/'other-log'
+        path.rename(other);path.symlink_to(other)
+        with self.assertRaisesRegex(ValueError,'alias'):r.pack_custody(self.value)
+
+    def test_changed_constructor_contract_blocks(self):
+        self.paths['constructor_contract'].write_text('{}')
+        with self.assertRaises(ValueError):r.pack_custody(self.value)
+
+    def test_pinned_wrong_output_target_refused(self):
+        self.contract['output']=str(self.q/'pack-v3/pack-FIRST');self.record('constructor_contract',self.contract)
+        self.cq['actual_contract_sha256']=self.pins['constructor_contract'][1]
+        self.add_cq_file(self.paths['constructor_contract']);self.refresh_cq()
+        with self.assertRaisesRegex(ValueError,'acquisition/pack construction'):r.pack_custody(self.value)
+
+    def test_failed_or_wrong_actual_constructor_child_refused(self):
+        original=copy.deepcopy(self.child)
+        for key,value in (('returncode',1),('returncode',False),('cleanup_errors',['surviving child']),
+                          ('Linux_AS_bytes',0),('GPU_or_service_actions',1),('seconds',91)):
+            self.child=copy.deepcopy(original);self.child[key]=value;self.record('constructor_child',self.child)
+            with self.subTest(key=key),self.assertRaisesRegex(ValueError,'Actual P3 constructor child'):r.pack_custody(self.value)
+
+    def test_wrong_actual_command_or_contract_refused(self):
+        self.child['command'][-1]=str(self.q/'pack-v1/construct-CPU-FIRST');self.record('constructor_child',self.child)
+        with self.assertRaisesRegex(ValueError,'Actual P3 constructor child'):r.pack_custody(self.value)
 
     def test_changed_asset_identity_blocks_without_rehash(self):
-        path=self.assets/'0';path.unlink();path.write_bytes(b'asset')
+        path=self.assets/self.rows[0]['path'];path.write_bytes(b'changed')
         with self.assertRaises(ValueError):r.pack_custody(self.value)
 
     def test_changed_vision_identity_blocks(self):
@@ -189,16 +329,38 @@ class PackCustodyTests(unittest.TestCase):
         with self.assertRaises(ValueError):r.pack_custody(self.value)
 
     def test_missing_constructed_metadata_pin_blocks(self):
-        self.value['files'].pop(str(self.pack/'pack-FIRST/pack.json'))
+        self.value['files'].pop(str(self.pack/'ds4.txt'))
         with self.assertRaises(ValueError):r.pack_custody(self.value)
 
-    def test_changed_constructor_contract_blocks(self):
-        self.cp.write_text('{}')
-        with self.assertRaises(ValueError):r.pack_custody(self.value)
+    def test_changed_actual_output_bytes_blocks(self):
+        (self.pack/'ds4.txt').write_text('changed')
+        with self.assertRaisesRegex(ValueError,'metadata omitted/changed'):r.pack_custody(self.value)
+
+    def test_exact_eight_outputs_no_omission_or_extra(self):
+        original=copy.deepcopy(self.result)
+        for extra in (False,True):
+            self.result=copy.deepcopy(original)
+            if extra:self.result['output_sha256']['extra.txt']='0'*64
+            else:self.result['output_sha256'].pop('engram.bin')
+            self.record('constructor_result',self.result)
+            with self.subTest(extra=extra),self.assertRaises(ValueError):r.pack_custody(self.value)
+
+    def test_duplicate_asset_row_refused(self):
+        self.acquired['files'][-1]=self.acquired['files'][0];self.record('acquisition_receipt',self.acquired)
+        self.contract['acquisition_receipt_sha256']=self.pins['acquisition_receipt'][1];self.record('constructor_contract',self.contract)
+        self.cq['actual_contract_sha256']=self.pins['constructor_contract'][1]
+        for key in ('acquisition_receipt','constructor_contract'):self.add_cq_file(self.paths[key])
+        self.refresh_cq()
+        with self.assertRaisesRegex(ValueError,'eight asset identities'):r.pack_custody(self.value)
 
     def test_payload_hardlink_alias_blocks(self):
-        (self.assets/'alias').hardlink_to(self.assets/'0')
+        (self.assets/'alias').hardlink_to(self.assets/self.rows[0]['path'])
         with self.assertRaises(ValueError):r.pack_custody(self.value)
+
+    def test_output_ancestor_alias_blocks(self):
+        original=self.pack/'tokenizer';other=self.q/'borrowed-tokenizer';original.rename(other)
+        original.symlink_to(other,target_is_directory=True)
+        with self.assertRaisesRegex(ValueError,'alias'):r.pack_custody(self.value)
 
 
 class HostTests(unittest.TestCase):

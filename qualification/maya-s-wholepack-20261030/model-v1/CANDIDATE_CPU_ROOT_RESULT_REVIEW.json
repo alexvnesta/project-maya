@@ -1,0 +1,92 @@
+{
+  "utc": "2026-10-30T17:29:25.841175+00:00",
+  "passed": true,
+  "controls_each_physical_host": 13,
+  "source_maps": 4,
+  "input_maps": 772,
+  "byte_identical_actual_candidate_manifests": true,
+  "actual_encoding_once_each_host": true,
+  "native_model_executed": false,
+  "production_changed": false,
+  "raw_proofs": [
+    {
+      "host": "darwin",
+      "child_pid": 44179,
+      "wall_seconds": 1.1805699589895085,
+      "raw_sha256": {
+        "receipt.json": "a07143e5f4716030440e1f16958056491b8e0a7a59ea50c9328bb02e2f5339fd",
+        "child.json": "e95c8986ce95e78a98bbec0ce5c20b473fa230d003a11eee4e3a052ef8458180",
+        "child.log": "efb91fb5bc3419c9a4976669cc81e7680ab000758e8d73ce7aad8c612296d28d",
+        "encoded-candidate-fixtures.json": "356ffa593cc66495c75c44c2e8ea3390f78f716adb1b10af321d1bae9ca1535f"
+      }
+    },
+    {
+      "host": "linux",
+      "child_pid": 3384638,
+      "wall_seconds": 2.25915369996801,
+      "raw_sha256": {
+        "receipt.json": "b0866c8a4eba6ea3959b2639f1d128c429cbb33524468bc6e7475b732f2580c5",
+        "child.json": "a96f45801f4d26465409e04a46763df77de13cb07deb3e02b37cb41b43a51874",
+        "child.log": "1883af4e0daaeb02d3d206502047e7bf1ef22f8004d634ef9c0f881a3b89fb70",
+        "encoded-candidate-fixtures.json": "356ffa593cc66495c75c44c2e8ea3390f78f716adb1b10af321d1bae9ca1535f"
+      }
+    }
+  ],
+  "prompt_counts": {
+    "coding": {
+      "A": [
+        8469,
+        8469,
+        140
+      ],
+      "B": [
+        8469,
+        8469,
+        140
+      ],
+      "lifecycleA": [],
+      "lifecycleB": []
+    },
+    "prose": {
+      "A": [
+        8469,
+        8469,
+        169
+      ],
+      "B": [
+        8469,
+        8469,
+        169
+      ],
+      "lifecycleA": [
+        372,
+        465,
+        8471,
+        44
+      ],
+      "lifecycleB": [
+        372,
+        465,
+        8471,
+        44
+      ]
+    },
+    "quality": {
+      "A": [
+        8469,
+        8469,
+        8656,
+        8469
+      ],
+      "B": [
+        8469,
+        8469,
+        8656,
+        8469
+      ],
+      "lifecycleA": [],
+      "lifecycleB": []
+    }
+  },
+  "comparison_fairness_review_required_before_GPU": true
+}

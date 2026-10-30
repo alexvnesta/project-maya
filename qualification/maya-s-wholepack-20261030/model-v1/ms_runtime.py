@@ -32,6 +32,18 @@ PINS = {
     'decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_model_runtime.py': '9bd594247cecc13980d864780b778a66da08fcaf2b0a3ff5b386e84e33a1ad2c',
     'decode-optimization-20261028/head-batching-v1/head_startup.py': '53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4',
 }
+PACK_CUSTODY_FILES = {
+    'constructor_qualification': ('pack-v3/construct-qualification-FIRST.json', '9ac9ff14bb0e9ae77ac3caa38ef75ed5e5dc5d39afceee1de77430af8490d692'),
+    'constructor_contract': ('pack-v3/construct-contract-FIRST.json', 'b7a25b3db67e30af7ed1ef4b3746093b5b476e3fc144eb47648c575ce8eda02e'),
+    'constructor_result': ('pack-v3/construct-CPU-FIRST/pack-result.json', '9d42caa2d48361b4c176df2453e5bf1d97f405deb1080f0242db23769164ae9e'),
+    'constructor_child': ('pack-v3/construct-CPU-FIRST/child.json', '315442dbf5280bbefb13bd77cff6756224fce5ae650e5cb331c2e5443af1eb35'),
+    'constructor_log': ('pack-v3/construct-CPU-FIRST/child.log', 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'),
+    'constructor_result_review': ('pack-v3/CONSTRUCT_RESULT_ASTRA_REVIEW.json', 'ea4744a195c06f620621e4f387e85b9d950919cb7d32a653c91c201659d558a8'),
+    'acquisition_receipt': ('acquisition-authorized-v2/acquisition-attempt-20261030T141645810845Z-3166208.json', '829dc2974aefd88d1c0adb65a799dc1b35bc1076eb21e4e5119e761b61cfa577'),
+}
+PACK_OUTPUTS = {'ds4.txt', 'tensors.txt', 'engram.bin', 'tokenizer/vocab.json',
+                'tokenizer/merges.txt', 'tokenizer/token_type.json',
+                'tokenizer/tokenizer.json', 'tokenizer/chat_template.jinja'}
 
 
 class ResourceAdmissionDeferred(RuntimeError): pass
@@ -114,9 +126,11 @@ def cpu_group_contract(group, receipt, child, platform):
     require(receipt.get('environment') == child.get('environment') == env, 'CPU child environment changed')
 
 
-def cpu_membership(group, files):
+def cpu_membership(group, files, *, source_base=None):
+    source_base = P if source_base is None else Path(source_base)
+    require(source_base in (P, Q / 'pack-v3'), 'Unapproved CPU source base')
     for name, pin in group['source_sha256'].items():
-        require(Path(name).name == name and files.get(str(P / name)) == pin,
+        require(Path(name).name == name and files.get(str(source_base / name)) == pin,
                 'CPU source omitted from immutable qualification')
     for name, pin in group['input_sha256'].items():
         require(not Path(name).is_absolute() and '..' not in Path(name).parts
@@ -141,7 +155,7 @@ def qualified(mode, expected):
                 and re.fullmatch('[0-9a-f]{64}', pin or '') and sha(path) == pin, 'Immutable mode input changed: ' + name)
     entry = 'ms_quality.py' if mode == 'quality' else 'ms_mode.py'
     for name in ('ms_config.py', 'ms_fixtures.py', 'ms_runtime.py', 'ms_controls.py', 'ms_audit.py',
-                 'ms_quality_audit.py', entry):
+                 'ms_quality_audit.py', 'ms_audit_dispatch.py', entry):
         pin = sha(P / name)
         require(q['files'].get(str(P / name)) == pin
                 and any(g['source_sha256'].get(name) == pin for g in q['CPU_groups']),
@@ -165,42 +179,113 @@ def qualified(mode, expected):
     return q
 
 
+def pack_file(path):
+    """Exact evidence-root paths, including ancestors, must not be aliases."""
+    path = Path(path)
+    require(path.is_absolute() and path.is_relative_to(E) and '..' not in path.parts
+            and not E.is_symlink(), 'Foreign pack evidence path')
+    current = E
+    for part in path.relative_to(E).parts:
+        current = current / part
+        require(not current.is_symlink(), 'Pack evidence ancestor/leaf alias')
+    require(path.is_file(), 'Pack evidence file missing')
+    return path
+
+
 def pack_custody(q):
-    """Read only pinned metadata and stats; acquisition already hashed payloads."""
+    """Bind successful P3 metadata, leaving the two failed constructors intact.
+
+    Only small metadata is hashed here. Acquisition already hashed tensor assets;
+    their exact stat identities are retained rather than rehashed in a phase.
+    """
     evidence = q['pack_custody']
-    require(set(evidence) == {'constructor_contract', 'constructor_result', 'acquisition_receipt'},
-            'Explicit whole-pack acquisition/construction custody required')
+    require(set(evidence) == set(PACK_CUSTODY_FILES), 'Exact P3 custody fields required')
     rows = {}
-    for name, pathname in evidence.items():
-        path = Path(pathname)
-        require(path.is_relative_to(Q / 'pack-v1') or
-                (name == 'acquisition_receipt' and path.parent == Q / 'acquisition-authorized-v2'),
-                'Foreign pack custody path')
-        require(q['files'].get(str(path)) == sha(path), 'Pack custody omitted from immutable map')
-        rows[name] = json.loads(path.read_text())
+    for name, (relative, pin) in PACK_CUSTODY_FILES.items():
+        require(evidence[name] == str(Q / relative), 'Successful P3 evidence path changed')
+        path = pack_file(evidence[name])
+        require(q['files'].get(str(path)) == pin == sha(path), 'Exact P3 evidence omitted/changed')
+        if name != 'constructor_log': rows[name] = json.loads(path.read_text())
+    cq = rows['constructor_qualification']; base = Q / 'pack-v3'
+    require(cq['root_manual_review'] is True and cq['astra_manual_review'] is True
+            and cq['pack_guard_both_physical_hosts_passed'] is True
+            and cq['construct_controller_both_physical_hosts_passed'] is True
+            and cq['actual_contract'] == evidence['constructor_contract']
+            and cq['actual_contract_sha256'] == PACK_CUSTODY_FILES['constructor_contract'][1]
+            and cq['pack_output_is_original_never_created_fresh_target'] == str(Q / 'pack-v1/pack-FIRST'),
+            'Exact completed P3 qualification/contract/target required')
+    require(cq['files'] and all(q['files'].get(name) == pin for name, pin in cq['files'].items()),
+            'Constructor source/input/proof closure missing from model qualification')
+    groups = cq['CPU_groups']
+    require(len(groups) == 2 and {g['name'] for g in groups} == {'pack_guard', 'construct_controller'},
+            'Both original P3 CPU groups required')
+    for group in groups:
+        count, prefix = (94, 'CPU-FIRST') if group['name'] == 'pack_guard' else (31, 'CONSTRUCT-FIRST')
+        require(len(group['test_ids']) == count and group['test_ids'] == sorted(group['test_ids']),
+                'Exact ordered P3 CPU control inventory required')
+        require(set(group['proofs']) == {'darwin', 'linux'}, 'Both physical P3 proofs required')
+        for platform, paths in group['proofs'].items():
+            for key, leaf in (('receipt', 'receipt.json'), ('child', 'child.json'), ('log', 'child.log')):
+                require(paths[key] == str(base / (prefix + '-' + platform) / leaf), 'P3 raw proof path changed')
+                pack_file(paths[key])
+        cpu_membership(group, cq['files'], source_base=base)
+        for platform, paths in group['proofs'].items():
+            cpu_group_contract(group, json.loads(Path(paths['receipt']).read_text()),
+                               json.loads(Path(paths['child']).read_text()), platform)
+    child = rows['constructor_child']
+    expected_command = [str(R / 'venv/bin/python3.14'), '-B', str(base / 'construct_pack.py'), '--child',
+        '--qualification', evidence['constructor_qualification'], '--qualification-sha256',
+        PACK_CUSTODY_FILES['constructor_qualification'][1], '--contract', evidence['constructor_contract'],
+        '--output', str(base / 'construct-CPU-FIRST')]
+    require(child['command'] == expected_command and type(child['returncode']) is int and child['returncode'] == 0
+            and child['error'] is None and child['cleanup_errors'] == []
+            and type(child['pid']) is int and child['pid'] > 0
+            and type(child['seconds']) in (int, float) and 0 <= child['seconds'] <= 90
+            and child['CPU_limit_seconds'] == 30 and child['Linux_AS_bytes'] == 512 * 2**20
+            and child['wall_limit_seconds'] == 90 and child['nice_increment'] == 15
+            and child['environment'] == {'CUDA_VISIBLE_DEVICES': '', 'OMP_NUM_THREADS': '1',
+                'OPENBLAS_NUM_THREADS': '1', 'MALLOC_ARENA_MAX': '1', 'PYTHONDONTWRITEBYTECODE': '1'}
+            and type(child['GPU_or_service_actions']) is int and child['GPU_or_service_actions'] == 0,
+            'Actual P3 constructor child failed or differs from admitted metadata command')
+    review = rows['constructor_result_review']
+    require(review['passed'] is True and review['model_or_GPU_admitted'] is False
+            and review['qualification_sha256'] == PACK_CUSTODY_FILES['constructor_qualification'][1],
+            'Independent actual P3 result review missing')
     contract, result, acquired = (rows[k] for k in ('constructor_contract', 'constructor_result', 'acquisition_receipt'))
-    require(contract['acquisition_receipt'] == evidence['acquisition_receipt']
+    require(contract['output'] == str(Q / 'pack-v1/pack-FIRST') and contract['assets_root'] == str(Q / 'assets')
+            and contract['vision_dir'] == str(E / 'vision-assets-1017')
+            and contract['acquisition_receipt'] == evidence['acquisition_receipt']
             and contract['acquisition_receipt_sha256'] == q['files'][evidence['acquisition_receipt']]
             and acquired.get('status') == 'ALL_EIGHT_ASSETS_VERIFIED_NO_MODEL_RUN'
             and type(acquired.get('returncode')) is int and acquired['returncode'] == 0
             and result['status'] == 'PACK_METADATA_VERIFIED_NO_MODEL_ADMISSION'
-            and result['asset_stats'] == contract['asset_stats'] and result['vision_stats'] == contract['vision_stats'],
+            and type(acquired.get('model_or_service_actions')) is int and acquired['model_or_service_actions'] == 0
+            and result['asset_stats'] == contract['asset_stats'] and result['vision_stats'] == contract['vision_stats']
+            and result['capacity_inputs']['limits_preserved'] == contract['profile']
+            and set(result['output_sha256']) == PACK_OUTPUTS,
             'Completed acquisition/pack construction custody differs')
     assets = Q / 'assets'; seen = set()
+    require(len(acquired['files']) == 8, 'Exact eight acquisition rows required')
     for row in acquired['files']:
-        path = assets / row['path']; seen.add(str(path))
-        require(not path.is_symlink() and path.is_file(), 'Exact acquired asset file required')
+        relative = Path(row['path'])
+        require(not relative.is_absolute() and '..' not in relative.parts
+                and row['status'] in ('DOWNLOADED_VERIFIED', 'VERIFIED_EXISTING'), 'Acquisition path/status changed')
+        path = pack_file(assets / relative); seen.add(str(path))
         st = path.stat(); actual = [st.st_dev, st.st_ino, st.st_size, st.st_mtime_ns, st.st_ctime_ns]
         require(st.st_nlink == 1 and contract['asset_stats'].get(str(path)) == actual
                 and row['bytes'] == st.st_size and result['asset_sha256'].get(row['path']) == row['sha256'],
                 'Acquired asset identity changed; no inherited payload hash claim')
-    require(len(seen) == 8 and seen == set(contract['asset_stats']), 'Exact eight asset identities required')
+    require(len(seen) == 8 and seen == set(contract['asset_stats'])
+            and set(result['asset_sha256']) == {row['path'] for row in acquired['files']},
+            'Exact eight asset identities required')
     for relative, digest in result['output_sha256'].items():
-        path = Q / 'pack-v1/pack-FIRST' / relative
+        path = pack_file(Q / 'pack-v1/pack-FIRST' / relative)
         require('..' not in Path(relative).parts and not Path(relative).is_absolute()
-                and q['files'].get(str(path)) == digest, 'Constructed metadata omitted from qualification')
+                and q['files'].get(str(path)) == digest == sha(path), 'Constructed metadata omitted/changed')
+    require(set(contract['vision_stats']) == {str(E / 'vision-assets-1017' / n) for n in ('vision.json', 'vision.bin')},
+            'Both selected vision identities required')
     for name, original in contract['vision_stats'].items():
-        path = Path(name)
+        path = pack_file(name)
         require(path.parent == E / 'vision-assets-1017' and path.name in ('vision.json', 'vision.bin')
                 and not path.is_symlink(), 'Exact selected vision asset required')
         st = path.stat()

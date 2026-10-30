@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-30T16:45:51.333108+00:00",
+  "passed": true,
+  "FIRST_new_controls_each_physical_host": 56,
+  "source_map_count": 9,
+  "input_map_count": 766,
+  "raw": [
+    {
+      "host": "darwin",
+      "controls": 56,
+      "seconds": 0.564045375038404,
+      "raw_sha256": {
+        "receipt.json": "036291d5128fa665c7bb6cfa5f83b1d54305fea007d10f21062c0e7cb6a07859",
+        "child.json": "406fce4c95cb5ec75d0be45debc6470643888d84a7a0e2aad615e90cfc074a60",
+        "child.log": "ccd02fba41df11d3cd741a2f47a200cb9326f59d5f7b8b94ede94878478afba0"
+      }
+    },
+    {
+      "host": "linux",
+      "controls": 56,
+      "seconds": 0.8163218998815864,
+      "raw_sha256": {
+        "receipt.json": "dc00932291ee13a917a848de2f4dddbfc047f476efc63fa4d1bb52913b07edc9",
+        "child.json": "73a0526f9cfdf40b537d446d76e29b93ad12b24e384cc528c0b39e77edfad2f4",
+        "child.log": "4063c59854e72ab51dc7dc51adc80e1ca72e344c394197035c128ebe7f838d38"
+      }
+    }
+  ],
+  "actual_audit_dispatcher_or_model_admitted": false
+}
