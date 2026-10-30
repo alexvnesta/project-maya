@@ -1,0 +1,58 @@
+{
+  "utc": "2026-10-30T18:07:58.024021+00:00",
+  "passed": true,
+  "controls_each_physical_host": 179,
+  "groups": [
+    143,
+    2,
+    28,
+    6
+  ],
+  "source_count": 13,
+  "input_count": 855,
+  "raw_sha256": {
+    "boundary-darwin": {
+      "receipt.json": "98c57287cdd4659991a43b7be1230404622c78dc07e673ec2cfdf7301d23d6f3",
+      "child.json": "14a1d1c7ab020e111d95e9e8a915cd797c687d1e06566db525e07f7c675e2b05",
+      "child.log": "bc0b0fa5292385da76d8af44adfd6bad9c632134812bfe5ce120d1d2473ec515"
+    },
+    "compatibility-darwin": {
+      "receipt.json": "8f949eb8c957feb8dac2c1213c3ab75f035e39314bb4a3b0ff7b90e956bde844",
+      "child.json": "9e850c3e1ce861d4f8e0bb0ccff71be680a052a0f9f327e00f469a6317ae4494",
+      "child.log": "71d14c25ba4bdca42498a9293867f1754a799eab3bc319c544e5e6e8d81e8e16"
+    },
+    "packstate-darwin": {
+      "receipt.json": "1477484630b030189e210267ca99966a331e3efa24726f267bf0ebf7bfecee59",
+      "child.json": "1a053fa5acbf3f9153e4a1a8143b053dba906dd2909a08acf66116a4570a2e38",
+      "child.log": "f8852254f86100ff850c48081e12b510e29e7bcb552b689dc1027073e2a0b2c2"
+    },
+    "http-darwin": {
+      "receipt.json": "5050c392c48f7513e8262e07d795b33b5a9f9f8bdfbc33ce1a26de8905c43891",
+      "child.json": "ba68043e7afe8459223a06c312b15aac5f2ac22b6a6bd93f99dc0acb84a44cfc",
+      "child.log": "81a09e009e435e782a33f3bba6a660288c8f046a96820ab3736b00122e37a574"
+    },
+    "boundary-linux": {
+      "receipt.json": "98f5642cf72f54768789c7c4fe1732a6b5fc0b327ef88f2e7e9be3154a98dba4",
+      "child.json": "21724e599739ae739a06e6992d3e4ad5efcd1015201c1aab1480f2843d8fa6e8",
+      "child.log": "3aa4d0e1c987004779cc423bc996e8c622e1c84cda99fb9aa799980315788b9f"
+    },
+    "compatibility-linux": {
+      "receipt.json": "7581b805735dd1b5ac24280bb75fcd29d86dd19b1eb473b957be8189b7324fb7",
+      "child.json": "0052aef01e1ce8d2e8a46ad298d25cc533ec7d30fc0d957ee41c6fccdcc0581b",
+      "child.log": "a7096b159b0fd952cc5a761ef94eedbbaa20857bf710ec2aef0a121fcf7e30a5"
+    },
+    "packstate-linux": {
+      "receipt.json": "9578ffe327ca703d6e31f8fd5c9b4d71ae77676e7eae2de33c458c1137f9600a",
+      "child.json": "26d9bc787871105d0c15c12523cf0beac3356ee45dc499b41c0e5518a05a4715",
+      "child.log": "2c7b4693ab1fde3f6f9b06ae2a4060ae39a621a8bdfae3805ec04d05b3b97c51"
+    },
+    "http-linux": {
+      "receipt.json": "ea4787f39512d3c9a359fdccd73b4e3c0233fa5c88a910ea2be4f1bb5cbc3db3",
+      "child.json": "162c8af063f5c46bf4d4409141f786af5f7d6306d00163476afeae2ace0f33f2",
+      "child.log": "535d2bbb0504ab9346879eba32566b367b76320b49afa9c7934bc58974d98049"
+    }
+  },
+  "native_or_service_actions": 0,
+  "GPU_or_CS1_admitted": false,
+  "original_passed_and_failed_proofs_preserved": true
+}

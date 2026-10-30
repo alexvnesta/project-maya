@@ -1,0 +1,46 @@
+{
+  "passed": false,
+  "arm": "CS1",
+  "stage": "compatibility-terminal",
+  "qualification_sha256": "a8d5ff19fa187f46adf70b53287b652241a5f4b256a61811643d750cd770c090",
+  "attempt_sha256": "7ec03a30f3de3fcffc547c495f353ae4c5056d3497a266107d722e8d87a11b21",
+  "dispatch_sha256": "0517fea5cacb771c651d9cd4bafa35be66710fc110d5af58984b1963a8273d61",
+  "binding": {
+    "invocation": "c913c003e08649078ebd7279ef4beae7",
+    "main_pid": 3535523,
+    "native_pid": 3535559,
+    "native_start_ticks": 165605174
+  },
+  "child": {
+    "pid": 3541256,
+    "returncode": 1,
+    "error": null,
+    "cleanup_errors": [],
+    "wall_seconds": 1.2193431830964983,
+    "CPU_limit_seconds": 30,
+    "Linux_AS_bytes": 536870912,
+    "wall_limit_seconds": 90,
+    "nice_increment": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "command": [
+      "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+      "-B",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_audit_dispatch.py",
+      "--qualification-sha",
+      "a8d5ff19fa187f46adf70b53287b652241a5f4b256a61811643d750cd770c090",
+      "--attempt-sha",
+      "7ec03a30f3de3fcffc547c495f353ae4c5056d3497a266107d722e8d87a11b21",
+      "--dispatch-sha",
+      "0517fea5cacb771c651d9cd4bafa35be66710fc110d5af58984b1963a8273d61",
+      "--child"
+    ]
+  },
+  "retry": false,
+  "terminal_publication": "NOT_YET_ATTEMPTED"
+}
