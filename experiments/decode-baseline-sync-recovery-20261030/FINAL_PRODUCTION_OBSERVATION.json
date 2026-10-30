@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-30T10:36:06.686408+00:00",
+  "status": "UNCHANGED_SELECTED_BASELINE_CURRENT_BOUND_PUBLIC_VERIFIED",
+  "binding": {
+    "invocation": "fcc9a5fdb61740ef887ddf2b5bf9bcf8",
+    "main_pid": 2984652,
+    "native_pid": 2984691,
+    "native_start_ticks": 162440848
+  },
+  "unit": "ActiveState=active\nInvocationID=fcc9a5fdb61740ef887ddf2b5bf9bcf8\nRestart=no\nMainPID=2984652\n",
+  "router": "ActiveState=active\nRestart=no\nMainPID=2989439\n",
+  "selected_pins": {
+    "bin/maya-ds4": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "hosting_preflight.py": "b15c66b2fb7d96f689995525618583f12b30b890f7f713a1e4323718093ffc26",
+    "release.json": "b921b85827fa63fd448cadc808fafb3e027c192ddaa2af45c5dcf0f373d1bed8"
+  },
+  "canonical_phase_custody_released": true,
+  "public": {
+    "unauthenticated_models": 401,
+    "authenticated_models": 200,
+    "SSE_done": true,
+    "finish": "stop",
+    "known_answer_passed": true,
+    "content": "READY"
+  },
+  "health": {
+    "status": "ok",
+    "max_context": 1048576,
+    "model": "deepseek-v4.1-flash-iq2-xs",
+    "images": true,
+    "api_key": false,
+    "image_generation": false,
+    "loaded": true,
+    "service": "strata",
+    "busy": false,
+    "switcher": {
+      "active_model": "deepseek",
+      "inflight": 0,
+      "waiting": 0,
+      "nondefault_idle_seconds": 900.0,
+      "default_model": "deepseek",
+      "fault": null
+    }
+  },
+  "root_free_GiB": 835.6799545288086,
+  "restoration_swapout_delta_bytes": 9052160,
+  "GPU_health_cases": 24,
+  "earlier_failures_preserved": true,
+  "candidate_deployed": false,
+  "no_new_probe_or_inference": true
+}
