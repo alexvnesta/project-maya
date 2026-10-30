@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-30T15:52:37.684065+00:00",
+  "pid": 3325505,
+  "status": "DEFERRED_PARTIALS_RETAINED",
+  "manifest_sha256": "4fb4c0ff9c0b55f46afa15c2cbc84ee09372c85944efafb63e36a5ca6e73c73c",
+  "authorization_sha256": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648",
+  "revision": "8a6ec9cf118e785a362ea94ee123c61c70553be6",
+  "files": [
+    {
+      "path": "UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00001-of-00006.gguf",
+      "status": "DOWNLOADED_VERIFIED",
+      "bytes": 5780923,
+      "sha256": "22ad51c224e499883c1a753ad35719af44c296bbc8bcb9c931de6bdf950fa3aa"
+    },
+    {
+      "path": "UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00002-of-00006.gguf",
+      "status": "DOWNLOADED_VERIFIED",
+      "bytes": 49955895008,
+      "sha256": "6880d0483490504a530b72686d79c92daa46e58ca5b71763bbfa3778d8a6131a"
+    },
+    {
+      "path": "UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00003-of-00006.gguf",
+      "status": "DOWNLOADED_VERIFIED",
+      "bytes": 49950675200,
+      "sha256": "04b3ec7947255efaf789da77557da9180e93128948644828798d07b8a6e7a60a"
+    },
+    {
+      "path": "UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00004-of-00006.gguf",
+      "status": "DOWNLOADED_VERIFIED",
+      "bytes": 48971469632,
+      "sha256": "318762f39cd7ebf03e3d7b30feaf938fab0464a9c2d6c0e0e99fc030bbfcd820"
+    },
+    {
+      "path": "UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00005-of-00006.gguf",
+      "status": "DOWNLOADED_VERIFIED",
+      "bytes": 16419622240,
+      "sha256": "34fa48fbe2237b1b71a4f18a04bbe10946f6b1c76b7bbff21c76da630da677b6"
+    }
+  ],
+  "model_or_service_actions": 0,
+  "combined_space_at_admission": {
+    "free_bytes": 627838271488,
+    "required_bytes": 533370739540,
+    "Unsloth_remaining_bytes": 300475464795,
+    "Maya_S_remaining_bytes": 78008016633,
+    "root_plus_comparison_floor_bytes": 154618822656
+  },
+  "rate_bytes_per_second": 16777216,
+  "wall_seconds": 21600,
+  "error_type": "Deferred",
+  "reason": "Paused before separately admitted Maya-S private comparison; partials retained",
+  "returncode": 75,
+  "updated_utc": "2026-10-30T18:55:46.723861+00:00"
+}
