@@ -1,0 +1,135 @@
+{
+  "utc": "2026-10-30T22:50:43.586734+00:00",
+  "root_entire_source_and_supplied_tests_reviewed_before_FIRST_CPU": true,
+  "source_sha256": {
+    "qv_config.py": "949e6ca8a7b0ff4e05c29eddc57cf67173f7bc5642f85dea4df2f5b4b9f8c605",
+    "qv_runtime.py": "e5edb4d5107eb6011e102bca81d45ad7dbad2f45a05b14de83350d6c8b8ae3d3",
+    "qv_controls.py": "df416d99d53b82b14a8ce3b23733c083118f2659f3769987c7df0fbf790adecc",
+    "qv_owner.py": "789e086d8fe3f0c66671172ea79cd141753575f2abdc6fa61af61003bdd4b829",
+    "test_qv_config.py": "e242a60b8a1810001b4a3a921e998187b22424aa1e0bad809c57c34e9b4b241a",
+    "test_qv_runtime.py": "135180b04ab8c5140f2fd5c306310b9db8bbd92b706aaaef8909f86925e7978d",
+    "test_qv_controls.py": "01523fe6d673816c84d967c030e159bf64e396b06bedfc93d0d25eb6db5a7395",
+    "test_qv_owner.py": "cfa6cb63f675a91fb2350db714020318da21b0f8580653c0a401912af8ef530e",
+    "qv_audit.py": "eca880408b0d70f7b28ed40a6cf5f691fc3472044005636f39db8f272289a61d",
+    "test_qv_audit.py": "c21c1b1515531efe5b6ee33af0574f21224b19ec5e11aa5de4be521bfce82acd",
+    "qv_dispatch.py": "27a9e716036e389c188a841f0f100fb5b096a023f37a9539e0ea149c654afc3d",
+    "test_qv_dispatch.py": "a24eb451a8618c31146a65241b07172dfcb419c216ca0dd2881c5b2e8635418a",
+    "qv_cpu.py": "26f5b3fc6713c1183171d789d64fbe875626d733ef373d0b67b521870fe0e722"
+  },
+  "source_count": 13,
+  "input_count": 888,
+  "raw": {
+    "owner-darwin": {
+      "receipt.json": "e9c3847689d9035a547071904ccbe33aed2805164330a32537224b0d168d4d9d",
+      "child.json": "28a6360ae52458384fe3c3b1719040437b3b89575795c9c7c86b6538d73bcb4d",
+      "child.log": "54fa0309f45a46a6b8e9b335d5f842e1b47526f8e75c5e3f7394a5a8a83c2ab6"
+    },
+    "owner-linux": {
+      "receipt.json": "d8fc0ffe3499f51f26c9f81dfb52857330d55823bf788cdc85b5f2541dea5028",
+      "child.json": "e0ad75ab1b5050836add5bfaba9f81ed8fd989f0087177a0e77ecc2bd66d1d5a",
+      "child.log": "11bff41305477e9ba00a0c7c7b53222624dc68bef680b21374cebcc1ce576f57"
+    },
+    "audit-darwin": {
+      "receipt.json": "fffb34b3de811f3727e28cba6dff3aa68219965202a66f19378b00d1570cf621",
+      "child.json": "fe52286a1155ddf02c618951120032b22868fda5fb96d2e2f8ef52223433ec6f",
+      "child.log": "41ce0e6a94f9c6f345d94fd1c71b283d47cf36fd40dde7f26d7dea8ef94cfe82"
+    },
+    "audit-linux": {
+      "receipt.json": "3dfdfaaea51d886ae535915fc8eb00aa2105d75f5be700e810921b761c58c79c",
+      "child.json": "7c7b8f7cf5ffc88d5a7d643cafb51c8529d4078743427e534f6abba71f13f68f",
+      "child.log": "dd15b446688c05b10300562d04f13bc4d71cd033b3e60150c39d2228ab28d09f"
+    }
+  },
+  "observed": {
+    "owner-darwin": {
+      "pid": 54460,
+      "returncode": 0,
+      "controls": 164,
+      "wall_seconds": 0.543312750000041,
+      "CPU_seconds": [
+        30,
+        30
+      ],
+      "Linux_AS_bytes": null,
+      "nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    "owner-linux": {
+      "pid": 3738957,
+      "returncode": 0,
+      "controls": 164,
+      "wall_seconds": 0.6633950360119343,
+      "CPU_seconds": [
+        30,
+        30
+      ],
+      "Linux_AS_bytes": [
+        536870912,
+        536870912
+      ],
+      "nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    "audit-darwin": {
+      "pid": 54471,
+      "returncode": 0,
+      "controls": 77,
+      "wall_seconds": 0.6143900000024587,
+      "CPU_seconds": [
+        30,
+        30
+      ],
+      "Linux_AS_bytes": null,
+      "nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    "audit-linux": {
+      "pid": 3739029,
+      "returncode": 0,
+      "controls": 77,
+      "wall_seconds": 0.8578851020429283,
+      "CPU_seconds": [
+        30,
+        30
+      ],
+      "Linux_AS_bytes": [
+        536870912,
+        536870912
+      ],
+      "nice": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    }
+  },
+  "source_input_and_ordered_ids_match_exactly_both_hosts": true,
+  "all_raw_log_status_lines_exactly_match_frozen_success_ids": true,
+  "counts_each_host": {
+    "owner": 164,
+    "audit": 77
+  },
+  "no_native_model_executed": true,
+  "no_quality_or_performance_or_GPU_admission": true
+}
