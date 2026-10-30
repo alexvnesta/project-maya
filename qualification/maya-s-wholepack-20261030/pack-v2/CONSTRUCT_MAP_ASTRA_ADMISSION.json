@@ -1,0 +1,68 @@
+{
+  "decision": "CONDITIONAL_SINGLE_PACK_V2_METADATA_CONSTRUCTOR_ONLY",
+  "qualification_sha256": "e4d97a1ac5b8afd383b806028fa3746d689e140c2432e7db76ad5d576501cedc",
+  "file_pin_count": 118,
+  "physical_checks_required_including_self": 119,
+  "contract_sha256": "b7a25b3db67e30af7ed1ef4b3746093b5b476e3fc144eb47648c575ce8eda02e",
+  "CPU_result_review_sha256": "d3e1570ee5691bb66962b99206c8e2bc817078b0631c853463d149b7bb210fd5",
+  "local_pins_verified": 105,
+  "selected_deployed_physical_only_pins": 13,
+  "inherited_acquisition_81_pins_retained_unchanged": true,
+  "current_CPU_groups": {
+    "pack_guard": 71,
+    "construct_controller": 31
+  },
+  "current_terminal_12_raw_proofs_bound": true,
+  "source_sha256": {
+    "pack_guard.py": "8fe864d885162a55bd936a072889cd5ba44743e26434c1878419fe2efd728a2b",
+    "test_pack_guard.py": "5070221ef9960a17cec8dfee0ab55e3c237fb9d5ed6cd995bbaa8ff62831dd39",
+    "run_cpu.py": "c16cbe6f3b07b5aa931ca6b1dbd5d393dd77aebd2ff846f4d3ee599c23ce54ba",
+    "construct_pack.py": "5aea393ce529ea361888688387164a1a3d3c092275e3d630887b6ec01fb688aa",
+    "test_construct_pack.py": "6683448e7fed7b7eac3a36bc49ec317248c3d549a1d5b41b88e8ba3e8047044b",
+    "construct_cpu.py": "e18fa1aa7bccae7356ac45fa743f137b6f299bc5ceb33b50d9ffefd80e2e737c"
+  },
+  "fixed_profile": {
+    "context": 1048576,
+    "output_allowance": 262144,
+    "max_tokens": 32768,
+    "effort": 100,
+    "reason_budget": 0,
+    "chunk": 4096,
+    "cpu_threads": 24,
+    "tp": 1,
+    "reserve_per_device": 2048,
+    "q8_batch": 1,
+    "q8_check": 1,
+    "mode": 1,
+    "stream": 0,
+    "dspark_conf": 0.65,
+    "dspark_max": 4,
+    "dspark_cum": 0.0,
+    "all_cpu_experts_ram": true,
+    "images": true,
+    "fit": false,
+    "projection_layer": 22,
+    "projection_scale": 1.0
+  },
+  "selected_binding": {
+    "invocation": "fcc9a5fdb61740ef887ddf2b5bf9bcf8",
+    "main_pid": 2984652,
+    "native_pid": 2984691,
+    "native_start_ticks": 162440848
+  },
+  "conditions": [
+    "Before any actual construction, repeat fresh healthy/default selected-owner exact binding, phase/build/restoration-free, root budget and all118 file pins plus explicit qualification-self digest on physical Ubuntu before support imports.",
+    "Retain acquisition terminal SHA829dc2974aefd88d1c0adb65a799dc1b35bc1076eb21e4e5119e761b61cfa577; worker3166208 absent; own shared acquisition lock available and held over child; all eight exact stat identities/sizes and selected vision stat/pins must still match immutable contract.",
+    "Only fresh pack-v2/construct-CPU-FIRST and pack-v1/pack-FIRST absent. Never adopt partial output or reuse old pack-v1/construct-CPU-FIRST.",
+    "One metadata child CPU30/LinuxAS512MiB/wall90/nice15/CUDAhidden/thread1 under reviewed process-group cleanup; new exact source and current71+31 both-host terminal proofs.",
+    "No inference, GPU, native/API start, service change, weight copy or full payload hashing. Preserve any failure/output and stop without automatic repeat. Actual complete pack metadata and capacity require separate result review."
+  ],
+  "limitations": [
+    "Contract bytes equal original because assets/vision/profile/target are unchanged; only contract path and current source/proof/attempt namespace are new. This does not regrade the original failed constructor.",
+    "Early in-flight Mac proof transfer snapshot is excluded; qualification binds terminal proof triples verified in independent CPU review.",
+    "Local review cannot attest current Ubuntu file/process identities; physical action-time119 checks and exact source guard are mandatory."
+  ],
+  "reviewer_executed_tests_or_constructor": false,
+  "model_or_deployment_admitted": false,
+  "findings": []
+}

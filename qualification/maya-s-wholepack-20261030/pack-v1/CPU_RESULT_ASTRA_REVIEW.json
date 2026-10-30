@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-30T14:32:13.996806+00:00",
+  "decision": "FIRST60_EACH_PHYSICAL_HOST_CPU_PROOFS_REVIEWED_NO_PACK_OR_MODEL_ADMISSION",
+  "source_review_sha256": "f39c84589e7442638e118deb234cf3a02c2b735e532ab4d2fb791238413c2499",
+  "source_notes_sha256": "b428eed47639be21f8bce30543211fc346250ec2903c0decb978ed719ea3ffd5",
+  "raw_sha256": {
+    "CPU-FIRST-darwin/receipt.json": "63f9cf8ce0230d6244ca7e095b63baad9b5d3b000dbfe796748cd427b72d4b46",
+    "CPU-FIRST-darwin/child.json": "183808ee8a623955effbd55fdb7abb940d379ec50c9903d1372112d89d3fed09",
+    "CPU-FIRST-darwin/child.log": "c4af9ac5f47f8a7485d19169151accddaf02d5767689cbba3fa66cc1bae9137e",
+    "CPU-FIRST-linux/receipt.json": "f4f0aa06d050f83009b66a9e6928fdeda2ef4577f09446fcc615575b6b166d9a",
+    "CPU-FIRST-linux/child.json": "92a86c6069aae0c4772f3e401c10c3a00c0fc3dab7b1202c33df744dc20c2044",
+    "CPU-FIRST-linux/child.log": "d0ed28c9f924ea6073a9a64fc837f4ac87401fcd6fea2ca75500d880dd8c088c"
+  },
+  "current_source_sha256": {
+    "pack_guard.py": "774610e0e1d85834aefaf1192e5676ac02dbf5797bd745405a3a1efd094956dc",
+    "test_pack_guard.py": "865eab336b719b539f3ba3b30623e2a5257d588ab2c4af65b8d7032acbc4e7f7",
+    "run_cpu.py": "c16cbe6f3b07b5aa931ca6b1dbd5d393dd77aebd2ff846f4d3ee599c23ce54ba"
+  },
+  "input_sha256": {
+    "native-vision-v2/runtime/tools/dsv41/pack_gguf.py": "6784a50c4252f0d3af36cf04f5d212524dbf0800dac2d3ea633290d044a18fdf",
+    "decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+    "decode-optimization-20261028/maya-s-comparison-v1/baseline-vision.json": "3b682353a9bf572ae2736ec17b946179b24b83319de46c54950f0c442fd13053",
+    "decode-optimization-20261028/maya-s-comparison-v1/BASELINE_VISION_CUSTODY.json": "a5b048a5d98e8786356a0d77be918c284254953ef7e1910e0ab8da03faa42183"
+  },
+  "controls_each": 60,
+  "ordered_test_ids_match": true,
+  "entire_raw_logs_read": true,
+  "child_returncodes": [
+    0,
+    0
+  ],
+  "actual_limits_checked": true,
+  "findings": [],
+  "scope": "Synthetic strict GGUF metadata and actual pinned metadata writer with synthetic header injection, no actual weights or candidate pack construction. Complete actual acquisition, immutable custody, static capacity and separately reviewed controller remain prerequisites. No GPU/startup/quality/deployment admission."
+}

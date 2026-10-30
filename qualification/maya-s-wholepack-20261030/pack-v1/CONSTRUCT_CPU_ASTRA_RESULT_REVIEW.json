@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-30T15:22:54.049146+00:00",
+  "decision": "BOTH_PHYSICAL_FIRST_CPU_RESULTS_REVIEWED_NO_PACK_OR_MODEL_ADMISSION",
+  "raw_pins": {
+    "CONSTRUCT_SOURCE_ROOT_REVIEW.json": "8014ea74e78373055fa0b339bffd4ccbf30460c1040b7a21b699f0eee8f762de",
+    "CONSTRUCT-FIRST-darwin/receipt.json": "f4b1be31b1056f773143d3ad24486b6aa8b010fc351d9d8060f28908266d72e9",
+    "CONSTRUCT-FIRST-darwin/child.json": "d88d49f91dbf4660b3644738d39e7823c0d2c3de809062382f63a3fcb1169997",
+    "CONSTRUCT-FIRST-darwin/child.log": "4eda123b1e103acf0db72e1802b8ae21b5a692367206119d697809d50a9c9b4b",
+    "CONSTRUCT-FIRST-linux/receipt.json": "701abe560307c96fa108e405503b953181c29d3df105b6ec4f4f29bd4e79e54d",
+    "CONSTRUCT-FIRST-linux/child.json": "be8a4270df4301d6bc7127a45bd0bd6c24ae25f36bb22830083bec6ff756f24b",
+    "CONSTRUCT-FIRST-linux/child.log": "7dee289fc607ca82ba541867b5c2661a8042f468b2105c07b4d49e7b1b2a68c4"
+  },
+  "hosts": [
+    {
+      "host": "darwin",
+      "pid": 73947,
+      "exit": 0,
+      "controls": 28,
+      "sources": 4,
+      "inputs": 4,
+      "ordered_IDs_and_maps_match": true,
+      "CPU_seconds": [
+        30,
+        30
+      ],
+      "AS_bytes": null,
+      "nice": 15,
+      "wall_seconds": 0.2638314590440132,
+      "cleanup_errors": []
+    },
+    {
+      "host": "linux",
+      "pid": 3202046,
+      "exit": 0,
+      "controls": 28,
+      "sources": 4,
+      "inputs": 4,
+      "ordered_IDs_and_maps_match": true,
+      "CPU_seconds": [
+        30,
+        30
+      ],
+      "AS_bytes": [
+        536870912,
+        536870912
+      ],
+      "nice": 15,
+      "wall_seconds": 0.37218854017555714,
+      "cleanup_errors": []
+    }
+  ],
+  "full_raw_logs_read": true,
+  "new_tests_or_imports_by_reviewer": false,
+  "source_sha256": {
+    "pack_guard.py": "774610e0e1d85834aefaf1192e5676ac02dbf5797bd745405a3a1efd094956dc",
+    "construct_pack.py": "f5995ea2e95973b322aa46d98344fb5e1215c8c37ae24f73b6b4a8eae9b3fb18",
+    "test_construct_pack.py": "f76461552d86482b7034418c179e744c05348abc156fa074514399e98c560f74",
+    "construct_cpu.py": "e18fa1aa7bccae7356ac45fa743f137b6f299bc5ceb33b50d9ffefd80e2e737c"
+  },
+  "limits": "CPU30/LinuxAS512MiB/wall90/nice15/CUDAhidden/threads1",
+  "scope": "Synthetic constructor/supervision controls only; actual8asset construction still requires immutable complete-acquisition contract, fresh guard and separate admission."
+}

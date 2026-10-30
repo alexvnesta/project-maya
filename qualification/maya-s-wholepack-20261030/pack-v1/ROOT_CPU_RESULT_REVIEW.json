@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-30T14:31:30.331625+00:00",
+  "decision": "ROOT_PACK_FIRST60_EACH_HOST_RAW_PROOFS_REVIEWED_NO_MODEL_OR_FIT_ADMISSION",
+  "controls_each": 60,
+  "sources": {
+    "pack_guard.py": "774610e0e1d85834aefaf1192e5676ac02dbf5797bd745405a3a1efd094956dc",
+    "test_pack_guard.py": "865eab336b719b539f3ba3b30623e2a5257d588ab2c4af65b8d7032acbc4e7f7",
+    "run_cpu.py": "c16cbe6f3b07b5aa931ca6b1dbd5d393dd77aebd2ff846f4d3ee599c23ce54ba"
+  },
+  "inputs": {
+    "native-vision-v2/runtime/tools/dsv41/pack_gguf.py": "6784a50c4252f0d3af36cf04f5d212524dbf0800dac2d3ea633290d044a18fdf",
+    "decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+    "decode-optimization-20261028/maya-s-comparison-v1/baseline-vision.json": "3b682353a9bf572ae2736ec17b946179b24b83319de46c54950f0c442fd13053",
+    "decode-optimization-20261028/maya-s-comparison-v1/BASELINE_VISION_CUSTODY.json": "a5b048a5d98e8786356a0d77be918c284254953ef7e1910e0ab8da03faa42183"
+  },
+  "raws": {
+    "CPU-FIRST-darwin/child.json": "183808ee8a623955effbd55fdb7abb940d379ec50c9903d1372112d89d3fed09",
+    "CPU-FIRST-darwin/child.log": "c4af9ac5f47f8a7485d19169151accddaf02d5767689cbba3fa66cc1bae9137e",
+    "CPU-FIRST-darwin/receipt.json": "63f9cf8ce0230d6244ca7e095b63baad9b5d3b000dbfe796748cd427b72d4b46",
+    "CPU-FIRST-linux/child.json": "92a86c6069aae0c4772f3e401c10c3a00c0fc3dab7b1202c33df744dc20c2044",
+    "CPU-FIRST-linux/child.log": "d0ed28c9f924ea6073a9a64fc837f4ac87401fcd6fea2ca75500d880dd8c088c",
+    "CPU-FIRST-linux/receipt.json": "f4f0aa06d050f83009b66a9e6928fdeda2ef4577f09446fcc615575b6b166d9a"
+  },
+  "scope": "Synthetic metadata producer/validator and exact pinned visionJSON only. No actualweights/productionpack/GPU read or startup qualified."
+}

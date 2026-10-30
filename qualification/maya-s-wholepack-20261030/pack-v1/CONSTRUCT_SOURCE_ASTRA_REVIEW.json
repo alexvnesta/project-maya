@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-30T15:14:08.169845+00:00",
+  "decision": "SOURCE_HOLD_BEFORE_FIRST_CPU",
+  "source_sha256": {
+    "construct_pack.py": "4b8b9d835f1cf44dcea21f6ee154a2b5740ae9c7ea58c425da00077cab42c987",
+    "test_construct_pack.py": "11aecde45615e68ca75cb7e8d404921d42280289f098ea835d3e46add2a141e0",
+    "construct_cpu.py": "e18fa1aa7bccae7356ac45fa743f137b6f299bc5ceb33b50d9ffefd80e2e737c"
+  },
+  "test_ids": [
+    "test_construct_pack.ConstructTests.test_both_exact_physical_proofs",
+    "test_construct_pack.ConstructTests.test_changed_acquisition_source_before_import",
+    "test_construct_pack.ConstructTests.test_changed_explicit_qualification_pin_before_inputs",
+    "test_construct_pack.ConstructTests.test_changed_input_map",
+    "test_construct_pack.ConstructTests.test_changed_test_ids",
+    "test_construct_pack.ConstructTests.test_empty_source_map_rejected",
+    "test_construct_pack.ConstructTests.test_environment_literal_no_global_change",
+    "test_construct_pack.ConstructTests.test_exact_child_paths_before_actions",
+    "test_construct_pack.ConstructTests.test_failed_child_kept",
+    "test_construct_pack.ConstructTests.test_first_receipt_preserved",
+    "test_construct_pack.ConstructTests.test_foreign_source_path_rejected",
+    "test_construct_pack.ConstructTests.test_missing_AS_observation",
+    "test_construct_pack.ConstructTests.test_missing_other_host",
+    "test_construct_pack.ConstructTests.test_no_manual_source_review",
+    "test_construct_pack.ConstructTests.test_source_pin_checks_content",
+    "test_construct_pack.ConstructTests.test_symlink_source_rejected",
+    "test_construct_pack.ConstructTests.test_terminal_attempt_path_not_mutable_state",
+    "test_construct_pack.ConstructTests.test_terminal_attempt_requires_complete_eight"
+  ],
+  "manual_entire_three_files_read": true,
+  "executed": false,
+  "findings": [
+    {
+      "id": "external_known_pins",
+      "detail": "acquisition_module calls checked_files on fixed81file acquisition q; E-only restriction rejects legitimate exact existing D/live-selected pins. Narrow exception to exact immutable acquisition-q inventory only."
+    },
+    {
+      "id": "owned_group_cleanup",
+      "detail": "run finally calls TERM/KILL only if leader pollNone; does not clear surviving descendants once leader exits or verify groupgone. Reuse tested group cleanup."
+    },
+    {
+      "id": "CPU_closure_binding",
+      "detail": "qualified permits duplicated CPU groups, checks arbitrary self-described source maps instead of actual current module bytes/group identities; referenced receipt/child/log and required sources need exact q.files membership."
+    },
+    {
+      "id": "actual_supervisor_controls",
+      "detail": "18 controls only cover pure contracts, not actual run with mocked gates/child/cleanup. Add narrowly meaningful positive and firstfault/timeout/descendant/busy controls."
+    }
+  ],
+  "no_pack_or_model_admission": true
+}

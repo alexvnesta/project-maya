@@ -1,0 +1,67 @@
+test_baseline_typed_quality_and_native_mutations (test_ms_inputs.Config.test_baseline_typed_quality_and_native_mutations) ... ok
+test_candidate_tokenizer_template_directory_baseline_untouched (test_ms_inputs.Config.test_candidate_tokenizer_template_directory_baseline_untouched) ... ok
+test_exact_baseline_and_all_ten_factors (test_ms_inputs.Config.test_exact_baseline_and_all_ten_factors) ... ok
+test_namespace_foreign_alias_old_or_wrong_arm (test_ms_inputs.Config.test_namespace_foreign_alias_old_or_wrong_arm) ... ok
+test_no_held_kernel_flags_or_context_cap_override (test_ms_inputs.Config.test_no_held_kernel_flags_or_context_cap_override) ... ok
+test_nonfinite_and_duplicate_pack_arg_refused (test_ms_inputs.Config.test_nonfinite_and_duplicate_pack_arg_refused) ... ok
+test_private_pack_tokenizer_and_setting_mutations (test_ms_inputs.Config.test_private_pack_tokenizer_and_setting_mutations) ... ok
+test_process_contract_exact_auto_and_extra_environment (test_ms_inputs.Config.test_process_contract_exact_auto_and_extra_environment) ... ok
+test_unknown_mode_or_old_arm_refused (test_ms_inputs.Config.test_unknown_mode_or_old_arm_refused) ... ok
+test_actual_encoder_is_not_repeated_by_driver (test_ms_inputs.Driver.test_actual_encoder_is_not_repeated_by_driver) ... ok
+test_canonical_input_rejects_escape_before_read (test_ms_inputs.Driver.test_canonical_input_rejects_escape_before_read) ... ok
+test_cleanup_only_owned_group_and_no_retry (test_ms_inputs.Driver.test_cleanup_only_owned_group_and_no_retry) ... ok
+test_inherited_import_closure_cannot_be_omitted (test_ms_inputs.Driver.test_inherited_import_closure_cannot_be_omitted) ... ok
+test_input_symlink_refused (test_ms_inputs.Driver.test_input_symlink_refused) ... ok
+test_literal_cpu_limits (test_ms_inputs.Driver.test_literal_cpu_limits) ... ok
+test_review_pin_checked_before_test_import (test_ms_inputs.Driver.test_review_pin_checked_before_test_import) ... ok
+test_actual_baseline_api_encodes_each_mode_once (test_ms_inputs.Encoding.test_actual_baseline_api_encodes_each_mode_once) ... ERROR
+test_duplicate_vocab_ids_and_typed_token_types (test_ms_inputs.Encoding.test_duplicate_vocab_ids_and_typed_token_types) ... ok
+test_empty_template_refused (test_ms_inputs.Encoding.test_empty_template_refused) ... ok
+test_explicit_pack_selects_candidate_without_baseline_fallback (test_ms_inputs.Encoding.test_explicit_pack_selects_candidate_without_baseline_fallback) ... ok
+test_foreign_cached_support_refused_before_loader (test_ms_inputs.Encoding.test_foreign_cached_support_refused_before_loader) ... ok
+test_image_cut_and_text_token_exclusion (test_ms_inputs.Encoding.test_image_cut_and_text_token_exclusion) ... ok
+test_missing_candidate_tokenizer_refused (test_ms_inputs.Encoding.test_missing_candidate_tokenizer_refused) ... ok
+test_prompt_bounds_no_auto_resize (test_ms_inputs.Encoding.test_prompt_bounds_no_auto_resize) ... ok
+test_support_source_tamper_before_import (test_ms_inputs.Encoding.test_support_source_tamper_before_import) ... ok
+test_synthetic_encoded_state_contracts (test_ms_inputs.Encoding.test_synthetic_encoded_state_contracts) ... ok
+test_token_type_range_hash_and_count (test_ms_inputs.Encoding.test_token_type_range_hash_and_count) ... ok
+test_tokenizer_schema_and_foreign_specials (test_ms_inputs.Encoding.test_tokenizer_schema_and_foreign_specials) ... ok
+test_tokenizer_symlink_refused_before_target_read (test_ms_inputs.Encoding.test_tokenizer_symlink_refused_before_target_read) ... ok
+test_warm_text_token_difference (test_ms_inputs.Encoding.test_warm_text_token_difference) ... ok
+test_cancel_bound_and_lifecycle_dependency_mutation (test_ms_inputs.Lifecycle.test_cancel_bound_and_lifecycle_dependency_mutation) ... ok
+test_followup_preserves_actual_call_ID_without_raw_mutation (test_ms_inputs.Lifecycle.test_followup_preserves_actual_call_ID_without_raw_mutation) ... ok
+test_incomplete_multiple_wrong_name_or_missing_ID_refused (test_ms_inputs.Lifecycle.test_incomplete_multiple_wrong_name_or_missing_ID_refused) ... ok
+test_old_five_case_mode_and_creative_not_admitted (test_ms_inputs.Lifecycle.test_old_five_case_mode_and_creative_not_admitted) ... ok
+test_separate_four_unmeasured_fullcap_requests (test_ms_inputs.Lifecycle.test_separate_four_unmeasured_fullcap_requests) ... ok
+test_typed_duplicate_wrong_tool_arguments_refused (test_ms_inputs.Lifecycle.test_typed_duplicate_wrong_tool_arguments_refused) ... ok
+test_answer_reuse_order_and_word_fitting_mutations (test_ms_inputs.Requests.test_answer_reuse_order_and_word_fitting_mutations) ... ok
+test_changed_frozen_work_source_refused (test_ms_inputs.Requests.test_changed_frozen_work_source_refused) ... ok
+test_copy_isolation_and_full_policy (test_ms_inputs.Requests.test_copy_isolation_and_full_policy) ... ok
+test_literal_prose_and_code_match_pinned_sources (test_ms_inputs.Requests.test_literal_prose_and_code_match_pinned_sources) ... ok
+test_no_prose_response_format_or_output_length_enforcement (test_ms_inputs.Requests.test_no_prose_response_format_or_output_length_enforcement) ... ok
+test_no_remote_image_inputs (test_ms_inputs.Requests.test_no_remote_image_inputs) ... ok
+test_quality_order_known_answers_and_new_family (test_ms_inputs.Requests.test_quality_order_known_answers_and_new_family) ... ok
+test_request_types_caps_effort_and_extra_override (test_ms_inputs.Requests.test_request_types_caps_effort_and_extra_override) ... ok
+test_unknown_fixture_mode (test_ms_inputs.Requests.test_unknown_fixture_mode) ... ok
+
+======================================================================
+ERROR: test_actual_baseline_api_encodes_each_mode_once (test_ms_inputs.Encoding.test_actual_baseline_api_encodes_each_mode_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/test_ms_inputs.py", line 182, in test_actual_baseline_api_encodes_each_mode_once
+    m=f.build_manifest(f.BASE_PACK,mode);ACTUAL_MANIFESTS[mode]=m
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_fixtures.py", line 295, in build_manifest
+    cases,pins=encode(cases,mode,pack)
+               ~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_fixtures.py", line 266, in encode
+    require(not swapped and Path(selected)==directory/'chat_template.jinja','No template substitution/fallback')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_fixtures.py", line 46, in require
+    if not ok:raise ValueError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: No template substitution/fallback
+
+----------------------------------------------------------------------
+Ran 45 tests in 1.495s
+
+FAILED (errors=1)

@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-30T15:17:35.086044+00:00",
+  "status": "FIRST45_BOTH_HOSTS_SOURCE_QUALIFICATION_FAILED_NOT_MODEL_FAULT",
+  "physical_hosts": [
+    "darwin",
+    "linux"
+  ],
+  "each_controls": 45,
+  "each_passed": 44,
+  "each_errors": 1,
+  "error": "New CPU fixture wrongly forbids existing API intentional V4.1 template selection for incompatible pack template. Exact source policy correction needed; no inference or pack construction attempted.",
+  "original_results_preserved": true,
+  "next": "Same Astra source diagnosis, versioned source/input/CPU proof. No blind rerun or regrade."
+}

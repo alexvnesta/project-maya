@@ -1,0 +1,43 @@
+{
+  "utc": "2026-10-30T14:05:50.953578+00:00",
+  "decision": "CONDITIONAL_PASSIVE_DOWNLOAD_ONLY",
+  "qualification_sha256": "fe83f9fe647c5f9821d909913a063aeeec737fd64978fa4bba565bf7a682b44f",
+  "qualification_review_sha256": "f5bfbcd6a9a9c2831cbec0ea6e7d8e9e6cef35727d4a0f1698f714772184f752",
+  "actual_preflight_sha256": "a274683d4b8b1ee64715349caa15be3f3f8984a2e396dd9894deddd43fe8a1ad",
+  "actual_preflight_utc": "2026-10-30T14:05:13.696686+00:00",
+  "CPU_review_sha256": "39a28972dcbc0c61d34aaf2f708c0f25b60eb7508dbdc08dee05d62eb6ecd369",
+  "source_map": {
+    "acquire.py": "be7fc21a464a26ed06c77d8058a81985adae792a4268ce16c8426da6ed65ad37",
+    "test_acquire.py": "1e2deb730eb8f5bc5aa301d0681165d2fd396cd5ed1464a8af962ecc5d1dba4f",
+    "run_cpu.py": "419086591684d83362c4fcf0e321bd02af51b8a1439d3724d1451aacc9325863",
+    "ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b"
+  },
+  "binding": {
+    "invocation": "fcc9a5fdb61740ef887ddf2b5bf9bcf8",
+    "main_pid": 2984652,
+    "native_pid": 2984691,
+    "native_start_ticks": 162440848
+  },
+  "manifest_sha256": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+  "asset_count": 8,
+  "total_expected_bytes": 347445667721,
+  "actual_free_bytes": 897241731072,
+  "minimum_initial_free_bytes": 489179588489,
+  "first_attempt_only": true,
+  "conditions": [
+    "Immediately before launch repeat all68 immutable pins plus q self before support imports, then fresh phasefree/default/idle/exact q binding/host.guard_binding/root full-remaining budget. Busy or binding change means untouched deferral.",
+    "Run only reviewed acquire.py --qualification-pin fe83f9fe647c5f9821d909913a063aeeec737fd64978fa4bba565bf7a682b44f in own acquisition namespace, nice15/CUDAhidden/OMP1/OpenBLAS1/arena1/LinuxAS512MiB. No CPU30 limit borrowed from tests.",
+    "Retain 64MiB/s throttling,132GiB free floor,1s best-effort user-busy checks and5s per-network timeout. Stop only owned I/O on first observed busy/phase/deadline/fault; preserve attempt+partials, no automatic retry or resume loop.",
+    "Four-hour14400s cooperative transfer deadline starts after initial SelectedGate; do not claim hard4h process-supervisor guarantee.",
+    "Do not acquire production experiment.lock, start private phase concurrently, stop/restart/cancel user work or mutate selected model/profile/config.",
+    "Asset completion requires all8 actual length+SHA matches and exclusive publication. Subsequent GGUFmetadata/pack/context residency/numerical/quality/model/performance qualification is separate."
+  ],
+  "model_build_GPU_service_or_deployment_admitted": false,
+  "production_preserved": true,
+  "limitations": [
+    "Receipt has aggregate69-pass attestation and exactsource/binding; separate parent report states preimport and posthashidle/root/phase ordering. Immediate action-time repetition remains mandatory.",
+    "No atomicidle guarantee; this admits passive background I/O with periodic best-effort yield, not guaranteed zero contention.",
+    "CPU evidence is43synthetic controls eachphysicalhost; realHF large-body download behavior remains unmeasured.",
+    "Old failed experiments andS2 provenance/quality gaps remain unchanged."
+  ]
+}

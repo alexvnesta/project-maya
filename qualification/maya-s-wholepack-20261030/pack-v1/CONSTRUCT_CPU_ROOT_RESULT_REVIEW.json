@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-30T15:22:01.458900+00:00",
+  "passed": true,
+  "first_exact_bounded_controls_each_physical_host": 28,
+  "source_map_count": 4,
+  "input_map_count": 4,
+  "proofs": [
+    {
+      "host": "darwin",
+      "controls": 28,
+      "seconds": 0.2638314590440132,
+      "sha256": {
+        "receipt.json": "f4b1be31b1056f773143d3ad24486b6aa8b010fc351d9d8060f28908266d72e9",
+        "child.json": "d88d49f91dbf4660b3644738d39e7823c0d2c3de809062382f63a3fcb1169997",
+        "child.log": "4eda123b1e103acf0db72e1802b8ae21b5a692367206119d697809d50a9c9b4b"
+      }
+    },
+    {
+      "host": "linux",
+      "controls": 28,
+      "seconds": 0.37218854017555714,
+      "sha256": {
+        "receipt.json": "701abe560307c96fa108e405503b953181c29d3df105b6ec4f4f29bd4e79e54d",
+        "child.json": "be8a4270df4301d6bc7127a45bd0bd6c24ae25f36bb22830083bec6ff756f24b",
+        "child.log": "7dee289fc607ca82ba541867b5c2661a8042f468b2105c07b4d49e7b1b2a68c4"
+      }
+    }
+  ],
+  "no_actual_pack_or_native_model_or_GPU_execution": true,
+  "scope": "Source/CPU proof only, no model admission or fit/speed result."
+}
