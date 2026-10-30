@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-30T13:55:24.046615+00:00",
+  "decision": "SOURCE_HOLD_BEFORE_FIRST_CPU",
+  "manual_read": "Entire initial acquire.py234lines, test_acquire.py171lines/all28test bodies, and50line frozenmanifest read. No source imported, tests or external actions executed.",
+  "source_sha256": {
+    "acquire.py": "33bc6d84de849a045e1323591220dc1a19865af3a1559780db4180490b9433fa",
+    "test_acquire.py": "1bd401848457603e46b0dc121eec89f4f95f819e030cb03a9d531655380c81c3",
+    "ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b"
+  },
+  "findings": [
+    {
+      "id": "production_lock",
+      "blocking": true,
+      "finding": "main takes exclusive experiment.lock while selected hosted owner intentionally holds it for lifetime. Healthy production acquisition will refuse.",
+      "minimal_fix": "Observe expectedproduction lock remainsheld; only acquire owndownload lock and reuse existingcooperativeCPU/I/Oreservation ifneeded. Neverrelease/replaceproductionlock."
+    },
+    {
+      "id": "qualification_import_custody",
+      "blocking": true,
+      "finding": "Two booleans+arbitrary q.sources map do not require exactsource set or both-hostCPUraw/IDs/limits; SelectedGate imports runtime before independently establishing origin/pinnedclosure.",
+      "minimal_fix": "Validate fixed newsource/manifest/driver/helper maps, exact rawbothhost proof contracts and manualreview binding. Pin minimaltrustedbootstrap beforeimport; fullclosure afterfresh guard and re-guard. Bind actualqualification bytes in reviewedadmission."
+    },
+    {
+      "id": "blocking_read",
+      "blocking": true,
+      "finding": "HTTPResponse.read(BLOCK) can wait for full1MiB while servertrickles below sockettimeout. Absolute wall andbusy checks can be starved; a block is written without a postread guard.",
+      "minimal_fix": "Use bounded one-recv/read1 style reads with finite socket/open latency, absolute deadline andforced guard before write. Preserveonlyownpartial andcloseonlyownsocket onfailure."
+    },
+    {
+      "id": "evidence_preservation",
+      "blocking": true,
+      "finding": "Repeated main invocations overwrite acquisition-state.json, including priorHOLD/failure details. Catch-all BaseException then normalreturn also emits exit0 onHOLD.",
+      "minimal_fix": "Exclusive immutable per-attempt terminalreceipt plusprogressstate; retain allpriorattempts. NonzeroHOLD/distinctdefer result, preserving primary+receiptcleanup faults."
+    },
+    {
+      "id": "root_inventory",
+      "blocking": true,
+      "finding": "root.glob(*/*) counts unknownfiles and can traverse symlinked childdirectories beforevalidation, making retained-byte budget/ownership unsound.",
+      "minimal_fix": "Validate strict expectedeight final/partial namespace and realancestors before any retainedstat. Rejectunknownresidue/alias, bound retained bytes bymanifest; bindresumption toownedmanifest custody."
+    },
+    {
+      "id": "control_coverage",
+      "blocking": true,
+      "finding": "Current28tests coveracquire_file withBytesIO, notactualmain/SelectedGate qualification, lock/custody/faultpaths oractualHTTPstream behavior. DarwinTemporaryDirectoryroot isunresolved andmayhit/var alias inpositivecases.",
+      "minimal_fix": "Resolve only ownedCPUfixture temp root. Addmeaningful mockedmain/qualification/heldproductionlock/foreignreservation/failure controls and real localhostHTTPRange/resume/cancel-or-timeout behavior. No realremote/modelcode inCPUproof."
+    },
+    {
+      "id": "fairness",
+      "blocking": true,
+      "finding": "guard called per1MiB including retainedfile rereads; networkrate limited butprefixhash unthrottled. Finalexistingreturn has no forcedfinalguard.",
+      "minimal_fix": "Atmost1s lightweightpoll cadence plusmandatory boundaryguards beforewrites/open/network/publish/return; throttle retainedprefix I/O too. Test syntheticclock boundary behavior; preserve absolute deadline checks independently."
+    }
+  ],
+  "already_sound_features": [
+    "Exactrevision/eight filenames/size/digest manifest andfullSHA beforepublish.",
+    "Content-Range exactstart/end/total andContent-Length/identitybody validation; ignoredpartial200refused.",
+    "No sourcebuild/model/service endpoint.",
+    "Partialbytes retained on checksum/transport failure and no inner retry.",
+    "Direct path/symlink/hardlink checks exist but needrootinventory/custody completion."
+  ],
+  "scope_limit": "These are prospective source findings before any FIRSTCPUproof. Existing production/profile/oldHOLDs are unaffected. Revisedsource must be reread by ROOT+sameAstra before execution; no newcandidate/modeladmission."
+}

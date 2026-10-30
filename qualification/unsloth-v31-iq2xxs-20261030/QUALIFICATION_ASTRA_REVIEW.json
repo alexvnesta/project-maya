@@ -1,0 +1,80 @@
+{
+  "decision": "CONDITIONAL_SINGLE_UNSLOTH_DOWNLOAD_ONLY_MAP_REVIEWED",
+  "qualification_sha256": "f0a5b75602a6afd4490d65c4ed4487f9ae86c05d025e12c3809d28d651715d21",
+  "files": 97,
+  "physical_checks_required_including_qualification_self": 98,
+  "inherited_files_exactly_retained": 81,
+  "local_E_file_pins_independently_verified": 84,
+  "unchanged_physical_selected_file_pins_requires_actual_verification": [
+    "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+    "/home/alex/deepseek-hosted-20261025/config.json",
+    "/home/alex/deepseek-hosted-20261025/hosting_defaults.py",
+    "/home/alex/deepseek-hosted-20261025/hosting_preflight.py",
+    "/home/alex/deepseek-hosted-20261025/release.json",
+    "/home/alex/deepseek-hosted-20261025/runtime-native-vision-v2/serve/mcp_fake_server.py",
+    "/home/alex/deepseek-hosted-20261025/runtime-native-vision-v2/serve/server.py",
+    "/home/alex/deepseek-hosted-20261025/runtime-native-vision-v2/serve/test_gpu_roles_server.py",
+    "/home/alex/deepseek-hosted-20261025/runtime-native-vision-v2/serve/test_server.py",
+    "/home/alex/deepseek-hosted-20261025/runtime/serve/mcp_fake_server.py",
+    "/home/alex/deepseek-hosted-20261025/runtime/serve/server.py",
+    "/home/alex/deepseek-hosted-20261025/runtime/serve/test_gpu_roles_server.py",
+    "/home/alex/deepseek-hosted-20261025/runtime/serve/test_server.py"
+  ],
+  "source_count": 3,
+  "input_count": 5,
+  "ordered_CPU_test_count_each_host": 40,
+  "CPU_result_review_sha256": "4c81331e6fd68252fd888f5f36659d090b0ee9c80377dfa277e75bd2e760f4aa",
+  "selected_binding": {
+    "invocation": "fcc9a5fdb61740ef887ddf2b5bf9bcf8",
+    "main_pid": 2984652,
+    "native_pid": 2984691,
+    "native_start_ticks": 162440848
+  },
+  "source_sha256": {
+    "acquire_unsloth.py": "f20084778b5c68fbb810326643b6cb1236e953c277637560425300772578ddf1",
+    "test_acquire_unsloth.py": "9a87075484423423218dff3bec97784165a213b4cbfa89a5f9054e75a2a67e01",
+    "run_cpu.py": "9150c2acc372055d295503fc461f5319415c3223592449be1d0e2e4db6381665"
+  },
+  "manifest_sha256": "4fb4c0ff9c0b55f46afa15c2cbc84ee09372c85944efafb63e36a5ca6e73c73c",
+  "authorization_sha256": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648",
+  "findings": [],
+  "conditions": [
+    "Freeze immutable qualification containing exact current3 sources/5 inputs/40 IDs, both raw CPU triples, final manual source review and these result/source reviews. Retain all81 prior v2 acquisition files plus prior qualification3f89 self pin and current literal manifest/authorization.",
+    "Before any support imports or large closure hashing, fresh no-private/build/restoration phase and healthy/default/exact selected owner check. Then actual full qualification/self and inherited closure checks, followed by repeated current-binding/health/source/root checks.",
+    "Assert q.selected_binding exactly matches this conditional binding and fresh physical guard. Any changed owner/config/phase requires a new reviewed admission, not reuse of this condition.",
+    "Prove fresh own lock available/no existing Unsloth acquisition process; never touch production experiment.lock or the running Maya-S process/lock/source.",
+    "At launch and periodic checkpoints, free space must cover all remaining Unsloth and Maya-S bytes plus144GiB and256MiB cushion. Other-model file size snapshots grant no SHA/model custody.",
+    "External launcher must enforce AS512MiB/nice15/CUDA-hidden/thread limits for long I/O. CPU30 applies only to completed test children, not long transfer.",
+    "Before any private Maya-S comparison, set reviewed pause marker and observe Unsloth process terminal/own lock released; do not equate marker existence with stopped I/O."
+  ],
+  "scope": {
+    "single_attempt": true,
+    "repo": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
+    "revision": "8a6ec9cf118e785a362ea94ee123c61c70553be6",
+    "manifest_sha256": "4fb4c0ff9c0b55f46afa15c2cbc84ee09372c85944efafb63e36a5ca6e73c73c",
+    "authorization_sha256": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648",
+    "asset_count": 6,
+    "asset_bytes": 300475464795,
+    "rate_MiB_per_second": 16,
+    "cooperative_wall_seconds": 21600,
+    "long_IO_AS_MiB": 512,
+    "nice_increment": 15,
+    "CUDA_hidden": true,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MALLOC_ARENA_MAX": 1,
+    "root_plus_comparison_reserve_GiB": 144,
+    "additional_cushion_MiB": 256,
+    "reserve_remaining_bytes_of_both_downloads": true,
+    "no_auto_retry": true,
+    "own_lock_only": "download.lock"
+  },
+  "physical_preflight_reviewed": false,
+  "limitations": [
+    "No live physical receipt supplied for this map review. All98 physical checks and immediate current phase/owner/health/root/own-lock checks remain required before launch.",
+    "The13 inherited deployed selected file pins are compared to the reviewed prior qualification, not inferred from local copies; physically verify each.",
+    "This report permits only one download attempt after those checks. No Unsloth inference, pack construction, deployment, GPU, native/service action or automatic retry.",
+    "Pause marker is cooperative; process termination and lock release must be observed before a private comparison phase.",
+    "The initial attempted local filename acquisition-qualification.json did not exist; located and reviewed actual qualification.json. No source or evidence was changed."
+  ]
+}

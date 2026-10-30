@@ -1,0 +1,5 @@
+The first constructor failed in the wrapper before creating the pack output. Its architecture check incorrectly required full model metadata on every shard. The bounded header diagnostic confirms shard0 has deepseek41 metadata and shards1–5 contain only the three split keys. The pinned packer already selects model metadata from the model-bearing shard.
+
+The repair should require complete valid base metadata, allow architecture to be absent only on later shards, and reject any explicitly conflicting or null architecture. All existing split, tensor, geometry, tokenizer, drafter, vision and custody checks remain.
+
+Use a new pack-v2 source and proof namespace. The exact pack-v1/pack-FIRST output may remain the target because it was never created; both new guard and constructor must enforce that exact fresh path. Preserve the failed constructor and its source/qualification. New manual source review, both-host CPU proofs and a separate metadata-only admission are required. Nothing is executed or admitted by this diagnosis.

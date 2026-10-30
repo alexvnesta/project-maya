@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-30T14:05:25.706926+00:00",
+  "decision": "ACQUISITION_68_PIN_MAP_REVIEWED_ELIGIBLE_FOR_FRESH_READ_ONLY_PHYSICAL_PREFLIGHT_ONLY",
+  "qualification_sha256": "fe83f9fe647c5f9821d909913a063aeeec737fd64978fa4bba565bf7a682b44f",
+  "file_count": 68,
+  "helper_closure_count": 38,
+  "local_E_files_independently_hashed": 55,
+  "physical_selected_files": {
+    "count": 13,
+    "evidence_sha256": "a935280a9e9cd6262a52cd7e86d3595140d9dfbcad9fa167648525f1406f0de7",
+    "review_scope": "Compared exact pins to downloaded actual selected-preflight metadata; not rehashed remotely by reviewer."
+  },
+  "canonical_paths_unique": true,
+  "source_and_both_CPU_proofs_match": true,
+  "selected_binding": {
+    "invocation": "fcc9a5fdb61740ef887ddf2b5bf9bcf8",
+    "main_pid": 2984652,
+    "native_pid": 2984691,
+    "native_start_ticks": 162440848
+  },
+  "findings": [],
+  "nonblocking_scope_notes": [
+    "Selected13 includes archived runtime/server test files unused by acquisition; harmless overpinning, not executing those modules.",
+    "Full helper closure is an external preimport verification obligation. acquire.qualification itself checks current4 sources and both CPU receipts, not q.files.",
+    "14400s is a cooperative source deadline from after SelectedGate construction, not an independent hard process-kill deadline. Blocking syscall/guard time can extend terminal wall time. Do not call it a hard 4h supervisor bound.",
+    "CPU30 belongs to tests only; proposed long-I/O child nice15/CUDAhidden/one-thread settings/LinuxAS512 differ intentionally and do not qualify model execution."
+  ],
+  "physical_preflight_requirements": [
+    "Fresh phase-free/default/idle/current exact selected owner and root reserve before metadata staging/hash work.",
+    "Verify all68 canonical files plus exact q self before support imports; no ambient foreign same-name modules/PYTHONPATH.",
+    "After hashes, recheck canonical binding equals q.selected_binding, runtime phase keys, host.idle and guard_binding, current free space >=132GiB + exact remaining manifest bytes after strict retained inventory.",
+    "Save literal actual receipt including check count69, q SHA, closure/source proof, selected binding, actual free/remaining bytes, no model actions.",
+    "No experiment.lock acquisition/replacement, private phase, service changes, pack creation or model action. No automatic transport retry; owned partials/attempts preserved."
+  ],
+  "transfer_admitted": false,
+  "next_step": "Separate transfer-only admission after actual physical read-only preflight. No code change or repeated CPU controls required by this map review."
+}

@@ -1,0 +1,56 @@
+test_absolute_and_traversal_paths_refused (test_acquire.Acquisition.test_absolute_and_traversal_paths_refused) ... ok
+test_ambiguous_partial_and_final_refused (test_acquire.Acquisition.test_ambiguous_partial_and_final_refused) ... ok
+test_authorized_active_and_queued_work_allowed (test_acquire.Acquisition.test_authorized_active_and_queued_work_allowed) ... ok
+test_authorized_serving_foreign_or_missing_counter_refused (test_acquire.Acquisition.test_authorized_serving_foreign_or_missing_counter_refused) ... ok
+test_authorized_serving_idle_also_allowed (test_acquire.Acquisition.test_authorized_serving_idle_also_allowed) ... ok
+test_authorized_serving_policy_change_refused (test_acquire.Acquisition.test_authorized_serving_policy_change_refused) ... ok
+test_blocking_read_crossing_deadline_not_written (test_acquire.Acquisition.test_blocking_read_crossing_deadline_not_written) ... ok
+test_busy_before_directory_or_transport (test_acquire.Acquisition.test_busy_before_directory_or_transport) ... ok
+test_busy_midstream_closes_response_retains_partial (test_acquire.Acquisition.test_busy_midstream_closes_response_retains_partial) ... ok
+test_changed_authorization_refused (test_acquire.Acquisition.test_changed_authorization_refused) ... ok
+test_changed_manifest_refused (test_acquire.Acquisition.test_changed_manifest_refused) ... ok
+test_checksum_failure_preserves_full_partial (test_acquire.Acquisition.test_checksum_failure_preserves_full_partial) ... ok
+test_complete_hash_and_atomic_publish (test_acquire.Acquisition.test_complete_hash_and_atomic_publish) ... ok
+test_content_encoding_refused (test_acquire.Acquisition.test_content_encoding_refused) ... ok
+test_corrupt_existing_final_refused (test_acquire.Acquisition.test_corrupt_existing_final_refused) ... ok
+test_corrupt_prefix_never_promoted (test_acquire.Acquisition.test_corrupt_prefix_never_promoted) ... ok
+test_deadline_before_network (test_acquire.Acquisition.test_deadline_before_network) ... ok
+test_directory_symlink_refused (test_acquire.Acquisition.test_directory_symlink_refused) ... ok
+test_exact_authorization_document (test_acquire.Acquisition.test_exact_authorization_document) ... ok
+test_exact_manifest (test_acquire.Acquisition.test_exact_manifest) ... ok
+test_existing_final_is_verified_without_network (test_acquire.Acquisition.test_existing_final_is_verified_without_network) ... ok
+test_file_symlink_refused (test_acquire.Acquisition.test_file_symlink_refused) ... ok
+test_foreign_range_refused (test_acquire.Acquisition.test_foreign_range_refused) ... ok
+test_guard_rate_not_per_byte (test_acquire.Acquisition.test_guard_rate_not_per_byte) ... ok
+test_hardlinked_file_refused (test_acquire.Acquisition.test_hardlinked_file_refused) ... ok
+test_ignored_range_200_refused (test_acquire.Acquisition.test_ignored_range_200_refused) ... ok
+test_inventory_exact_partial_count (test_acquire.Acquisition.test_inventory_exact_partial_count) ... ok
+test_inventory_foreign_file_refused (test_acquire.Acquisition.test_inventory_foreign_file_refused) ... ok
+test_inventory_parent_alias_refused (test_acquire.Acquisition.test_inventory_parent_alias_refused) ... ok
+test_main_busy_has_no_owned_metadata_mutation (test_acquire.Acquisition.test_main_busy_has_no_owned_metadata_mutation) ... ok
+test_main_does_not_touch_production_lock (test_acquire.Acquisition.test_main_does_not_touch_production_lock) ... ok
+test_main_transport_hold_nonzero_and_separate_receipt (test_acquire.Acquisition.test_main_transport_hold_nonzero_and_separate_receipt) ... ok
+test_missing_authorization_refused (test_acquire.Acquisition.test_missing_authorization_refused) ... ok
+test_missing_content_length_refused (test_acquire.Acquisition.test_missing_content_length_refused) ... ok
+test_oversized_retained_partial_refused (test_acquire.Acquisition.test_oversized_retained_partial_refused) ... ok
+test_pinned_transport_and_range (test_acquire.Acquisition.test_pinned_transport_and_range) ... ok
+test_qualification_exact_source_names_required (test_acquire.Acquisition.test_qualification_exact_source_names_required) ... ok
+test_qualification_missing_explicit_pin_refused (test_acquire.Acquisition.test_qualification_missing_explicit_pin_refused) ... ok
+test_real_localhost_range_and_resume (test_acquire.Acquisition.test_real_localhost_range_and_resume) ... ok
+test_real_localhost_read_timeout_closes_no_publish (test_acquire.Acquisition.test_real_localhost_read_timeout_closes_no_publish) ... ok
+test_receipt_temporary_residue_preserved (test_acquire.Acquisition.test_receipt_temporary_residue_preserved) ... ok
+test_response_overrun_refused (test_acquire.Acquisition.test_response_overrun_refused) ... ok
+test_resume_hashes_prefix_and_checks_range (test_acquire.Acquisition.test_resume_hashes_prefix_and_checks_range) ... ok
+test_root_reserve_before_transport (test_acquire.Acquisition.test_root_reserve_before_transport) ... ok
+test_selected_gate_active_work_keeps_binding_and_never_calls_idle (test_acquire.Acquisition.test_selected_gate_active_work_keeps_binding_and_never_calls_idle) ... ok
+test_selected_gate_fault_before_binding_capture (test_acquire.Acquisition.test_selected_gate_fault_before_binding_capture) ... ok
+test_selected_gate_foreign_origin_refused (test_acquire.Acquisition.test_selected_gate_foreign_origin_refused) ... ok
+test_selected_gate_phase_before_support_import_use (test_acquire.Acquisition.test_selected_gate_phase_before_support_import_use) ... ok
+test_transport_failure_no_retry (test_acquire.Acquisition.test_transport_failure_no_retry) ... ok
+test_truncated_body_refused (test_acquire.Acquisition.test_truncated_body_refused) ... ok
+test_whole_small_200_accepted (test_acquire.Acquisition.test_whole_small_200_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 0.609s
+
+OK

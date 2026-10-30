@@ -1,0 +1,47 @@
+test_child_only_cpu_nice_AS_bounds (test_acquire_unsloth.Driver.test_child_only_cpu_nice_AS_bounds) ... ok
+test_only_owned_test_group_cleanup (test_acquire_unsloth.Driver.test_only_owned_test_group_cleanup) ... ok
+test_source_review_checked_before_test_import (test_acquire_unsloth.Driver.test_source_review_checked_before_test_import) ... ok
+test_combined_disk_shortfall_before_writes (test_acquire_unsloth.Gate.test_combined_disk_shortfall_before_writes) ... ok
+test_current_selected_gate_rechecked (test_acquire_unsloth.Gate.test_current_selected_gate_rechecked) ... ok
+test_explicit_pause_cooperatively_defers (test_acquire_unsloth.Gate.test_explicit_pause_cooperatively_defers) ... ok
+test_foreign_or_private_owner_before_asset_mutation (test_acquire_unsloth.Gate.test_foreign_or_private_owner_before_asset_mutation) ... ok
+test_foreign_pause_policy_rejected (test_acquire_unsloth.Gate.test_foreign_pause_policy_rejected) ... ok
+test_pause_alias_checked_before_read (test_acquire_unsloth.Gate.test_pause_alias_checked_before_read) ... ok
+test_actual_main_success_receipt_no_service_actions (test_acquire_unsloth.Main.test_actual_main_success_receipt_no_service_actions) ... {"utc": "2026-10-30T15:47:21.820543+00:00", "pid": 3317311, "status": "ALL_SIX_UNSLOTH_ASSETS_VERIFIED_NO_MODEL_RUN", "manifest_sha256": "4fb4c0ff9c0b55f46afa15c2cbc84ee09372c85944efafb63e36a5ca6e73c73c", "authorization_sha256": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648", "revision": "8a6ec9cf118e785a362ea94ee123c61c70553be6", "files": [{"path": "0", "bytes": 1, "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "status": "DOWNLOADED_VERIFIED"}, {"path": "1", "bytes": 1, "sha256": "0000000000000000000000000000000000000000000000000000000000000000", "status": "DOWNLOADED_VERIFIED"}], "model_or_service_actions": 0, "combined_space_at_admission": {"free_bytes": 1000000000000000}, "rate_bytes_per_second": 16777216, "wall_seconds": 21600, "returncode": 0, "updated_utc": "2026-10-30T15:47:21.821066+00:00"}
+ok
+test_changed_selected_binding_no_lock_or_assets_write (test_acquire_unsloth.Main.test_changed_selected_binding_no_lock_or_assets_write) ... ok
+test_first_transport_failure_no_second_transfer (test_acquire_unsloth.Main.test_first_transport_failure_no_second_transfer) ... {"utc": "2026-10-30T15:47:21.828742+00:00", "pid": 3317311, "status": "ACQUISITION_HOLD_PARTIALS_RETAINED", "manifest_sha256": "4fb4c0ff9c0b55f46afa15c2cbc84ee09372c85944efafb63e36a5ca6e73c73c", "authorization_sha256": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648", "revision": "8a6ec9cf118e785a362ea94ee123c61c70553be6", "files": [], "model_or_service_actions": 0, "combined_space_at_admission": {"free_bytes": 1000000000000000}, "rate_bytes_per_second": 16777216, "wall_seconds": 21600, "error_type": "TimeoutError", "reason": "Transport/OS failure; no automatic retry", "returncode": 1, "updated_utc": "2026-10-30T15:47:21.828998+00:00"}
+ok
+test_lock_alias_rejected_before_open (test_acquire_unsloth.Main.test_lock_alias_rejected_before_open) ... ok
+test_bad_counter_types_sizes (test_acquire_unsloth.Pure.test_bad_counter_types_sizes) ... ok
+test_both_downloads_and_comparison_space_reserved (test_acquire_unsloth.Pure.test_both_downloads_and_comparison_space_reserved) ... ok
+test_changed_manifest_pin_before_parse (test_acquire_unsloth.Pure.test_changed_manifest_pin_before_parse) ... ok
+test_changed_owner_source_before_import (test_acquire_unsloth.Pure.test_changed_owner_source_before_import) ... ok
+test_comparison_reserve_survives_download_completion (test_acquire_unsloth.Pure.test_comparison_reserve_survives_download_completion) ... ok
+test_download_progress_preserves_space_equation (test_acquire_unsloth.Pure.test_download_progress_preserves_space_equation) ... ok
+test_exact_current_six_shards (test_acquire_unsloth.Pure.test_exact_current_six_shards) ... ok
+test_new_qualification_pin_required (test_acquire_unsloth.Pure.test_new_qualification_pin_required) ... ok
+test_rate_and_socket_deadline_not_model_timeouts (test_acquire_unsloth.Pure.test_rate_and_socket_deadline_not_model_timeouts) ... ok
+test_actual_current_qualification_positive (test_acquire_unsloth.Qualification.test_actual_current_qualification_positive) ... ok
+test_empty_test_ids_rejected (test_acquire_unsloth.Qualification.test_empty_test_ids_rejected) ... ok
+test_executing_source_cannot_be_omitted (test_acquire_unsloth.Qualification.test_executing_source_cannot_be_omitted) ... ok
+test_manual_source_review_required (test_acquire_unsloth.Qualification.test_manual_source_review_required) ... ok
+test_raw_log_cannot_be_omitted (test_acquire_unsloth.Qualification.test_raw_log_cannot_be_omitted) ... ok
+test_required_input_omission_rejected (test_acquire_unsloth.Qualification.test_required_input_omission_rejected) ... ok
+test_unbounded_child_rejected (test_acquire_unsloth.Qualification.test_unbounded_child_rejected) ... ok
+test_ambiguous_different_inodes_rejected (test_acquire_unsloth.Snapshot.test_ambiguous_different_inodes_rejected) ... ok
+test_atomic_link_unlink_publication_not_double_counted (test_acquire_unsloth.Snapshot.test_atomic_link_unlink_publication_not_double_counted) ... ok
+test_final_budget (test_acquire_unsloth.Snapshot.test_final_budget) ... ok
+test_missing_leaf_over_reserves (test_acquire_unsloth.Snapshot.test_missing_leaf_over_reserves) ... ok
+test_oversize_rejected (test_acquire_unsloth.Snapshot.test_oversize_rejected) ... ok
+test_partial_budget (test_acquire_unsloth.Snapshot.test_partial_budget) ... ok
+test_symlink_rejected (test_acquire_unsloth.Snapshot.test_symlink_rejected) ... ok
+test_new_repo_revision_and_every_byte_checksum (test_acquire_unsloth.Transfer.test_new_repo_revision_and_every_byte_checksum) ... ok
+test_original_running_module_source_unchanged (test_acquire_unsloth.Transfer.test_original_running_module_source_unchanged) ... ok
+test_transport_fault_not_retried (test_acquire_unsloth.Transfer.test_transport_fault_not_retried) ... ok
+test_wrong_hash_retains_partial_no_publish (test_acquire_unsloth.Transfer.test_wrong_hash_retains_partial_no_publish) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.100s
+
+OK
