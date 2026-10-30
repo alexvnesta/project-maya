@@ -1,0 +1,87 @@
+{
+  "decision": "STOP_DIRECT_FOUR_STATE_QUALITY_ADMISSION_PENDING_COMPLETION_AND_LONG_INPUT_BUDGET_EVIDENCE",
+  "source_and_evidence_sha256": {
+    "ms_quality.py": "c704434532b40597ee8609000104477f76eb3d765ee61c00457e135faff91998",
+    "ms_controls.py": "bec61db8733964af590f12d84044d6dbe6c30ea36014e394da64dc95b48bb20a",
+    "ms_runtime.py": "ea789de73b4a9b8cb3b8887360bc40573efc600544f1c47980ee25deb22860ca",
+    "ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "ms_quality_audit.py": "9ce588341f83e0aa4a4aa7292d8641a8683a95af96214074f37fe50acf1db737",
+    "quality-fixtures-A.json": "3aa80903f946ba4a032aa47fe5f1c6906c531ac259dbfc8f9d9ff482b5ad4f23",
+    "quality-fixtures-B.json": "c77c34d85a59f4696bb82397a20df97f92235a7ad752d8d3ad80ccfa38377707",
+    "CS1_AUDIT_FAILURE_DIAGNOSIS_ASTRA.json": "83e48b60210e53e790d80a823db5fb6f0a2efb1fe9332db367b5cef08e1f7034",
+    "CS1/output-raw/receipt.json": "6e6dc1f1b407534b75546ef967fa317a45cfcc9c653a0f046b73dad0efa14008"
+  },
+  "source_only": true,
+  "new_execution_admitted": false,
+  "observed_CS1": {
+    "prompt_tokens": 44,
+    "generated_tokens": 34,
+    "literal": "RECOVERED_Q8_LITERAL",
+    "native_load_seconds": 667.6,
+    "phase_including_load_seconds": 679.630357787013,
+    "CPU_experts_all_RAM": 5622,
+    "CPU_expert_GB_rounded": 62.3,
+    "CPU_copy_seconds": 624.9,
+    "cgroup_peak_bytes": 81604378624,
+    "memory_max_event_delta": 2855,
+    "OOM_or_kill": 0,
+    "independent_terminal_completion": "PENDING; original audit failed on wrong public stream filename"
+  },
+  "budget": {
+    "phase_soft_seconds": 1000,
+    "canonical_wall_seconds": 1200,
+    "cleanup_seconds": 200,
+    "startup_deadline_seconds_from_phase_began": 800,
+    "1000_minus_observed_native_load": 332.4,
+    "1000_minus_observed_complete_CS1_phase": 320.369642212987,
+    "interpretation": "Subtractions are arithmetic on one prior observation, not future startup or remaining-work guarantees. The phase clock begins before helpers/load; cleanup200 is not additional generation time."
+  },
+  "four_state_work": {
+    "both_pack_prompt_tokens": [
+      8469,
+      8469,
+      8656,
+      8469
+    ],
+    "expected_reuse": [
+      0,
+      8468,
+      0,
+      8468
+    ],
+    "cold_paths": [
+      "text with mode1 skip",
+      "two-image with mode1 skip"
+    ],
+    "request_cap": 32768,
+    "reasoning_effort": 100,
+    "natural_completions_required": 4,
+    "full_finite_dump_files_required": 4
+  },
+  "concrete_gaps": [
+    "No candidate elapsed upper bound for8469 cold prefill,8656 two-image prefill, four natural reasoning/generation paths or finite dump writes. Short44 does not exercise these branches.",
+    "76GiB peak was reached with2855 memory.max events despite no OOM; no extra resident or file-cache headroom established. CUDA allocation/library workspace behavior for longer/image batches is unmeasured.",
+    "Future cache warmth or faster62.3GB expert copy cannot be assumed. No extrapolation from34 generated tokens to prose or quality runtime.",
+    "Current quality consumer separately calls saved.restoration_contract and lists public-ready-sse.txt; both must be source-aligned to actual default-output producer in a distinct preserved revision before qualification.",
+    "Existing CPU proofs do not constitute a new quality-mode qualification/admission, and successful API exit/window0 cannot substitute for all four complete natural results."
+  ],
+  "source_contracts": [
+    "ms_quality.phase begins clock before helpers and calls startup by began+800 and all requests with began+1000.",
+    "ms_controls.bounded_request refuses starting with less10s but10s is only a low-budget refusal threshold, not a measured adequate bound; deadline/storage/host-margin cancellation remains incomplete/HOLD.",
+    "ms_controls.run_cases retains first incomplete and leaves remaining requests UNRUN. No timeout/length fitting, repetition or skipped-case success.",
+    "Original actual full policy remains1M total/262144 default/32768 request/effort100/Q8mode1/L22/TP1auto/CPU24/chunk4096/allRAM/stream0/DSpark.65."
+  ],
+  "minimal_next_qualification_design": [
+    "First complete separate CS1 saved-byte audit with exact new both-host CPU proof/newq and bounded offline admission; preserve original failure.",
+    "Before any quality run, freeze distinct corrected quality consumer/source, actual producer request and filenames, full-success saved-terminal controls, exact quality owner/auditor/serial per-file scan dispatch both-host CPU proof and new full immutable q. Preserve qa8d5 and current sources.",
+    "Bind CS1 completion and original admission/raw failure separately, actual constructed pack/tokenizer/template/assets, current selected restoration source, strict76GiB+8GiB poststop gate, both manifests, explicit no automatic advance, and prospective fault recovery.",
+    "Do not admit the four-state QS1 panel on current timing/resource evidence. If separately reviewed, the smallest evidence-gathering alternative is a DISTINCT single long-input compatibility diagnostic using an unchanged frozen request and full policy under the SAME1000/1200 bounds, with unknown completion feasibility stated and partial/cancel/resource failure left HOLD. It is not current permission or a four-state quality pass; two-image behavior remains separately unknown.",
+    "If known completion feasibility is required before such a diagnostic, STOP: current evidence cannot provide it. Do not reset the phase clock afterload, reuse a prior private owner, consume cleanup time for generation, extend timeout, shorten/fill outputs or assume warm-cache load savings.",
+    "Only after adequate distinct evidence and fresh review consider separate QS0 then conditional QS1 admissions; retain all four states within a single stateful panel if that panel is used. Splitting states across restarted arms would change the cache question and must not be represented as the original panel."
+  ],
+  "claims_excluded": [
+    "No speed/prose/general-quality or near-full-context/output result.",
+    "No full four-state budget-fit assertion, deployment admission or new GPU permission.",
+    "Raw dump rows have variable batch framing; no general row-token alignment or cross-pack arithmetic equivalence claim."
+  ]
+}
