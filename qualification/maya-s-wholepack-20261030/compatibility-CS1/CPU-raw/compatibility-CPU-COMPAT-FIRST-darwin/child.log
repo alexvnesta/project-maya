@@ -1,0 +1,33 @@
+test_actual_body_one_scripted_request_trace_cleanup_and_no_dump_hook (test_ms_compat.Body.test_actual_body_one_scripted_request_trace_cleanup_and_no_dump_hook) ... ok
+test_extra_native_trace_fails_and_cleans_once (test_ms_compat.Body.test_extra_native_trace_fails_and_cleans_once) ... ok
+test_first_server_receipt_failure_still_closes_captured_process (test_ms_compat.Body.test_first_server_receipt_failure_still_closes_captured_process) ... ok
+test_existing_output_blocks_replay (test_ms_compat.Boundaries.test_existing_output_blocks_replay) ... ok
+test_failed_fence_restoration_never_publishes_terminal_success (test_ms_compat.Boundaries.test_failed_fence_restoration_never_publishes_terminal_success) ... ok
+test_fence_install_failure_blocks_body (test_ms_compat.Boundaries.test_fence_install_failure_blocks_body) ... ok
+test_fence_wraps_body_and_restores_before_terminal_receipt (test_ms_compat.Boundaries.test_fence_wraps_body_and_restores_before_terminal_receipt) ... ok
+test_foreign_mode_blocks_before_support (test_ms_compat.Boundaries.test_foreign_mode_blocks_before_support) ... ok
+test_compatibility_requires_new_entry_file_and_cpu_membership (test_ms_compat.Custody.test_compatibility_requires_new_entry_file_and_cpu_membership) ... ok
+test_exact_window_entry_and_no_completed_or_foreign_window (test_ms_compat.Custody.test_exact_window_entry_and_no_completed_or_foreign_window) ... ok
+test_full_phase_proof_requires_same_owned_controller (test_ms_compat.Custody.test_full_phase_proof_requires_same_owned_controller) ... ok
+test_registry_reserves_only_CS1_once (test_ms_compat.Custody.test_registry_reserves_only_CS1_once) ... ok
+test_changed_actual_ids_refused_even_with_repointed_test_pin (test_ms_compat.Manifest.test_changed_actual_ids_refused_even_with_repointed_test_pin) ... ok
+test_changed_source_bytes_refused (test_ms_compat.Manifest.test_changed_source_bytes_refused) ... ok
+test_compatibility_is_one_shot_without_prior_quality_bypass_for_timing (test_ms_compat.Manifest.test_compatibility_is_one_shot_without_prior_quality_bypass_for_timing) ... ok
+test_exact_already_encoded_candidate_slice_without_encoding (test_ms_compat.Manifest.test_exact_already_encoded_candidate_slice_without_encoding) ... ok
+test_exact_tokenizer_and_template_membership_required (test_ms_compat.Manifest.test_exact_tokenizer_and_template_membership_required) ... ok
+test_full_policy_selected_native_candidate_pack_no_dump (test_ms_compat.Manifest.test_full_policy_selected_native_candidate_pack_no_dump) ... ok
+test_other_arms_and_modes_refused_before_manifest (test_ms_compat.Manifest.test_other_arms_and_modes_refused_before_manifest) ... ok
+test_budget_incomplete_retained (test_ms_compat.OneRequest.test_budget_incomplete_retained) ... ok
+test_cap_partial_error_and_missing_DONE_cannot_pass (test_ms_compat.OneRequest.test_cap_partial_error_and_missing_DONE_cannot_pass) ... ok
+test_foreign_case_refused_before_issue (test_ms_compat.OneRequest.test_foreign_case_refused_before_issue) ... ok
+test_native_count_reuse_and_draft_contradictions_refused (test_ms_compat.OneRequest.test_native_count_reuse_and_draft_contradictions_refused) ... ok
+test_native_or_transport_fault_retained_no_retry (test_ms_compat.OneRequest.test_native_or_transport_fault_retained_no_retry) ... ok
+test_one_natural_literal_zero_drafts_valid_without_quality_or_speed_claim (test_ms_compat.OneRequest.test_one_natural_literal_zero_drafts_valid_without_quality_or_speed_claim) ... ok
+test_progress_fault_cannot_hide_primary (test_ms_compat.OneRequest.test_progress_fault_cannot_hide_primary) ... ok
+test_wrong_actual_prompt_count_refused (test_ms_compat.OneRequest.test_wrong_actual_prompt_count_refused) ... ok
+test_wrong_literal_is_incomplete_without_second_issue (test_ms_compat.OneRequest.test_wrong_literal_is_incomplete_without_second_issue) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.265s
+
+OK

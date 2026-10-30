@@ -1,0 +1,152 @@
+{
+  "utc": "2026-10-30T19:00:30.021853+00:00",
+  "reviewer": "same Astra independent local source/raw reviewer",
+  "decision": "UNDERLYING_READ_ONLY_PREFLIGHT_PASS_REVIEWED_OUTER_WRAPPER_FAILURE_PRESERVED_DOWNSTREAM_FRESH_CHECKS_ONLY",
+  "GPU_or_model_admitted": false,
+  "source_changed": false,
+  "tests_or_imports_or_remote_actions_executed_by_reviewer": false,
+  "qualification_sha256": "a8d5ff19fa187f46adf70b53287b652241a5f4b256a61811643d750cd770c090",
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/compatibility-qualification.json": "a8d5ff19fa187f46adf70b53287b652241a5f4b256a61811643d750cd770c090",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/qualification-actual-FIRST/receipt.json": "e4fe1d4e7ebf7ee6d06045e149f8721f3516221afb381bce9585ebe70ae7b8b9",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/qualification-actual-FIRST/child.json": "8a63b5157c64cba522642b83fcb54a3bbb478c5e916717511720ec92d035f4da",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/qualification-actual-COMPLETED-STAGING-FIRST/receipt.json": "c21e7027c2eb218d428298e12b8b4b9c52d180c30365ee8fcdceade0abfc1dc9",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/qualification-actual-COMPLETED-STAGING-FIRST/child.json": "bac6734d1d048e4d941f0b89685dac56c970a6df14f2946b339af7761036f0f8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/private-admission-download-pause.json": "b3efcf42c6a5e05a3cde18253427b0125549862b8901b25da408a3bdaa4b789f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-profile-v1/maintenance.py": "276a78f6f62d9ae7760e9b436863a6279715d58ea0960bb396bdb7adcc3776dd",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/prefill-cache-improvements-20261027/performance-v1/performance_mode.py": "4acd80c3a842c3c7f02aa5433de9015118b28c592e9822d6bde2b5e62fc71f80",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_runtime.py": "ea789de73b4a9b8cb3b8887360bc40573efc600544f1c47980ee25deb22860ca",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat.py": "a5ff04498c07b03ea57fad0adc57b914c80c6f57377841f6c2682d233bfbe6d3"
+  },
+  "actual_saved_observation": {
+    "utc": "2026-10-30T18:50:31.632865+00:00",
+    "outer_receipt_passed": false,
+    "outer_error": "AssertionError: ",
+    "outer_child": {
+      "pid": 3438219,
+      "returncode": 1,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 5.377378060016781,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "wall_limit_seconds": 90,
+      "nice_increment": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    },
+    "actual_file_and_self_checks": 999,
+    "returned_controller_status": "READ_ONLY_PREFLIGHT_PASS",
+    "returned_proof_files_equal_final_qualification": true,
+    "returned_proof_file_count": 998,
+    "mode": "compatibility",
+    "arm": "CS1",
+    "proposed_output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T185033Z",
+    "baseline_identity": {
+      "native_pid": 2984691,
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+      "context": 1048576,
+      "output_default": 262144,
+      "prompt_skip_mode": 1,
+      "prefill_chunk": 4096,
+      "Q8": [
+        1,
+        1
+      ],
+      "TP": 1,
+      "images": true,
+      "runtime_ablation": true,
+      "DSpark": true,
+      "CPU_experts": 4045,
+      "all_CPU_experts_RAM": true,
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.32,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2026
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.86,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2030
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "GPU_expert_slots_inferred": 11315,
+      "GPU_slots_direct_hosted_INFO": false,
+      "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+      "start_binding": {
+        "invocation": "fcc9a5fdb61740ef887ddf2b5bf9bcf8",
+        "main_pid": 2984652,
+        "native_pid": 2984691,
+        "native_start_ticks": 162440848
+      },
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+    },
+    "root_free_bytes": 373255036928,
+    "private_unit_rc": 4,
+    "GPU_or_service_actions": 0
+  },
+  "source_interpretation": [
+    "Exact qualification-pinned maintenance.py SHA276a78f6f62d9ae7760e9b436863a6279715d58ea0960bb396bdb7adcc3776dd: line144 saves PREFLIGHT_OK as a state transition; line145 returns READ_ONLY_PREFLIGHT_PASS with proof when preflight_only. These are different contracts.",
+    "ms_compat.controller delegates through ms_runtime.coordinate with preflight_only=not args.run. The reviewed underlying return precedes maintenance.py idle/drain/stop/launch branches and the arm reservation invoked by the private lifecycle. Read-only execution may create its own metadata directory/state/result; this does not constitute a model attempt.",
+    "The actual saved controller return is source-conformant. Root reports that its outer ad-hoc observer asserted PREFLIGHT_OK against the return status. That reported assertion is invalid for this producer; the raw outer child remains exit1 with AssertionError.",
+    "No local child.log or original literal outer observer program was present in the supplied completed-staging directory at review. Thus exact outer failing-line localization is Root-reported, while the status-contract distinction and actual returned pass are independently verified."
+  ],
+  "prior_failure_preservation": {
+    "first_refusal": "Original first999 check remains failed, with exactly five missing_or_alias metadata entries. Parent reports absent files repaired by byte-exact metadata staging; no source or qualification change. The earlier raw combined reason alone does not distinguish absence from alias.",
+    "completed_staging_wrapper": "Original receipt passed=false, child3438219 exit1, cleanup_errors=[] and error=null in child supervision remain immutable. No wrapper regrade and no whole-preflight repetition."
+  },
+  "download_pause": {
+    "utc": "2026-10-30T18:57:02.263406+00:00",
+    "status": "OWNED_PARALLEL_DOWNLOAD_COOPERATIVELY_PAUSED_BEFORE_GPU",
+    "actual_worker_PID_dated_snapshot": 3325505,
+    "actual_worker_gone": true,
+    "actual_original_SSH_session_exit": 75,
+    "original_session_id": 14630,
+    "receipt_sha256": "e17ccf64d5dd96c2c6e2482c432b1683345e60f9f640aca968109a916217792b",
+    "retained_bytes": 173809983512,
+    "total_bytes": 300475464795,
+    "fault_or_retry": false,
+    "all_partials_and_previous_receipts_preserved": true,
+    "resume_after_comparison_under_original_authorization": true
+  },
+  "bounded_limitations": [
+    "Saved snapshots are not an action-time guarantee; reviewer performed no live observation.",
+    "Returned998-file proof exactly equals final qualification; reported999 physical checks include qualification self. This review does not independently rehash physical Ubuntu files.",
+    "Hosted GPU slot count11315 is marked inferred in raw proof, not direct hosted INFO. Exact prompt-byte allocation is unobserved.",
+    "No Maya-S allocation, compatibility, quality, throughput, full1M occupancy or 262144-token generation has been established. 76GiB private fence with 8GiB actual post-stop margin remains containment, not fit proof.",
+    "Download pause is supported here by the supplied parent observation recording original SSH session14630 exit75, worker3325505 absent and173809983512 retained bytes; the underlying download receipt digest is retained in that observation."
+  ],
+  "permitted_next_scope": [
+    "Complete only previously aborted downstream fresh UTC/current exact binding/default healthy genuine idle/phase-free/registry-unattempted/freshnamespace checks and verify no download worker before seeking admission.",
+    "Preserve the original observer literal as evidence if available; no rerun is necessary to explain the source status contract.",
+    "A separate concrete SINGLE CS1-only admission decision is still required before any drain, stop, inference or private window."
+  ]
+}

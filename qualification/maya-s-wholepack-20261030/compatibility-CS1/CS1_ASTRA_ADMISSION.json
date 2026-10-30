@@ -1,0 +1,136 @@
+{
+  "utc": "2026-10-30T19:03:30.327375+00:00",
+  "reviewer": "same Astra independent source/raw reviewer",
+  "decision": "CONDITIONAL_SINGLE_CS1_COMPATIBILITY_ONLY",
+  "single_window": true,
+  "mode": "compatibility",
+  "arm": "CS1",
+  "qualification_sha256": "a8d5ff19fa187f46adf70b53287b652241a5f4b256a61811643d750cd770c090",
+  "qualification_file_count": 998,
+  "physical_prior_file_and_self_checks": 999,
+  "expected_current_binding": {
+    "invocation": "fcc9a5fdb61740ef887ddf2b5bf9bcf8",
+    "main_pid": 2984652,
+    "native_pid": 2984691,
+    "native_start_ticks": 162440848
+  },
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/compatibility-qualification.json": "a8d5ff19fa187f46adf70b53287b652241a5f4b256a61811643d750cd770c090",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/pre-private-live-FIRST.json": "21799d2d41be2ce2eeaf7642605c9a4544b95c33bf0c72426dcef3ee7a529d1b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/qualification-actual-COMPLETED-STAGING-FIRST/receipt.json": "c21e7027c2eb218d428298e12b8b4b9c52d180c30365ee8fcdceade0abfc1dc9",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/qualification-actual-COMPLETED-STAGING-FIRST/child.json": "bac6734d1d048e4d941f0b89685dac56c970a6df14f2946b339af7761036f0f8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/qualification-actual-COMPLETED-STAGING-FIRST/child.log": "171c859b6075c67a513cf65ffc9a35764cd747fe461344d19a285ec339bd6ee0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/QUALIFICATION_COMPLETED_STAGING_OBSERVER_ASTRA_REVIEW.json": "bb13d8b6b0573e45af32d09f22ac3323fc89e82483c1bf5d34f73ad997153d7b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/private-admission-download-pause.json": "b3efcf42c6a5e05a3cde18253427b0125549862b8901b25da408a3bdaa4b789f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/MODEL_COMPAT_CPU_ASTRA_RESULT_REVIEW.json": "801ebd7ca7e14f876c3f8075fe601f8c910f8f0f3dd6cc459970ffbb45e69c08",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/AUDIT_COMPAT_CPU_ASTRA_RESULT_REVIEW.json": "955ec814724d81dd1478a858a198439ff1dcb0db84b175467a89a3e657772f32",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/COMPATIBILITY_QUALIFICATION_MAP_ASTRA_REVIEW.json": "b49120d3d7f66baa1d380b0ffe8e657bf23e4d9518c333a6df8a3dad522277c7"
+  },
+  "current_source_sha256": {
+    "ms_config.py": "8bb87901179135bf01f852b7a4e5c2a57dadd4033199ece802cb624196484176",
+    "ms_runtime.py": "ea789de73b4a9b8cb3b8887360bc40573efc600544f1c47980ee25deb22860ca",
+    "ms_compat.py": "a5ff04498c07b03ea57fad0adc57b914c80c6f57377841f6c2682d233bfbe6d3",
+    "ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "ms_controls.py": "bec61db8733964af590f12d84044d6dbe6c30ea36014e394da64dc95b48bb20a",
+    "ms_audit.py": "fc36ab4832652ba8b99d151e0162f3e492a04257e356344bf33bff69eedb255b",
+    "ms_quality_audit.py": "9ce588341f83e0aa4a4aa7292d8641a8683a95af96214074f37fe50acf1db737",
+    "ms_compat_audit.py": "a55f6a71c42a2b6de4d4dcb2207b213fa4b579ab7f2118cb0ef53f0f1311cad6",
+    "test_ms_compat_audit.py": "1a7f48624d075640fd4b402f6905ffab06e0eab2cde8221117b1824008d248dc",
+    "ms_compat_audit_dispatch.py": "8d0c166d08d3d13e21a9d6b57eb654012aa4658abbc5bb958c91e4efe5efb5d8",
+    "test_ms_compat_audit_dispatch.py": "3df8a804c2ebfb8751171e1657b64098a29186b9baa582f9289583654464d883",
+    "ms_audit_dispatch.py": "8858c1d2f70cd7e97d416fa1535cb1af18f1a2647731c2d88e7c36d66b0e5bad"
+  },
+  "fresh_saved_downstream_observation": {
+    "utc": "2026-10-30T19:01:53.094954+00:00",
+    "status": "ABORTED_DOWNSTREAM_LIVE_CHECKS_PASS_ONLY",
+    "binding": {
+      "invocation": "fcc9a5fdb61740ef887ddf2b5bf9bcf8",
+      "main_pid": 2984652,
+      "native_pid": 2984691,
+      "native_start_ticks": 162440848
+    },
+    "genuine_idle": true,
+    "units": {
+      "deepseek": "ActiveState=active\nRestart=no",
+      "router": "ActiveState=active\nRestart=no"
+    },
+    "private_unit_rc": 4,
+    "compatibility_registry": {},
+    "CS1_namespace_absent": true,
+    "acquisition_workers_gone": {
+      "3166208": true,
+      "3325505": true
+    },
+    "Unsloth_pause_marker_present": true,
+    "root_free_bytes": 375784587264,
+    "original_observer_rc": 1,
+    "original_observer_regraded": false,
+    "actual_producer_return": "READ_ONLY_PREFLIGHT_PASS",
+    "repeated_999_checks_or_preflight": false,
+    "model_or_service_actions": 0
+  },
+  "qualified_CPU_scope": {
+    "owner_controls_each_physical_host": 179,
+    "independent_auditor_controls_each_physical_host": 150,
+    "earlier_constructor_controls_each_physical_host": 125,
+    "candidate_encoding_controls_each_physical_host": 13
+  },
+  "authorized_execution_scope": {
+    "one_candidate_short_cold_request": true,
+    "request_id": "ms-compatibility-short-cold",
+    "prompt_tokens": 44,
+    "expected_literal": "RECOVERED_Q8_LITERAL",
+    "unchanged_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "whole_published_Maya_S_pack_including_drafter": true,
+    "context": 1048576,
+    "default_output_allowance": 262144,
+    "request_cap": 32768,
+    "effort": 100,
+    "natural_stop_required": true,
+    "dump_enabled": false,
+    "additional_request_or_automatic_QS1": false,
+    "timing_or_promotion_admitted": false,
+    "fit_previously_proven": false,
+    "interrupt_permission_from_direct_human_authorization": true
+  },
+  "bounds": {
+    "window_seconds": 1200,
+    "soft_seconds": 1000,
+    "cleanup_seconds": 200,
+    "root_admission_bytes": 141733920768,
+    "root_runtime_bytes": 128849018880,
+    "swap_delta_limit_bytes": 1073741824,
+    "privatecache_bytes": 8589934592,
+    "log_bytes": 4294967296,
+    "private_memory_max": 81604378624,
+    "host_margin": 8589934592
+  },
+  "post_owned_stop_MemAvailable_minimum_bytes": 90194313216,
+  "conditions_before_drain": [
+    "Frozen controller repeats its full current qualification and exact source/input/stat-custody checks at action time. No altered code, tests, pack, request or settings are authorized.",
+    "Immediately confirm current exact fcc9/main2984652/native2984691/startticks162440848 binding, default healthy serving state, phase-free custody, qualified idle/admission checks, sole selected GPU owner, current UTC, clean kernel and previous canonical window, root admission minimum and fresh owned result/metadata/CS1 registry. Explicit interruption permission does not waive the frozen controller guards.",
+    "Both acquisition workers remain absent, Unsloth pause marker remains in place, and downloads stay paused throughout private execution/restoration.",
+    "After owned graceful drain and verified old API/native closure, actual MemAvailable must meet84GiB before launch. Apply and verify exact transient private76GiB MemoryMax/swap0 fence and existing ownership guards. Failure does not authorize resizing or settings reduction."
+  ],
+  "required_terminal_scope": [
+    "One owned fullcap44-token-source request only, retry0, exact literal/native-source/SSE natural stop and DONE, counters retained without requiring a positive short-reply draft offer. No logits scan or numerical-equivalence claim.",
+    "Actual private API/native exit0, owned window exit0, clean kernel/resource witnesses, fence property restoration and exact transient-unit collection must be evidenced. Preserve any failure/partial status and first attempt.",
+    "On clean completion, restore only selected native92/configc43/releaseb921 using already-qualified one-start lifecycle and prospective binding; verify full policy, sole owner, public401/auth200/assembledREADY-stop-DONE and released phases.",
+    "Only after selected restoration and fresh genuine idle run the separately qualified bounded independent CS1 audit dispatcher CPU30/LinuxAS512/wall90/nice15/CUDAhidden. Its actual child exit0/owned cleanup/postchecks and saved raw contracts are required before terminal publication or result review."
+  ],
+  "failure_policy": "Any genuine model/window/lifecycle fault remains HOLD with owned cleanup and no repeat or next arm. Prospective recovery58 is capability only; any postfault health/start action needs concrete new evidence/qualification and separate bounded recovery admission under existing human authorization.",
+  "observer_failure_preserved": {
+    "outer_child3438219_returncode": 1,
+    "receipt_passed": false,
+    "regraded": false,
+    "underlying_return": "READ_ONLY_PREFLIGHT_PASS",
+    "newly_read_child_log": "637-byte saved log corroborates returned status and wrapper AssertionError. Its preflight_output:null is a summary lookup limitation; exact nested proof.output in receipt is present. Original observer literal is not reconstructed.",
+    "prior_first_missing_metadata_refusal_preserved": true
+  },
+  "limitations": [
+    "No GPU/model action performed by reviewer; live receipt is a saved19:01:53UTC observation, not an indefinite action-time guarantee.",
+    "Containment and one short compatibility request do not establish1M occupancy,256K generation, broad quality, exact whole-model numerical equivalence or speed.",
+    "This grants no QS0/QS1 quality arm, prose/coding timing, replication, candidate deployment or automatic recovery. All earlier failed evidence remains unchanged."
+  ],
+  "reviewer_pause": "After this record and handoff, reviewer pauses all source/review/hash/CPU work until Root explicitly confirms private/restoration termination."
+}

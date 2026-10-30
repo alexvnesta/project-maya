@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "scores": [
+    {
+      "id": "ms-compatibility-short-cold",
+      "passed": true,
+      "status": "SHORT_LITERAL_SOURCE_AND_STATE_PASSED"
+    }
+  ],
+  "rows": [
+    {
+      "id": "ms-compatibility-short-cold",
+      "passed": true,
+      "native": {
+        "generated": 34,
+        "prompt_tokens": 44,
+        "prompt_ms": 662.1,
+        "decode_ms": 601.6,
+        "finish": "stop",
+        "drafts_accepted": 20,
+        "drafts_offered": 20,
+        "reused": 0,
+        "hits": 7370,
+        "lookups": 8370
+      },
+      "observed_tokens": 34,
+      "native_decode_tokens_per_second": 56.51595744680851,
+      "client_seconds": 1.277788545936346,
+      "content_characters": 20,
+      "reasoning_characters": 94,
+      "manual_review_pending": false,
+      "general_quality_or_equivalence_claim": false
+    }
+  ],
+  "retry": false,
+  "automatic_next_arm": false,
+  "quality_or_performance_pass": false,
+  "manual_review_required": true
+}

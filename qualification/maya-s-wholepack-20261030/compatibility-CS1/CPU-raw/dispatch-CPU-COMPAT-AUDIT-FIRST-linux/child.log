@@ -1,0 +1,32 @@
+test_actual_observed_limits_are_required (test_ms_audit_dispatch.Dispatch.test_actual_observed_limits_are_required) ... ok
+test_bootstrap38_positive_and_changed_helper_before_import (test_ms_audit_dispatch.Dispatch.test_bootstrap38_positive_and_changed_helper_before_import) ... ok
+test_busy_after_initial_hash_prevents_child_and_outputs (test_ms_audit_dispatch.Dispatch.test_busy_after_initial_hash_prevents_child_and_outputs) ... ok
+test_busy_guard_precedes_hash_output_and_child (test_ms_audit_dispatch.Dispatch.test_busy_guard_precedes_hash_output_and_child) ... ok
+test_changed_dispatch_source_needs_cpu_group_membership (test_ms_audit_dispatch.Dispatch.test_changed_dispatch_source_needs_cpu_group_membership) ... ok
+test_changed_qualification_precedes_outputs_and_child (test_ms_audit_dispatch.Dispatch.test_changed_qualification_precedes_outputs_and_child) ... ok
+test_child_failure_keeps_its_observation (test_ms_audit_dispatch.Dispatch.test_child_failure_keeps_its_observation) ... ok
+test_child_records_observation_before_exact_auditor_entry (test_ms_audit_dispatch.Dispatch.test_child_records_observation_before_exact_auditor_entry) ... ok
+test_cleanup_exception_preserves_terminal_failed_receipt (test_ms_audit_dispatch.Dispatch.test_cleanup_exception_preserves_terminal_failed_receipt) ... ok
+test_cleanup_only_owned_group_after_timeout (test_ms_audit_dispatch.Dispatch.test_cleanup_only_owned_group_after_timeout) ... ok
+test_cpu_limits_set_only_child (test_ms_audit_dispatch.Dispatch.test_cpu_limits_set_only_child) ... ok
+test_exact_metadata_scan_and_assembly_names (test_ms_audit_dispatch.Dispatch.test_exact_metadata_scan_and_assembly_names) ... ok
+test_existing_attempt_blocks_replay (test_ms_audit_dispatch.Dispatch.test_existing_attempt_blocks_replay) ... ok
+test_existing_result_never_adopted (test_ms_audit_dispatch.Dispatch.test_existing_result_never_adopted) ... ok
+test_invalid_arm_stage_bool_or_index_rejected (test_ms_audit_dispatch.Dispatch.test_invalid_arm_stage_bool_or_index_rejected) ... ok
+test_launch_exception_preserves_attempt (test_ms_audit_dispatch.Dispatch.test_launch_exception_preserves_attempt) ... ok
+test_missing_actual_child_attempt_refused (test_ms_audit_dispatch.Dispatch.test_missing_actual_child_attempt_refused) ... ok
+test_missing_config_pin_blocks_before_support_import (test_ms_audit_dispatch.Dispatch.test_missing_config_pin_blocks_before_support_import) ... ok
+test_nonzero_child_cannot_certify_existing_output (test_ms_audit_dispatch.Dispatch.test_nonzero_child_cannot_certify_existing_output) ... ok
+test_observer_rejects_real_unbounded_context (test_ms_audit_dispatch.Dispatch.test_observer_rejects_real_unbounded_context) ... ok
+test_output_ancestor_symlink_rejected (test_ms_audit_dispatch.Dispatch.test_output_ancestor_symlink_rejected) ... ok
+test_post_stage_map_drift_blocks_success (test_ms_audit_dispatch.Dispatch.test_post_stage_map_drift_blocks_success) ... ok
+test_postchild_busy_preserves_result_without_posthash (test_ms_audit_dispatch.Dispatch.test_postchild_busy_preserves_result_without_posthash) ... ok
+test_regular_symlink_or_hardlink_refused (test_ms_audit_dispatch.Dispatch.test_regular_symlink_or_hardlink_refused) ... ok
+test_scan_selects_one_file_no_multi_scan_switch (test_ms_audit_dispatch.Dispatch.test_scan_selects_one_file_no_multi_scan_switch) ... ok
+test_success_pins_actual_child_and_result (test_ms_audit_dispatch.Dispatch.test_success_pins_actual_child_and_result) ... ok
+test_timeout_preserved_as_failed_child (test_ms_audit_dispatch.Dispatch.test_timeout_preserved_as_failed_child) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.032s
+
+OK
