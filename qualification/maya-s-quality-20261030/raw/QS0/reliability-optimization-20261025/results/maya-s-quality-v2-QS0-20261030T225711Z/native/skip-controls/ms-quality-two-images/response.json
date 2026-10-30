@@ -1,0 +1,1208 @@
+{
+  "content": "{\"first\":\"red\",\"second\":\"blue\"}",
+  "reasoning": "We need answer JSON only. Need parse images. There are two images? Red rectangle then blue rectangle. Prompt says \"Return only JSON with keys first and second, each a lowercase string naming corresponding picture predominant color.\" Need output {\"first\":\"red\",\"second\":\"blue\"}. Ensure exactly JSON.",
+  "finish_reason": "stop",
+  "done": true,
+  "cancelled": false,
+  "status": 200,
+  "events": [
+    {
+      "id": "chatcmpl-bd18f8bceac4447e867be770",
+      "object": "chat.completion.chunk",
+      "created": 1793401577,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          },
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-bd18f8bceac4447e867be770",
+      "object": "chat.completion.chunk",
+      "created": 1793401577,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": "{\"first\":\"red\",\"second\":\"blue\"}",
+            "reasoning_content": "We need answer JSON only. Need parse images. There are two images? Red rectangle then blue rectangle. Prompt says \"Return only JSON with keys first and second, each a lowercase string naming corresponding picture predominant color.\" Need output {\"first\":\"red\",\"second\":\"blue\"}. Ensure exactly JSON."
+          },
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-bd18f8bceac4447e867be770",
+      "object": "chat.completion.chunk",
+      "created": 1793401577,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {},
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 8656,
+        "completion_tokens": 70,
+        "total_tokens": 8726,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 8656,
+        "prompt_ms": 9819.6,
+        "prompt_per_token_ms": 1.134,
+        "prompt_per_second": 881.5,
+        "predicted_n": 70,
+        "predicted_ms": 1708.7,
+        "predicted_per_token_ms": 24.41,
+        "predicted_per_second": 41.0,
+        "draft_n": 50,
+        "draft_n_accepted": 41
+      }
+    }
+  ],
+  "raw": [
+    {
+      "seconds": 3.3795442271512,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.3795510299969465,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.4295192821882665,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.4295217460021377,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.4796081730164587,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.4796114889904857,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.5297019029967487,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.5297051600646228,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.5797142090741545,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.5797161730006337,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.6299237990751863,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.6299303721170872,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.6802861301694065,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.6802922210190445,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.7299931161105633,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.7299953000620008,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.7802058120723814,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.7802174240350723,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.8301570820622146,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.8301589260809124,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.880383985117078,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.880386520177126,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.93032094812952,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.9303231220692396,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.98052423610352,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.9805279939901084,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.030479785054922,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.030481798108667,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.0806775521487,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.080680408049375,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.130633341148496,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.13063532509841,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.180873099016026,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.180877357022837,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.230803779093549,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.230805643135682,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.281046763062477,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.281051192199811,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.330973086180165,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.330974999116734,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.381243772106245,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.381251487182453,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.4311258911620826,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.431127634132281,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.481241553090513,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.481243557063863,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.531485398067161,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.531493604183197,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.581365092191845,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.581366725033149,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.631619007093832,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.631626721005887,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.682154366048053,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.682177850045264,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.731836344115436,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.731844520196319,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.781754401046783,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.7817555530928075,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.832267367048189,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.832279190188274,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.881985044106841,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.881987899076194,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.931981309084222,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.931984145194292,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.9822531880345196,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.982260642107576,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.0321714950259775,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.032178298104554,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.082189592067152,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.08219346916303,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.133127706125379,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.133154997136444,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.182612189091742,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.182620355160907,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.232489949092269,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.2324921630788594,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.282741560135037,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.282751038204879,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.332618909189478,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.332621133187786,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.38293941016309,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.382947114063427,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.432742378208786,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.432743831072003,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.483273760182783,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.483280512038618,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.532894542207941,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.532896145014092,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.584051701007411,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.584081348031759,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.6334105571731925,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.633418151177466,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.684300278080627,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.684355764184147,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.733771447092295,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.733776275999844,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.783666991163045,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.783667943207547,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.833953507011756,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.833961773198098,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.883848991012201,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.883850794984028,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.934890661155805,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.934914455981925,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.984364103991538,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.984369724988937,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.034255711128935,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.034257153049111,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.085367734078318,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.0854013881180435,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.134745686082169,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.134751316159964,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.185491695068777,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.185522373067215,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.235030772164464,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.235037293983623,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.284943168051541,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.284945141989738,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.335176744032651,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.3351832260377705,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.385147000197321,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.385148623026907,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.435371108120307,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.435377049027011,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.485270870150998,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.485272563062608,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.536160942167044,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.536179247079417,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.585727091180161,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.585735297063366,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.635613847989589,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.6356157620903105,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.685861821984872,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.685868635075167,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.735766011988744,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.735767705133185,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.78582231211476,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.785823704209179,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.836758091114461,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.836780813988298,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.886311666108668,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.886317256139591,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.936909192008898,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.936931274132803,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.9865862221922725,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.986593876034021,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.036477317102253,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.036478800000623,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.086709721013904,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.086716514080763,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.136620223987848,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.136621706187725,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.187670049024746,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.18769840314053,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.237132782116532,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.237139995209873,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.287011282984167,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.28701258613728,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.338060628157109,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.338069114135578,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.387616727035493,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.387618441134691,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.437595069175586,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.437597634037957,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.487641539191827,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.487643012078479,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.537698931060731,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.537700083106756,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.587841544067487,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.587842866079882,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.637956835096702,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.637964789988473,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.687936890171841,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.6879392641130835,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.738125069998205,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.7381275040097535,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.788081409176812,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.788082551211119,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.838360471185297,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.838367404183373,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.888254442019388,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.888256406178698,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.93852891610004,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.938535948982462,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.988408089149743,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.988410874037072,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.039501758059487,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.039526575012133,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.088924094103277,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.088931197067723,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.138835929101333,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.138837702106684,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.189911874011159,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.189936120063066,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.239424351137131,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.239430502057076,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.290311087155715,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.290330353192985,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.339721009135246,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.339728062041104,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.389678741106763,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.38968149619177,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.43989148712717,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.439897869015113,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.489778676070273,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.48978015803732,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.540804816177115,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.540831417078152,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.590293598128483,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.590300010051578,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.640178252011538,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.640179875073954,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.691112097119913,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.691131934989244,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.740651595173404,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.740657697198913,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.791604116093367,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.79162689903751,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.840990814147517,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.840996515005827,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.89183421805501,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.891860658070073,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.941366653190926,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.941372313071042,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.991278808098286,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.991281563183293,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.041513556148857,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.041521692182869,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.091387129155919,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.091388300992548,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.141445422079414,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.141446865163743,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.191722761141136,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.19173074606806,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.24159835698083,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.241599770030007,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.291867981199175,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.291874754009768,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.341742185177281,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.341743498109281,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.393189465161413,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.393223320133984,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.442167307017371,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.442168790148571,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.493205621140078,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.493250626139343,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.542702538194135,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.542708309134468,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.592627969104797,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.592629722086713,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.642876052064821,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.64288188307546,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.693836678983644,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.693868639180437,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.743156991200522,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.743163463193923,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.793307919055223,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.793316225055605,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.84317621216178,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.843178224982694,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.894248500000685,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.894272476201877,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.943734577158466,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.943741339026019,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.960260794032365,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.960261616157368,
+      "line": "\n"
+    },
+    {
+      "seconds": 11.004422691185027,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 11.004432960180566,
+      "line": "\n"
+    },
+    {
+      "seconds": 11.680734078167006,
+      "line": "data: {\"id\": \"chatcmpl-bd18f8bceac4447e867be770\", \"object\": \"chat.completion.chunk\", \"created\": 1793401577, \"model\": \"deepseek-v4.1-flash-iq2-xs\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"finish_reason\": null}]}\n"
+    },
+    {
+      "seconds": 11.680783091112971,
+      "line": "\n"
+    },
+    {
+      "seconds": 11.680802728049457,
+      "line": "data: {\"id\": \"chatcmpl-bd18f8bceac4447e867be770\", \"object\": \"chat.completion.chunk\", \"created\": 1793401577, \"model\": \"deepseek-v4.1-flash-iq2-xs\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"{\\\"first\\\":\\\"red\\\",\\\"second\\\":\\\"blue\\\"}\", \"reasoning_content\": \"We need answer JSON only. Need parse images. There are two images? Red rectangle then blue rectangle. Prompt says \\\"Return only JSON with keys first and second, each a lowercase string naming corresponding picture predominant color.\\\" Need output {\\\"first\\\":\\\"red\\\",\\\"second\\\":\\\"blue\\\"}. Ensure exactly JSON.\"}, \"finish_reason\": null}]}\n"
+    },
+    {
+      "seconds": 11.680829630000517,
+      "line": "\n"
+    },
+    {
+      "seconds": 11.680831203004345,
+      "line": "data: {\"id\": \"chatcmpl-bd18f8bceac4447e867be770\", \"object\": \"chat.completion.chunk\", \"created\": 1793401577, \"model\": \"deepseek-v4.1-flash-iq2-xs\", \"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"stop\"}], \"usage\": {\"prompt_tokens\": 8656, \"completion_tokens\": 70, \"total_tokens\": 8726, \"prompt_tokens_details\": {\"cached_tokens\": 0}}, \"timings\": {\"cache_n\": 0, \"prompt_n\": 8656, \"prompt_ms\": 9819.6, \"prompt_per_token_ms\": 1.134, \"prompt_per_second\": 881.5, \"predicted_n\": 70, \"predicted_ms\": 1708.7, \"predicted_per_token_ms\": 24.41, \"predicted_per_second\": 41.0, \"draft_n\": 50, \"draft_n_accepted\": 41}}\n"
+    },
+    {
+      "seconds": 11.680852563120425,
+      "line": "\n"
+    },
+    {
+      "seconds": 11.680853435071185,
+      "line": "data: [DONE]\n"
+    },
+    {
+      "seconds": 11.680855198064819,
+      "line": "\n"
+    }
+  ],
+  "tool_calls": [],
+  "usage": {
+    "prompt_tokens": 8656,
+    "completion_tokens": 70,
+    "total_tokens": 8726,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 8656,
+    "prompt_ms": 9819.6,
+    "prompt_per_token_ms": 1.134,
+    "prompt_per_second": 881.5,
+    "predicted_n": 70,
+    "predicted_ms": 1708.7,
+    "predicted_per_token_ms": 24.41,
+    "predicted_per_second": 41.0,
+    "draft_n": 50,
+    "draft_n_accepted": 41
+  },
+  "client_first_content_seconds": 11.680817637126893,
+  "client_first_reasoning_seconds": 11.680817637126893,
+  "client_first_tool_seconds": null,
+  "client_full_seconds": 11.681000444106758
+}
