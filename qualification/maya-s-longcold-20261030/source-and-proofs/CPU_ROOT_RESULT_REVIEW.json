@@ -1,0 +1,32 @@
+{
+  "root_full_sources_tests_and_raw_CPU_read": true,
+  "owner_FIRST_controls_each_host": 160,
+  "audit_FIXTUREV2_controls_each_host": 98,
+  "source_maps_each_group": 13,
+  "input_maps_each_group": 880,
+  "raw_sha256": {
+    "owner-darwin": {
+      "receipt.json": "519957daa2d6dedecf4cb77e41199be1910a13a278f9837e48b7890ce381bfa5",
+      "child.json": "142a959bfd86cba6401c7f624b6a78f97e98ec8c51512902c2231fbfc55cf835",
+      "child.log": "2901c7b1673f244477bd128d46c72984f2be98d1e82fabe12defd58f64c474ce"
+    },
+    "owner-linux": {
+      "receipt.json": "604af8f7367f73b0d36287555d269f37171a42bd5b68bfe9aea7162b58047554",
+      "child.json": "a357dbadb09c54c30321b420937de6d3a50e0de56121f5c78bd01953bd6047ed",
+      "child.log": "7c0cebdccca1c73856355a181c02f7820b5442aea74d31487567ab5902d5ecbc"
+    },
+    "audit-darwin": {
+      "receipt.json": "8738232a6d858557feefcf6ab1bd26ae039fd0e1796100bbb1a695e21086ed49",
+      "child.json": "189931e75042e41aa6f0a2b6107ef148bef0ab5c86ea36761430ac28d4753bbc",
+      "child.log": "d8171dbd90a731b537090ec1e7fb1fd49aebd724b76dd467bdbd1e40ed487b6b"
+    },
+    "audit-linux": {
+      "receipt.json": "040fd71821a6b3c9b22df07ab88ee9684f62e05cbf459004756f9c863b90afa3",
+      "child.json": "364856947cf9ab241475d046c14c8668585c0d7d7f78e920cf0aff28dc8240a0",
+      "child.log": "b1c86ab625c01aa435bf3adb914c42689465fb17b43bd6dee055dd25a790f06f"
+    }
+  },
+  "failed_audit_FIRST52_remains_failed": true,
+  "original_owner_source_base": "source-FIRST",
+  "no_GPU_or_quality_admission": true
+}

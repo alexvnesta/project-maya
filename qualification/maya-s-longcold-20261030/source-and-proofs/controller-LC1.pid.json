@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-30T21:58:57.184415+00:00",
+  "pid": 3716974,
+  "argv": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-B",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/long-cold-v1/lc_owner.py",
+    "--mode",
+    "longcold",
+    "--arm",
+    "LC1",
+    "--run"
+  ],
+  "qualification_sha256": "ca406101a1b47dfb5ad713db67ae44c65318b2169a19a176c3f46f7f5fe395df",
+  "binding_before_action": {
+    "invocation": "c913c003e08649078ebd7279ef4beae7",
+    "main_pid": 3535523,
+    "native_pid": 3535559,
+    "native_start_ticks": 165605174
+  },
+  "single_admission_sha256": "fde6e6544ca53bfbf901374303196b3b83ad78a86009523a602ef29ad5529403"
+}
