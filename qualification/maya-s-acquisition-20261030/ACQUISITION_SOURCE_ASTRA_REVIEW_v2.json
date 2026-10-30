@@ -1,0 +1,98 @@
+{
+  "utc": "2026-10-30T13:59:37.651843+00:00",
+  "decision": "FIRST_BOUNDED_43_CPU_CONTROLS_EACH_PHYSICAL_HOST_ONLY",
+  "source_sha256": {
+    "acquire.py": "be7fc21a464a26ed06c77d8058a81985adae792a4268ce16c8426da6ed65ad37",
+    "test_acquire.py": "1e2deb730eb8f5bc5aa301d0681165d2fd396cd5ed1464a8af962ecc5d1dba4f",
+    "run_cpu.py": "419086591684d83362c4fcf0e321bd02af51b8a1439d3724d1451aacc9325863",
+    "ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b"
+  },
+  "test_ids": [
+    "test_acquire.Acquisition.test_absolute_and_traversal_paths_refused",
+    "test_acquire.Acquisition.test_ambiguous_partial_and_final_refused",
+    "test_acquire.Acquisition.test_blocking_read_crossing_deadline_not_written",
+    "test_acquire.Acquisition.test_busy_before_directory_or_transport",
+    "test_acquire.Acquisition.test_busy_midstream_closes_response_retains_partial",
+    "test_acquire.Acquisition.test_changed_manifest_refused",
+    "test_acquire.Acquisition.test_checksum_failure_preserves_full_partial",
+    "test_acquire.Acquisition.test_complete_hash_and_atomic_publish",
+    "test_acquire.Acquisition.test_content_encoding_refused",
+    "test_acquire.Acquisition.test_corrupt_existing_final_refused",
+    "test_acquire.Acquisition.test_corrupt_prefix_never_promoted",
+    "test_acquire.Acquisition.test_deadline_before_network",
+    "test_acquire.Acquisition.test_directory_symlink_refused",
+    "test_acquire.Acquisition.test_exact_manifest",
+    "test_acquire.Acquisition.test_existing_final_is_verified_without_network",
+    "test_acquire.Acquisition.test_file_symlink_refused",
+    "test_acquire.Acquisition.test_foreign_range_refused",
+    "test_acquire.Acquisition.test_guard_rate_not_per_byte",
+    "test_acquire.Acquisition.test_hardlinked_file_refused",
+    "test_acquire.Acquisition.test_ignored_range_200_refused",
+    "test_acquire.Acquisition.test_inventory_exact_partial_count",
+    "test_acquire.Acquisition.test_inventory_foreign_file_refused",
+    "test_acquire.Acquisition.test_inventory_parent_alias_refused",
+    "test_acquire.Acquisition.test_main_busy_has_no_owned_metadata_mutation",
+    "test_acquire.Acquisition.test_main_does_not_touch_production_lock",
+    "test_acquire.Acquisition.test_main_transport_hold_nonzero_and_separate_receipt",
+    "test_acquire.Acquisition.test_missing_content_length_refused",
+    "test_acquire.Acquisition.test_oversized_retained_partial_refused",
+    "test_acquire.Acquisition.test_pinned_transport_and_range",
+    "test_acquire.Acquisition.test_qualification_exact_source_names_required",
+    "test_acquire.Acquisition.test_qualification_missing_explicit_pin_refused",
+    "test_acquire.Acquisition.test_real_localhost_range_and_resume",
+    "test_acquire.Acquisition.test_real_localhost_read_timeout_closes_no_publish",
+    "test_acquire.Acquisition.test_receipt_temporary_residue_preserved",
+    "test_acquire.Acquisition.test_response_overrun_refused",
+    "test_acquire.Acquisition.test_resume_hashes_prefix_and_checks_range",
+    "test_acquire.Acquisition.test_root_reserve_before_transport",
+    "test_acquire.Acquisition.test_selected_gate_busy_before_binding_capture",
+    "test_acquire.Acquisition.test_selected_gate_foreign_origin_refused",
+    "test_acquire.Acquisition.test_selected_gate_phase_before_support_import_use",
+    "test_acquire.Acquisition.test_transport_failure_no_retry",
+    "test_acquire.Acquisition.test_truncated_body_refused",
+    "test_acquire.Acquisition.test_whole_small_200_accepted"
+  ],
+  "controls": 43,
+  "manual_read": {
+    "acquire.py": "All319lines including final postguard clock refresh",
+    "test_acquire.py": "All295lines/all43test bodies",
+    "run_cpu.py": "All55lines",
+    "ASSET_MANIFEST.json": "All50lines and eight exact assets"
+  },
+  "earlier_findings_preserved": {
+    "path": "ACQUISITION_SOURCE_ASTRA_FINDINGS_v1.json",
+    "sha256": "2df63f9af1ba31dfcae9df6d0c79fd2bf1a55176372a93b496c46c22819b8f87"
+  },
+  "resolved_for_CPU_scope": [
+    "No operation on production lifetime experiment.lock; own acquisition lock only.",
+    "Immutable explicit qdigest, exactfour source names and bothphysicalCPUreceipt contracts, fixedsmall bootstrapfilepins and moduleorigin check.",
+    "read1 body with5second socket timeout, postread deadline/checkpoint beforewrite, postguard clock refresh.",
+    "One-second lightweightguard cadence/forced boundaries,64MiBpersecond prefix and transfer pacing.",
+    "Strict expected final/partial inventory, realancestors, no symlinks/hardlinkedforeignfiles, exclusive linkpublication.",
+    "Fresh immutable per-attempt terminalreceipt; progresspointer separate; nonzeroHOLD/defer75.",
+    "Darwinownedtemproot resolved; actuallocalhostRange/resume and timeout controls, mockedactualmain/SelectedGate paths."
+  ],
+  "CPU_execution_conditions": [
+    "ROOT independently read and froze these exactbytes beforeexecution; no further sourceedits without review.",
+    "Before and after EACH proof, ROOT verifies this exactfourfile map and receipt ordered43IDs; driver itself records source map at child completion, so external prelaunch/postcompletion pin checks remain required.",
+    "Mac: python3 -B run_cpu.py mac. PhysicalUbuntu: python3 -B run_cpu.py ubuntu, only after fresh selectedowner/idle/default/no private/build/pending/root guard and exactsource staging validation.",
+    "Use onlyfresh CPU-FIRST-mac/ubuntu JSON+log paths; preserve any firsterror without regrade/retry. Tests operate on syntheticCPUdata/ownedtemporary files/localHTTP only; no real SelectedGate support calls or HFtransfer intests.",
+    "CPU30seconds,wall90seconds,niceincrement15,CUDAhidden,OMP1/OpenBLAS1/arena1; LinuxAS512MiB. Exactcurrent tests spawn localhostthreads only and no descendantprocesses; subprocess.run timeout terminates/waits that soleCPUchild."
+  ],
+  "limitations_and_later_transfer_gates": [
+    "This permits CPUproof only, NOT assettransfer, packgeneration, modelstartup, performance or deployment.",
+    "Futureacquisition qualification/admission must bind and verify full existing imported helperclosure, physicalowner and exactnewrawbothhostCPUproofs. The two bootstrap pins and runtime.support origin checks are not a new complete standalone importclosure qualification.",
+    "Actualproofs must be independently reviewed with rawlogs/exit codes beforetransfer. No test result is claimed here.",
+    "Sourceguard is periodic/best-effort, not atomicuser-admission: workcanrace a checkpoint and socket/open latency can delay observation. No user request is canceled. Do not schedule anotherprivatephase while this acquisition is active; stop onlyownedI/O onguardfailure.",
+    "CPUtests use small syntheticfiles and do not measure347GB throughput, largefilehash duration, HFCDN behavior, RAM/VRAM fit orMaya-S correctness.",
+    "Interrupted exclusive link/unlink publication can preserve final+partialhardlinks and will failclosed onlaterinventory; no automaticdeletion orrepair is authorized.",
+    "Existing finalfiles are fullyrehashverified and prefix validation can take substantialI/O; no claims of zero user-work latency or instantcancel."
+  ],
+  "reviewer_execution": {
+    "imports_of_reviewed_code": false,
+    "tests": false,
+    "remote_host_actions": false,
+    "weights_downloaded": false,
+    "model_or_service_actions": false
+  }
+}
