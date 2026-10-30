@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-30T02:34:35.728716+00:00",
+  "status": "READONLY_NUMERICAL_QUALIFICATION_PIN_OMISSION_DIAGNOSED",
+  "old_qualification_sha256": "09d69dd5b579db14fc6736166a5d4cd08660f4b5764ae7ead5b23f9fbbae117f",
+  "rejection": "Canonical owner/window/coordinate or exact binary/config pins missing",
+  "cause": "Root manifest assembler began with kernel/build closure, which did not include production D/bin and D/config; existing numerical runtime correctly required them.",
+  "metadata_only_additions": {
+    "/home/alex/deepseek-hosted-20261025/bin/maya-ds4": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "/home/alex/deepseek-hosted-20261025/config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa"
+  },
+  "source_changes": false,
+  "CPU_proofs_unchanged": true,
+  "native_API_GPU_execution": false,
+  "production_drain_restart_request": false,
+  "numerical_attempt_registry_empty": true,
+  "prior_rejection_preserved": true,
+  "not_a_replay_or_regrade": true,
+  "next": "Independent metadata and actual preflight review before any N0 admission"
+}

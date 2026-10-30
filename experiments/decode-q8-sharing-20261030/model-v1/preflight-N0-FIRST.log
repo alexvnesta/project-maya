@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_numerical.py", line 249, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_numerical.py", line 248, in main
+    print(json.dumps(controller(args)),flush=True);return 0
+                     ~~~~~~~~~~^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_numerical.py", line 237, in controller
+    result=runtime.coordinate_mode(a,host,out,state,save,preflight_only=not args.run)
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_model_runtime.py", line 431, in coordinate_mode
+    return a.m.runtime.old.coordinate(host, output, state, tracked, preflight_only=preflight_only,
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        post_drain_root_free_bytes=root_free or (lambda: shutil.disk_usage('/').free))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-profile-v1/maintenance.py", line 141, in coordinate
+    try:proof=host.preflight(output)
+              ~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_model_runtime.py", line 272, in preflight
+    q = qualified(self.mode, self.qualification_sha256)
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_model_runtime.py", line 182, in qualified
+    raise ValueError('Canonical owner/window/coordinate or exact binary/config pins missing')
+ValueError: Canonical owner/window/coordinate or exact binary/config pins missing

@@ -1,0 +1,78 @@
+{
+  "utc": "2026-10-30T02:01:03.548259+00:00",
+  "decision": "CONDITIONAL_FIRST_FOUR_SERIAL_COMPILE_LINK_CHILDREN_ONLY",
+  "qualification_sha256": "c0d54c2c6a93451f32043cf2ad0bbda99310cea807c32cd19f09cc782961d7b7",
+  "file_pins": 2103,
+  "prepare_result": {
+    "children": [
+      2588817,
+      2588839,
+      2588867
+    ],
+    "all_exit0_no_timeout_interrupt_cleanup_errors": true,
+    "stdout_stderr_empty": true,
+    "original_relink_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "control_binary_retained_on_Ubuntu_not_locally_rehashed": true,
+    "actual_inputs": 493,
+    "raw_dependency_maps_reconciled": {
+      "selected-relink": 44,
+      "deps-gguf": 425,
+      "deps-test": 290
+    },
+    "tool_identities": 20,
+    "existing_input_changes": 0,
+    "alias_conflicts": 0,
+    "new_paths": {
+      "/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/src/ds4/ds4_iq.cuh": "0729227655e13d6406dc2a4b54b7ec4bdd2d864229f8c55cc3cb5efd9533ce01",
+      "/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/src/ds4/ds4_numerics.cuh": "815241ce13712c87030cf8562a5a400d43bec669ff46c2b26c9c92945ed094e2",
+      "/usr/local/cuda/targets/x86_64-linux/include/cuda_fp8.h": "f2a897a3bb59e2ffb1e7e814e577a928951104d0db0d00ab2d85f288e53830c6",
+      "/usr/local/cuda/targets/x86_64-linux/include/cuda_fp8.hpp": "4ed3ecb636dc223b26488768cf55ed311df1225d89d3a73d6c3360b18c2dc25f",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/candidate/tests/../src/ds4/ds4_gguf.cuh": "635cce8af084a856bf26b9fbf5ec9b4bddd3b01feb4035c2aa2eda0de76535e9",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/candidate/tests/../src/ds4/ds4_q8_share_policy.hpp": "e5990fe5ca326c2131e06c93f36e3af235c52a71bf91b953e54d25a8a367bcba"
+    }
+  },
+  "source_CPU_unchanged": {
+    "source_files": 9,
+    "CPU_input_maps": 2,
+    "Python_controls_each": 65,
+    "policy_controls_each": 46
+  },
+  "allowed_children": [
+    "compile-gguf",
+    "compile-test",
+    "candidate-link",
+    "test-link"
+  ],
+  "conditions": [
+    "Immediate actual qualification2103+self pin validation and same bound selected native92/configc43, defaultidle/no phases/foreign reservation/root>=132GiB before claim and throughout serial children.",
+    "Only compile exact frozen GGUF and standalone fixture, then link with original selected objects/libraries; originalGGUF is only native object replacement. No IQ/model/head/HC/IMMA additions.",
+    "Original SM80/C++20/O3/threads1 flags with candidate include first and no fast_math; CPU120 perprocess/AS4GiB perprocess/wall300 pergroup/nice15/CUDAhidden remain.",
+    "Fresh build-FIRST only, exact actual493input/20tool/qualification checks before and afterchildren; pin producedobjects immediately and check cumulative outputs; unexpectedactual linkdeps HOLD.",
+    "Firstfault stops, owned compiler group cleanup only; preserve primary/release/owner errors and exactreservationrelease. No retry.",
+    "Stop after compile for independent rawcompiler/resource/link/artifact review. No executable launch/GPU/model/benchmark/privatewindow/promotion."
+  ],
+  "findings": [],
+  "evidence_sha256": {
+    "prepare-FIRST/selected-relink-inputs.json": "5d1a0ec5b4ef3b222f090300fdd9f2ef872f86b8baaac0c22518d3e2bad32427",
+    "prepare-FIRST/deps-gguf.json": "eaddb946a643507e6dcc6e3fe6a0290ad9f99741404a25e7f467bf448117eda1",
+    "prepare-FIRST/plan.json": "a3ca785cf4503a69ac6466c0480b4fd011cc07e36d0e1b6c28317622c78ef649",
+    "prepare-FIRST/deps-gguf-inputs.json": "6b8c90659d13f7da5db1b4f6c0c26a4ff1f0cdccf88e73f0da4841c0a787d56b",
+    "prepare-FIRST/deps-gguf.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-test.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/selected-relink.link.d": "d835407fe8e60171595f779658643371134435d2e8d0d585c08fdcfe19182330",
+    "prepare-FIRST/selected-relink.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-test.json": "ec350a8dcc9947743ae318d54df9950166864da93045864bccc6416bb0dbfc3f",
+    "prepare-FIRST/deps-test-inputs.json": "74ee22653079a680d9e344c1f1147f0cc145f4b426ed7df4281d78764eb832b7",
+    "prepare-FIRST/selected-relink.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/gguf.headers.d": "89c6290a06c30e7f67163a9f17261600acf933bcc9fcf0b20ff63dea11a46bc6",
+    "prepare-FIRST/deps-test.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-gguf.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/selected-relink.json": "feb2d152f2bd9d4e4a9b990d1b2e378db973cf45c92efd89c1fc9c0c22ebbf7a",
+    "prepare-FIRST/test.headers.d": "34e8a7083c0076fbb171b495e838b1dc534bb4e88b80fecd58d9ecbe7a1fe110",
+    "prepare-FIRST/receipt.json": "53a26a32b2099bc6d61d7012daed8c47870c99acad4c107c061bd2d5825370b3",
+    "compile-qualification.json": "c0d54c2c6a93451f32043cf2ad0bbda99310cea807c32cd19f09cc782961d7b7",
+    "PREPARE_RESULT_ROOT_REVIEW.json": "aa132fb5e4f373e6d2e7ccd4374ea4f5c6f786619244c18bcf3d51c1703aceef",
+    "PREPARE_CPU_MAP_ASTRA_REVIEW.json": "cce383b92ddc12f8f73b14026f23fb39d6005084e7415a137819a70dc2fd0e29"
+  },
+  "reviewer_tests_compiler_remote_GPU_actions": false
+}

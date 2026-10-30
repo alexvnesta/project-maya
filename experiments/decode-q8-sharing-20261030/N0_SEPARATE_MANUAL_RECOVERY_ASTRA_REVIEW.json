@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-30T02:57:42.806181+00:00",
+  "decision": "CONDITIONAL_SEPARATE_MANUAL_SELECTED_OWNER_RECOVERY_COMPOSITION",
+  "scope": "One manual operational sequence using unchanged qualified selected-host primitives; no new native/API restart, model experiment, controller implementation or N0 regrade.",
+  "observed_binding_to_freeze": {
+    "invocation": "38b087689f5f4888b155c99a8bc74f10",
+    "main_pid": 2612003,
+    "native_pid": 2612033,
+    "native_start_ticks": 159680913
+  },
+  "observation_provenance": "Parent reports stable ACTIVE before/after unit snapshots and native_snapshot process contract. Reviewer has inspected source and copied failure traceback, not independently queried live host; exact raw stable observations must be retained in recovery evidence.",
+  "supported_sequence": [
+    "Before actions retain old failed controller/state/trace and closed private API/window evidence. Confirm original controller/start command no longer running, no other experiment/CPU phase, and fresh separately owned recovery metadata plus exact canonical-state snapshot for CAS.",
+    "Freeze exact current ACTIVE unit/native binding above as POST_FAULT_OBSERVATIONAL_RECOVERY_BINDING. Re-read stable unit/proc bracket; match invocation/main/native/startticks, sole GPU owner, native92/configc43/env/argv/cgroup. Do not reuse bind_current_baseline, capture_pending_start, restore_ds, finish_pending or failed mode saver.",
+    "Instantiate unchanged F.ChunkProductionHost with explicit recovery audit_dir, frozen start_binding/restored_pid and kernel_since covering actual failed-restore startup onward. This assignment records explicit manual recovery authorization, not historical pre-readiness capture or general cleanup authority.",
+    "guard_binding(expected_pid), target_identity, guard_binding(expected_pid), ACTIVEunit check, kernel/resource checks and exact972release/source/config/preflight/ready/currentstartupoffset checks. Preserve full1M262K/chunk4096/Q8/images/projection/4045RAM/selected92. No source changes.",
+    "Guard then call existing restore_router only: CPU router start timeout180s and GET HTTP readiness60s. No native/API start/stop/restart or drains. Guard same binding immediately afterward.",
+    "Use verify_target(expected_pid=2612033) once for qualified public401/auth200/assembledREADY/stop/DONE and selected identity, plus kernel/resource evidence. Its busy result pending_public_probe is NOT success; retain separate pending verification without repeating native startup or regrading N0.",
+    "After actual verification passed and final same-binding/current-state CAS check, write separate recovery receipt and update only production availability/current identity plus recovery provenance. Preserve original N0 STOPPED/HOLD/attempted state, fully_reviewedfalse and original null pre-readiness start_binding. Preserve all unrelated canonical owners/fields."
+  ],
+  "fault_policy": "On identity/custody change or primary/secondary failure, preserve all errors and stop. No blind retry, broad cleanup, replacement-owner stop or late recapture. Manual composition authorizes verification/router only, not cleanup_owned_target or new model start.",
+  "qualification_assessment": {
+    "primitives": "Exact selected ChunkProductionHost and inherited existing maintenance router start/public verifier already source/CPU qualified. Existing controls cover same-binding guard, replacement refusal before probe, expectedPID mismatch, realproc metadata and public verification.",
+    "composition_limit": "No claim that original CPU tests qualified automatic late adoption. This is a separate explicitly reviewed manual recovery authorization with observed arguments, not a new automatic recovery implementation.",
+    "historical_fault": "Unstable initial capture remains unexplained beyond plausible startup transition; no raw bracket means no proven cause."
+  },
+  "N0_result": "HOLD; no N1/timing/head/promotion/adoption of experiment as passed. Actual N0 attempt must remain attempted, not resetfalse.",
+  "evidence_sha256": {
+    "autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/activate_chunk4096.py": "b2bb7676969661f98bf77d9969a840a4fcb44367f9644ab6f05ac19d70709056",
+    "autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/test_activate_chunk4096.py": "c9c5f17779c8a50601e3d94cefef3713c6a5a06935b3684503381bafcade3af3",
+    "prefill-cache-improvements-20261027/activation-v1/activate.py": "4df43d04ae0fb9b2f67faf20e9750471e964c539d97ed81af7f3ad36cc0b9fd2",
+    "decode-profile-v1/maintenance.py": "276a78f6f62d9ae7760e9b436863a6279715d58ea0960bb396bdb7adcc3776dd",
+    "decode-optimization-20261028/q8-sharing-v1/N0_RESTORE_FAULT_SOURCE_ASTRA_DIAGNOSIS.json": "a242be7adb3948ed4b85e0bb9c26b6bfd49e44c491dce315401d527297d7e42e",
+    "decode-optimization-20261028/q8-sharing-v1/model-v1/controller-N0-FIRST.log": "fa65845ffd50dcf59f0c0b44c0607d448524368c4fe2602febf0baaecab0b1aa"
+  },
+  "reviewer_execution": "None; local source/report only."
+}

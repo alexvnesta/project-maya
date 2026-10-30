@@ -1,0 +1,123 @@
+{
+  "utc": "2026-10-30T03:05:40.806270+00:00",
+  "decision": "SEPARATE_SELECTED_RECOVERY_VERIFIED_N0_REMAINS_HOLD",
+  "binding": {
+    "invocation": "38b087689f5f4888b155c99a8bc74f10",
+    "main_pid": 2612003,
+    "native_pid": 2612033,
+    "native_start_ticks": 159680913
+  },
+  "scope": "Manual recovery of the already ACTIVE selected owner; no new native start, no experiment replay/regrade.",
+  "verified": {
+    "state_result_bytes_identical": true,
+    "identity_before_after_equal": true,
+    "selected_identity": {
+      "native_pid": 2612033,
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+      "context": 1048576,
+      "output_default": 262144,
+      "prompt_skip_mode": 1,
+      "prefill_chunk": 4096,
+      "Q8": [
+        1,
+        1
+      ],
+      "TP": 1,
+      "images": true,
+      "runtime_ablation": true,
+      "DSpark": true,
+      "CPU_experts": 4045,
+      "all_CPU_experts_RAM": true,
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.32,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2026
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.86,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2030
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "GPU_expert_slots_inferred": 11315,
+      "GPU_slots_direct_hosted_INFO": false,
+      "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+      "start_binding": {
+        "invocation": "38b087689f5f4888b155c99a8bc74f10",
+        "main_pid": 2612003,
+        "native_pid": 2612033,
+        "native_start_ticks": 159680913
+      },
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+    },
+    "public": {
+      "unauthenticated_models": 401,
+      "authenticated_models": 200,
+      "SSE_done": true,
+      "finish": "stop",
+      "known_answer_passed": true,
+      "content": "READY"
+    },
+    "raw_SSE": "One ID, empty assistant delta then READ+Y, exactly one stop and finalDONE. Request has no max_tokens override.",
+    "health": {
+      "status": "ok",
+      "max_context": 1048576,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "images": true,
+      "api_key": false,
+      "image_generation": false,
+      "loaded": true,
+      "service": "strata",
+      "busy": false,
+      "switcher": {
+        "active_model": "deepseek",
+        "inflight": 0,
+        "waiting": 0,
+        "nondefault_idle_seconds": 900.0,
+        "default_model": "deepseek",
+        "fault": null
+      }
+    },
+    "N0_original_failure": "ValueError('Unstable startup invocation; refuse capture')",
+    "N0_attempted": true,
+    "N0_fully_reviewed": false
+  },
+  "limitations": [
+    "Post-fault observed binding is not retrospective pre-readiness N0 provenance.",
+    "Supplied local recovery payload has selected identity/verifier result, raw own publicSSE/request, placement and state; separate raw systemd bracket/kernel command/resource output is not included in this directory. Unchanged qualified verifier invokes kernel and identity checks; do not claim independently reread live kernel/rawsystemd observations.",
+    "11315GPUslots inferred from exact startup counts; not direct hostedINFO. No model-quality/numerical/performance claim."
+  ],
+  "evidence_sha256": {
+    "state.json": "c3573cc90bfad7c76c0a91f2b8b0300f587990092c5bd270d76130213d349601",
+    "result.json": "c3573cc90bfad7c76c0a91f2b8b0300f587990092c5bd270d76130213d349601",
+    "target-placement.json": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "public-default-output-sse.txt": "dfbc5c6a5bdae7e722768402cf11df32a2f9a480dd29a8849b154f648d913d1f",
+    "identity.json": "a3c93e397564f3ab7cc1bd607c3f3d5ad97181505072f66c870f7f4defa0ac08",
+    "public-default-output-request.json": "93bb8806b80adc0a4793b4302b8387e13ae2d02b04932ddd2b2f166be29a455a"
+  },
+  "manual_composition_review_sha256": "7e6f8aa2ade4372f22282fa38194055d2f307c42c274802529fc7874e34a3207",
+  "no_N1_or_timing_admission": true
+}
