@@ -1,0 +1,139 @@
+{
+  "utc": "2026-10-30T03:58:03.651390+00:00",
+  "status": "SOURCE_ARCHITECTURE_ONLY_NO_EXECUTABLE_MODEL_MODE_OR_ADMISSION",
+  "family": "head-batching-v1",
+  "candidate_native_sha256": null,
+  "candidate_hash_policy": "Obtain only from future reviewed head build-FIRST receipt; do not reuse Q8/IQ2/IMMA native or invent a placeholder executable qualification.",
+  "factor": {
+    "N0": "Selected original native92 with HEAD_BATCH0/default4",
+    "N1": "Future model-only head native with HEAD_BATCH1/8; original GGUF/IQ/other objects",
+    "private_env_aliases": [
+      "STRATA_DS4_HEAD_BATCH",
+      "DS4_HEAD_BATCH"
+    ],
+    "candidate_effective_observation": "Exactly one matching ds4: HEAD_BATCH=8 effective GGUF head rows=N (default4; selected GEMV), with5<=N<=16; baseline no HEAD_BATCH marker. Receipt shows a first effective dispatch, not a completed kernel launch count.",
+    "unchanged": [
+      "model/pack/weights",
+      "context1048576/outputallowance262144",
+      "requestmax_tokens32768/effort100/budget0/temp1/seed1",
+      "chunk4096/mode1/Q8_BATCH1/Q8_CHECK1",
+      "TP1/auto19-21/CPU24/allCPUexpertsRAM",
+      "DSpark.65/max4",
+      "images/projection/ablateL22s1",
+      "same profile seed and direction pins"
+    ],
+    "forbidden_mixture": "No Q8_SHARE, IQ2 persistent, IMMA, HC, pack/quality/context/output or sampler changes."
+  },
+  "proposed_new_sources": [
+    "head_config.py",
+    "head_dependencies.py",
+    "head_model_runtime.py",
+    "head_numerical.py",
+    "head_numerical_audit.py",
+    "test_head_config.py",
+    "test_head_dependencies.py",
+    "test_head_model_runtime.py",
+    "test_head_numerical.py",
+    "qualify_head_numerical_cpu.py",
+    "test_head_numerical_cpu.py"
+  ],
+  "template_sha256": {
+    "decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_config.py": "c18ddc492f2250eaf7341e12405f51156518b8a20f8faf0e92cc2adb51a5ead0",
+    "decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+    "decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_model_runtime.py": "9bd594247cecc13980d864780b778a66da08fcaf2b0a3ff5b386e84e33a1ad2c",
+    "decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_numerical.py": "47cfcd6403d44b90b3670e6ff83e42a5aaf12e089eff5edb01b180acb3ef6415",
+    "decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_numerical_audit.py": "f40f49b8925c82b4fecf55f01905166f2c42273928f20c94c0a9383cf1c2e3e7",
+    "decode-optimization-20261028/q8-sharing-v1/model-v1/qualify_q8share_numerical_cpu.py": "d9035713e08faf607991c02ec492bd60d4d6a38f7a5c29040f303dbfe15045a1"
+  },
+  "immutable_helper_sha256": {
+    "decode-optimization-20261028/model-v1/imma_fixtures.py": "c70d008d3277166b8ff5276f22cb4547ab76a6688eab4647ff2d1a024ec89e4a",
+    "decode-optimization-20261028/model-v1/imma_storage.py": "d03c8f6d69e198e648014b15a00a4a7c3dd986815dac4a391b747924239e0143",
+    "decode-optimization-20261028/model-v1/imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+    "decode-optimization-20261028/model-v1/imma_config.py": "18691963f89027fd169877c0cd6307f54954de1353a577d4c8935c015ea84986"
+  },
+  "kernel_gate": {
+    "required_before_any_model_arm": "Actual head385cases/device770total, both0 and exactheadfixture/build hashes, prospective oldhostedAPI+native close0, window0/kernel/resource gates, selected92 publicrestoration fullyreviewed.",
+    "startup_adapter": "Use exact qualified head_startup.guarded_host(a) as ModelHost base, not old a.ChunkProductionHost. Pin source3, correctedr2 both22raw, source/reviewresult and newGPU109proof+actualkernelrestoration.",
+    "kernel_gate_file": "new model-v1/kernel-prerequisite.json assembled only from actual completed head proof; no old Q8 gate reuse."
+  },
+  "fixture": {
+    "new_identity": "head-batching-natural-state64-v1",
+    "new_namespace": "decode-head-numerical-{N0,N1}-UTC",
+    "new_ledger": "H/model-v1/numerical-arms.json initiallyempty, excluded fromimmutableq",
+    "cases": [
+      "cold-text",
+      "rewind-text",
+      "two-images",
+      "restore-text"
+    ],
+    "cases_policy": "Keep exact existing four synthetic requests, image bytes/spans and encoded prompts in immutable fixture.IDS order. New manifest identity only; no resizing or re-tokenization merely for a family label.",
+    "expected_reuse": [
+      0,
+      8465,
+      0,
+      8465
+    ],
+    "output": "Natural exact JSON1..64 for text and exacttwoimageJSON; no capfit/truncation. Everycase must complete correctly and havepositive drafts offered+accepted.",
+    "inherited_component_proofs": "Pin unchanged original fixture/storage/config dependency proof; do not claim it qualifies new caller/runtime."
+  },
+  "source_dump_semantics": {
+    "selected_main_sha256": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+    "selected_model_sha256": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "main_lines": [
+      373,
+      380,
+      939,
+      1041
+    ],
+    "model_lines": [
+      12092,
+      12100
+    ],
+    "meaning": "DS4_SERVE_DUMP appends complete Model::logits vectors after prompt/decode calls. logits may return chunk_logits or max(1,n_logits)*vocab floats. Raw unframed arrays can include variable speculative batch rows; they are not one row per emitted token.",
+    "claim_limit": "Compare complete ordered bytes and finite vocabulary-row count under exact emitted paths and native state; do not relabel rows as per-token alignment or align later rows after divergence."
+  },
+  "strict_gate": {
+    "helper": "Unchanged imma_numeric_controls.compare_matched SHA cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+    "prerequisites": "Both independent terminal audits pass, allrawmanualanswers/reasoning reviewed, actualstate/API/native/window/oldowner/restoration coverage complete.",
+    "required": [
+      "exactfourcaseorder",
+      "allcompletefinitearrays",
+      "identical emittedtokenIDs",
+      "identical complete dump descriptor includingbytes/rows/SHA256",
+      "same prompt_tokens/generated/reused/drafts_offered/drafts_accepted"
+    ],
+    "failure": "Keep exact HOLD_TOKEN_PATH_DIFFERS/HOLD_NONZERO_LOGIT_OR_ROW_DRIFT/HOLD_NATIVE_STATE_DIFFERS; no tolerance, prefix workaround, newalignment, regrade or automaticreplay.",
+    "scope": "Passing covers this exact four-state synthetic witness plus finite kernel cases, not generalmodelquality or performance. Timing requires separately frozen source/CPU/qualification/admission afterward."
+  },
+  "lifecycle_and_budget": [
+    "Same canonical coordinate276/window1707,1200wall/1000soft/200cleanup, root132admission/120runtime,swapdelta<1GiB,privatecache8GiB/logaux4GiB.",
+    "Fresh canonicalcurrentbinding before drain; no datednative38b fallback once laterrestorationchangesowner.",
+    "Stable old APIunitinactive MainPID0/ExecMainCode1/Status0/Resultsuccess and boundnativeclose0 captured before restore; privateAPI/native and window exits0.",
+    "Only same owned selected92 restoration with qualifiedstartupadapter; preserve primary/secondary/startcommand cleanup receipts and pending-public custody. No late owner adoption.",
+    "Numerical-only native-child FSIZE512MiB, aggregate dumpsoft1GiB/max4files/hard2GiB, source-derived slot/check bound retained. No global API/performance FSIZE or cachepolicy change.",
+    "Private phase only stat/count/budget monitoring; fullfinite/SHA scans and independent terminalaudit only after selectedproduction restoration and freshidle.",
+    "Anyfailed/capped/partial/UNRUN/budget outcome staysHOLD; no addedmodelrequest or automaticretry."
+  ],
+  "new_CPU_controls_needed": [
+    "Retargeted completeconfig/namespace/factor/processcontracts and bothHEADenv aliases; rejectheldQ8/IQ2/IMMA aliases/nativepath.",
+    "Factorlog validates5..16 only/one marker/N0absent, no false completedlaunchcount.",
+    "Kernelprereq770/currentheadartifact/oldAPIclose0/startup22r2 and fresh109CPU closure; rejectold242Q8 receipt.",
+    "Actual newruntime subclasses guardedstartup base and exercises MainPID0->positive under unchangedoneshotrestore; strictfrozenowner/capture/cleanup/pending/publicfaults.",
+    "Actual newcaller full-cap four synthetic HTTP requests/scriptednative, image/state/positive drafts/FSIZE/nativepostspawnfault/pairedcleanup/custody cases.",
+    "Exact driver origin/source/inputproofs and inherited approved lexicalalias handling; allliteralIDs enumerated from finaltests, no guessedcount."
+  ],
+  "admission_sequence": [
+    "Futureactualcompileartifactreview",
+    "Futureheadkernelqualification+freshpreflight+singlekerneladmission+terminalfullreview",
+    "Finishnewheadmodelsource/manualbothROOTandAstrareads; FIRSTboundedCPUbothphysicalhosts",
+    "Freezecompletecanonicalnumericalq including selectedDnative92/configc43/releaseb921/seed8db9/directionf303/actualpackds4+tensors48c+bc52",
+    "FreshphysicalN0readonlypreflight+separateN0ONLYadmission",
+    "N0complete/restored/independentaudit/fullrawreview, thenfreshN1preflight+separateN1ONLYadmission",
+    "N1complete/restored/independentaudit/fullrawreview, thenunchangedpurestrictcomparison underqualifiedCPUlimits"
+  ],
+  "pause_rule": "Stop all source/review/hash/CPU work when ROOT announces privatekernel or modelwindow/restoration; resume only after confirmed selectedrestoration.",
+  "prior_HOLDs": "Q8N0 startupfault/separaterecovery and IQ2/IMMA exactstateHOLDs remain immutable; none replayed or importedas newheadoutcomes.",
+  "implementation_started": false,
+  "GPU_admission": false,
+  "model_admission": false
+}

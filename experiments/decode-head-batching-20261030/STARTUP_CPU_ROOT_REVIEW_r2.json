@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-30T03:31:15.551222+00:00",
+  "scope": "FIRST corrected startup-adapter CPU controls ONLY",
+  "passed": true,
+  "controls_each_host": 22,
+  "exact_source_maps_and_ordered_ids": true,
+  "receipt_sha256": {
+    "darwin": "fc9deebe26142b382b219f763a692cb847937e802b25ad6b71a23a9fc4d18b9f",
+    "linux": "fc9deebe26142b382b219f763a692cb847937e802b25ad6b71a23a9fc4d18b9f"
+  },
+  "children": {
+    "darwin": {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/qualify_startup_cpu.py",
+        "--child"
+      ],
+      "pid": 42676,
+      "returncode": 0,
+      "CPU_s": 30,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "Linux_AS_MiB": null,
+      "error": null,
+      "cleanup_errors": []
+    },
+    "linux": {
+      "argv": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/qualify_startup_cpu.py",
+        "--child"
+      ],
+      "pid": 2726573,
+      "returncode": 0,
+      "CPU_s": 30,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "Linux_AS_MiB": 512,
+      "error": null,
+      "cleanup_errors": []
+    }
+  },
+  "source": {
+    "head_startup.py": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "test_head_startup.py": "3040c6a8be1b8f008b38e05a183a04177c1c9efa2db295140b8771a7330f5072"
+  },
+  "original_owner": "b2bb7676969661f98bf77d9969a840a4fcb44367f9644ab6f05ac19d70709056",
+  "original_FIRST_failures_preserved": "20pass2testdoubleerrors each host; separate fixture repair reviewed; no silent regrade",
+  "GPU_native_compiler_execution": false,
+  "does_not_qualify": "Head build/GPU/numerical/performance/production activation"
+}

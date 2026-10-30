@@ -1,0 +1,88 @@
+{
+  "utc": "2026-10-30T03:30:15.782662+00:00",
+  "decision": "CORRECTED_STARTUP_22_CPU_CONTROLS_PASSED_EACH_HOST_NO_RUNTIME_ADMISSION",
+  "evidence_sha256": {
+    "startup-source-review.json": "a65d6be6800661ba79cdd97d531f5b96dcf8a546ef13ff3dc637d34e3f6a7f5c",
+    "STARTUP_FIXTURE_SOURCE_ASTRA_REVIEW_r2.json": "11ff60ab72e36d6d0b84b82dfdc8cfb3473bdbf302229035bb79259022dcbe6c",
+    "STARTUP_FIRST_CPU_DIAGNOSIS.json": "18c904e6b9f5fc1cab1dbe3dec723abbcd9cca0f4feb0ca19018521f62927a00",
+    "startup-CPU-r2-darwin/receipt.json": "fc9deebe26142b382b219f763a692cb847937e802b25ad6b71a23a9fc4d18b9f",
+    "startup-CPU-r2-darwin/child.json": "879875a24ea715bb2b4fdd6df35b7b1af491f79b4a6923b911d672be0886c160",
+    "startup-CPU-r2-darwin/child.log": "71c72155f18eef4698df47ff33a65830376b988c172745e861ea7e4dbb1e7d6c",
+    "startup-CPU-r2-linux/receipt.json": "fc9deebe26142b382b219f763a692cb847937e802b25ad6b71a23a9fc4d18b9f",
+    "startup-CPU-r2-linux/child.json": "ebbbf451d5cdd6bfc7ea4df5b24322ac4148a9252e8449d00a1be9e46f9df8cf",
+    "startup-CPU-r2-linux/child.log": "8247771b4b6afe52eecd673b512aadbf0a31903c5e031aee32831b2a091f1c38"
+  },
+  "source_sha256": {
+    "head_startup.py": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "test_head_startup.py": "3040c6a8be1b8f008b38e05a183a04177c1c9efa2db295140b8771a7330f5072"
+  },
+  "driver_sha256": "852e8186d38cae3e509be23e4f5f7aeb706963675a95f3bb3de91be41bddba86",
+  "test_ids": [
+    "test_head_startup.Capture.test_actual_old_method_reproduces_empty_snapshot_transition_failure",
+    "test_head_startup.Capture.test_binding_receipt_fault_is_not_suppressed",
+    "test_head_startup.Capture.test_bool_negative_or_float_main_is_fault",
+    "test_head_startup.Capture.test_disappearing_bound_native_is_fault",
+    "test_head_startup.Capture.test_disappearing_observed_main_is_fault",
+    "test_head_startup.Capture.test_empty_invocation_after_any_frozen_owner_is_fault",
+    "test_head_startup.Capture.test_initial_zero_never_queries_or_claims_native",
+    "test_head_startup.Capture.test_invocation_replacement_at_zero_is_fault",
+    "test_head_startup.Capture.test_native_absence_does_not_claim_or_emit",
+    "test_head_startup.Capture.test_native_replacement_never_recaptured",
+    "test_head_startup.Capture.test_native_snapshot_error_is_not_suppressed",
+    "test_head_startup.Capture.test_new_method_waits_then_captures_same_initial_transition",
+    "test_head_startup.Capture.test_old_or_empty_invocation_is_not_claimed",
+    "test_head_startup.Capture.test_other_unit_state_does_not_query_native",
+    "test_head_startup.Capture.test_positive_main_replacement_is_fault",
+    "test_head_startup.Capture.test_positive_stable_owner_captured_once",
+    "test_head_startup.Capture.test_positive_unit_change_during_snapshot_remains_fault",
+    "test_head_startup.Capture.test_reverted_old_invocation_after_any_frozen_owner_is_fault",
+    "test_head_startup.Factory.test_exact_owner_wrapper_preserves_other_methods",
+    "test_head_startup.Factory.test_foreign_module_refused_before_reading_owner",
+    "test_head_startup.OriginalSupervisor.test_actual_unchanged_1250_deadline_and_owned_CLI_cleanup",
+    "test_head_startup.OriginalSupervisor.test_actual_unchanged_supervisor_one_start_zero_then_positive"
+  ],
+  "controls_each_host": 22,
+  "children": {
+    "darwin": {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/qualify_startup_cpu.py",
+        "--child"
+      ],
+      "pid": 42676,
+      "returncode": 0,
+      "CPU_s": 30,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "Linux_AS_MiB": null,
+      "error": null,
+      "cleanup_errors": []
+    },
+    "linux": {
+      "argv": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/qualify_startup_cpu.py",
+        "--child"
+      ],
+      "pid": 2726573,
+      "returncode": 0,
+      "CPU_s": 30,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "Linux_AS_MiB": 512,
+      "error": null,
+      "cleanup_errors": []
+    }
+  },
+  "manual_read": "Both complete logs, receipts and child bounds read; ordered IDs/maps match sourcefreeze. Original failures remainfailed and separate.",
+  "findings": [],
+  "limitations": [
+    "Scripted unit/native observations and exact AST-extracted original supervisor only; not actualstartup/systemd qualification.",
+    "Firstfailed22 proofs had20pass/2missingmockconstants errors. CorrectedFIRST r2proofs do not regrade those.",
+    "No build/native/model/GPU/service execution byreviewer; subsequentphases need separatequalification/admission."
+  ]
+}

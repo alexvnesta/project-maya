@@ -1,0 +1,234 @@
+--- qualified-q8/test_gpu_check.py
++++ new-head/test_gpu_check.py
+@@ -5,16 +5,16 @@
+ 
+ BIND={'invocation':'a'*32,'main_pid':10,'native_pid':11,'native_start_ticks':12}
+ def text(device):
+-    return '\n'.join(g.expected_case_ids()+[f'ALL 121 Q8_SHARE checks passed device {device}'])+'\n'
++    return '\n'.join(g.expected_case_ids()+[f'ALL 385 HEAD_BATCH checks passed device {device}'])+'\n'
+ 
+ class Contracts(unittest.TestCase):
+     def test_pending_normalization_is_idempotent(self):
+-        value={'status':'Q8_SHARE_KERNEL_COMPLETE_SELECTED4096_RESTORED','verified':{'pending_public_probe':True}}
++        value={'status':'HEAD_BATCH_KERNEL_COMPLETE_SELECTED4096_RESTORED','verified':{'pending_public_probe':True}}
+         g.normalize_pending(value);g.normalize_pending(value)
+-        self.assertEqual(value['resume_terminal_status'],'Q8_SHARE_KERNEL_COMPLETE_SELECTED4096_RESTORED')
+-        self.assertEqual(value['status'],'Q8_SHARE_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING')
++        self.assertEqual(value['resume_terminal_status'],'HEAD_BATCH_KERNEL_COMPLETE_SELECTED4096_RESTORED')
++        self.assertEqual(value['status'],'HEAD_BATCH_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING')
+     def test_positive_both_devices(self):
+-        for device in [0,1]:self.assertEqual(g.check_result(text(device),0,device)['total_cases'],121)
++        for device in [0,1]:self.assertEqual(g.check_result(text(device),0,device)['total_cases'],385)
+     def test_nonzero_exit_rejected(self):
+         with self.assertRaises(ValueError):g.check_result(text(0),1,0)
+     def test_false_exit_rejected(self):
+@@ -28,7 +28,7 @@
+     def test_failure_output_rejected(self):
+         with self.assertRaises(ValueError):g.check_result(text(0)+'FAIL canary\n',0,0)
+     def test_partial_count_rejected(self):
+-        with self.assertRaises(ValueError):g.check_result(text(0).replace('ALL 121','ALL 120'),0,0)
++        with self.assertRaises(ValueError):g.check_result(text(0).replace('ALL 385','ALL 384'),0,0)
+     def test_each_phase_blocks(self):
+         for k in ['active_private_phase','active_GPU_phase','active_gpu_experiment','private_window','active_cpu_build','production_restore_in_progress','production_verification_pending','production_temporarily_stopped']:
+             self.assertFalse(g.phase_keys_free({k:True}),k)
+@@ -48,42 +48,42 @@
+         self.assertTrue(g.owned_cgroup('0::/system.slice/strata-deepseek-window.service\n'))
+         self.assertFalse(g.owned_cgroup('0::/system.slice/strata-deepseek-window.service-foreign'))
+     def test_paths_foreign(self):
+-        with self.assertRaises(ValueError):g.output_paths(pathlib.Path('/tmp/decode-q8-sharing-kernel-20261029T000000Z'))
++        with self.assertRaises(ValueError):g.output_paths(pathlib.Path('/tmp/decode-head-batching-kernel-20261029T000000Z'))
+     def test_paths_real_fresh(self):
+         with tempfile.TemporaryDirectory() as d,patch.object(g,'E',pathlib.Path(d).resolve()):
+-            out=pathlib.Path(d).resolve()/'results/decode-q8-sharing-kernel-20261029T000000Z'
++            out=pathlib.Path(d).resolve()/'results/decode-head-batching-kernel-20261029T000000Z'
+             out.parent.mkdir();(pathlib.Path(d).resolve()/'maintenance').mkdir()
+             self.assertEqual(g.output_paths(out)[0],out)
+     def test_existing_output_refused(self):
+         with tempfile.TemporaryDirectory() as d,patch.object(g,'E',pathlib.Path(d).resolve()):
+-            out=pathlib.Path(d).resolve()/'results/decode-q8-sharing-kernel-20261029T000000Z';out.mkdir(parents=True);(g.E/'maintenance').mkdir()
++            out=pathlib.Path(d).resolve()/'results/decode-head-batching-kernel-20261029T000000Z';out.mkdir(parents=True);(g.E/'maintenance').mkdir()
+             with self.assertRaises(ValueError):g.output_paths(out)
+     def test_symlink_output_refused(self):
+         with tempfile.TemporaryDirectory() as d,patch.object(g,'E',pathlib.Path(d).resolve()):
+-            out=pathlib.Path(d).resolve()/'results/decode-q8-sharing-kernel-20261029T000000Z';out.parent.mkdir();(g.E/'maintenance').mkdir();out.symlink_to('/not-present')
++            out=pathlib.Path(d).resolve()/'results/decode-head-batching-kernel-20261029T000000Z';out.parent.mkdir();(g.E/'maintenance').mkdir();out.symlink_to('/not-present')
+             with self.assertRaises(ValueError):g.output_paths(out)
+     def test_fixture_contract_exact(self):
+         with tempfile.TemporaryDirectory() as d,patch.object(g,'E',pathlib.Path(d).resolve()):
+             (g.E/'results').mkdir();(g.E/'maintenance').mkdir()
+-            out=g.E/'results/decode-q8-sharing-kernel-20261029T000000Z'
+-            self.assertEqual(g.fixture_contract(g.P/'build-FIRST/q8_share_check','a'*64,out,1)[1:],['--q8-share-check','1'])
++            out=g.E/'results/decode-head-batching-kernel-20261029T000000Z'
++            self.assertEqual(g.fixture_contract(g.P/'build-FIRST/head_batch_check','a'*64,out,1)[1:],['--head-batch-check','1'])
+     def test_fixture_wrong_binary_refused(self):
+         with patch.object(g,'output_paths',return_value=(pathlib.Path('/owned'),pathlib.Path('/meta'))):
+-            with self.assertRaises(ValueError):g.fixture_contract(pathlib.Path('/bin/true'),'a'*64,g.E/'results/decode-q8-sharing-kernel-20261029T000000Z',0)
++            with self.assertRaises(ValueError):g.fixture_contract(pathlib.Path('/bin/true'),'a'*64,g.E/'results/decode-head-batching-kernel-20261029T000000Z',0)
+     def test_fixture_bool_device_refused(self):
+         with patch.object(g,'output_paths',return_value=(pathlib.Path('/owned'),pathlib.Path('/meta'))):
+-            with self.assertRaises(ValueError):g.fixture_contract(g.P/'build-FIRST/q8_share_check','a'*64,g.E/'results/decode-q8-sharing-kernel-20261029T000000Z',True)
++            with self.assertRaises(ValueError):g.fixture_contract(g.P/'build-FIRST/head_batch_check','a'*64,g.E/'results/decode-head-batching-kernel-20261029T000000Z',True)
+ 
+ class FixturePhase(unittest.TestCase):
+     def run_phase(self,mode='ok'):
+         with tempfile.TemporaryDirectory() as d:
+-            root=pathlib.Path(d).resolve();p=root/'candidate';p.mkdir();out=root/'results/decode-q8-sharing-kernel-20261029T000000Z';out.parent.mkdir()
+-            binary=p/'build-FIRST/q8_share_check';binary.parent.mkdir();binary.write_bytes(b'not executable; child mocked')
++            root=pathlib.Path(d).resolve();p=root/'candidate';p.mkdir();out=root/'results/decode-head-batching-kernel-20261029T000000Z';out.parent.mkdir()
++            binary=p/'build-FIRST/head_batch_check';binary.parent.mkdir();binary.write_bytes(b'not executable; child mocked')
+             meta=root/'maintenance'/out.name;meta.mkdir(parents=True)
+-            proof=meta/'proof.json';proof.write_text(json.dumps({'qualified_for_owned_q8_share_kernel':True,'output':str(out),'qualification_sha256':'a'*64}))
+-            (meta/'state.json').write_text(json.dumps({'status':'Q8_SHARE_KERNEL_PRIVATE_RUNNING','output':str(out),'qualification_sha256':'a'*64}))
++            proof=meta/'proof.json';proof.write_text(json.dumps({'qualified_for_owned_head_batch_kernel':True,'output':str(out),'qualification_sha256':'a'*64}))
++            (meta/'state.json').write_text(json.dumps({'status':'HEAD_BATCH_KERNEL_PRIVATE_RUNNING','output':str(out),'qualification_sha256':'a'*64}))
+             (root/'STATE.json').write_text(json.dumps({'maintenance_controller':str(meta/'state.json'),'active_private_phase':str(meta)}))
+-            (p/'gpu-attempt.json').write_text(json.dumps({'metadata':str(meta),'output':str(out)}))
++            (p/'gpu-attempt.json').write_text(json.dumps({'metadata':str(meta),'output':str(out),'qualification_sha256':('b' if mode=='changed_attempt' else 'a')*64}))
+             q={'fixture_binary':str(binary),'fixture_sha256':g.sha(binary),'qualification_sha256':'a'*64}
+             children=[]
+             def popen(command,**kw):
+@@ -132,13 +132,14 @@
+     def test_foreign_cgroup_no_child(self):self.run_phase('foreign_cgroup')
+     def test_foreign_proof_path_no_read_or_child(self):self.run_phase('foreign_proof')
+     def test_changed_qualification_no_child(self):self.run_phase('changed_qualification')
++    def test_attempt_qualification_replacement_no_child(self):self.run_phase('changed_attempt')
+     def test_exit_receipt_fault_preserves_timeout(self):self.run_phase('receipt_failure')
+ 
+ class ActualIdentity(unittest.TestCase):
+     def check(self,mode):
+         with tempfile.TemporaryDirectory() as d:
+             root=pathlib.Path(d).resolve();binary=root/'fixture';binary.write_bytes(b'fixture');proc=root/'123';proc.mkdir();(proc/'exe').symlink_to(binary)
+-            command=[str(binary),'--q8-share-check','0']
++            command=[str(binary),'--head-batch-check','0']
+             (proc/'cmdline').write_bytes(('\x00'.join(command)+'\x00').encode())
+             (proc/'cgroup').write_text('0::/system.slice/strata-deepseek-window.service\n')
+             (proc/'stat').write_text('123 (fixture name) '+ ' '.join(['S']+['0']*18+['987']))
+@@ -156,8 +157,8 @@
+ class Pending(unittest.TestCase):
+     def pending(self,mode):
+         with tempfile.TemporaryDirectory() as d:
+-            root=pathlib.Path(d).resolve();meta=root/'maintenance/decode-q8-sharing-kernel-20261029T000000Z';meta.mkdir(parents=True)
+-            value={'status':'Q8_SHARE_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING','start_binding':BIND,'kernel_since':'2026-10-29 00:00:00 UTC','qualification_sha256':'a'*64}
++            root=pathlib.Path(d).resolve();meta=root/'maintenance/decode-head-batching-kernel-20261029T000000Z';meta.mkdir(parents=True)
++            value={'status':'HEAD_BATCH_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING','start_binding':BIND,'kernel_since':'2026-10-29 00:00:00 UTC','qualification_sha256':'a'*64}
+             current={'production_verification_pending':str(meta/'state.json'),'maintenance_controller':str(meta/'state.json')}
+             if mode=='foreign':current['maintenance_controller']='foreign'
+             if mode=='phase':current['active_gpu_experiment']=True
+@@ -193,7 +194,7 @@
+                     if mode in ['busy','race']:
+                         self.assertEqual(result['status'],'DEFERRED_BUSY_UNTOUCHED');self.assertEqual(json.loads((meta/'state.json').read_text()),value)
+                     else:
+-                        self.assertEqual(result['status'],'Q8_SHARE_KERNEL_COMPLETE_SELECTED4096_RESTORED')
++                        self.assertEqual(result['status'],'HEAD_BATCH_KERNEL_COMPLETE_SELECTED4096_RESTORED')
+                         self.assertFalse(json.loads((root/'STATE.json').read_text())['production_verification_pending'])
+                     host.restore_ds.assert_not_called();host.launch.assert_not_called()
+     def test_pending_success_no_restart(self):self.pending('ok')
+@@ -219,13 +220,13 @@
+ class CanonicalLifecycle(unittest.TestCase):
+     def run_case(self,mode):
+         with tempfile.TemporaryDirectory() as d:
+-            root=pathlib.Path(d).resolve();p=root/'candidate';p.mkdir();out=root/'results/decode-q8-sharing-kernel-20261029T000000Z'
++            root=pathlib.Path(d).resolve();p=root/'candidate';p.mkdir();out=root/'results/decode-head-batching-kernel-20261029T000000Z'
+             out.parent.mkdir();meta=root/'maintenance'/out.name;meta.mkdir(parents=True)
+             current={'chunk4096_activation':{'selected_identity':{'native_pid':11,'start_binding':BIND}},'keep':'unchanged'}
+             (root/'STATE.json').write_text(json.dumps(current));before=(root/'STATE.json').read_bytes()
+             coordinate,deferred=canonical_coordinate();a=types.SimpleNamespace(m=types.SimpleNamespace(old=types.SimpleNamespace(coordinate=coordinate)))
+             host=Mock();host.baseline_binding=BIND;host.start_binding=None;host.restored_pid=None;host.since='2026-10-29 00:00:00 UTC';host.start_command_cleanup_error=None
+-            host.preflight.return_value={'qualified_for_owned_q8_share_kernel':True,'output':str(out),'qualification_sha256':'a'*64}
++            host.preflight.return_value={'qualified_for_owned_head_batch_kernel':True,'output':str(out),'qualification_sha256':'a'*64}
+             host.previous.return_value=root/'prior.json';host.native_pid.return_value=11;host.idle.return_value=True
+             host.launch.return_value='owned-window'
+             restored=dict(BIND,native_pid=21,main_pid=20)
+@@ -246,7 +247,7 @@
+                     (root/'STATE.json').write_text(json.dumps(state));return True
+                 host.idle.side_effect=idle
+             state={'utc':host.since,'output':str(out),'proof_path':str(meta/'proof.json'),'qualification_sha256':'a'*64,
+-                   'running_status':'Q8_SHARE_KERNEL_PRIVATE_RUNNING','complete_status':'Q8_SHARE_KERNEL_COMPLETE_SELECTED4096_RESTORED'}
++                   'running_status':'HEAD_BATCH_KERNEL_PRIVATE_RUNNING','complete_status':'HEAD_BATCH_KERNEL_COMPLETE_SELECTED4096_RESTORED'}
+             with patch.object(g,'E',root),patch.object(g,'P',p):
+                 save=g.make_saver(host,meta,run=mode!='readonly')
+                 if mode in ['partial_restore','public_fault','cleanup_fault','foreign_before_drain']:
+@@ -265,10 +266,10 @@
+                     if mode in ['readonly','busy','preflight_defer']:
+                         self.assertEqual((root/'STATE.json').read_bytes(),before);host.stop_router.assert_not_called();host.launch.assert_not_called()
+                     else:
+-                        self.assertEqual(result['status'],'Q8_SHARE_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING')
++                        self.assertEqual(result['status'],'HEAD_BATCH_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING')
+                         self.assertEqual(json.loads((meta/'state.json').read_text())['status'],result['status'])
+                         self.assertEqual(json.loads((root/'STATE.json').read_text())['production_verification_pending'],str(meta/'state.json'))
+-                        self.assertEqual(result['resume_terminal_status'],'Q8_SHARE_KERNEL_COMPLETE_SELECTED4096_RESTORED')
++                        self.assertEqual(result['resume_terminal_status'],'HEAD_BATCH_KERNEL_COMPLETE_SELECTED4096_RESTORED')
+     def test_actual_canonical_readonly_preserves_global_identity(self):self.run_case('readonly')
+     def test_actual_canonical_late_busy_preserves_global_identity(self):self.run_case('busy')
+     def test_actual_canonical_preflight_defer_preserves_global_identity(self):self.run_case('preflight_defer')
+@@ -290,23 +291,23 @@
+             root=pathlib.Path(d).resolve();p=root/'p';p.mkdir();r=root/'r';r.mkdir();e=root/'e';e.mkdir()
+             window=r/'window.py';window.write_text('window')
+             coordinate=e/'decode-profile-v1/maintenance.py';coordinate.parent.mkdir();coordinate.write_text('coordinate')
+-            paths=[window,coordinate,p/'qualify_gpu_cpu.py',p/'gpu_check.py',p/'test_gpu_check.py',p/'build-FIRST/q8_share_check']
++            paths=[window,coordinate]+[p/name for name in g.SOURCES]+[p/'build-FIRST/head_batch_check']
+             for path in paths[2:]:path.parent.mkdir(exist_ok=True);path.write_text('fixture '+path.name)
+-            sources={name:g.sha(p/name) for name in ['gpu_check.py','test_gpu_check.py']}
++            sources={name:g.sha(p/name) for name in g.SOURCES}
+             for host in ['darwin','linux']:
+                 directory=p/('gpu-CPU-'+host);directory.mkdir()
+-                proof={'passed':True,'source_sha256':sources,'test_ids':['one'],'controls':1,'GPU_execution':False,'native_execution':False}
++                proof={'passed':True,'source_sha256':sources,'test_ids':['one'],'controls':1,'GPU_execution':False,'native_execution':False,'compiler_execution':False,'source_input_sha256':{}}
+                 child={'returncode':0,'CPU_s':30,'wall_s':90,'nice':15,'CUDA_hidden':True,
+                        'Linux_AS_MiB':512 if host=='linux' else None,'error':None,'cleanup_errors':[]}
+                 if bad_child and host=='linux':child.update(bad_child)
+                 (directory/'receipt.json').write_text(json.dumps(proof));(directory/'child.json').write_text(json.dumps(child));(directory/'child.log').write_text('raw')
+                 paths += [directory/name for name in ['receipt.json','child.json','child.log']]
+-            q={'source_manually_reviewed':True,'CPU_both_hosts_passed':True,'source_sha256':sources,'test_ids':['one'],
+-               'fixture_binary':str(p/'build-FIRST/q8_share_check'),'fixture_sha256':g.sha(p/'build-FIRST/q8_share_check'),
++            q={'source_manually_reviewed':True,'CPU_both_hosts_passed':True,'source_sha256':sources,'test_ids':['one'],'source_input_sha256':{},
++               'fixture_binary':str(p/'build-FIRST/head_batch_check'),'fixture_sha256':g.sha(p/'build-FIRST/head_batch_check'),
+                'files':{str(path):g.sha(path) for path in paths}}
+             if missing is not None:del q['files'][str(p/missing)]
+             file=p/'gpu-qualification.json';file.write_text(json.dumps(q));digest=g.sha(file)
+-            with patch.object(g,'P',p),patch.object(g,'R',r),patch.object(g,'E',e),patch.object(g,'WINDOW_SHA',g.sha(window)),patch.object(g,'COORDINATE_SHA',g.sha(coordinate)):
++            with patch.object(g,'P',p),patch.object(g,'R',r),patch.object(g,'E',e),patch.object(g,'WINDOW_SHA',g.sha(window)),patch.object(g,'COORDINATE_SHA',g.sha(coordinate)),patch.object(g,'startup_proof'):
+                 if missing is None and bad_child is None:self.assertEqual(g.qualified(digest)['qualification_sha256'],digest)
+                 else:
+                     with self.assertRaises(ValueError):g.qualified(digest)
+@@ -331,21 +332,24 @@
+             self.assertNotIn(alias/'descendant',touched)
+     def test_existing_metadata_refused_for_new_action(self):
+         with tempfile.TemporaryDirectory() as d,patch.object(g,'E',pathlib.Path(d).resolve()):
+-            (g.E/'results').mkdir();meta=g.E/'maintenance/decode-q8-sharing-kernel-20261029T000000Z';meta.mkdir(parents=True)
++            (g.E/'results').mkdir();meta=g.E/'maintenance/decode-head-batching-kernel-20261029T000000Z';meta.mkdir(parents=True)
+             with self.assertRaises(ValueError):g.output_paths(g.E/'results'/meta.name,metadata_state='absent')
+     def test_pending_state_symlink_refused_before_read(self):
+         with tempfile.TemporaryDirectory() as d,patch.object(g,'E',pathlib.Path(d).resolve()):
+-            meta=g.E/'maintenance/decode-q8-sharing-kernel-20261029T000000Z';meta.mkdir(parents=True)
++            meta=g.E/'maintenance/decode-head-batching-kernel-20261029T000000Z';meta.mkdir(parents=True)
+             (meta/'state.json').symlink_to('/absent')
+             with self.assertRaises(ValueError):g.pending_paths(meta)
+ 
+-class Q8Specific(unittest.TestCase):
++class HeadSpecific(unittest.TestCase):
++    def test_case_inventory_matches_actual_frozen_fixture_manifest(self):
++        manifest=json.loads((g.P/'candidate-files.json').read_text())
++        self.assertEqual(g.expected_case_ids(),['PASS '+name for name in manifest['GPU_case_ids_per_device']])
+     def test_exact_frozen_case_inventory(self):
+         ids=g.expected_case_ids()
+-        self.assertEqual(len(ids),121);self.assertEqual(len(set(ids)),121)
++        self.assertEqual(len(ids),385);self.assertEqual(len(set(ids)),385)
+         self.assertEqual(ids[0],'PASS q8-reader-bytes-and-guards')
+-        self.assertEqual(ids[1],'PASS mv-k256-c1-n7-p0')
+-        self.assertEqual(ids[-1],'PASS mv-k32768-c16-n9-p2')
++        self.assertEqual(ids[1],'PASS head-k5120-n7-pad0-r1-p0')
++        self.assertEqual(ids[-1],'PASS head-k5120-n129280-pad1-r16-p3')
+     def test_legacy_IQ2_output_is_not_new_evidence(self):
+         with self.assertRaises(ValueError):g.check_result('ALL 52 IQ2_S checks passed device0',0,0)
+     def test_unplanned_stdout_rejected(self):
+@@ -361,7 +365,8 @@
+         self.root=pathlib.Path(self.temp.name).resolve()
+         class Base:
+             def restore_ds(self):return 'restored'
+-        self.host=g.host_class(types.SimpleNamespace(ChunkProductionHost=Base))()
++        with patch.object(g,'startup_host',return_value=Base):
++            self.host=g.host_class(types.SimpleNamespace(ChunkProductionHost=Base))()
+         self.host.audit_dir=self.root;self.host.start_binding=None;self.host.baseline_binding=BIND
+         self.fields={'InvocationID':BIND['invocation'],'MainPID':'0','ActiveState':'inactive',
+                      'ExecMainCode':'1','ExecMainStatus':'0','Result':'success'}

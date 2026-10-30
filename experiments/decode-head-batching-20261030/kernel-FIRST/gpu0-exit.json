@@ -1,0 +1,18 @@
+{
+  "pid": 2845478,
+  "identity": {
+    "pid": 2845478,
+    "same_executable": true,
+    "argv": [
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/build-FIRST/head_batch_check",
+      "--head-batch-check",
+      "0"
+    ],
+    "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service\n",
+    "start_ticks": 160166964
+  },
+  "returncode": 1,
+  "primary": "RuntimeError('FIRST fixture failed: exit1')",
+  "cleanup_errors": [],
+  "retry": false
+}
