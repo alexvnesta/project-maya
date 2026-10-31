@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "scores": [
+    {
+      "id": "ms-prose-main",
+      "passed": true,
+      "status": "PROSE_NATURAL_SOURCE_AND_STATE_PASSED"
+    }
+  ],
+  "rows": [
+    {
+      "id": "ms-prose-main",
+      "passed": true,
+      "native": {
+        "generated": 5653,
+        "prompt_tokens": 169,
+        "prompt_ms": 1926.9,
+        "decode_ms": 90594.6,
+        "finish": "stop",
+        "drafts_accepted": 3534,
+        "drafts_offered": 4091,
+        "reused": 0,
+        "hits": 1518853,
+        "lookups": 1568115
+      },
+      "observed_tokens": 5653,
+      "native_decode_tokens_per_second": 62.39886262536619,
+      "client_seconds": 92.54687266703695,
+      "content_characters": 5232,
+      "reasoning_characters": 19215,
+      "manual_review_pending": true,
+      "general_quality_or_equivalence_claim": false
+    }
+  ],
+  "retry": false,
+  "automatic_next_arm": false,
+  "quality_or_performance_pass": false,
+  "manual_review_required": true
+}

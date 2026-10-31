@@ -1,0 +1,13 @@
+# Maya1.1.45 / public Maya-S / TP2 /1M: first natural prose observation
+
+Same unchanged original ms-prose-main169token fixture, temperature1/top_p1/seed1/effort100/benchmark32768. Context1,048,576 TOTAL, output allowance262,144/nativeimages/L22scale1all40mainblocks/DSpark.65 andmax4 preserved. Nativeadff28a2/build5c9ba2f, publicMayaS pack. No diagnostic dumps/roundlog/nativeFSIZE during timing. Actual native file limit observed unlimited, no mutation. No newnative build.
+
+FIRST60controller/22profile/14auditor and61prospective recovery controls passed EACH physicalMac/Ubuntu before admission with matching source/input maps andtestIDs. Immutable qualification `bbe156dfa3b48de88da9563c0749a66b9ede021f46c3d70eff0b0ee03f003dd5`,2467filepins. Earlier finiteFTP2 HOLD preserved; separate184rowfullfinite state diagnostic passed before timing.
+
+Observed **5653generated tokens /90594.6ms =62.3988626254tok/s**, including reasoning and finalanswer. Client92.546872667s; prompt169tokens/1926.9ms/zero reuse. Natural stop, no cap/partial/retry. The entire19,215character reasoning and5,232character answer were manually read:930words, all requested hash-table/chaining/load-factor/resizing/complexity topics, explicitly invented cedar/maple/pine assignments, continuous prose and exact requested final sentence. This is one expository fixture, not general modelquality proof. Complexity explanation assumes ordinary fixed-key-length cost when discussing table-size scaling.
+
+Actual DSpark1727rounds,7955.171msdraft/61358.091msverify. Speculative accepted/offered3534/4091 includes1002/1038from97promptlookup rounds; do not attribute allaccepted drafts to DSpark. Full actual native/cache/placement/T/PID/DONE/SSE/source counts retained. Actual CPU6490RAM-resident/GPU8870trunk slots; TP2defaultplacement. Native/API/windowexit0, kernelclean, rootminimum255.605GiB/systemswap-outdelta0, private80GiB/zero-swap fence restored and collected. Previous qualified native92/chunk4096 production restored and public401/auth200/assembledREADY-stop-DONE verified as dated native403808. FIRST independentterminal auditor exited0.
+
+This is a qualified **single candidate prose observation**, not a replicated comparative speed gain, overall task-speed win or deployment admission. Latest engine TP1, longer prefill/quality/image/cancellation tests, S2publichybrid andUnsloth comparisons remain pending. Allocated1Mcontext/256Kallowance are preserved; nearfilled1M/full256Kgeneration remain unproven.
+
+Archive contains only own frozen source/CPU/prosefixture/runtime/window/restoration receipts, no modelweights/caches/images/userwork/secrets. See `ARCHIVE_MANIFEST.json` for original canonicalRpaths and hashes. The original stableproduction remains selected.

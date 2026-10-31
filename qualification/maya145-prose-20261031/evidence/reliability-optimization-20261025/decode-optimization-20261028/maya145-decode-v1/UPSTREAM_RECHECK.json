@@ -1,0 +1,92 @@
+{
+  "checked_utc": "2026-10-31 20:22:35 UTC",
+  "maya": [
+    {
+      "sha": "6ecbd3cbc5330b57f70cd5cf8a5c42eb8ef950cc",
+      "date": "2026-10-31T16:34:32Z",
+      "title": "v1.1.45",
+      "author": "mw00",
+      "url": "https://github.com/mw00/project-maya/commit/6ecbd3cbc5330b57f70cd5cf8a5c42eb8ef950cc"
+    },
+    {
+      "sha": "c968b9486524ca4f23da1cc3ff55e6f5bb1251a2",
+      "date": "2026-10-31T16:21:43Z",
+      "title": "DeepSeek: a long prompt on one GPU no longer ends in an illegal memory access after a few requests - the recent slots' fills are done and mapped before a prompt or a picture borrows the tail they lie in, also once the one-GPU decode path turned itself off after its timing",
+      "author": "mw00",
+      "url": "https://github.com/mw00/project-maya/commit/c968b9486524ca4f23da1cc3ff55e6f5bb1251a2"
+    },
+    {
+      "sha": "5d20b0e8fd7c15fde2a9f2b4eac5e9776883690b",
+      "date": "2026-10-31T12:50:42Z",
+      "title": "v1.1.44",
+      "author": "mw00",
+      "url": "https://github.com/mw00/project-maya/commit/5d20b0e8fd7c15fde2a9f2b4eac5e9776883690b"
+    },
+    {
+      "sha": "dacf26243ec7f767df153b7ff4785c5478c72b05",
+      "date": "2026-10-31T11:56:25Z",
+      "title": "docs/MODELS.md: the unsloth rows in short - who each is for",
+      "author": "mw00",
+      "url": "https://github.com/mw00/project-maya/commit/dacf26243ec7f767df153b7ff4785c5478c72b05"
+    },
+    {
+      "sha": "201223c2b30222aae9f07f3fcfc9f5b065ae53e1",
+      "date": "2026-10-31T11:53:00Z",
+      "title": "DeepSeek: unsloth's UD-IQ1_M is a listed choice in the setup (KLD 0.198, about 140 GB of VRAM + RAM plus 110 GB of n-gram tables)",
+      "author": "mw00",
+      "url": "https://github.com/mw00/project-maya/commit/201223c2b30222aae9f07f3fcfc9f5b065ae53e1"
+    }
+  ],
+  "cmp170_repository": [
+    {
+      "sha": "1e5a6a84b03c492522d51b301ab9e4ba09339e50",
+      "date": "2026-10-29T02:10:48Z",
+      "title": "DeepSeek-V4.1-Flash-1017 on 2x CMP 170HX: serving config, download/build/pack scripts, guide",
+      "author": "optomiselite",
+      "url": "https://github.com/SeriousRising/ds41-flash-cmp170hx/commit/1e5a6a84b03c492522d51b301ab9e4ba09339e50"
+    }
+  ],
+  "pulls": [
+    {
+      "number": 736,
+      "title": "ds4: an opt-in DMA/host all-reduce for the flow's prompt chunks",
+      "url": "https://github.com/mw00/project-maya/pull/736",
+      "author": "hajekt2",
+      "state": "open",
+      "merged": false,
+      "updated_at": "2026-10-31T18:38:33Z",
+      "head_repository": "hajekt2/project-maya",
+      "head_sha": "3869542f2df7275db2d2aeaac96f5e461108a97f"
+    },
+    {
+      "number": 732,
+      "title": "ds4: the engine's end sets aside every parallel conversation, not only the bound one",
+      "url": "https://github.com/mw00/project-maya/pull/732",
+      "author": "hajekt2",
+      "state": "open",
+      "merged": false,
+      "updated_at": "2026-10-31T15:17:58Z",
+      "head_repository": "hajekt2/project-maya",
+      "head_sha": "de510efdd6bb354efec1ce67a41ebf3de4a4a59b"
+    },
+    {
+      "number": 623,
+      "title": "CPU lane: IQ1_M rows with folded scales and int16 sums, IQ2_XS one-token own rows (bit for bit ggml-cpu dot)",
+      "url": "https://github.com/mw00/project-maya/pull/623",
+      "author": "SeriousRising",
+      "state": "closed",
+      "merged": false,
+      "updated_at": "2026-10-30T08:38:09Z",
+      "head_repository": "SeriousRising/project-maya",
+      "head_sha": "b772203a4acfd7e88f7476fc7a6f33359b26f549"
+    }
+  ],
+  "conclusions": [
+    "Latest upstream main remains v1.1.45/6ecbd3c, already built as candidateadff; selected productionnative92 unchanged.",
+    "SeriousRising/cmp170HX public recipe has no newer commit thanOct29initialrecipe; not a newly published privateS2artifact.",
+    "PR736 only changes3plusGPU flow allreduce, explicitly leaves2member groups unchanged; inapplicable to current2GPU TP2 benchmark.",
+    "PR732 only parallel shutdown of idle conversations; serial setup has no matching loss, do not adopt unrelated scheduler changes.",
+    "Multiple authors contribute170HXPRs; no verified DiscordMbelli-to-GitHubidentity link."
+  ],
+  "not_a_GPU_test_or_promotion": true
+}

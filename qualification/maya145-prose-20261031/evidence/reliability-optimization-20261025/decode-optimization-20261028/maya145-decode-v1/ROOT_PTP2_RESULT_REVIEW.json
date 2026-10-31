@@ -1,0 +1,70 @@
+{
+  "utc": "2026-10-31T20:47:29.580661+00:00",
+  "decision": "ACCEPT_ONE_UNCHANGED_NATURAL_PROSE_DECODE_OBSERVATION_ONLY",
+  "qualification_sha256": "bbe156dfa3b48de88da9563c0749a66b9ede021f46c3d70eff0b0ee03f003dd5",
+  "entire_prose_and_reasoning_manually_read": true,
+  "instruction_compliance": {
+    "words": 930,
+    "requested_words": [
+      800,
+      1000
+    ],
+    "continuous_prose_no_code_tables_lists_headings": true,
+    "hash_function_buckets_collision_chaining_load_factor_resizing": true,
+    "expected_constant_vs_worst_linear_lookup": true,
+    "cedar_maple_pine_invented_assignments_explicit": true,
+    "exact_requested_last_sentence": true,
+    "complexity_scope": "Expository expected complexity in number of entries, usual fixed-key-length assumption; no formalalgorithm verification or generalmodelquality claim"
+  },
+  "generated_tokens": 5653,
+  "native_decode_ms": 90594.6,
+  "native_decode_tps": 62.39886262536619,
+  "client_full_seconds": 92.54687266703695,
+  "prompt_tokens": 169,
+  "prompt_ms": 1926.9,
+  "cold_prompt_reused": 0,
+  "drafter_execution": {
+    "configured_and_loaded_separate": true,
+    "execution_proven": true,
+    "draft_rounds": 1727,
+    "draft_ms": 7955.171,
+    "verify_ms": 61358.091,
+    "acceptance_can_be_zero": true,
+    "samples": 707,
+    "raw_lines_sha256": "6275dfb025f27698a896e02ebbecb74c3816b306a35683fc391f64aacfc9e416"
+  },
+  "all_speculative_accepted_offered": [
+    3534,
+    4091
+  ],
+  "lookup_accepted_offered_included": [
+    1002,
+    1038
+  ],
+  "reasoning_chars": 19215,
+  "answer_chars": 5232,
+  "native_API_window_exit": [
+    0,
+    0,
+    0
+  ],
+  "kernelclean": true,
+  "resources": {
+    "root_min_GiB": 255.60535430908203,
+    "system_swapout_delta_bytes": 0,
+    "swap_not_attributed_to_model": true
+  },
+  "native_file_limit_unlimited_no_mutation": true,
+  "no_logit_dump_or_round_logging_during_timing": true,
+  "terminal_audit_sha256": "649e2341a699b2b02e9d051ad452e28fcfd45729293be4ffa5914787885584b0",
+  "selected_binding": {
+    "invocation": "cd21c0eb03b7487eb4aa1f91ef87fea3",
+    "main_pid": 403753,
+    "native_pid": 403808,
+    "native_start_ticks": 174741736
+  },
+  "comparative_gain_or_general_quality_or_promotion": false,
+  "nearfilled1M_or_full256K_generation_tested": false,
+  "prior_failures_HOLD_preserved": true,
+  "automatic_next_arm": false
+}

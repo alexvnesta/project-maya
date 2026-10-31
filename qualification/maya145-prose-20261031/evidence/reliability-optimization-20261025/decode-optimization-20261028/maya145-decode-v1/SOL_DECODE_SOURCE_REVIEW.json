@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-31T20:23:12.999651+00:00",
+  "reviewer": "/root/sol_cuda_lifecycle_review",
+  "model": "gpt-6.1-sol",
+  "decision": "NO_CONCRETE_BLOCKER_TO_FIRST_BOUNDED_CPU",
+  "scope": "Full decode-only source/test delta against previously reviewed P2/state plus recovery namespace adaptation",
+  "source_sha256": {
+    "current_runtime.py": "ea71181b6124dd8643891175238f03eba5f6319e6beab51df6d6d36583fba922",
+    "current_controls.py": "43442b5d4ea6f61dd32504078d55a60e4ccad337fe05a8b28a2e958cd196f798",
+    "current_compat.py": "3807bec7d189bc7c8114016ec3d2fcad0cdfbef45dc32618a4adcc1d21cd2d3b",
+    "current_audit.py": "0f785624d797d66f32ca8e292215663c628e481c17748b03db3164aef307a470",
+    "test_current_mode.py": "636da38ae38060e2682cc8a2dadb3c608b2d6fcea2af2aed8fb32898cfc42a2f",
+    "test_current_audit.py": "0971559fef3addffdc00a0d0ffe2345c4fb61a6ce2b9aaa2610cdbd6996a8ed0",
+    "engine_profile.py": "71b753a360932154bdfaac35dc8378011bcd1de4594baebc0dea8baf44430c01"
+  },
+  "recovery_source_sha256": {
+    "recovery.py": "56c714954cd42f1bba6ade037e6259adb343569d8c08c084632ef548ab4462c3",
+    "test_recovery.py": "13019eb15f1f78d0974a63e61492bbce8296acb1852577180a5d2b5aa6a3c79a",
+    "run_cpu.py": "9ed712d30c3b17d8e417aa68703e82c7f0516d70c0fb0c5f7292c89e47091726"
+  },
+  "findings": [
+    "Exact169token request/fullcap/drafter/1M+256K/one-request closure and unlimited nativeFSIZE source gate preserved",
+    "Source score allows short positive response; sustained800to1000word compliance requires full output manual review before calling it sustained",
+    "No modelquality/comparative gain/promotion admission"
+  ],
+  "root_postreview_consistency_fix": "reject contradictory nonnull partialreason in auditor, matching preexisting suppliednegative test",
+  "GPU_or_CPU_executed_by_reviewer": false
+}

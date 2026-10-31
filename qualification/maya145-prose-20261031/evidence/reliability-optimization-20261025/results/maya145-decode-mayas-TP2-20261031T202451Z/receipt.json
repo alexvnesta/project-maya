@@ -1,0 +1,87 @@
+{
+  "mode": "decode",
+  "arm": "PTP2",
+  "arm_results": {
+    "complete": true,
+    "scores": [
+      {
+        "id": "ms-prose-main",
+        "passed": true,
+        "status": "PROSE_NATURAL_SOURCE_AND_STATE_PASSED"
+      }
+    ],
+    "rows": [
+      {
+        "id": "ms-prose-main",
+        "passed": true,
+        "native": {
+          "generated": 5653,
+          "prompt_tokens": 169,
+          "prompt_ms": 1926.9,
+          "decode_ms": 90594.6,
+          "finish": "stop",
+          "drafts_accepted": 3534,
+          "drafts_offered": 4091,
+          "reused": 0,
+          "hits": 1518853,
+          "lookups": 1568115
+        },
+        "observed_tokens": 5653,
+        "native_decode_tokens_per_second": 62.39886262536619,
+        "client_seconds": 92.54687266703695,
+        "content_characters": 5232,
+        "reasoning_characters": 19215,
+        "manual_review_pending": true,
+        "general_quality_or_equivalence_claim": false
+      }
+    ],
+    "retry": false,
+    "automatic_next_arm": false,
+    "quality_or_performance_pass": false,
+    "manual_review_required": true,
+    "native_request_count": 1,
+    "drafter_execution": {
+      "configured_and_loaded_separate": true,
+      "execution_proven": true,
+      "draft_rounds": 1727,
+      "draft_ms": 7955.171,
+      "verify_ms": 61358.091,
+      "acceptance_can_be_zero": true,
+      "samples": 707,
+      "raw_lines_sha256": "6275dfb025f27698a896e02ebbecb74c3816b306a35683fc391f64aacfc9e416"
+    },
+    "mode1_activation": {
+      "mode": 1,
+      "source": 20,
+      "retained_rows": 2668,
+      "activation_early_rows": []
+    },
+    "DSI1_leftovers": []
+  },
+  "seconds_including_load": 790.5799388610758,
+  "private_cleanup_passed": true,
+  "resource_fence_terminal": {
+    "passed": true,
+    "events_after": {
+      "low": 0,
+      "high": 0,
+      "max": 1080,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 1080,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "cache_charging_disclosure": "memory.current/peak include charged file cache and pinned memory; not process RSS"
+  },
+  "manual_review_pending": true,
+  "not_a_promotion": true
+}
