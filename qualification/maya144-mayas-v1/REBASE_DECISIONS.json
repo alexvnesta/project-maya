@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-31T14:41:55.085883+00:00",
+  "upstream": "5d20b0e8fd7c15fde2a9f2b4eac5e9776883690b",
+  "preserved_original": "03ea661ac2adc9cfa04bf38bb21aaa1598834c61",
+  "backup_branch": "archive/prefill-before-maya144-20261031",
+  "candidate_worktree": "/Users/alex/project-maya-current-mayas-20261031",
+  "candidate_branch": "alex/maya144-mayas-20261031",
+  "current_skipped_commit": "2f7c02f",
+  "prospective_dropped_commits": [
+    "pick 5b99b4b26fc4b4bd13a8f40990cfaf1bca2afd56 # ds4: DS4_ROUTE_FUSE - a decoded token's router stage on the lead in two launches instead of four",
+    "pick 27cc50dda09c1a4b54e0fb8d63763fb71e373004 # ds4: DS4_ROUTE_FUSE - nothing published after a launch that did not go in; one eligibility check before any enqueue",
+    "pick 56d6f2e55763221741b302c83639f12568ea4e80 # ds4: DS4_HC_FUSE=2 - the HC split + norm fuse for a decode window's rows too (parked, not built)",
+    "pick b508b3d73f0ac6da4191b6ddc7fa4aa5230f5f97 # ds4: DS4_HC_FUSE=2 - the FFN's split rounds its input too, for the shared expert's w1 / w3",
+    "pick d329c33f0e9553621beb8bf12a60432e77e41368 # ds4: DS4_ROUTE_FUSE=2 - the fused router stage for a decode window's rows too",
+    "pick c24a8a05f7e39d7a6416cb2df5186eb1cdbeaf6e # docs: DeepSeek's fused decode launches - MAYA_DS4_HC_FUSE and MAYA_DS4_ROUTE_FUSE",
+    "pick ac00bb41b5143ca331cac888759d9fcef8bfd5f6 # ds4: DS4_DECODE_TRIM - the decode's last four small trims, each exact and checked at load",
+    "pick 46c1009dbfeab4d11e9b92a7ddb73648a4274ae9 # docs: DeepSeek's decode trims - MAYA_DS4_DECODE_TRIM",
+    "pick f8cdf3bea37009ef48cde571ec5e3d8e5d0e47db # ds4: drop the experts' pages as they are copied, and set the load's threads and file order",
+    "pick ba498c18bde1e4cd0aca365f1576aff64d7382d7 # ds4: DS4_DRAFT_VRAM - the most VRAM experts each DSpark block keeps (opt-in; unset, all of them as before)",
+    "pick 6302ef8c2183d292245c8b57afe747e065885713 # ds4: DS4_DRAFT_VRAM - a cap under a mixed-precision block's experts refuses the load",
+    "pick dc9b40c507daf07ec82fb8c1a2ef618a7845d9d0 # docs: the DSpark blocks' VRAM experts - MAYA_DS4_DRAFT_VRAM",
+    "pick 510f142a123dda9cd0ca079b06189b51f92d84d8 # Port PR520 prompt-copy performance subset without model-format or model-download changes",
+    "pick efb04f8447d042bb5446d44de853179dbd3dc64e # Retain qualified Q5 shared reference and check new copy cleanup and launch results",
+    "pick e6034d7da591bc5c848d7f6143387343904ea34e # Add exact Q5_K shared sums and byte-priced cache migration candidate"
+  ],
+  "reason": "Current upstream already carries newer HC/route/trim/loader/draft placement and promptcopy implementations; do not replay earlier implementations over them. Retire the losing local Q5/cache runtime bundle while preserving all archived raw results and original branch.",
+  "projection_guard": "First resolvedcommit retains complete LoRAtensor bounds, all-expert direction equality, finite scale bound, main-only projection and perGPUstartup reference check.",
+  "native_or_service_action": false,
+  "rebase_complete": true,
+  "tests_or_promotion_claim": false,
+  "additional_upstream_present": [
+    "2b7ce48 count-delta profile tool: actual tool sources identical; current upstream doc already includes784ef86 clarification",
+    "784ef86 profile clarification already inupstream"
+  ],
+  "completed_upstream": "5d20b0e8fd7c15fde2a9f2b4eac5e9776883690b"
+}

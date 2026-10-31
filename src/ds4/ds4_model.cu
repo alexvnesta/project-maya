@@ -3316,7 +3316,8 @@ struct Model::Impl {
                 if (!check_ablate(d, err)) return false;
             }
         }
-        // (MAYA_DS4_Q8_BATCH: its line now, at load; MAYA_DS4_Q8_CHECK=1: the batched rounding checked on every device first)
+        // (MAYA_DS4_Q8_BATCH / _SHARE: their lines now, at load; MAYA_DS4_Q8_CHECK=1: the batched rounding with sharing
+        //  checked on every device first)
         if (pk.gguf) {
             gg::q8_batch();
             gg::q8_share();
@@ -4543,7 +4544,6 @@ struct Model::Impl {
             if ((decode_trim & 12) && !trim_copy_check(err)) return false;
             if (route_fuse_win && !(route_fuse_check(err, 3) && route_fuse_check(err, kWin)))   // (=2: windows too)
                 return false;
-            if (cp_dma && !prompt_copy_check(err)) return false;   // TP1 included, before any request
             if (tp_uneven && (std::getenv("STRATA_DS4_TP_CHECK") != nullptr || std::getenv("DS4_TP_CHECK") != nullptr) &&
                 !tp_check(err))
                 return false;   // (MAYA_DS4_TP_CHECK=1: at load, no request yet)
@@ -4603,6 +4603,7 @@ struct Model::Impl {
                 workers.back()->start();
             }
         if (cp_pin_last()) cp_pin();   // (#589: after every pinned buffer above, before the paths are timed)
+        if (!prompt_copy_check(err)) return false;   // final pin state, including TP1; before calibration or requests
 #if defined(STRATA_USE_HIP)
         if (!init_peer_ar(err)) return false; // after expert placement: optional scratch does not shrink the expert cache
 #endif
@@ -12788,7 +12789,7 @@ struct Model::Impl {
         };
         // Each split format/rotation/member and standalone format/device: an expert from RAM
         // copy and one from the file, through the device (tp_copy_member)
-        int n = 0;
+        int n = 0, eligible = 0;
         std::vector<std::string> done;   // (each key's first layer: a split one's format and rotation, else its format)
         for (const Layer& l : L) {
             const bool sp = split(l);
@@ -12801,11 +12802,16 @@ struct Model::Impl {
                 const Chunk* cp = (size_t) x.dev < chunks.size() ? chunks[(size_t) x.dev].get() : nullptr;
                 if (cp == nullptr || cp->stage == nullptr || cp->flow) continue;
                 any = true;
+                ++eligible;
                 int e_ram = -1, e_file = -1;
                 for (int e = 0; e < l.n_exp; ++e) {
                     const bool in_ram = !l.ram.empty() && l.ram[(size_t) e] >= 0;
                     if (in_ram && e_ram < 0) e_ram = e;
                     if (!in_ram && e_file < 0) e_file = e;
+                }
+                if (e_ram < 0 && e_file < 0) {
+                    err = "Prompt copy check: eligible member has no expert to check";
+                    return false;
                 }
                 for (int e : {e_ram, e_file}) {
                     if (e < 0) continue;
@@ -12826,7 +12832,8 @@ struct Model::Impl {
             }
             if (any) done.push_back(key);
         }
-        if (cp_dma && n == 0) { err = "Prompt copy check: DMA enabled but no copy path checked"; return false; }
+        if (eligible == 0)
+            std::fprintf(stderr, "ds4: prompt copy check: N/A (no staged non-flow member; flow paths are not checked here)\n");
         if (n > 0)
             std::fprintf(stderr, "ds4: TP check: the prompt path's copies passed (%d experts' parts, from RAM%s and from "
                                  "the file, on the devices byte for byte)\n", n, cp_dma ? " in place" : "");
@@ -12944,7 +12951,6 @@ struct Model::Impl {
             std::fprintf(stderr, "ds4: TP check: the flow's copies passed (%d of the formats', rotations' and members' "
                                  "copies) (DS4_FLOW_TP)\n", n);
         }
-        if (!cp_dma && !prompt_copy_check(err)) return false;
         std::fprintf(stderr, "ds4: TP check passed (%zu expert formats and rotations, all the split layers have) "
                              "(DS4_TP_CHECK)\n", seen.size());
         return true;

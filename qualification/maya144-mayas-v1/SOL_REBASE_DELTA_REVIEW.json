@@ -1,0 +1,58 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-10-31T14:47:44.758704+00:00",
+  "status": "CHANGES_REQUESTED",
+  "scope": "Targeted local rebase delta source integration review; no runtime admission",
+  "workspace": "/Users/alex/project-maya-current-mayas-20261031",
+  "head": "acce1826906de0c96596fc837af87523d8a62142",
+  "upstream_main": "5d20b0e8fd7c15fde2a9f2b4eac5e9776883690b",
+  "source_sha256": {
+    "src/ds4/ds4_ablate.hpp": "6af30f3ad1f79eccbcf0f42b6a8b97dab9d9fb9e4a65ea2afb5bfe0bb3ba8599",
+    "src/ds4/ds4_model.cu": "e1f46cf64b78c72a1352cf129808c72ca8265e0a754378a76fc4c53356fbae43",
+    "src/ds4/ds4_kernels.cu": "e9eec7bee9c94d2a39489d2d4c7d2c6efb3f8fbed8e57466128b84855cf7c309",
+    "tests/ds4_ablate_test.cpp": "892c6fb64e0b3729f197cb7f35170f208b914d8c235e02a6c68df4cb86a2578a"
+  },
+  "scoped_diff_sha256": "c582027482052b72551cd36cc20794ba965e031ee79f317af9f840e6cb647f49",
+  "kernels_identical_upstream": true,
+  "findings": [
+    {
+      "id": "SOL_REBASE_FLOW_FALSE_REFUSAL",
+      "priority": "P1",
+      "file": "src/ds4/ds4_model.cu",
+      "lines": [
+        12798,
+        12823
+      ],
+      "title": "Do not require a non-flow copy sample when all prompt devices use flow",
+      "finding": "The new unconditional startup check runs whenever cp_dma is true, but its member filter skips cp->flow. Current upstream enables flow by default for TP1 all-GGUF devices (4420-4449); TP2 can also put all members on flow with DS4_FLOW_TP=1. When copied experts are successfully pinned, cp_dma is true but no non-flow member is eligible, so n remains zero and line12823 rejects an otherwise supported load. This is a source-level startup regression introduced by making the formerly opt-in check unconditional.",
+      "requested_change": "Determine whether the non-flow prompt-copy path is actually applicable before requiring samples. An all-flow configuration should report a bounded not-applicable result for this check, or use the separate existing flow copy checker where intended. Do not claim standalone prompt-copy coverage for flow. Cover TP1 all-flow and TP2 all-flow admission decisions without requiring a model run."
+    },
+    {
+      "id": "SOL_REBASE_PIN_LAST_SKIPS_CHECK",
+      "priority": "P2",
+      "file": "src/ds4/ds4_model.cu",
+      "lines": [
+        4547,
+        4606
+      ],
+      "title": "Run the pinned prompt-copy check after late pinning changes cp_dma",
+      "finding": "The check at4547 executes before the current upstream cp_pin_last()/cp_pin() call at4606. On Windows (default pin-last) or explicit DS4_PIN_LAST=1, cp_dma is still false at4547; successful late pinning then enables the direct DMA path after the check. Without optional TP checks the startup validation is entirely skipped. Even if the optional non-DMA check ran, it exercised the pre-pinning staged path, not the newly enabled direct path.",
+      "requested_change": "Place the guarded check after the final cp_pin decision and before any actual request or calibration use of that path, preserving startup/thread ordering. Keep the all-flow applicability distinction from the first finding. Cover successful late pinning and late pin failure decisions."
+    }
+  ],
+  "bounded_acceptance": [
+    "All six changed ablate call sites pass the actual layer index; current layer initialization uses il>=g.nl for MTP, so target_layer excludes drafter blocks consistently.",
+    "Projection signature matches unchanged upstream project_out; reference formula matches the upstream kernel operation. Numerical tolerance and real device execution remain unqualified.",
+    "Complete declared B-tensor byte bounds precede all-expert comparisons, and shape short-circuiting protects dimension indexing. The effective scale check follows metadata multiplication.",
+    "Mixed GGUF expert types use the current upstream expert_type-aware format key and tp_copy_member rather than reinstating obsolete Q5/cache kernels. No additional ABI mismatch identified in the inspected delta."
+  ],
+  "validation_boundary": {
+    "tests_run": false,
+    "project_modules_imported": false,
+    "compiler_or_native_execution": false,
+    "ubuntu_accessed": false,
+    "source_edited": false,
+    "production_changed": false,
+    "promotion_granted": false
+  }
+}
