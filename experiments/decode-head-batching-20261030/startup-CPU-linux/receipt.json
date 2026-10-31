@@ -1,0 +1,36 @@
+{
+  "passed": false,
+  "controls": 22,
+  "test_ids": [
+    "test_head_startup.Capture.test_actual_old_method_reproduces_empty_snapshot_transition_failure",
+    "test_head_startup.Capture.test_binding_receipt_fault_is_not_suppressed",
+    "test_head_startup.Capture.test_bool_negative_or_float_main_is_fault",
+    "test_head_startup.Capture.test_disappearing_bound_native_is_fault",
+    "test_head_startup.Capture.test_disappearing_observed_main_is_fault",
+    "test_head_startup.Capture.test_empty_invocation_after_any_frozen_owner_is_fault",
+    "test_head_startup.Capture.test_initial_zero_never_queries_or_claims_native",
+    "test_head_startup.Capture.test_invocation_replacement_at_zero_is_fault",
+    "test_head_startup.Capture.test_native_absence_does_not_claim_or_emit",
+    "test_head_startup.Capture.test_native_replacement_never_recaptured",
+    "test_head_startup.Capture.test_native_snapshot_error_is_not_suppressed",
+    "test_head_startup.Capture.test_new_method_waits_then_captures_same_initial_transition",
+    "test_head_startup.Capture.test_old_or_empty_invocation_is_not_claimed",
+    "test_head_startup.Capture.test_other_unit_state_does_not_query_native",
+    "test_head_startup.Capture.test_positive_main_replacement_is_fault",
+    "test_head_startup.Capture.test_positive_stable_owner_captured_once",
+    "test_head_startup.Capture.test_positive_unit_change_during_snapshot_remains_fault",
+    "test_head_startup.Capture.test_reverted_old_invocation_after_any_frozen_owner_is_fault",
+    "test_head_startup.Factory.test_exact_owner_wrapper_preserves_other_methods",
+    "test_head_startup.Factory.test_foreign_module_refused_before_reading_owner",
+    "test_head_startup.OriginalSupervisor.test_actual_unchanged_1250_deadline_and_owned_CLI_cleanup",
+    "test_head_startup.OriginalSupervisor.test_actual_unchanged_supervisor_one_start_zero_then_positive"
+  ],
+  "source_sha256": {
+    "head_startup.py": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "test_head_startup.py": "33c175991fb6fada1b7c715881578615aa48dcb2e71cee6cf6ae73f4a75d3e06"
+  },
+  "GPU_execution": false,
+  "compiler_execution": false,
+  "native_execution": false,
+  "original_owner_sha256": "b2bb7676969661f98bf77d9969a840a4fcb44367f9644ab6f05ac19d70709056"
+}

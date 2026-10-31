@@ -1,0 +1,7 @@
+Pack-v3 source is frozen for independent Root review. No imports, tests, tokenizer execution, constructor, remote or model actions ran. The proposed groups contain 94 metadata/guard controls and 31 constructor controls, each with seven exact inputs and unchanged 30-second CPU / 512-MiB Linux / 90-second wall bounds.
+
+The two production changes accept the exact published JoyAI tokenizer fingerprint while recording the existing packer’s deepseek3 normalization, and admit only the pinned drafter writer’s 256-byte boundary alignment. The complete public metadata fixture covers 48,795 mapped rows and all eight expected output files; a CPU control invokes the real pinned packer against directory substitutes and tiny protected payload placeholders. The 12 actual padding gaps total 2,424 bytes. Their contents are not read.
+
+The published template remains intact. Four tokenizer files match selected baseline bytes, but the template differs. Shared regex source supports the label normalization only; candidate-specific encoding and model qualification remain outstanding. The local immutable llama.cpp source has the shared branch at lines327–336 and JoyAI mapping at2724–2727.
+
+All earlier failed attempts remain unchanged. The prospective output is still pack-v1/pack-FIRST, and the new proofs and constructor attempt belong only to pack-v3. This review admits no actual construction, model run, fit claim, speed claim or deployment.

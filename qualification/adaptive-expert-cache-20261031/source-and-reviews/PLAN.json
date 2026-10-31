@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-31T03:08:57.215048+00:00",
+  "authorization": "User latest best practices and give adaptive cache a shot; preserve selected model/quality/1M context/output",
+  "fact": "Selected adaptive already on; DS4_STREAM=0 is a separate per-token lane",
+  "source_assessment": "ARCHITECTURE_ASTRA.json",
+  "arms": {
+    "A1": "fixed --no-expert-cache",
+    "B1": "current adaptive default"
+  },
+  "order": [
+    "A1",
+    "B1"
+  ],
+  "single_admission_each": true,
+  "automatic_reverse": false,
+  "automatic_promotion": false,
+  "native_build": false,
+  "panel": "selected quality cold/warm/two-images/return (4), exact original expository prose main (1), original tool/followup/prefill-cancel/recovery (4)",
+  "same_native": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "same_config_basis": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "context": 1048576,
+  "output_allowance": 262144,
+  "benchmark_cap": 32768,
+  "effort": 100,
+  "quality_changes": false,
+  "CPU_qualification": "All new source/tests manually Root+same Astra read before FIRST matching bounded Mac/physicalUbuntu proofs",
+  "bounded_window": {
+    "wall": 1200,
+    "soft": 1000,
+    "cleanup": 200,
+    "startup_from_phase_start": 800,
+    "cancel_reserve": 90,
+    "private_memory_max_GiB": 80,
+    "private_swap_max": 0,
+    "post_owned_stop_MemAvailable_GiB": 88,
+    "root_admission_GiB": 132,
+    "root_runtime_GiB": 120,
+    "swapout_delta_less_than_GiB": 1,
+    "private_cache_GiB": 8,
+    "log_GiB": 4
+  },
+  "download": "Pause cooperatively and verify actual exit/absence before private; resume safely afterward",
+  "profile": "Same immutable copied seed each arm, all writes private, never production learned profile",
+  "timing": "No DS4_PROF/CPU_STATS/CHECK_SWAPS added. Preserve native STAT rounded promo samples; no exact migration-byte claim",
+  "completion": "Any wrong/capped/partial/UNRUN or execution/lifecycle fault blocks pair. No replay or regrade. Separate source/CPU qualified recovery if needed",
+  "promotion": "Neither single pair grants deployment. New measured >=5% native prose-rate improvement with <=3% cold-prefill regression and all nine checks may justify a separately frozen reversed confirmation. Different output lengths preclude overall task-speed claim. Reproducibility plus separate qualified activation required."
+}

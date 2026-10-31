@@ -1,0 +1,74 @@
+{
+  "utc": "2026-10-29T18:27:07.589668+00:00",
+  "decision": "CONDITIONALLY_ADMIT_FIRST_BOUNDED_PURE_DATA_COMPARISON_ONCE_PER_HOST_ONLY",
+  "command_plan_sha256": "3887035ae5be2cbf66d2da93cb584a4350db4050a4a997b187325b1e8f373de1",
+  "program_sha256": "8e1678545170e9edab18b50ff1bd63f200f20f22516d4b2b6d2e4380a6ee4aaa",
+  "source_sha256": {
+    "iq2s_explore.py": "9b1048524d606ada541e31508e89681731d37fe684089f90333686d0ce6357dc",
+    "iq2s_explore_audit.py": "22fc09f89d44964dd9389c8ba7d68ba3692d21679abcf95a17540756068a6f56",
+    "iq2s_explore_config.py": "f99d1923199e5767fe2e86c0932704ee757a4eb3354ba3359a458cbf5100730f",
+    "iq2s_explore_controls.py": "211913552b19efcb8cc5ea452d7361e0f87c7adf0ba1e4b5e4ecef17c38010ee",
+    "iq2s_explore_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+    "iq2s_explore_fixtures.py": "e2e402942282c9d5df23d5aac3e928a8c185056d5d8bc6404bd24179554da4a8",
+    "iq2s_explore_runtime.py": "b3dc8fb5da7db354f29216f3e26680e3ff28c6e6af35fb34c501f3ae7797b4d1",
+    "iq2s_explore_summary.py": "9423c74ffd8b02bdef9cb6f02e211553070e00abd9c774388e9a3f2e959b5f14",
+    "qualify_iq2s_explore_cpu.py": "90c9512999bdfbecce4ee360c439edfc2efd725e20baf01d78f70b2db4bcb708",
+    "test_iq2s_explore.py": "bb313f554795aa2bc02cc115949ea1897c45a5cb7de7327b55956f6b983e51bf",
+    "test_iq2s_explore_config.py": "2f27cb3f0a2e95fea5c411750c4371d7a7a4378335e440c4a785bac07ffdf6ff",
+    "test_iq2s_explore_controls.py": "40679e1bc678aaba653fd292289334d7bd5e1cd992b8fa75d4019c79c5d04299",
+    "test_iq2s_explore_dependencies.py": "8de073c1be007c92647ae88f31ae4dbd14e27416f97b5e660eb978dd1df4f3fb",
+    "test_iq2s_explore_fixtures.py": "f5b17f27c5b237e0203a9ed4006e62758c5d2aea86e7f1a282e5a2a30f054199",
+    "test_iq2s_explore_runtime.py": "15194d835729f989bcc14a382e41272dd5134bfa45ee53d629644833ed62405d",
+    "test_iq2s_explore_summary.py": "8feba6a4ca5b7c5917233adc8206198920486b724c21d48dc34a07710132985c",
+    "test_qualify_iq2s_explore_cpu.py": "19fa4cf9543c05017dca46fbe754cbf2f44ae6d9be5b35b5e5d3c37a48116a5d"
+  },
+  "input_sha256": {
+    "X0/terminal-audit.json": "88821f96485f6bfb326df8fc94d60c7a54f94d1dd28a7c63923129167d8b7040",
+    "X1/terminal-audit.json": "5d1d88915c35d217a19af7acac689171825a55196381e1c5abae47e083a1ca79"
+  },
+  "case_ids": [
+    "sequence1024-cold",
+    "sequence1024-warm"
+  ],
+  "evidence_sha256": {
+    "CPU-result-astra-review.json": "8f3cab76be651cf1c74ad65bf99aa99f768e21ef26584518d067ec03e14fadd7",
+    "X0-result-astra-review.json": "a33f1b392022c628fee04598937d5da1365f5ca36299220f1b88f3ffdd9961fb",
+    "X1-result-astra-review.json": "c8872e332ea123eaa7d7a26f34d7d80adbdcd93b6389088889d1ded8574e0a1a",
+    "exploratory-CPU-corrected-v1-darwin/receipt.json": "5250d9adfe5ddef63759afc675d6bf2da2afacd0c09b4f53613763555f2fdc5b",
+    "exploratory-CPU-corrected-v1-linux/receipt.json": "5250d9adfe5ddef63759afc675d6bf2da2afacd0c09b4f53613763555f2fdc5b"
+  },
+  "review": {
+    "literal7_line_program_fully_read": true,
+    "summary_source_and_all7_summary_test_bodies_fully_read": true,
+    "exact17_source_hashes_match_both_corrected_CPU_receipts": true,
+    "exact_two_terminal_input_hashes_match_completed_raw_reviews": true,
+    "all7_summary_controls_present_in_both_FIRST_corrected_receipts": true,
+    "source_or_test_changes": false,
+    "new_test_execution_requested": false,
+    "comparison_logic": "Reads X0/X1 audited JSON only; exactmode/case/cache/correctnatural guards; carries observations and path-equality flag; descriptive ratios only, permanently false speed_acceptance/general_quality/promotion/replication.",
+    "important_limit": "compare consumes already-audited observations rather than independently recomputing native rates or auditing source lifecycle. Exact reviewed terminal input pins are therefore essential; this run cannot substitute for terminal audits."
+  },
+  "conditions": [
+    "Fresh physicalUbuntu idle/default/no phases/build/pending and same current f2b87ac5943049aca1ca6eff01607397/main2427755/native2427790/startticks156575799 binding before any heavyCPU; defer untouched if busy or owner changed.",
+    "Use exact literalprogram and qualified child supervisor limits/process-groupcleanup; verify imported module origins plus source17 and input2 pins before and after.",
+    "Fresh exclusive per-host evidence directories; retain exact program/limits/source/input/childstdout/stderr/exit receipts; once per host, first fault HOLD/no automatic retry.",
+    "No tokenizer/fixture regeneration, dump scan, native/model/service/request/build/staging of source or test rerun. Only requested immutable data/proof metadata staging after fresh guards if needed.",
+    "Preserve both output JSONs and compare their exact deterministic contents. Do not turn descriptive ratios or identicalvisibleanswer into acceptance, matched-token/generalprose speedup, replication or deployment."
+  ],
+  "limits": {
+    "CPU_s": 30,
+    "Linux_AS_MiB": 512,
+    "wall_s": 90,
+    "nice": 15,
+    "CUDA_hidden": true,
+    "OMP_NUM_THREADS": 1,
+    "OPENBLAS_NUM_THREADS": 1,
+    "MALLOC_ARENA_MAX": 1
+  },
+  "prior_numerical_HOLD": true,
+  "promotion_allowed": false,
+  "speed_acceptance": false,
+  "replication_authorized": false,
+  "GPU_or_model_admitted": false,
+  "reviewer_execution": "Source/JSON/hash inspection only; literal comparison was not executed by reviewer."
+}

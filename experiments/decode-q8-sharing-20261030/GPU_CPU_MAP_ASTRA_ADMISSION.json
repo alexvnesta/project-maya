@@ -1,0 +1,69 @@
+{
+  "utc": "2026-10-30T02:09:52.237726+00:00",
+  "decision": "CONDITIONAL_SINGLE_Q8_SHARING_KERNEL_ONLY",
+  "qualification_sha256": "73e8d03149b0a2ddcf4a03ee1805e5bc2b878998e79f069f066cd9edb03a4e56",
+  "scope": "One fresh existing-owned canonical window, exactly 121 fixed correctness cases on each of devices 0 and 1. No candidate model execution, timing study, activation or promotion.",
+  "CPU_review": {
+    "each_host_controls": 81,
+    "ordered_literal_AST_IDs_equal_raw_logs_receipts_source_review_and_q": true,
+    "source_maps_equal_current_reviewed_source": true,
+    "raw_receipts_byte_identical": true,
+    "child_pids": [
+      22114,
+      2592589
+    ],
+    "each_exit0_error_null_cleanup_empty": true,
+    "limits": "CPU30/wall90/nice15/CUDAhidden; LinuxAS512MiB",
+    "coverage_limitation": "CPU tests use scripted lifecycle/process backends; they do not demonstrate native GPU correctness or actual service restart."
+  },
+  "map_review": {
+    "files": 2141,
+    "unchanged_inherited_compile_files": 2103,
+    "added_files": 38,
+    "normalized_digest_conflicts": [],
+    "current_local_Q_text_source_and_raw_evidence_pins_checked": true,
+    "remote_artifacts_and_system_inputs": "Actual read-only preflight reports full identical2141 map verification; no reviewer remote/binary execution or artifact rehash."
+  },
+  "actual_preflight": {
+    "status": "READ_ONLY_PREFLIGHT_PASS",
+    "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-q8-sharing-kernel-20261030T020821Z",
+    "returned_file_map_exactly_matches_q": true,
+    "limitation": "Compact result records successful source-defined guards, not separate numeric root/current-binding snapshots. Immediate actual guards remain mandatory."
+  },
+  "expected_selected_binding": {
+    "invocation_id": "f2b87ac5943049aca1ca6eff01607397",
+    "main_pid": 2427755,
+    "native_pid": 2427790,
+    "start_ticks": 156575799
+  },
+  "fixture_sha256": "5a14b7bc4d7f356a246990a9c34833ccd1c043115383986ff60e431ce04de90a",
+  "mandatory_action_conditions": [
+    "Fresh idle/default/no other active/private/build/pending phase and exact canonical selected binding/exe/argv/env/cgroup/sole owner immediately before drain; busy leaves user work untouched.",
+    "Revalidate exact qualification digest/full pins, canonical window/coordinate, fixture hash, prior clean window/kernel, root>=132GiB and fresh real owned namespace before launch.",
+    "Existing canonical1200s window,1000s soft/200s cleanup; runtime root>=120GiB, swapdelta<1GiB, unchanged cache8GiB/log4GiB budgets. Fixture-only FSIZE512MiB per output file, CPU120 and bounded child waits remain unchanged.",
+    "Capture stable old hosted unit inactive/MainPID0/ExecMainCode1/ExecMainStatus0/Resultsuccess and matching old native/server close0 before fixture launch or restoration. Missing evidence remains HOLD.",
+    "Both fixture children require exactPID/exe/argv/startticks/cgroup,121orderedPASS plus one summary each and exit0/window0/kernel/resource clean. First fault HOLD with owned cleanup only, no retry or replay.",
+    "Restore selected native92/configc43 using qualified existing owner and exact new invocation binding, public401/authmodels200/assembledREADY-stop-DONE. Pending verify-only keeps same qualification and saved binding; never adopt or stop foreign replacement.",
+    "Pause source reviews/hashing/staging/heavyCPU throughout private phase and restoration. Independent terminal raw review required afterward before any separate model admission."
+  ],
+  "findings": [],
+  "prior_numerical_HOLDs_unchanged": true,
+  "reviewer_executed_tests_GPU_model": false,
+  "evidence_sha256": {
+    "gpu-qualification.json": "73e8d03149b0a2ddcf4a03ee1805e5bc2b878998e79f069f066cd9edb03a4e56",
+    "gpu-source-review.json": "51b444d15382f8e90d7249a1c04545fa8ac8ef6a00d8c03fb5094d169ce3e7d6",
+    "gpu_check.py": "86e434d3246182dcefad7197921a8a7e817460ded6975bf24dbb9cb2bd17fe35",
+    "test_gpu_check.py": "392797d5884b6694f6b1a9b93b73f6f4af564f2f8c22d3dce18173ef2eded6ea",
+    "qualify_gpu_cpu.py": "7603bd5eb37ac99077087a332fc01711d18fb07329740a10aa90185aea075670",
+    "GPU_CPU_ROOT_REVIEW.json": "362746d8c684edd80566db24aa14234506a3c60cd1f7137b8a676c8a2f50d67b",
+    "gpu-preflight-FIRST.log": "d9e482290309842f25b0289d419c90382df7407f70418d14a742ba0c77fd316a",
+    "COMPILE_RESULT_ASTRA_REVIEW.json": "4143fa5643d7be67a6f6f4f7edf59e49dc74e297a17863d502d54cc3cf890982",
+    "compile-qualification.json": "c0d54c2c6a93451f32043cf2ad0bbda99310cea807c32cd19f09cc782961d7b7",
+    "gpu-CPU-darwin/receipt.json": "9258310e710fa03216580abb7ee3395f437e1c240e55f5da309839f664a9b1c4",
+    "gpu-CPU-darwin/child.json": "c3534a7155d3e43acfa50c8b32a271f40fb03713c1d883c5865514ecb5ae4798",
+    "gpu-CPU-darwin/child.log": "3e3a0e7aa226248df4a17c83e7a2343f2bd6d0b4bf33ef7c000901f1d6437146",
+    "gpu-CPU-linux/receipt.json": "9258310e710fa03216580abb7ee3395f437e1c240e55f5da309839f664a9b1c4",
+    "gpu-CPU-linux/child.json": "b0d03759b8a8f88d4fd5fafdc0f00708eb09d06bd3ef407184b646105ebf04d6",
+    "gpu-CPU-linux/child.log": "b9c8b0594bfec2e1ac60dc9a23ce114bc434317fcddc901a860b4e7f29eaf36b"
+  }
+}

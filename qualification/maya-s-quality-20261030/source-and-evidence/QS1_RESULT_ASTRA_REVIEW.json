@@ -1,0 +1,627 @@
+{
+  "utc": "2026-10-30T23:51:04.294359+00:00",
+  "decision": "QS1_FOUR_STATE_WHOLE_PACK_QUALITY_SCREEN_ACCEPTED_NO_PERFORMANCE_ADMISSION",
+  "arm": "QS1",
+  "fully_reviewed": true,
+  "accepted": true,
+  "accepted_scope": "This frozen four-state known-answer, finite-state, cache/image behavior and lifecycle screen only. Whole published Maya-S pack with pinned drafter/Engram and unchanged L22 runtime policy.",
+  "qualification_sha256": "14d2f954bfe20186561b3e0f19a2773e110871f5907623c4d291629e94f118af",
+  "admission_sha256": "38a74a8e8d1f62e906bdb37b5295f08ef685dbd72b58e4d42381798539741c96",
+  "terminal_sha256": "a308d2a979fddec5ff3ce36aa3967888199c259ffa7826f3ea34de71f23b960b",
+  "evidence_sha256": {
+    "/home/alex/strata-deepseek-test-20261024/windows/20261030T232538Z.json": "67294bfa55e4c59863fd3e546f0219cd2a6735e622292bf0ab3213384a2baffd",
+    "/home/alex/strata-deepseek-test-20261024/windows/20261030T232538Z.telemetry.jsonl": "79252829e5b4751a1f54a29e6f430a742f0cc3d7c6dea14944ac533ae827acb4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/quality-fixtures-B.json": "c77c34d85a59f4696bb82397a20df97f92235a7ad752d8d3ad80ccfa38377707",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-quality-v2-QS1-20261030T232434Z/state.json": "48ba1bff1a9005e561a9dde6b69264b94be4b875998ea33b2e51dd133cc8ee12",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-quality-v2-QS1-20261030T232434Z/proof.json": "c2e1961ab58d64863875fef253cb6a8ac04ee8860bc2c38df22ca07c81e70dfd",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-quality-v2-QS1-20261030T232434Z/public-default-output-request.json": "93bb8806b80adc0a4793b4302b8387e13ae2d02b04932ddd2b2f166be29a455a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-quality-v2-QS1-20261030T232434Z/public-default-output-sse.txt": "3edb5ce903a1b516c740880642a5cfd81a946f3e805b63820bd9328488515ca5",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-quality-v2-QS1-20261030T232434Z/old-owner-close.json": "5c7607be13637cee571984e86cb94f1a959740f3505b095b441cd0001e0d3acf",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-quality-v2-QS1-20261030T232434Z/private-memory-fence-collected.json": "14667608a17ff9079ddb20a25112ed1aad94ea41605ed70ed27b8c965bf9f8a8",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/fixtures.json": "c77c34d85a59f4696bb82397a20df97f92235a7ad752d8d3ad80ccfa38377707",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/candidate-config.json": "ae0d017988804f39e18dfca4e9ea18d517b4b9d229297f2b97779ab942964804",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/candidate-config.shared-settings.json": "9dccb6db4fd0d5e1596ad0845decb60c24aae2756a4eca216cb9b914d310fdc9",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/startup-audit.json": "3f88fede70f30b269a974769349b9527858a6a528b9f912a2e18cfa3744448f8",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/server-start.json": "62c6a5e33764c204cb4b2d696db1f501939c66a7dfbf527dedaa68544320dfb7",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/receipt.json": "d039f28d132e73f03089c171c44daaac32d2f619ec777be82e43c712f362923f",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/private-memory-fence.json": "02e394d7401a4acc5a537bc6bff73a13f2058266326c8066fb8dbacfc50d517c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/private-memory-fence-restored.json": "0f1cc159a3b301b466f886e836c1f50f6f5f3ebc2920647c91caf53d9765f6bb",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-ready.json": "af11398870319911afbc00532a22112c1a5510504564d14242b52583835536e1",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/engine.log": "bee291cb1890f14ad8f522f357e1a2ed106cc2f8e618f5ce91dcebd6f423aa6d",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/entry-audit.json": "968745a35166f7a7cfa240431f7049cfb28a3529e6c37d62ad4e64bd64625c8e",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/server-cleanup.json": "ef1656b324ef7c7adf6ac1f21e855d8683453c9cd193709c4116fe268d518c08",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-close.jsonl": "f1120f8c58ecd32eae7700a40cc97af1f734d07f5e636fda80d335dc2f9562c8",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/server.log": "83cf7734a90baf66c3f7503552b27f7cb45e6aad1bda5319f8a4c9df609e72c0",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-file-bound.json": "22528a28bf698483ac1a75abcb8a0b116f10fd62c1c11e23047a351c73383596",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-000/request.json": "41e59e19d1950eb557917e1eea9701f2a3afc325f4b51cf649e77fa402bc6838",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-000/trace-receipt.json": "549e1457e9161b5e4be9a959527a7d9e159ffcf60dd5cd45f0585d5dc27d3aa6",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-000/native-statistics.json": "fa2da54172e71e777d4f94340ed019abb6d8e611f4ffed688b4f23e93d617e8c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-000/tokens.jsonl": "6d3878ea66d2d2e62c4c8109c14e0b45c10f4ddcfab92beedc496025b53bb1b6",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-cold-text/request.json": "a96bcd70061c77b8ade9f0da43016fa1c711e37e12013d6ee2bf8b509411154e",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-cold-text/response.json": "bf33f179b2a666bfd54b13a0a4d8d0196c1cf4638710ed021c9ec31015a3fc3b",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-cold-text/native-audit.json": "a2e5982d9c05b1c7556d761b0862048565e6b66b277b41731ad32c5279907994",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-001/request.json": "41e59e19d1950eb557917e1eea9701f2a3afc325f4b51cf649e77fa402bc6838",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-001/trace-receipt.json": "394e3f5e3ccb4344a6c90ff717beb8ccf1c37748142a824497de279a9612ad09",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-001/native-statistics.json": "be51f5b945c0c339abd612862decc7c2b377b9ee5ea2ee439efee98fe16223a5",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-001/tokens.jsonl": "f713c558fa348bd9e2fc4d46ae5bd74a2b6196b254c7637401bb78ce150f6772",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-warm-text/request.json": "a96bcd70061c77b8ade9f0da43016fa1c711e37e12013d6ee2bf8b509411154e",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-warm-text/response.json": "e6c300fffb9b57c6a86f76c80983b18eb253b54bd82a00ee469362ce4d8d0908",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-warm-text/native-audit.json": "ab1e88098e1a7fbdc15d7b126eebfc541d6e91c2a8b4895a3b06002839efc10f",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-002/request.json": "f9263c111b45f9099c48bf309354c6dafc90c1a6f24743ce25011a071e3e6a6a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-002/trace-receipt.json": "8cba671c63d2959eb73d531baa0883f61368d0654749a9b488de125219c11032",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-002/native-statistics.json": "7243db4515e2ae7aecd389c833e81f3c22578f863365c69c736c83ebfb372a6c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-002/tokens.jsonl": "15db608056f33f20d7da140a93beb0c89699641016ccea4f4e29af5e3ebbcf3e",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-two-images/request.json": "b7d94957fc40fa25f733cfe824cd99f77d15954f0b799f5d0d2be77927279894",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-two-images/response.json": "47ae59726efb18d9113a4312f1da3dd86974908225f08d1422b3f204c16896ee",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-two-images/native-audit.json": "3dd566114275e7c764f4e3d11cdf3a49d79468be13a4bb830389112c6bf6adc7",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-003/request.json": "41e59e19d1950eb557917e1eea9701f2a3afc325f4b51cf649e77fa402bc6838",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-003/trace-receipt.json": "a5e51097af7455a192cbfb04eaa74c1af72d250f52553f4414c2af252f8320a2",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-003/native-statistics.json": "ba6ac5ea99e4ccb516254e4bc8dd770b85374c3ef18483a29df395faa62c768c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/native-003/tokens.jsonl": "1481c8c7d5478ecfc2f3d031f0ef308938c1da467b270503c06e759fcfa4744e",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-return-text/request.json": "a96bcd70061c77b8ade9f0da43016fa1c711e37e12013d6ee2bf8b509411154e",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-return-text/response.json": "1fac98f3ce06094d10e4ca0b3a7a09f00bc69e8b6223a6f9f70f4200232e4052",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/skip-controls/ms-quality-return-text/native-audit.json": "294c63d009ae8d5746e6b51b3a086b00fea3edb50c20fff14c0364cd2ee48756"
+  },
+  "all_54_local_evidence_hashes_match": true,
+  "source_unchanged_and_784_audit_source_hashes_members_of_qualification": true,
+  "manual_complete_content_and_reasoning_all_four_read": true,
+  "independent_checks": [
+    "All frozen request bodies and native prompt ID arrays matched candidate manifest; full32768 caps/effort100 retained.",
+    "Rebuilt SSE event objects/content/reasoning from raw lines; exactly one stop and DONE each; exact typed JSON1..64 and red/blue.",
+    "Native token counts, valid vocabulary IDs and ordered ID SHA match native statistics and terminal for all four cases; trace PID3757868/DONE/error-null verified.",
+    "All six result, observed-resource, finished and parent wrapper hash/PID chains match. All child0/error-null/cleanup-empty and logs empty.",
+    "Four complete physical finite scans have unchanged before/after stat identity and matching metadata/index/path/case/PID/whole-file hashes. No local float rescan performed.",
+    "Actual old owner API/native close0, private API/native close0, canonical exact command/window0, kernel clean, actual80GiB/swap0 fence restored and collected, selected native92/c43 public READY restoration reviewed."
+  ],
+  "rows": [
+    {
+      "id": "ms-quality-cold-text",
+      "typed_known_answer_correct": true,
+      "natural_stop": true,
+      "native": {
+        "generated": 169,
+        "prompt_tokens": 8469,
+        "prompt_ms": 11842.4,
+        "decode_ms": 3312.9,
+        "finish": "stop",
+        "drafts_accepted": 125,
+        "drafts_offered": 140,
+        "reused": 0,
+        "hits": 40664,
+        "lookups": 46050
+      },
+      "observed_tokens": 169,
+      "token_contract": {
+        "count": 169,
+        "valid_vocabulary_ids": true,
+        "ordered_ids_sha256": "740d915093ed88ca366ee354ef7a1cd16a00a9d319b4ad203e0e9b37c12890ed"
+      },
+      "SSE": {
+        "DONE": true,
+        "finish": "stop",
+        "raw_SSE_reconstructed": true,
+        "content_characters": 195,
+        "reasoning_characters": 165
+      },
+      "dump_size_only": {
+        "bytes": 95667200,
+        "rows": 185,
+        "finite_or_equivalence_proven": false
+      },
+      "dump": {
+        "bytes": 95667200,
+        "rows": 185,
+        "sha256": "e36d4838943fe2286f9a486ef61fc0a1e6ca26cdca2d101053aa0e2112eaec2e",
+        "all_finite": true,
+        "token_row_alignment_claimed": false
+      }
+    },
+    {
+      "id": "ms-quality-warm-text",
+      "typed_known_answer_correct": true,
+      "natural_stop": true,
+      "native": {
+        "generated": 181,
+        "prompt_tokens": 8469,
+        "prompt_ms": 54.8,
+        "decode_ms": 3297.5,
+        "finish": "stop",
+        "drafts_accepted": 131,
+        "drafts_offered": 146,
+        "reused": 8468,
+        "hits": 45124,
+        "lookups": 49155
+      },
+      "observed_tokens": 181,
+      "token_contract": {
+        "count": 181,
+        "valid_vocabulary_ids": true,
+        "ordered_ids_sha256": "e4cd5ae72e21475d1f157e64b5c249e2da0a8a40ac2637ad4d5b8d650b16a46b"
+      },
+      "SSE": {
+        "DONE": true,
+        "finish": "stop",
+        "raw_SSE_reconstructed": true,
+        "content_characters": 195,
+        "reasoning_characters": 230
+      },
+      "dump_size_only": {
+        "bytes": 101872640,
+        "rows": 197,
+        "finite_or_equivalence_proven": false
+      },
+      "dump": {
+        "bytes": 101872640,
+        "rows": 197,
+        "sha256": "82ee326c97699b301237fa6a6a106682a9d51dd7f92d2e9f6f651227ff6011ed",
+        "all_finite": true,
+        "token_row_alignment_claimed": false
+      }
+    },
+    {
+      "id": "ms-quality-two-images",
+      "typed_known_answer_correct": true,
+      "natural_stop": true,
+      "native": {
+        "generated": 82,
+        "prompt_tokens": 8656,
+        "prompt_ms": 13739.5,
+        "decode_ms": 1926.3,
+        "finish": "stop",
+        "drafts_accepted": 43,
+        "drafts_offered": 56,
+        "reused": 0,
+        "hits": 22171,
+        "lookups": 24285
+      },
+      "observed_tokens": 82,
+      "token_contract": {
+        "count": 82,
+        "valid_vocabulary_ids": true,
+        "ordered_ids_sha256": "416cefbfa69465fae7b28efe438c5d282dc7ef2726ba3e5e0dc19e35daf59fee"
+      },
+      "SSE": {
+        "DONE": true,
+        "finish": "stop",
+        "raw_SSE_reconstructed": true,
+        "content_characters": 31,
+        "reasoning_characters": 351
+      },
+      "dump_size_only": {
+        "bytes": 49643520,
+        "rows": 96,
+        "finite_or_equivalence_proven": false
+      },
+      "dump": {
+        "bytes": 49643520,
+        "rows": 96,
+        "sha256": "dc71bcec0a58cebaa368063289c43b8b6c54a739ced54e789f32ecf3fcb0ab8a",
+        "all_finite": true,
+        "token_row_alignment_claimed": false
+      }
+    },
+    {
+      "id": "ms-quality-return-text",
+      "typed_known_answer_correct": true,
+      "natural_stop": true,
+      "native": {
+        "generated": 170,
+        "prompt_tokens": 8469,
+        "prompt_ms": 42.7,
+        "decode_ms": 2966.0,
+        "finish": "stop",
+        "drafts_accepted": 123,
+        "drafts_offered": 136,
+        "reused": 8468,
+        "hits": 43307,
+        "lookups": 45615
+      },
+      "observed_tokens": 170,
+      "token_contract": {
+        "count": 170,
+        "valid_vocabulary_ids": true,
+        "ordered_ids_sha256": "caba0bf569c383f915f353d2505e1ab12aa4d7f32c5283e2becbf4d7f9224315"
+      },
+      "SSE": {
+        "DONE": true,
+        "finish": "stop",
+        "raw_SSE_reconstructed": true,
+        "content_characters": 195,
+        "reasoning_characters": 164
+      },
+      "dump_size_only": {
+        "bytes": 94632960,
+        "rows": 183,
+        "finite_or_equivalence_proven": false
+      },
+      "dump": {
+        "bytes": 94632960,
+        "rows": 183,
+        "sha256": "2f9eeaf1776253a9375480683b78ee61e74846d0b93a2bcfa45a525da2151f29",
+        "all_finite": true,
+        "token_row_alignment_claimed": false
+      }
+    }
+  ],
+  "finite": {
+    "files": 4,
+    "bytes": 341816320,
+    "rows": [
+      185,
+      197,
+      96,
+      183
+    ],
+    "all_finite": true,
+    "row_token_alignment_claimed": false
+  },
+  "six_actual_children": {
+    "metadata": {
+      "pid": 3769471,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 1.8206433840095997,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "wall_limit_seconds": 90,
+      "nice_increment": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "command": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/qv_dispatch.py",
+        "--arm",
+        "QS1",
+        "--stage",
+        "metadata",
+        "--qualification-sha",
+        "14d2f954bfe20186561b3e0f19a2773e110871f5907623c4d291629e94f118af",
+        "--child"
+      ]
+    },
+    "scan-1": {
+      "pid": 3769620,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 2.571166839916259,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "wall_limit_seconds": 90,
+      "nice_increment": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "command": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/qv_dispatch.py",
+        "--arm",
+        "QS1",
+        "--stage",
+        "scan",
+        "--qualification-sha",
+        "14d2f954bfe20186561b3e0f19a2773e110871f5907623c4d291629e94f118af",
+        "--child",
+        "--index",
+        "1"
+      ]
+    },
+    "scan-2": {
+      "pid": 3769777,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 2.721460219938308,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "wall_limit_seconds": 90,
+      "nice_increment": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "command": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/qv_dispatch.py",
+        "--arm",
+        "QS1",
+        "--stage",
+        "scan",
+        "--qualification-sha",
+        "14d2f954bfe20186561b3e0f19a2773e110871f5907623c4d291629e94f118af",
+        "--child",
+        "--index",
+        "2"
+      ]
+    },
+    "scan-3": {
+      "pid": 3769937,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 2.1207964099012315,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "wall_limit_seconds": 90,
+      "nice_increment": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "command": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/qv_dispatch.py",
+        "--arm",
+        "QS1",
+        "--stage",
+        "scan",
+        "--qualification-sha",
+        "14d2f954bfe20186561b3e0f19a2773e110871f5907623c4d291629e94f118af",
+        "--child",
+        "--index",
+        "3"
+      ]
+    },
+    "scan-4": {
+      "pid": 3770110,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 2.6214033600408584,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "wall_limit_seconds": 90,
+      "nice_increment": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "command": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/qv_dispatch.py",
+        "--arm",
+        "QS1",
+        "--stage",
+        "scan",
+        "--qualification-sha",
+        "14d2f954bfe20186561b3e0f19a2773e110871f5907623c4d291629e94f118af",
+        "--child",
+        "--index",
+        "4"
+      ]
+    },
+    "assemble": {
+      "pid": 3770284,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 1.4694438620936126,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "wall_limit_seconds": 90,
+      "nice_increment": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "command": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/qv_dispatch.py",
+        "--arm",
+        "QS1",
+        "--stage",
+        "assemble",
+        "--qualification-sha",
+        "14d2f954bfe20186561b3e0f19a2773e110871f5907623c4d291629e94f118af",
+        "--child"
+      ]
+    }
+  },
+  "audit_raw_sha256": {
+    "QS1/offline-audit-FIRST/assemble.attempt.json": "e9846c7013dd59218c10a4144869abfd78d4919fa5b673fd66a21e98631b2caf",
+    "QS1/offline-audit-FIRST/assemble.child.json": "964c471fce7e12f067034f2f5701e36f465d354b2778545de9cec2a76c692f2d",
+    "QS1/offline-audit-FIRST/assemble.child.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "QS1/offline-audit-FIRST/assemble.dispatch-attempt.json": "f72a34804d52d9770375d4c4097cbad1ea92f42a6e7091f2afcd49824fb72f04",
+    "QS1/offline-audit-FIRST/assemble.finished.json": "90fbd9f0eac64b6db32737180784517318a5f47aa40459071d834a612c22cbbe",
+    "QS1/offline-audit-FIRST/assemble.observed.json": "ba45bd9a6463c0707ab4e072adb26dfeeae01183a10138e99d3e3e286aa86084",
+    "QS1/offline-audit-FIRST/metadata.attempt.json": "18530666e91ed3d3cdc5bd981d89ca3183d8fc0bdc50ec03234130ffa7400f47",
+    "QS1/offline-audit-FIRST/metadata.child.json": "2400e148ff9956aca0f67ee3c8e3a75f046a7ab2d90d0bca5186e3d245b42201",
+    "QS1/offline-audit-FIRST/metadata.child.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "QS1/offline-audit-FIRST/metadata.dispatch-attempt.json": "b5f430b25a3eb89d56cd832d7434e3cd85f6361a390ac5e38a68299e1fd274e9",
+    "QS1/offline-audit-FIRST/metadata.finished.json": "2311349a407c635f541e2f9984ce2bebede48e436d793f009459e22bb94f65c2",
+    "QS1/offline-audit-FIRST/metadata.json": "1c2e49ba522ccb94d4e8e4b9295529e8bdd262d6c14a44649e6e75dff9354a64",
+    "QS1/offline-audit-FIRST/metadata.observed.json": "e0d49908831e4118852a911888875084af89876df1660ba1f975f98ab7245011",
+    "QS1/offline-audit-FIRST/scan-1.attempt.json": "c520b0f6c148bedf0702f6a83f246e9bc7282c582cba1257ac20408458c0e0e1",
+    "QS1/offline-audit-FIRST/scan-1.child.json": "f5d75f0783dded3cf69c5894c1dfc861830ba56576f61f186ecc0fb0043fb7de",
+    "QS1/offline-audit-FIRST/scan-1.child.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "QS1/offline-audit-FIRST/scan-1.dispatch-attempt.json": "06f274bcc82edd90cc8ee1f46702952b9387537e8a6c82319cd522ce76292b29",
+    "QS1/offline-audit-FIRST/scan-1.finished.json": "5312a1d1cf3b4c9e9f11bb4eb057997cddb4c3e2a281ac34aaeaea03e42abd6e",
+    "QS1/offline-audit-FIRST/scan-1.json": "ce605b5925a3346e86b05d3405569c091deab3712f5697d582325dbde3d06718",
+    "QS1/offline-audit-FIRST/scan-1.observed.json": "3797c0d864c65f2b1303c5673a5f0c4001703fca532c8773cf0116ee6fbcb8bb",
+    "QS1/offline-audit-FIRST/scan-2.attempt.json": "7bb8a734317e42222c22f6a515c61ddefaf94b0bf5a34cf35a1d293913d8019a",
+    "QS1/offline-audit-FIRST/scan-2.child.json": "2f923989bc3305db6518ca50f65b85abece1b6c105c5d24c1d4012861bc4ff69",
+    "QS1/offline-audit-FIRST/scan-2.child.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "QS1/offline-audit-FIRST/scan-2.dispatch-attempt.json": "256cc647ca2a0f329a22f429e8d5f12e5f74e73dc7324428e6d8920525745a35",
+    "QS1/offline-audit-FIRST/scan-2.finished.json": "e7ad0692aa7843ca4111bd7a474f8cb0c0e916ec982f07c6ff8fd721cf033010",
+    "QS1/offline-audit-FIRST/scan-2.json": "5983d98e703820ea51097de8a19d438393662f6c21efe340adac520b43c69d9d",
+    "QS1/offline-audit-FIRST/scan-2.observed.json": "0cb7772c455522ebd7c0e6a864d81babf75df68ee1945d09d7f856a50123ddd5",
+    "QS1/offline-audit-FIRST/scan-3.attempt.json": "2f8c6d3d1964772f3bf6b8f820ab1924b85c38fb9f729d34621e53726d85e20c",
+    "QS1/offline-audit-FIRST/scan-3.child.json": "8c72e8509ec5c69daba9f66d70b4eb085608a7b75f2b990a3f4d01c967262670",
+    "QS1/offline-audit-FIRST/scan-3.child.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "QS1/offline-audit-FIRST/scan-3.dispatch-attempt.json": "da6c530bd845abc0562c3c67f4aa0f3d324482a0d2da18759f5b99ff36a38444",
+    "QS1/offline-audit-FIRST/scan-3.finished.json": "3871f83092ffa656098a51994798856240277d74c18f8897efe5f9b51336f0fb",
+    "QS1/offline-audit-FIRST/scan-3.json": "61eb6a456dcadec7bb53432180cbd15ef4568dcb3b275f35eb6a608305fc5d52",
+    "QS1/offline-audit-FIRST/scan-3.observed.json": "4814220585fc32a501241bfa27e56f8f08e5802bafe0e109ea268dfb0687dffd",
+    "QS1/offline-audit-FIRST/scan-4.attempt.json": "67466594d8386edf4875ec2cabddf287e9cf55fb7ccab2ae64b4042e704e2266",
+    "QS1/offline-audit-FIRST/scan-4.child.json": "7b3f5a08aceda95dc2d54d5f57dd2f4903155b1ead0c0594d999e7c48aa897c2",
+    "QS1/offline-audit-FIRST/scan-4.child.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "QS1/offline-audit-FIRST/scan-4.dispatch-attempt.json": "bb0d06a28591fcc5eb32513ca6d8993a32470ecc38a586805c31a96563e64806",
+    "QS1/offline-audit-FIRST/scan-4.finished.json": "b2577f95ebf8455d838606bff6efae18809d71d15e01bba43c05cc84d370c742",
+    "QS1/offline-audit-FIRST/scan-4.json": "379e2859fa6d32cb8bd3c439751d7330eab77d4bb57852f3596e4eedf3c0d432",
+    "QS1/offline-audit-FIRST/scan-4.observed.json": "a0850b6432f1ee39f075215bcaefc795f17a646aaa1a893dd8a6cb0e9d689136"
+  },
+  "resource": {
+    "telemetry_samples": 80,
+    "root_min_bytes": 374571638784,
+    "system_swapout_delta_bytes": 0,
+    "kernel_capture_returncode": 0,
+    "kernel_fault_lines": [],
+    "cgroup_peak_bytes": 81201250304,
+    "includes_cache_not_RSS": true,
+    "poststop_available_bytes": 98382147584,
+    "poststop_required_bytes": 94489280512,
+    "fence_memory_max": 85899345920,
+    "fence_swap_max": 0,
+    "memory_event_deltas_all_zero": true,
+    "prior_properties_restored_after_children_closed": true,
+    "exact_owned_transient_fragment_and_dropin_directory_collected": true
+  },
+  "startup": {
+    "native_load_seconds": 746.7,
+    "CPU_expert_copy_seconds": 705.5,
+    "CPU_experts": 5622,
+    "all_CPU_experts_RAM": true,
+    "CPU_copy_GB_rounded": 62.3,
+    "GPU_slots_direct_private_INFO": 9738,
+    "automatic_trunk_split": [
+      19,
+      21
+    ],
+    "native_pid": 3757868,
+    "API_pid": 3757846,
+    "native_request_count": 4,
+    "startup_retries": 0,
+    "phase_seconds_including_load": 794.8204783247784
+  },
+  "old_binding": {
+    "invocation": "63b5e63a36564d1dbec55b9233c02471",
+    "main_pid": 3746206,
+    "native_pid": 3746243,
+    "native_start_ticks": 166986935
+  },
+  "restored_selected_identity": {
+    "native_pid": 3762754,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "e423a3b1d886412797b9a6a609ae8631",
+      "main_pid": 3762719,
+      "native_pid": 3762754,
+      "native_start_ticks": 167180667
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "public_restoration": {
+    "protected_models": 401,
+    "authenticated_models": 200,
+    "saved_request_no_max_tokens_override": true,
+    "raw_fragments": [
+      "READ",
+      "Y"
+    ],
+    "assembled": "READY",
+    "stop_DONE": true,
+    "saved_health_defaultDeepSeek_idle_faultNone": true
+  },
+  "additional_pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya-s-quality-v2-QS1-20261030T232434Z/post-stop-memory.json": "58bf89e6d2309ce9cfadf221960e26e3230d8f79c306b2804c63a0f411c717e1",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/receipt.json": "d039f28d132e73f03089c171c44daaac32d2f619ec777be82e43c712f362923f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/startup-audit.json": "3f88fede70f30b269a974769349b9527858a6a528b9f912a2e18cfa3744448f8"
+  },
+  "limitations": [
+    "No speed/advantage claim: dumps enabled, generated/hidden reasoning paths differ between packs, and whole pack/drafter/Engram factor retained.",
+    "Finite complete native batch rows do not establish per-token row alignment, exact numerical equivalence or general quality.",
+    "No near-full1M prompt or262144 generation; four bounded synthetic states only.",
+    "Restored hosted GPU slot count is inferred; private nativeINFO count9738 is direct. NativeINFO drafting-off field is not used to contradict positive actual draft counters.",
+    "Historical window units/GLM/health fields are inherited lineage, not current other-owner evidence.",
+    "Controller SSH OS0 is parent-reported; local exact window0/process0/restoration and audit-child0 receipts independently reviewed.",
+    "Raw manual-pending labels, prior failures, source, qualification and registries remain untouched.",
+    "One local reviewer JSON-analysis command had a syntax typo before reading data; corrected local data-only analysis completed. No project/test/model action occurred."
+  ],
+  "performance_admitted": false,
+  "cross_pack_equivalence_claim": false,
+  "general_quality_claim": false,
+  "deployment_admitted": false,
+  "next_arm_admitted": false,
+  "reviewer_remote_or_model_execution": false
+}

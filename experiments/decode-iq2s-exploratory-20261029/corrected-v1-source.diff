@@ -1,0 +1,80 @@
+--- failed-FIRST-CPU-source-v1/test_iq2s_explore.py
++++ test_iq2s_explore.py
+@@ -255,7 +255,7 @@
+                     self.assertTrue(recovery['done']);self.assertEqual(recovery['finish_reason'],'stop')
+                     self.assertEqual(json.loads(recovery['content']),m['cases'][0]['expected'])
+                     self.assertFalse(recovery['cancelled']);self.assertEqual([x[0] for x in seen],[32768]*4)
+-                    self.assertEqual(sorted(x.name for x in folder.glob('native-*')),['native-000','native-001','native-002','native-003'])
++                    self.assertEqual(sorted(x.name for x in folder.glob('native-[0-9][0-9][0-9]')),['native-000','native-001','native-002','native-003'])
+             finally:http.shutdown();http.server_close();thread.join(2);vision.shutdown()
+ 
+ if __name__=='__main__':unittest.main()
+--- failed-FIRST-CPU-source-v1/qualify_iq2s_explore_cpu.py
++++ qualify_iq2s_explore_cpu.py
+@@ -136,7 +136,7 @@
+               and c.sha(HERE / 'qualify_iq2s_explore_cpu.py') == review['driver_sha256']
+               and c.sha(Q / 'iq2s_build.py') == review['build_support_sha256'],
+               'Exact manual source/test review absent')
+-    out = HERE / ('exploratory-CPU-' + sys.platform)
++    out = HERE / ('exploratory-CPU-corrected-v1-' + sys.platform)
+     if child:
+         suite = unittest.TestSuite(unittest.defaultTestLoader.loadTestsFromName(module) for module in MODULES)
+         def names(s):
+--- failed-FIRST-CPU-source-v1/iq2s_explore_runtime.py
++++ iq2s_explore_runtime.py
+@@ -199,7 +199,7 @@
+     required_paths = [P / 'qualify_iq2s_explore_cpu.py', P / 'iq2s_explore_config.py', P / 'iq2s_explore_dependencies.py',
+                       P / 'base-config.json']
+     for label in ('darwin', 'linux'):
+-        required_paths += [P / (mode + '-CPU-' + label) / name for name in ('receipt.json', 'child.json', 'child.log')]
++        required_paths += [P / (mode + '-CPU-corrected-v1-' + label) / name for name in ('receipt.json', 'child.json', 'child.log')]
+     if any(str(path) not in files for path in required_paths): raise ValueError('CPU/raw/dependency pins missing')
+     for name, pin in sources.items():
+         if type(name) is not str or Path(name).name != name or not name.endswith('.py'):
+@@ -213,7 +213,7 @@
+     kernel_prerequisite(files)
+     hold_prerequisite(files)
+     for label in ('darwin', 'linux'):
+-        directory = P / (mode + '-CPU-' + label)
++        directory = P / (mode + '-CPU-corrected-v1-' + label)
+         proof = json.loads((directory / 'receipt.json').read_text())
+         child = json.loads((directory / 'child.json').read_text())
+         if (proof.get('passed') is not True or proof.get('source_sha256') != sources or proof.get('test_ids') != ids
+--- failed-FIRST-CPU-source-v1/test_iq2s_explore_runtime.py
++++ test_iq2s_explore_runtime.py
+@@ -501,7 +501,7 @@
+             path = self.p / name; write(path, 'synthetic source ' + name); paths.append(path)
+         sources = {name: r.sha(self.p / name) for name in source_names}
+         for label in ('darwin', 'linux'):
+-            directory = self.p / ('exploratory-CPU-' + label); directory.mkdir()
++            directory = self.p / ('exploratory-CPU-corrected-v1-' + label); directory.mkdir()
+             proof = {'passed': True, 'source_sha256': sources, 'test_ids': ['synthetic.test'], 'controls': 1,
+                      'native_execution': False, 'GPU_execution': False}
+             child = {'returncode': 0, 'CPU_s': 30, 'wall_s': 90, 'nice': 15, 'CUDA_hidden': True,
+@@ -571,7 +571,7 @@
+ 
+     def test_missing_canonical_window_owner_or_raw_child_pin_refused(self):
+         q = self.prepare_q()
+-        for path in (r.R / 'window.py', r.F / 'activate_chunk4096.py', self.p / 'exploratory-CPU-linux/child.log'):
++        for path in (r.R / 'window.py', r.F / 'activate_chunk4096.py', self.p / 'exploratory-CPU-corrected-v1-linux/child.log'):
+             altered = copy.deepcopy(q); del altered['files'][str(path)]
+             r.emit(self.p / 'exploratory-qualification.json', altered)
+             with self.assertRaises(ValueError): r.qualified('exploratory')
+@@ -588,7 +588,7 @@
+             with self.assertRaises(ValueError): r.qualified('exploratory')
+ 
+     def test_changed_CPU_ID_or_bool_count_rejected_even_when_repinned(self):
+-        q = self.prepare_q(); path = self.p / 'exploratory-CPU-linux/receipt.json'
++        q = self.prepare_q(); path = self.p / 'exploratory-CPU-corrected-v1-linux/receipt.json'
+         original = json.loads(path.read_text())
+         for change in ({'test_ids': ['different']}, {'controls': True}, {'native_execution': True}, {'passed': False}):
+             r.emit(path, dict(original, **change)); q['files'][str(path)] = r.sha(path)
+@@ -596,7 +596,7 @@
+             with self.assertRaises(ValueError): r.qualified('exploratory')
+ 
+     def test_nonzero_bool_child_exit_and_relaxed_limits_rejected(self):
+-        q = self.prepare_q(); path = self.p / 'exploratory-CPU-linux/child.json'; original = json.loads(path.read_text())
++        q = self.prepare_q(); path = self.p / 'exploratory-CPU-corrected-v1-linux/child.json'; original = json.loads(path.read_text())
+         for change in ({'returncode': False}, {'returncode': 1}, {'CPU_s': 60}, {'Linux_AS_MiB': 1024}, {'CUDA_hidden': False}):
+             r.emit(path, dict(original, **change)); q['files'][str(path)] = r.sha(path)
+             r.emit(self.p / 'exploratory-qualification.json', q)

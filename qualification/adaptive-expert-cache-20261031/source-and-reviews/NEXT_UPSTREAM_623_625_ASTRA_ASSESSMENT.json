@@ -1,0 +1,66 @@
+{
+  "utc": "2026-10-31T04:38:17.989878+00:00",
+  "decision": "SOURCE_ONLY_NEXT_CANDIDATE_ASSESSMENT_NO_EXECUTION_ADMISSION",
+  "primary_snapshots": {
+    "upstream-PR623-files-20261031T0438.json": "c215f2fa974c7295635d99d7a3d893135263964740d1f56ff24d723e28aae62b",
+    "upstream-PR625-files-20261031T0438.json": "6cdb1e9e027b177aecc817350dac2f2964c96b08017a7f09c4e6e0d0ddea7c00"
+  },
+  "selected_inventory": {
+    "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-pack-quant-inventory-FIRST.json",
+    "sha256": "55a170d4e8c2dc758f19fb21f4b36836b91b43036ddc213599954b5378011f07",
+    "tensors_metadata_sha256": "bc5229fa509356053d07bbcc97e1245f05ac29934c9f92605b21659b4675c966",
+    "routed_IQ2_XS_tensor_entries": 10368,
+    "IQ2_XS_layers": [
+      9,
+      11,
+      12,
+      14,
+      17,
+      18,
+      23,
+      24,
+      26,
+      27,
+      28,
+      29,
+      31,
+      34,
+      38
+    ],
+    "IQ1_M_tensor_entries": 0,
+    "limits": "This is metadata inventory bound to unchanged selected tensor map, not actual CPU residency/routed traffic fraction. It is tensor-entry count, not necessarily distinct complete experts."
+  },
+  "selected_model_source": {
+    "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/selected-ds4_model.cu",
+    "sha256": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "dispatch": "cpu_experts_mx at6545 dispatches non-MX to cpu_experts_iq;6641 onward uses actual expert_type and gg::iq_cpu_* for gate/up/down. The5698 MXFP4 rows log is unconditional pool messaging and cannot establish model tensor formats."
+  },
+  "selected_CPU_source_provenance": {
+    "base_commit": "4615f346d9311dd1ce9f5738ab04446f023a6e42",
+    "base_git_blob_SHA256": {
+      "src/ds4/ds4_iq_cpu.cpp": "7894f430fdfb48ba030ee9aff21414833e7f498052d322aeb33b53655da6118a",
+      "src/kernels/cpu/native_expert.cpp": "29c706324adaf639e553f266bda6ca1c0c6d755746622e1e80f0af0dbafa3de4",
+      "src/kernels/cpu/iq_avx2.cpp": "e4dddd81e6c657d677fff4f92c8a1167f0634ed323301ec2396bf30f231b81d4"
+    },
+    "status": "Documentary selected base plus nine-file correction (CPU files not among those deltas) and original ds4_iq_cpu objecte051 from selected relink. Exact physical current CPU sources/library object custody remains to be verified by Root before any port/build; ownfork HEAD is not assumed selected."
+  },
+  "PR623": {
+    "url": "https://github.com/mw00/project-maya/pull/623",
+    "patch_revision": "b772203a4acfd7e88f7476fc7a6f33359b26f549",
+    "applicable_source_lead": "IQ2_XS type17: selected-base ds4_iq_cpu own() excludes17 and delegates to native_expert. Base iq256_rows1_supported lists18/21/29, so type17 single-token falls to ggml vec_dot; multi-token17 uses existingAVX2 rows. PR adds sc16_4 scale table, broadcast/blend tab4 scalar grid loads in row_dot_iq2xs, and17 single-token dispatch. Both one and multi-token paths could be relevant under DSpark.",
+    "not_applicable": "IQ1_M folded-int16/PDEP path has zero selected-pack inventory. No benefit inferred for3970X/Zen2 from Broadwell figures; no forcedPDEP or unrelatedIQ2_S/IMMA/Q8/head changes.",
+    "minimal_candidate": "After exact physical source/object/library binding, isolate only IQ2_XS row decode and single-token enabling from integrated upstream; retain original ggml float recurrence, activation quantization, fallback and exactness gate. Same selected binary layout via narrowly replaced CPU object/library, no whole-fork migration.",
+    "qualification_needed": "Fresh source/test review; CPU-only exact row comparison against selected ggml for type17 nt1/2/5/11 and max dispatch chunk, realD5120/FF2304, valid finite block scales, subnormals/zero/signs/adversarial codes/strides/tails/canaries. Matchactualcompilerflags/CPUdispatch and prove successful optimized path not silent fallback. Bounded controlled row timing after correctness, then separately admitted whole-model known-answer/lifecycle/no-cap screen and frozen performance protocol. No current build/test/model admission.",
+    "limits": "Upstream mixed-IQ1_M/IQ2_XS Broadwell one-run40.68\u219245.10 cannot predict this host/model gain. Exact kernel equality is finite input coverage, not blanket sampled-path equivalence."
+  },
+  "PR625": {
+    "url": "https://github.com/mw00/project-maya/pull/625",
+    "patch_revision": "9fc017b17c9c17ceb3527347ff12dcb5ced85c1c",
+    "selected_frontend_sha256": "e0fded1ab8c856afa8cda7464b40d2753737de18dead42fc75381def13b1c6a1",
+    "finding": "Current pinned local Strata frontend has _tool_list always call _stable_tool_order; both OpenAI and Anthropic converters call _tool_list, with no deepseek bypass in their signatures. Existing64-entry process-local first-seen-name-set ordering already addresses ordinary registration-order swaps. Upstream625 repairs a newer DeepSeek-specific bypass; blind port is redundant for this path.",
+    "limitations": "Upstream newer namespace-qualified DSML tool normalization is not proven identical to this older frontend. Do not claim all namespaces/currentupstream conformance are covered or alter schemas. Parent must verify actualD/runtime-native-vision-v2/serve/frontend.py chain matches local e0fded pin before treating as deployed."
+  },
+  "closed_experiments_preserved": true,
+  "native_build_or_GPU_admitted": false,
+  "reviewer_actions": "Read saved primary snapshots/selected metadata/local source and immutableGit blobs; no project imports/tests/remote actions."
+}

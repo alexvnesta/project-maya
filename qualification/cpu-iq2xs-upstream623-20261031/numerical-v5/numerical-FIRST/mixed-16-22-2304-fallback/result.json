@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "job": {
+    "id": "mixed-16-22-2304-fallback",
+    "n": 2304,
+    "mode": "fallback",
+    "pair": [
+      16,
+      22
+    ]
+  },
+  "cases": 72,
+  "paths_per_case": 3,
+  "selected_own": 0,
+  "type17_dispatch": "fallback",
+  "final": {
+    "status": "PASS",
+    "gu_type": 16,
+    "down_type": 22,
+    "n": 2304,
+    "cases": 72,
+    "paths_per_case": 3,
+    "mixed": true,
+    "expect": "fallback"
+  },
+  "scope": "Finite synthetic exact-row witness only; no model quality or timing claim"
+}

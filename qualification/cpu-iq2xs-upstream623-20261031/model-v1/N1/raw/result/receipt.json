@@ -1,0 +1,174 @@
+{
+  "arm": "N1",
+  "arm_results": {
+    "complete": true,
+    "rows": [
+      {
+        "id": "cold-text",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 157,
+          "prompt_tokens": 8466,
+          "prompt_ms": 8756.3,
+          "decode_ms": 3061.6,
+          "finish": "stop",
+          "drafts_accepted": 119,
+          "drafts_offered": 131,
+          "reused": 0,
+          "hits": 37780,
+          "lookups": 41985
+        },
+        "observed_tokens": 157,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 87393280,
+          "rows": 169,
+          "finite_or_equivalence_proven": false
+        }
+      },
+      {
+        "id": "rewind-text",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 165,
+          "prompt_tokens": 8466,
+          "prompt_ms": 52.4,
+          "decode_ms": 3214.4,
+          "finish": "stop",
+          "drafts_accepted": 122,
+          "drafts_offered": 132,
+          "reused": 8465,
+          "hits": 41141,
+          "lookups": 43800
+        },
+        "observed_tokens": 165,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 91013120,
+          "rows": 176,
+          "finite_or_equivalence_proven": false
+        }
+      },
+      {
+        "id": "two-images",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 54,
+          "prompt_tokens": 8653,
+          "prompt_ms": 9801.9,
+          "decode_ms": 1259.1,
+          "finish": "stop",
+          "drafts_accepted": 36,
+          "drafts_offered": 45,
+          "reused": 0,
+          "hits": 15244,
+          "lookups": 15930
+        },
+        "observed_tokens": 54,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 33095680,
+          "rows": 64,
+          "finite_or_equivalence_proven": false
+        }
+      },
+      {
+        "id": "restore-text",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 162,
+          "prompt_tokens": 8466,
+          "prompt_ms": 40.2,
+          "decode_ms": 3141.5,
+          "finish": "stop",
+          "drafts_accepted": 117,
+          "drafts_offered": 127,
+          "reused": 8465,
+          "hits": 42141,
+          "lookups": 43080
+        },
+        "observed_tokens": 162,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 89461760,
+          "rows": 173,
+          "finite_or_equivalence_proven": false
+        }
+      }
+    ],
+    "incomplete_reason": null,
+    "native_count": 4,
+    "case_scores": [
+      {
+        "id": "cold-text",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      },
+      {
+        "id": "rewind-text",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      },
+      {
+        "id": "two-images",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      },
+      {
+        "id": "restore-text",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      }
+    ],
+    "unrun_ids": [],
+    "quality_or_speed_pass": false,
+    "numerical_review_pending": true,
+    "retry": false,
+    "actual_native_count": 4,
+    "activation": {
+      "mode": 1,
+      "source": 20,
+      "retained_rows": 2668,
+      "activation_early_rows": [
+        5798,
+        5985
+      ]
+    },
+    "CPU_IQ2XS": {
+      "CPU_IQ2XS_candidate": true,
+      "per_model_type17_dispatch_count_observed": false,
+      "scope": "Exact private native identity plus independently qualified finite CPU rows; no model-level type17 traffic count claim"
+    },
+    "DSI1_leftovers": []
+  },
+  "native_server_cleanup_passed": true,
+  "resource_fence_terminal": {
+    "passed": true,
+    "events_after": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "cache_charging_disclosure": "memory.current/peak include charged file cache and pinned memory; not process RSS"
+  },
+  "seconds_including_load": 443.840332812164,
+  "not_a_promotion": true,
+  "speed_pass": false
+}

@@ -1,0 +1,49 @@
+{
+  "status": "HOLD",
+  "record": {
+    "controller_pid": 4062625,
+    "controller_start_ticks": 169648553,
+    "nonce": "6cad98554a554c13b35a2ad0aa5d257c",
+    "mode": "iq2xs-numerical-v3",
+    "qualification_sha256": "067bdfbd0caad55ac0715215e110734cb4659f7b4f448e61e791e5ae7e35bf8d",
+    "start_binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "cpu_lease": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 2894342
+    }
+  },
+  "error": "ValueError('Numerical child nonzero')",
+  "error_notes": [],
+  "owned_groups_absence": {
+    "passed": true,
+    "pending_spawn": null,
+    "cleanup_faults": [],
+    "children": [
+      {
+        "name": "pure-256-optimized",
+        "pid": 4062773,
+        "pgid": 4062773,
+        "returncode": 1,
+        "group_absent": true
+      }
+    ]
+  },
+  "own_claim_released": true,
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "retry_authorized": false,
+  "elapsed_seconds": 3.304852197179571
+}

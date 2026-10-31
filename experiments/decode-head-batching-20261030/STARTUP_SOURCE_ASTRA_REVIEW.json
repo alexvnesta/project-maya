@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-30T03:16:16.154662+00:00",
+  "decision": "SOURCE_HOLD_ONE_STARTUP_INVOCATION_GUARD_CORRECTION_BEFORE_FIRST_CPU",
+  "source_sha256": {
+    "head_startup.py": "3e7e5a92947f6bbac6d12593c676b4ae4297b994d640d21bde37979f50803b1a",
+    "test_head_startup.py": "242d4c96cdb11f2b6960d8d9c48f3d3c494c314bf2ae0c1223fe4732595a1d0c",
+    "qualify_startup_cpu.py": "06e8b14ab420e39ea89217623988cfb8c3f7fe93789be7d371c196b1972e7553"
+  },
+  "test_ids": [
+    "test_head_startup.Capture.test_actual_old_method_reproduces_empty_snapshot_transition_failure",
+    "test_head_startup.Capture.test_binding_receipt_fault_is_not_suppressed",
+    "test_head_startup.Capture.test_bool_negative_or_float_main_is_fault",
+    "test_head_startup.Capture.test_disappearing_bound_native_is_fault",
+    "test_head_startup.Capture.test_disappearing_observed_main_is_fault",
+    "test_head_startup.Capture.test_initial_zero_never_queries_or_claims_native",
+    "test_head_startup.Capture.test_invocation_replacement_at_zero_is_fault",
+    "test_head_startup.Capture.test_native_absence_does_not_claim_or_emit",
+    "test_head_startup.Capture.test_native_replacement_never_recaptured",
+    "test_head_startup.Capture.test_native_snapshot_error_is_not_suppressed",
+    "test_head_startup.Capture.test_new_method_waits_then_captures_same_initial_transition",
+    "test_head_startup.Capture.test_old_or_empty_invocation_is_not_claimed",
+    "test_head_startup.Capture.test_other_unit_state_does_not_query_native",
+    "test_head_startup.Capture.test_positive_main_replacement_is_fault",
+    "test_head_startup.Capture.test_positive_stable_owner_captured_once",
+    "test_head_startup.Capture.test_positive_unit_change_during_snapshot_remains_fault",
+    "test_head_startup.Factory.test_exact_owner_wrapper_preserves_other_methods",
+    "test_head_startup.Factory.test_foreign_module_refused_before_reading_owner",
+    "test_head_startup.OriginalSupervisor.test_actual_unchanged_1250_deadline_and_owned_CLI_cleanup",
+    "test_head_startup.OriginalSupervisor.test_actual_unchanged_supervisor_one_start_zero_then_positive"
+  ],
+  "controls": 20,
+  "all_three_complete_sources_and_all_test_bodies_manually_read": true,
+  "findings": [
+    {
+      "id": "S1",
+      "file": "head_startup.py",
+      "line": 17,
+      "detail": "Empty or old invocation returns unconditionally even after a new start_invocation/positiveMainPID/start_binding is frozen. This suppresses disappearance/reversion instead of enforcing the stated no-replacement contract.",
+      "fix": "Allow empty/old invocation wait only while all observed-owner fields areNone; otherwise raise before queryingnative or emittingbinding. Add negativecontrols for empty/revertedinvocation after frozen invoc/positivePID/binding; retaininitialempty/oldwaitingcontrol."
+    }
+  ],
+  "other_review": [
+    "MainPID0wait occurs before native_snapshot only priorpositivePID/binding, so proposed actualMainPID0->positive failure is avoided withoutlateadoption.",
+    "Actual pinned original capture body is ASTextracted to reproduce known transition fault; exact unchangedrestore_ds ASTbody exercisesone-start success and1250s deadline/ownedCLIcleanup. This is CPUscripted coverage, not actualsystemd raceproof.",
+    "Factory pinsselectedownerfile/origin and overridesonlycapture; legacyrestore/guard/native/units methods remainexact.",
+    "CPUdriver checksownsource/driver/buildsupport/originalowner, exactdiscoveredIDs, currentphysicalLinuxguard;30CPU/Linux512AS/wall90/nice15/CUDAhidden/log4MiB/freshproofonly/ownedPGcleanup. No test/native/compiler executed byreviewer."
+  ],
+  "next_step": "Preserve this20controlsource review, apply narrowS1delta, independentlyrereadchangedsource/tests, thenFIRSTboundedCPU-onlydecision. No build/kernel/model admission.",
+  "candidate_handoff_separate": "CANDIDATE_SOURCE_ASTRA_REVIEW.json68f7cbb5 is separately frozen; startupfiles remainROOTowned."
+}

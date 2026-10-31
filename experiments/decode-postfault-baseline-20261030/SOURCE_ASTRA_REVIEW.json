@@ -1,0 +1,137 @@
+{
+  "utc": "2026-10-30T09:35:43.372803+00:00",
+  "decision": "HOLD_BEFORE_FIRST_CPU_BUILD_OR_GPU_ACTION_PENDING_NARROW_CUSTODY_FIXES",
+  "all_six_source_and_test_files_manually_read": true,
+  "latest_changes_read": "Includes42Pythoncontrols and observerSHA-before-import+origincheck correction. Earlier32controlversion wasread too; currentreviewbinds below hashes.",
+  "source_sha256": {
+    "recovery.py": "f8dc0d49d695cccf51e652b98a4b36c4556c744d57beb88ef537eada192ecf8e",
+    "health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "test_contract.cpp": "e11174d915794b4c2bd4065ea855c6cde05d25b4043b9600754a8f0662811c96",
+    "test_recovery.py": "aa7253e00dc49bfb70b5b06a1bb2348beea0fa1853f55fa7a3fac3f791baedc2",
+    "qualify_cpu.py": "8dd6e1903fc3a31000fbe17ffee0f45e6a855944f2205b5884fd92fd84491573"
+  },
+  "input_sha256": {
+    "prepare-FIRST/plan.json": "35fd7f677e2f716d3cd2b517cd99d3c4b7a6e56caacfe41d2889033859a5c6ac"
+  },
+  "test_ids": [
+    "test_recovery.Contracts.test_child_GPU_inherits_group",
+    "test_recovery.Contracts.test_child_cleanup_failure",
+    "test_recovery.Contracts.test_child_deadline",
+    "test_recovery.Contracts.test_child_environment",
+    "test_recovery.Contracts.test_child_failure",
+    "test_recovery.Contracts.test_child_group",
+    "test_recovery.Contracts.test_child_identity_failure",
+    "test_recovery.Contracts.test_child_primary_preserved",
+    "test_recovery.Contracts.test_child_start_refusal",
+    "test_recovery.Contracts.test_child_success",
+    "test_recovery.Contracts.test_competing",
+    "test_recovery.Contracts.test_compile_plan",
+    "test_recovery.Contracts.test_dependencies",
+    "test_recovery.Contracts.test_dependency_missing",
+    "test_recovery.Contracts.test_dependency_unknown",
+    "test_recovery.Contracts.test_device_transposition",
+    "test_recovery.Contracts.test_duplicate_properties",
+    "test_recovery.Contracts.test_entry_actual_argv",
+    "test_recovery.Contracts.test_entry_command",
+    "test_recovery.Contracts.test_entry_completed",
+    "test_recovery.Contracts.test_entry_recorded_argv",
+    "test_recovery.Contracts.test_entry_stale_lineage",
+    "test_recovery.Contracts.test_entry_wrong_admission",
+    "test_recovery.Contracts.test_exact_case_inventory",
+    "test_recovery.Contracts.test_extra",
+    "test_recovery.Contracts.test_extra_unit",
+    "test_recovery.Contracts.test_foreign_unit",
+    "test_recovery.Contracts.test_fresh_receipt",
+    "test_recovery.Contracts.test_gpu_owner",
+    "test_recovery.Contracts.test_gpu_usage",
+    "test_recovery.Contracts.test_group_gone",
+    "test_recovery.Contracts.test_group_survives",
+    "test_recovery.Contracts.test_input_mutation",
+    "test_recovery.Contracts.test_live_native",
+    "test_recovery.Contracts.test_malformed_properties",
+    "test_recovery.Contracts.test_missing_unit_field",
+    "test_recovery.Contracts.test_new_source_outputs",
+    "test_recovery.Contracts.test_no_fastmath",
+    "test_recovery.Contracts.test_no_lineage",
+    "test_recovery.Contracts.test_no_restart_authority",
+    "test_recovery.Contracts.test_nonfinite_receipt",
+    "test_recovery.Contracts.test_nonstopped",
+    "test_recovery.Contracts.test_nonzero",
+    "test_recovery.Contracts.test_original_objects_only",
+    "test_recovery.Contracts.test_other_device",
+    "test_recovery.Contracts.test_partial",
+    "test_recovery.Contracts.test_phase",
+    "test_recovery.Contracts.test_properties",
+    "test_recovery.Contracts.test_reorder",
+    "test_recovery.Contracts.test_result",
+    "test_recovery.Contracts.test_sha",
+    "test_recovery.Contracts.test_stopped",
+    "test_recovery.Contracts.test_surviving_descendant",
+    "test_recovery.Contracts.test_wrong_device",
+    "test_recovery.Contracts.test_wrong_lineage"
+  ],
+  "Python_controls": 55,
+  "CXX_controls_source_count": 19,
+  "positive_findings": [
+    "No service-start, stop, restart or restoration action is present in newrunner.",
+    "Actualderivedrecipe removes candidateinclude andheadentry; newfixture links original selectedGGUF/IQ/kernels/CPUobjects, no candidateModel/headpolicy.",
+    "DefaultGPUcolumns1,2,4/K5120/N129280 are selecteddispatch scope; bothdevices sequential and exact12case stdoutinventory perdevice.",
+    "Hostscalarunpacker verifies all256packedpositions forcodes0/1/2; analyticintegeroracle stays insideexactF32integerrange.",
+    "GPUfixture uses noASlimit becauseCUDAmaps requireit; compiler4GiB andCPU512MiB limits remain distinct.",
+    "Lastrevision validates exactobserverSHA beforeimport andchecksorigin; resolved priororderingfinding."
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "priority": "blocking-before-build",
+      "location": "recovery.py:55,122-140",
+      "finding": "guard releases experiment.lock before hashing/children. No exclusion is held through build, and no guard runs while a child waits up to300seconds.",
+      "minimal_fix": "While baseline is absent, hold existing experiment.lock across guarded qualification and all build children. Guard knows only this descriptor is owned; do not create a new lock or servingowner. Periodically check stoppedstate/resources during children using bounded existing supervisor pattern. Preserve primary/cleanup errors and release only owned descriptor."
+    },
+    {
+      "id": "F2",
+      "priority": "blocking-before-build",
+      "location": "recovery.py:122-140",
+      "finding": "Old qualification is hashed only once. New source/map is checked only bycpu_proofs at entry. health.o is accepted asowned without a frozen hash; input file changes between dependency discovery/compile/link or afterfinalchild can produce a passed receipt.",
+      "minimal_fix": "Freeze reviewed six-source map/recipe/q bytes and actual dependency pins. Guard then verify these before/after each child. Pin health.o immediately aftercompile and recheckbefore/afterlink. Pin producedbinary afterlink; check finalsource/inputcustody before passedreceipt. Reject symlink/foreign output adoption."
+    },
+    {
+      "id": "F3",
+      "priority": "blocking-before-build",
+      "location": "recovery.py:129-139",
+      "finding": "Dependency parser silently skips nonfiles/missingnames and treats any nonempty surviving subset as sufficient. Unknown linkinputs are discovered onlyafterlink.",
+      "minimal_fix": "Fail on malformed/missing required dependency paths, retaining exact explicitlyreviewed lexicalaliases. Validate exact original linkobject/library/tool inputs beforelink and full actualldclosure afterward. A knownactualreceipt may supply allowed aliases; no new search guesses."
+    },
+    {
+      "id": "F4",
+      "priority": "blocking-before-action",
+      "location": "recovery.py:94-120; qualify_cpu.py parentcleanup",
+      "finding": "SendingTERM/KILL thenwaitingonlyleader does not verify owned compiler/CPU processgroup is gone. Cleanup receipt can say[] while descendantsremain.",
+      "minimal_fix": "Reuse existing qualified bounded processgroup cleanup or reproduce bounded group-disappearance check; keepprimary andsecondary errors separate. Add descendant-lingers/cleanupfailure controls. GPUfixture inherits canonicalgroup so neverkillparentgroup; capture/wait only ownfixture and relyoncanonicalwindowcgroup terminalproof."
+    },
+    {
+      "id": "F5",
+      "priority": "blocking-before-GPU-source-freeze",
+      "location": "recovery.py:146-166",
+      "finding": "entry checks somewindow fields and a cgroupsubstring, butnot exact windowcommand/argv, specific controller/attempt custody, own output path, parentadmission/qualificationdigest, windowroot/unfinished state. A different newwindow carrying copiedcontinuationflags could satisfy current checks.",
+      "minimal_fix": "Freeze expectedliteral entrycommand and outputnamespace/controllerattempt in admission/proof. Check actualcanonicalwindowcommand, exactcgroup membership, nonsymlink windowpath and matching activecustody beforeGPUspawn. Bind complete source/import/CPU/buildqualification toadmission; no arbitraryproofpath. Hash dependencyclosure beforephase underfreshguard, avoid heavyhashing duringprivatework."
+    },
+    {
+      "id": "F6",
+      "priority": "blocking-before-source-freeze",
+      "location": "health.cu outputvalidation",
+      "finding": "Analytic result assertion uses actual!=want, not exactF32bits asproposed. Signedzero differences wouldpass. Weightbytes/weightpadding are notreadbackchecked, whereas inputbytes/outputguardsare.",
+      "minimal_fix": "Use explicitbits comparison with source-definedzero expectation, withCPUnegative signedzero/badbits check ifexactbitsclaim retained. Eitherverifyweightcanaries within boundedfixture or explicitly narrow claims to inputimmutability/outputguards andreadonlyselectedweightpath; do notclaimweightbytesverified. Analyticd1/min0/scales1/codes0/1/2 packing and \u00b1127/0integerinput construction were manuallychecked and appear coherent."
+    },
+    {
+      "id": "F7",
+      "priority": "blocking-before-FIRST-proof",
+      "location": "test_recovery.py and qualify_cpu.py",
+      "finding": "Current42controls include tenuseful newchildtests, butno actual mockedbuild()/entry()/cpu_proofs() path. Important firstfault/sourcechange/producedobjecttamper/unknowninput/windowcustody/prooflimit refusal behaviors remainuntested. Driver alsoonlychecksrecipeinputbeforechild, notagainafterproof.",
+      "minimal_fix": "Add small real-temporary-path tests executing actualbuild/entry bodies with onlysystemboundaries mocked: buildsuccess/firstfault/changedinput orobject; validCPUproof andchangedsource/limits; validboundentry andwrongwindowcommand/custody; lingeringdescendant cleanup. Recheck immutableinputmap/source afterchild beforeparentPASS. No duplicatedoldframeworkcontrols."
+    }
+  ],
+  "qualifier_scope": "No tests/compiler/import ofreviewedmodules executed. PythonAST/hash/JSON inspection only. No remote/service/GPU/native action.",
+  "separation": "CPU/build-only futurequalification doesnotadmitGPU. Currentfindings are source defects/coverage gaps, not executedtestfailures. Earlierheadkernel failure andrefusedstartupremainunchanged."
+}

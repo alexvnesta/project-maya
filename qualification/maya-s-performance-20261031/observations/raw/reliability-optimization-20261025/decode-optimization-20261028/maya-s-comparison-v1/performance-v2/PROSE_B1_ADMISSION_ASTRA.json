@@ -1,0 +1,86 @@
+{
+  "utc": "2026-10-31T00:45:46.948988+00:00",
+  "decision": "CONDITIONAL_SINGLE_PROSE_B1_PERFORMANCE_V2_ONLY",
+  "mode": "prose",
+  "arm": "B1",
+  "qualification_sha256": "2c7b4f378a5d539c2f04025ad7343000d23379c74e31291a9090706db1d66e61",
+  "selected_binding": {
+    "invocation": "1e16e9475ab54b26b181f3deb09e68a7",
+    "main_pid": 3786574,
+    "native_pid": 3786610,
+    "native_start_ticks": 167478283
+  },
+  "explicit_interruption_authorization_sha256": "cb2698ff10b5bd42b029968f20f59aa78d3d6924b4b8a4b5548bc3b28e78ce5a",
+  "actual_readonly_preflight": {
+    "receipt_sha256": "2a4e276393e9a4551244602cfa7e263fb2b9bc292c026c0e204fcbbb8465be1c",
+    "utc": "2026-10-31T00:44:49.936191+00:00",
+    "actual_pin_checks": 1403,
+    "returned1402_proof_files_exact_qualification": true,
+    "target_placement_sha256": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "root_free_bytes": 374367981568,
+    "previous_window": "/home/alex/strata-deepseek-test-20261024/windows/20261031T001857Z.json",
+    "previous_sha256": {
+      "/home/alex/strata-deepseek-test-20261024/windows/20261031T001857Z.json": "f9bf7a53da902a750822cda3975b500dfaffc7884fbea4642f58ec931eb0aa80",
+      "/home/alex/strata-deepseek-test-20261024/windows/20261031T001857Z.telemetry.jsonl": "a720f5b031279fd3016fbcf010db613dada4098ed5cc4179fb0bb7353a4976bd"
+    },
+    "kernel_since": "2026-10-31 00:17:51 UTC",
+    "kernel_helper_passed": true,
+    "download_worker_absent": true,
+    "pause_marker_sha256": "a6f03e03d210402a1922af5a732040965a678a6505c448f6b043ee4f496ca9f5",
+    "no_model_or_service_action": true,
+    "no_arm_reservation": true,
+    "prospective_metadata_absent": true
+  },
+  "A1_prerequisite": {
+    "all75_raw_hashes_independently_match_local_exact_copies": true,
+    "all10_closure_hashes_independently_match": true,
+    "closure_sha256": {
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/prose-arms.json": "22844815c893bed5503b0484933dbd398ac6e081d368b4b591643f734af80434",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/prose/A1/prose-arms-at-terminal.json": "b806ead48067eb0ff3db8aeb80cba80e76c64dafd27393453069fcfb4c2e48ab",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/prose/A1/terminal-audit.json": "a82794173aa407de9120e896752bd4e6834b066aaf49ebab118f77a43bb11ac5",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/prose/A1/ROOT_RESULT_REVIEW.json": "6a8f50aefcb592d282709fa27378fee6d751a80665fe34d49a6dd086a9724a45",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/PROSE_A1_RESULT_ASTRA_REVIEW.json": "c9e5269b000a4c1702fb60450cf6c7c4fca6eddb16511dcf9e846ecbaec5373a",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/prose/A1/offline-audit-FIRST/dispatch-attempt.json": "cdafe5dbf1a226e4f0b8db927b9c41e776ba58101c572d5ebb4fcddd1cc6c8b8",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/prose/A1/offline-audit-FIRST/child.json": "3a07098599a8d49b13301a08afe0a9c6d069e98ca2ac9854b05d561e36a3a562",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/prose/A1/offline-audit-FIRST/child.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/prose/A1/offline-audit-FIRST/observed.json": "2fc72268172bc73c010c867a3b4b5cea50da1d2ccb96ed9a7d4bf1465b02e68c",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/prose/A1/offline-audit-FIRST/finished.json": "23597ba9abefa98d3dffdc3e9d56d93ef03403602b7da646a9544de9c389c77c"
+    },
+    "current_registry_only_A1_fully_reviewed_accepted": true,
+    "acceptance_scope": "Baseline main3 plus lifecycle4 completed and narrowly reviewed; no pair/family/deployment acceptance. Original terminal snapshot and raw manual-pending audit preserved."
+  },
+  "unchanged_qualification": {
+    "source_files": 13,
+    "inputs": 1076,
+    "CPU_controls_each_physical_host": 248,
+    "current13_source_hashes_rechecked": true,
+    "CPU_repeats_or_source_changes": false,
+    "criteria_sha256": "ab1f9e91d93326e20899b8f3133f5c016360245b16a71f41dda5564913157a1b"
+  },
+  "immediate_conditions": [
+    "Recheck same exact 1e16/main3786574/native3786610/ticks167478283 selected native92/configc43/release/soleowner/default/phase-free binding and unchanged q/source immediately before owned run; fresh genuine idle before action-time hashing/staging. Explicit human interruption authorization remains recorded.",
+    "Root>=132GiB before admission, >=120GiB during window; prior001857 window/kernel since2026-10-31 00:17:51 UTC clean; acquisition workers absent and cooperative pause retained.",
+    "Only new prose B1 namespace/reservation; A1 accepted prerequisite unchanged, no prior B1 attempt, no concurrent private/build/restoration/foreign ownership.",
+    "After owned selected stop, actual MemAvailable>=88GiB before private native; enforce private MemoryMax80GiB/MemorySwapMax0, captured-property restoration and transient collection.",
+    "Execute original frozen B prose manifest three main cases then all four lifecycle cases, unchanged request32768/effort100/1M total/262144 allowance/images/Q8mode1/L22/TP1auto/CPU24/chunk4096/allCPUexpertsRAM/stream0/DSpark.65; published Maya-S wholepack including its drafter, not quant-only.",
+    "800startup/1000soft measured from before load/1200wall/200cleanup unchanged. No dumps/nativeFSIZE hook; actual native unlimitedFSIZE verified. No output fitting/truncation/cap reduction/time extension/reencoding.",
+    "Completion of seven natural/lifecycle cases is unproven within remaining budget. Preserve partial/cap/error/UNRUN as INCOMPLETE/HOLD, no retry or automatic reverse. Confirmed prefill cancellation is the one prescribed lifecycle operation, not a fault retry.",
+    "Prospective old selected API/nativeclose0, privateAPI/native/window0, source-bound selected restoration/public401/auth200/assembledREADY-stop-DONE/kernel/resources/fence collection required. Separate FIRST qualified bounded independent terminal audit plus full manual result review before any pair comparison or further admission."
+  ],
+  "scope": {
+    "single_owned_private_prose_B1": true,
+    "main_cases": 3,
+    "lifecycle_cases": 4,
+    "no_B2_A2_coding_or_promotion_admission": true,
+    "no_candidate_advantage_claim": true,
+    "whole_pack_factor_not_numerical_equivalence": true,
+    "unequal_generated_paths_no_causal_or_overall_task_speed_claim": true
+  },
+  "limitations": [
+    "Reviewer read saved local physical receipts; no live remote observations performed. Parent reports genuine idle twice/units/phase/worker checks; h.preflight itself allows healthy authorized serving and is not an atomic zero-work guarantee.",
+    "Hosted11315 GPU slots are explicitly inferred, not direct hosted INFO or exact prompt byte measurement.",
+    "Local review diagnostic print after successful source checks attempted dict.items on CPU_groups list and raised AttributeError; this was read-only reviewer formatting, no controller/test/CPU qualification/model action and no evidence changed."
+  ],
+  "reviewer_actions": "Scoped local JSON/raw hash/source review only; no project imports/tests/remote/model/service operations.",
+  "pause_during_private_and_restoration": true
+}

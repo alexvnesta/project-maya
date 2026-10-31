@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-30T17:47:43.728855+00:00",
+  "passed": true,
+  "new_groups_each_host": [
+    27,
+    56
+  ],
+  "exact_source_count": 11,
+  "exact_input_count": 850,
+  "raw_sha256": {
+    "dispatch-darwin": {
+      "receipt.json": "4af102b5641affa820d95f27d96bd2ff8b57760471a964a7ce8f2f0d00110e09",
+      "child.json": "467046dd6e4a6ea5fcbb6ab7e69c9704154e5c22f45ab02f480aec10ba460c05",
+      "child.log": "93cd8a79f56a65e66b71a73f63ee1fa2d9883c85405ee7390fb8e890020d2ffc"
+    },
+    "dispatch-linux": {
+      "receipt.json": "9528b8718169e9d30a5106883cd4af963b2f2a0a1d27a5e03a4e39284d3e332c",
+      "child.json": "2caddbe98de6406db0a68323def156138cf5e646212d42caf5c8c29eee19bfa9",
+      "child.log": "a4b06ddbf41e86713cf440e7b00ff4c85975691c3dd3bac845a227126fc86ae7"
+    },
+    "saved-darwin": {
+      "receipt.json": "9e5fa44a89b6230941a48177b90903022387446ed97b4de8593b5789c4cbc5bc",
+      "child.json": "a556b407872d459d7ad40a254ade855e29be8a44c81010711ced4980d36c9456",
+      "child.log": "93bf7383024855bf628671321a1afef8643c8b579e3111c24ec710351cec5bfa"
+    },
+    "saved-linux": {
+      "receipt.json": "96f6781de8468310cc39737cc712ab74b4581a68c14cf205fb17c25fbc2e4cd4",
+      "child.json": "c6e0f44208b09041da625c7a0bc6cddbe20bcb5224fe5426beef17e78aa23f87",
+      "child.log": "d2a7f3bfe50504929add3737db3b72a95cdbc987ec1fcf70f84477b2d1287af5"
+    }
+  },
+  "original_failed83_each_host_preserved": true,
+  "original_failed83_regraded": false,
+  "native_model_executed": false,
+  "production_changed": false,
+  "actual_model_logit_scan_performed": false
+}

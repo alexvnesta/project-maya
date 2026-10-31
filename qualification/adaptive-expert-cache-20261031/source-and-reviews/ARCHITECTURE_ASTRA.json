@@ -1,0 +1,74 @@
+{
+  "utc": "2026-10-31T03:03:38.186848+00:00",
+  "decision": "SOURCE_ONLY_ADAPTIVE_ALREADY_ENABLED_NEW_FIXED_VS_ADAPTIVE_POLICY_COMPARISON_FEASIBLE_WITHOUT_BUILD",
+  "execution_performed": false,
+  "GPU_admission": false,
+  "production_change_authorized_by_this_report": false,
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/source-correction.json": "afe2e805490202b4be4d13dc2efa67a4e90329208fa728eb21d0bfc34e466ec7",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/candidate/src/ds4/ds4_model.hpp": "a72692259ef9c69581054ad53e4184f112579693599921b4150ea8859c4c1a77",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/ablation-pr469-v2/candidate/src/ds4/ds4_main.cpp": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/selected-ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/SOURCE_ASSESSMENT.json": "2a50974007f9719c8494590690f285b10f589c592f5eeea89007e2e387b13205",
+    "/Users/alex/project-maya-prefill-20261027/src/ds4/ds4_cache_admission.hpp": "6fd16729ad48b3e5f6e982592f044e1c43538fc5983689cd5b1056c6c78005c4"
+  },
+  "selected_provenance": {
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "model_object_sha256": "9ebe2978ebcd97c1757670984cfd2a7985a102ff153018c95cb79c515fe7888c",
+    "basis": "Exact selected corrected nine-file source manifest and retained head source/object/control-relink provenance, not current ownfork HEAD. Three model/header/main hashes freshly match source-correction. Config c43 freshly read. No physical host observation in this review."
+  },
+  "enabled_fact": {
+    "header": "ds4_model.hpp:33 Options.expert_cache=true",
+    "parser": "ds4_main.cpp:1164 only --no-expert-cache sets false",
+    "config": "Exact c43 args omit --no-expert-cache; env contains no DS4_CACHE/DS4_RECENT override. Action-time actual argv and full relevant inherited environment must still be checked. DS4_STREAM=0 is not expert_cache=false.",
+    "conclusion": "Enabling the existing adaptive cache again would be a no-op."
+  },
+  "selected_mechanism": [
+    "Model1198-1222/3306-3320: asynchronous worker queue with default four workers on multiple GPUs, at most eight in-flight swaps. Defaults margin1.25, bonus1, decay0.9 per accumulated256 processed tokens. Not a fixed background slow timer.",
+    "Model5003/7935/11991: profile seeds heat; routed expert work updates heat. Work counters may include speculative/verification work and are not interchangeable with accepted generated tokens.",
+    "Model7179-7240 GGUF swap_in_mx: copy_mode reads the incoming expert from its RAM copy, uploads to spare VRAM and copies outgoing expert into spare RAM; device work is ordered by copy_open/copy_after_idle. cache_switch7255-7353 switches mappings between windows; cache_drain waits before chunks borrow tails.",
+    "Model2525 sets file_experts=true for GGUF even when all CPU experts are copied to RAM. Default recent_n32 condition chunk>0&&!file_experts is false for this selected GGUF, so recent slots default0, absent explicit override.",
+    "Model4972: disabling expert_cache removes one spare VRAM slot per eligible mixed layer; recent-slot reservation would also change if separately enabled. Model4005/10521: profile source and prompt-path selection also change; fixed forces flow. This is one configuration policy factor, not isolated transfer-only arithmetic.",
+    "Model12103 save_profile persists accumulated routing counts after serve requests. Each arm must receive a byte-identical immutable seed copied into an owned arm directory; no arm may write the production profile or inherit the preceding arm learned profile.",
+    "Prompt/KV reuse and expert-residency adaptation are distinct caches. Weight identities are intended to remain the same, but CPU/GPU and prompt path arithmetic can differ; no exact sampled-token or full-logit equivalence claim is justified by this toggle."
+  ],
+  "observability": {
+    "native_DONE": "Exact generated count, prompt/decode ms, finish, drafts accepted/offered, reused prompt count and raw decode hits/lookups. DONE hit numerator is experts minus CPU experts; STAT vram_hit also subtracts stream experts. Preserve definitions and verify stream0 actual behavior.",
+    "native_STAT": "promo is swap delta/internal fed tokens rounded3 decimals; vram_hit rounded4; cpu/ram experts per internal token and placement tiers. Retain raw STAT sequence and actual native trace ownership, never infer exact integer swaps from rounded promo.",
+    "INFO": "Context/KV resident, expert slots/CPU experts/RAM experts and engine identity; not migration-byte counters.",
+    "not_available": "No exact per-request H2D/D2H migration bytes or complete exact swap count in existing serve DONE/STAT. disk_mb is process storage I/O, not PCIe bytes; total expert bytes times rounded promo is not a measured byte counter.",
+    "optional_debug": "DS4_CPU_STATS adds cumulative recent-fill/CPU phase statistics. DS4_CHECK_SWAPS logs role-byte matches or MISMATCH and adds file reads/device copies; MISMATCH is not itself a process failure. Neither should be silently enabled in timing. A separate correctness diagnostic, if required, must fail closed on mismatch and cannot substitute for output/lifecycle checks."
+  },
+  "current_upstream": {
+    "release": "v1.1.42",
+    "commit": "cd48762b6d4888205c130238dbc0c7f7904993cf",
+    "release_url": "https://github.com/mw00/project-maya/releases/tag/v1.1.42",
+    "immutable_header_url": "https://raw.githubusercontent.com/mw00/project-maya/cd48762b6d4888205c130238dbc0c7f7904993cf/src/ds4/ds4_model.hpp",
+    "immutable_model_url": "https://raw.githubusercontent.com/mw00/project-maya/cd48762b6d4888205c130238dbc0c7f7904993cf/src/ds4/ds4_model.cu",
+    "findings": "Current upstream also defaults expert_cache=true. Release advertises long-prompt improvements, with decode unchanged in its aggregate comparison. Selected dfe lacks link_h2d and ring_slots; the newer link-probe regression/fix cannot be claimed as a gain over selected92. Newer model source is much broader than this factor and must not be deployed wholesale as cache enablement.",
+    "mbelli": "Parent public identity/repository search remains separate. Do not equate Discord Mbelli with SeriousRising or an unrelated GitHub username. No independently verified Mbelli S2/cache implementation is available to this review; this is not a universal absence claim."
+  },
+  "excluded_candidate": {
+    "ownfork_HEAD": "360d3706f2619f403df8237ce6cc222f88f95fec",
+    "byte_priced_admission_commit": "e6034d7da591bc5c848d7f6143387343904ea34e",
+    "meaning": "DS4_CACHE_REUSE_MIB is a previous Oct27 shared-Q5/cache-migration bundle in ownfork, absent selected. Not a new adaptive-cache enablement and not included in proposed test; historical held/closed evidence remains unchanged."
+  },
+  "minimal_proposal": {
+    "factor": "Current adaptive default vs selected92 plus sole --no-expert-cache argument. Same binary, complete model/DSpark/vision/projection/context/output/settings. Separate new adaptive-cache namespace and arms; neither is a Maya-S replay.",
+    "no_build_required": true,
+    "design": "Freeze two separately admitted policy windows using identical immutable profile seed, isolated writable profile/cache/slot/lane/lt directories, fixed identical request order. Initial current-adaptive arm and fixed-policy control; no automatic repeat or reversed confirmation. If either is partial, preserve failure and do not declare a completed comparison.",
+    "panel": "Smallest useful combined screen can retain the four existing full-cap known-answer states (cold, warm, two images, return), one unchanged natural expository prose task, and exact typed-tool/followup plus confirmed-prefill-cancel/recovery. This is nine requests, no dumps, no output fitting, all cap32768/effort100 within1M/262144 allowance. Reuse literal work under new family IDs; freeze expected prefix/slot behavior and source-backed encodings before execution. If implementers choose separate quality and timing windows instead, freeze that plan before data, not after a timeout.",
+    "budget": "800startup/1000soft from before load/1200wall/200cleanup unchanged; root132start/120runtime, swapoutdelta<1GiB, cache8GiB/log4GiB. Keep qualified private80GiB fence and actual post-stop>=88GiB gate if reusing current lifecycle. Existing selected-pack seven-request phase571.5s is a planning observation only, not proof nine natural requests will finish; preserve90s prefill-cancel admission and all partials.",
+    "correctness": "Both policy configurations need newly source-qualified config/owner/fixture/auditor controls on Mac and physical Ubuntu. Require native/API/transport identity and counts, correct typed four states, prose manual compliance, full tool/cancel/recovery, cold/warm reuse, no length/cap/error, complete source-aligned metrics, resource/fence cleanup and selected default restoration. Same weights does not establish full numerical equivalence across CPU/GPU scheduling.",
+    "measurement": "Compare natural-main native decode rate and cold prefill, preserve generated/reasoning/visible length, client time, draft, raw hit/lookup, promo and actual placement. No hit-rate-maximization criterion and no task-speed claim for unequal output work. Positive promo is evidence of migration in that observed interval; zero rounded promo is not proof the feature is disabled.",
+    "pre_actions": "Pause Unsloth cooperatively and verify actual exit/absence before private action; fresh actual selected source/config/env/owner/idle/default/phase/root/previous-window guard. No staging/heavy CPU until genuine idle. Every new source/test manual Root+same reviewer and exact both-host bounded proofs precede separate action-time admission.",
+    "scope": "No model/quant/TP/chunk/Q8/effort/output change, no cache pruning/global VM/driver/power changes, no old held candidate, no automatic promotion."
+  },
+  "limitations": [
+    "Source-based readiness only; no new CPU/model/benchmark performed.",
+    "Current binding and download worker are parent-reported snapshots, not refreshed by reviewer.",
+    "No exact PCIe-copy-byte accounting is available from the existing serve protocol.",
+    "No full upstream integration assessment or Mbelli identity assertion."
+  ]
+}

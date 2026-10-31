@@ -1,0 +1,44 @@
+{
+  "decision": "FINAL_NUMERICAL_QUALIFICATION_MAP_REVIEWED_READY_FOR_ACTUAL_READONLY_PREFLIGHT_ONLY",
+  "utc": "2026-10-29T13:42:29.627350+00:00",
+  "qualification_sha256": "11deaac7b10b7d53bd988acff210136b5e2107d533d1a13e28c315037810113e",
+  "file_count": 2198,
+  "self_plus_files_checks": 2199,
+  "draft_sha256": "45b21157fe1ad354808e20b7a99c6c867e5ba52d0982f8445064b8b42c548953",
+  "draft_v2_sha256": "807fc8f60b0c2f135fd10762d800623dbcea578c56cdcd4c30e6fe992a915201",
+  "CPU_review_sha256": "1d8f7e95dc342ae6c4a916592a1e23be277405b9b186eeac78f0fe73d6fc2cc5",
+  "prior_draft_findings_sha256": "9ba285adfc6a2a057981e7b57157b31c5cd5c7a3214d117142bb50338082ffc3",
+  "original_model_qualification_sha256": "6eb179b8b7edb7a87133c4e24bd99dc2f35863cfe6ef56f8385590bf50c6315b",
+  "resolved_model_input_additions": {
+    "/home/alex/deepseek-hosted-20261025/profile-seed.bin": "8db93e483b34b15dbf63a0826601f1db2107a8cfea73774e7d21d8559e0a9568",
+    "/home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf": "f3033f6a14e34f7133417e298efb62482c7ca0d4dcfddc3a9619599c3b2f98db",
+    "/home/alex/deepseek-hosted-20261025/release.json": "b921b85827fa63fd448cadc808fafb3e027c192ddaa2af45c5dcf0f373d1bed8",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1/ds4.txt": "48c01d890cbe53efafdacf50bf704437439f738f86787e6e529f6b5a62cd001c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1/tensors.txt": "bc5229fa509356053d07bbcc97e1245f05ac29934c9f92605b21659b4675c966"
+  },
+  "final_metadata_pin_additions": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/numerical-CPU-astra-review.json": "1d8f7e95dc342ae6c4a916592a1e23be277405b9b186eeac78f0fe73d6fc2cc5",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/numerical-qualification-draft-astra-review.json": "9ba285adfc6a2a057981e7b57157b31c5cd5c7a3214d117142bb50338082ffc3",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/numerical-qualification-draft.json": "45b21157fe1ad354808e20b7a99c6c867e5ba52d0982f8445064b8b42c548953",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/numerical-qualification-draft-v2.json": "807fc8f60b0c2f135fd10762d800623dbcea578c56cdcd4c30e6fe992a915201",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/qualification-prewrite-refusal-FIRST.json": "6c6acfcc4908aeb67213567a09bd8c510ef7f4eb67966e67509090aa1a34bf84"
+  },
+  "verified": [
+    "All five model inputs exactly match original qualification paths/digests; no mutable live expert-profile pin.",
+    "Every v1 draft file remains unchanged; v2 adds only those five plus explanatory metadata. Final map adds exactly five locally hash-verified metadata/review files.",
+    "Original 931-key CPU input map and raw receipts remain unchanged; 250 lexical alias records retained; canonical final files have no .. keys. No checked union digest conflicts.",
+    "11 source map and 109 ordered test IDs remain identical to both FIRST actual CPU receipts.",
+    "Completed kernel raw evidence and explicit historical hosted API exit-status limitation retained; new prospective model closure requirements unchanged."
+  ],
+  "limitations": [
+    "Physical actual artifact hashes/paths and current owner have not been rechecked by this reviewer; fresh parent read-only preflight must verify all2199 including qualification itself before separate admission.",
+    "No model/window/GPU/performance/deployment admission. Old IMMA strict HOLD remains closed; IQ2_S actual whole-model numerical gate still unrun.",
+    "Offline reviewer initial v2 comparison asserted no extra descriptive metadata and stopped before report write; inspection showed only expected metadata_correction note. No test or runtime action, source change or evidence regrade occurred."
+  ],
+  "required_next": [
+    "Fresh idle/default/no active private/build/pending phase, current canonical selected binding and root132 guard before staging/heavy validation. Busy remains untouched.",
+    "Verify final qualification bytes/all actual pins and exact empty new N0 registry/output namespace, full model limits/config/tokenizer/pack/candidate custody.",
+    "Return actual N0-only read-only preflight for separate deliberate admission."
+  ],
+  "GPU_admitted": false
+}

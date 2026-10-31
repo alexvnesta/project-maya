@@ -1,0 +1,95 @@
+{
+  "decision": "SOURCE_READY_FOR_ROOT_MANUAL_READ_NOT_EXECUTED",
+  "source_sha256": {
+    "ms_quality_audit.py": "ee73c91d0342cd9d248c25031f1b89cabc3d12e999f9189acd74fdbade45c332",
+    "test_ms_quality_audit.py": "7cf92d4ac97de7d7e3d61d190a4abfe7215d61f344d7c7d107cff58d65aed0bc"
+  },
+  "test_ids": [
+    "test_ms_quality_audit.Admission.test_actual_audit_phase_refusal_before_qualification",
+    "test_ms_quality_audit.Admission.test_busy_before_binding_scan",
+    "test_ms_quality_audit.Admission.test_old_arm_refused_before_support",
+    "test_ms_quality_audit.Admission.test_phase_before_host_or_heavy_hash",
+    "test_ms_quality_audit.Cases.test_actual_raw_native_SSE_typed_state_reconciliation",
+    "test_ms_quality_audit.Cases.test_busy_blocks_before_any_finite_scan",
+    "test_ms_quality_audit.Cases.test_changed_native_pid_request_or_DONE_refused",
+    "test_ms_quality_audit.Cases.test_nonfinite_or_changed_size_stops_scan",
+    "test_ms_quality_audit.Cases.test_saved_phase_row_mutation_refused",
+    "test_ms_quality_audit.Cases.test_scan_keeps_variable_batch_rows_not_token_alignment",
+    "test_ms_quality_audit.Cases.test_stored_rate_uses_source_operation_order",
+    "test_ms_quality_audit.Cases.test_typed_answer_float_is_not_integer",
+    "test_ms_quality_audit.Cases.test_wrong_reuse_or_zero_draft_refused",
+    "test_ms_quality_audit.Contracts.test_alias_and_hardlink_refused",
+    "test_ms_quality_audit.Contracts.test_dependency_pin_and_origin_before_import",
+    "test_ms_quality_audit.Contracts.test_four_case_no_partial_retry_or_unrun",
+    "test_ms_quality_audit.Contracts.test_unique_JSON_and_no_nonfinite",
+    "test_ms_quality_audit.Contracts.test_window_exact_command_and_clean_exit",
+    "test_ms_quality_audit.Fence.test_OOM_not_cleared_by_success_label",
+    "test_ms_quality_audit.Fence.test_changed_limits_or_counter_types",
+    "test_ms_quality_audit.Fence.test_complete_fence_and_collection",
+    "test_ms_quality_audit.Fence.test_foreign_invocation_or_children_still_open",
+    "test_ms_quality_audit.Fence.test_old_properties_and_collection_are_required",
+    "test_ms_quality_audit.SSE.test_edited_content_or_reasoning_refused",
+    "test_ms_quality_audit.SSE.test_error_length_or_tool_delta_refused",
+    "test_ms_quality_audit.SSE.test_missing_or_duplicate_DONE_refused",
+    "test_ms_quality_audit.SSE.test_saved_events_usage_timings_cannot_diverge",
+    "test_ms_quality_audit.SSE.test_split_content_and_reasoning_reconstructed"
+  ],
+  "controls": 28,
+  "astra_full_new_source_and_test_bodies_read": true,
+  "AST_parsed_only": true,
+  "reviewed_modules_imported": false,
+  "tests_run": false,
+  "remote_or_model_actions": false,
+  "source_dependency_inputs": {
+    "q8-batch-v1/q8_audit.py": "59c396154604496ec01a0ef8d0e3dddf677e31e9b57d91472fb0e0965af3dcd1",
+    "prefill-cache-improvements-20261027/skip_controls.py": "da2354fa0982c6887c841105e3a3b170912d8f7454d08439732fe709a1f0b0e2",
+    "prefill-v2/protocol.py": "516e887d0e73eab577b7eea939f463fab7b0e5fa8d4f6a39ab01c98a6298c9f3",
+    "prefill-v2/owned_server.py": "bbb9e1b1182e426f721f6446a6894b54baf1d429ebeae7f57ff824c691714ede",
+    "decode-optimization-20261028/model-v1/imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+    "decode-optimization-20261028/model-v1/imma_storage.py": "d03c8f6d69e198e648014b15a00a4a7c3dd986815dac4a391b747924239e0143",
+    "ablation-pr469-v2/candidate/src/ds4/ds4_main.cpp": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+    "ablation-pr469-v2/candidate/src/ds4/ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350"
+  },
+  "source_semantics": {
+    "main": "Selected ds4_main.cpp373-380 writes prompt-last row then each decode batch through Model::logits; no per-row token or draft/verify framing is written.",
+    "model": "Selected ds4_model.cu12092 returns chunk_logits or max(1,n_logits)*vocab float entries. Entire saved bytes are finite-scanned and SHA256-pinned; no row/token equivalence or alignment inferred.",
+    "scope": "Four typed known-answer states, native actual prompt/token/PID/DONE/reuse/draft accounting, owned window/resource/old+private API-native closes and selected public restoration. Whole published pack factor; no general quality, speed, cross-pack numeric equivalence, near1M/full262144 exercise, or deployment claim."
+  },
+  "required_terminal_evidence": [
+    "Exact frozen quality qualification and pack-specific encoded manifest; actual full argv/environment/cgroup/startticks/native92/config-factor and retry0.",
+    "Raw saved synthetic SSE is reconstructed including content, reasoning, usage, timings, one stop/DONE. q8_audit.reconcile checks actual GEN prompt/sampler/images/T/PID/DONE and emitted token list.",
+    "Four exact dump files, perfile512MiB and aggregate1GiB soft/2GiB hard policy, cache8/log4, whole-row finite/hash offline only. Guard current phase-free/idle owner before qualification and each dump scan.",
+    "Private memory76GiB/swap0/events and explicit same-unit property restoration then transient collection receipts.",
+    "Old hosted raw bound API/native exit0; private API/native zero with server PID/raw-close binding; canonical window0/kernelclean/resources and selected92/c43 public401/200/assembledREADY stopDONE."
+  ],
+  "fence_source_review": {
+    "finding": "--runtime alone is reboot-scoped, not proof of cleanup on exit. Actual Transient=true units route property drop-ins to transient storage; systemd removes them when collected. Capture/restore exact prior two properties after private children close and independently observe exact recorded transient fragment/drop-in removal. Do not blanket-revert unrelated properties.",
+    "sources": [
+      "https://www.freedesktop.org/software/systemd/man/latest/org.freedesktop.systemd1.html",
+      "https://www.freedesktop.org/software/systemd/man/latest/systemctl.html",
+      "https://github.com/systemd/systemd/blob/main/src/core/unit.c"
+    ],
+    "source_functions": [
+      "unit_drop_in_dir",
+      "unit_remove_transient",
+      "unit_free"
+    ],
+    "installed_version_not_live_verified_by_reviewer": true,
+    "agreed_receipts": [
+      "output/private-memory-fence.json",
+      "output/private-memory-fence-restored.json",
+      "metadata/private-memory-fence-collected.json"
+    ]
+  },
+  "required_before_FIRST_CPU": [
+    "ROOT fully reads these exact2 files/all28 test bodies and final root dependency/fence revisions. Freeze exact source/input maps and ordered IDs in new CPU group.",
+    "Include unchanged q8_audit59c396 source as explicit test input; tests import only that pure saved-data module after checking exact SHA. No actual model/API/health/service child.",
+    "Root fence/runtime/control/quality/util files are separate owners and still being revised; this report does not certify unseen changes or admit execution under stale dependency hashes."
+  ],
+  "test_scope_limits": [
+    "28 literal controls without inherited test duplicates. Saved-data positive/negative raw SSE/native reconciliation, exact typed state/drafts, varied batch-row counts, injected finite-scan return/error gates, alias/source pin/phase/idle/old-arm/window/fence checks.",
+    "Finite scan byte implementation is unchanged previously-qualified imma_numeric_controls; new tests mock the scan itself and do not retest1GiB data or run GPU.",
+    "Full end-to-end audit(arm) success across every saved terminal file is not executed by these controls; actual audit entry refusal is covered, pure saved-data contracts and case/scan bodies have positive tests. ROOT may add a small mocked full-terminal positive if needed before freeze.",
+    "No registry, original failed arm, producer source, source qualification, original evidence or model was edited."
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "utc": "2026-10-30T22:56:22.508013+00:00",
+  "decision": "CONDITIONAL_SINGLE_QS0_QUALITY_V2_BASELINE_ONLY",
+  "mode": "quality",
+  "arm": "QS0",
+  "qualification_sha256": "14d2f954bfe20186561b3e0f19a2773e110871f5907623c4d291629e94f118af",
+  "qualification_files": 1144,
+  "qualification_checks_including_self": 1145,
+  "preflight_receipt_sha256": "e11b6179895dee3119314c1132ad4f7883e32c49397c840a1f67ec646427a691",
+  "preflight_target_placement_sha256": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+  "source_map_admission_sha256": "3fc20e36c4cab80ebb97735f3a273cfae57b05534d01f9f81c4651001d8fd998",
+  "CPU_result_review_sha256": "79e06c6645c835ef0d07a2388841cbfea2b407c09850129756c6911be1944520",
+  "map_review_sha256": "be25b52f0e9cd2f827eb61c7a14b9a2bd2d8879fe308ee3a28c8232e5075fd21",
+  "first_staging_refusal_sha256": "bfe9a48bdf7c90b0c3d573656b42c7e4cdcf80c0987112c3bdae896d2cc84434",
+  "original_staging_refusal_regraded": false,
+  "baseline_binding": {
+    "invocation": "286e06f090ce4137833bb684b77027d7",
+    "main_pid": 3722282,
+    "native_pid": 3722318,
+    "native_start_ticks": 166665220
+  },
+  "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "previous_window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T220002Z.json",
+  "previous_sha256": {
+    "/home/alex/strata-deepseek-test-20261024/windows/20261030T220002Z.json": "a095951521e5d55da489d08aa3c424830a46109e83eaf118ad48742503ba97bc",
+    "/home/alex/strata-deepseek-test-20261024/windows/20261030T220002Z.telemetry.jsonl": "8d8b26e0d9eac9833e771f9cce3eeab2aff0ee7728a19b8109fd616f82fa1f6f"
+  },
+  "kernel_since": "2026-10-30 21:58:57 UTC",
+  "reviewed_preflight_utc": "2026-10-30T22:54:49.930048+00:00",
+  "root_free_bytes_observed": 375417671680,
+  "source_sha256": {
+    "qv_config.py": "949e6ca8a7b0ff4e05c29eddc57cf67173f7bc5642f85dea4df2f5b4b9f8c605",
+    "qv_runtime.py": "e5edb4d5107eb6011e102bca81d45ad7dbad2f45a05b14de83350d6c8b8ae3d3",
+    "qv_controls.py": "df416d99d53b82b14a8ce3b23733c083118f2659f3769987c7df0fbf790adecc",
+    "qv_owner.py": "789e086d8fe3f0c66671172ea79cd141753575f2abdc6fa61af61003bdd4b829",
+    "test_qv_config.py": "e242a60b8a1810001b4a3a921e998187b22424aa1e0bad809c57c34e9b4b241a",
+    "test_qv_runtime.py": "135180b04ab8c5140f2fd5c306310b9db8bbd92b706aaaef8909f86925e7978d",
+    "test_qv_controls.py": "01523fe6d673816c84d967c030e159bf64e396b06bedfc93d0d25eb6db5a7395",
+    "test_qv_owner.py": "cfa6cb63f675a91fb2350db714020318da21b0f8580653c0a401912af8ef530e",
+    "qv_audit.py": "eca880408b0d70f7b28ed40a6cf5f691fc3472044005636f39db8f272289a61d",
+    "test_qv_audit.py": "c21c1b1515531efe5b6ee33af0574f21224b19ec5e11aa5de4be521bfce82acd",
+    "qv_dispatch.py": "27a9e716036e389c188a841f0f100fb5b096a023f37a9539e0ea149c654afc3d",
+    "test_qv_dispatch.py": "a24eb451a8618c31146a65241b07172dfcb419c216ca0dd2881c5b2e8635418a",
+    "qv_cpu.py": "26f5b3fc6713c1183171d789d64fbe875626d733ef373d0b67b521870fe0e722"
+  },
+  "CPU_controls_each_physical_host": {
+    "owner": 164,
+    "audit": 77
+  },
+  "exact_controller_argv": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-B",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/qv_owner.py",
+    "--mode",
+    "quality",
+    "--arm",
+    "QS0",
+    "--run"
+  ],
+  "scope": {
+    "one_baseline_arm": true,
+    "four_original_cases_unchanged": true,
+    "four_native_logit_dumps": true,
+    "context": 1048576,
+    "default_output": 262144,
+    "request_max_tokens": 32768,
+    "effort": 100,
+    "private_memory_max": 85899345920,
+    "poststop_minimum_MemAvailable": 94489280512,
+    "startup_seconds": 800,
+    "soft_seconds": 1000,
+    "canonical_window_seconds": 1200,
+    "cleanup_seconds": 200,
+    "root_admission_bytes": 141733920768,
+    "root_runtime_bytes": 128849018880,
+    "swap_delta_limit_bytes": 1073741824,
+    "cache_bytes": 8589934592,
+    "log_bytes": 4294967296
+  },
+  "action_time_conditions": [
+    "Reverify exact immutable qualification/self/source and selected286e binding/config92/c43; no foreign active/build/private/restoring/pending state; fresh genuine idle/default/root132/clock/kernel and unchanged clean previous window before drain.",
+    "Both acquisition workers remain absent and cooperative pause remains; no concurrent downloads/heavy reviewer work during private phase or restoration.",
+    "Fresh output/maintenance namespace and empty new quality registry; actual controller rechecks prerequisite/source and is sole existing owned canonical window coordinator.",
+    "Prospective raw old selected API/native close0; after owned stop actual MemAvailable>=88GiB before private reserve/native; actual80GiB/swap0 fence readback and captured property restoration/collection remain mandatory.",
+    "Keep original four cases, image inputs and all policy fixed under one shared phase clock; incomplete/resource/fault results preserve raw HOLD without retry, shorter outputs, additional clocks, or automatic next arm.",
+    "Complete qualified selected baseline restoration/public401/auth200/assembledREADY stopDONE and transient cleanup; then independently qualified serial bounded metadata/four finite scans/assembly after fresh genuine idle. No acceptance based only on producer pass labels."
+  ],
+  "limitations": [
+    "Observed preflight placement values include rounded startup rows and inferred hosted GPU slot count; no direct hosted INFO or full memory-fit prediction claimed.",
+    "Kernel helper uses raise-on-fault/None-return semantics; recorded null return is not interpreted as a numeric exit status.",
+    "No claim four-state panel completion is guaranteed within the remaining soft budget.",
+    "First small-metadata staging OS1 remains preserved; separately completed read-only preflight supplies actual source and identity evidence."
+  ],
+  "QS1_admitted": false,
+  "performance_admitted": false,
+  "deployment_admitted": false,
+  "replay_admitted": false,
+  "reviewer_now_paused_until_private_and_restoration_terminal": true
+}

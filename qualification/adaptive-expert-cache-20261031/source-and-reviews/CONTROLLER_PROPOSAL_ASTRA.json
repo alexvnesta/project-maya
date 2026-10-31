@@ -1,0 +1,64 @@
+{
+  "utc": "2026-10-31T03:05:57.748683+00:00",
+  "status": "SOURCE_ONLY_CONTROLLER_SEAM_PROPOSAL_NO_IMPLEMENTATION_OR_ADMISSION",
+  "architecture_sha256": "3bb258d34b89b5ae1870bbf8f81b4cafa8a6438fee71139025e09fd1576e926c",
+  "package": "adaptive-expert-cache-v1/performance-v1",
+  "files": "13 PV-shaped uniquely named ae_* files: config/runtime/controls/owner plus four tests; independent audit/dispatch plus two tests; CPU driver. Use pinned explicit original M1/PV helpers, never sys.modules substitution or global monkeypatch.",
+  "arms": {
+    "A1": "Fixed control: native92 and exact selected pack/drafter/config policy plus --no-expert-cache",
+    "B1": "Current adaptive: same native/pack/drafter/config policy, no --no-expert-cache"
+  },
+  "delta_contract": [
+    "Same model weights, same selected baseline tokenizer/template/vision/drafter, not whole-Maya-S factor. Both arms use selected A input manifests; no B whole-pack fixtures.",
+    "Private namespace/output/config/profile/cache/slot/lane/lt paths and one flag are the only intentional configuration differences; runtime source enforces normalized unchanged fullpolicy.",
+    "Do not force same slot counts: fixed returns swap spare slots to resident placement. Record actual INFO/startup counts/auto cut and prompt paths.",
+    "Only these two arms initially permitted, separate admission each; no automatic reverse/coding/prose-family continuation/deploy. Old held candidate/proofs stay immutable."
+  ],
+  "panel_recommendation": {
+    "main5": [
+      "existing exact cold JSON",
+      "existing exact warm JSON",
+      "existing exact two-image JSON",
+      "existing exact return-to-text JSON",
+      "existing exact expository prose"
+    ],
+    "lifecycle4": [
+      "typed tool",
+      "actual-ID-normalized followup",
+      "confirmed prefill cancellation before any output with gen0",
+      "recovery literal"
+    ],
+    "reason": "Nine requests preserve the complete known four-state transition check in both changed-policy configurations, then unchanged prose and all lifecycle checks. Root eight-request alternative tests images but omits explicit known-answer return-state case; recommend retaining that small fourth state. These are new family case IDs around unchanged bodies/encoded IDs, not new shortened prompts.",
+    "dumps": false,
+    "observed_fsize": "unlimited",
+    "native_debug_flags": "No DS4_PROF, DS4_CPU_STATS, DS4_CHECK_SWAPS or CACHE tuning added to timed arms.",
+    "budget": "800startup/1000soft/1200wall/200cleanup unchanged; all32768caps/effort100. Reserve90s before cancel exactly as existing; partial remains incomplete and blocks pair acceptance."
+  },
+  "STAT_source_finding": {
+    "server": "native-vision-v2/runtime/serve/server.py b1be40294f6c49692829ad5f85a7aa2867218180fdc8fbc9bef7710371ba3b9f",
+    "observer": "prefill-v2/native_observer.py d1f612c0772dd4afe10ec717506fbb7f8920a018d8e9d0c186c7b083df5b7587",
+    "behavior": "NativeEngine._pump enqueues STAT unchanged; solo generate handles T/PP/RESUME/DONE/ERR and otherwise consumes the line. Existing Trace overrides generate and _parse_done, retains tokens/native-statistics/raw-DONE, but not STAT. No saved raw promo series currently guaranteed.",
+    "smallest_capture": "New private instance-level queue.get delegating tap around the owned trace generation captures only raw STAT with exact PID/native trace ordinal and monotonic relative time. Forward get result unchanged, including all T/PP/RESUME/DONE/ERR/EOF, timeout and other exceptions; delegate queue put and any used methods, do not create another reader. Preserve through generator close and DONE drain; restore the queue reference in finally. Reject any STAT association lacking an active owned request. Keep capture failure separately fail-closed, never swallow primary error. This is a proposal requiring actual source integration review, not yet proven safe.",
+    "tests_required": [
+      "Natural STAT/T/DONE exact forwarding and attribution",
+      "Generator close/cancel drain includes terminal STAT",
+      "Queue timeout/EOF/ERR preserved",
+      "Capture write failure preserves primary and no successful receipt",
+      "No duplicate or foreign-PID/trace attribution",
+      "Real loopback existing API MockEngine natural/cancel transport with tap attached",
+      "Pure parser nonfinite/duplicate/malformed/negative values and absent-metric semantics",
+      "Independent auditor derives promo from raw samples, never trusts producer summary; exact DONE counts remain separate."
+    ]
+  },
+  "qualification": [
+    "Root+same reviewer fullread all changed code/tests and exact new-mode both-host bounded CPU proof. Reuse frozen passed old helper evidence as dependencies, not by claiming old tests exercise this mode.",
+    "New q binds selected source/model/header/main, correct original config/pack/asset/release/source closure, same immutable profile seed, typed exact input manifests and new source/raw proofs.",
+    "Before each private arm: pause download and verify actual original worker exit, source/currentowner/default/idle/phase/root/kernel/prior-window gates; sole-owned lifecycle, post-stop88GiB and private80GiB fence; bounded recovery capability and public selected restoration."
+  ],
+  "claims": [
+    "No full numerical identity claim: same weights can follow different CPU/GPU or prompt paths.",
+    "No exact migration bytes from rounded STAT; no raw-hit-max objective.",
+    "Report natural output/reasoning lengths, all actual placement/draft/prompt/decode/cache counters and client time.",
+    "No performance benefit claim until complete paired independent/manual review."
+  ]
+}

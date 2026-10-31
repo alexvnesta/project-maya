@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-30T22:52:06.448248+00:00",
+  "decision": "LOCAL_QUALITY_V2_MAP_REVIEWED_NO_MODEL_ADMISSION",
+  "reviewed_draft_sha256": "0d7bb9061b41248ba1279e751a7ea44fbe929ec864f652064d4154209aeeecab",
+  "assembly_sha256": "57a54f430b42096acbd6a06cf85a55c81ee1aad0cffa811f44620b50b1792490",
+  "reviewed_file_count": 1141,
+  "inherited_1062_pins_unchanged": true,
+  "new79_local_byte_hashes_match": true,
+  "current_13_sources_and_888_CPU_inputs_membership_exact": true,
+  "two_groups_ordered_164_77_and_all12_raw_proof_memberships_exact": true,
+  "parent_Root_independent_map_review": "Parent reported independent1141-map review passed: inherited1062 unchanged/new79 checked/current CPU groups and fixed policy/snapshot semantics checked.",
+  "policy": {
+    "context": 1048576,
+    "output_allowance": 262144,
+    "request_cap": 32768,
+    "effort": 100,
+    "private_memory_max": 85899345920,
+    "poststop_actual_required": 94489280512,
+    "startup_seconds": 800,
+    "soft_seconds": 1000,
+    "window_seconds": 1200,
+    "cleanup_seconds": 200,
+    "four_original_states_unchanged": true,
+    "native_dump_files": 4
+  },
+  "scope": [
+    "New quality-v2 QS0 then separately admitted QS1; no replay of closed arms.",
+    "Finite all variable native dump rows and exact raw state/known-answer/lifecycle audit; no token-row correspondence or cross-pack numeric equivalence assumption.",
+    "No guarantee four-case completion within shared phase deadline; preserve partial/firstfault HOLD without shrinking panel or extending limits.",
+    "Exact canonical window.py plus only LC1 220002 rawJSON/telemetry outside E/D; snapshot maps registry digest only in new prerequisite, original terminal unchanged.",
+    "Mutable current registries excluded; physical source/assetstat/currentowner/root/genuineidle/phase and poststop RAM gates remain action-time requirements."
+  ],
+  "final_freeze_delta": "Add reviewed draft, assembly and this review as three immutable metadata pins; set manual flags true; model_GPU_admitted remains false.",
+  "physical_verification_performed_by_reviewer": false,
+  "model_GPU_admission": false
+}

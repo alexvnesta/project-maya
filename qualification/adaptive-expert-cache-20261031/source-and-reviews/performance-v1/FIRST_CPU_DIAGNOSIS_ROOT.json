@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-31T03:29:20.620029+00:00",
+  "status": "FIRST_CPU_NEGATIVE_EXPECTATION_MISMATCH_PRESERVED_NO_GPU",
+  "passed_controls": 194,
+  "failed_controls": 1,
+  "cause": "Supplied test globally replaced SHA function so intended manifest check was preceded by original-helper check; fail-closed ValueError message differs. Correct targeted fault injection needed.",
+  "runtime_gate_weakened": false,
+  "first_proof_regraded": false,
+  "production_changed": false,
+  "no_Ubuntu_or_GPU_action": true,
+  "source_review_sha256": "f5677f418fddba26e1f0f7e352f6a7f807a9704993baa3711181327b4a4d2b40",
+  "raw_sha256": {
+    "child.json": "f98fb3ff44e7ba7ec335d4eb3dd73cfb1a7c5638af86b1c068288d4cf5d40e56",
+    "receipt.json": "11cf6f9e61f1fe9f0cb684cf89304077fd3fc487c69d723f5170056f9a7ce539",
+    "child.log": "f7ad3c42614d47a88fc2648af5db2193f3870752e1982129f70fbef474f83735"
+  }
+}

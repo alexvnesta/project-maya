@@ -1,0 +1,121 @@
+{
+  "utc": "2026-10-31T10:42:05.043428+00:00",
+  "status": "CLOSED_HOLD_EXACT_WHOLE_MODEL_NUMERICAL_DIFFERENCE_NO_SPEED_OR_DEPLOYMENT",
+  "model_or_GPU_admitted": true,
+  "numerical_arms": {
+    "N0": {
+      "attempted": true,
+      "fully_reviewed": true,
+      "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-cpu-iq2xs-numerical-N0-20261031T093804Z",
+      "proof": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-cpu-iq2xs-numerical-N0-20261031T093804Z/proof.json",
+      "controller_pid": 4139863,
+      "accepted": true,
+      "numerical_state_lifecycle_accepted": true,
+      "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+      "terminal_audit_sha256": "10383a6e06f28857ac3de37ad7643dbc2f4d354247867435d1e513f8e234fe77",
+      "root_result_review_sha256": "9cf8eda2426fb5f9d8cbacfa4cfe63b19516e7cd960d94e89b3f5cbb314f4fc7",
+      "astra_result_review_sha256": "021c5449d55d2faee5a578b90c14dda7027b67d4eefe8b27fb726c7afa9e635b"
+    },
+    "N1": {
+      "attempted": true,
+      "fully_reviewed": true,
+      "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-cpu-iq2xs-numerical-N1-20261031T101831Z",
+      "proof": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-cpu-iq2xs-numerical-N1-20261031T101831Z/proof.json",
+      "controller_pid": 4157906,
+      "accepted": false,
+      "numerical_state_lifecycle_accepted": false,
+      "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+      "standalone_four_state_lifecycle_passed": true,
+      "status": "HOLD_EXACT_WHOLE_MODEL_NUMERICAL_COMPARISON_FAILED",
+      "root_result_review_sha256": "652ffc5355ce7fabbab654360f5085bd2cd511ef16215b5f000da26c22dd342d",
+      "astra_result_review_sha256": "464e84b08032a2e1eeaf8f5a294b40ad1f9b0b674f4f0e6dab183b405222a5cc",
+      "comparison_retry": false,
+      "timing_admitted": false,
+      "deployment_admitted": false
+    }
+  },
+  "CPU": {
+    "review_sha256": "5003f4784f1f1818d874657902d5f16ec155471898253d8c8874534f51da497b",
+    "controls_each": 247,
+    "source_files": 19,
+    "input_files": 3639,
+    "Mac_pid": 92304,
+    "Linux_pid": 4130875,
+    "Astra_result_sha256": "4f7ef86c6bd568d9cac7efcd53a594e1d5532c3ab3baafd20fb2e2c378883a4a"
+  },
+  "selected_unchanged": {
+    "native_pid": 4161473,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "c62aca2bdba14f1ebde3f47ab9914cf9",
+      "main_pid": 4161436,
+      "native_pid": 4161473,
+      "native_start_ticks": 171069083
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "qualification_draft_sha256": "c46a34e7a5ccebe5bed4fc2998f27455d530b4451df81e440e24ac0200e77562",
+  "production_changed": false,
+  "old_first_failure_regraded": false,
+  "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+  "limits": [
+    "Failedbitwisegate doesnotestablish incorrectanswers/generalqualityloss; all4knownanswers passed.",
+    "CPUarchive arithmetic, GPUexecution andtime-dependentadaptiveexpertcacheplacement notcausallyseparated; startupcounts match but per-expert dynamicresidency/type17traffic notobserved.",
+    "Originalcompare rc1/no terminalaudit retained; assemblypass doesnotregradecomparison.",
+    "Dumpinstrumentednumerical runs donotqualifyspeed; no nearfilled1M/full262144 or generalreasoningquality proof.",
+    "Metadataarchive omittedsynthetic-owned66KB expertprofile.bin; copiedthatimmutablemetadata separately tocomplete Rootreconciliation; no scanner/modelretry."
+  ],
+  "candidate_accepted": false,
+  "source_qualified_but_wholemodel_not_exact": true
+}

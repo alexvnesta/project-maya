@@ -1,0 +1,202 @@
+{
+  "complete": false,
+  "rows": [
+    {
+      "id": "ms-prose-cold-json",
+      "passed": true,
+      "native": {
+        "generated": 188,
+        "prompt_tokens": 8469,
+        "prompt_ms": 11623.3,
+        "decode_ms": 3764.9,
+        "finish": "stop",
+        "drafts_accepted": 129,
+        "drafts_offered": 145,
+        "reused": 0,
+        "hits": 43570,
+        "lookups": 51300
+      },
+      "observed_tokens": 188,
+      "native_decode_tokens_per_second": 49.93492523041781,
+      "client_seconds": 15.415427332976833,
+      "content_characters": 195,
+      "reasoning_characters": 238,
+      "manual_review_pending": false,
+      "general_quality_or_equivalence_claim": false,
+      "emitted_token_contract": {
+        "count": 188,
+        "valid_vocabulary_ids": true,
+        "ordered_ids_sha256": "fb4e5f6c9c6dd973b8daf67723dfe3d6b959e8a451244b8e496a718903cc910a"
+      }
+    },
+    {
+      "id": "ms-prose-warm-json",
+      "passed": true,
+      "native": {
+        "generated": 164,
+        "prompt_tokens": 8469,
+        "prompt_ms": 52.0,
+        "decode_ms": 2937.9,
+        "finish": "stop",
+        "drafts_accepted": 121,
+        "drafts_offered": 134,
+        "reused": 8468,
+        "hits": 38879,
+        "lookups": 44325
+      },
+      "observed_tokens": 164,
+      "native_decode_tokens_per_second": 55.82218591510943,
+      "client_seconds": 3.012047655880451,
+      "content_characters": 195,
+      "reasoning_characters": 127,
+      "manual_review_pending": false,
+      "general_quality_or_equivalence_claim": false,
+      "emitted_token_contract": {
+        "count": 164,
+        "valid_vocabulary_ids": true,
+        "ordered_ids_sha256": "6bd735fe0afb8edad0ba16085d38d6bb0755eabd884a1c02524fa7e55bd04e85"
+      }
+    },
+    {
+      "id": "ms-prose-main",
+      "passed": true,
+      "native": {
+        "generated": 6051,
+        "prompt_tokens": 169,
+        "prompt_ms": 1984.1,
+        "decode_ms": 121662.3,
+        "finish": "stop",
+        "drafts_accepted": 3269,
+        "drafts_offered": 4030,
+        "reused": 0,
+        "hits": 1698979,
+        "lookups": 1735725
+      },
+      "observed_tokens": 6051,
+      "native_decode_tokens_per_second": 49.73603162195684,
+      "client_seconds": 123.66032171412371,
+      "content_characters": 5154,
+      "reasoning_characters": 21430,
+      "manual_review_pending": true,
+      "general_quality_or_equivalence_claim": false,
+      "emitted_token_contract": {
+        "count": 6051,
+        "valid_vocabulary_ids": true,
+        "ordered_ids_sha256": "23bbd37cfbbad0b1007d9ab099b5dfc772af1b4153019b2ef5abc01b07b601bb"
+      }
+    }
+  ],
+  "scores": [
+    {
+      "id": "ms-prose-cold-json",
+      "passed": true,
+      "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+    },
+    {
+      "id": "ms-prose-warm-json",
+      "passed": true,
+      "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+    },
+    {
+      "id": "ms-prose-main",
+      "passed": true,
+      "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+    }
+  ],
+  "lifecycle": {
+    "required": true,
+    "complete": false,
+    "rows": [
+      {
+        "id": "ms-prose-tool",
+        "passed": true,
+        "native": {
+          "generated": 87,
+          "prompt_tokens": 372,
+          "prompt_ms": 4732.2,
+          "decode_ms": 1537.2,
+          "finish": "stop",
+          "drafts_accepted": 68,
+          "drafts_offered": 70,
+          "reused": 0,
+          "hits": 19170,
+          "lookups": 22215
+        },
+        "observed_tokens": 87,
+        "native_decode_tokens_per_second": 56.59640905542545,
+        "client_seconds": 6.285450596129522,
+        "content_characters": 0,
+        "reasoning_characters": 89,
+        "manual_review_pending": false,
+        "general_quality_or_equivalence_claim": false,
+        "emitted_token_contract": {
+          "count": 87,
+          "valid_vocabulary_ids": true,
+          "ordered_ids_sha256": "68563c0877e4403d0f5de1a94e41c177c4dd197db5c0684ac28f684e0ed43f0e"
+        }
+      },
+      {
+        "id": "ms-prose-tool-followup",
+        "passed": true,
+        "native": {
+          "generated": 25,
+          "prompt_tokens": 465,
+          "prompt_ms": 1167.2,
+          "decode_ms": 453.9,
+          "finish": "stop",
+          "drafts_accepted": 19,
+          "drafts_offered": 21,
+          "reused": 372,
+          "hits": 5991,
+          "lookups": 6750
+        },
+        "observed_tokens": 25,
+        "native_decode_tokens_per_second": 55.078211059704785,
+        "client_seconds": 1.6366983440238982,
+        "content_characters": 66,
+        "reasoning_characters": 0,
+        "manual_review_pending": false,
+        "general_quality_or_equivalence_claim": false,
+        "emitted_token_contract": {
+          "count": 25,
+          "valid_vocabulary_ids": true,
+          "ordered_ids_sha256": "f746191360903773599a0316afdeb7570f6132e3b44af0fd9e26c80f0d910622"
+        }
+      }
+    ],
+    "scores": [
+      {
+        "id": "ms-prose-tool",
+        "passed": true,
+        "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+      },
+      {
+        "id": "ms-prose-tool-followup",
+        "passed": true,
+        "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+      },
+      {
+        "id": "ms-prose-prefill-cancel",
+        "passed": false,
+        "status": "WRONG_CAP_PARTIAL_HOLD",
+        "reason": "UNRUN prefill cancellation before unchanged deadline"
+      },
+      {
+        "id": "ms-prose-prefill-recovery",
+        "passed": false,
+        "status": "UNRUN"
+      }
+    ],
+    "unrun_ids": [
+      "ms-prose-prefill-recovery"
+    ]
+  },
+  "reason": "UNRUN prefill cancellation before unchanged deadline",
+  "retry": false,
+  "manual_review_required": true,
+  "unrun_ids": [
+    "ms-prose-prefill-recovery"
+  ],
+  "performance_accepted": false,
+  "deployment_admitted": false
+}

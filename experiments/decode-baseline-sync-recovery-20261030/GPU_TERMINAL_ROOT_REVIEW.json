@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-30T10:23:00.288250+00:00",
+  "status": "SYNC_BASELINE_HEALTH_ACTUAL_TERMINAL_PASS",
+  "window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T102137Z.json",
+  "window_test_exit": 0,
+  "maintenance_resume_allowed": true,
+  "devices": [
+    {
+      "device": 0,
+      "cases": 12,
+      "exit": 0
+    },
+    {
+      "device": 1,
+      "cases": 12,
+      "exit": 0
+    }
+  ],
+  "kernel": {
+    "kernel_capture_returncode": 0,
+    "kernel_fault_lines": []
+  },
+  "root_min_GiB": 835.6802139282227,
+  "swapout_delta_bytes": 0,
+  "GPU_owners": [],
+  "unit": {
+    "ActiveState": "failed",
+    "InvocationID": "27f9b1951f494c47a5f6de81f7323ba6",
+    "MainPID": "0",
+    "Result": "exit-code"
+  },
+  "source_and_all_2334_pins_reverified": true,
+  "no_service_start_yet": true,
+  "old_failures_unchanged": true,
+  "metadata_attestation_limit": "Independent build review was staged beforelaunch and its digest verified here afterterminal. The launchoperator explicitly verifiedmap2334/self/admission but omitted a separateprospective digestassert for this nonexecutedreviewmetadata. Do notretrofitactiontimeattestation."
+}

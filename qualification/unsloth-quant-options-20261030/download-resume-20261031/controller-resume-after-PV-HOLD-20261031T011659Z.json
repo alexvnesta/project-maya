@@ -1,0 +1,44 @@
+{
+  "utc": "2026-10-31T01:16:59.102994+00:00",
+  "pid": 3811966,
+  "command": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-u",
+    "-B",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/acquire_unsloth.py",
+    "--qualification-pin",
+    "ac4259ee485c3ec9f8fa530ed4835cc2eb5ccefc23452d4fdf870a69b4b3464a"
+  ],
+  "qualification_sha256": "ac4259ee485c3ec9f8fa530ed4835cc2eb5ccefc23452d4fdf870a69b4b3464a",
+  "actual_pin_checks": 98,
+  "admission_sha256": "60d3708df6d3255ee177e4fd6b25307b53f6d196ad9714fe2c609253d900f73f",
+  "selected_binding": {
+    "invocation": "8ada74a684754613a2e04f9c4f049d99",
+    "main_pid": 3802896,
+    "native_pid": 3802933,
+    "native_start_ticks": 167685086
+  },
+  "retained_bytes_snapshot": 173809983512,
+  "budget": {
+    "free_bytes": 374303014912,
+    "required_bytes": 281552739395,
+    "Unsloth_remaining_bytes": 126665481283,
+    "Maya_S_remaining_bytes": 0,
+    "root_plus_comparison_floor_bytes": 154618822656
+  },
+  "old_pause_archived_sha256": "a6f03e03d210402a1922af5a732040965a678a6505c448f6b043ee4f496ca9f5",
+  "old_q_preserved_sha256": "caa9f9e3f57cae1d5d2036379ba4defbf5bc6abddc82431a7e8eb50a9fbc0703",
+  "long_IO_AS_bytes": 536870912,
+  "nice_increment": 15,
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MALLOC_ARENA_MAX": "1"
+  },
+  "CPU30_limit_applied": false,
+  "cooperative_wall_seconds": 21600,
+  "model_or_service_actions": 0,
+  "Maya_S_strict_HOLD_unchanged": true,
+  "log": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/download-resume-after-PV-HOLD-20261031T011659Z.log"
+}

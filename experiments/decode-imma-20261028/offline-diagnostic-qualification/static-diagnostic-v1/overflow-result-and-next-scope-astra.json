@@ -1,0 +1,93 @@
+{
+  "utc": "2026-10-29T11:30:46.426291+00:00",
+  "decision": "STATIC_WHOLE_OBJECT_CAPTURE_HOLD_PRESERVED_PROPOSE_TWO_SYMBOL_INVENTORIES_ONLY",
+  "evidence_sha256": {
+    "model-v1/static-diagnostic-v1/output-FIRST/receipt.json": "848cf73a35d00644f6801981c125e5e8a0557f3051e60b9ac4526b30e9df7897",
+    "model-v1/static-diagnostic-v1/output-FIRST/old-sass.json": "0140c561c586d5be51202aa53cf713b85ef8a843332a3c01df7943a6411fac6d",
+    "model-v1/static-diagnostic-v1/output-FIRST/plan.json": "d3db39767ef4be565bcd3bc4c6a960579f8757649a4371627e3e985749f8ce85",
+    "model-v1/static-diagnostic-v1/actual-preflight-FIRST.json": "7f6731d15c6dc5a8b0b915a52d4c5bd8a56a6cca5ffd0c2cc38e683cb35cdec5",
+    "model-v1/static-diagnostic-v1/static_diagnostic.py": "aca05d3833d1c1902f65c8f98e95d8334fb6eb8eba30bd3bcc7f53bb60616be5",
+    "selected-base/src/ds4/ds4_iq.cu": "883cec5e4d26f37f61bf650fc3f123bf47d8bb456b84bedfbadb0152864b8234",
+    "upstream-v1.1.37-FIRST.json": "5ba6531e289462b0b15292fe392161bf330362734454537242d54c04ad967006",
+    "selected-pack-quant-inventory-FIRST.json": "55a170d4e8c2dc758f19fb21f4b36836b91b43036ddc213599954b5378011f07"
+  },
+  "actual_result": {
+    "first_child": "old-sass",
+    "pid": 1950901,
+    "returncode": -15,
+    "stdout_bytes": 67108864,
+    "stderr_bytes": 0,
+    "trigger": "OUTPUT_OVERFLOW_HOLD_PARTIAL_RETAINED",
+    "owned_cleanup_complete": true,
+    "cleanup_errors": [],
+    "post_input_custody": "VERIFIED",
+    "remaining_five_children": "UNRUN",
+    "numerical_gate": "HOLD_TOKEN_PATH_DIFFERS"
+  },
+  "scope_limits": [
+    "Local raw receipts establish bounded output, owned cleanup and unchanged object/tool post-custody. Post-release current binding/reservation observations are parent-reported; no remote recheck by reviewer.",
+    "64MiB partial is not a complete function inventory and no common-code comparison was achieved. No failed-model or GPU fault follows from the disassembler output bound.",
+    "Selected source has many type/NE/row-width/prefill specializations; disassembly text expansion is plausible. Dominant individual function size or repeated-section contribution remains unknown."
+  ],
+  "next_distinct_question": {
+    "question": "Which exact SM80 device function symbols exist in each pinned old/new IQ object, especially legacy Q5_K mv_kernel NC1/4/16?",
+    "commands_proposed_not_admitted": [
+      [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-elf-symbols",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o"
+      ],
+      [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-elf-symbols",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o"
+      ]
+    ],
+    "bounds": "Retain CPU30/AS512MiB/wall90/nice15/CUDAhidden, <=64MiB stdout/1MiB stderr per child, no cap relaxation, fresh namespace and immutable qualification. Only two symbol inventory commands; no SASS/ELF section dump. Stop first fault without retry.",
+    "after_inventory": "Freeze actual exact per-object names and architecture. Then separately review a finite mapping for three legacy Q5_K NC specializations and exact --function SASS/resource commands. No guessing mangled names or fuzzy matching.",
+    "anonymous_namespace": "Parent bounded head observation reports old first mv_kernel ILi29ELi16 with TU-specific anonymous namespace prefix. Candidate prefix can differ. Keep original names; any semantic suffix mapping must be explicit, unique, source-reviewed and recorded, never silently strip hash portions.",
+    "source_basis": "Selected ds4_iq.cu mv_nc dispatch at1216-1221 chooses NC1/4/16; mv_kernel body at880+ retains lane accumulation/fmaf/warp_sum. These legacy specializations provide a narrow compiler-regeneration diagnostic; candidate IMMA kernels have no old counterpart.",
+    "negative_interpretation": "Equal chosen SASS/resources would narrow only those legacy kernels. It would not prove hidden/KV/draft state, constants/relocations, host dispatch, all kernels or executable equivalence. Differences also would not establish the cause of sampled token divergence."
+  },
+  "reuse_design": "New inventory mode may reuse frozen supervisor process/guard/cleanup primitives by exact source-hash binding. Its command/output/qualification paths must be immutable mode-specific contracts, with tests that invoke actual reused run_child/execute and refuse all six original capture commands, arbitrary flags/objects/output adoption. Do not silently monkeypatch only commands while main still expects old qualification/output. Source and delta CPU qualification precede admission. Existing54 raw proof remains historical and can support unchanged helper code; no proof transfer to new namespace contracts.",
+  "upstream_rank_source_only": [
+    {
+      "rank": 1,
+      "candidate": "Isolated IQ2_S persistent expert grids from v1.1.37",
+      "basis": "Actual metadata has6144 IQ2_S routed tensors across12 layers; SM80 meets upstream default. Read patch preserves row/warp/lane sum order while amortizing8KiB codebook per resident block.",
+      "remaining": "Actual routed traffic/residency benefit unknown. Review occupancy/loop/group boundaries and EPI0/CUDA-only eligibility; isolated port and both-device exact kernel/model/state tests needed. Do not mix with held IMMA."
+    },
+    {
+      "rank": 2,
+      "candidate": "Per-device light scratch key",
+      "basis": "Read IQ patch changes stream-only map to pair(device,stream) and checks cudaGetDevice.",
+      "remaining": "Reliability lead for cross-device stream-key reuse, not established decode gain; need actual selected light caller/stream collision evidence before priority."
+    },
+    {
+      "rank": 3,
+      "candidate": "Q8_SHARE and head8",
+      "basis": "Upstream commit/changelog leads only in supplied packet; gguf/main/model full patches absent.",
+      "remaining": "Selected already Q8 batch1; shared-input reuse might differ, but exact code/dispatch applicability not yet read. No measured gain or port recommendation."
+    },
+    {
+      "rank": 4,
+      "candidate": "Stable tool order and failed slot publication fixes",
+      "basis": "Commit/changelog leads only.",
+      "remaining": "Potential cache continuity/reliability value; exact pinned API/source comparison needed, not raw decode improvement."
+    }
+  ],
+  "excluded_leads": [
+    "AVX512 CPU rows: physical3970X lacks AVX512.",
+    "AMD gfx1151 fused path and Windows changes do not apply.",
+    "Broad v1.1.37 merge, new parallel scheduler and restore-points protocol not admitted."
+  ],
+  "primary_documentation": {
+    "url": "https://docs.nvidia.com/cuda/archive/13.3.0/cuda-binary-utilities/index.html",
+    "checked": "Table2 documents --dump-elf-symbols, --function and sm_80 filtering; --list-text ignores other options, so do not assume its architecture flag applies."
+  },
+  "actions": "No new code, test, tool execution, remote action, build, GPU window or serving change by reviewer."
+}

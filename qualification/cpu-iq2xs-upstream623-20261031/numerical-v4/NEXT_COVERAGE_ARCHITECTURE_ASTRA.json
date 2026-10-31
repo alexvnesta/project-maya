@@ -1,0 +1,437 @@
+{
+  "status": "ARCHITECTURE_ONLY_FOR_DISTINCT_REMAINING_COVERAGE_RUN",
+  "reviewed_utc": "2026-10-31T07:15:22.468357+00:00",
+  "reviewer": "Astra",
+  "partial_review_sha256": "5457ce965c29754959b25791db2e36983001fb2f618d2db7cdd36989117c95bc",
+  "proposal": "Separately frozen numerical-v5 restricted to exact original jobs[25:], one previously attempted but unaccepted plus20 never started. Preserve v4 partial unchanged.",
+  "coverage_composition_defensible": true,
+  "justification": "Each frozen fixture job starts a separate process, consumes deterministic synthetic inputs and independently checks exact arithmetic/canaries/dispatch. With identical fixture ELF/source, candidate/archive, CPU identity and parser, the first25 completed raw/result chains remain valid finite evidence. Host workload changes scheduling and latency, not the required bitwise predicates. No timing or whole-model claim follows.",
+  "retained_evidence": {
+    "qualification_sha256": "572938dfef80ef6f38d521116ed2d6288f91a969354e233888c02ba83c7871d3",
+    "fixture_sha256": "890041fdfb7efa9b3d9e2a7078823e5278c4ddb12da29bfa7ca5e6752b7073f6",
+    "prior_jobs": [
+      {
+        "id": "pure-256-optimized",
+        "n": 256,
+        "mode": "optimized",
+        "pair": null
+      },
+      {
+        "id": "pure-256-fallback",
+        "n": 256,
+        "mode": "fallback",
+        "pair": null
+      },
+      {
+        "id": "pure-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": null
+      },
+      {
+        "id": "pure-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": null
+      },
+      {
+        "id": "pure-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": null
+      },
+      {
+        "id": "pure-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": null
+      },
+      {
+        "id": "mixed-22-22-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          22,
+          22
+        ]
+      },
+      {
+        "id": "mixed-22-22-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          22,
+          22
+        ]
+      },
+      {
+        "id": "mixed-22-22-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          22,
+          22
+        ]
+      },
+      {
+        "id": "mixed-22-22-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          22,
+          22
+        ]
+      },
+      {
+        "id": "mixed-22-17-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          22,
+          17
+        ]
+      },
+      {
+        "id": "mixed-22-17-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          22,
+          17
+        ]
+      },
+      {
+        "id": "mixed-22-17-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          22,
+          17
+        ]
+      },
+      {
+        "id": "mixed-22-17-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          22,
+          17
+        ]
+      },
+      {
+        "id": "mixed-22-16-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          22,
+          16
+        ]
+      },
+      {
+        "id": "mixed-22-16-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          22,
+          16
+        ]
+      },
+      {
+        "id": "mixed-22-16-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          22,
+          16
+        ]
+      },
+      {
+        "id": "mixed-22-16-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          22,
+          16
+        ]
+      },
+      {
+        "id": "mixed-17-22-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          17,
+          22
+        ]
+      },
+      {
+        "id": "mixed-17-22-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          17,
+          22
+        ]
+      },
+      {
+        "id": "mixed-17-22-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          17,
+          22
+        ]
+      },
+      {
+        "id": "mixed-17-22-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          17,
+          22
+        ]
+      },
+      {
+        "id": "mixed-17-17-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          17,
+          17
+        ]
+      },
+      {
+        "id": "mixed-17-17-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          17,
+          17
+        ]
+      },
+      {
+        "id": "mixed-17-17-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          17,
+          17
+        ]
+      }
+    ],
+    "prior_case_rows": 4824,
+    "new_jobs": [
+      {
+        "id": "mixed-17-17-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          17,
+          17
+        ]
+      },
+      {
+        "id": "mixed-17-16-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          17,
+          16
+        ]
+      },
+      {
+        "id": "mixed-17-16-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          17,
+          16
+        ]
+      },
+      {
+        "id": "mixed-17-16-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          17,
+          16
+        ]
+      },
+      {
+        "id": "mixed-17-16-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          17,
+          16
+        ]
+      },
+      {
+        "id": "mixed-17-18-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          17,
+          18
+        ]
+      },
+      {
+        "id": "mixed-17-18-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          17,
+          18
+        ]
+      },
+      {
+        "id": "mixed-17-18-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          17,
+          18
+        ]
+      },
+      {
+        "id": "mixed-17-18-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          17,
+          18
+        ]
+      },
+      {
+        "id": "mixed-16-22-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          16,
+          22
+        ]
+      },
+      {
+        "id": "mixed-16-22-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          16,
+          22
+        ]
+      },
+      {
+        "id": "mixed-16-22-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          16,
+          22
+        ]
+      },
+      {
+        "id": "mixed-16-22-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          16,
+          22
+        ]
+      },
+      {
+        "id": "mixed-16-17-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          16,
+          17
+        ]
+      },
+      {
+        "id": "mixed-16-17-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          16,
+          17
+        ]
+      },
+      {
+        "id": "mixed-16-17-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          16,
+          17
+        ]
+      },
+      {
+        "id": "mixed-16-17-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          16,
+          17
+        ]
+      },
+      {
+        "id": "mixed-16-16-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          16,
+          16
+        ]
+      },
+      {
+        "id": "mixed-16-16-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          16,
+          16
+        ]
+      },
+      {
+        "id": "mixed-16-16-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          16,
+          16
+        ]
+      },
+      {
+        "id": "mixed-16-16-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          16,
+          16
+        ]
+      }
+    ],
+    "new_case_rows": 1512,
+    "union_jobs": 46,
+    "union_case_rows": 6336
+  },
+  "required_design": [
+    "Create a new source/qualification/attempt namespace. Freeze exact remaining21 IDs from the original46 inventory; never select based on future outcomes or replay the25 passed jobs. Original26th remains unaccepted in v4.",
+    "Pin all v4 raw162 files, original admission/q/source/CPU proofs, this independent partial review, and exact prior25 row chains. Validate that accepted-prefix and remaining suffix are disjoint, ordered and exhaust the original46/6336; reject missing/duplicate/overlap/job/type/digest changes.",
+    "Keep fixture890041fd, repaired559d source, candidateCAB/archive514b, original outputs, parser and arithmetic settings unchanged. No rebuild and no numerical tolerance or coverage reduction.",
+    "A new explicit authorization-bound CPU-only guard may allow healthy ordinary hosted active/queued inference. Replace only the work-idle condition in new source; do not catch a generic old idle failure or bypass health checks. Maintain strict typed status/loaded/model/1M/images/default/fault checks, nonnegative work/switcher counters, exact selected process identity/sole GPUlease, source/root/CPUcapability checks and no private/build/restoration/pending owner.",
+    "Read the source behind host.idle and retain every non-work safety predicate explicitly; false/missing/unknown health is a refusal. No monkeypatch of immutable host/guard modules. New guard permits only active ordinary inference, not switching, a foreign owner, stale CPU claim, kernel fault or degraded service.",
+    "Reuse qualified CPUlease/OwnedChildren/CAS/import infrastructure. Root keeps the cooperative no-other-maintenance boundary. Never acquire/release the GPU lifetime lock or stop/restart hosting merely to run this CPU-only witness.",
+    "Preserve CPU30/AS512/nice15/CUDAhidden and dispatch scrub. Keep each wall90/run85+cleanup5 and whole1000soft/1200wall/200cleanup, with clocks starting before bootstrap and remaining-budget cap. Source/custody/health/ownership faults still stop at first refusal, preserve raw and require all groups absent before claim release.",
+    "Fully manually review changed source/tests and qualify exact both-host bounded CPU controls before any map/preflight/admission. Add actual healthy-busy positives, every retained safety negative, typed counter negatives, failed-guard-owned-cleanup/claim tests, exact21 whitelist and saved25-prefix completeness/custody/overlap negatives. Keep actual fixture execution outside portable controls.",
+    "After successful21 actual jobs and supervision/production closure, create a distinct combined finite-coverage report referencing both immutable runs:25prior+21new=46/6336. Do not publish a46-child PASS for v4 or claim one uninterrupted successful sequence."
+  ],
+  "risks_and_limits": [
+    "Concurrent hosting can increase CPU/memory contention and user latency; no throughput comparison is valid during this numerical witness. Nice15 and one serial512MiB child bound the task, not total system contention. Environment thread limits are recorded, not a CPU affinity or universal native-thread-count guarantee.",
+    "New health checks must preserve source-level idle safety semantics; simply deleting host.idle would be unsafe. A new guard requires its own exact controls and action-time review.",
+    "The current post-deferral observation is healthy/idle but not a future authorization or owner guarantee. Fresh staging and numerical action-time gates still apply.",
+    "If ownership/health or resources cannot be verified while serving, defer on that condition. A separately qualified owned stop/restore path would be larger scope and is not the preferred initial design."
+  ],
+  "implementation_authorized_by_this_report": false,
+  "numerical_admitted": false,
+  "model_GPU_or_service_admitted": false
+}

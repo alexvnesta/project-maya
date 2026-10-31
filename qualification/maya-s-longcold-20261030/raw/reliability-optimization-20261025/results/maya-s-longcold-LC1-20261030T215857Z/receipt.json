@@ -1,0 +1,79 @@
+{
+  "mode": "longcold",
+  "arm": "LC1",
+  "arm_results": {
+    "complete": true,
+    "scores": [
+      {
+        "id": "ms-longcold-single-text",
+        "passed": true,
+        "status": "LONGCOLD_JSON_SOURCE_AND_STATE_PASSED"
+      }
+    ],
+    "rows": [
+      {
+        "id": "ms-longcold-single-text",
+        "passed": true,
+        "native": {
+          "generated": 169,
+          "prompt_tokens": 8469,
+          "prompt_ms": 11850.9,
+          "decode_ms": 3260.1,
+          "finish": "stop",
+          "drafts_accepted": 126,
+          "drafts_offered": 141,
+          "reused": 0,
+          "hits": 40543,
+          "lookups": 46050
+        },
+        "observed_tokens": 169,
+        "native_decode_tokens_per_second": 51.83890064721941,
+        "client_seconds": 15.13624920300208,
+        "content_characters": 195,
+        "reasoning_characters": 165,
+        "manual_review_pending": false,
+        "general_quality_or_equivalence_claim": false
+      }
+    ],
+    "retry": false,
+    "automatic_next_arm": false,
+    "quality_or_performance_pass": false,
+    "manual_review_required": true,
+    "native_request_count": 1,
+    "mode1_activation": {
+      "mode": 1,
+      "source": 20,
+      "retained_rows": 2668,
+      "activation_early_rows": [
+        5801
+      ]
+    },
+    "DSI1_leftovers": []
+  },
+  "seconds_including_load": 776.9008007701486,
+  "private_cleanup_passed": true,
+  "resource_fence_terminal": {
+    "passed": true,
+    "events_after": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "cache_charging_disclosure": "memory.current/peak include charged file cache and pinned memory; not process RSS"
+  },
+  "manual_review_pending": true,
+  "not_a_promotion": true
+}

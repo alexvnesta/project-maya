@@ -1,0 +1,89 @@
+{
+  "utc": "2026-10-31T05:15:10.623515+00:00",
+  "status": "FIRST_BUILD_CONTROLLER_88_CONTROLS_BOTH_HOSTS_PASS",
+  "source_review_sha256": "9e675dd36a295c2b20b9c8c0b1f67c84f6b2f833b2c1091a3fd551ecb74fdca5",
+  "sources": 4,
+  "inputs": 42,
+  "ordered_controls": 88,
+  "hosts": {
+    "darwin": {
+      "PID": 99652,
+      "returncode": 0,
+      "elapsed_seconds": 0.3999750830116682,
+      "observed": {
+        "pid": 99652,
+        "ppid": 99651,
+        "pgid": 99652,
+        "cpu": [
+          30,
+          30
+        ],
+        "as": null,
+        "nice": 15,
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "MALLOC_ARENA_MAX": "1",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "platform": "darwin",
+        "dont_write_bytecode": true
+      },
+      "error": null,
+      "cleanup": [],
+      "raw_sha256": {
+        "child.log": "34c71f167fed88d8419db6451908f3071e3cf1fa8c1f7eac036223d262d9e0e8",
+        "parent.json": "c6ee2c71c479014d1f9f60ff402c7ebd2d497abd0ab4e4efa0b99a2bae13d94a",
+        "attempt.json": "32c3a1396ae6e9f6cdaffae3f1fb8a8b4021a1b84ec6eae4b290eb27e457b315",
+        "child.json": "109e22d192c9256d14503a076ca2bb86a721e96b249692742c624065f7980112",
+        "observed.json": "393da11cca3c545222bfada52d8bccf516c42026b12235b2da3794d79caf978d",
+        "receipt.json": "9581aa0107a9ed501480b1a4c47582761286b26a483f46e7aac4a31d833d4049"
+      }
+    },
+    "linux": {
+      "PID": 4023798,
+      "returncode": 0,
+      "elapsed_seconds": 0.4172310910653323,
+      "observed": {
+        "pid": 4023798,
+        "ppid": 4023797,
+        "pgid": 4023798,
+        "cpu": [
+          30,
+          30
+        ],
+        "as": [
+          536870912,
+          536870912
+        ],
+        "nice": 15,
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "MALLOC_ARENA_MAX": "1",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "platform": "linux",
+        "dont_write_bytecode": true
+      },
+      "error": null,
+      "cleanup": [],
+      "raw_sha256": {
+        "child.log": "b9e90b263d93b8b477d43f21f097eddf3f46624ba2f58437af6d58861290d7d7",
+        "parent.json": "0398fddbd5793879aed5c5ecb373cce0748a8eb3d11279cfcaf4927be4d76c8f",
+        "attempt.json": "60d62922ee78018391de82a933aa7a1b0841ee81080991ef98c57504b72a555c",
+        "child.json": "3fb5dcb9b018aea463b446976bfec921670c54dc3dd44561449a8275b00c3be6",
+        "observed.json": "028bf14ab972e36527b61b52c42e5f2f4700f9495897d77952610b4a85aae489",
+        "receipt.json": "9f58778e1cbae158cce3fe797a833063b4df1d6fa2154edd2201c653fee2829f"
+      }
+    }
+  },
+  "scope": "Build-controller source/supervisor/qualification/recipe/archive/claim logic controls only. Tool, compile, link, native, numerical and GPU execution mocked/excluded. Actualcompilerresourcebounds remainprospective; controlnative92relinknotyetattempted.",
+  "prepare_build_numerical_or_GPU_admitted": false
+}

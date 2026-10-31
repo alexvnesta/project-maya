@@ -1,0 +1,48 @@
+{
+  "utc": "2026-10-30T13:50:08.359200+00:00",
+  "status": "ACQUISITION_SOURCE_QUALIFICATION_IN_PROGRESS",
+  "user_authorization": "Stock Maya-S comparison first; isolated at1048576 totalcontext/262144output. No production activation in this step.",
+  "factors": {
+    "baseline": "current selected92/c43pack and currentdrafter",
+    "candidate": "publishedMaya-S six shards and exact publicdspark.bin/json",
+    "engine": "Keep selectednative92 if exactcandidateheaders/pack/API compatibility passes; no newbuild assumed",
+    "constant_policy": [
+      "1048576totalcontext",
+      "262144outputallowance",
+      "effort100",
+      "images",
+      "runtimeL22projection scale1/all40mainblocks",
+      "mode1",
+      "Q8batch/check1/1",
+      "DSparkconf0.65",
+      "TP1automatic19-21",
+      "CPU24",
+      "chunk4096",
+      "allCPUexpertsRAMstrict",
+      "stream0"
+    ],
+    "capacity_claim_limit": "1M advertised metadata and eventual actualallocation/targetedchecks are separate from nearfilled1M execution; no extrapolation."
+  },
+  "acquisition": {
+    "manifest": "ASSET_MANIFEST.json",
+    "bytes": 347445667721,
+    "download_destination": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets",
+    "root_reserve_bytes": 141733920768,
+    "no_global_packages_or_settings": true,
+    "fresh_qualified_idle_gate_before_Ubuntu_staging_or_heavyCPU": true
+  },
+  "next": [
+    "Manual source/test review and bothhost bounded acquisition CPU controls",
+    "Single owned passive download while service stays available; defer before/at userbusy; preserve partials/transport failures",
+    "Header and wholeasset hashes; isolated pack source/CPU qualification and exactvision/template/DSpark custody",
+    "Static capacity+residency audit before a separately admitted bounded startup/quality phase",
+    "Separately frozen speed/code/prose/prefix/cancel and actualplacement comparison only after preceding gates"
+  ],
+  "no_GPU_test_or_build_started": true,
+  "production_changed": false,
+  "latest_checkpoint": "STATE.json",
+  "current_download_authorization": "acquisition-authorized-v2/AUTHORIZATION.json",
+  "current_status": "ASSETS_VERIFIED_METADATA_FIRST_FAILED_OFFLINE_SOURCE_REPAIR_PREPARATION",
+  "no_production_promotion_authorized": true,
+  "new_metadata_revision_not_retry": "pack-v2"
+}

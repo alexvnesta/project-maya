@@ -1,0 +1,144 @@
+{
+  "utc": "2026-10-30T17:34:11.202612+00:00",
+  "decision": "BOTH_FIRST_CANDIDATE_CPU_13_AND_ENCODED_FIXTURE_FAIRNESS_REVIEWED_NO_MODEL_ADMISSION",
+  "passed": true,
+  "source_review_sha256": "ec8f54e89a4ca7fe99521cb5a64072dc8ba8c2135fb67292fe4d2d6b247021b9",
+  "root_source_freeze_sha256": "51e6004fdb432e78ca3b59c7521fe0a06023b9bdeee9c0f477735ef5201576fe",
+  "root_result_review_sha256": "2772f88a5f13a17ce9c9b0598eba54e0412c5cf0abf1dca97a18d6f3a5b6bf55",
+  "source_sha256": {
+    "ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "ms_candidate_inputs.py": "64157b6421b1bf1bcb8be66e9da69944e286044f0d2a9ba0c47a6ed9a48b40e1",
+    "test_ms_candidate_inputs.py": "b4d9b575b140ff97fc3206295104c79433d0d9b5a1a1ece208348de732d04348",
+    "ms_candidate_cpu.py": "a0d77b18b05ae7dfbb85c710c8a5a418680499568be860f9defc2bf3cca3a649"
+  },
+  "ordered_test_ids": [
+    "test_ms_candidate_inputs.Candidate.test_actual_triplet_has_all_fixed_requests_and_capacities",
+    "test_ms_candidate_inputs.Candidate.test_baseline_or_foreign_pack_substitution_refused",
+    "test_ms_candidate_inputs.Candidate.test_candidate_metadata_source_is_explicit_not_baseline",
+    "test_ms_candidate_inputs.Candidate.test_encoded_prompt_corruption_refused",
+    "test_ms_candidate_inputs.Candidate.test_missing_candidate_metadata_never_borrows_baseline",
+    "test_ms_candidate_inputs.Candidate.test_missing_family_or_unmeasured_lifecycle_refused",
+    "test_ms_candidate_inputs.Candidate.test_resized_request_or_effort_refused",
+    "test_ms_candidate_inputs.Candidate.test_tokenizer_drift_between_families_refused",
+    "test_ms_candidate_inputs.Candidate.test_uniform_fallback_or_wrong_template_path_refused",
+    "test_ms_candidate_inputs.Candidate.test_uniform_tokenizer_drift_refused",
+    "test_ms_candidate_inputs.Candidate.test_uniform_wrong_picker_or_policy_refused",
+    "test_ms_candidate_inputs.Candidate.test_uniform_wrong_template_hash_refused",
+    "test_ms_candidate_inputs.Candidate.test_wrong_total_or_output_limit_refused"
+  ],
+  "input_map_entries": 772,
+  "both_physical_proofs": {
+    "darwin": {
+      "pid": 44179,
+      "wall_seconds": 1.1805699589895085,
+      "raw_sha256": {
+        "receipt.json": "a07143e5f4716030440e1f16958056491b8e0a7a59ea50c9328bb02e2f5339fd",
+        "child.json": "e95c8986ce95e78a98bbec0ce5c20b473fa230d003a11eee4e3a052ef8458180",
+        "child.log": "efb91fb5bc3419c9a4976669cc81e7680ab000758e8d73ce7aad8c612296d28d",
+        "encoded-candidate-fixtures.json": "356ffa593cc66495c75c44c2e8ea3390f78f716adb1b10af321d1bae9ca1535f"
+      }
+    },
+    "linux": {
+      "pid": 3384638,
+      "wall_seconds": 2.25915369996801,
+      "raw_sha256": {
+        "receipt.json": "b0866c8a4eba6ea3959b2639f1d128c429cbb33524468bc6e7475b732f2580c5",
+        "child.json": "a96f45801f4d26465409e04a46763df77de13cb07deb3e02b37cb41b43a51874",
+        "child.log": "1883af4e0daaeb02d3d206502047e7bf1ef22f8004d634ef9c0f881a3b89fb70",
+        "encoded-candidate-fixtures.json": "356ffa593cc66495c75c44c2e8ea3390f78f716adb1b10af321d1bae9ca1535f"
+      }
+    }
+  },
+  "combined_manifest_sha256": "356ffa593cc66495c75c44c2e8ea3390f78f716adb1b10af321d1bae9ca1535f",
+  "fairness": {
+    "coding": {
+      "main_prompt_tokens": [
+        8469,
+        8469,
+        140
+      ],
+      "lifecycle_prompt_tokens": [],
+      "all_actual_prompt_ID_arrays_and_visible_requests_exactly_equal_A_B": true,
+      "different_top_level_keys": [
+        "effective_template",
+        "pack_relative_to_E",
+        "tokenizer_source_sha256"
+      ],
+      "tool_call_ID_normalization_CPU_proved": false,
+      "expected_reuse_tokens": [
+        0,
+        8468,
+        0
+      ]
+    },
+    "prose": {
+      "main_prompt_tokens": [
+        8469,
+        8469,
+        169
+      ],
+      "lifecycle_prompt_tokens": [
+        372,
+        465,
+        8471,
+        44
+      ],
+      "all_actual_prompt_ID_arrays_and_visible_requests_exactly_equal_A_B": true,
+      "different_top_level_keys": [
+        "effective_template",
+        "pack_relative_to_E",
+        "tokenizer_source_sha256"
+      ],
+      "tool_call_ID_normalization_CPU_proved": true,
+      "expected_reuse_tokens": [
+        0,
+        8468,
+        0
+      ]
+    },
+    "quality": {
+      "main_prompt_tokens": [
+        8469,
+        8469,
+        8656,
+        8469
+      ],
+      "lifecycle_prompt_tokens": [],
+      "all_actual_prompt_ID_arrays_and_visible_requests_exactly_equal_A_B": true,
+      "different_top_level_keys": [
+        "effective_template",
+        "pack_relative_to_E",
+        "tokenizer_source_sha256"
+      ],
+      "tool_call_ID_normalization_CPU_proved": false,
+      "expected_reuse_tokens": [
+        0,
+        8468,
+        0,
+        8468
+      ]
+    }
+  },
+  "baseline_manifest_sha256": {
+    "coding": "b822da75ecc1ff7db0f0264b45ea71ce8b99687aa3ed6b0380277d67d2244f31",
+    "prose": "72f1634f0c651dfd6e59f84b5f26f9fcdb957a599440e546097278b7b455c897",
+    "quality": "3aa80903f946ba4a032aa47fe5f1c6906c531ac259dbfc8f9d9ff482b5ad4f23"
+  },
+  "candidate_manifest_sha256": {
+    "coding": "513cebf5837290ef69171d2274240afaa8f38cc441373fb52a6c140ce3e3f4dd",
+    "prose": "d572147c2f668b7702531ec62a90b5ba9fe8e0b47ac864f05ecca8c73402c601",
+    "quality": "c77c34d85a59f4696bb82397a20df97f92235a7ad752d8d3ad80ccfa38377707"
+  },
+  "interpretation": [
+    "Both actual CPU paths encoded the explicit published candidate tokenizer and its own template, without fallback, fitting, payload reads or native model execution.",
+    "Across this finite frozen request set, complete encoded case objects including actual prompt-ID arrays, requests, answers, image spans and lifecycle inputs match baseline A exactly. This is stronger than matching token counts.",
+    "Candidate template753420 differs from baseline effective06cada; matching current request encodings does not establish template equivalence for arbitrary messages.",
+    "Whole published pack including weights/Engram/drafter remains a different factor. Equal input IDs do not prove equal logits, generation paths, quality, capacity or speed.",
+    "Root-copy B manifests match actual retained artifacts; no re-encoding performed by reviewer."
+  ],
+  "limitations": [
+    "No new tests/import/encoding/remote/model actions by reviewer. Source4 local pins and exact772-map agreement checked; physical pre/post input verification is supplied by the reviewed bounded CPU driver receipts.",
+    "No GPU/model/service admission; changed P3 runtime and independent terminal audit dispatcher still need separate source/CPU qualification."
+  ],
+  "findings": []
+}

@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-31T06:39:18.112720+00:00",
+  "status": "PROSPECTIVE_ONE_LINE_FIXTURE_REPAIR_ARCHITECTURE_ONLY",
+  "diagnosis_sha256": "9b680d35d25ab8459d23918cc74bc2fe57dedbf8ae51b0ee5566983bc35258ba",
+  "old_fixture_sha256": "33ede583a7c299a9bac83520050a6ea48233ae596fe6bb0a0f8195dbb7dfd6e7",
+  "new_namespace_required": true,
+  "exact_proposed_change": {
+    "before": "std::vector<uint8_t> quantized_via_selected(ab);",
+    "after": "std::vector<uint8_t> quantized_via_selected(ab, 0x3c);"
+  },
+  "sufficiency": "Each check allocates both destinations afresh. Its pattern is fixed across token rows. For positive and negative zero, both retain the same0x3c bsums; for nonzero blocks the quantizer writes d, qs and bsums completely. Thus constructor initialization suffices for the exact frozen cases. A future fixture mixing zero and nonzero rows within one check would require explicit per-call reset, but no such extension is proposed.",
+  "preserved": [
+    "Full292-byte-per-block memcmp including bsums",
+    "Outer canaries and input immutability",
+    "All original patterns, dimensions, row ranges, finite output bits, dispatch requirements and6336 cases/46jobs",
+    "All failed source, binary, qualification, raw outputs and HOLD receipts"
+  ],
+  "build_scope": "Compile and link only a new fixture object and ELF using the original flags and reviewed dependency closure, immutable build-v3 supervision/lease helpers, original ds4 wrapper and ggml objects, and existing candidate CPU archive. Do not repeat original92 control relink, recompile candidate objects, relink candidate native, or run any model.",
+  "unchanged_artifacts": {
+    "candidate_native": "cab346ccefedad1d2b80384db215325a445f474729812ea288a829d843007da4",
+    "CPU_archive": "514b8346a1df0663f2868c1de6b9bc1adbdd82a1c5422abc33cc6875dad67448",
+    "iq_avx2_object": "82a3228e873a435efa60e17b0ea9f3747914f2256e751700c921696fa12897a2",
+    "native_expert_object": "52013e05368020780d3373fa1818b8e8ba3976018d9e8bd1db814a99e9ef1fb5"
+  },
+  "required_before_execution": [
+    "Mutual full review of exact new fixture delta and narrow new controller/tests/source maps",
+    "Both-host bounded portable controls for actual new source and input maps, including initializer omission and altered-byte rejection controls",
+    "Separate fixture-only build qualification, fresh physical guards and admission",
+    "Actual new object/ELF/dependency/cleanup review",
+    "New numerical qualification retaining46jobs and unchanged1000soft/1200wall/200cleanup aggregate and30CPU/512MiB/90wall per child",
+    "Separate action-time numerical admission; first fault stops with failed versus never-attempted outcomes explicit"
+  ],
+  "implemented": false,
+  "build_admitted": false,
+  "numerical_admitted": false,
+  "retry_or_regrade_original": false
+}

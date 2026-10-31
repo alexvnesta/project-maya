@@ -1,0 +1,23 @@
+{
+  "status": "PRIMARY_GITHUB_REFRESH_UNCHANGED",
+  "rows": [
+    {
+      "url": "https://api.github.com/repos/mw00/project-maya/commits/main",
+      "sha": "cd48762b6d4888205c130238dbc0c7f7904993cf",
+      "message": "v1.1.42",
+      "date": "2026-10-30T18:28:02Z"
+    },
+    {
+      "url": "https://api.github.com/repos/Niko1221/Strata/commits/main",
+      "sha": "870aedd9e1ebe1c91f94da93b59af17729f6c5c0",
+      "message": "[Engine] SYCL: the prompt attention batch is budgeted where it is allocated, and stays 32 by default\n\nThe scratch of the FP32 prompt attention is batch x chunks x n_head x 258 floats (about 0.41 GB at 32 and 1.65 GB at 128 on\nFlash-Next), independent of the prompt chunk.  Prefill::init allocated it from STRATA_ATTN_BATCH (128 since 09524eb47) while the\nestimate that sizes the expert cache and the prompt path's loan (bytes_needed_impl) still counted 32, so about 1.2 GB was never\nreserved and a single 32 GB Arc Pro B65 with the config setup writes failed its first request (\"device buffers for a chunk of 512\ntokens do not fit (2098 of 32656 MiB free)\").  Both now use one function (attn_batch_for), and the batch is capped at the chunk's\ntoken count, since a chunk never runs more queries than it has.\n\nThe default goes back to 32: with the budget honest, 128 would take 1.2 GB from the expert cache on every Intel card for a\n1.1-1.3% faster prompt on two B65s.  STRATA_ATTN_BATCH still sets it (1..1024), and is now counted.",
+      "date": "2026-10-29T17:13:26Z"
+    },
+    {
+      "url": "https://api.github.com/repos/mw00/project-maya/pulls/623",
+      "state": "closed",
+      "updated_at": "2026-10-30T08:38:09Z",
+      "head": "b772203a4acfd7e88f7476fc7a6f33359b26f549"
+    }
+  ]
+}

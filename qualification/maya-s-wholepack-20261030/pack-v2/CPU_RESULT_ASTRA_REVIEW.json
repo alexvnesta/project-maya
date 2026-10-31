@@ -1,0 +1,253 @@
+{
+  "decision": "FIRST_PACK_V2_BOTH_HOST_CPU_PROOFS_REVIEWED_NO_CONSTRUCTOR_OR_MODEL_ADMISSION",
+  "passed": true,
+  "source_review_sha256": "657c6a2b41ef1f789e49cde387e9cdfaffe9d3851e527edcf69431468901c0cd",
+  "root_source_reviews_sha256": {
+    "CPU_SOURCE_ROOT_REVIEW.json": "eb9a6bc6d68b7ecd56b903494bd39e50dc78b7907e77cf1e2b8d2abd0a24cbd9",
+    "CONSTRUCT_SOURCE_ROOT_REVIEW.json": "9b046352380413de2b1e56248b7046632eb42e844a88e2c2da0bbde5cba43c29"
+  },
+  "root_result_review_sha256": "0e3956bb95ff9c897c339a2871905304f78561f7f67b5f86b648a046d7016ff5",
+  "source_sha256": {
+    "pack_guard.py": "8fe864d885162a55bd936a072889cd5ba44743e26434c1878419fe2efd728a2b",
+    "test_pack_guard.py": "5070221ef9960a17cec8dfee0ab55e3c237fb9d5ed6cd995bbaa8ff62831dd39",
+    "run_cpu.py": "c16cbe6f3b07b5aa931ca6b1dbd5d393dd77aebd2ff846f4d3ee599c23ce54ba",
+    "construct_pack.py": "5aea393ce529ea361888688387164a1a3d3c092275e3d630887b6ec01fb688aa",
+    "test_construct_pack.py": "6683448e7fed7b7eac3a36bc49ec317248c3d549a1d5b41b88e8ba3e8047044b",
+    "construct_cpu.py": "e18fa1aa7bccae7356ac45fa743f137b6f299bc5ceb33b50d9ffefd80e2e737c"
+  },
+  "CPU_groups": {
+    "pack_guard": {
+      "source_sha256": {
+        "pack_guard.py": "8fe864d885162a55bd936a072889cd5ba44743e26434c1878419fe2efd728a2b",
+        "test_pack_guard.py": "5070221ef9960a17cec8dfee0ab55e3c237fb9d5ed6cd995bbaa8ff62831dd39",
+        "run_cpu.py": "c16cbe6f3b07b5aa931ca6b1dbd5d393dd77aebd2ff846f4d3ee599c23ce54ba"
+      },
+      "input_sha256": {
+        "native-vision-v2/runtime/tools/dsv41/pack_gguf.py": "6784a50c4252f0d3af36cf04f5d212524dbf0800dac2d3ea633290d044a18fdf",
+        "decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+        "decode-optimization-20261028/maya-s-comparison-v1/baseline-vision.json": "3b682353a9bf572ae2736ec17b946179b24b83319de46c54950f0c442fd13053",
+        "decode-optimization-20261028/maya-s-comparison-v1/BASELINE_VISION_CUSTODY.json": "a5b048a5d98e8786356a0d77be918c284254953ef7e1910e0ab8da03faa42183"
+      },
+      "test_ids": [
+        "test_pack_guard.Construction.test_asset_mutation_blocks_success_after_packer",
+        "test_pack_guard.Construction.test_existing_old_target_never_adopted",
+        "test_pack_guard.Construction.test_fresh_construction_exact_args_and_postchecks",
+        "test_pack_guard.Construction.test_new_namespace_cannot_redirect_pack_target",
+        "test_pack_guard.Construction.test_output_corruption_remains_failed",
+        "test_pack_guard.Custody.test_complete_receipt_and_failed_status",
+        "test_pack_guard.Custody.test_duplicate_json",
+        "test_pack_guard.Custody.test_foreign_auto_discovery_file",
+        "test_pack_guard.Custody.test_foreign_output",
+        "test_pack_guard.Custody.test_guard_before_path_reads",
+        "test_pack_guard.Custody.test_manifest_exact_pinned",
+        "test_pack_guard.Custody.test_metadata_output_exact_and_tamper",
+        "test_pack_guard.Custody.test_no_implicit_construct",
+        "test_pack_guard.Custody.test_nonfinite_json",
+        "test_pack_guard.Custody.test_packer_source_changed_blocks_import",
+        "test_pack_guard.Custody.test_parent_alias",
+        "test_pack_guard.Custody.test_path_symlink_and_hardlink",
+        "test_pack_guard.Custody.test_receipt_missing_asset",
+        "test_pack_guard.Driver.test_cleanup_owned_group_only",
+        "test_pack_guard.Driver.test_literal_bounds_and_environment",
+        "test_pack_guard.Driver.test_source_review_must_match_before_child",
+        "test_pack_guard.Headers.test_arbitrary_integer_metadata",
+        "test_pack_guard.Headers.test_bad_general_alignment",
+        "test_pack_guard.Headers.test_duplicate_key",
+        "test_pack_guard.Headers.test_duplicate_tensor",
+        "test_pack_guard.Headers.test_guard_period_not_per_value",
+        "test_pack_guard.Headers.test_huge_directory_count",
+        "test_pack_guard.Headers.test_huge_string",
+        "test_pack_guard.Headers.test_invalid_utf8",
+        "test_pack_guard.Headers.test_magic",
+        "test_pack_guard.Headers.test_nested_array",
+        "test_pack_guard.Headers.test_offset_alignment",
+        "test_pack_guard.Headers.test_quant_row_alignment",
+        "test_pack_guard.Headers.test_tensor_oob",
+        "test_pack_guard.Headers.test_tensor_overlap",
+        "test_pack_guard.Headers.test_truncated_directory",
+        "test_pack_guard.Headers.test_unknown_type",
+        "test_pack_guard.Headers.test_valid_directory_payload_not_read",
+        "test_pack_guard.Headers.test_version",
+        "test_pack_guard.MapContracts.test_actual_packer_complete_metadata_matches_independent_map",
+        "test_pack_guard.MapContracts.test_actual_pinned_vision_metadata_geometry",
+        "test_pack_guard.MapContracts.test_bad_expert_dims",
+        "test_pack_guard.MapContracts.test_complete_six_shards_and_exact_geometry",
+        "test_pack_guard.MapContracts.test_complete_tensor_map_capacity_and_expert_role",
+        "test_pack_guard.MapContracts.test_context_or_effort_changed",
+        "test_pack_guard.MapContracts.test_drafter_byte_shape_mismatch",
+        "test_pack_guard.MapContracts.test_drafter_foreign_role",
+        "test_pack_guard.MapContracts.test_drafter_missing_block",
+        "test_pack_guard.MapContracts.test_drafter_oob",
+        "test_pack_guard.MapContracts.test_drafter_overlap",
+        "test_pack_guard.MapContracts.test_duplicate_cross_shard_tensor",
+        "test_pack_guard.MapContracts.test_duplicate_split",
+        "test_pack_guard.MapContracts.test_duplicate_vocab",
+        "test_pack_guard.MapContracts.test_engram_bad_token_map",
+        "test_pack_guard.MapContracts.test_exact_source_origin",
+        "test_pack_guard.MapContracts.test_inconsistent_metadata",
+        "test_pack_guard.MapContracts.test_missing_mandatory_dense_role",
+        "test_pack_guard.MapContracts.test_missing_shard",
+        "test_pack_guard.MapContracts.test_no_template_fallback",
+        "test_pack_guard.MapContracts.test_public_drafter_roles_and_offsets",
+        "test_pack_guard.MapContracts.test_published_three_key_later_shards",
+        "test_pack_guard.MapContracts.test_sparse_base_architecture_absent",
+        "test_pack_guard.MapContracts.test_sparse_base_architecture_wrong",
+        "test_pack_guard.MapContracts.test_sparse_duplicate_tensor_still_refused",
+        "test_pack_guard.MapContracts.test_sparse_later_explicit_null_architecture",
+        "test_pack_guard.MapContracts.test_sparse_later_foreign_architecture",
+        "test_pack_guard.MapContracts.test_sparse_repeated_geometry_mismatch_refused",
+        "test_pack_guard.MapContracts.test_sparse_repeated_tokenizer_mismatch_refused",
+        "test_pack_guard.MapContracts.test_sparse_split_total_mismatch_refused",
+        "test_pack_guard.MapContracts.test_tokenizer_and_engram_bytes_match_actual_packer",
+        "test_pack_guard.MapContracts.test_unknown_mapped_tensor"
+      ],
+      "controls": 71,
+      "driver": "run_cpu.py",
+      "CPU_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "wall_seconds": 90,
+      "nice_increment": 15,
+      "CUDA_visible_devices": ""
+    },
+    "construct_controller": {
+      "source_sha256": {
+        "pack_guard.py": "8fe864d885162a55bd936a072889cd5ba44743e26434c1878419fe2efd728a2b",
+        "construct_pack.py": "5aea393ce529ea361888688387164a1a3d3c092275e3d630887b6ec01fb688aa",
+        "test_construct_pack.py": "6683448e7fed7b7eac3a36bc49ec317248c3d549a1d5b41b88e8ba3e8047044b",
+        "construct_cpu.py": "e18fa1aa7bccae7356ac45fa743f137b6f299bc5ceb33b50d9ffefd80e2e737c"
+      },
+      "input_sha256": {
+        "native-vision-v2/runtime/tools/dsv41/pack_gguf.py": "6784a50c4252f0d3af36cf04f5d212524dbf0800dac2d3ea633290d044a18fdf",
+        "decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+        "decode-optimization-20261028/maya-s-comparison-v1/baseline-vision.json": "3b682353a9bf572ae2736ec17b946179b24b83319de46c54950f0c442fd13053",
+        "decode-optimization-20261028/maya-s-comparison-v1/BASELINE_VISION_CUSTODY.json": "a5b048a5d98e8786356a0d77be918c284254953ef7e1910e0ab8da03faa42183"
+      },
+      "test_ids": [
+        "test_construct_pack.ConstructTests.test_active_private_phase_guard_before_pack_output_write",
+        "test_construct_pack.ConstructTests.test_both_exact_physical_proofs",
+        "test_construct_pack.ConstructTests.test_changed_acquisition_source_before_import",
+        "test_construct_pack.ConstructTests.test_changed_explicit_qualification_pin_before_inputs",
+        "test_construct_pack.ConstructTests.test_changed_input_map",
+        "test_construct_pack.ConstructTests.test_changed_test_ids",
+        "test_construct_pack.ConstructTests.test_contract_keeps_exact_target",
+        "test_construct_pack.ConstructTests.test_current_source_hash_must_match_group",
+        "test_construct_pack.ConstructTests.test_duplicate_CPU_group_rejected",
+        "test_construct_pack.ConstructTests.test_empty_source_map_rejected",
+        "test_construct_pack.ConstructTests.test_environment_literal_no_global_change",
+        "test_construct_pack.ConstructTests.test_exact_child_paths_before_actions",
+        "test_construct_pack.ConstructTests.test_exited_parent_descendants_still_cleaned",
+        "test_construct_pack.ConstructTests.test_failed_child_kept",
+        "test_construct_pack.ConstructTests.test_first_child_fault_kept_no_second_child",
+        "test_construct_pack.ConstructTests.test_first_receipt_preserved",
+        "test_construct_pack.ConstructTests.test_foreign_source_path_rejected",
+        "test_construct_pack.ConstructTests.test_missing_AS_observation",
+        "test_construct_pack.ConstructTests.test_missing_other_host",
+        "test_construct_pack.ConstructTests.test_new_source_namespace_and_unchanged_exact_target",
+        "test_construct_pack.ConstructTests.test_no_manual_source_review",
+        "test_construct_pack.ConstructTests.test_old_child_attempt_paths_rejected_before_qualification",
+        "test_construct_pack.ConstructTests.test_only_exact_inherited_external_pin_allowed",
+        "test_construct_pack.ConstructTests.test_raw_log_pin_omitted",
+        "test_construct_pack.ConstructTests.test_source_omitted_from_qualification",
+        "test_construct_pack.ConstructTests.test_source_pin_checks_content",
+        "test_construct_pack.ConstructTests.test_successful_supervision_one_child_cleanup_even_after_exit",
+        "test_construct_pack.ConstructTests.test_symlink_source_rejected",
+        "test_construct_pack.ConstructTests.test_terminal_attempt_path_not_mutable_state",
+        "test_construct_pack.ConstructTests.test_terminal_attempt_requires_complete_eight",
+        "test_construct_pack.ConstructTests.test_timeout_kept_no_second_child"
+      ],
+      "controls": 31,
+      "driver": "construct_cpu.py",
+      "CPU_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "wall_seconds": 90,
+      "nice_increment": 15,
+      "CUDA_visible_devices": ""
+    }
+  },
+  "raw": [
+    {
+      "group": "pack_guard",
+      "host": "darwin",
+      "pid": 28247,
+      "controls": 71,
+      "wall_seconds": 1.1831352500012144,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "CPU-FIRST-darwin/receipt.json": "8dcab689715f1fd520de83991beaed04236ab921dcf9e856b103d6c9fe76ef51",
+        "CPU-FIRST-darwin/child.json": "7649a2c0a82fbb3e6858886ad75faa7481e1c4c5be9f1385b95a8b3ccf184cf5",
+        "CPU-FIRST-darwin/child.log": "5c9a17d8d9b9621487ffe5e2555ba390b89c0e3f87cf45ab2e52dfba664e071d"
+      }
+    },
+    {
+      "group": "pack_guard",
+      "host": "linux",
+      "pid": 3360148,
+      "controls": 71,
+      "wall_seconds": 2.3824172751046717,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "CPU-FIRST-linux/receipt.json": "7e22b2b91c915a4d9349bd56ac58f69d22ce52288846e704cefdc48ee20e1929",
+        "CPU-FIRST-linux/child.json": "776dfa51b62031ca97b5307160d49361f054b3168d6191ff4701d32690685a3a",
+        "CPU-FIRST-linux/child.log": "c448a9aba502c74b20c2319ecc88749fb3a9bda7760a948c83563b059ec80335"
+      }
+    },
+    {
+      "group": "construct_controller",
+      "host": "darwin",
+      "pid": 28246,
+      "controls": 31,
+      "wall_seconds": 0.21355762501480058,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "CONSTRUCT-FIRST-darwin/receipt.json": "20f8ac4d5ba6cf57b8e1caebbcb16adf5640a832e4e4a85b6d5fd174df54b51d",
+        "CONSTRUCT-FIRST-darwin/child.json": "be939460faa6904a5c901235a0cf8a115490cde2f1f4ef16016ea61efab2154b",
+        "CONSTRUCT-FIRST-darwin/child.log": "6fc8c4f5d06e2a37feef447daf20b1ca8485615b1652306076ec8235ac204fcb"
+      }
+    },
+    {
+      "group": "construct_controller",
+      "host": "linux",
+      "pid": 3360147,
+      "controls": 31,
+      "wall_seconds": 0.32175227208063006,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "CONSTRUCT-FIRST-linux/receipt.json": "29d0f9374293f58ea04cfd472eaccf57c109ed2fb497a7733d877e0ab5011972",
+        "CONSTRUCT-FIRST-linux/child.json": "4303e5fb73de6db8c5d5476ec0d4fe62efd8b8045c970b070f2ec24e480c2989",
+        "CONSTRUCT-FIRST-linux/child.log": "08a3cf948c35c31da0ff9d6b9e86a1f320efa83c955c0c066616a2f4b9d7cfd0"
+      }
+    }
+  ],
+  "entire_four_terminal_logs_manually_read": true,
+  "all_ordered_ID_maps_and_12_raw_hashes_match": true,
+  "original_v1_source_failure_and_evidence_pins_unchanged": true,
+  "reviewer_execution_performed": false,
+  "findings": [],
+  "limitations": [
+    "Synthetic metadata and mocked controller controls only. The printed 47213-tensor/140.1GB line belongs to the small synthetic temporary pack test, not actual published weight construction or a capacity measurement.",
+    "All actual 8-asset header normalization/output construction gates remain required in a separately frozen v2 qualification and first metadata child. No actual pack correctness, RAM/VRAM fit, model quality or GPU approval follows from these CPU results.",
+    "Parent reports an early scp snapshot of still-running Mac proof files retained separately on Ubuntu; it is not used here. Only terminal local triples whose exact hashes match Root terminal inventory are reviewed. Future qualification must bind those terminal hashes, not the earlier transport snapshot.",
+    "No prior failed proof was regraded. V1 first constructor failure remains unchanged; new controls and proof namespaces are distinct."
+  ],
+  "bounds": {
+    "CPU_seconds": 30,
+    "Linux_AS_bytes": 536870912,
+    "wall_seconds": 90,
+    "nice_increment": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    }
+  }
+}

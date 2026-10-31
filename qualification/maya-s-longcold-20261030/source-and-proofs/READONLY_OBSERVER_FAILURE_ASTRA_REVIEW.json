@@ -1,0 +1,47 @@
+{
+  "decision": "SEPARATE_READ_ONLY_OBSERVER_COMPLETION_ALLOWED_NO_GPU_ADMISSION",
+  "original_raw_sha256": {
+    "receipt.json": "8015b6767dda0d43d4c0d91163a8e284c2d8b1d43c87918126c5570326e44929",
+    "target-placement.json": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "OBSERVER_FAILURE.json": "5ec295752de8da56d219ebea788884f9c1a4cd3931ef1e93323cfaaa75f1f1fd"
+  },
+  "qualification_sha256": "ca406101a1b47dfb5ad713db67ae44c65318b2169a19a176c3f46f7f5fe395df",
+  "original_OS_exit_as_recorded": 1,
+  "original_json_is_incomplete": true,
+  "exact_trailing_bytes": "  \"previous\": ",
+  "source_fact": "Qualified maintenance.Host.previous returns a pathlib.Path. Default JSON serialization cannot encode that value. The recorded failure is consistent with the producer return type.",
+  "raw_supported_findings": {
+    "complete_fields": [
+      "utc",
+      "qualification_sha256",
+      "checks",
+      "proof",
+      "binding"
+    ],
+    "recorded_checks": 1063,
+    "proof_full_file_map_matches_final_q": true,
+    "proof_mode": "longcold",
+    "proof_arm": "LC1",
+    "private_memory_max": 85899345920,
+    "selected_binding": {
+      "invocation": "c913c003e08649078ebd7279ef4beae7",
+      "main_pid": 3535523,
+      "native_pid": 3535559,
+      "native_start_ticks": 165605174
+    },
+    "selected_native92_configc43_context1M_output262144_chunk4096": true,
+    "separate_placement_matches_proof": true
+  },
+  "limits": "The literal executed observer and raw downstream observations are not in these three files. OBSERVER_FAILURE describes their completion, but missing previous/kernel/finalguard values cannot be reconstructed from the prefix. Do not treat its incomplete observer_status label as successful terminal execution.",
+  "completion_contract": [
+    "Create a distinct exclusive completion receipt; preserve all original bytes and OS1.",
+    "Require exact original partial SHA and suffix. Parse complete prefix fields only with a clearly labeled recovery parser; exclude original observer_status and synthetic previous value. Do not write a repaired original JSON.",
+    "Reuse intact saved proof/map/binding; no full qualification or h.preflight repeat.",
+    "Using existing qualified read-only primitives gather fresh genuineidle/default/currentbound/phase-free/root132/clock/emptyregistry/freshnamespace and paused-download evidence.",
+    "Capture actual current previous clean-window JSON/telemetry paths and SHA values as new observations, using str(Path) when serializing. Gather bounded kernel evidence if its raw observation was not retained.",
+    "Verify unchanged q self and original proof/raw hashes after completion; all captured values must be native JSON scalars.",
+    "Explicitly retain original_observer_exit=1/original_observer_regraded=false/model_or_service_actions=0. Return for separate SINGLE LC1 admission review."
+  ],
+  "reviewer_live_actions_or_project_imports": false,
+  "model_admission": false
+}

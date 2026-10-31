@@ -1,0 +1,48 @@
+{
+  "utc": "2026-10-31T05:59:12.374719+00:00",
+  "status": "READ_ONLY_V3_ACTUAL_PREFLIGHT_PASS_ACTUAL_CAS_IMPORT_RESOLVED",
+  "q_sha256": "7e8a340ac8ea66c72ef6ed56b6342af3f84aeaf62ff15bd20a3778c937c2537c",
+  "actual_files_plus_self": 2091,
+  "source_maps": 4,
+  "input_maps": 90,
+  "ordered_controls_each_host": 130,
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "root_GiB": 348.31570053100586,
+  "phase": null,
+  "active_cpu_build": false,
+  "download_paused_worker_absent": true,
+  "cpu_lock_exists": false,
+  "actual_CAS_import": {
+    "cas_sha256": "8d10d003bbbd7ffbb87251bacdf53d91af9f074151d34f06c957fa179f3108cf",
+    "transport_sha256": "cd026ab8cc86228500f606efb0913e55a63ba89b4e55fbfc33707b18c595bf37",
+    "identity_passed": true
+  },
+  "prepare_attempted": false,
+  "preflight_child_bounds": {
+    "CPU": [
+      30,
+      30
+    ],
+    "AS": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "CUDA": "",
+    "bytecode": true
+  }
+}

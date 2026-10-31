@@ -1,0 +1,407 @@
+{
+  "utc": "2026-10-30T17:44:15.889248+00:00",
+  "decision": "SOURCE_CAPACITY_UNPROVEN_RECOMMEND_SEPARATE_SHORT_COLD_COMPATIBILITY_STAGE",
+  "scope": "Local source/metadata-only analysis. No imported model code, test, encoder, payload reads, device probe, staging, service or model action. No model admission.",
+  "inputs_sha256": {
+    "model-v1/selected-ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "pack-v3/construct-CPU-FIRST/pack-result.json": "9d42caa2d48361b4c176df2453e5bf1d97f405deb1080f0242db23769164ae9e",
+    "model-v1/prose-fixtures-B.json": "d572147c2f668b7702531ec62a90b5ba9fe8e0b47ac864f05ecca8c73402c601",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa"
+  },
+  "policy": {
+    "context": 1048576,
+    "output_allowance": 262144,
+    "request_cap": 32768,
+    "effort": 100,
+    "chunk": 4096,
+    "tp": 1,
+    "reserve_MiB_each": 2048,
+    "CPU_threads": 24,
+    "strict_all_CPU_experts_RAM": true,
+    "private_MemoryMax_GiB": 76,
+    "private_MemorySwapMax_bytes": 0,
+    "actual_post_owned_stop_MemAvailable_min_GiB": 84,
+    "prospective_margin_GiB": 8,
+    "unchanged_native": true,
+    "whole_published_pack_factor": true
+  },
+  "actual_pack_payloads_bytes": {
+    "routed": 169019965440,
+    "dense": 9167339968,
+    "drafter": 7967614344,
+    "vision": 970536960,
+    "engram": 161284798500
+  },
+  "actual_routed_layer_payloads": [
+    {
+      "layer": 0,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        12625920
+      ],
+      "layer_routed_payload_bytes": 4848353280
+    },
+    {
+      "layer": 1,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        12625920
+      ],
+      "layer_routed_payload_bytes": 4848353280
+    },
+    {
+      "layer": 2,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        12625920
+      ],
+      "layer_routed_payload_bytes": 4848353280
+    },
+    {
+      "layer": 3,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        12625920
+      ],
+      "layer_routed_payload_bytes": 4848353280
+    },
+    {
+      "layer": 4,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 5,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 6,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 7,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 8,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 9,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 10,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 11,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 12,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 13,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 14,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 15,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 16,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 17,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 18,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 19,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 20,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 21,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 22,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 23,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 24,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 25,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 26,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 27,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 28,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 29,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 30,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 31,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 32,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 33,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 34,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 35,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        10598400
+      ],
+      "layer_routed_payload_bytes": 4069785600
+    },
+    {
+      "layer": 36,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        12625920
+      ],
+      "layer_routed_payload_bytes": 4848353280
+    },
+    {
+      "layer": 37,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        12625920
+      ],
+      "layer_routed_payload_bytes": 4848353280
+    },
+    {
+      "layer": 38,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        12625920
+      ],
+      "layer_routed_payload_bytes": 4848353280
+    },
+    {
+      "layer": 39,
+      "expert_count": 384,
+      "three_role_bytes_each": [
+        12625920
+      ],
+      "layer_routed_payload_bytes": 4848353280
+    }
+  ],
+  "source_findings": [
+    {
+      "lines": "2490-2519,2640-2724",
+      "finding": "TP1 with two devices yields two one-member groups. Automatic contiguous trunk split DP permits k/(40-k) for integer k1..39, keeping each group nonempty. Its score uses exact layer expert/dense terms but estimated400MiB fixed and1.1GiB chunk allowances and actual free0. Head charged last group; drafter cost subtracted first group. No fixed19/21 or20/20 requirement, and this optimizer is not a capacity proof."
+    },
+    {
+      "lines": "2593-2640,2750-2896",
+      "finding": "Actual pack has40 trunk and3 MTP layers; DSpark block-size5 is not5MTP layers. Context source caps ceil(1048576/ratio)+1 and consumer-dependent compressedKV/index replicas are allocated per device; decode scores scale with max_context+64. Tensor payload totals do not capture converted dense tensors, cache replicas or scratch."
+    },
+    {
+      "lines": "1758-1767,2546-2556,3348-3550",
+      "finding": "Explicit chunk4096 bypasses chunk_default. On two devices DS4_BORROW is off by default and absent in selected base config, so alloc_chunks reserves full fixed+row buffers rather than assuming borrowed expert room. lay_chunk uses typed widths/align256, context-wide index scores, variable attention/FP16 slabs, ring stride/slots, down scratch, two handoff/embedding/Engram buffers and library handles. Auto-split1.1GiB is not this allocation sum."
+    },
+    {
+      "lines": "2984-3109",
+      "finding": "Embedding is decoded into pinned BF16 host memory,129280*5120*2=1323827200bytes. Engram Q6_K150.208GiB payload is read from files with bounded row cache; default cache MB min256/max16 from availableRAM. DS4_ENGRAM_RAM is absent, so do not sum entire Engram into mandatory anonymous copies, and do not treat its working set/file-cache charge as zero."
+    },
+    {
+      "lines": "3124-3190,4654-4868",
+      "finding": "Dense/cache/chunk/lane allocations precede exact mem_info expert placement. Drafter slots allocated first, trunk slots follow profile shares per byte or uniform fallback. Actual remaining room and per-layerbytes determine placements; total slot count is not effective resident expert count where spare/cache slots exist."
+    },
+    {
+      "lines": "5250-5375",
+      "finding": "copy_experts computes all from every host expert plus per-layer RAM spare. cp_lay aligns each role to256 perNUMApart. strict_ram selects budget=all rather than can=min(available-8GiB,commitroom), refuses disk fallback/incomplete allocation; it does not enforce a process-memory ceiling or prove an8GiB host margin."
+    },
+    {
+      "lines": "10617-10621,10819-10826",
+      "finding": "Single-device layer-major extra cache and default post-prefill disk warmup are disabled on the selected two-device defaults. Their absence removes those specific terms but does not prove total library/process/file-cache overhead or long-input execution time."
+    }
+  ],
+  "necessary_not_sufficient_RAM_bound": {
+    "routed_payload_GiB": 157.412109375,
+    "absolute_min_routed_GPU_residence_bytes_if_host_allocation_at_most_76GiB": 87415586816,
+    "absolute_min_routed_GPU_residence_GiB": 81.412109375,
+    "interpretation": "An optimistic necessary lower bound only: assumes all76GiB could hold CPU routed weights. Real required routedGPUresidence is higher due host embedding, CPU/drafter copies, role alignment/spares, pinned staging, API/native/process/library allocations and charged file cache. This is not an expert-placement prediction or sufficiency proof."
+  },
+  "containment_and_fit_limits": [
+    "Actual post-owned-stop MemAvailable>=84GiB remains mandatory; do not infer it from earlier47GiB+38.6GiB or count RssShmem as guaranteed reclaim. Both acquisition workers must be paused/absent under the separately qualified mode gate before private work.",
+    "The76GiB private cgroup fence and swap0 limit charged allocations; they are not a static fit proof, guarantee of allocation success or assurance against every driver/GPU failure. Global margin can change due unrelated work. Require actual memory events/peak/swap/kernel proof and exact property restoration/collection.",
+    "Complete VRAM upper bound is not established from these source terms: missing contemporaneous perGPUfree0, dense/conversion distribution, allocation/library peaks and resulting profile placement. No new arithmetic approximation is used to replace them.",
+    "All-RAM strictness must remain. Any OOM/failed allocation/incompletecopy/visionfallback/sourcepolicy mismatch is failedcompatibility, preserving firstfault and requiring separately qualified selectedbaseline recovery; no context reduction/disk fallback/knob fitting."
+  ],
+  "cold_stage_recommendation": {
+    "separate_from_frozen_four_state_QS1": true,
+    "why": "A/B CPU token IDs match, but no candidate actual startup time, first generation timing or long4096chunk path bound exists.8469/8656-token quality inputs invoke materially different work from a short window. Baseline latency cannot establish candidate completion within existing1000s soft bound.",
+    "minimal_proposal": "Freeze a distinct candidate cold-compatibility namespace with unchanged full1M/262144 configuration, original32768cap/effort100 and same fences/lifecycle. One existing44-token literal request from prose-fixtures-B lifecycle recovery can be used under a new compatibility ID without reencoding or fitting; preserve its exact visible request and expect RECOVERED_Q8_LITERAL. No dumps, images claim, cancellation claim, speed comparison or automatic QS1 advancement.",
+    "bounded_interpretation": "A pass establishes only actual startup/full configured allocation/strictRAM+images-enabled health and one short natural request with verified cleanup/restoration. It does not validate8k/chunked prompts, near-full1M,262144generation, arbitrary template equivalence, quality or speed. A later independently admitted QS1 remains needed.",
+    "changes_not_implemented": "Separate stage/source/tests/CPU qualification and concrete runtime admission still required. Current owner/audit FIRSTCPU authorization is unchanged and grants no model run."
+  },
+  "earlier_evidence": "P1/P2metadata failures and old kernel/numerical failures stay immutable; successful P3metadata and candidate13encoding are not model-fit results."
+}

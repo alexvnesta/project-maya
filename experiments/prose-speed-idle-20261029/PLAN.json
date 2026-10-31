@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-29T19:16:02.130213+00:00",
+  "authorization": "Direct user: test prose speed next when DeepSeek idle; same model/quality/context/output; no interruption of active work.",
+  "scope": "Selected production92/c43/chunk4096 prose measurement only, no candidate, no promotion or reopening closed comparisons.",
+  "selected_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "selected_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "total_context": 1048576,
+  "output_allowance": 262144,
+  "benchmark_cap": 32768,
+  "effort": 100,
+  "quality_flags": "Q8/check1/1,mode1,L22scale1all40,drafterunchanged,DSpark.65/max4,TP1automatic19-21,CPU24/allRAM,images/stream0",
+  "proposed_cases": [
+    "expository-prose",
+    "creative-prose"
+  ],
+  "source_CPU_model_run": false,
+  "transport_design_pending": "Same Astra source review; hosted idle GET/POST race evaluated. No serving protocol changes. No inference until exact reviewed source/new CPU proof both hosts and separately qualified idle admission.",
+  "prior_IQ2_numerical_HOLD_preserved": true,
+  "original_arms_closed": true,
+  "excluded_root": "Do not access excluded DrugAdopt acceptance root in any way."
+}

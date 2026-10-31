@@ -1,0 +1,114 @@
+{
+  "utc": "2026-10-29T17:15:46.590605+00:00",
+  "decision": "FIRST_CORRECTED_BOTH_HOSTS_CPU_PROOF_CONFIRMED_NO_MODEL_ADMISSION",
+  "evidence_sha256": {
+    "exploratory-CPU-source-review.json": "80f2fd76eaea81f48cb889f932b0ebae238480f016e0e87b3e80503853ed7596",
+    "source-astra-review-corrected-v1.json": "9df2344331fb25016a5d9452832d50c7d5c9f7e9ab2f0ae5e2ceb69ac28fcc76",
+    "corrected-v1-source.diff": "07b485c51498ad7651c9a74c4fc324c2a7db0b48ad34535bb8db6cd2bfe098a7",
+    "FIRST_CPU_HOLD.json": "85f4b21a24925c6126ba6bac17cd1f51ec213fccd3c9ad998ecc35c8f17ff5e7",
+    "exploratory-CPU-corrected-v1-darwin/receipt.json": "5250d9adfe5ddef63759afc675d6bf2da2afacd0c09b4f53613763555f2fdc5b",
+    "exploratory-CPU-corrected-v1-darwin/child.json": "cfc007e72a102121ad3424cc8d9833b3c37c330901c1d8e28af6f50e09467de5",
+    "exploratory-CPU-corrected-v1-darwin/child.log": "5138b5933b2faf82011fa2f3d8801c61595ccdd48054b99f02c6ca0a91813a77",
+    "exploratory-CPU-corrected-v1-darwin/encoded-fixture.json": "6cd0ddd21db305c41186288d84979f5aaf84f8b7f8d653c3aa45694511600ebf",
+    "exploratory-CPU-corrected-v1-linux/receipt.json": "5250d9adfe5ddef63759afc675d6bf2da2afacd0c09b4f53613763555f2fdc5b",
+    "exploratory-CPU-corrected-v1-linux/child.json": "ad34cab285cb256dc7b2aed5908ce3d3d0fa0168091805f0385e5b9258e9fbfa",
+    "exploratory-CPU-corrected-v1-linux/child.log": "ecce3722700dfa473410c237b9a3af630206a2a0f4f6682ad7b105e878bd87cb",
+    "exploratory-CPU-corrected-v1-linux/encoded-fixture.json": "6cd0ddd21db305c41186288d84979f5aaf84f8b7f8d653c3aa45694511600ebf"
+  },
+  "source_sha256": {
+    "iq2s_explore.py": "9b1048524d606ada541e31508e89681731d37fe684089f90333686d0ce6357dc",
+    "iq2s_explore_audit.py": "22fc09f89d44964dd9389c8ba7d68ba3692d21679abcf95a17540756068a6f56",
+    "iq2s_explore_config.py": "f99d1923199e5767fe2e86c0932704ee757a4eb3354ba3359a458cbf5100730f",
+    "iq2s_explore_controls.py": "211913552b19efcb8cc5ea452d7361e0f87c7adf0ba1e4b5e4ecef17c38010ee",
+    "iq2s_explore_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+    "iq2s_explore_fixtures.py": "e2e402942282c9d5df23d5aac3e928a8c185056d5d8bc6404bd24179554da4a8",
+    "iq2s_explore_runtime.py": "b3dc8fb5da7db354f29216f3e26680e3ff28c6e6af35fb34c501f3ae7797b4d1",
+    "iq2s_explore_summary.py": "9423c74ffd8b02bdef9cb6f02e211553070e00abd9c774388e9a3f2e959b5f14",
+    "qualify_iq2s_explore_cpu.py": "90c9512999bdfbecce4ee360c439edfc2efd725e20baf01d78f70b2db4bcb708",
+    "test_iq2s_explore.py": "bb313f554795aa2bc02cc115949ea1897c45a5cb7de7327b55956f6b983e51bf",
+    "test_iq2s_explore_config.py": "2f27cb3f0a2e95fea5c411750c4371d7a7a4378335e440c4a785bac07ffdf6ff",
+    "test_iq2s_explore_controls.py": "40679e1bc678aaba653fd292289334d7bd5e1cd992b8fa75d4019c79c5d04299",
+    "test_iq2s_explore_dependencies.py": "8de073c1be007c92647ae88f31ae4dbd14e27416f97b5e660eb978dd1df4f3fb",
+    "test_iq2s_explore_fixtures.py": "f5b17f27c5b237e0203a9ed4006e62758c5d2aea86e7f1a282e5a2a30f054199",
+    "test_iq2s_explore_runtime.py": "15194d835729f989bcc14a382e41272dd5134bfa45ee53d629644833ed62405d",
+    "test_iq2s_explore_summary.py": "8feba6a4ca5b7c5917233adc8206198920486b724c21d48dc34a07710132985c",
+    "test_qualify_iq2s_explore_cpu.py": "19fa4cf9543c05017dca46fbe754cbf2f44ae6d9be5b35b5e5d3c37a48116a5d"
+  },
+  "hosts": {
+    "darwin": {
+      "pid": 26760,
+      "returncode": 0,
+      "controls": 137,
+      "ordered_raw_log_IDs_match": true,
+      "exact_source_map_count": 17,
+      "exact_input_map_count": 965,
+      "limits": {
+        "CPU_s": 30,
+        "wall_s": 90,
+        "nice": 15,
+        "CUDA_hidden": true,
+        "Linux_AS_MiB": null
+      },
+      "error": null,
+      "cleanup_errors": []
+    },
+    "linux": {
+      "pid": 2296817,
+      "returncode": 0,
+      "controls": 137,
+      "ordered_raw_log_IDs_match": true,
+      "exact_source_map_count": 17,
+      "exact_input_map_count": 965,
+      "limits": {
+        "CPU_s": 30,
+        "wall_s": 90,
+        "nice": 15,
+        "CUDA_hidden": true,
+        "Linux_AS_MiB": 512
+      },
+      "error": null,
+      "cleanup_errors": []
+    }
+  },
+  "receipt_payloads_byte_identical": true,
+  "encoded_fixture_sha256": "6cd0ddd21db305c41186288d84979f5aaf84f8b7f8d653c3aa45694511600ebf",
+  "fixture": {
+    "prompt_tokens": [
+      1429,
+      1429
+    ],
+    "expected_reuse_tokens": [
+      0,
+      1428
+    ],
+    "canonical_answer_tokens": 2076,
+    "constructor_unchanged": true,
+    "resizing": false,
+    "max_tokens": 32768,
+    "effort": 100,
+    "context": 1048576,
+    "default_output": 262144
+  },
+  "bounded_findings": [
+    "Independent local current17source SHA reconciliation passed; both receipt maps equal the same frozen965input map and ordered137IDs. All137 IDs also matched each raw unittest log in order. This review compares inherited input maps and recorded child custody; it does not claim a new physical-host hash check.",
+    "Actual CPU HTTP logs contain three natural scripted completions plus one zero-token disconnect cancellation. Passing actual-HTTP control binds pre-first-output cancellation, cancellation event, reader termination, released admission, disconnect+1 and correct natural recovery. No native binary or GPU was involved.",
+    "CPU fixture and receipt bytes match bothhosts; fixture prompt1429 and canonicalanswer2076 satisfy predeclared1024..2048 and<=4096 without resizing. Scripted API output3103tokens differs canonicalanswer encoding2076 because script formatting/template/token stream differs; neither is measured model decode performance.",
+    "Original Mac child24330exit1/final-glob assertion remains FAILED with original raw/source hashes unchanged. Corrected proof is separately named; original Linux wasUNRUN. No regrade or model replay."
+  ],
+  "qualification_map_requirements": [
+    "Use corrected-v1 rawtriples/encoded fixture and exact17sources/currentROOTreview; do not use failed Mac proof as passing proof. Preserve failed original evidence and correction source lineage.",
+    "Publish exact same encoded fixture/pin and new empty X0/X1 registry; require old closed numerical HOLD report+both audits and completed104kernel raw proof/lifecycle limitation.",
+    "Keep canonical window/coordinate/full inherited owner/importclosure and selected92/c43/b15/b921; immutable seed8db9/directionf303/pack48c+bc52 and candidate da28 exact source/artifact. Never pin mutable live profile.",
+    "Canonicalize inherited path aliases only from existing source/evidence inventories, preserve mapping and reject digest collisions. Include qualification selfdigest separately.",
+    "Fresh actual idle/default/current owner/no phases/resources/source verification plus separate X0-only admission remain required; no X1 admission until X0 complete and independently reviewed."
+  ],
+  "limits": [
+    "Synthetic CPU MockEngine proof validates controller/transport/contracts, not actual model generation quality, native factor activation, real cache/drafter behavior or native performance.",
+    "Prior numerical HOLD remains immutable. New mode diagnostics only, no speed acceptance, replication, promotion or deployment qualification.",
+    "No tools/images/code/newlargecontext-capacity coverage claimed by these two text tasks."
+  ],
+  "prior_numerical_HOLD": true,
+  "model_admitted": false,
+  "GPU_admitted": false,
+  "promotion_allowed": false
+}

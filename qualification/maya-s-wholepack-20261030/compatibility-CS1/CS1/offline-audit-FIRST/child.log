@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_audit_dispatch.py", line 275, in <module>
+    if __name__ == '__main__': sys.exit(main())
+                                        ~~~~^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_audit_dispatch.py", line 272, in main
+    return child(a.qualification_sha, a.attempt_sha, a.dispatch_sha) if a.child else dispatch(a.qualification_sha)
+           ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_audit_dispatch.py", line 163, in child
+    result = audit.run({'qualification_sha256': pin, 'expected_binding': binding, 'attempt_sha256': attempt_pin})
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_audit.py", line 150, in run
+    result = audit_saved(runtime, config, fixtures, saved, qa, q, qpin, binding)
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_audit.py", line 244, in audit_saved
+    rec.bytes(metadata / name)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_audit.py", line 69, in bytes
+    path = regular(path); require(path.stat().st_size <= MAX_EVIDENCE_BYTES, 'Saved receipt too large for bounded audit')
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_audit.py", line 45, in regular
+    require(path.is_file() and path.stat().st_nlink == 1, 'One regular evidence file')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_compat_audit.py", line 31, in require
+    if not value: raise ValueError(why)
+                  ^^^^^^^^^^^^^^^^^^^^^
+ValueError: One regular evidence file

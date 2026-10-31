@@ -1,0 +1,141 @@
+{
+  "utc": "2026-10-31T10:18:00.683780+00:00",
+  "status": "CONDITIONAL_SINGLE_N1_NUMERICAL_ADMISSION",
+  "arm": "N1",
+  "mode": "numerical",
+  "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+  "evidence_sha256": {
+    "numerical-qualification.json": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+    "MAP_ASTRA_REVIEW.json": "99132ad0fc58e33a550b1cef693d78169bf9e7e21566fb9bf169ca424f4c0b46",
+    "SOURCE_R2_ROOT_REVIEW.json": "5003f4784f1f1818d874657902d5f16ec155471898253d8c8874534f51da497b",
+    "SOURCE_R2_ASTRA_REVIEW.json": "efb06c2d4eca2de5cc7e281cc2a962a4cec864d66204d7453af2f8b3481b194b",
+    "CPU_R2_RESULT_ASTRA_REVIEW.json": "4f7ef86c6bd568d9cac7efcd53a594e1d5532c3ab3baafd20fb2e2c378883a4a",
+    "N0/terminal-audit.json": "10383a6e06f28857ac3de37ad7643dbc2f4d354247867435d1e513f8e234fe77",
+    "N0/RESULT_ROOT_REVIEW.json": "9cf8eda2426fb5f9d8cbacfa4cfe63b19516e7cd960d94e89b3f5cbb314f4fc7",
+    "N0/RESULT_ASTRA_REVIEW.json": "021c5449d55d2faee5a578b90c14dda7027b67d4eefe8b27fb726c7afa9e635b",
+    "numerical-arms.json": "3dd6a3af0d09d351367e9a4807be0eafe5f33f05f8427cfd7943519263f432d7",
+    "N1_FRESH_ADMISSION_CONTEXT.json": "1a3f1d582aa4972477bf04a1594dc2bb2d76ca0e9d6790f495d72060e2db124c",
+    "ACTUAL_N1_READONLY_FIRST/child.json": "e5bc48bdd7b808b38bf1546551af725643ce3a1f193510a681ae81eb1db3c84f",
+    "ACTUAL_N1_READONLY_FIRST/child.log": "332923d07f5e6bf51e239a57d95c9200d2cd3498727d08d68063661b43b5ba4e"
+  },
+  "unchanged_qualification": {
+    "file_pins": 4586,
+    "with_self_checks": 4587,
+    "source_files": 19,
+    "CPU_inputs": 3639,
+    "ordered_controls_each_host": 247,
+    "current_source_bytes_match_qualified_map": true,
+    "actual_readonly_proof_full_file_map_equals_final_qualification": true,
+    "no_new_source_build_or_CPU_control_execution": true
+  },
+  "N0_prerequisite": {
+    "accepted_registry_entry": {
+      "attempted": true,
+      "fully_reviewed": true,
+      "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-cpu-iq2xs-numerical-N0-20261031T093804Z",
+      "proof": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-cpu-iq2xs-numerical-N0-20261031T093804Z/proof.json",
+      "controller_pid": 4139863,
+      "accepted": true,
+      "numerical_state_lifecycle_accepted": true,
+      "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+      "terminal_audit_sha256": "10383a6e06f28857ac3de37ad7643dbc2f4d354247867435d1e513f8e234fe77",
+      "root_result_review_sha256": "9cf8eda2426fb5f9d8cbacfa4cfe63b19516e7cd960d94e89b3f5cbb314f4fc7",
+      "astra_result_review_sha256": "021c5449d55d2faee5a578b90c14dda7027b67d4eefe8b27fb726c7afa9e635b"
+    },
+    "Root_and_Astra_reviews_match_exact_output_proof_q_terminal": true,
+    "N0_complete_restored_controller_custody_verified": true,
+    "N0_saved_window_sha256": "2ef351e53a84ff70300e60ea8e1457722ffcad652ba35ffd32a8bf528ec5fba3",
+    "N0_numerical_equivalence_not_claimed": true
+  },
+  "readonly_preflight": {
+    "child_pid": 4156500,
+    "actual_returncode": 0,
+    "cleanup": [],
+    "elapsed_seconds": 1.8707334359642118,
+    "status": "READ_ONLY_PREFLIGHT_PASS",
+    "readonly_only_no_run_flag": true,
+    "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-cpu-iq2xs-numerical-N1-20261031T101603Z",
+    "output_is_not_the_future_run_namespace": true,
+    "context_readonly_receipt_sha_is_full_child_log_sha": true
+  },
+  "saved_fresh_context": {
+    "utc": "2026-10-31T10:16:39.940270+00:00",
+    "binding": {
+      "invocation": "5349f6a440544b9bb15b84c71839bf52",
+      "main_pid": 4143187,
+      "native_pid": 4143240,
+      "native_start_ticks": 170826527
+    },
+    "healthy_default_idle_zero_work": true,
+    "phase_keys_free": true,
+    "root_free_GiB": 347.2821273803711,
+    "kernel_since": "2026-10-31 09:38:04 UTC",
+    "kernel_faults": [],
+    "download_paused": {
+      "authorization_sha256": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648",
+      "pause_before_private_phase": true
+    },
+    "download_worker_absent": true,
+    "N1_controller_files_absent": true,
+    "registry_has_no_N1_attempt": true,
+    "metadata_observer_limit": "Initial context helper checked wrong pause key and stopped before writing; actual pause_before_private_phase true read and completed here, no readonly/model retry."
+  },
+  "single_permitted_action": {
+    "controller": "cpu_model_numerical.py --arm N1 --run",
+    "foreground_canonical_owned_lifecycle_only": true,
+    "candidate": {
+      "exe": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/maya-ds4-candidate",
+      "native_sha256": "cab346ccefedad1d2b80384db215325a445f474729812ea288a829d843007da4",
+      "CPU_IQ2XS_candidate": true
+    },
+    "fixture_sha256": "976b0cf51e3cfc2950774714fb1a5fb075f08e7d8619b028b6d9b1b0f67ffe67",
+    "four_frozen_full_policy_natural_states": true,
+    "one_fresh_private_phase_and_selected_restoration": true,
+    "no_additional_wrapper_service_or_native_owner": true
+  },
+  "frozen_policy": {
+    "context": 1048576,
+    "output_default": 262144,
+    "request_cap": 32768,
+    "effort": 100,
+    "startup_soft_wall_cleanup_seconds": [
+      800,
+      1000,
+      1200,
+      200
+    ],
+    "private_memory_GiB": 80,
+    "private_swap_bytes": 0,
+    "poststop_available_floor_GiB": 88,
+    "root_admission_GiB": 132,
+    "root_runtime_GiB": 120,
+    "TP": 1,
+    "automatic_cut_required": 19,
+    "prefill_chunk": 4096,
+    "CPU_threads": 24,
+    "all_CPU_experts_RAM": true,
+    "same_pack_drafter_images_Q8_projection_stream_policy": true,
+    "native_dump_FSIZE_bytes": 536870912
+  },
+  "conditions_before_and_during_action": [
+    "Immediately before launch recheck exact qualification/source/binary/config and current selected5349/API4143187/native4143240/startticks170826527, idle/default/health, sole ownership, phase/build/restoration absence, root/kernel/clean prior window, downloader pause/absence and fresh output/metadata/registry. Refuse changed custody.",
+    "N0 accepted prerequisite must remain exact and hash-bound. Do not rewrite or reuse either arm evidence or earlier read-only output namespace.",
+    "Use only source-qualified canonical foreground controller with actual OS exit capture and existing stop/window/resource fence/cleanup/selected restoration. Actual post-stop 88 GiB and runtime resource gates remain mandatory.",
+    "Preserve all failures/partials and stop on a gate refusal or fault. No retry, new settings, timeout extension, caps reduction, logit tolerance or alignment.",
+    "After private phase and restoration are terminal, run only the separately qualified bounded four finite scans, assembly and exact N0/N1 comparison. Require independent manual outcome review; this admission is not a comparison pass."
+  ],
+  "limits": [
+    "CPU finite6336 coverage does not pre-prove whole-model equality.",
+    "N0 accepted baseline is restricted to its four state paths and lifecycle.",
+    "Current N1 admission does not authorize timing, promotion, deployment or another arm.",
+    "The saved context is a point-in-time observation; action-time checks still apply.",
+    "Initial context helper pause-key refusal remains a metadata observer limitation; no read-only/model retry is inferred."
+  ],
+  "timing_admitted": false,
+  "deployment_admitted": false,
+  "retry_admitted": false,
+  "automatic_next_arm_admitted": false,
+  "registry_or_source_modified": false,
+  "reviewer_live_actions": false,
+  "reviewer_paused_until_private_and_restoration_terminal": true
+}

@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-31T06:01:48.795952+00:00",
+  "status": "PREPARE_V3_OWNED_CPU_CLEANUP_AND_UNCHANGED_SELECTED_GUARD_PASS",
+  "binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "phase": null,
+  "active_cpu_build": false,
+  "owned_four_groups_actual_absent": true,
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "CPU_lock_inode": 2894342,
+  "CPU_lock_kernel_rows": [],
+  "root_GiB": 348.2768211364746,
+  "kernel_warning_query": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "prepare_controller_exit": 0,
+  "native_or_fixture_execution": false,
+  "production_changed": false
+}

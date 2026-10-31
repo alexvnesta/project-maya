@@ -1,0 +1,157 @@
+{
+  "status": "CLOSED_HOLD_TOKEN_PATH_DIFFERS_SELECTED4096_PRESERVED",
+  "selected_native_pid_historical_snapshot": 1853542,
+  "fresh_readonly_guard": "2026-10-29T12:09UTC idle/default/currentbinding/noactivependingphase",
+  "build_controller_source": "iq2s_build.py",
+  "build_tests": "test_iq2s_build.py",
+  "CPU_tests_run": true,
+  "compiler_run": true,
+  "GPU_run": true,
+  "production_changed": false,
+  "next": "Closed. No further experiment/replay/timing/promotion; exact comparisonHOLD and production evidence retained.",
+  "updated_utc": "2026-10-29T15:15:43.033428+00:00",
+  "CPU_controls_each_host": {
+    "controller": 59,
+    "policy": 46
+  },
+  "exact_source_input_maps": 10,
+  "prepare": {
+    "children0": 3,
+    "selected92_relink_exact": true,
+    "inputs": 489,
+    "tools": 20,
+    "receipt_sha256": "4bb6856a97724200b7cfd8690779509ea1b54f744089d8fcae872604529033a8"
+  },
+  "compile": {
+    "all4_exit0": true,
+    "receipt": "build-FIRST/receipt.json",
+    "candidate_native_sha256": "da28ca8b108048990f5950e76909cccacacb9f921d8e37fad9f16b440bb513a6",
+    "fixture_sha256": "1e86117f24c435e6630d57f858628ea019ff0a36adc9495b5c141113c76fd0a4",
+    "GPU_or_native_execution": false
+  },
+  "GPU_controller_CPU_controls_each_host": 68,
+  "model_run": true,
+  "kernel": {
+    "cases": 104,
+    "window": "20261029T125632Z.json",
+    "root_terminal_audit_sha256": "caa5536a8eeedbadd725bf435d10c4ed062ca004342737edccc3586c26a84ea2",
+    "independent_review_sha256": "423d814a7da6092a03d00bac8caeae00a870f25419d834c9fdc0ae235dfd88b2",
+    "lifecycle_supplement_sha256": "9b1f24dc7d25afec57e78240991d0cb22d4799963b19748bec0a2ca42d408308",
+    "resources": {
+      "sampled_root_min_GiB": 838.8367881774902,
+      "swapout_delta_bytes": 0
+    }
+  },
+  "selected_identity": {
+    "native_pid": 2041169,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "999f3c55a064452f864c7ff9a4875655",
+      "main_pid": 2041131,
+      "native_pid": 2041169,
+      "native_start_ticks": 155393110
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "numerical": {
+    "status": "CLOSED_HOLD_TOKEN_PATH_DIFFERS",
+    "source_count": 11,
+    "input_maps": 931,
+    "Mac_CPU_controls": 109,
+    "Linux_CPU_controls": 109,
+    "model_windows": {
+      "N0": "COMPLETE_FULLY_REVIEWED",
+      "N1": "COMPLETE_FULLY_REVIEWED"
+    },
+    "first_prechild_refusal": "model-v1/CPU-prechild-path-refusal-FIRST.json",
+    "fresh_busy_deferral": "numerical-stage-busy-deferral-FIRST.json",
+    "GPU_admitted": "CONDITIONAL_N0_ONLY_A976_NO_ACTUAL_GPU_WINDOW",
+    "qualification_sha256": "11deaac7b10b7d53bd988acff210136b5e2107d533d1a13e28c315037810113e",
+    "qualification_files": 2198,
+    "independent_CPU_review": "1d8f7e95dc342ae6c4a916592a1e23be277405b9b186eeac78f0fe73d6fc2cc5",
+    "independent_qualification_review": "8f407f1e8dabc03767baaf5782531f5bf708487db472c65ec26df61334dac9e8",
+    "actual_preflight": "READ_ONLY_PREFLIGHT_PASS_20261029T134410Z",
+    "actual_attempt_registry_empty": false,
+    "actual_N0_native": 2022226,
+    "actual_N0_API": 2022202,
+    "actual_N0_window": "20261029T141654Z.json",
+    "actual_N0_exit0": true,
+    "N0_finite_dump_rows": [
+      229,
+      178,
+      98,
+      188
+    ],
+    "N0_terminal_audit_sha256": "4a793c999370cef9d875edfe8056caad888904b4f99fe3d9c707d191b56a28c6",
+    "N1_GPU_admitted": "COMPLETED_CLOSED_NO_REPLAY",
+    "speed_claim": false,
+    "N0_astra_result_review_sha256": "25f72fd77cba3581c1ce611ad096f1d37f3d99eefe730223febfd4b18d07139d",
+    "N1_actual_readonly_preflight": "READ_ONLY_PREFLIGHT_PASS_20261029T144309Z",
+    "exact_comparison_each_host": "HOLD_TOKEN_PATH_DIFFERS",
+    "final_astra_review_sha256": "6c181cf865d5dd01cfc166c986164ecd00dbc95533875ce0850de12728342e6d",
+    "performance_admitted": false,
+    "promotion_admitted": false
+  },
+  "idle_followup": {
+    "automation_id": "deepseek-idle-whole-model-speed-test",
+    "status": "DELETED",
+    "cadence_minutes": 10,
+    "authorization": "Direct user request October29: retry whole-model speed test when DeepSeek idle, same model/quality/context/output, no interrupt active work",
+    "latest_actual_launch_check": "DEFERRED_BUSY_UNTOUCHED",
+    "model_arm_attempted": false,
+    "scope": "New same-chat idle followup; not revival of ended twelve-hour campaign",
+    "next": "Delete after final closeout persisted; strict HOLD prevents timing/replay",
+    "reason": "Closed strictHOLD; user work and selected production preserved"
+  }
+}

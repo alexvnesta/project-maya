@@ -1,0 +1,94 @@
+{
+  "utc": "2026-10-30T03:52:33.048914+00:00",
+  "decision": "CONDITIONAL_SINGLE_FOUR_CHILD_HEAD_MODEL_COMPILE_AND_LINK_ONLY",
+  "qualification_sha256": "9a5a676bb82809e11ee0c5e8ca11944300c087fd09e30e762465aa6eb773c8e0",
+  "file_pins": 2176,
+  "physical_checks_with_self": 2177,
+  "evidence_sha256": {
+    "prepare-FIRST/deps-model-inputs.json": "3fd4bc1020fef770a4618c88fc76602db9e7c691dac9375293fa230c50c9b629",
+    "prepare-FIRST/deps-model.json": "8dd45cc10d6e97604de3590ee90e3c3756a88dfb020250a353f8f759b8acff40",
+    "prepare-FIRST/deps-model.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-model.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-test-inputs.json": "d6acab6bf59d4114833be8f36d093bf6b37de22eb42e36185ae50fbd5c0c87c4",
+    "prepare-FIRST/deps-test.json": "16f9cc778ce764c97fe992c3df3a8f10c4c15882c71108edd8f1b670b85441d8",
+    "prepare-FIRST/deps-test.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-test.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/model.headers.d": "8ca57fb715c4aa7bf9b2f9c93b35ce8bdbfbb511326cda3643d800ea86294fe2",
+    "prepare-FIRST/plan.json": "35fd7f677e2f716d3cd2b517cd99d3c4b7a6e56caacfe41d2889033859a5c6ac",
+    "prepare-FIRST/receipt.json": "99c98d80027191dedf9d719051a63004fce648130380138c33f9b7d55e2570f2",
+    "prepare-FIRST/selected-relink-inputs.json": "5d1a0ec5b4ef3b222f090300fdd9f2ef872f86b8baaac0c22518d3e2bad32427",
+    "prepare-FIRST/selected-relink.json": "d333385a7f972b94e4eac99651abf4dfb108f5e0fdc8760e15bc84960482ca41",
+    "prepare-FIRST/selected-relink.link.d": "9b22079049102231eedf4c1df5405b20e742bf5b97f4d5a1150dd884726bf35d",
+    "prepare-FIRST/selected-relink.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/selected-relink.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/test.headers.d": "7aca024bc2f7bfa887a53f72d909b817c5ae9d4767bde5bf7c11eb5574309f8a",
+    "PREPARE_RESULT_ROOT_REVIEW.json": "f34bd0bf55e2ea2238561170e8803a1aadafda9c0195a77a9fabbd60b033a5f9",
+    "PREPARE_NEW_HEADERS_GIT_PROVENANCE_ASTRA.json": "c24ad6d81122d15bac6f316574a781d6001c2efe9cdf21ee933808e89cc3ffa7",
+    "HEAD_PREPARE_MAP_ASTRA_REVIEW.json": "30c22c38635eb174f8185f08399715d2627ccdee819de2d706722610a4607813",
+    "BUILD_CPU_RESULT_ASTRA_REVIEW.json": "d0d1718dd11ae5200f001dac99e80c8b663c25ed9a5d3e13bcc9899cd159c05d",
+    "HEAD_BUILD_SOURCE_ASTRA_REVIEW.json": "122dba70edef64b065f583762e93d46aea2478b19e3418f04234ceead5df9904"
+  },
+  "prepare_result": {
+    "passed": true,
+    "status": "PREPARED_STOP_FOR_ACTUAL_INPUT_REVIEW",
+    "three_child_PIDs": [
+      2733382,
+      2733407,
+      2733436
+    ],
+    "all_returncode0": true,
+    "all_stdout_stderr_empty": true,
+    "CPU_s_per_process": 120,
+    "AS_GiB_per_process": 4,
+    "wall_s_process_group": 300,
+    "nice": 15,
+    "CUDA_hidden": true,
+    "interruptions": [],
+    "cleanup_errors": [],
+    "control92": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "actual_dependency_maps": {
+      "selected_relink": 44,
+      "model": 500,
+      "fixture": 290
+    },
+    "raw_dependency_maps_reconciled": true,
+    "actual_input_spellings": 564,
+    "canonical_input_paths": 557,
+    "input_alias_digest_conflicts": 0,
+    "tools": 20,
+    "tool_identities_equal_original_prepare_r2": true,
+    "common_original_input_hash_changes": 0,
+    "new_path_spellings": 74,
+    "new_selected_headers": 16,
+    "all16_new_selected_headers_match_local_git4615_object_bytes": true
+  },
+  "map_review": {
+    "all564_actual_input_pins_present": true,
+    "all17_local_prepare_raw_files_match_qualification": true,
+    "control_binary92_pinned_remote_only": true,
+    "prepare_map_removed_or_changed_existing_pins": false,
+    "new_pins": 94,
+    "normalized_alias_digest_conflicts": [],
+    "source7_input4_Python81_CXX91_maps_unchanged": true
+  },
+  "allowed_children": [
+    "compile-model",
+    "compile-test",
+    "candidate-link",
+    "test-link"
+  ],
+  "factor_custody": "Only selected ds4_model.cu.o replaced in native; candidate exactselecteddfe plus reviewedhead4-to8optin. Fixture new entry with ORIGINAL selected GGUF/IQ and other objects. No heldQ8sharing/IQ2/IMMA object/source included.",
+  "conditions": [
+    "Fresh physical idle/default/no activeprivate/build/pending, exact current38b/main2612003/native2612033/ticks159680913, root>=132GiB; verify full2176filepins+qualification self before any claim/child.",
+    "Current reviewed head_build5ad8 and candidate4 frozen; existing ownPID cooperative CPU reservation with recurring currentbinding/idle/root checks. Fresh build-FIRST absent; no overwrite/replay.",
+    "Four SERIAL children using actual model recipe O3/C++20/sm80/STRATA_NATIVE_EXPERTS1/version0.1.27/threads1; inherited CPU120/AS4GiB perprocess/wall300 perownedPG/nice15/CUDAhidden.",
+    "Recheck actual564input+20tool identities and all prior produced artifacts before/after subsequent child. Unknown newlink dependency, tamper, timeout, busy or firstfault means owned compiler cleanup/HOLD with primary/secondary receipts; no blind retry.",
+    "After four children STOP; independent artifact/raw compiler/resource/link review required. No fixture execution, model execution, kernel window, serving change, promotion or numerical/performance admission."
+  ],
+  "findings": [],
+  "limitations": [
+    "Review uses copied raw physical receipts and local source metadata; action-time physical guards/hashes remain required. Original selected-relink binary was not copied locally; its recorded exact92 hash must be freshly checked remotely by qualified controller.",
+    "Successful prepare/relink proves bounded preparation and original object/link reproduction, not candidate numerical equivalence or speed.",
+    "Q8 N0 remains HOLD without replay or regrade."
+  ]
+}

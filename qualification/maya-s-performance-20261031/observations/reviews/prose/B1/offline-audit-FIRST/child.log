@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_dispatch.py", line 232, in <module>
+    sys.exit(child(a.mode,a.arm,a.qualification_sha) if a.child else dispatch(a.mode,a.arm,a.qualification_sha))
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_dispatch.py", line 159, in child
+    runpy.run_path(str(HERE/'pv_audit.py'),run_name='__main__')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_audit.py", line 380, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_audit.py", line 376, in main
+    result=audit(a.mode,a.arm);dest.parent.mkdir(parents=True,exist_ok=True)
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_audit.py", line 333, in audit
+    receipt=j(output/'receipt.json');result=complete_contract(receipt,m,mode,arm)
+                                            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_audit.py", line 205, in complete_contract
+    require(len(ids)==len(set(ids))==3 and r.get('complete') is True and r.get('retry') is False
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and r.get('reason') is None and r.get('unrun_ids')==[] and r.get('DSI1_leftovers')==[]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and [x['id'] for x in r['rows']]==ids,'Wrong/capped/partial/UNRUN main panel')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_audit.py", line 13, in require
+    if not ok: raise ValueError(message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Wrong/capped/partial/UNRUN main panel

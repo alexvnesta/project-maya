@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "children_closed": true,
+  "prior_properties": {
+    "MemoryMax": "max",
+    "MemorySwapMax": "max"
+  },
+  "same_invocation": true,
+  "restored_properties": {
+    "MemoryMax": "max",
+    "MemorySwapMax": "max"
+  },
+  "unit_after": {
+    "LoadState": "loaded",
+    "FragmentPath": "/run/user/1000/systemd/transient/strata-deepseek-window.service",
+    "DropInPaths": [
+      "/run/user/1000/systemd/transient/strata-deepseek-window.service.d/50-MemoryMax.conf",
+      "/run/user/1000/systemd/transient/strata-deepseek-window.service.d/50-MemorySwapMax.conf"
+    ],
+    "Transient": "yes",
+    "InvocationID": "0ac2b34191cc409c948987a3c8042212",
+    "ControlGroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service",
+    "MemoryMax": "infinity",
+    "MemorySwapMax": "infinity"
+  }
+}

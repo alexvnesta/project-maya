@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/model-v1/cpu_model_audit_runner.py", line 299, in <module>
+    else: parent(args.arm, args.qualification_pin)
+          ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/model-v1/cpu_model_audit_runner.py", line 269, in parent
+    if primary is not None: raise primary
+                            ^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/model-v1/cpu_model_audit_runner.py", line 246, in parent
+    require(not proc['cleanup'] and proc['returncode'] == 0 and proc['error'] is None,
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            'Audit child failed; original attempt retained')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/model-v1/cpu_model_audit_runner.py", line 29, in require
+    if not ok: raise ValueError(why)
+               ^^^^^^^^^^^^^^^^^^^^^
+ValueError: Audit child failed; original attempt retained

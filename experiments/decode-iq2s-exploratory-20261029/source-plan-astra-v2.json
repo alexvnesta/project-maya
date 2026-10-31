@@ -1,0 +1,78 @@
+{
+  "utc": "2026-10-29T16:43:51.001134+00:00",
+  "decision": "PROPOSE_TWO_REQUEST_SHORT_INPUT_SEQUENCE1024_EXPLORATORY_MODE_SOURCE_ONLY",
+  "supersedes_plan_scope_only": "9782a0b9b3a712b1389d195e1a5667e8095a8ff07db729a5a269a4fe73b96d2f",
+  "reason": "ROOT narrowed request to shortest honest whole-model decode diagnostic; previous four-state proposal remains preserved/unexecuted.",
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/iq2s_config.py": "aa8d222d5f9d5885ee87993b0418f471f4fe44f4f79bfdfffc859f1c4fee88d7",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/iq2s_model_runtime.py": "1516752104307ffc159fbb80afd972ccd43c5cb9a96cf3e47de126f62482d510",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/iq2s_numerical.py": "f1a90e9cde514d6c65c057fc20a3319b8886d2a7193bb247707b78aaf38f621f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/iq2s_numerical_audit.py": "c5b2a6a48024bf935fbb45889ff9a141ae0a899f6172f0760b374bd6e02f88cd",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/iq2s_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/exact-comparison-result-astra-review.json": "6c181cf865d5dd01cfc166c986164ecd00dbc95533875ce0850de12728342e6d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/imma_fixtures.py": "c70d008d3277166b8ff5276f22cb4547ab76a6688eab4647ff2d1a024ec89e4a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/prefill-cache-improvements-20261027/skip_controls.py": "da2354fa0982c6887c841105e3a3b170912d8f7454d08439732fe709a1f0b0e2",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/hosting-1m-output256k-v3-20261027/capacity_observer.py": "84e7616db4d7e4279fef5b567789a113bffb18d82e074251581a0a281f55fdb0"
+  },
+  "mode": "exploratory",
+  "namespace": "decode-iq2s-exploratory-X0|X1-UTC",
+  "arms": [
+    "X0 selected92, persistentaliases0",
+    "X1 candidate da28, persistentaliases1; only after X0 full raw audit/restoration and separate fresh admission"
+  ],
+  "limits": {
+    "context": 1048576,
+    "default_output": 262144,
+    "request_max_tokens": 32768,
+    "effort": 100,
+    "temperature": 1,
+    "seed": 1,
+    "window_s": 1200,
+    "soft_s": 1000,
+    "cleanup_s": 200,
+    "root_admission_GiB": 132,
+    "root_runtime_GiB": 120,
+    "swapout_limit_GiB": 1,
+    "private_cache_GiB": 8,
+    "logs_aux_GiB": 4
+  },
+  "fixture": {
+    "ids": [
+      "sequence1024-cold",
+      "sequence1024-warm"
+    ],
+    "synthetic_prefix": "Exploratory IQ2_S decode fixture.\\n followed by exactly80 existing synthetic ledger LINE strings",
+    "instruction": "Return only JSON with the single key values, whose value is the array of every integer from1 through1024, in ascending order, exactly once. Do not include the ledger or any other keys.",
+    "answer": "Exact typed integer array1..1024, single key values, no extra keys or booleans/floats.",
+    "request_policy": "Identical frozen JSON-format request for both cases and both arms. Fullcap32768/effort100/reasoningbudget0/temp1/top_p1/seed1 unchanged.",
+    "CPU_bounds": "Require actual encoded prompt1024..2048 tokens inclusive, canonical answer<=4096 tokens. Exact CPU token IDs/counts/hash must match bothhosts. If outside, source HOLD before model; no automatic resize.",
+    "cache": "cold reuse0 then warm prompt_tokens-1; fresh separate arm cache/profile copy",
+    "mode1": "Enabled unchanged; prompt<2668 means no prompt-skip activation required or expected. Do not copy old longprompt activation check.",
+    "dump": "DS4_SERVE_DUMP absent in both envs/actualprocess; no logits files; numerical-only FSIZE hook absent. Cache8/log4 monitors retained.",
+    "coverage": "Exactly2native/2HTTP. Text known-answer and cache only; nativeimages capability/settings preserved but not exercised here. No tool/code/image/fulltask/near1M claims."
+  },
+  "metrics": [
+    "Per-case native decode_ms/generated/tokens-per-second, native prefill_ms, client completion and firstdelta, full emitted path/rawDONE, prompt/reuse/drafts accepted+offered. Report cold and warm separately.",
+    "Each successful answer represents identical useful sequence1..1024 work. Client completion can compare that narrow task, but variable hidden reasoning/native counts must accompany it. This is one pair of observations, no reproducible/general speedup or quality equivalence.",
+    "No common-prefix timing requirement: token paths may differ early. Preserve traces; do not realign, shorten chosen intervals, infer identical computational work or turn token-rate ratios into an acceptance pass.",
+    "No numerical dump overhead. Old unmeasured N0/N1 times are not baselines; no oldnumbers reused."
+  ],
+  "gates": [
+    "All2 exact typed answers, naturalstop/DONE/HTTP200, nonzero generation below32768, actualpositive offered+accepted DSpark, exact cache reuse, actual branch for candidate, exact PID/exe/env/argv/1M/Q8/auto19-21/CPU4045RAM. Wrong/cap/partial/UNRUN stops, retains both scores and no retry.",
+    "All existing oldowner/privateAPI/native/windowexit0/kernel/root/swap/cache/log/publicrestore/pending/foreignowner gates unchanged. Fresh idle/default/currentcanonicalbinding/no phases before each action; no old deadline or automation.",
+    "No forced cancellation experiment needed for this narrow panel, but existing soft-budget cancellation/release paths still require source+mock CPU controls. Soft1000 never expands; cannot guarantee natural completion from task wording."
+  ],
+  "source_plan": [
+    "Distinct files/directory, explicit2case fixture constructor/validator/CPU encoder. Existing sequence_expected permits64/256 only, so1024 needs new pure exact constructor rather than monkeypatch. Reuse pinned API/tokenizer support and policy only.",
+    "Adapt frozen config/runtime/controller/auditor into new mode with X0/X1 only/newregistry/newpath/status/q, same canonicalowner. No edits to old109source/criteria/closedresults. Remove dump/finite routines and nativeFSIZE wrapper explicitly, retain monitored bounded transport and resource guards.",
+    "New summary permanently labels exploratory/descriptive/prior_numerical_HOLD=true/promotion=false, refuses old5%screen or oldnumericalgate as new acceptance.",
+    "Manual full source/tests read ROOT+Astra, FIRST boundedCPU30/LinuxAS512/wall90/nice15/CUDAhidden bothhosts exactsource/input/IDs. Tests cover2case encoder/count/typedanswer, configdumpabsence, actual2HTTP/scriptednative, draft/reuse/wrong/cap/deadline, modebinding/registry/custody/partialcleanup/pending, auditmissing/duplicate/close/resource, ratefinite/variablelength/noacceptance.",
+    "Only after fullbothhostproof/frozenq/currentactualpreflight admit freshX0; independentterminalaudit/selectedrestore before separatefreshX1admission. Offline comparison only after each audit. Twoarms total; no automatic replication/promotion."
+  ],
+  "feasibility": "Canonical1024answer length determined by firstCPUencoding, not executed yet. Prior selected model completed coldload+four shorter cases within1000soft, but this is not a guarantee. Two roughlythousands-token outputs should provide a longer diagnostic decode sample than64/256 without long-inputprefill; estimate is not a measured result.",
+  "GPU_admitted": false,
+  "implementation_awaits_ROOT_confirmation": true,
+  "prior_numerical_HOLD_unchanged": true,
+  "promotion_admitted": false
+}

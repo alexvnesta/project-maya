@@ -1,0 +1,124 @@
+{
+  "utc": "2026-10-30T14:13:00.935575+00:00",
+  "decision": "SOURCE_ONLY_PROPOSAL_FOR_NEW_WHOLE_MAYA_S_PACK_COMPARISON_NO_MODEL_ADMISSION",
+  "authorization": "Parent reports new direct human authorization to resume download and complete comparison at1M total context/same output allowance, including interruption of active selected inference. Old passive deferral and all closed experiment outcomes remain preserved.",
+  "review_scope": "Read selected source excerpts, existing lifecycle/config/caller and frozen fixtures; no imports/tests/remote actions/pack writes/builds/model/service actions. Proposal metadata only.",
+  "source_pins": {
+    "ablation-pr469-v2/candidate/src/ds4/ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "native-vision-v2/runtime/tools/dsv41/pack_gguf.py": "6784a50c4252f0d3af36cf04f5d212524dbf0800dac2d3ea633290d044a18fdf",
+    "prefill-v2/fixtures.py": "a6c833a198ae8aaf7832be2ad5b7d3c41f9b7ed82f2f17c4557b5f6dc366f323",
+    "decode-optimization-20261028/head-batching-v1/head_startup.py": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_model_runtime.py": "9bd594247cecc13980d864780b778a66da08fcaf2b0a3ff5b386e84e33a1ad2c",
+    "decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_numerical.py": "47cfcd6403d44b90b3670e6ff83e42a5aaf12e089eff5edb01b180acb3ef6415",
+    "decode-optimization-20261028/prose-speed-v1/prose-fixtures.json": "8039ba7415335710ab481c5cd29f3c2c1bffb19b223d83ec586baf759a336faf",
+    "decode-optimization-20261028/iq2s-persistent-v1/exploratory-decode-v1/iq2s_explore_fixtures.py": "e2e402942282c9d5df23d5aac3e928a8c185056d5d8bc6404bd24179554da4a8"
+  },
+  "prior_assessment_sha256": "d16c27526f970f4519f9cfde6f8b1e9bf98f660f175ed01a921766ea141a1231",
+  "factor": {
+    "baseline": "Current published-selected pack on native92/configc43/chunk4096",
+    "candidate": "Exact d1fc01009f21e26157acb6858c315d0365483b72 Maya-S six shards including own Q6_K Engram plus its pinned dspark.bin/json",
+    "engine": "Same selected native92 on both sides; no compiler work or held Q8/IQ2/IMMA/head code",
+    "interpretation": "Whole pack factor, not quant-only or exactS2. CurrentL22 runtimeprojection is held constant, so no claim of author-stock quality reproduction.",
+    "constant": {
+      "total_context": 1048576,
+      "output_allowance": 262144,
+      "main_request_cap": 32768,
+      "effort": 100,
+      "reasoning_budget_tokens": 0,
+      "temperature": 1,
+      "top_p": 1,
+      "seed": 1,
+      "chunk": 4096,
+      "tp": 1,
+      "layer_split": "auto",
+      "cpu_threads": 24,
+      "per_device_reserve_MiB": 2048,
+      "images": true,
+      "Q8_BATCH": 1,
+      "Q8_CHECK": 1,
+      "mode1": true,
+      "STREAM": 0,
+      "DSpark_confidence": 0.65,
+      "DSpark_max": 4,
+      "DSpark_cumulative": 0,
+      "mmap_experts": "off",
+      "DS4_REQUIRE_ALL_RAM": 1,
+      "fit_max_tokens": false,
+      "projection": "Exact selected L22 direction f3033f6a, scale1"
+    },
+    "variable_observed": "Actual per-device allocation/expert counts and profile/cache state differ with pack sizes; auto policy does not guarantee unchanged19/21 split or11315/4045 counts. Freeze expected source-derived candidate split after actual metadata budget, before startup; do not silently force placement or reduce capacity."
+  },
+  "stage_1_pack_CPU": {
+    "prerequisite": "Completed transfer: all8 exact length+SHA, intactfirstpartial/deferral receipts and newlyauthorized transfer source/proof. No extra339GB copy.",
+    "minimal_sources": "New small pack-plan/metadata validator wrapper+tests+boundedCPUdriver around pinned existing pack_gguf parser/writer, not a forked engine or generic new framework. Full ROOT+sameAstra manual read first; exactsource/input maps and meaningful bothphysicalhost CPU proof before pack construction.",
+    "requirements": [
+      "Inventory actual sixGGUF headers:split count/index6/no missing orduplicates,architecturedeepseek41,context1048576,40trunklayers,hidden5120,vocab129280,expert/Engram/compression/RoPE/KVsource geometry; boundedcounts/string lengths/offset arithmetic and dtype block alignment. Reject unsupported/overlapping/out-of-file tensor records.",
+      "Exact DSparkJSON1224records+bin boundary, compatible3MTP blocks/names/dtypes/expert indices. Preserve publicdrafter assets; profile seed may be shared only after source IDs/geometry compatibility established, not retuned.",
+      "Fresh pack namespace and explicit --shards/--drafter/--vision. Refuse any sibling dspark-*.gguf discovered by builder; generated file-map must name publicdspark.bin, all6exactshards+samevision and no otherweightfile. Ban dense/expert/T16/Engram overrides.",
+      "Use pinned existing dsv41 packer that reads GGUFchat_template; do not substitute base4615 template. Pin generated tokenizer/template and compare actual CPU encoding oftext/multiturn/tool/image/effort100. Differences mustbe surfaced and freeze newperpacktokenIDs; same visible requests, no silent mapping/fitting.",
+      "Pin generated ds4.txt,tensors.txt,Engrammetadata,tokenizer/template and normalizedconfig. Allresolvedweightrefs exactmanifestbytes; only small metadata artifacts produced.",
+      "New malformedheader/outofbounds/duplicate/siblingdrafter/foreignfile/template/configdeltanegatives and deterministic small fixture positive; no fullweight scan repeated just to run unit tests. Actualmetadata scan/build separate guarded I/O receipt."
+    ]
+  },
+  "stage_2_capacity": {
+    "must_precede_GPU": "Source-derived conservative exacttensor/placement budget from actual acquiredmetadata; not rounded publisheraggregate.",
+    "GPU_accounting": [
+      "Denseweights including largerQ8head/embeddings, ownEngram/cache residency, drafter,vision/projection,expert pools/spares,per-device staging/scratch/Q8/Lt buffers",
+      "1M compressedKV+indexer source capacities from max_context andratios, mode1retainedspan, attention chunk4096 scratch, allocator/slack and2048MiBdevice reserve",
+      "Sameauto placement algorithm; freeze projected per-layer split/CPU expert bytes before admission, compare actualstartup receipts and reject incompatible/reserve shortfall."
+    ],
+    "RAM_accounting": "Exact CPUexpertblob sums+per-layer spare copy from selectedcopy_experts; addhost/staging/metadata/vision/cache/processheadroom and physical+cgroupbudget. Source strictRAM uses all rather than min(all,can), so do not relyon strictflag to prevent an unsafe allocation. Current MemAvailable whilebaselinealive plus39.5GB is not an exactreclaimablebudget.",
+    "storage": "Fresh root>=132GiBstart/120GiBruntime plus existingmodel preserved, newassetset+8GiBprivatecache+4GiBlogs. No pruningoldmodels/evidence.",
+    "if_not_fit": "STOP before startup with actualbudget; no context/output/quality/placement policy reductions under this proposal. Newexplicit source review needed for any changedsetting.",
+    "capacity_claim": "Configured/reserved1M and shortrequest operation only; no near1Mfilled-context or262144-generated-token validation unless separatelydesigned."
+  },
+  "stage_3_finite_state_quality": {
+    "new_mode": "maya-s-quality-v1 with fresh QS0selected andQS1MayaS ledger; old N0N1 remainclosed",
+    "purpose": "New wholepack boundedquality/state screen, not unchanged-arithmetic equivalence",
+    "fixed_cases": [
+      "Same newfrozen~8Ksyntheticprefix/exactJSON1..64 cold, identicalwarmrewind, exacttwoimageknownanswer, textreturn; retainperpackpromptIDs and mode1skip/cache/reuse/actualDSpark offered+accepted",
+      "One typedtoolcall plus matched-ID followup knownanswer; preservefailedfirst tool/followupUNRUN, no replacements",
+      "One genuine pre-first-output prefill cancellation plus known-answer recovery using existing qualified transport/observer; confirmownnativegen0 andrelease, not merelyHTTPclientclose"
+    ],
+    "numerical": "No crosspack exacttokens/logits requirement and no relaxedreuse ofoldcompare_matched. Require naturalstop/fulltypedanswers, validIDs, finiteactual emitted statistics and source-correct finite dump evidence if included. Minimal finiteness option: reuseexisting fourstate dump machinery in quality mode ONLY with source-recomputed candidatevocab/slot bounds and offlinefinite scan afterrestoration. Raw variablebatchrows are not automatically tokenaligned; no RMSthreshold/generalqualityequivalenceclaim.",
+    "dump_policy": "If opting for inherited dump gate: provealllegitimate slot/profilewrites fit512MiBperfile first, native-onlyFSIZE,1GiBsoftdump/4files2GiBhard within4GiBlogs; oldpolicy notautomaticonnewpack. Timedmode dumpOFF/noFSIZEhook. If boundcannotbeproved, redesignsource-onlybeforeGPU, never truncate/retry to fit.",
+    "manual": "Readallcontent+reasoning/tool/images; retain allscoredrows evenUNRUN/partial. Everyactualgenerated code later manuallyread before bounded CPUexecution.",
+    "budget": "Same1200window/1000soft/200cleanup; startupincluded, no outputcap or timeout expansion. If newpackload consumesbudget, remainingcasesUNRUN/HOLD, no automaticreplay. Freeze panel feasibility using observedbaseline bounds and conservativecandidatebudgets beforeadmission."
+  },
+  "stage_4_comparison": {
+    "new_mode": "maya-s-performance-v1, fresh A1/B1/B2/A2 matchedorders only afterquality+restoreclosure; eacharm separatelyadmitted, nofifth/replay",
+    "panel_order": [
+      "~8Ksyntheticprefix/exactJSON1..64 cold thenidenticalwarm; usefulfixedanswerprefill/cachecomparison (newmanifest, samevisiblework)",
+      "Expositoryprose hash-table task from qualified8039fixture, newfamilyID, same~800-1000wordrequest withoutfitting/truncating; fullmanualcoverage/style/factualreview",
+      "coalesce_ranges codingtask from existingfixtures literalrequest, fullcap32768/effort100; actualmoduleandall suppliedtests manuallyread then frozenindependent2207cases/4414checks/fournegative style verifier onlyif ASTcontractfits, otherwise sourcequalifybeforeexecution"
+    ],
+    "scope": "One prose andone code task are the minimal per-arm decodedwork screen; do notclaimcreativeprose coverage. Tool/image/cancelstate are qualitystage checks ratherthan bloatingtimedpanel. Never reuse old measured timings asnewbaseline.",
+    "measure": [
+      "Exactattributed nativegenerated/decode_ms, prefillprompt/read/reuse/ms, clientrequest->DONE, output+reasoningtokens/chars, draftsoffered/accepted/hitrate andcache countersonlywhenactuallyavailable",
+      "Naturalstop/cap/partial, fulloutputs, branch/pack/config/PID/cgroup/binding, actualplacementRAM/VRAM/reserve andloadtime separately",
+      "Bufferedfirstvisible delta understream0 is nottrueTTFT. Clienttimes withdifferent generatedwork cannot establish matchedtokenspeedup. Fixedanswerlatency can beusefultask latency but includesreasoning differences."
+    ],
+    "prospective_screen": "Recommend freeze >=5% nativegeneration-rate increase inBOTHorders for BOTHprose andcoding, no known-answer/code/manualquality failures and <=3% coldprefill regression atmatchedinputtokenlength. For usefulfixedanswer clientlatency retain both orders andflag>3%regression; labeldescriptive becausehiddenreasoninglengthmaydiffer. Do notcherry-pick pooledbest orautopromote fromratealone. ROOTmustfreezeexactcriterion beforefirstdata.",
+    "unavailable_metrics": "Commonprefix intervalonly if predeclared andactuallyshared sufficiently; otherwiseUNAVAILABLE, notzero/regression-pass. No synthetic overallgain from combining prefill+decode percentages.",
+    "deployment": "Not authorized by this sourceproposal orcomparison. No generalquality-equivalence assertion; wholepackquantization canalterbehavior beyondsmallpanel. Keepselected92packhosted betweenwindows."
+  },
+  "lifecycle_reuse": {
+    "template_files": [
+      "q8-sharing-v1/model-v1/q8share_model_runtime.py",
+      "q8-sharing-v1/model-v1/q8share_numerical.py",
+      "head-batching-v1/head_startup.py",
+      "prefill-v2/{protocol,budget,owned_server,native_observer,fixtures}.py"
+    ],
+    "required_new_delta": "New namespace/ledger/packconfig/factor/evidence/auditor only, pin imports. Replace historicalkernelprerequisite with exactnewpackmetadata+capacity+CPUproof. Native92 sameboth; no Q8_SHARE/IQ_PERSIST/HEAD_BATCH flags. Compose host from qualified head_startup.guarded_host(a) retaining its strictsingleinvocation capture and original1250sone-start; never oldQ8faulty capture.",
+    "stop_close_restore": "Currentcanonicalselectedbinding freshlyguarded; explicitauthorizedinterrupt applies onlycurrentselecteduserinference, notforeignGPUowner/privatephase. Useexistingqualifiedgracefulrouterdrain/ownedstop path; no newsharedstopprotocol. CaptureoldAPIExecMainCode1/Status0/Resultsuccess/MainPID0+boundnativeclose0 BEFOREprivatewindow; privateAPI/native/windowexit0, kernel/resources andsame selectedpublic401/auth200/assembledREADY-stop-DONE afterrestore. Preservefault andseparaterecovery ifneeded; neverfakecleanwindow.",
+    "admission": "Actualimmutablepins andqself+freshclock/currentowner/phasefree/root/resource beforedrain; allnewsource/tests manualROOT+sameAstra and firstboundedCPUeachphysicalhost. Parent pausesallreview/sourcework duringprivate+restoration. Newhumaninterruptionpermission mustbe explicitlybound; oldbusy-onlygate mustnot silentlybe repurposed.",
+    "bounds": "Existingwindow1200/soft1000/cleanup200,root132/120,swapout<1GiB,cache8GiB/log4GiB; samenoautomaticretry andpendingverify-onlycustody. Startuprestoration1250s inheritedone-start is separatelyowned; no newnativeowner."
+  },
+  "implementation_recommendation": "Do not start with eleven freshcopiedmodules. Small pack-plan/validator+tests first; then newconfig+fixture manifest adapter, thinownedentry/runtime/auditor deltas with focusedtests reusing pinned transport/lifecycle primitives. Exactfilenames/counts awaitparentlease, no implementation inthisreview.",
+  "not_performed": [
+    "No acquisitionresume",
+    "No packconstruction ormetadataweightread",
+    "No model/APIrequest orGPU/build/serviceaction",
+    "No existing source orcriteria edits"
+  ]
+}

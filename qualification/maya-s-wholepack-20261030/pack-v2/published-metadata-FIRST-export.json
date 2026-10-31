@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-30T16:49:42.515249+00:00",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "  File \"<string>\", line 8\n    f=P/'published-metadata-FIRST.json';assert not f.exists();raw=json.dumps(value,sort_keys=True,separators=(',',':'),allow_nan=False).encode()+b'\n                                                                                                                                                 ^\nSyntaxError: unterminated string literal (detected at line 8)\n",
+  "binding": {
+    "invocation": "fcc9a5fdb61740ef887ddf2b5bf9bcf8",
+    "main_pid": 2984652,
+    "native_pid": 2984691,
+    "native_start_ticks": 162440848
+  },
+  "no_native_or_service_actions": true
+}

@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-30T09:56:44.593242+00:00",
+  "status": "OFFLINE_SOURCE_DEFECT_IDENTIFIED_CAUSAL_ATTRIBUTION_UNPROVEN",
+  "failure": "GPU0 secondoutputrow row16 retainedinitialsentinel; fivePASS prefix/exit1/GPU1UNRUN. Originalselected objects, no candidate.",
+  "source_facts": [
+    "Host initialization uses pageable vectors and cudaMemcpy on defaultstream.",
+    "GEMV executes on cudaStreamNonBlocking without a pre-kernel initialization-completion edge.",
+    "The existing synchronization occurs after GEMV; DtoH follows it."
+  ],
+  "NVIDIA_CUDA_13_3_primary_sources": [
+    "https://docs.nvidia.com/cuda/archive/13.3.0/cuda-runtime-api/api-sync-behavior.html",
+    "https://docs.nvidia.com/cuda/archive/13.3.0/cuda-runtime-api/stream-sync-behavior.html"
+  ],
+  "inference": "Late defaultstream output-initialization overwrite is compatible with observed 0x7fa12345, but current receipts do not causally distinguish it from another fault. Failedhealth is not a baseline-clearance witness.",
+  "concrete_proposed_delta": "Checked cudaDeviceSynchronize after all HtoD initialization and before gg::mv, diagnostic fixture only. No production/native/kernel/model/config/settings changes.",
+  "proposal_sha256": "e53b38389d0a507d9efc434cc8fbee6ea28f55aad4d131383ec4dae4c2a77194",
+  "proposal_qualification": "UNQUALIFIED_UNBUILT_UNRUN; requires fullmanualreview/both-hostCPU/newbuild/independentnewadmission before execution. Original095101and041001 remain FAIL/HOLD.",
+  "GPU_replay_or_restore_authorized": false,
+  "next_decision": "Separate fixture-ordering repair qualification and baseline-only health test, followed by restoration only after clean actual evidence."
+}

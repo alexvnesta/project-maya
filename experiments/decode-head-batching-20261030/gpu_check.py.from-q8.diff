@@ -1,0 +1,308 @@
+--- qualified-q8/gpu_check.py
++++ new-head/gpu_check.py
+@@ -2,7 +2,7 @@
+ 
+ This fixture has no model or API server and establishes no generation-speed result.
+ """
+-import argparse, datetime, hashlib, json, os, pathlib, re, resource, subprocess, sys, time
++import argparse, datetime, importlib, hashlib, json, os, pathlib, re, resource, subprocess, sys, time
+ P=pathlib.Path(__file__).resolve().parent
+ R=pathlib.Path('/home/alex/strata-deepseek-test-20261024');E=R/'reliability-optimization-20261025'
+ D=pathlib.Path('/home/alex/deepseek-hosted-20261025')
+@@ -17,6 +17,61 @@
+ def emit(path,value):
+     path=pathlib.Path(path);tmp=path.with_suffix(path.suffix+'.tmp')
+     tmp.write_text(json.dumps(value,indent=2)+'\n');tmp.replace(path)
++
++SOURCES=('gpu_check.py','gpu_entry.py','test_gpu_check.py','test_driver.py','qualify_gpu_cpu.py')
++OWNER_SHA='b2bb7676969661f98bf77d9969a840a4fcb44367f9644ab6f05ac19d70709056'
++STARTUP_SOURCES={
++    'head_startup.py':'53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4',
++    'test_head_startup.py':'3040c6a8be1b8f008b38e05a183a04177c1c9efa2db295140b8771a7330f5072'}
++STARTUP_DRIVER_SHA='852e8186d38cae3e509be23e4f5f7aeb706963675a95f3bb3de91be41bddba86'
++STARTUP_RESULT_SHA='d8673dc54825042d86d565ede19a8d49b280d6e428e0824e37a9c93eafb9b5a4'
++
++def load_owner():
++    path=F/'activate_chunk4096.py'
++    if sha(path)!=OWNER_SHA:raise ValueError('Selected owner source changed before import')
++    sys.path.insert(0,str(F));a=importlib.import_module('activate_chunk4096')
++    if pathlib.Path(a.__file__).resolve()!=path:raise ValueError('Foreign selected owner import')
++    return a
++
++def startup_host(a):
++    path=P/'head_startup.py'
++    if sha(path)!=STARTUP_SOURCES['head_startup.py']:
++        raise ValueError('Startup adapter changed before import')
++    adapter=importlib.import_module('head_startup')
++    if pathlib.Path(adapter.__file__).resolve()!=path:raise ValueError('Foreign startup adapter import')
++    return adapter.guarded_host(a)
++
++def startup_proof(q):
++    files=q['files']
++    fixed={**STARTUP_SOURCES,'qualify_startup_cpu.py':STARTUP_DRIVER_SHA,
++           'STARTUP_CPU_RESULT_ASTRA_REVIEW_r2.json':STARTUP_RESULT_SHA}
++    if files.get(str(F/'activate_chunk4096.py'))!=OWNER_SHA:
++        raise ValueError('Original startup owner must remain pinned')
++    if any(files.get(str(P/name))!=pin for name,pin in fixed.items()):
++        raise ValueError('Qualified startup adapter/source/r2 review absent')
++    review_path=P/'startup-source-review.json'
++    paths=[review_path]+[P/('startup-CPU-r2-'+host)/name for host in ['darwin','linux']
++                        for name in ['receipt.json','child.json','child.log']]
++    if any(str(path) not in files for path in paths):raise ValueError('Startup r2 raw proof pins absent')
++    review=json.loads(review_path.read_text())
++    ids=review['test_ids']
++    if (review.get('all_source_and_tests_read') is not True or review['source_sha256']!=STARTUP_SOURCES
++        or len(ids)!=22 or len(set(ids))!=22 or review['driver_sha256']!=STARTUP_DRIVER_SHA):
++        raise ValueError('Startup r2 manual source review differs')
++    for label in ['darwin','linux']:
++        out=P/('startup-CPU-r2-'+label);proof=json.loads((out/'receipt.json').read_text())
++        child=json.loads((out/'child.json').read_text())
++        if (proof.get('passed') is not True or type(proof.get('controls')) is not int or proof['controls']!=22
++            or proof['test_ids']!=ids or proof['source_sha256']!=STARTUP_SOURCES
++            or proof.get('original_owner_sha256')!=OWNER_SHA
++            or any(proof.get(k) is not False for k in ['GPU_execution','compiler_execution','native_execution'])):
++            raise ValueError('Startup r2 both-host proof incomplete')
++        bounds={'returncode':0,'CPU_s':30,'wall_s':90,'nice':15,'CUDA_hidden':True,
++                'Linux_AS_MiB':512 if label=='linux' else None}
++        if (any(type(child.get(k)) is not type(v) or child[k]!=v for k,v in bounds.items())
++            or child.get('error') is not None or child.get('cleanup_errors')!=[]):
++            raise ValueError('Startup r2 child bounds/failure differ')
++
+ def fixture_limits():
+     resource.setrlimit(resource.RLIMIT_CPU,(120,120))
+     resource.setrlimit(resource.RLIMIT_FSIZE,(512*2**20,512*2**20))
+@@ -41,7 +96,7 @@
+ 
+ def output_paths(output, *, metadata_state='optional'):
+     output=pathlib.Path(output)
+-    if output.parent!=E/'results' or re.fullmatch(r'decode-q8-sharing-kernel-[0-9]{8}T[0-9]{6}Z',output.name) is None:
++    if output.parent!=E/'results' or re.fullmatch(r'decode-head-batching-kernel-[0-9]{8}T[0-9]{6}Z',output.name) is None:
+         raise ValueError('Exact fresh kernel namespace required')
+     for root in [E,E/'results',E/'maintenance']:real_directory(root)
+     if '..' in output.parts or output.is_symlink() or output.exists():raise ValueError('Kernel namespace already exists/foreign')
+@@ -56,7 +111,7 @@
+ 
+ def pending_paths(metadata):
+     metadata=pathlib.Path(metadata)
+-    if metadata.parent!=E/'maintenance' or re.fullmatch(r'decode-q8-sharing-kernel-[0-9]{8}T[0-9]{6}Z',metadata.name) is None:
++    if metadata.parent!=E/'maintenance' or re.fullmatch(r'decode-head-batching-kernel-[0-9]{8}T[0-9]{6}Z',metadata.name) is None:
+         raise ValueError('Exact owned pending namespace required')
+     real_directory(metadata)
+     state=metadata/'state.json'
+@@ -65,25 +120,25 @@
+ 
+ def expected_case_ids():
+     return ['PASS q8-reader-bytes-and-guards'] + [
+-        f'PASS mv-k{k}-c{nc}-n{n}-p{pattern}'
+-        for k in [256,2304,5120,32768] for nc in [1,2,4,8,16]
+-        for n in [7,9] for pattern in [0,1,2]]
++        f'PASS head-k5120-n{n}-pad{pad}-r{rows}-p{pattern}'
++        for n in [7,9,129280] for pad in [0,1]
++        for rows in range(1,17) for pattern in range(4)]
+ 
+ def check_result(stdout,code,device):
+     if type(device) is not int or device not in [0,1] or type(code) is not int or code!=0:
+         raise ValueError('Fixture device/exit incomplete')
+     expected=expected_case_ids()
+-    if stdout.splitlines()!=expected+[f'ALL 121 Q8_SHARE checks passed device {device}']:
++    if stdout.splitlines()!=expected+[f'ALL 385 HEAD_BATCH checks passed device {device}']:
+         raise ValueError('Exact kernel result missing/duplicate/foreign; no regrade')
+-    return {'device':device,'quantized_byte_scale_guard_cases':1,'full_mv_cases':120,
+-            'total_cases':121,'test_ids':expected,'exit0':True,
+-            'OFF_ON_exact_bytes_and_canaries':True,'model_execution':False,'speed_claim':False}
++    return {'device':device,'quantized_byte_scale_guard_cases':1,'full_mv_cases':384,
++            'total_cases':385,'test_ids':expected,'exit0':True,
++            'FOUR_EIGHT_exact_bytes_and_canaries':True,'model_execution':False,'speed_claim':False}
+ def fixture_contract(binary,expected,output,device):
+     output,_=output_paths(output)
+-    if binary!=P/'build-FIRST/q8_share_check' or type(expected) is not str or not re.fullmatch('[0-9a-f]{64}',expected):
++    if binary!=P/'build-FIRST/head_batch_check' or type(expected) is not str or not re.fullmatch('[0-9a-f]{64}',expected):
+         raise ValueError('Unqualified fixture binary')
+     if type(device) is not int or device not in [0,1]:raise ValueError('Exact physical GPU required')
+-    return [str(binary),'--q8-share-check',str(device)]
++    return [str(binary),'--head-batch-check',str(device)]
+ def owned_cgroup(value):
+     return isinstance(value,str) and 'strata-deepseek-window.service' in value.strip().split('/')
+ def child_identity(pid,binary,command,proc_root=pathlib.Path('/proc')):
+@@ -111,22 +166,29 @@
+     required=[P/'qualify_gpu_cpu.py']+[P/('gpu-CPU-'+host)/name for host in ['darwin','linux']
+                 for name in ['receipt.json','child.json','child.log']]
+     if any(str(path) not in q['files'] for path in required):raise ValueError('Exact CPU raw proof/driver pins absent')
+-    if (q.get('fixture_binary')!=str(P/'build-FIRST/q8_share_check') or
++    if (q.get('fixture_binary')!=str(P/'build-FIRST/head_batch_check') or
+         q['files'].get(q['fixture_binary'])!=q.get('fixture_sha256')):
+         raise ValueError('Exact built fixture must be qualified')
+-    if set(q['source_sha256'])!={'gpu_check.py','test_gpu_check.py'}:
++    if set(q['source_sha256'])!=set(SOURCES):
+         raise ValueError('Exact new controller source inventory required')
+     for name,pin in q['source_sha256'].items():
+         if sha(P/name)!=pin or q['files'].get(str(P/name))!=pin:raise ValueError('Controller source differs')
++    for name,pin in q.get('source_input_sha256',{}).items():
++        path=pathlib.Path(name)
++        if path.is_absolute() or '..' in path.parts or q['files'].get(str(E/path))!=pin:
++            raise ValueError('Unpinned CPU source dependency')
+     for name,pin in q['files'].items():
+         if sha(name)!=pin:raise ValueError('Qualified kernel input changed: '+name)
++    startup_proof(q)
+     for label in ['darwin','linux']:
+         proof=json.loads((P/('gpu-CPU-'+label)/'receipt.json').read_text())
+         if (proof.get('passed') is not True or proof['source_sha256']!=q['source_sha256'] or
++            proof.get('source_input_sha256')!=q.get('source_input_sha256') or
+             proof['test_ids']!=q['test_ids'] or not proof['test_ids'] or
+             type(proof.get('controls')) is not int or proof['controls']!=len(proof['test_ids']) or
+             len(set(proof['test_ids']))!=len(proof['test_ids']) or
+-            proof.get('GPU_execution') is not False or proof.get('native_execution') is not False):
++            proof.get('GPU_execution') is not False or proof.get('native_execution') is not False
++            or proof.get('compiler_execution') is not False):
+             raise ValueError('Matching both-host kernel CPU proof absent')
+         child=json.loads((P/('gpu-CPU-'+label)/'child.json').read_text())
+         bounds={'returncode':0,'CPU_s':30,'wall_s':90,'nice':15,'CUDA_hidden':True,
+@@ -149,12 +211,13 @@
+     proof=json.loads(proof_path.read_text());saved=json.loads(state_path.read_text())
+     current=json.loads((E/'STATE.json').read_text())
+     attempt=json.loads((P/'gpu-attempt.json').read_text())
+-    if (proof.get('qualified_for_owned_q8_share_kernel') is not True or proof.get('output')!=str(output)
+-        or saved.get('output')!=str(output) or saved.get('status')!='Q8_SHARE_KERNEL_PRIVATE_RUNNING'
++    if (proof.get('qualified_for_owned_head_batch_kernel') is not True or proof.get('output')!=str(output)
++        or saved.get('output')!=str(output) or saved.get('status')!='HEAD_BATCH_KERNEL_PRIVATE_RUNNING'
+         or current.get('maintenance_controller')!=str(state_path) or current.get('active_private_phase')!=str(metadata)
+         or attempt.get('metadata')!=str(metadata) or attempt.get('output')!=str(output)
+         or not isinstance(proof.get('qualification_sha256'),str)
+-        or saved.get('qualification_sha256')!=proof['qualification_sha256']):
++        or saved.get('qualification_sha256')!=proof['qualification_sha256']
++        or attempt.get('qualification_sha256')!=proof['qualification_sha256']):
+         raise ValueError('Wrong kernel admission proof/current ownership')
+     q=qualified(proof['qualification_sha256']);binary=pathlib.Path(q['fixture_binary']);pin=q['fixture_sha256']
+     commands={device:fixture_contract(binary,pin,output,device) for device in [0,1]}
+@@ -163,7 +226,7 @@
+     began=time.monotonic();rows=[]
+     env={k:v for k,v in os.environ.items() if not k.startswith(('DS4_','MAYA_DS4_','STRATA_DS4_'))}
+     env.update(STRATA_DS4_Q8_BATCH='1',DS4_Q8_BATCH='1',STRATA_DS4_Q8_CHECK='1',DS4_Q8_CHECK='1',
+-               STRATA_DS4_Q8_SHARE='0',DS4_Q8_SHARE='0',OMP_NUM_THREADS='1',
++               STRATA_DS4_HEAD_BATCH='0',DS4_HEAD_BATCH='0',OMP_NUM_THREADS='1',
+                OPENBLAS_NUM_THREADS='1',MALLOC_ARENA_MAX='1')
+     for device in [0,1]:
+         command=commands[device]
+@@ -197,7 +260,8 @@
+         rows.append(check_result((output/f'gpu{device}.stdout').read_text(),child.returncode,device))
+         if sha(binary)!=pin:raise ValueError('Fixture changed during window')
+     result={'passed':True,'window':str(window),'devices':rows,'fixture_sha256':pin,
+-            'GPU_kernel_execution':True,'model_execution':False,'speed_claim':False}
++            'GPU_kernel_execution':True,'model_execution':False,'speed_claim':False,
++            'private_API_exit':'NOT_APPLICABLE_NO_PRIVATE_API_CREATED'}
+     emit(output/'kernel-receipt.json',result)
+     return 0
+ 
+@@ -238,7 +302,8 @@
+ 
+ 
+ def host_class(a):
+-    class KernelHost(a.ChunkProductionHost):
++    # Restore selected92 through the separately qualified MainPID0 adapter only.
++    class KernelHost(startup_host(a)):
+         baseline_binding=None
+         old_close_verified=False
+         def baseline_reader(self):
+@@ -259,7 +324,7 @@
+             import shutil
+             if shutil.disk_usage('/').free<132*2**30:raise a.m.old.AdmissionDeferred('Root132 unavailable')
+             output_paths(output,metadata_state='present')
+-            return {'qualified_for_owned_q8_share_kernel':True,'output':str(output),'files':q['files'],
++            return {'qualified_for_owned_head_batch_kernel':True,'output':str(output),'files':q['files'],
+                     'qualification_sha256':self.qualification_sha256}
+         def clean_stop(self, pid):
+             binding = selected_binding({'decode_optimization_current':{'selected_identity':{'start_binding':self.start_binding if self.start_binding is not None else self.baseline_binding}}})
+@@ -294,8 +359,8 @@
+ 
+         def launch(self,prior,output,proof):
+             if not self.old_close_verified:raise ValueError('Old raw API/native close proof missing')
+-            return self.launch_owned(prior,[str(R/'venv/bin/python3.14'),'-B',str(P/'gpu_check.py'),
+-                '--phase','--output',str(output),'--proof',str(proof)],1200)
++            return self.launch_owned(prior,[str(R/'venv/bin/python3.14'),'-B',str(P/'gpu_entry.py'),
++                '--output',str(output),'--proof',str(proof)],1200)
+         def verify(self):
+             return self.verify_target(expected_pid=self.restored_pid)
+     return KernelHost
+@@ -304,9 +369,9 @@
+ 
+ def normalize_pending(value):
+     if (value.get('verified',{}).get('pending_public_probe')
+-        and value['status']!='Q8_SHARE_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING'):
++        and value['status']!='HEAD_BATCH_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING'):
+         value['resume_terminal_status']=value['status']
+-        value['status']='Q8_SHARE_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING'
++        value['status']='HEAD_BATCH_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING'
+     return value
+ 
+ def coordinate_kernel(a,host,output,state,save,*,preflight_only=False,root_free=None):
+@@ -350,11 +415,11 @@
+         if value.get('verified',{}).get('selected_identity') is not None:
+             value['selected_identity']=value['verified']['selected_identity']
+         elif previous is not None:value['selected_identity']=previous
+-        if status=='Q8_SHARE_KERNEL_PRIVATE_RUNNING':
++        if status=='HEAD_BATCH_KERNEL_PRIVATE_RUNNING':
+             with (P/'gpu-attempt.json').open('x') as attempt:
+                 attempt.write(json.dumps({'metadata':str(metadata),'output':value['output'],
+                                           'qualification_sha256':value['qualification_sha256'],'retry':False})+'\n')
+-        active=status in ['DRAINING_ROUTER','Q8_SHARE_KERNEL_PRIVATE_RUNNING','CLEAN_PHASE_RESTORING_SELECTED_DS']
++        active=status in ['DRAINING_ROUTER','HEAD_BATCH_KERNEL_PRIVATE_RUNNING','CLEAN_PHASE_RESTORING_SELECTED_DS']
+         state_now.update(decode_optimization_current=value,maintenance_controller=str(metadata/'state.json'),
+                          active_gpu_experiment=active,active_private_phase=str(metadata) if active else None,
+                          production_temporarily_stopped=active or status=='STOPPED_FOR_OFFLINE_DIAGNOSIS')
+@@ -371,7 +436,7 @@
+ def verify_pending(a,metadata):
+     state_path=pending_paths(metadata);value=json.loads(state_path.read_text())
+     current=json.loads((E/'STATE.json').read_text())
+-    if (value.get('status')!='Q8_SHARE_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING' or
++    if (value.get('status')!='HEAD_BATCH_KERNEL_SELECTED_RUNNING_PUBLIC_VERIFY_PENDING' or
+         current.get('production_verification_pending')!=str(state_path) or
+         current.get('maintenance_controller')!=str(state_path)):
+         raise ValueError('No exact pending continuation; no replay')
+@@ -389,7 +454,7 @@
+         if proof.get('passed') is not True:raise ValueError('Pending selected verification failed')
+         if json.loads((E/'STATE.json').read_text())!=current or json.loads(state_path.read_text())!=value:
+             raise PendingCustodyChanged('Pending custody changed during verification')
+-        value.update(status=value.get('resume_terminal_status','Q8_SHARE_KERNEL_COMPLETE_SELECTED4096_RESTORED'),
++        value.update(status=value.get('resume_terminal_status','HEAD_BATCH_KERNEL_COMPLETE_SELECTED4096_RESTORED'),
+                      verified=proof,selected_identity=proof['selected_identity'])
+         emit(state_path,value)
+         current.update(decode_optimization_current=value,production_verification_pending=False,
+@@ -413,16 +478,14 @@
+         raise
+ 
+ def main():
+-    parser=argparse.ArgumentParser();parser.add_argument('--phase',action='store_true')
+-    parser.add_argument('--output',type=pathlib.Path);parser.add_argument('--proof',type=pathlib.Path)
++    parser=argparse.ArgumentParser()
+     parser.add_argument('--run',action='store_true');parser.add_argument('--verify',type=pathlib.Path);args=parser.parse_args()
+-    if args.verify and (args.phase or args.run):raise ValueError('Verification cannot launch a phase')
++    if args.verify and args.run:raise ValueError('Verification cannot launch a phase')
+     if args.verify:
+-        sys.path.insert(0,str(F));import activate_chunk4096 as a
++        a=load_owner()
+         return verify_pending(a,args.verify)
+-    if args.phase:return fixture_phase(args.output,args.proof)
+     if args.run and (P/'gpu-attempt.json').exists():raise ValueError('Kernel window already attempted; no replay')
+-    sys.path.insert(0,str(F));import activate_chunk4096 as a
++    a=load_owner()
+     real_directory(P)
+     host=host_class(a)()
+     current=json.loads((E/'STATE.json').read_text())
+@@ -430,14 +493,14 @@
+     if not host.idle():return {'status':'DEFERRED_BUSY_UNTOUCHED'}
+     q=qualified();host.qualification_sha256=q['qualification_sha256']
+     stamp=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+-    output=E/'results'/('decode-q8-sharing-kernel-'+stamp);_,metadata=output_paths(output,metadata_state='absent')
++    output=E/'results'/('decode-head-batching-kernel-'+stamp);_,metadata=output_paths(output,metadata_state='absent')
+     metadata.mkdir(mode=0o700,exist_ok=False)
+     host.audit_dir=metadata
+     host.baseline_binding=selected_binding(current)
+     state={'utc':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC'),
+         'output':str(output),'proof_path':str(metadata/'proof.json'),'qualification_sha256':q['qualification_sha256'],
+-        'running_status':'Q8_SHARE_KERNEL_PRIVATE_RUNNING','complete_status':'Q8_SHARE_KERNEL_COMPLETE_SELECTED4096_RESTORED',
+-        'completion_scope':'Q8 sharing kernel correctness only; no model inference/speed claim'}
++        'running_status':'HEAD_BATCH_KERNEL_PRIVATE_RUNNING','complete_status':'HEAD_BATCH_KERNEL_COMPLETE_SELECTED4096_RESTORED',
++        'completion_scope':'Head batching kernel correctness only; no model inference/speed claim'}
+     save=make_saver(host,metadata,run=args.run)
+     host.since=state['utc']
+     # Existing coordinate owns drain, old-native close/free, window and one selected restoration.

@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-30T09:44:47.849667+00:00",
+  "decision": "NARROW_PARSER_REUSE_AND_FRESH_COMPILE_ONLY_CONTINUATION_DESIGN_SUPPORTED_PENDING_RAW_AND_SOURCE_REVIEW",
+  "classification": "Parent reports originaldepschild2961973 completed0 with noerrors/cleanup andempty stderr; parser thenrefused secondNVCC-M logicalrule beforecompile/link. Actualrawnotyetavailablelocally atthisreview; no compiler/GPUfault or retry inferred. Preserve originalattempt andsourcearchive.",
+  "existing_parser": {
+    "path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected_build.py",
+    "sha256": "b72f16217878714132fa4e161de52208567e23a7189c1e5781dc3375ec9c6491",
+    "function": "dependencies(text, relative_to=None)",
+    "lines": "72\u201388",
+    "behavior": "Joinsbackslash-newline, processes each nonblanklogicalMake rule separately, requiresnonemptytarget, collects shlex RHS dependency names with explicitrelativebase, deduplicatesandsorts, rejectsno-rules/emptytotalset. Allows emptyphony rules.",
+    "recommendation": "Reuseexactpurefunction withpinnedorigin/hash orcopyexactreviewedfunction. Feedpaths through strict originaldependencyhash/missing/unknown checks. No systemsearchguess or newparserframework.",
+    "important": "ld emits legitimate emptyphony rules. Requiring everyrule tohave nonemptyRHS would create a newrefusal. MultipleNVCCarchrules can repeat health.o target."
+  },
+  "minimal_changed_scope": [
+    "recovery.py parseradapter plus explicit compile-only continuation",
+    "test_recovery.py exactactual.d andcontinuation regressions",
+    "qualify_cpu.py freshimmutableCPU-r2 output/review namespace; nooldproofregrade"
+  ],
+  "unchanged_scope": [
+    "health.cu,health_contract.hpp,test_contract.cpp and their mathematicaloracle",
+    "Selectednative92/configc43/originalGGUF/IQobjects/toolchain/flags",
+    "Oldhead041001failure/refusedstartup27f9",
+    "Originalbuild-FIRST contents and passeddepschild; no rerun ofdeps"
+  ],
+  "continuation_contract": [
+    "Pin originalbuild-FIRST plan/deps-exit/depsstdout/depsstderr/health.headers.d andarchivedoriginalsixsources/sourcefreezes. Requireactualdeps0/errornull/cleanup[], exactsource/tool/argv identity andexpectedCPU120/AS4/wall300/CUDAhidden.",
+    "Require no originalcompile/link receipts,health.o,baseline-health orambiguouspartialoutputs. Existingoriginalnamespace is evidence only, neveradoptwriteintoit.",
+    "Require unchanged health.cu/header CPUtestsource from originalscan; newcontroller/test/driver narrowlyreviewed andbothhostCPU-qualified underfreshnames.",
+    "Parse passedscan withqualifiedhelper; verifyeveryactualinput against originalq plusunchangednewhealthsource. Rejectmissing/unknown/tampered dependencies andsource mismatch.",
+    "Freshbuild-CONTINUE-FIRST absent; existingexperimentlockheld; same stopped27f9/noowners/nootherphase/root132 guard.",
+    "Executeexactlytwo serialchildren: compilehealth.cu to newhealth.o, thenlinkonlyoriginalselectedobjects plusnewhealth.o. No nvcc-M repeat, noModel/nativebuild orbinaryexecution.",
+    "Recheck originalinput/source/q andproducedobjectpins pre/post; validateactualnewlddependencies. FirstfailureHOLD/no automaticretry.",
+    "Afteractualbuild, independentrawartifact/inputreview andseparateGPUadmission stillrequired."
+  ],
+  "required_small_controls": [
+    "Savedactualtwo-ruleNVCC.d union andexactinputnames",
+    "Continuationnewline/dedup/multiplephony rules",
+    "Missingtarget/emptytarget/no-rules/emptytotalbody/missingorunknowninput rejection",
+    "Pinnedpriorpasssource/argv/bounds mismatch andpartialoldartifact rejection",
+    "Actual mockedcompile-onlypositive andfirstfaultstopslink; no dependencychild invoked",
+    "Producedobjecttamper andfreshoutputnoadoption"
+  ],
+  "admission": {
+    "CPU": false,
+    "build": false,
+    "GPU": false,
+    "service": false
+  },
+  "reviewer_actions": "Only localsource read/metadatareport; no tests/import/build/remote/GPU/service actions."
+}

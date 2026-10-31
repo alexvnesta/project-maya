@@ -1,0 +1,134 @@
+{
+  "utc": "2026-10-29T11:37:57.097774+00:00",
+  "decision": "TWO_SYMBOL_CAPTURES_COMPLETE_EXPLICIT_Q5_FALLBACK_MAPPING_REVIEWED",
+  "evidence_sha256": {
+    "output-FIRST/candidate-symbols.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "output-FIRST/old-symbols.stdout": "5b4079ffd619c798ff798d363519493a04b54b0d464d48720e863d5d6f3702c8",
+    "output-FIRST/candidate-symbols.stdout": "32f2144e0d5483fa56e925382c4dec9d4805cd7bc9979d6f2240075686f7a87d",
+    "output-FIRST/receipt.json": "82995f4390efb2f2feb8a120d701aaefe6ac239572a84e9673a79927283a6f9c",
+    "output-FIRST/old-symbols.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "output-FIRST/old-symbols.json": "217b7ab3bb3747fe7b26000a6a5a9e67cd6a5a4f47de58ec6e2432251cd07e83",
+    "output-FIRST/plan.json": "a644ca642d239518319656f4cb7f26487d0ee73430f99bada86008c3c381efa2",
+    "output-FIRST/candidate-symbols.json": "8320ef59d8b50ab13b583f8e8cf88483e68b64a728c82150824aff89d9645097",
+    "actual-raw-file-hashes.json": "6a7df3d45506b6df076f736d00f1479c9671e404bb7aff6a9d0a6d22eb019a9d",
+    "selected-base/src/ds4/ds4_iq.cu": "883cec5e4d26f37f61bf650fc3f123bf47d8bb456b84bedfbadb0152864b8234",
+    "selected-candidate/src/ds4/ds4_iq.cu": "2192b5b19346c42919b0516da649d1bd82795ba523598a3b469848c9654d6616",
+    "selected-base/src/ds4/ds4_iq.cuh": "0729227655e13d6406dc2a4b54b7ec4bdd2d864229f8c55cc3cb5efd9533ce01"
+  },
+  "children": [
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-elf-symbols",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o"
+      ],
+      "pid": 1954024,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 83772,
+        "stderr": 0
+      },
+      "aggregate_bytes": 83772,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    },
+    {
+      "argv": [
+        "/usr/local/cuda/bin/cuobjdump",
+        "--gpu-architecture",
+        "sm_80",
+        "--dump-elf-symbols",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/build-FIRST/ds4_iq.cu.o"
+      ],
+      "pid": 1954055,
+      "returncode": 0,
+      "CPU_s": 30,
+      "Linux_AS_MiB": 512,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "bytes_written": {
+        "stdout": 84070,
+        "stderr": 0
+      },
+      "aggregate_bytes": 167842,
+      "error": null,
+      "secondary_notes": [],
+      "owned_cleanup": null,
+      "post_input_custody": "VERIFIED",
+      "native_or_GPU_execution": false
+    }
+  ],
+  "total_output_bytes": 167842,
+  "binding": {
+    "invocation": "566f3d34e59c43d29bb85c00e9854edd",
+    "main_pid": 1853509,
+    "native_pid": 1853542,
+    "native_start_ticks": 152326717
+  },
+  "mapping": [
+    {
+      "type": "Q5_K",
+      "type_id": 13,
+      "columns_specialization": 1,
+      "old": {
+        "exact_symbol": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi1EEEvNS3_4JobsE",
+        "inventory_line": 59
+      },
+      "candidate": {
+        "exact_symbol": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi1EEEvNS3_4JobsE",
+        "inventory_line": 59
+      }
+    },
+    {
+      "type": "Q5_K",
+      "type_id": 13,
+      "columns_specialization": 4,
+      "old": {
+        "exact_symbol": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi4EEEvNS3_4JobsE",
+        "inventory_line": 58
+      },
+      "candidate": {
+        "exact_symbol": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi4EEEvNS3_4JobsE",
+        "inventory_line": 58
+      }
+    },
+    {
+      "type": "Q5_K",
+      "type_id": 13,
+      "columns_specialization": 16,
+      "old": {
+        "exact_symbol": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi16EEEvNS3_4JobsE",
+        "inventory_line": 57
+      },
+      "candidate": {
+        "exact_symbol": "_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi16EEEvNS3_4JobsE",
+        "inventory_line": 57
+      }
+    }
+  ],
+  "source_mapping_basis": [
+    "Selected header line22 defines kQ5_K=13. Same mv_kernel<T,NC> body is byte-identical in selected and candidate source.",
+    "Selected mv_nc lines1216-1221 and candidate lines1381-1406 retain NC1/4/16 fallback launch selection. Candidate adds separate IMMA eligibility and NG1/NG2 kernels before fallback.",
+    "Each exact fallback symbol is a unique STT_FUNC/STB_LOCAL/STO_ENTRY in its corresponding captured SM80 ELF symbol table. Two anonymous-namespace prefixes differ and are retained literally. Mapping pairs equal T13/NC and Jobs signature by reviewed source; no generic namespace stripping."
+  ],
+  "same_source_kernel_body_sha256": "f9baecd4d8c4f8cf4f7188ee1b51ba77334715f26e86fafae9248e88262455d5",
+  "limitations": [
+    "Symbol existence and identical source body do not prove identical generated SASS or resources.",
+    "No causal attribution of token divergence, global/common-kernel identity or executable equivalence.",
+    "Reservation release/current production guard are parent reported; this reviewer checked local successful terminal receipts, not remote serving state."
+  ],
+  "next_source_scope": "Separate focused-q5-v1 fixed12commands only: NC1,4,16 x old/candidate x SASS/resources, each one full exact symbol. No whole-object capture replay or larger limits. Source/CPU qualification and separate actual admission remain required.",
+  "numerical_gate": "HOLD_TOKEN_PATH_DIFFERS",
+  "reviewer_execution": "Local raw/source reads and data hash consistency checks only; no tool/test/native/remote execution."
+}

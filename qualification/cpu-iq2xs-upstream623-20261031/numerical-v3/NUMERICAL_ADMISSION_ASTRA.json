@@ -1,0 +1,460 @@
+{
+  "utc": "2026-10-31T06:29:49.719166+00:00",
+  "status": "CONDITIONAL_SINGLE_46_CHILD_CPU_NUMERICAL_ADMISSION",
+  "qualification_sha256": "067bdfbd0caad55ac0715215e110734cb4659f7b4f448e61e791e5ae7e35bf8d",
+  "actual_preflight_sha256": "2fc85c73f9e4a94ded2a207989dcdf13d730a2236a25e966dd16a7a2f21a032d",
+  "actual_preflight_utc": "2026-10-31T06:28:52.023972+00:00",
+  "source_review_sha256": "7986a3bb319c3637ad6a517f696467643d399a70db805207667cc3247a0aacbc",
+  "CPU_result_review_sha256": "20d2144a30146b4ad56a2e7493b9e790ee6bb0fba0b6bde0eec19cbffb7e075b",
+  "map_review_sha256": "908324ccfbaf76baaf6632b7c5770b69e68443d4ad015443533ba56c455d33e8",
+  "compiled_result_review_sha256": "35a968a7482c06062a56f15901cddab25c6db2109a700f1c1c099e9e7dde960a",
+  "source_sha256": {
+    "runner.py": "474098a4ebdf96d7b8e35b74c93b35ec363f3e0240c8003df09347cc29fcdd7e",
+    "output_parser.py": "bf4d9a463bd816eab4c8161100d230e417fe65c652a5fcccd1574564e4822bdd",
+    "test_runner.py": "9093f94bc0e738d2e063fee34fc78fff3055058469c602887acd7fad5bddb7a9",
+    "test_output_parser.py": "edd065bc56c998a3d6521967d43c004ea80c639b2fc572815795e5e6c22fa36b",
+    "cpu_driver.py": "8cc32d6321db15ad9ac4ad0fea22dfea639432d2c94506a02b377f3f0d3168d4",
+    "test_cpu_driver.py": "b33e52afb6735cec6f0842b2121682b781cbb304ca2ccec800a0997b4ec4dd47"
+  },
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "actual_fixture_path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/iq2xs_exact",
+  "fixture_sha256": "d5c0bfdf33c645251e0598f02ca764ab003959c1c12b722931ce30ee012a17eb",
+  "jobs": [
+    {
+      "id": "pure-256-optimized",
+      "n": 256,
+      "mode": "optimized",
+      "pair": null
+    },
+    {
+      "id": "pure-256-fallback",
+      "n": 256,
+      "mode": "fallback",
+      "pair": null
+    },
+    {
+      "id": "pure-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": null
+    },
+    {
+      "id": "pure-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": null
+    },
+    {
+      "id": "pure-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": null
+    },
+    {
+      "id": "pure-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": null
+    },
+    {
+      "id": "mixed-22-22-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-22-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-22-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-22-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-17-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-17-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-17-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-17-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-16-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-22-16-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-22-16-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-22-16-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-22-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-22-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-22-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-22-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-17-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-17-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-17-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-17-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-16-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-16-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-16-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-16-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-18-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-17-18-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-17-18-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-17-18-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-16-22-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-22-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-22-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-22-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-17-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-17-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-17-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-17-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-16-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "mixed-16-16-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "mixed-16-16-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "mixed-16-16-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        16,
+        16
+      ]
+    }
+  ],
+  "case_rows": 6336,
+  "aggregate_budget": {
+    "soft_seconds": 1000,
+    "wall_seconds": 1200,
+    "cleanup_seconds": 200
+  },
+  "child_budget": {
+    "CPU_seconds": 30,
+    "Linux_AS_bytes": 536870912,
+    "wall_seconds": 90,
+    "run_seconds": 85,
+    "cleanup_seconds": 5,
+    "nice": 15,
+    "CUDA_VISIBLE_DEVICES": "",
+    "threads": 1,
+    "further_capped_by_remaining_sequence_budget": true
+  },
+  "conditions_immediately_before_claim": [
+    "Repeat source-defined genuine idle/default/current exact selected binding/root136/no phase/no other CPU claim guards; no relaxed or bypassed source checks.",
+    "Reverify exact final qualification self and declared files with original resolved-target custody, current6/164/109 proofs, actual build/ELF closure and pinned CAS imports.",
+    "Fresh exact CPU identity/affinity0..63/all required flags; fixture must still prove supported AVX2 and exact optimized/fallback dispatch in each output.",
+    "Selected API3998190 retains sole lifetime GPU FLOCK device252:1/inode1449998/no waiter. Observe only; never acquire/unlock/delete it.",
+    "Separate stable CPU lock inode2894342 unheld before own acquisition; no stale canonical claim adoption. Root launches no other maintenance/controller during lease. CAS remains cooperative, not globally atomic.",
+    "Download remains cooperatively paused/absent. Fresh numerical-FIRST and numerical-supervision-FIRST; retain all old source/failed proofs.",
+    "Only exact46 fixture argv configurations; no candidate model, compiler, GPU, service, parameter change, retry or automatic continuation."
+  ],
+  "fault_policy": "First nonzero, parser mismatch, resource/identity/source fault, busy or budget exhaustion stops remaining children. Preserve raw/partial/UNRUN and cleanup only exact owned groups. Retain canonical claim on uncertain spawn, cleanup fault or surviving groups. No automatic retry/adoption.",
+  "completion_policy": "Every child must exit0 with exact complete finite rows/final JSON and empty stderr; require all46/6336, final owned-group absence/claim release/unchanged owner and later independent full raw review. This is execution admission, not a numerical PASS.",
+  "identity_limit": "Preexec resource witness is Python. Execution custody is actual pinned ELF argv, Popen/exit/output and pre/post file hashes; no invented sampled-ELF identity.",
+  "correction_to_map_review_thread_note": "nt1..16 is the fixture token-row count, not CPU threads. The map-review phrase suggesting explicit native thread cases was inaccurate. Only the declared environment thread limits1 are asserted; actual resource limits and source behavior remain unchanged. Frozen map/source bytes are preserved.",
+  "metadata_only_final_delta_accepted": true,
+  "actual_2231_physical_checks_reviewed": true,
+  "no_reviewer_execution_or_source_change": true,
+  "native_model_GPU_service_or_deployment_admitted": false,
+  "next_stage_automatically_admitted": false
+}

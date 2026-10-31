@@ -1,0 +1,31 @@
+{
+  "observed_utc": "2026-10-29T15:11:32.772729+00:00",
+  "source": "Operator transcription of final lightweight SSH stdout; exact full output retained in tool transcript",
+  "binding": {
+    "invocation": "999f3c55a064452f864c7ff9a4875655",
+    "main_pid": 2041131,
+    "native_pid": 2041169,
+    "native_start_ticks": 155393110
+  },
+  "actual_startticks": 155393110,
+  "native_exe": "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+  "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/deepseek-hosted.service",
+  "sole_GPU_pids": [
+    2041169
+  ],
+  "both_units_active_running_Restart_no": true,
+  "hosted_MainPID": 2041131,
+  "router_MainPID": 2053050,
+  "flags": {
+    "DS4_YOCO": "1",
+    "STRATA_DS4_PROMPT_SKIP": "1",
+    "STRATA_DS4_Q8_BATCH": "1",
+    "DS4_Q8_CHECK": "1",
+    "DS4_STREAM": "0",
+    "DS4_REQUIRE_ALL_RAM": "1"
+  },
+  "private_or_build_or_pending_or_stopped": false,
+  "last_public_stream_proof": "N1-raw-FIRST/maintenance/state.json verified.public: public401/auth200/assembledREADY/stop/DONE",
+  "no_new_generation_or_hash_sweep_or_idle_poll": true,
+  "scope": "Current process/lifecycle evidence; source/config/public hashes were verified in completed N1 restoration, not re-claimed as a new full probe."
+}

@@ -1,0 +1,196 @@
+{
+  "decision": "BOTH_HOSTS_FIRST_REVISED_248_CPU_CONTROLS_REVIEWED_NO_GPU_ADMISSION",
+  "source_review_sha256": "45da15494fdb266ca6c65d7716ae7e7faa40600456ee56f1ec45ea44c22c1d74",
+  "source_review_maps_verified": {
+    "sources": 13,
+    "inputs": 1076,
+    "owner_IDs": 177,
+    "audit_IDs": 71
+  },
+  "source_sha256": {
+    "pv_config.py": "3c4b576866dd579823139644d072a547bc477696a3bb3406d0d55fdf6930c513",
+    "pv_runtime.py": "1811228e83217b961ae4ffed9c430f49edf10c3af999b4fd6753518a25001e58",
+    "pv_controls.py": "1038fad719fb7ed7516ab3e07d88d40fb3b5cd7408f6ed19ddc2296f13052cf5",
+    "pv_owner.py": "687eec954c5d5a51b713fd10ea5eaab1cde0e03c91a588713cdc60a0e31586b7",
+    "test_pv_config.py": "37008f3df294abc2c2b02ed4b493421798a8274d0b5fb3a5c7fe621b44c1778c",
+    "test_pv_runtime.py": "8b43ca5d2f3f4b427f811b6891890b055a64912f446e8e0ba651e3d56abbe768",
+    "test_pv_controls.py": "d62f1066a2528e55dcc2707031e7a4542aa71d63649b42934af5a18a50015c88",
+    "test_pv_owner.py": "d1290c96735f715a347e3791d9de9c2caabf2485efb89705a3691c38fc97a810",
+    "pv_audit.py": "a5cc8f615058245167b9e08d5f5426d885ac03d52f8b171a4154fcc5976adc23",
+    "test_pv_audit.py": "ef448c7e67467da3dd1dfd56c33baf0dde290b3eeb7d03279de1f06d9b7d0328",
+    "pv_dispatch.py": "b52526ba2cde18d6c12592304ca95507511b7034cb0b14b0846eded2c0c81f59",
+    "test_pv_dispatch.py": "397f302f8167358fc0356992c63f529b32ae272b85016e12a8ccd869f0839f6a",
+    "pv_cpu.py": "7c1de986c9fc50a3d48590e553b89b4b48d701dab9aa0f57c553f2223e4fe0bd"
+  },
+  "root_result_review_sha256": "848588737c7831fb0dfba7b709a9584278e0f91b8fba520da46a40ba7dca6086",
+  "independent_prior_source_review_sha256": "ad1d40f615d58ec2cabbdcbe120005c141c20b127da21600923413b9a5242663",
+  "narrow_repair_review_sha256": "86529c8c2e895789055056794ec6598be980967c37e05d5954b92b9d974811ec",
+  "results": [
+    {
+      "group": "owner",
+      "host": "darwin",
+      "controls": 177,
+      "pid": 63152,
+      "wall_seconds": 0.750388834043406,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "actual_limits": {
+        "CPU_seconds": [
+          30,
+          30
+        ],
+        "Linux_AS_bytes": null,
+        "nice": 15,
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MALLOC_ARENA_MAX": "1",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        }
+      },
+      "source_map_match": true,
+      "input_map_match": true,
+      "ordered_ID_and_each_raw_pass_match": true,
+      "raw_sha256": {
+        "receipt.json": "d9080e917ab0420f89169eae6c52b39b4ede1090071a75b09e559e90940f30f9",
+        "child.json": "131913ca71ff3ce4b58e696c392dc536bb8930f3ed8fae1713043490faa83c14",
+        "child.log": "ef959536ffa3ef9bade3265526e37bf4b7cdf7339b02239f4bb7685bc6a8ac82"
+      },
+      "log_footer": "----------------------------------------------------------------------\nRan 177 tests in 0.410s\n\nOK"
+    },
+    {
+      "group": "owner",
+      "host": "linux",
+      "controls": 177,
+      "pid": 3777628,
+      "wall_seconds": 0.8969420809298754,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "actual_limits": {
+        "CPU_seconds": [
+          30,
+          30
+        ],
+        "Linux_AS_bytes": [
+          536870912,
+          536870912
+        ],
+        "nice": 15,
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MALLOC_ARENA_MAX": "1",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        }
+      },
+      "source_map_match": true,
+      "input_map_match": true,
+      "ordered_ID_and_each_raw_pass_match": true,
+      "raw_sha256": {
+        "receipt.json": "4a26b5b232e34e047c98690ba7d4a99e2abf5ef4e8458a3c2c50bd203977720a",
+        "child.json": "a673569cf4b7970e48c1bb6f0c5e0adf5f982eab5709f6d90fa1b36fb14b80ca",
+        "child.log": "6530130310d1b1c62add6a5fa8c0f9936c1208d35eed1e10dbb35568657b6f51"
+      },
+      "log_footer": "----------------------------------------------------------------------\nRan 177 tests in 0.395s\n\nOK"
+    },
+    {
+      "group": "audit",
+      "host": "darwin",
+      "controls": 71,
+      "pid": 63139,
+      "wall_seconds": 0.4345900409971364,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "actual_limits": {
+        "CPU_seconds": [
+          30,
+          30
+        ],
+        "Linux_AS_bytes": null,
+        "nice": 15,
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MALLOC_ARENA_MAX": "1",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        }
+      },
+      "source_map_match": true,
+      "input_map_match": true,
+      "ordered_ID_and_each_raw_pass_match": true,
+      "raw_sha256": {
+        "receipt.json": "c77c6d96626785f302c3f9c20717b8f4b3ea601d1e6ca8d9e5d003d1f7c1dc19",
+        "child.json": "4b5c8aa9e05573e255f371c9124e5f5940a18943ab37a50ff9d6359cd16fcc86",
+        "child.log": "a2e61f22ecf81579398548e14448579162938e26d2e4569cd94b30ae80c5fc42"
+      },
+      "log_footer": "----------------------------------------------------------------------\nRan 71 tests in 0.131s\n\nOK"
+    },
+    {
+      "group": "audit",
+      "host": "linux",
+      "controls": 71,
+      "pid": 3777556,
+      "wall_seconds": 0.6332102948799729,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "actual_limits": {
+        "CPU_seconds": [
+          30,
+          30
+        ],
+        "Linux_AS_bytes": [
+          536870912,
+          536870912
+        ],
+        "nice": 15,
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MALLOC_ARENA_MAX": "1",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        }
+      },
+      "source_map_match": true,
+      "input_map_match": true,
+      "ordered_ID_and_each_raw_pass_match": true,
+      "raw_sha256": {
+        "receipt.json": "0dc92e27731ccf546a09822602e03dc200c7bb37f614bd4136eb767bfd0a74e9",
+        "child.json": "c58712c566d1c24468ffe2ea3528e077285265654de8af1993ed018ea2a3158d",
+        "child.log": "05711957a6676e47fdf873c9ecef4b3b6b5f7b6bc8a0218660d6fe02facdf0bf"
+      },
+      "log_footer": "----------------------------------------------------------------------\nRan 71 tests in 0.115s\n\nOK"
+    }
+  ],
+  "all_four_full_raw_logs_manually_read": true,
+  "all_local_current_source_and_input_hashes_match": true,
+  "preserved_first_audit": {
+    "returncode": 1,
+    "controls": 71,
+    "passed": 70,
+    "errors": 1,
+    "regraded": false,
+    "source_archive_sha256": "f0e5943b69af5b9d1336342347cbb3671ace917b7fdc1b1bdb804b32a1ea7070",
+    "raw_sha256": {
+      "child.json": "0c4fe544881eb2a708f60a187d40941bbab55faf635367f12adf21fa783abc12",
+      "receipt.json": "2e6304c69b2b363256fd19d0726843c71aaac81b8853c6cdc76753b2bbdd0445",
+      "child.log": "023f5abe15d06790cbec8bfac33b0c4a7b95c8d6a835627679f83f1d2bc44d94"
+    }
+  },
+  "physical_metadata_refusal": {
+    "sha256": "03ca14f65fc96140730351c15ab4f1b26f662173e3b9e9d4261886d957b4cf6e",
+    "classification": "Missing two already declared A fixture JSONs before Linux CPU child/directory. Exact metadata staged only; original refusal preserved; no runtime code or test changes/replay."
+  },
+  "bounded_conclusions": [
+    "Revised owner177 and auditor71 passed once on each physical host under observedCPU30/LinuxAS512MiB/nice15/CUDAhidden/thread1 and supervisedwall90, no reported child/cleanup errors.",
+    "Tests cover source/config/custody, mocked seven-request owner/lifecycle, saved raw SSE/native/cancel/token contracts, fence/cleanup and bounded supervision; no native/model inference or downloaded-weight execution.",
+    "Original failed Mac71 supplied-exception mismatch remains failed and source archive unchanged.",
+    "This CPU proof does not establish actual prose/coding completion, performance, quality, hardware fit or deployment advantage.",
+    "Separate immutable family qualification and actual read-only/action-time gates/manual arm admission required before GPU."
+  ],
+  "reviewer_tests_imports_remote_model_actions": false,
+  "GPU_admitted": false
+}

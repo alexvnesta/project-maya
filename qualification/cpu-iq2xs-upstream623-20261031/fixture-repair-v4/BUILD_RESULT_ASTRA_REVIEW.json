@@ -1,0 +1,215 @@
+{
+  "status": "FIXTURE_ONLY_BUILD_INDEPENDENTLY_REVIEWED_PASS_PENDING_NUMERICAL",
+  "reviewed_utc": "2026-10-31T07:00:55.365262+00:00",
+  "reviewer": "Astra",
+  "passed": true,
+  "scope": "Independent saved-source and raw-receipt review of the single fixture-only compile/link. No project imports, tests, fixture execution, remote action or source edits by reviewer.",
+  "qualification_sha256": "01acb187f2c74475783666ecc04e5013b0fa06c11b8a72ef34b7a6bdcc921658",
+  "admission_sha256": "be91466cd7c7c99939aeaa555adb96ab4aed8f2f5263dad22548b2edc5b710df",
+  "root_result_review_sha256": "c39b6f2c106e18149b741b67f0b5c691396f8866b9387aec8a054da40519aaf4",
+  "source_sha256": {
+    "build.py": "d2af840efc5989dcc5de6174f4b11a3ebd7c9da2ecc8c14e630ec41e4982bea7",
+    "iq2xs_exact.cpp": "559daba1f5e18a7cc7d2ddc91f0850e215997ab39d955e9b7e8fd751d05e4b25",
+    "test_build.py": "205e0af60639f7d271268e3250d1c4595005a3653119e55ac59104c7eaddedda",
+    "cpu_driver.py": "730fb023fed65e17894d2a9b2d019131458a53ff13b070fc9ea61c0f27a38e33",
+    "test_cpu_driver.py": "b33e52afb6735cec6f0842b2121682b781cbb304ca2ccec800a0997b4ec4dd47"
+  },
+  "outputs": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact.cpp.o": "d7c646f78d4f8a21a0e0cd496cff94c1b3515105ac52c885faa4285cb3f67a0d",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact": "890041fdfb7efa9b3d9e2a7078823e5278c4ddb12da29bfa7ca5e6752b7073f6"
+  },
+  "raw_sha256": {
+    "build-FIRST/iq2xs_exact.cpp.o.d": "b84014936255a7d53296f7ab24c91d97bbee26f73a6ff538f61a7639bc08d48e",
+    "build-FIRST/fixture-compile.observed.json": "c468d7b68aa20ffd79ffca756098df6c83c1b8dcc53feb4a1a0a975128c9e2cd",
+    "build-FIRST/iq2xs_exact.link.d": "f2d6656684c37bf0ff29c6bef643e82c24fd6607f6cb20613c063ed077d52bd8",
+    "build-FIRST/fixture-link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/fixture-compile-inputs.json": "7e2f844d8d993f4e0fb6c3dcc8559f612f204572028d371c9a2d82b12bf0bf61",
+    "build-FIRST/fixture-compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/fixture-link.json": "3371eb366970607dbff02b0cf5ea981d4d67bd66383234ab81a56c5bc83c4998",
+    "build-FIRST/fixture-link.observed.json": "eaf9aeda67ef5a2298190bb2d621d14ad6a28097c517087ba0460acb3adea8c6",
+    "build-FIRST/fixture-compile.json": "a13c5914e24f972e09d8178d832940ebc4e78201abae3889cdce21ce1b2710cb",
+    "build-FIRST/fixture-link-inputs.json": "829d8e279648190589aa2f32c314fe831cd7450a3fffeae4143a7ed1474ae10d",
+    "build-FIRST/fixture-link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/receipt.json": "035e4a12735f1936ada3cf4543fda457c2fb7a61ce6bba63ff712a8d5f76481a",
+    "build-FIRST/fixture-compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-supervision-FIRST/result.json": "f7318c01e3f104a8082e1b3ea978bcf42e2204ac0bc3a8289e475659348aeaf1",
+    "build-supervision-FIRST/attempt.json": "6691413388f080f9effa95c52b5b1e1a09df3be8ffcf4ce15157927ce5e882a4",
+    "build-supervision-FIRST/owned-children.jsonl": "b8d9019d2ceed630a6d592c1ddd7d8ba738344ed93fbccc4e7b9aecbc7ecd40f",
+    "controller.stdout": "ae2d8f7376b5eba975f932e6275524cf6f36e8c5224526ee14b1b6e3b0292ba1",
+    "controller.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "BUILD_PRODUCTION_CLOSURE.json": "4fae0dd887fd564b9ab18fc4cf4e99f75da3a3b790a4bc783b6b09410ced6604"
+  },
+  "raw_files_checked": 19,
+  "children": [
+    {
+      "argv": [
+        "/usr/bin/c++",
+        "-DSTRATA_NATIVE_EXPERTS=1",
+        "-DSTRATA_VERSION=\"0.1.27\"",
+        "-I/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/candidate/include",
+        "-I/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/include",
+        "-I/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/third_party/ggml",
+        "-I/home/alex/strata-deepseek-test-20261024/llama.cpp/ggml/src/../include",
+        "-O3",
+        "-DNDEBUG",
+        "-std=c++20",
+        "-I/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/src/ds4",
+        "-MD",
+        "-MT",
+        "iq2xs_exact.cpp.o",
+        "-MF",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact.cpp.o.d",
+        "-o",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact.cpp.o",
+        "-c",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/iq2xs_exact.cpp"
+      ],
+      "pid": 4074475,
+      "returncode": 0,
+      "error": null,
+      "cleanup": [],
+      "role": "compile",
+      "CPU_s": 120,
+      "AS_bytes": 4294967296,
+      "wall_s": 300,
+      "cwd": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST",
+      "elapsed_seconds": 1.3321296200156212,
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/usr/bin/c++",
+        "-O3",
+        "-DNDEBUG",
+        "-Wl,--dependency-file=/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact.link.d",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact.cpp.o",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq_cpu.cpp.o",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/libstrata_kernels_cpu.a",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/libstrata_core.a",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/ggml/src/libggml-cpu.a",
+        "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/ggml/src/libggml-base.a",
+        "-lm",
+        "-lpthread",
+        "-ldl",
+        "-o",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact"
+      ],
+      "pid": 4074609,
+      "returncode": 0,
+      "error": null,
+      "cleanup": [],
+      "role": "link",
+      "CPU_s": 30,
+      "AS_bytes": 4294967296,
+      "wall_s": 90,
+      "cwd": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST",
+      "elapsed_seconds": 0.5173129860777408,
+      "status": "PASS"
+    }
+  ],
+  "controller_pid": 4074316,
+  "dependency_review": {
+    "compile_inputs": 226,
+    "link_inputs": 24,
+    "union_inputs": 250,
+    "saved_make_dependencies_match_maps": true,
+    "all_input_hashes_match_qualification_or_new_object": true,
+    "unknown_inputs": [],
+    "controller_stdout_matches_receipt": true
+  },
+  "source_review": {
+    "exact_one_line_initialization_delta": true,
+    "full_memcmp_canaries_and_6336_panel_unchanged": true,
+    "compile_and_link_commands_match_frozen_scope": true,
+    "candidate_rebuilt": false
+  },
+  "supervision": {
+    "record_matches_attempt": true,
+    "owned_journal_exact_two_children": true,
+    "owned_groups_absence": {
+      "passed": true,
+      "pending_spawn": null,
+      "cleanup_faults": [],
+      "children": [
+        {
+          "name": "fixture-compile",
+          "pid": 4074475,
+          "pgid": 4074475,
+          "returncode": 0,
+          "group_absent": true
+        },
+        {
+          "name": "fixture-link",
+          "pid": 4074609,
+          "pgid": 4074609,
+          "returncode": 0,
+          "group_absent": true
+        }
+      ]
+    },
+    "own_claim_released": true,
+    "elapsed_seconds": 11.531619306188077,
+    "aggregate_soft_seconds": 400,
+    "aggregate_wall_seconds": 600,
+    "cleanup_reserve_seconds": 200,
+    "cooperative_maintenance_boundary": true,
+    "global_CAS_atomic": false
+  },
+  "production_closure": {
+    "utc": "2026-10-31T06:57:42.127327+00:00",
+    "status": "READ_ONLY_POST_BUILD_CLOSURE_PASS",
+    "binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "GPU_lease": {
+      "identity": {
+        "device_major": 252,
+        "device_minor": 1,
+        "inode": 1449998
+      },
+      "main_pid": 3998190,
+      "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+    },
+    "CPU_lock_inode": 2894342,
+    "CPU_kernel_rows": [],
+    "active_cpu_build": false,
+    "phase": null,
+    "root_GiB": 348.21430587768555,
+    "outputs": {
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact.cpp.o": "d7c646f78d4f8a21a0e0cd496cff94c1b3515105ac52c885faa4285cb3f67a0d",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact": "890041fdfb7efa9b3d9e2a7078823e5278c4ddb12da29bfa7ca5e6752b7073f6"
+    },
+    "actual_inputs": 250,
+    "children": [
+      {
+        "pid": 4074475,
+        "returncode": 0,
+        "elapsed_seconds": 1.3321296200156212
+      },
+      {
+        "pid": 4074609,
+        "returncode": 0,
+        "elapsed_seconds": 0.5173129860777408
+      }
+    ],
+    "owned_groups_absent": true,
+    "kernel_rc": 0,
+    "kernel_faults": [],
+    "candidate_unchanged": true,
+    "numerical_or_model_or_GPU_execution": false
+  },
+  "limitations": [
+    "Physical ELF/object identities are supported by the qualified build receipt and separately saved physical post-build rehash. The binaries were not exported or locally hashed by this reviewer.",
+    "Resource observations are the owned child pre-exec witnesses, reconciled with actual child PID/exit and supervisor cleanup.",
+    "This establishes successful construction only. Repaired fixture arithmetic, 46-job/6336-case numerical acceptance, model behavior and performance remain unqualified.",
+    "Original numerical-v3 first attempted failure, 45 never-attempted jobs and HOLD remain unchanged."
+  ],
+  "old_numerical_v3_HOLD_preserved": true,
+  "numerical_admitted": false,
+  "model_or_GPU_admitted": false,
+  "further_execution_admitted": false,
+  "next_step": "A separately source-reviewed and CPU-qualified numerical-v4 package and immutable map are required before any new numerical admission."
+}

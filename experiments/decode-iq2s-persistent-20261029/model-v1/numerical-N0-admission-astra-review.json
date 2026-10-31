@@ -1,0 +1,143 @@
+{
+  "decision": "CONDITIONALLY_ADMIT_SINGLE_FRESH_N0_ONLY_UNMEASURED_NUMERICAL_WINDOW",
+  "utc": "2026-10-29T13:46:01.216890+00:00",
+  "evidence_sha256": {
+    "numerical-qualification.json": "11deaac7b10b7d53bd988acff210136b5e2107d533d1a13e28c315037810113e",
+    "numerical-preflight-N0-FIRST.json": "221506374ad6ad8834c7d06c86c4e63123688b32cbf39abbb4d4f9dfa5235b42",
+    "numerical-CPU-astra-review.json": "1d8f7e95dc342ae6c4a916592a1e23be277405b9b186eeac78f0fe73d6fc2cc5",
+    "numerical-qualification-astra-review.json": "8f407f1e8dabc03767baaf5782531f5bf708487db472c65ec26df61334dac9e8",
+    "numerical-source-astra-review-v2.json": "7890b73f20866cc683cb7057a0cc44c59f61df9604288b25dae0dc053b8cfdd1",
+    "numerical-CPU-FIRST-both-hosts.json": "0da6b336105ebd0e2d9c4e30ac434871857b242b803651a88dfebba461de764c",
+    "numerical-fixtures.json": "976b0cf51e3cfc2950774714fb1a5fb075f08e7d8619b028b6d9b1b0f67ffe67",
+    "kernel-prerequisite.json": "0e6fa30f6a1c304a12be80a02d0539168a3cfd852422cd0161f29b1d599eab13",
+    "numerical-arms.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+  },
+  "qualification_sha256": "11deaac7b10b7d53bd988acff210136b5e2107d533d1a13e28c315037810113e",
+  "scope": {
+    "mode": "numerical",
+    "arm": "N0",
+    "native": {
+      "exe": "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "persistent": 0
+    },
+    "new_attempts": 1,
+    "N1_admitted": false,
+    "performance_admitted": false,
+    "promotion_admitted": false,
+    "replay_admitted": false
+  },
+  "reviewed_preflight": {
+    "status": "READ_ONLY_PREFLIGHT_PASS",
+    "actual_file_map_exactly_matches_qualification": true,
+    "file_checks": 2198,
+    "qualification_self_check_additional": 1,
+    "baseline_identity": {
+      "native_pid": 1989341,
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+      "context": 1048576,
+      "output_default": 262144,
+      "prompt_skip_mode": 1,
+      "prefill_chunk": 4096,
+      "Q8": [
+        1,
+        1
+      ],
+      "TP": 1,
+      "images": true,
+      "runtime_ablation": true,
+      "DSpark": true,
+      "CPU_experts": 4045,
+      "all_CPU_experts_RAM": true,
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.32,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2026
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.86,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2030
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "GPU_expert_slots_inferred": 11315,
+      "GPU_slots_direct_hosted_INFO": false,
+      "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+      "start_binding": {
+        "invocation": "443172a350014f4bbcb11df8b9895b17",
+        "main_pid": 1989302,
+        "native_pid": 1989341,
+        "native_start_ticks": 154686925
+      },
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+    },
+    "mode_preflight": {
+      "fixture_sha256": "976b0cf51e3cfc2950774714fb1a5fb075f08e7d8619b028b6d9b1b0f67ffe67",
+      "storage_bound": {
+        "max_position": 44768,
+        "identity_bytes_upper_bound": 848,
+        "max_checkpoints": 3,
+        "native_owned_file_bounds": {
+          "slot_bin_or_tmp": 53090040,
+          "slot_meta_or_tmp": 179992,
+          "expert_profile_or_tmp": 66048
+        },
+        "hard_per_file": 536870912,
+        "soft_dump_aggregate": 1073741824,
+        "hard_dump_aggregate": 2147483648,
+        "max_dump_files": 4,
+        "scope": "Fresh four-case native numerical child only; no imported cache or other requests. API image staging, driver caches, logs and other child processes require separate caller inventory."
+      },
+      "factor": {
+        "exe": "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+        "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+        "persistent": 0
+      },
+      "purpose": "UNMEASURED_NUMERICAL_ONLY",
+      "speed_or_promotion_admitted": false
+    },
+    "registry_empty_local": true,
+    "source_hashes_current": 11
+  },
+  "receipt_limitations": [
+    "Returned preflight JSON records successful source-enforced admission and exact baseline identity/file map, but does not separately serialize its sampled root free bytes, idle counters or wall timestamp. Parent reported 2026-10-29T13:44:10.960339Z and root838.823GiB; these are operator observations, not fields independently extracted from this JSON. Reviewed preflight implementation enforces idle/no phases/root132 before qualification and bound identity, and must repeat immediately for --run.",
+    "Preflight output namespace is read-only metadata evidence, not authority to reuse an old attempted output; actual run must create its fresh exact owned namespace and confirm no N0 attempt."
+  ],
+  "action_time_conditions": [
+    "Run only the frozen iq2s_numerical.py --arm N0 --run through existing canonical coordinate/window. Recheck qualification11deaac7/source/all pins/current exact bound owner/default idle/no queued or reserved work/no private/build/pending phase/root>=132GiB and fresh namespace before any drain. If busy or owner changes, defer untouched.",
+    "Keep selected92/c43/chunk4096/1M1048576/output262144/Q8 1/1/TP1/images/runtime ablation/DSpark/24CPU/auto placement; N0 persist aliases0, isolated private cache/profile copied from exact frozen seed. Full request cap32768, effort100,temp1,seed1.",
+    "Existing1200s owned window,1000s phase soft budget,200s cleanup reserve. Native-only512MiB FSIZE,1GiB dump aggregate soft/max4files,8GiB private cache/4GiB logs+aux budget. No global limit or timing inference.",
+    "Capture exact old native close0 plus same invocation old API inactive/MainPID0/ExecMainCode1/ExecMainStatus0/Resultsuccess before restoration; earlier kernel API-exit limitation does not substitute for this prospective gate.",
+    "On first fault or incomplete/capped/wrong answer/budget overflow preserve attempted registry and all raw evidence, use only existing bound cleanup/HOLD policy, no retry or alternate owner. No automatic restart of foreign owner.",
+    "After clean private native/API/window exits and kernel/resources, restore selected92/c43 through existing qualified owner, verify same restored binding and public401/auth200/assembledREADY/stop/DONE. Late busy may defer public verification only under exact pending continuation; no new arm until fully verified.",
+    "Only lightweight receipts during private/restoration. After fully restored fresh idle, independent bounded audit checks finite/hash rows, all four correct natural typed answers, positive drafted offered/accepted, reuse0/8465/0/8465, state/cache/image paths, cleanup and limits. Full raw audit and separate review required before N1 consideration."
+  ],
+  "interpretation": [
+    "This admits acquisition of a new baseline numerical record only. Kernel104 and CPU109 do not establish whole-model equivalence or speed.",
+    "Strict future cross-arm gate remains unchanged; any token/dump/state mismatch holds timing. Old IMMA HOLD preserved.",
+    "Reviewer performed only local saved-evidence/source read and report write, no model/test/remote/service action."
+  ]
+}

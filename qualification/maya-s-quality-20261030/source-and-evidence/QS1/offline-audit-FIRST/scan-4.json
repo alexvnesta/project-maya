@@ -1,0 +1,32 @@
+{
+  "stage": "FINITE_SCAN",
+  "passed": true,
+  "arm": "QS1",
+  "qualification_sha256": "14d2f954bfe20186561b3e0f19a2773e110871f5907623c4d291629e94f118af",
+  "native_pid": 3757868,
+  "metadata_sha256": "1c2e49ba522ccb94d4e8e4b9295529e8bdd262d6c14a44649e6e75dff9354a64",
+  "index": 4,
+  "case_id": "ms-quality-return-text",
+  "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z/native/logits.4.f32",
+  "identity_before": {
+    "device": 64513,
+    "inode": 14946510,
+    "bytes": 94632960,
+    "mtime_ns": 1793403525553583084,
+    "ctime_ns": 1793403525553583084
+  },
+  "identity_after": {
+    "device": 64513,
+    "inode": 14946510,
+    "bytes": 94632960,
+    "mtime_ns": 1793403525553583084,
+    "ctime_ns": 1793403525553583084
+  },
+  "dump": {
+    "bytes": 94632960,
+    "rows": 183,
+    "sha256": "2f9eeaf1776253a9375480683b78ee61e74846d0b93a2bcfa45a525da2151f29",
+    "all_finite": true,
+    "token_row_alignment_claimed": false
+  }
+}

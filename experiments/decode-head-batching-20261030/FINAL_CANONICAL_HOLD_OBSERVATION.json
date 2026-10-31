@@ -1,0 +1,21 @@
+{
+  "first_metadata_operator_refusal": "AttributeError m.c before CAS/mutation; corrected only digest helper to hashlib; no restart/test/receipt regrade.",
+  "canonical_result": {
+    "metadata_only_CAS_published": true,
+    "recovery_failure": {
+      "status": "BLOCKED_BY_FAILED_WINDOW_PREFLIGHT",
+      "attempts": 1,
+      "native_started": false,
+      "current_native_pid": null,
+      "old_native_closed": 2612033,
+      "unit_raw": "ActiveState=failed\nInvocationID=27f9b1951f494c47a5f6de81f7323ba6\nMainPID=0\nResult=exit-code\n",
+      "CPU_router_status": "inactive",
+      "GPU_compute_owners": [],
+      "recovery_audit": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-head-kernel-separate-selected-recovery-20261030T041715Z",
+      "reason": "hosting_preflight.py:35 refuses latestwindow041001 test1/resumeFalse",
+      "failed_window_unmodified": true,
+      "automatic_retry_permitted": false,
+      "next_requires_new_postfault_recovery_decision": true
+    }
+  }
+}

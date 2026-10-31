@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-30T10:19:55.435102+00:00",
+  "status": "SYNC_V2_ACTUAL_READONLY_GPU_PREFLIGHT_PASS",
+  "map_sha256": "9855deb4e3ece337a778a9995836a316fb4a3754d8c1d8ad616562ed7473d449",
+  "file_checks": 2335,
+  "source_sha256": {
+    "recovery.py": "5c0037d71f6ba61ae36b1ac02d9404cba748fb77db1d04b4ab45b6d40bd59084",
+    "health.cu": "e53b38389d0a507d9efc434cc8fbee6ea28f55aad4d131383ec4dae4c2a77194",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "test_contract.cpp": "e11174d915794b4c2bd4065ea855c6cde05d25b4043b9600754a8f0662811c96",
+    "test_recovery.py": "ebed6721d2c619a1eb87d31c0d751a0748ff316e9aedf0a4a7a89c9dfe4c50ec",
+    "qualify_cpu.py": "07020b77db94b0f435d09f6aecba1252ae1399b7f8142cc0c14e64c699c6ddb6"
+  },
+  "stopped_unit": {
+    "ActiveState": "failed",
+    "InvocationID": "27f9b1951f494c47a5f6de81f7323ba6",
+    "MainPID": "0",
+    "Result": "exit-code"
+  },
+  "GPU_owners": [],
+  "GPU_used_MiB": [
+    0,
+    0
+  ],
+  "root_free_GiB": 835.6803092956543,
+  "latest_failed_window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T095101Z.json",
+  "GPU_namespace_absent": true,
+  "no_GPU_launched": true
+}

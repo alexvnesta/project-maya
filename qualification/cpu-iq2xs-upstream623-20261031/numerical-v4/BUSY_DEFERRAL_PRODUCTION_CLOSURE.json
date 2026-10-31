@@ -1,0 +1,65 @@
+{
+  "utc": "2026-10-31T07:13:41.313545+00:00",
+  "status": "POST_BUSY_DEFERRAL_OWNED_CLEANUP_AND_PRODUCTION_OBSERVATION_PASS",
+  "binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "CPU_lock_inode": 2894342,
+  "CPU_kernel_rows": [],
+  "owned_groups_actual_absent": 26,
+  "phase": null,
+  "active_cpu_build": false,
+  "health": {
+    "status": "ok",
+    "max_context": 1048576,
+    "model": "deepseek-v4.1-flash-iq2-xs",
+    "images": true,
+    "api_key": false,
+    "image_generation": false,
+    "loaded": true,
+    "service": "strata",
+    "busy": false,
+    "switcher": {
+      "active_model": "deepseek",
+      "inflight": 0,
+      "waiting": 0,
+      "nondefault_idle_seconds": 900.0,
+      "default_model": "deepseek",
+      "fault": null
+    }
+  },
+  "work": {
+    "active": 0,
+    "queued": 0,
+    "admission_reserved": 0
+  },
+  "units": {
+    "deepseek-hosted.service": {
+      "ActiveState": "active",
+      "Restart": "no"
+    },
+    "glm-qwen-switcher.service": {
+      "ActiveState": "active",
+      "Restart": "no"
+    }
+  },
+  "root_GiB": 348.21070861816406,
+  "kernel_rc": 0,
+  "kernel_faults": [],
+  "service_actions": false,
+  "new_model_inference_queued": false,
+  "fresh_SSE_generation": false,
+  "last_raw_SSE_evidence": "Prior selected restoration proof under this same unchanged binding; no service/native/config change by CPU sequence."
+}

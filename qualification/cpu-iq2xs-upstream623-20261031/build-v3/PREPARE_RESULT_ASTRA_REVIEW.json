@@ -1,0 +1,160 @@
+{
+  "utc": "2026-10-31T06:03:38.780870+00:00",
+  "decision": "ACTUAL_V3_PREPARE_AND_OWNED_CLEANUP_REVIEWED_STOP_FOR_SEPARATE_COMPILE",
+  "prepare_qualification_sha256": "7e8a340ac8ea66c72ef6ed56b6342af3f84aeaf62ff15bd20a3778c937c2537c",
+  "root_result_review_sha256": "81218d45ce2eb7579ad2932baac2cdd81e462a5dd1f00a8fc0673ee4e7203941",
+  "raw_sha256": {
+    "prepare-FIRST/deps-iq_avx2.cpp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-iq2xs_exact.cpp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-iq_avx2.cpp.json": "97dc4282e180d055d416b288a2089e997855ddceb6f7c301cbe44a5d33d1867a",
+    "prepare-FIRST/deps-native_expert.cpp.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/control-link-inputs.json": "5d1a0ec5b4ef3b222f090300fdd9f2ef872f86b8baaac0c22518d3e2bad32427",
+    "prepare-FIRST/control-link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-native_expert.cpp.json": "0fe9a5963b086a069f7432c20dd16f084ee3eb5d4a3813050b54b8612c4522b6",
+    "prepare-FIRST/control-link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-native_expert.cpp.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-iq2xs_exact.cpp.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/deps-iq_avx2.cpp.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prepare-FIRST/iq2xs_exact.cpp.headers.d": "2359fe978b99e08e9bb52dcd63477d8dba01ba2f45ea2def9c009842d25942c7",
+    "prepare-FIRST/deps-iq2xs_exact.cpp-inputs.json": "b29470c461a69ba7f162a211f0b2da7ca5693b829c272c1a8758ee8b0e15f841",
+    "prepare-FIRST/deps-native_expert.cpp-inputs.json": "c9b131ed19452b233510977c699b39dc629d11f539e2540276dbe66fd83332c9",
+    "prepare-FIRST/deps-iq_avx2.cpp-inputs.json": "d68f06d0d6ba528841f8fa63538199597575bb967c67c1aa217fdfcf9a2485ff",
+    "prepare-FIRST/native_expert.cpp.headers.d": "41aec876a7b6382bc295b36dfe650a01caa498d2880aaa09ccd8f0a4f50a6d5a",
+    "prepare-FIRST/deps-iq2xs_exact.cpp.observed.json": "bc937b80abc73e88d26667fb77e26389adade52cf029d75746d5245915012b0e",
+    "prepare-FIRST/control-link.observed.json": "22dfb99d0ea555ba87b01e662ae66406dfbccf187fe960d457935ea248c3f7c2",
+    "prepare-FIRST/deps-native_expert.cpp.observed.json": "de6ce00b46ff21517ce00533fcfde44c536c818248966c921ec580bf4cc77f34",
+    "prepare-FIRST/selected-relink.link.d": "b8833238f569babf9784fdbb49258b83531a1c00c1c23d355373d41e03bd2db7",
+    "prepare-FIRST/iq_avx2.cpp.headers.d": "63e76532aec085da12eed53f77197ebad31c208e075fe6c9f61c93df519249bb",
+    "prepare-FIRST/deps-iq2xs_exact.cpp.json": "99786f69bee5ebc05533fd940f507b63d6a7f3f9a4900c869b9db400e9d38de5",
+    "prepare-FIRST/control-link.json": "54268e3c137a73cfa92f583f7ca514d88c3c068e448f0485fc7a627f9564bd47",
+    "prepare-FIRST/receipt.json": "a238a3360d49a2ca60570b2f85eef616b71c9f65b7a2f02dcf992285ecc60b6f",
+    "prepare-FIRST/deps-iq_avx2.cpp.observed.json": "d7da3addef3777ca1b2e848f37ff927ab85c55255e66eb71eed81449f68c2d4e",
+    "prepare-supervision-FIRST/result.json": "97005e3dc9fa307d615963cdf9e3bfb8f3797788360eeddcb8975d3de518f9ce",
+    "prepare-supervision-FIRST/attempt.json": "8a18600ee9ddcccbb2bb1b1e646932cfb1c951e0f1c22ca1800a91d7dbb12de2",
+    "prepare-supervision-FIRST/owned-children.jsonl": "2f653993706fa0c160072e9ef2ba81504a59db5e53cc7d06d593b79ea679af5c",
+    "prepare-controller.stdout": "425d05924e501db8350f6e65078778032967fac3bf6486777080543349d39997",
+    "prepare-controller.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "PREPARE_PRODUCTION_CLOSURE.json": "7fe5e5eb05d822840678a864d833cd85b32d74210e636eed980a32d1b8ba8042"
+  },
+  "controller_pid": 4043750,
+  "child_pids": [
+    4043880,
+    4043971,
+    4044229,
+    4044336
+  ],
+  "actual_input_count": 456,
+  "dependency_counts": {
+    "control-link": 44,
+    "deps-iq_avx2.cpp": 306,
+    "deps-native_expert.cpp": 247,
+    "deps-iq2xs_exact.cpp": 226
+  },
+  "new_headers": {
+    "/usr/include/c++/15/algorithm": {
+      "sha256": "19ac04637f60d60191d5e6d9972341ae3db83c0973cce66b2d44f90cfe487674",
+      "resolved": "/usr/include/c++/15/algorithm",
+      "bytes": 3467
+    },
+    "/usr/include/c++/15/bits/algorithmfwd.h": {
+      "sha256": "6edc41965c70883276225c15e0b6c6f190592184b91cf73b4339ff7d9a4890f0",
+      "resolved": "/usr/include/c++/15/bits/algorithmfwd.h",
+      "bytes": 25579
+    },
+    "/usr/include/c++/15/bits/cxxabi_init_exception.h": {
+      "sha256": "14bae741e2dfa28050813941d936f8b6428ca83d3186b7d5b99948a0b7e605aa",
+      "resolved": "/usr/include/c++/15/bits/cxxabi_init_exception.h",
+      "bytes": 2257
+    },
+    "/usr/include/c++/15/bits/exception_ptr.h": {
+      "sha256": "ce7a37e7fcf46d9c9a6e5a8e7ab903a481fa6f4d1cc01cd6122e6601603541c2",
+      "resolved": "/usr/include/c++/15/bits/exception_ptr.h",
+      "bytes": 8210
+    },
+    "/usr/include/c++/15/bits/nested_exception.h": {
+      "sha256": "3a5e959100e86bc3d48be06cd4e695764e337f23dd8442495a1bebbf16495862",
+      "resolved": "/usr/include/c++/15/bits/nested_exception.h",
+      "bytes": 7695
+    },
+    "/usr/include/c++/15/bits/ranges_algo.h": {
+      "sha256": "1e8ea5a5a5ab8bcf34b33f629e1f3ad7450173b4385eed51ef4fa280edc6d5f1",
+      "resolved": "/usr/include/c++/15/bits/ranges_algo.h",
+      "bytes": 133191
+    },
+    "/usr/include/c++/15/bits/ranges_algobase.h": {
+      "sha256": "193a590550811280821b91f37c9f36857a8c23864b0639a3e9d872031c15e178",
+      "resolved": "/usr/include/c++/15/bits/ranges_algobase.h",
+      "bytes": 20165
+    },
+    "/usr/include/c++/15/bits/stl_algo.h": {
+      "sha256": "e65d697268d714022119deeb6e01678aa1e93e9c5ffc203416a45b94ef55298a",
+      "resolved": "/usr/include/c++/15/bits/stl_algo.h",
+      "bytes": 217820
+    },
+    "/usr/include/c++/15/bits/stl_heap.h": {
+      "sha256": "4cd107c49adb58a1a31735b16bbc65ed8bd2d81967f2cecc651caa1beaaff5ef",
+      "resolved": "/usr/include/c++/15/bits/stl_heap.h",
+      "bytes": 20871
+    },
+    "/usr/include/c++/15/bits/stl_relops.h": {
+      "sha256": "919d99ef74b4858059b33ae7708487d179601ab50386b786eb1cfde7e94306c4",
+      "resolved": "/usr/include/c++/15/bits/stl_relops.h",
+      "bytes": 4619
+    },
+    "/usr/include/c++/15/bits/stl_tempbuf.h": {
+      "sha256": "fd894aaf6d65981d84289ea85d48755fe6c6e491bc353111096c7769e3924758",
+      "resolved": "/usr/include/c++/15/bits/stl_tempbuf.h",
+      "bytes": 10419
+    },
+    "/usr/include/c++/15/bits/uniform_int_dist.h": {
+      "sha256": "16df3c15f0f02065a2fd5125f9bca9b24b8d192e5b2f31fde2067447030dde3f",
+      "resolved": "/usr/include/c++/15/bits/uniform_int_dist.h",
+      "bytes": 13307
+    },
+    "/usr/include/c++/15/exception": {
+      "sha256": "2cdb0f2b1cd740475088fa3cc9859007412b3566b71946dee085a00c28445d8d",
+      "resolved": "/usr/include/c++/15/exception",
+      "bytes": 5467
+    },
+    "/usr/include/c++/15/pstl/execution_defs.h": {
+      "sha256": "b8d0da1e1738e8a8e2f77993e031529e973536b54875d03ed1dd6f1186bd1bc9",
+      "resolved": "/usr/include/c++/15/pstl/execution_defs.h",
+      "bytes": 2456
+    },
+    "/usr/include/c++/15/pstl/glue_algorithm_defs.h": {
+      "sha256": "c6caf38d2baf9808e57d680924032ff2f6a4872ed415605db04c5b71ceb99d8e",
+      "resolved": "/usr/include/c++/15/pstl/glue_algorithm_defs.h",
+      "bytes": 32811
+    },
+    "/usr/include/c++/15/stdexcept": {
+      "sha256": "d8e116c58c0151dfd98a450100891aadb27fe09a1be108fdff4c381925915155",
+      "resolved": "/usr/include/c++/15/stdexcept",
+      "bytes": 9908
+    },
+    "/usr/include/c++/15/typeinfo": {
+      "sha256": "b3fa76d84f83e2bebfc7881b0327631d72de8cdf9bce569c0012a8f72e1e0e07",
+      "resolved": "/usr/include/c++/15/typeinfo",
+      "bytes": 8398
+    },
+    "/usr/include/c++/15/utility": {
+      "sha256": "643fa4d9600213f9e795b50245e98f7cc8724c8fa0bf910338213ba943056cbe",
+      "resolved": "/usr/include/c++/15/utility",
+      "bytes": 7698
+    }
+  },
+  "control_relink_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "checks": [
+    "All31 raw metadata/log hashes match local copies; full four commands, empty logs, observed resource/PID/PG chains, controller stdout and supervisor journal/result reconciled.",
+    "Saved Make dependencies independently parsed; exact per-step input maps merge to456 without conflicts.18 additions are GCC15 standard-library headers; remaining438 pins already in prepare map.",
+    "Original selected control command retains original ten objects and libraries, redirects outputs only, and recorded control digest matches native92.",
+    "Four groups absent, no pending spawn or cleanup fault, own claim released; stable CPU lock unheld and selected GPU lease/binding unchanged in saved physical closure."
+  ],
+  "legacy_mode_label": "iq2xs-cpu-v2-prepare is unchanged legacy record text only. Actual v3 source/paths/q/current130 proofs bind this run; v2 failed attempt is not regraded.",
+  "limits": [
+    "No executable exported or locally rehashed. Exact control digest is supplied by the qualified physical producer and independently corroborated by root review; final physical compile preflight must rehash it.",
+    "Physical system-header/tool bytes not read or hashed by this reviewer; hashes and resolved paths derive from source-qualified actual observations, with prospective recheck required.",
+    "No arithmetic/numerical/native/model/GPU result or admission follows from successful relink/scans."
+  ],
+  "compile_admitted": false,
+  "reviewer_project_execution_or_remote_actions": false
+}

@@ -1,0 +1,218 @@
+{
+  "status": "SOURCE_ONLY_UNBUILT_UNRUN_NO_EXECUTION_ADMISSION",
+  "source_sha256": {
+    "candidate/include/strata/kernels/cpu/iq_avx2.hpp": "669943775b48a05f87ff5984dd1c05df94185d7a7f73e693c830df67b9bc71c7",
+    "candidate/include/strata/kernels/cpu/native_expert.hpp": "af881c474d3896b996de8068f7aaed6918ac2f303172c55d59d663a40cb2ac0e",
+    "candidate/src/kernels/cpu/iq_avx2.cpp": "0f2151cd0b1e4a77467e132ba92d2cea626f92fd079508ef393c5622b2d71edb",
+    "candidate/src/kernels/cpu/native_expert.cpp": "614191b7aef3bf15dacb3b04c8ef5a1b390b8a28ffbb13e2195430c5f0be3120",
+    "candidate.patch": "639cb7c533827cee486c7bfdffafe5ae6d102fbdc20c3efb67778c9980b4bf43",
+    "source_contract.py": "6d116441cb559a5e136eaae4f5bfc148cb2e02b8b85808a270ed83e182b51e68",
+    "test_source_contract.py": "8f979db35e72b52e9524065322feea2addab759301941770a0b91f0ca3e4b595",
+    "tests/iq2xs_exact.cpp": "46054c27abe0538fea5d3c58c0c7585a40ba89c2002a3ca4e7abd98491dc8b6b",
+    "cpu_driver.py": "3fed5bef32fa584b08f2dfb684ddf944d39ce02d5daa48e0bd07eb94f8b02707",
+    "test_cpu_driver.py": "b33e52afb6735cec6f0842b2121682b781cbb304ca2ccec800a0997b4ec4dd47"
+  },
+  "input_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/base/include/strata/kernels/cpu/iq_avx2.hpp": "878cafbeef8144fd4e0b48f492f4812985ab4544dfb06c14523903a46821cd74",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/base/include/strata/kernels/cpu/native_expert.hpp": "c22c92c0d18a6c045f9534d52b8cad51a8c8f25c58b2e138991d1708a9cdd050",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/base/src/ds4/ds4_iq_cpu.cpp": "7894f430fdfb48ba030ee9aff21414833e7f498052d322aeb33b53655da6118a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/base/src/kernels/cpu/iq_avx2.cpp": "e4dddd81e6c657d677fff4f92c8a1167f0634ed323301ec2396bf30f231b81d4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/base/src/kernels/cpu/native_expert.cpp": "29c706324adaf639e553f266bda6ca1c0c6d755746622e1e80f0af0dbafa3de4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/adaptive-expert-cache-v1/SELECTED_CPU_SOURCE_BUILD_OBSERVATION.json": "7025fb879bc350998dc6de3aa3d58c5a490c1248046bf8c6eba580514d28e1ee",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/adaptive-expert-cache-v1/SELECTED_CPU_LINK_OBSERVATION.json": "0a4d3f3fa2141afdab5f43f47eff11c014aa74558cb6d5a3c5d3765899164f0b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/adaptive-expert-cache-v1/upstream-PR623-files-20261031T0438.json": "c215f2fa974c7295635d99d7a3d893135263964740d1f56ff24d723e28aae62b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-pack-quant-inventory-FIRST.json": "55a170d4e8c2dc758f19fb21f4b36836b91b43036ddc213599954b5378011f07",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/selected-ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350"
+  },
+  "portable_test_ids": [
+    "test_cpu_driver.Parent.test_child_attempt_missing_input_membership_refused",
+    "test_cpu_driver.Parent.test_child_attempt_requires_exact_parent_and_maps",
+    "test_cpu_driver.Parent.test_existing_attempt_refuses_without_child",
+    "test_cpu_driver.Parent.test_forged_observed_pid_refused",
+    "test_cpu_driver.Parent.test_full_parent_consumes_exact_child_and_command",
+    "test_cpu_driver.Parent.test_ignored_environment_bytecode_flag_refused",
+    "test_cpu_driver.Parent.test_missing_actual_as_bound_refused",
+    "test_cpu_driver.Parent.test_missing_success_receipt_refused",
+    "test_cpu_driver.Parent.test_precheck_refusal_creates_no_attempt",
+    "test_cpu_driver.Parent.test_source_changed_after_child_refused",
+    "test_cpu_driver.Parent.test_wrong_receipt_ids_refused",
+    "test_cpu_driver.Qualification.test_alias_and_hardlink_refused",
+    "test_cpu_driver.Qualification.test_bad_review_digest_refused",
+    "test_cpu_driver.Qualification.test_canonical_path_escape_refused",
+    "test_cpu_driver.Qualification.test_full_positive_no_project_import",
+    "test_cpu_driver.Qualification.test_input_change_before_import_refused",
+    "test_cpu_driver.Qualification.test_missing_input_membership_refused",
+    "test_cpu_driver.Qualification.test_missing_manual_review_refused",
+    "test_cpu_driver.Qualification.test_source_change_before_import_refused",
+    "test_cpu_driver.Qualification.test_wrong_control_order_refused",
+    "test_cpu_driver.Supervisor.test_changed_live_group_refused_without_signal",
+    "test_cpu_driver.Supervisor.test_declared_budget_refuses_unbounded",
+    "test_cpu_driver.Supervisor.test_existing_log_refuses_before_start",
+    "test_cpu_driver.Supervisor.test_exited_parent_still_checks_and_kills_descendants",
+    "test_cpu_driver.Supervisor.test_foreign_group_refused_without_signal",
+    "test_cpu_driver.Supervisor.test_nonzero_and_cleanup_error_both_retained",
+    "test_cpu_driver.Supervisor.test_real_child_observes_exact_bounds_and_environment",
+    "test_cpu_driver.Supervisor.test_real_timeout_terminates_owned_group",
+    "test_cpu_driver.Supervisor.test_start_refusal_has_no_cleanup_target",
+    "test_cpu_driver.Supervisor.test_surviving_group_is_error",
+    "test_source_contract.Custody.test_candidate_mutation_refused",
+    "test_source_contract.Custody.test_exact_selected_base_and_candidate",
+    "test_source_contract.Custody.test_hardlink_refused",
+    "test_source_contract.Custody.test_missing_accessor_refused",
+    "test_source_contract.Custody.test_missing_selected_source_refused",
+    "test_source_contract.Custody.test_root_alias_refused",
+    "test_source_contract.Custody.test_symlink_refused",
+    "test_source_contract.Custody.test_unrelated_candidate_file_refused",
+    "test_source_contract.Scope.test_exact_upstream_iq2xs_hunks_only",
+    "test_source_contract.Scope.test_iq1m_and_all_float_recurrence_tail_unchanged",
+    "test_source_contract.Scope.test_native_runtime_unchanged_except_observer",
+    "test_source_contract.Scope.test_no_new_pdep_cpuid_or_runtime_option"
+  ],
+  "manual_review": {
+    "candidate_diff_entire": true,
+    "native_expert_cpp_and_headers_entire": true,
+    "iq_avx2_original_entire_and_changed_regions": true,
+    "new_python_and_cpp_fixture_entire": true,
+    "root_independent_full_read_required": true
+  },
+  "physical_provenance": {
+    "source_root": "/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2",
+    "selected_native": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "selected_cpu_archive": "60821a6dbe824a757723926b71a7d6092cc902c449c4d0cb0c9503c07d438ebd",
+    "five_files_match_base_commit": "4615f346d9311dd1ce9f5738ab04446f023a6e42",
+    "initial_wrong_candidate_path_missing_receipt_preserved": true
+  },
+  "candidate": {
+    "upstream": "https://github.com/mw00/project-maya/pull/623",
+    "revision": "b772203a4acfd7e88f7476fc7a6f33359b26f549",
+    "changes": [
+      "IQ2_XS constexpr scale table and broadcast/blend grid fetch, exact upstream hunks 57/221/240/275",
+      "Type17 existing dot_rows_nt in one-token capability/dispatch hunk629",
+      "Upstream native_rows1_exact observer accessor/declaration; explanatory iq_avx2 header comment"
+    ],
+    "excluded": [
+      "IQ1_M arithmetic",
+      "BMI2/PDEP/CPUID policy",
+      "IQ2_S/IMMA/head/Q8/cache changes",
+      "Model/quant/tokenizer/drafter/profile/context/output changes"
+    ],
+    "recurrence": "IQ2_XS sign decode, integer madd/add grouping, block float multiply/fmadd, hsum and 0.125 multiplier retained byte for byte",
+    "fallback": "Original pick_rows/pick_rows1 feature/env checks and rows_match_ggml startup checks plus exact_rows_nt fallback retained byte for byte",
+    "new_accessor": "Returns the existing checked/once-cached exact_rows1 choice; does not force it, exposes no new protocol or env knob"
+  },
+  "dispatch": {
+    "selected_pack_iq2_xs_tensor_entries": 10368,
+    "not_distinct_experts_or_cpu_traffic_fraction": true,
+    "selected_ds4_own_type17": false,
+    "path": "selected model cpu_experts_iq -> gg::iq_cpu_gate_up/down -> native_gu_rows_split/native_down_rows_split -> exact_rows_nt -> IQ2_XS row backend or unchanged ggml fallback",
+    "proof_required": "Physical optimized fixture requires native_rows1_exact(17) AND native_multi_rows_exact(17); no skipped/fallback success. No inference from unconditional make_pools MXFP4 log."
+  },
+  "portable_cpu_proposal": {
+    "controls": 42,
+    "hosts": [
+      "physical macOS",
+      "physical Ubuntu"
+    ],
+    "limits": {
+      "cpu_seconds": 30,
+      "linux_as_bytes": 536870912,
+      "mac_as": null,
+      "wall_seconds": 90,
+      "nice": 15,
+      "CUDA_VISIBLE_DEVICES": "",
+      "threads": 1
+    },
+    "required_driver": "cpu_driver.py + test_cpu_driver.py now implemented and manually read; exact source/input maps, scoped Root review and both-host FIRST proofs pending. See CPU_SOURCE_ASTRA_REVIEW.json.",
+    "negative_controls": [
+      "source mutation",
+      "missing source",
+      "extra unrelated source",
+      "missing accessor",
+      "symlink/hardlink/root alias",
+      "upstream hunks and unchanged recurrence/fallback scope"
+    ],
+    "limitation": "Mac portable custody controls do not exercise AVX2 or establish arithmetic/performance.",
+    "external_guard": "Fresh genuine-idle/current selected owner/source/phase/root guard immediately before Ubuntu staging or CPU work; driver itself has no remote/service authority."
+  },
+  "build_proposal": {
+    "preconditions": "Fresh genuine idle, exact current selected owner/native/config/release/source/objects, no phase/build/restore, enough root; exact new source/driver both-host proof and admission. Hold existing experiment lock for owned build; no model start.",
+    "prepare": "Fresh directory; reproduce native92 by unchanged original control link FIRST. Freeze actual dependency scans for two changed CPU objects and fixture; review all actual headers/libs/tools before compile. Original objects and archives never mutated.",
+    "compile": "Use actual original CMake command recipes: c++ O3 DNDEBUG std=c++20 STRATA_NATIVE_EXPERTS=1 VERSION0.1.27. iq_avx2 only retains -mavx2 -mfma -mf16c -ffp-contract=off; native_expert no new ISA/fast-math flags. Candidate include before original includes. One compiler job, CPU120/AS4GiB/wall300/nice15/CUDA hidden.",
+    "archive": "Fresh CPU archive exact original member order; replace ONLY iq_avx2.cpp.o and native_expert.cpp.o. Reject missing/duplicate/foreign members. Preserve all CUDA/model/GGUF/IQ/ds4_iq_cpu objects and ggml libraries. Control archive/relink identity first; candidate archive/native hashes after.",
+    "fixture": "Link CPU-only fixture against candidate CPU archive, ORIGINAL selected ds4_iq_cpu.cpp.o e051832d, and exact selected ggml/core dependency closure. Pin original src/ds4/ds4_gguf_cpu.hpp and all include dependencies in actual -M scan before compile. No nvcc/CUDA fixture. Use same selected scalar compilation flags for fixture epilogue and no fast-math."
+  },
+  "physical_numerical_proposal": {
+    "status": "NO_ADMISSION",
+    "cli": "iq2xs_exact --n {256|2304|5120} --expect {optimized|fallback}",
+    "children": "Six separately bounded children, one per dimension and expectation; fallback parent sets only STRATA_NO_IQ256=1. Optimized requires current equivalent CPU env and exact dispatcher true. No automatic retry or skip.",
+    "limits": "Each CPU30/AS512MiB/wall90/nice15/one thread/CUDA hidden; actual memory and wall are bounded, not claimed empirically sufficient before FIRST.",
+    "cases_per_child": 576,
+    "cases_total": 3456,
+    "dimensions": [
+      256,
+      2304,
+      5120
+    ],
+    "token_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "row_stride_padding": [
+      0,
+      32
+    ],
+    "ranges": [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "patterns": "six valid block scales: +0,-0,small normal,smallest half subnormal,max half finite,negative normal; Q8 selected quantizer normal/zero/signed-zero/alternating/random and directly set tiny finite block scale for subnormal accumulation",
+    "oracle": "Exact selected ggml CPU vec_dot, bit equality AND finite outputs. Direct multi and one-token rows at all dimensions; native and actual unchanged ds4_iq_cpu down path at2304, gate-up at5120 both clamped20 and unclamped. Selected activation-quantization bytes independently match ggml. Output and input/padding canaries; no tolerance.",
+    "limits_of_witness": "Seven sampled rows, finite patterns, no full tensor/model payload: not exhaustive or whole-model numerical equivalence. Parent verifies all exact case IDs/dispatch, binary/input identities, output lines and terminal counts; fallback success is explicitly distinct from optimized success.",
+    "additional_before_wholemodel": "Actual compiled control/candidate numerical evidence and reviewed standalone performance protocol. No extrapolation from Broadwell mixed-format upstream benchmark to this Zen2 host.",
+    "paths_per_case": {
+      "256": 2,
+      "2304": 4,
+      "5120": 6
+    },
+    "mixed_format_gate": "Separate future witness for the ten exact main gate/up/down format triples in SELECTED_MAIN_EXPERT_FORMATS_ROOT.json; current IQ2_XS-only fixture cannot stand in for it."
+  },
+  "later_wholemodel_sequence": [
+    "Only after reviewed exact numerical and bounded standalone performance evidence, qualify a new separate model owner/auditor/controller with exact both-host controls; no inherited proof substitution.",
+    "Pause downloader and prove actual exit/absence before private phase. Keep selected adaptive cache setting and full selected pack/profile/quality/context/output fixed in both arms; only candidate native/CPU archive differs.",
+    "Source-aligned finite four-state quality including images/warm return, tool/followup/prefill cancel/recovery and private/native/window/public selected restoration gates. Strict matched token/logit comparisons can be claimed only on identical token paths and source-defined dump boundaries; divergent paths fail an equivalence claim rather than receiving tolerance.",
+    "Then separately frozen same-work prefill/decode comparison with full natural outputs and same bounds800/1000/1200/200, root132/120, cache8/log4, swapdelta<1GiB, memory fence/poststop margin. Actual workload completion uncertain; preserve first fault/partial and no automatic replay/promotion."
+  ],
+  "pr625": "Root reports fresh actual deployed frontend e0fded1a equal pinned local version; ordinary tool list stability already active. No #625 patch included.",
+  "execution": {
+    "tests_run": false,
+    "compiled": false,
+    "gpu_or_model_run": false,
+    "remote_actions": false,
+    "old_sources_modified": false
+  },
+  "review_limit": "No controls executed. Root final manual review of new driver/test and exact frozen review map required. No build/numerical/model admission."
+}

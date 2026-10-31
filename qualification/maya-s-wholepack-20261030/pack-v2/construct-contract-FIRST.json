@@ -1,0 +1,109 @@
+{
+  "profile": {
+    "context": 1048576,
+    "output_allowance": 262144,
+    "max_tokens": 32768,
+    "effort": 100,
+    "reason_budget": 0,
+    "chunk": 4096,
+    "cpu_threads": 24,
+    "tp": 1,
+    "reserve_per_device": 2048,
+    "q8_batch": 1,
+    "q8_check": 1,
+    "mode": 1,
+    "stream": 0,
+    "dspark_conf": 0.65,
+    "dspark_max": 4,
+    "dspark_cum": 0.0,
+    "all_cpu_experts_ram": true,
+    "images": true,
+    "fit": false,
+    "projection_layer": 22,
+    "projection_scale": 1.0
+  },
+  "assets_root": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets",
+  "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST",
+  "vision_dir": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017",
+  "vision_pins": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017/vision.json": "3b682353a9bf572ae2736ec17b946179b24b83319de46c54950f0c442fd13053",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017/vision.bin": "685d935986a030ba1965af5c1e06b55614c7778c821daae1917dde5d2152ff68"
+  },
+  "selected_vision_bin_sha256": "685d935986a030ba1965af5c1e06b55614c7778c821daae1917dde5d2152ff68",
+  "acquisition_receipt": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/acquisition-authorized-v2/acquisition-attempt-20261030T141645810845Z-3166208.json",
+  "acquisition_receipt_sha256": "829dc2974aefd88d1c0adb65a799dc1b35bc1076eb21e4e5119e761b61cfa577",
+  "asset_stats": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00001-of-00006.gguf": [
+      64513,
+      2893170,
+      47887697312,
+      1793370815049724695,
+      1793370815251729359
+    ],
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00002-of-00006.gguf": [
+      64513,
+      2893209,
+      47669578400,
+      1793371826769079863,
+      1793371826845081618
+    ],
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00003-of-00006.gguf": [
+      64513,
+      2893239,
+      47103347360,
+      1793372844491573608,
+      1793372844601576148
+    ],
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00004-of-00006.gguf": [
+      64513,
+      2893241,
+      35532532032,
+      1793373596864941870,
+      1793373596969944294
+    ],
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00005-of-00006.gguf": [
+      64513,
+      2893243,
+      80641295472,
+      1793375335290966071,
+      1793375335386968281
+    ],
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00006-of-00006.gguf": [
+      64513,
+      2893247,
+      80643503412,
+      1793377384776131009,
+      1793377384871133195
+    ],
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/dspark/dspark.bin": [
+      64513,
+      2893297,
+      7967616768,
+      1793377587691798272,
+      1793377587741466954
+    ],
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/dspark/dspark.json": [
+      64513,
+      2893296,
+      96965,
+      1793377587835801585,
+      1793377587849801906
+    ]
+  },
+  "vision_stats": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017/vision.json": [
+      64513,
+      12734086,
+      19959,
+      1792951011758448441,
+      1792951011758448441
+    ],
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017/vision.bin": [
+      64513,
+      12734082,
+      970536960,
+      1792951011115294368,
+      1792951011756308920
+    ]
+  }
+}

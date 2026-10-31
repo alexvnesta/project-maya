@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-29T17:20:20.848726+00:00",
+  "decision": "LOCAL_IMMUTABLE_QUALIFICATION_MAP_REVIEWED_ELIGIBLE_FOR_FRESH_READONLY_PREFLIGHT_ONLY",
+  "qualification_sha256": "5191da7f4d2ffb9442614b13d4d50c3740b404fa3c9f76550bffb7fb285c4457",
+  "evidence_sha256": {
+    "exploratory-CPU-source-review.json": "80f2fd76eaea81f48cb889f932b0ebae238480f016e0e87b3e80503853ed7596",
+    "CPU-result-astra-review.json": "8f3cab76be651cf1c74ad65bf99aa99f768e21ef26584518d067ec03e14fadd7",
+    "EXPLORATORY_CRITERIA_FROZEN.json": "b2bf8268b54af1f21820446d013f057913d75f9fa572bc083d1053550caf83b3",
+    "exploratory-fixtures.json": "6cd0ddd21db305c41186288d84979f5aaf84f8b7f8d653c3aa45694511600ebf",
+    "exploratory-fixture-pin.json": "9eda83b320e91ffe0a4fa42aeceeebd21f7a066e138e060a0c2396b43417fe1d",
+    "FIRST_CPU_HOLD.json": "85f4b21a24925c6126ba6bac17cd1f51ec213fccd3c9ad998ecc35c8f17ff5e7"
+  },
+  "prior_numerical_qualification_sha256": "11deaac7b10b7d53bd988acff210136b5e2107d533d1a13e28c315037810113e",
+  "checks": {
+    "canonical_file_pins": 2268,
+    "inherited2198_all_preserved_exact": true,
+    "new70_local_artifact_hashes_verified": true,
+    "source17_and_ordered137IDs_match_CPU": true,
+    "all965_CPU_input_pins_present_after_normalization": true,
+    "CPU233_aliases_exactly_reconstructed": true,
+    "inherited250_aliases_preserved_and_normalization_checked": true,
+    "conflicting_normalized_CPU_digests": false,
+    "allkeys_absolute_canonical": true,
+    "mutable_current_PLAN_STATE_registry_and_live_expertprofile_excluded": true,
+    "corrected_fixture_bytes_equal_both_CPU_outputs": true,
+    "old_HOLD_both_audits_kernel_prerequisite_and_failure_lineage_present": true,
+    "seed_direction_pack_release_canonicalwindow_selected_candidate_pins_present": true
+  },
+  "fixed_limits": {
+    "context": 1048576,
+    "default_output": 262144,
+    "request_cap": 32768,
+    "effort": 100,
+    "soft_s": 1000,
+    "cleanup_s": 200,
+    "window_s": 1200,
+    "root_admission_GiB": 132,
+    "root_runtime_GiB": 120,
+    "swap_less_than_GiB": 1,
+    "cache_GiB": 8,
+    "logs_GiB": 4
+  },
+  "findings": [],
+  "scope": [
+    "Local metadata, exact inherited map and new70 local files reviewed. No physical-host files/tools/binaries/services were inspected or executed by reviewer; physical2268+qualification-self verification still required.",
+    "No dynamic current owner is inferred from immutable historical metadata. Fresh canonical selected binding and actual idle/default/no phases/work/resource checks are action-time prerequisites.",
+    "Original failed CPU proof remains explicitly failed and pinned; corrected proof only qualifies new source controls. Existing strict numerical HOLD remains binding.",
+    "NewX0/X1 mode permits descriptive fixed-task/native/client observations only; no numerical equivalence, speed acceptance, replication or deployment claim."
+  ],
+  "next_required": "Fresh actual read-only X0 preflight, then separate single-X0 admission; no model run authorized by this map review.",
+  "GPU_admitted": false,
+  "model_admitted": false,
+  "prior_numerical_HOLD": true,
+  "promotion_allowed": false
+}

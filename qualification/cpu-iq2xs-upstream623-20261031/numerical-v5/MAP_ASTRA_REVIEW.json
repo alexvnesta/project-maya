@@ -1,0 +1,74 @@
+{
+  "utc": "2026-10-31T07:33:33.643787+00:00",
+  "status": "REMAINING_21_MAP_REVIEW_PASS_PENDING_PHYSICAL_PREFLIGHT_AND_SEPARATE_ADMISSION",
+  "reviewer": "Astra",
+  "draft_sha256": "cc2a9519d7f6cebca1a8a63a11bafa4bec38a054544e4d22758a919b83939df8",
+  "root_map_review_sha256": "36e18f932140b833a4837faf799c5ea245b289131ab6dad9e0c440cde39cac6b",
+  "CPU_result_review_sha256": "858733ea6985bb83a4fb74e112f9a23f07be7ea9de6eecae9a4e536db009030c",
+  "counts": {
+    "draft_files": 2538,
+    "inherited_v4_files": 2335,
+    "new_local_files_verified": 203,
+    "sources": 10,
+    "inputs": 468,
+    "ordered_controls": 149,
+    "prospective_final_files": 2540,
+    "prospective_final_files_plus_self": 2541
+  },
+  "checks": [
+    "All 2335 original v4 file pins are inherited byte-for-byte; no replacements.",
+    "All 203 additions independently hashed at exact local mirror paths. All ten source, 468 input and 149 ordered ID maps match frozen source and independently reviewed CPU results.",
+    "Both hosts twelve CPU raw files and source/result reviews are explicit members. Actual pre/post resource/PID/parent chains were reviewed separately in CPU_RESULT_ASTRA_REVIEW.json.",
+    "Both prior partial reviews and all 162 raw/production-closure pins are present. The old attempted but unaccepted job26 remains HOLD; its evidence is retained without promotion.",
+    "New jobs equal the exact original jobs[25:] and prior_jobs equal jobs[:25], with no overlap or accepted-job replay. Only21 new jobs/1512 rows are executable; prior25/4824 may compose after separate actual terminal review.",
+    "Repaired fixture890041fd/source559d, original candidateCAB/archive514b and both original/repaired build custody remain unchanged. Runtime bootstrap, CPU proof, repaired-build and prior-coverage required members were source-reviewed against this map.",
+    "Explicit numerical-remaining/healthy-work CPU-only policy matches qualified guard. Non-work health/default/identity/phase/root/ownership/resource checks remain. Cooperative single coordinator boundary is explicit; CAS is not claimed globally atomic."
+  ],
+  "scope": {
+    "prior_accepted_jobs": 25,
+    "prior_accepted_rows": 4824,
+    "new_jobs": 21,
+    "new_rows": 1512,
+    "prospective_combined_jobs": 46,
+    "prospective_combined_rows": 6336,
+    "old_v4_complete": false,
+    "old_v4_regraded": false,
+    "one_uninterrupted_sequence_claim": false
+  },
+  "budgets": {
+    "soft_seconds": 1000,
+    "wall_seconds": 1200,
+    "cleanup_seconds": 200,
+    "child_CPU_seconds": 30,
+    "child_Linux_AS_bytes": 536870912,
+    "child_wall_seconds": 90,
+    "child_run_seconds": 85,
+    "child_cleanup_seconds": 5
+  },
+  "remaining_findings": [],
+  "final_permitted_delta": {
+    "add_only": [
+      "MAP_ROOT_REVIEW.json",
+      "MAP_ASTRA_REVIEW.json"
+    ],
+    "preserve_all_existing_2538_pins": true,
+    "matching_freeze_metadata_only": true,
+    "qualification_map_reviewed_may_be_true": true,
+    "numerical_admitted_must_remain_false": true
+  },
+  "required_before_separate_action_decision": [
+    "Final immutable map/self physical verification, actual qualified verify_q/cpu_proofs/repaired-build/prior-coverage/CAS imports and exact CPU capability/fixture identity.",
+    "Fresh exact selected owner/default/healthy hosting and no private/build/restoration/foreign claim; healthy ordinary work allowed only under new CPU-only guard.",
+    "Root>=136GiB, unchanged sole selected GPU lifetime lease/no waiter, stable unheld CPU lock, paused absent download and fresh sequence/supervision namespaces.",
+    "Separate SINGLE21 admission; no tests, model, GPU, service, rebuild, promotion or automatic next action follows from this map review."
+  ],
+  "limitations": [
+    "Inherited physical binary/system/source pins are preserved from previously reviewed actual provenance; they were not newly hashed on the Mac and must all verify physically before execution.",
+    "Environment thread values are limits/settings, not proof of native thread count or fixed affinity. No timing claim under concurrent hosting.",
+    "Full6336 acceptance requires actual new21 terminal/raw/lifecycle review and explicit combined coverage report; v3 HOLD and v4 partial stay unchanged."
+  ],
+  "numerical_admitted": false,
+  "GPU_or_model_admitted": false,
+  "source_changed": false,
+  "project_code_tests_or_live_actions_by_reviewer": false
+}

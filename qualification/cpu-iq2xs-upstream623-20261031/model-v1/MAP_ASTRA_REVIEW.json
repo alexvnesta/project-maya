@@ -1,0 +1,100 @@
+{
+  "utc": "2026-10-31T09:23:36.177441+00:00",
+  "status": "QUALIFICATION_MAP_REVIEW_PASSED_PENDING_PHYSICAL_PREFLIGHT",
+  "scope": "Independent local metadata and source-contract review only. No model, GPU, native execution, staging or live admission.",
+  "draft_sha256": "c46a34e7a5ccebe5bed4fc2998f27455d530b4451df81e440e24ac0200e77562",
+  "file_count": 4585,
+  "files_map_sha256_sorted_json": "38e5869067ac1452104dca133fb2997464cdff49f02698cb9508d17f9fb3118b",
+  "current_CPU_contract": {
+    "source_files": 19,
+    "input_files": 3639,
+    "ordered_test_ids": 247,
+    "physical_hosts": [
+      "darwin",
+      "linux"
+    ],
+    "source_review_sha256": "5003f4784f1f1818d874657902d5f16ec155471898253d8c8874534f51da497b",
+    "root_result_review_sha256": "87b612070d6cee89449984002c74a4f965528492e025b3868f65e1c57747a6f1",
+    "astra_result_review_sha256": "4f7ef86c6bd568d9cac7efcd53a594e1d5532c3ab3baafd20fb2e2c378883a4a",
+    "exact_source_input_ID_maps_and_both_raw_chains_membership": true,
+    "real_task_local_dependency_origin_before_after_witnesses_reviewed": true
+  },
+  "map_checks": {
+    "all_current_sources_and_inputs_present": true,
+    "all_606_finite_prerequisite_files_present": true,
+    "finite_accepted_rows": 6336,
+    "finite_disjoint_jobs": 46,
+    "canonical_absolute_paths_without_parent_traversal": true,
+    "mutable_registries_not_pinned": true,
+    "frozen_protocol_exact_match": true,
+    "criteria_sha256": "43d61f8400117dfb775e63be2d4c841acaba9481b6967c173c3f5b9060b0f3b0",
+    "original_failed_CPU_and_refusal_evidence_preserved": true
+  },
+  "local_reconciliation": {
+    "exact_matches": 3711,
+    "physical_only_unverified_locally": 873,
+    "physical_only_breakdown": {
+      "deployed_host_paths": 872,
+      "candidate_native_executable": 1
+    },
+    "known_local_mirror_difference": 1,
+    "all_local_4585_verified_claimed": false,
+    "switcher_exception": {
+      "canonical_sha256": "a9073add90e34883cdacb23c9d81fcab5bcb52914ca7dea4e30eddf64211b94a",
+      "preserved_local_mirror_sha256": "dd574a55e0f2fa0f241efcf070c5e761914a27943291f055c2e76026231342e1",
+      "exact_physical_copy": "../build-v1/physical-provenance/switcher.py",
+      "physical_copy_sha256": "a9073add90e34883cdacb23c9d81fcab5bcb52914ca7dea4e30eddf64211b94a",
+      "provenance_receipt": "../build-v1/PHYSICAL_SWITCHER_PROVENANCE.json",
+      "provenance_receipt_sha256": "e385440bc2a980278fa3d2998880c330a5aa23d8722fc7f68b0b0de579a5c04d",
+      "local_mirror_untouched": true,
+      "fresh_physical_match_required": true
+    }
+  },
+  "factor": {
+    "N0_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "N1_native_sha256": "cab346ccefedad1d2b80384db215325a445f474729812ea288a829d843007da4",
+    "selected_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "canonical_window_sha256": "170722b54e0245e7268bffe2f39f8e30bee2fc79c056544f4f9b03942c48f25f",
+    "same_pack_drafter_full_policy": true,
+    "old_IQ2S_import_closure_is_dependency_only": true
+  },
+  "protocol_review": {
+    "separate_N0_then_conditionally_N1": true,
+    "N1_requires_current_accepted_and_fully_audited_N0": true,
+    "four_frozen_states_and_exact_token_float_state_checks": true,
+    "no_tolerance_alignment_or_cap_reduction": true,
+    "startup_soft_wall_cleanup_seconds": [
+      800,
+      1000,
+      1200,
+      200
+    ],
+    "private_memory_GiB": 80,
+    "poststop_available_GiB": 88,
+    "context": 1048576,
+    "output_allowance": 262144,
+    "request_cap": 32768,
+    "effort": 100,
+    "prospective_private_API_native_window_exit_zero_and_selected_restoration_required": true,
+    "four_separate_bounded_finite_scans_then_assembly_and_N1_comparison": true
+  },
+  "preserved_limitations": [
+    "The original Mac FIRST CPU failure remains failed; R2 is a distinct qualification.",
+    "Linux metadata refusal occurred before its first R2 CPU child. Its initial stderr was a tool observation, not a retained raw pipe file.",
+    "The extra closure observer context failure remains failed; corrected downstream saved closure is separate.",
+    "CPU finite coverage and synthetic full-cap HTTP controls do not establish whole-model equality, speed, general quality, near-full-context operation or deployment readiness.",
+    "Per-host dependency versions and native package bytes differ and are recorded explicitly.",
+    "Historical private API exit-status gaps are not retroactively repaired by the prospective current lifecycle."
+  ],
+  "required_before_any_model_action": [
+    "Freeze final metadata while retaining every reviewed draft file pin unchanged; review any additional non-review content separately.",
+    "Fresh physical verification of every final file pin plus qualification self hash before project imports, including all physical-only files and the switcher canonical path.",
+    "Fresh source-defined current selected identity, idle/default/health, ownership, phase, kernel, previous-window, root, download pause and namespace checks.",
+    "Separate single-arm reviewer admission; actual post-stop RAM and private resource gates still mandatory."
+  ],
+  "model_GPU_admitted": false,
+  "deployment_admitted": false,
+  "automatic_next_arm_admitted": false,
+  "source_or_CPU_rerun_required_by_this_map_review": false,
+  "reviewer_live_actions_performed": false
+}

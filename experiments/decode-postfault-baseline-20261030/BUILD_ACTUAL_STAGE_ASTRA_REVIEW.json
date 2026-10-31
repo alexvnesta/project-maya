@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-30T09:46:16.409465+00:00",
+  "decision": "POST_LINK_DEPENDENCY_OBSERVER_REFUSAL_CONFIRMED_NO_BUILD_REPEAT",
+  "corrects_own_design_sha256": "4eab41a7b5a8270cfe59bceeed166a9bc3d9aea311531e2ae36b69c5fc06ca37",
+  "own_previous_design": "Superseded andneverimplemented. Based on parentpreliminarystage report withrawpending; no compile-onlycontinuation should beexecuted.",
+  "actual_children": {
+    "deps": {
+      "pid": 2961973,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "elapsed_s": 0.26668690517544746
+    },
+    "compile": {
+      "pid": 2962028,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "elapsed_s": 1.7690995768643916
+    },
+    "link": {
+      "pid": 2962078,
+      "returncode": 0,
+      "error": null,
+      "cleanup_errors": [],
+      "elapsed_s": 0.16679070401005447
+    }
+  },
+  "compiler_stderr": "Only ptxas info:0bytesgmem. Allother compiler/link stdout/stderr empty.",
+  "dependency_observation": {
+    "compiler_inputs": 280,
+    "new_health_sources": {
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f"
+    },
+    "all278originaldep_digest_entries_match_inherited_q": true,
+    "ld_unique_inputs": 36,
+    "original_ld_inputs_pinned_in_inherited_q": 35,
+    "new_object": "health.o, pendingactualartifacthash verification",
+    "ld_logical_rules": 52,
+    "empty_phony_rules": 51,
+    "cause": "Source dependency_pins splits theentire .d atfirstcolon, treating subsequent validld phony targettokens endingcolon as malformed. Allthreeactualchildren hadalreadycompleted0. This is a downstreamauditor formatdefect, not compiler/native/GPUfailure."
+  },
+  "preservation": [
+    "Originalbuildcontrollerexit1/HOLD remains, originalbuild-FIRST receipt.json absent andmustnotbe createdretroactively.",
+    "OriginalpreliminaryRootdiagnosis andAstra continuationdesign retained withexplicitcorrections.",
+    "OriginalheadGPUassertion/refusedstartup remainunchanged. No sourcechange orbuildrepeat."
+  ],
+  "next": "A separate data-only audit mayuse unchangedalreadyqualified selected_build.dependencies on savedhealth.link.d; verify actualall36inputs againstoldq plusnewhealth.o, source/tool/artifacthashes, allrawchildren andlockrelease/currentstoppedguard. Preservefullinvocation/program/result asnewaudit. No newparser orre-run ofCPU/buildcontrols isnecessary forunchangedhelper+newdata. Then separateGPUadmission review.",
+  "source_sha256": {
+    "recovery.py": "f8dc0d49d695cccf51e652b98a4b36c4556c744d57beb88ef537eada192ecf8e",
+    "health.cu": "c780d71c56ed66f7361e514cbf1ab5edef5e6162e91bc975110e4be59175c5ee",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "test_contract.cpp": "e11174d915794b4c2bd4065ea855c6cde05d25b4043b9600754a8f0662811c96",
+    "test_recovery.py": "8c12e765cd1f04f71e54cf7cb9393efee2053d6c586b8424882727e6c2ba0a22",
+    "qualify_cpu.py": "5d6f97807bdc0780942e5c234bc6995944fb87531e8d0afbffeb9c52d6b36d83"
+  },
+  "raw_evidence_sha256": {
+    "build-FIRST/compile-exit.json": "f5db3413b9ecb7fd2420a123c5a469d0bbb5fdee82d1460c033f4534b8ea60f1",
+    "build-FIRST/compile.stderr": "2ef72a8a5c7aa5ee85b4ae329a78228de740e971dcce6a52f2b8b6da1af2f0cc",
+    "build-FIRST/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/deps-exit.json": "767a5fbff55b82058da1f3da1122dd821219114bc98f782910d65345d83c251b",
+    "build-FIRST/deps-inputs.json": "2649774445c3cab72ad3573f81055173a203d865e58039143d38caf7b535115b",
+    "build-FIRST/deps.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/deps.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/health.headers.d": "6c7e9384616246cf0a9f70e63649221a8cccb17be1f320cd5225d714d9bfc52b",
+    "build-FIRST/health.link.d": "e8cce536a500dd0eefda92cd0bc4a3aa20907ca3a26b0499b6026aa7e3a4a1ac",
+    "build-FIRST/link-exit.json": "36c3707df23a80284be00e06d880948e5b76f88e70b593c71aaaeab4b6ff5ae8",
+    "build-FIRST/link.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/link.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-FIRST/plan.json": "fd6cfa473c016c23d6eb6275606f6ef20f84454765afb3e76ce9290d7f7470ac"
+  },
+  "root_correction_sha256": "fe2f7dfa60249438eab279c699c76b0b48f3840ece2ca414f8b6cccbaa514ee1",
+  "GPU_admitted": false,
+  "reviewer_execution": "LocalrawJSON/text/hash inspection only, no import/test/compiler/helperexecution/remote/GPU/service action."
+}

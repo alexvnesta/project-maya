@@ -1,0 +1,100 @@
+{
+  "utc": "2026-10-30T10:20:43.473242+00:00",
+  "decision": "CONDITIONAL_SINGLE_SYNCHRONIZED_BASELINE_HEALTH_WINDOW_ONLY",
+  "single_window": true,
+  "baseline_only": true,
+  "source_sha256": {
+    "recovery.py": "5c0037d71f6ba61ae36b1ac02d9404cba748fb77db1d04b4ab45b6d40bd59084",
+    "health.cu": "e53b38389d0a507d9efc434cc8fbee6ea28f55aad4d131383ec4dae4c2a77194",
+    "health_contract.hpp": "caa1579f3a87a4bd55d69f96a5307c1421134f2c15d022b4505f6f984cae149f",
+    "test_contract.cpp": "e11174d915794b4c2bd4065ea855c6cde05d25b4043b9600754a8f0662811c96",
+    "test_recovery.py": "ebed6721d2c619a1eb87d31c0d751a0748ff316e9aedf0a4a7a89c9dfe4c50ec",
+    "qualify_cpu.py": "07020b77db94b0f435d09f6aecba1252ae1399b7f8142cc0c14e64c699c6ddb6"
+  },
+  "failed_window_sha256": "ba433b6a6e349b96b9d3697bb6bffd25e54e365dd0caa89822733ace13d89bbe",
+  "earlier_failed_window_sha256": "49a395da2a435562498e058bcf0da56dcf50ec4a0f0aae96dba745971759ed40",
+  "clean_window_sha256": "73a5570f9e4022755a753a35c5e50a7be65bc8bcffcee5da59358222277e2e54",
+  "binary_sha256": "250157320079ca4a263e152ecd09dd7b7c8f2a9504e583a0f64e6c53a7a67b4c",
+  "identity_observer_sha256": "7869ca8561c85f8770321a07a87c2b55bbbe7382b4cafe5f7a2613b715ad9d7e",
+  "input_map_path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/GPU_INPUT_MAP.json",
+  "input_map_sha256": "9855deb4e3ece337a778a9995836a316fb4a3754d8c1d8ad616562ed7473d449",
+  "input_map_file_count": 2334,
+  "all_prior2285_pins_retained": true,
+  "canonical_digest_conflicts": [],
+  "lexical_aliases": 16,
+  "original_qualification_sha256": "e8fa4acbcbaa9482f8a5b6695e562596400c91004329b2503220e13d3bc97e9e",
+  "source_review_sha256": "92676c2d30c50171dd6c9efcc1bd8f317cb9a9f2adf14cec6495b1753b611959",
+  "CPU_review_sha256": "f20382a3060fb281266f16215964b3de85ae1ad8e2ebae94862eaf5c7741e4a8",
+  "actual_build_audit_sha256": "8976e729a2250934dc1c32a52703b2d39fec514704a5ee0a616b0ee1fc4f71ae",
+  "independent_build_review_sha256": "4edacdc5b27b2708c3e68b5e28bcd401c599a66a66494c488498de3da0845dc7",
+  "renewed_human_authorization_sha256": "59487eccda7577d5af10152b84e8192e3f5d3f8481348cefffb63923ce6fc864",
+  "canonical_window_sha256": "170722b54e0245e7268bffe2f39f8e30bee2fc79c056544f4f9b03942c48f25f",
+  "canonical_coordinate_sha256": "276a78f6f62d9ae7760e9b436863a6279715d58ea0960bb396bdb7adcc3776dd",
+  "command_template": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-B",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/recovery.py",
+    "entry",
+    "--admission-pin",
+    "<SHA256_OF_THIS_FILE>"
+  ],
+  "prior_clean_window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T024056Z.json",
+  "latest_failed_window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T095101Z.json",
+  "earlier_failed_window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T041001Z.json",
+  "clean_telemetry_sha256": "1a2ed5a8fd215a20b5a117a4f8a024f45e44e6f2dd0f5bab837aba1eb68c532e",
+  "maintenance_hold_sha256": "e180ec3848c3f1a099836927cf974a8e9d2e7cc0fbeef7460668c7dff8a9561c",
+  "allowed_fixture": {
+    "binary": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/postfault-baseline-recovery-v1/health-sync-v2/build-FIRST/baseline-health",
+    "argv_per_device": [
+      "--baseline-health",
+      "0 or 1 in that order"
+    ],
+    "devices": [
+      0,
+      1
+    ],
+    "analytic_cases_per_device": 12,
+    "Q8_reader_check_each_device": true,
+    "K": 5120,
+    "N": 129280,
+    "columns": [
+      1,
+      2,
+      4
+    ],
+    "original_GGUF_IQ_only": true,
+    "head8_or_other_candidate_execution": false,
+    "model_requests": false
+  },
+  "bounds": {
+    "canonical_window_s": 1200,
+    "soft_s": 1000,
+    "cleanup_reserve_s": 200,
+    "fixture_CPU_s_each": 120,
+    "fixture_wall_s_each": 120,
+    "fixture_AS_limit": null,
+    "nice": 15,
+    "root_start_GiB": 132,
+    "root_runtime_GiB": 120,
+    "swapout_delta_strictly_less_than_bytes": 1073741824,
+    "log_budget_GiB": 4
+  },
+  "mandatory_immediate_action_conditions": [
+    "Physically verify all 2334 map files, map self, this admission self, and separately bound independent build review after metadata staging. No frozen source change is permitted.",
+    "Fresh V2 stopped guard must show exact failed27f9/MainPID0/Result exit-code, canonical production stopped/current native absent/latest095101 custody, no competing/private/build/pending/restoration phase, no GPU owners/two free GPUs, root132, clean kernel, and existing experiment.lock available.",
+    "Latest095101 and earlier041001 failures, refused27f9 startup, actual clean024056 telemetry and maintenance policy remain byte-unchanged. The new witness does not retroactively clear any prior failure.",
+    "GPU-FIRST must be absent and owned real namespace. Claim separate canonical diagnostic custody without overwriting old failure records or foreign owners.",
+    "Call unchanged qualified Host.launch_owned with explicit clean024056, the exact entry argv above, and timeout1200 once. Canonical window owns the lock/cgroup; do not directly launch the fixture or create another GPU owner.",
+    "Both physical SM80 devices must remain visible. Original Q8_BATCH1/CHECK1 aliases only; no experimental head8, Q8 sharing, IQ2 persistent or IMMA settings.",
+    "Capture each actual PID/exe/argv/startticks/cgroup/exit and complete stdout/stderr. Require Q8 reader check and exact 12 analytic PASS lines plus correct summary for each device. Any fault stops; GPU1 must remain UNRUN if GPU0 fails. No automatic replay.",
+    "During the window perform only lightweight owned receipts. No unrelated source reviews/hashing/staging/heavy CPU or model work.",
+    "After completion independently review actual kernel capture, resources, swap, full raw case outputs, cleanup, and canonical test return/resume status. Do not manufacture pass fields.",
+    "No service start/restoration under this admission. The human has already authorized unchanged baseline restoration if clean; the next operational step needs actual clean terminal review and a separate recovery decision, not another human permission request."
+  ],
+  "scope_limit": "This is a new separately qualified synchronized diagnostic fixture. It is not a model/math/timing or whole-hardware certification. A pass would not establish the exact cause of either previous failure.",
+  "current_result": "UNRUN",
+  "GPU_replay_allowed": false,
+  "restoration_admitted": false,
+  "historical_failures_preserved": true,
+  "reviewer_actions": "Local source, raw build, CPU proof and map review only; no imports/tests/compiler/remote/GPU/service execution."
+}

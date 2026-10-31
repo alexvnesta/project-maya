@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-29T19:51:21.523219+00:00",
+  "status": "POST_PROSE_YIELD_SELECTED_OWNER_PRESERVED_NO_INFERENCE",
+  "binding": {
+    "invocation": "f2b87ac5943049aca1ca6eff01607397",
+    "main_pid": 2427755,
+    "native_pid": 2427790,
+    "native_start_ticks": 156575799
+  },
+  "prose_reservation_active": false,
+  "active_gpu_experiment": false,
+  "health": {
+    "status": "ok",
+    "model": "deepseek-v4.1-flash-iq2-xs",
+    "loaded": true,
+    "max_context": 1048576,
+    "images": true,
+    "busy": false,
+    "switcher": {
+      "active_model": "deepseek",
+      "default_model": "deepseek",
+      "inflight": 0,
+      "waiting": 0,
+      "fault": null
+    }
+  },
+  "work": {
+    "active": 0,
+    "queued": 0,
+    "admission_reserved": 0
+  },
+  "kernel_clean": true,
+  "root_GiB": 837.5462799072266,
+  "model_restarts": 0,
+  "no_new_request": true,
+  "source": "Actual qualified owner guard, kernel interval19:47:26UTC, health/work GET; no inference, service change or config modification."
+}

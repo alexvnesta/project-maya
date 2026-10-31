@@ -1,0 +1,77 @@
+{
+  "decision": "CONFIRMED_VALIDATOR_SPLIT_METADATA_ASSUMPTION_REPAIR_PROPOSED_ONLY",
+  "evidence_sha256": {
+    "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/constructor-FIRST-header-diagnosis.json": "4645b293efb1a2619d92bc63cbbb42568872b4b18007053e57a7b1b82aa8206c",
+    "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/construct-CPU-FIRST/child.json": "28894a5dc4b84fea25a258edee8f36b8997fa04e0afeb989d07a1bf5671d7504",
+    "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/construct-CPU-FIRST/child.log": "3b409b32cbdce57f8b627afc0950b613160feae31c9a2399121399114b3ad8e8",
+    "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack_guard.py": "774610e0e1d85834aefaf1192e5676ac02dbf5797bd745405a3a1efd094956dc",
+    "native-vision-v2/runtime/tools/dsv41/pack_gguf.py": "6784a50c4252f0d3af36cf04f5d212524dbf0800dac2d3ea633290d044a18fdf",
+    "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/construct-qualification-FIRST.json": "0e9fe26ae5f3f132d3dbefb4cceac3cb165ac5a8ff473b2bd299547a65d7cb98",
+    "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/construct-contract-FIRST.json": "b7a25b3db67e30af7ed1ef4b3746093b5b476e3fc144eb47648c575ce8eda02e"
+  },
+  "failure": {
+    "child": 3354540,
+    "returncode": 1,
+    "seconds": 1.4200115811545402,
+    "cleanup_errors": [],
+    "actual_gate": "pack_guard.header_set line156 requires general.architecture on every shard",
+    "pack_output_created": false,
+    "pack_output_basis": "Failure stack is before construct out.mkdir; Root physical absence observation, not a local payload check.",
+    "native_or_GPU_model_or_service_fault": false,
+    "status_preserved": "Original constructor rc1 remains failed, no regrade."
+  },
+  "observed_headers": {
+    "base_architecture": "deepseek41",
+    "later_metadata_keys": [
+      "split.count",
+      "split.no",
+      "split.tensors.count"
+    ],
+    "later_architecture_is_absent_not_explicit_null": true,
+    "split_indexes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "split_count": 6,
+    "tensor_counts": [
+      33,
+      35,
+      35,
+      939,
+      1,
+      1
+    ],
+    "total_directory_tensors": 1044,
+    "diagnostic_only": true,
+    "geometry_values_not_disclosed_by_diagnostic": "Header summary lists model/tokenizer keys but not their full values; later validators remain necessary."
+  },
+  "source_diagnosis": [
+    "The pinned packer6784 uses model_kv(gs) to select the first group with architecture deepseek41, then consumes all six explicitly selected shard tensor directories. It does not require redundant architecture on every shard.",
+    "Our stricter wrapper incorrectly rejects the actually published later split-only headers. Existing synthetic tests did not include this exact metadata distribution. The evidence establishes a validator policy defect, not malformed published weights or model incompatibility."
+  ],
+  "minimal_repair": [
+    "Require first ordered shard metadata to contain architecture exactly deepseek41 and all mandatory base tokenizer/model geometry fields. Do not search later shards to compensate for an absent/wrong base.",
+    "For shards1..5, allow architecture key absence; if the key is present require exact deepseek41. Explicit null, wrong type or conflicting value must fail.",
+    "Retain all current shard-count/index/order/total tensor count, duplicate tensor, header byte/array bounds, alignment, offsets/OOB/overlap/type, repeated geometry/tokenizer consistency, complete tensor role/shape, drafter/vision, output byte map and asset-stat gates.",
+    "Use distinct pack-v2 source/tests/drivers/CPU attempt/qualification/construction-contract namespace; preserve all pack-v1 source/proofs/failed attempt and immutable qualification.",
+    "Retain only the previously frozen output target Q/pack-v1/pack-FIRST because it was never created. In new source use an explicit exact output constant; adapt BOTH guard and constructor assertions/contract generation. Do not allow arbitrary output selection, adoption or overwrite."
+  ],
+  "required_controls": [
+    "Positive exact distribution: full metadata shard0, split-only shards1..5. Keep prior repeated-identical metadata positive.",
+    "Missing or wrong base architecture; later explicit null/foreign architecture; later geometry/tokenizer contradiction all fail.",
+    "Retain invalid split index/count/order/total, duplicate tensor and OOB negatives.",
+    "Actual new constructor contract permits only exact still-fresh old pack output but uses distinct new attempt/receipt paths; old failed attempt cannot be overwritten or regraded.",
+    "Full same-agent+Root read of changed sources/all tests, exact both physical bounded CPU proofs and fresh immutable metadata qualification before a separate new constructor admission."
+  ],
+  "prohibited_in_this_review": [
+    "No implementation/source changes",
+    "No imports/tests/parsing of actual assets by reviewer",
+    "No constructor replay or new construction admission",
+    "No model/GPU/service/deployment action"
+  ],
+  "next_scope": "A separately qualified metadata-only repaired construction; all future pack/encoding/capacity/model checks remain unchanged."
+}

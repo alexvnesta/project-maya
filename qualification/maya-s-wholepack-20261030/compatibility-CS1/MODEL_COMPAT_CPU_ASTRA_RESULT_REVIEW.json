@@ -1,0 +1,283 @@
+{
+  "utc": "2026-10-30T18:15:09.746563+00:00",
+  "decision": "BOTH_HOSTS_179_CPU_CONTROLS_REVIEWED_NO_MODEL_ADMISSION",
+  "passed": true,
+  "controls_each_physical_host": 179,
+  "source_count": 13,
+  "input_count": 855,
+  "source_sha256": {
+    "ms_config.py": "8bb87901179135bf01f852b7a4e5c2a57dadd4033199ece802cb624196484176",
+    "ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "ms_runtime.py": "ea789de73b4a9b8cb3b8887360bc40573efc600544f1c47980ee25deb22860ca",
+    "ms_controls.py": "bec61db8733964af590f12d84044d6dbe6c30ea36014e394da64dc95b48bb20a",
+    "ms_quality.py": "c704434532b40597ee8609000104477f76eb3d765ee61c00457e135faff91998",
+    "test_ms_runtime.py": "46b90563c75d5ceb4c295eaa9df7e4c106a3f435a942f258b11a075ccac3b2de",
+    "test_ms_controls.py": "0218c2cb03c87b6ffd873af121126b77fdb8ffbda55d2bab8a0ee74016b4f483",
+    "test_ms_quality.py": "8a131223621cc6239ba5886d69845c1529a3fd197d9ce332e7c742deb7f6c2dc",
+    "test_ms_http.py": "d0c0ea1eab32d136453d6250212d07827a90689e9e9232e4368d78e945f53825",
+    "ms_compat.py": "a5ff04498c07b03ea57fad0adc57b914c80c6f57377841f6c2682d233bfbe6d3",
+    "test_ms_compat.py": "0d2dd32f58699a483aad8a439f1894d749bee2f80f66be0021d23876f2f38b6a",
+    "test_ms_pack_state.py": "900a51b9749f267b815ac079abdd7e4540ab8f7943575dd11e141a562e401206",
+    "ms_model_cpu_compat.py": "1845a314a48cb61f22f7bd35ccb5837de5d95f14497f74f8a402fb1f4d19e42e"
+  },
+  "source_review_sha256": "929300180873adc7d8907371593cc64335caa3826877031e851cdc6288be71fe",
+  "root_result_review_sha256": "a6e42b45b97cb5490d262d853b6057a0df28074fd9e78e4ae4773f6a0b863a8c",
+  "raw_sha256": {
+    "boundary-CPU-COMPAT-FIRST-darwin": {
+      "receipt.json": "98c57287cdd4659991a43b7be1230404622c78dc07e673ec2cfdf7301d23d6f3",
+      "child.json": "14a1d1c7ab020e111d95e9e8a915cd797c687d1e06566db525e07f7c675e2b05",
+      "child.log": "bc0b0fa5292385da76d8af44adfd6bad9c632134812bfe5ce120d1d2473ec515"
+    },
+    "http-CPU-COMPAT-FIRST-darwin": {
+      "receipt.json": "5050c392c48f7513e8262e07d795b33b5a9f9f8bdfbc33ce1a26de8905c43891",
+      "child.json": "ba68043e7afe8459223a06c312b15aac5f2ac22b6a6bd93f99dc0acb84a44cfc",
+      "child.log": "81a09e009e435e782a33f3bba6a660288c8f046a96820ab3736b00122e37a574"
+    },
+    "compatibility-CPU-COMPAT-FIRST-darwin": {
+      "receipt.json": "8f949eb8c957feb8dac2c1213c3ab75f035e39314bb4a3b0ff7b90e956bde844",
+      "child.json": "9e850c3e1ce861d4f8e0bb0ccff71be680a052a0f9f327e00f469a6317ae4494",
+      "child.log": "71d14c25ba4bdca42498a9293867f1754a799eab3bc319c544e5e6e8d81e8e16"
+    },
+    "packstate-CPU-COMPAT-FIRST-darwin": {
+      "receipt.json": "1477484630b030189e210267ca99966a331e3efa24726f267bf0ebf7bfecee59",
+      "child.json": "1a053fa5acbf3f9153e4a1a8143b053dba906dd2909a08acf66116a4570a2e38",
+      "child.log": "f8852254f86100ff850c48081e12b510e29e7bcb552b689dc1027073e2a0b2c2"
+    },
+    "boundary-CPU-COMPAT-FIRST-linux": {
+      "receipt.json": "98f5642cf72f54768789c7c4fe1732a6b5fc0b327ef88f2e7e9be3154a98dba4",
+      "child.json": "21724e599739ae739a06e6992d3e4ad5efcd1015201c1aab1480f2843d8fa6e8",
+      "child.log": "3aa4d0e1c987004779cc423bc996e8c622e1c84cda99fb9aa799980315788b9f"
+    },
+    "http-CPU-COMPAT-FIRST-linux": {
+      "receipt.json": "ea4787f39512d3c9a359fdccd73b4e3c0233fa5c88a910ea2be4f1bb5cbc3db3",
+      "child.json": "162c8af063f5c46bf4d4409141f786af5f7d6306d00163476afeae2ace0f33f2",
+      "child.log": "535d2bbb0504ab9346879eba32566b367b76320b49afa9c7934bc58974d98049"
+    },
+    "compatibility-CPU-COMPAT-FIRST-linux": {
+      "receipt.json": "7581b805735dd1b5ac24280bb75fcd29d86dd19b1eb473b957be8189b7324fb7",
+      "child.json": "0052aef01e1ce8d2e8a46ad298d25cc533ec7d30fc0d957ee41c6fccdcc0581b",
+      "child.log": "a7096b159b0fd952cc5a761ef94eedbbaa20857bf710ec2aef0a121fcf7e30a5"
+    },
+    "packstate-CPU-COMPAT-FIRST-linux": {
+      "receipt.json": "9578ffe327ca703d6e31f8fd5c9b4d71ae77676e7eae2de33c458c1137f9600a",
+      "child.json": "26d9bc787871105d0c15c12523cf0beac3356ee45dc499b41c0e5518a05a4715",
+      "child.log": "2c7b4693ab1fde3f6f9b06ae2a4060ae39a621a8bdfae3805ec04d05b3b97c51"
+    }
+  },
+  "groups": {
+    "darwin": {
+      "boundary": {
+        "controls": 143,
+        "child_pid": 70201,
+        "returncode": 0,
+        "wall_seconds": 1.319704958004877,
+        "actual_limits": {
+          "CPU_seconds": [
+            30,
+            30
+          ],
+          "Linux_AS_bytes": null,
+          "nice": 15,
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MALLOC_ARENA_MAX": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "error": null,
+        "cleanup_errors": []
+      },
+      "http": {
+        "controls": 2,
+        "child_pid": 70600,
+        "returncode": 0,
+        "wall_seconds": 6.847976749995723,
+        "actual_limits": {
+          "CPU_seconds": [
+            30,
+            30
+          ],
+          "Linux_AS_bytes": null,
+          "nice": 15,
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MALLOC_ARENA_MAX": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "error": null,
+        "cleanup_errors": []
+      },
+      "compatibility": {
+        "controls": 28,
+        "child_pid": 70276,
+        "returncode": 0,
+        "wall_seconds": 0.7750871249591,
+        "actual_limits": {
+          "CPU_seconds": [
+            30,
+            30
+          ],
+          "Linux_AS_bytes": null,
+          "nice": 15,
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MALLOC_ARENA_MAX": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "error": null,
+        "cleanup_errors": []
+      },
+      "packstate": {
+        "controls": 6,
+        "child_pid": 70482,
+        "returncode": 0,
+        "wall_seconds": 0.43450141599169,
+        "actual_limits": {
+          "CPU_seconds": [
+            30,
+            30
+          ],
+          "Linux_AS_bytes": null,
+          "nice": 15,
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MALLOC_ARENA_MAX": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "error": null,
+        "cleanup_errors": []
+      }
+    },
+    "linux": {
+      "boundary": {
+        "controls": 143,
+        "child_pid": 3402452,
+        "returncode": 0,
+        "wall_seconds": 0.689317662967369,
+        "actual_limits": {
+          "CPU_seconds": [
+            30,
+            30
+          ],
+          "Linux_AS_bytes": [
+            536870912,
+            536870912
+          ],
+          "nice": 15,
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MALLOC_ARENA_MAX": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "error": null,
+        "cleanup_errors": []
+      },
+      "http": {
+        "controls": 2,
+        "child_pid": 3402734,
+        "returncode": 0,
+        "wall_seconds": 2.381058630067855,
+        "actual_limits": {
+          "CPU_seconds": [
+            30,
+            30
+          ],
+          "Linux_AS_bytes": [
+            536870912,
+            536870912
+          ],
+          "nice": 15,
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MALLOC_ARENA_MAX": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "error": null,
+        "cleanup_errors": []
+      },
+      "compatibility": {
+        "controls": 28,
+        "child_pid": 3402571,
+        "returncode": 0,
+        "wall_seconds": 0.5759729261044413,
+        "actual_limits": {
+          "CPU_seconds": [
+            30,
+            30
+          ],
+          "Linux_AS_bytes": [
+            536870912,
+            536870912
+          ],
+          "nice": 15,
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MALLOC_ARENA_MAX": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "error": null,
+        "cleanup_errors": []
+      },
+      "packstate": {
+        "controls": 6,
+        "child_pid": 3402663,
+        "returncode": 0,
+        "wall_seconds": 0.4239279890898615,
+        "actual_limits": {
+          "CPU_seconds": [
+            30,
+            30
+          ],
+          "Linux_AS_bytes": [
+            536870912,
+            536870912
+          ],
+          "nice": 15,
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MALLOC_ARENA_MAX": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          }
+        },
+        "error": null,
+        "cleanup_errors": []
+      }
+    }
+  },
+  "all_eight_full_logs_and_raw_child_receipts_read": true,
+  "ordered_log_and_receipt_IDs_match_source_AST": true,
+  "all_eight_exact_source_input_maps_match": true,
+  "findings": [],
+  "limitations": [
+    "CPU contracts and actual b1 API with MockEngine only. Synthetic displayed token rates are not model performance.",
+    "One-shot 44-token input preservation/config/custody/fence/lifecycle/cancel boundaries are exercised; actual candidate allocation and 1M/output execution remain untested.",
+    "Actual pack-state metadata geometry/file-name checks do not prove RAM/VRAM fit.",
+    "The independent terminal auditor34 controls are still unexecuted and need separate both-host source/CPU qualification.",
+    "Historical failed and passed proofs remain unchanged."
+  ],
+  "GPU_or_CS1_admitted": false,
+  "reviewer_imports_tests_remote_or_model_actions": 0,
+  "metadata_review_note": "Initial local report assembly encountered a nested-map TypeError before creating this report; raw proof validation had passed. Corrected only metadata flattening, no tests or source execution."
+}

@@ -1,0 +1,69 @@
+{
+  "helper_source_sha256": "136e9572f535ae42bff54af8bddc851012bfaec005432606c169bab8688c2e9c",
+  "inputs": [
+    {
+      "arm": "N0",
+      "offset": 517120,
+      "bytes": 517120,
+      "row_sha256": "556cdacf5e5a32d1babab23c3618f2b543d41011521ac6e07c6cae30f36aa4f1",
+      "terminal_sha256": "38ddffeb11a706bd70501a24cad3b95aaea043dbc8f4c63da7364f8e3d093bf3"
+    },
+    {
+      "arm": "N1",
+      "offset": 517120,
+      "bytes": 517120,
+      "row_sha256": "556cdacf5e5a32d1babab23c3618f2b543d41011521ac6e07c6cae30f36aa4f1",
+      "terminal_sha256": "b0ea37f38e02e6421dbaf4fcd384faffdace18661b8dae7268b7641ecd2f3d31"
+    }
+  ],
+  "shared_first_token": 2581,
+  "row1_bytes_equal": true,
+  "distribution_diagnostic": {
+    "values_equal": true,
+    "argmax_equal": true,
+    "KL_baseline_to_candidate": 0.0,
+    "KL_candidate_to_baseline": 0.0,
+    "total_variation": 0.0,
+    "centered_logit_RMS": 0.0,
+    "centered_logit_max_abs": 0.0,
+    "constant_logit_shift": 0.0,
+    "centered_logit_p99_abs": 0.0,
+    "baseline_top_ids": [
+      1309,
+      1438,
+      1353,
+      50249,
+      2231
+    ],
+    "candidate_top_ids": [
+      1309,
+      1438,
+      1353,
+      50249,
+      2231
+    ],
+    "baseline_top_probabilities": [
+      0.9996530656843501,
+      0.00033930696584838743,
+      1.166388817853201e-06,
+      7.336103066392403e-07,
+      6.980532247336005e-07
+    ],
+    "candidate_top_probabilities": [
+      0.9996530656843501,
+      0.00033930696584838743,
+      1.166388817853201e-06,
+      7.336103066392403e-07,
+      6.980532247336005e-07
+    ],
+    "baseline_top2_margin": 7.988258361816406,
+    "candidate_top2_margin": 7.988258361816406,
+    "acceptance_threshold": null,
+    "automatic_equivalence_or_quality_pass": false
+  },
+  "input_bytes": 1034240,
+  "quality_or_speed_or_equivalence_pass": false,
+  "frozen_gate_unchanged": "HOLD_TOKEN_PATH_DIFFERS",
+  "no_new_GPU_or_model_execution": true,
+  "scope": "Only the source-identifiable first output row after the shared first token in the first decode round. No later speculative-row alignment; equality does not prove hidden/KV/drafter equality."
+}

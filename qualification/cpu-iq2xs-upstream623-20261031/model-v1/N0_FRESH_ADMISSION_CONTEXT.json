@@ -1,0 +1,83 @@
+{
+  "utc": "2026-10-31T09:32:24.733921+00:00",
+  "passed": true,
+  "arm": "N0",
+  "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+  "actual_map_evidence_sha256": "37ac6430c47964582c7990a89d091c3d9a1aa2d3eb5b84788b4d96adcdc44b34",
+  "readonly_child_sha256": "ec3ebf302553e16bc8f405ff1c23c4e50770095c53df1437e609afc3cf89d004",
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "health": {
+    "status": "ok",
+    "max_context": 1048576,
+    "model": "deepseek-v4.1-flash-iq2-xs",
+    "images": true,
+    "api_key": false,
+    "image_generation": false,
+    "loaded": true,
+    "service": "strata",
+    "busy": false,
+    "switcher": {
+      "active_model": "deepseek",
+      "inflight": 0,
+      "waiting": 0,
+      "nondefault_idle_seconds": 900.0,
+      "default_model": "deepseek",
+      "fault": null
+    }
+  },
+  "work": {
+    "slots_requested": 1,
+    "slots_effective": 1,
+    "active": 0,
+    "occupied_slots": null,
+    "queued": 0,
+    "waiting": null,
+    "outside_slots": null,
+    "slots": [],
+    "groups": null,
+    "effective_rows_window": null,
+    "batch_active_rows_window": null,
+    "batch_sample_windows": null,
+    "batch_sample_rows": null,
+    "batch_sample_active_rows": null,
+    "batch_sample_span_s": null,
+    "batch_sample_age_s": null,
+    "stage_in_flight": [],
+    "stage_sample_span_s": null,
+    "stage_sample_age_s": null,
+    "requests": [],
+    "requests_omitted": 0,
+    "max_queue": null,
+    "admission_limit": null,
+    "admission_reserved": 0,
+    "admission_rejected": 0,
+    "oldest_queue_s": 0,
+    "queue_timeout_s": null,
+    "queue_timeouts": 0,
+    "client_disconnect_cancels": 0
+  },
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "previous_window": "/home/alex/strata-deepseek-test-20261024/windows/20261031T041534Z.json",
+  "previous_window_sha256": "300e8d61cdb6c7c0090dcc86c8ec2cc68d47717e12eef19558a2f061b2e8fa08",
+  "root_free_bytes": 373739470848,
+  "kernel_fault_lines": [],
+  "kernel_checked_since": "2026-10-31 08:47:00 UTC",
+  "download_paused": true,
+  "download_PID_absent": 4006139,
+  "source_or_model_changes": false,
+  "arm_attempted": false,
+  "needs_separate_same_Astra_SINGLE_N0_admission": true
+}

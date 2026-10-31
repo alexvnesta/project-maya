@@ -1,0 +1,20 @@
+{
+  "root_entire_source_and_tests_read": true,
+  "CPU_executed": false,
+  "Ubuntu_staged": false,
+  "source_sha256": {
+    "pv_audit.py": "18118961a111e7cdb7e7f89898956ebd7cf2eda2723d1f42a77e34aaa46bdf8f",
+    "test_pv_audit.py": "b750d4b59b5fac1db8a7313950657360c35b82c336be83731eeb24c0e8ad0ffb",
+    "pv_dispatch.py": "b52526ba2cde18d6c12592304ca95507511b7034cb0b14b0846eded2c0c81f59",
+    "test_pv_dispatch.py": "4f858fea5adde07d371202b37695f6f876a8bfd4f57e8747258296d2a90bee46",
+    "pv_cpu.py": "9e0fb173d27a1fdcaa38afe92d266006a22b18140de9033d5551a95d75bd7e19"
+  },
+  "criteria_sha256": "ab1f9e91d93326e20899b8f3133f5c016360245b16a71f41dda5564913157a1b",
+  "notes": [
+    "Main3 exact original cases and lifecycle4 independent raw controls; no dump/FSIZE; tool API finish tool_calls versus native stop",
+    "Dispatcher source membership before imports; one bounded first child with actual observed+finished+parent receipts; no blind retry",
+    "Criteria exact existing5percentdecode/3percentcoldprefill matched firstpair before anytiming; no activation authorized",
+    "Before FIRST CPU add actual native unlimited FSIZE readback and strict integer cancel observed0; manually read delta",
+    "Pre-CPU sameAstra review found cancel proof extra emitted field; independently recompute/compare that exact field then rawreconcile, strict cancelled nooutput/source flag, mainpositive drafts; parent avoids target hashing after guard failure. Manual delta read, no test executed."
+  ]
+}

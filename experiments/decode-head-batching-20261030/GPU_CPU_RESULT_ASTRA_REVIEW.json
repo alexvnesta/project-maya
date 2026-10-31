@@ -1,0 +1,96 @@
+{
+  "utc": "2026-10-30T03:55:37.284066+00:00",
+  "decision": "FIRST_HEAD_GPU_CONTROLLER_109_CPU_CONTROLS_EACH_HOST_REVIEWED_NO_GPU_ADMISSION",
+  "passed": true,
+  "source_sha256": {
+    "gpu_check.py": "7869ca8561c85f8770321a07a87c2b55bbbe7382b4cafe5f7a2613b715ad9d7e",
+    "gpu_entry.py": "e354ff24eea2049dd8f918fca461e5fd88201c46053da93ba696e807d594c19c",
+    "test_gpu_check.py": "adf401fe7609a8dab5ec6d9a7f22ebd19051f011c3b0e17e5d68afea9b71111c",
+    "test_driver.py": "2c793f5ec2dcf02ca98b0e2d8cae0d26a3491e828a28c97640f664f169f8a848",
+    "qualify_gpu_cpu.py": "a0f2c1ef856845d9720b079bae1a11db15d0e7d66fff34829492216c0f20a385"
+  },
+  "source_input_sha256": {
+    "decode-optimization-20261028/head-batching-v1/head_build.py": "5ad8adba6085391f069f4565a80b29e375c929a8279f37a33bd58a823e07f1d4",
+    "decode-optimization-20261028/head-batching-v1/head_startup.py": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "decode-optimization-20261028/head-batching-v1/test_head_startup.py": "3040c6a8be1b8f008b38e05a183a04177c1c9efa2db295140b8771a7330f5072",
+    "decode-optimization-20261028/head-batching-v1/qualify_startup_cpu.py": "852e8186d38cae3e509be23e4f5f7aeb706963675a95f3bb3de91be41bddba86",
+    "decode-optimization-20261028/head-batching-v1/startup-source-review.json": "a65d6be6800661ba79cdd97d531f5b96dcf8a546ef13ff3dc637d34e3f6a7f5c",
+    "decode-optimization-20261028/head-batching-v1/STARTUP_CPU_RESULT_ASTRA_REVIEW_r2.json": "d8673dc54825042d86d565ede19a8d49b280d6e428e0824e37a9c93eafb9b5a4",
+    "decode-optimization-20261028/head-batching-v1/candidate-files.json": "fb17fad28bf7d5642dedd18a55b7580847bb04a7df8d0fa99c1a35a10891987e",
+    "decode-optimization-20261028/head-batching-v1/startup-CPU-r2-darwin/receipt.json": "fc9deebe26142b382b219f763a692cb847937e802b25ad6b71a23a9fc4d18b9f",
+    "decode-optimization-20261028/head-batching-v1/startup-CPU-r2-darwin/child.json": "879875a24ea715bb2b4fdd6df35b7b1af491f79b4a6923b911d672be0886c160",
+    "decode-optimization-20261028/head-batching-v1/startup-CPU-r2-darwin/child.log": "71c72155f18eef4698df47ff33a65830376b988c172745e861ea7e4dbb1e7d6c",
+    "decode-optimization-20261028/head-batching-v1/startup-CPU-r2-linux/receipt.json": "fc9deebe26142b382b219f763a692cb847937e802b25ad6b71a23a9fc4d18b9f",
+    "decode-optimization-20261028/head-batching-v1/startup-CPU-r2-linux/child.json": "ebbbf451d5cdd6bfc7ea4df5b24322ac4148a9252e8449d00a1be9e46f9df8cf",
+    "decode-optimization-20261028/head-batching-v1/startup-CPU-r2-linux/child.log": "8247771b4b6afe52eecd673b512aadbf0a31903c5e031aee32831b2a091f1c38",
+    "decode-profile-v1/maintenance.py": "276a78f6f62d9ae7760e9b436863a6279715d58ea0960bb396bdb7adcc3776dd",
+    "decode-optimization-20261028/iq2s-persistent-v1/iq2s_build.py": "e8dcd79bd3a80cba931885149438f107d6d840693e508f738fd616fd6885f9ff",
+    "decode-optimization-20261028/selected_build.py": "b72f16217878714132fa4e161de52208567e23a7189c1e5781dc3375ec9c6491",
+    "decode-optimization-20261028/model-v1/numerical-qualification.json": "6eb179b8b7edb7a87133c4e24bd99dc2f35863cfe6ef56f8385590bf50c6315b"
+  },
+  "controls_each_host": 109,
+  "ordered_AST_review_receipt_log_ID_match": true,
+  "receipt_payloads_equal": true,
+  "children": {
+    "darwin": {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/qualify_gpu_cpu.py",
+        "--child"
+      ],
+      "pid": 7163,
+      "returncode": 0,
+      "CPU_s": 30,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "Linux_AS_MiB": null,
+      "error": null,
+      "cleanup_errors": []
+    },
+    "linux": {
+      "argv": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/head-batching-v1/qualify_gpu_cpu.py",
+        "--child"
+      ],
+      "pid": 2751575,
+      "returncode": 0,
+      "CPU_s": 30,
+      "wall_s": 90,
+      "nice": 15,
+      "CUDA_hidden": true,
+      "Linux_AS_MiB": 512,
+      "error": null,
+      "cleanup_errors": []
+    }
+  },
+  "evidence_sha256": {
+    "gpu-source-review.json": "daa2d1ec012054f55953ce8db66ddcab7566d3dd4804e69f77d8205756c71b90",
+    "GPU_SOURCE_ASTRA_REVIEW.json": "2b4eca27dbd223c71d8570c44e5410e79019e02e9016b0fce762686173ff36e2",
+    "GPU_CPU_ROOT_REVIEW.json": "58a0d9cbdeb08ee5cf1e887e3991ff737d347b9462362b402af1f187a116bacc",
+    "gpu-CPU-darwin/receipt.json": "d8aad1544bafc0b504e41fac77e2a369a9dd57a4fa0bc60d21a5c851a3576ba1",
+    "gpu-CPU-darwin/child.json": "3b13b8e75a5be65856fa8b6749cf28bb316f47a0e8595f43c59e1b3e3cf2eb71",
+    "gpu-CPU-darwin/child.log": "94622a3c9d11623b0646c7b8bc222e7911aa2d4474e23d84751c82150f2dbab5",
+    "gpu-CPU-linux/receipt.json": "d8aad1544bafc0b504e41fac77e2a369a9dd57a4fa0bc60d21a5c851a3576ba1",
+    "gpu-CPU-linux/child.json": "9ab98d49e81c5bb14a2271fbd25e6ce725509e7616153c7364ffec414f663078",
+    "gpu-CPU-linux/child.log": "8a51f5f1ac6d422c05c35154fffcaa4d9643ea1886ec9cda30ccc639be247d1c"
+  },
+  "manual_full_raw_logs_read": true,
+  "findings": [],
+  "scope": [
+    "CPU-only scripted process/lifecycle and actual temporary /proc metadata tests; no GPU/model/compiler/native execution.",
+    "Changed startup adapter composition and exact prior corrected22 proofs, pending custody/foreign-owner/no-replay/old unit-native closure contracts exercised.",
+    "Argparse error lines are expected negative controls, followed by ok; both entire logs finish Ran109/OK.",
+    "Exact385-per-device fixture ID parsing and source manifest coverage checked on synthetic stdout; actual770 GPU cases remain unexecuted/unadmitted."
+  ],
+  "requirements_remaining": [
+    "Actual head compile/link artifact and raw resource/input review.",
+    "Frozen kernel qualification with complete compiled/runtime/source/startup/rawCPU closure.",
+    "Fresh physical read-only preflight and separate single kernel-only admission."
+  ],
+  "no_model_or_timing_admission": true,
+  "previous_faults_preserved": true
+}

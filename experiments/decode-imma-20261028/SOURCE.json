@@ -1,0 +1,19 @@
+{
+  "status": "PURE_CPU_POLICY_AND_ENTRY_ADMISSION_PASSED_BOTH_HOSTS_CUDA_UNRUN",
+  "selected_base": {
+    "src/ds4/ds4_iq.cu": "883cec5e4d26f37f61bf650fc3f123bf47d8bb456b84bedfbadb0152864b8234",
+    "src/ds4/ds4_iq.cuh": "0729227655e13d6406dc2a4b54b7ec4bdd2d864229f8c55cc3cb5efd9533ce01",
+    "tests/ds4_gguf_test.cu": "4ed6fcff02339a519066d5c840f1683cf189802b5414ab63d2d306a3e87d7074"
+  },
+  "candidate": {
+    "src/ds4/ds4_iq.cu": "2192b5b19346c42919b0516da649d1bd82795ba523598a3b469848c9654d6616",
+    "src/ds4/ds4_iq.cuh": "fe4b544685e78466aebe0080a0a34a3edfce44f857cda33ecfb1bea438662e7b",
+    "src/ds4/ds4_q5k_imma_policy.hpp": "f53a362f31b2eaffe7ee961bb7b72aa7700e3723e8bb29af677f80e5f82e9cdc",
+    "tests/ds4_gguf_test.cu": "c1fc1542a5623915a0a5586ac8dc01ba4bc5d43e96ea313ce0cecc69bfca7fbb",
+    "tests/ds4_q5k_imma_policy_test.cpp": "908c2a3cd2944d877b70f27b7a5fd059827d37ee243c5978adc90db55b0b2741"
+  },
+  "model_source_unchanged": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+  "supersedes_fork_draft_for_build": true,
+  "old_losing_shared_sums_code_excluded": true,
+  "CPU_controls_each_host": 478
+}

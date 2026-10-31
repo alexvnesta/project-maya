@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-30T01:45:23.955152+00:00",
+  "decision": "HOLD_SOURCE_CORRECTIONS_BEFORE_FIRST_CPU_OR_COMPILER",
+  "source_sha256": {
+    "build.py": "e46f3d96f79c44d1ae0d6c4814b5393e08babbca9efc02ed0c617a2d30615665",
+    "test_build.py": "b354186bb0af58e72521e9e92e5cd8b2bf81a0be0493c8fa777eb2613a33ca59",
+    "qualify_cpu.py": "eaea98eb5967c8307f3497ce1c4503344170b9c55f0d90548f761114c4bdf0d8"
+  },
+  "test_ids": [
+    "test_build.Custody.test_claim_writes_then_raises_is_released",
+    "test_build.Custody.test_cleanup_error_does_not_hide_primary",
+    "test_build.Custody.test_compile_only_runs_compile_stage",
+    "test_build.Custody.test_foreign_replacement_preserved",
+    "test_build.Custody.test_invalid_qualification_does_not_claim",
+    "test_build.Custody.test_preclaim_busy_does_not_write",
+    "test_build.Custody.test_stage_failure_is_not_retried_and_releases",
+    "test_build.Custody.test_success_releases_preserving_other_keys",
+    "test_build.Plan.test_all_outputs_in_fresh_stage",
+    "test_build.Plan.test_compile_flags_preserve_arithmetic_architecture_threads",
+    "test_build.Plan.test_compile_local_candidate_headers_before_source",
+    "test_build.Plan.test_control_relink_uses_all_original_objects",
+    "test_build.Plan.test_fastmath_inherited_command_rejected",
+    "test_build.Plan.test_foreign_linker_output_rejected",
+    "test_build.Plan.test_missing_fixture_object_rejected",
+    "test_build.Plan.test_missing_native_gguf_object_rejected",
+    "test_build.Plan.test_native_replaces_only_original_gguf_object",
+    "test_build.Plan.test_new_fixture_uses_candidate_gguf_and_selected_iq",
+    "test_build.Plan.test_parallel_compiler_rejected",
+    "test_build.Plan.test_prepare_has_only_link_and_dependency_queries",
+    "test_build.Qualification.test_boolean_control_count_rejected",
+    "test_build.Qualification.test_changed_CPU_limits_rejected",
+    "test_build.Qualification.test_changed_new_source_rejected",
+    "test_build.Qualification.test_child_supervision_error_rejected",
+    "test_build.Qualification.test_complete_exact_proof_accepted",
+    "test_build.Qualification.test_control_ids_differ_rejected",
+    "test_build.Qualification.test_cpu_cleanup_error_rejected",
+    "test_build.Qualification.test_cpu_input_map_differs_rejected",
+    "test_build.Qualification.test_cpu_source_map_differs_rejected",
+    "test_build.Qualification.test_manual_review_missing_rejected",
+    "test_build.Qualification.test_missing_cuda_hide_rejected",
+    "test_build.Qualification.test_nonzero_child_exit_rejected",
+    "test_build.Qualification.test_raw_cpu_proof_unpinned_rejected",
+    "test_build.Qualification.test_unpinned_source_rejected",
+    "test_build.Stage.test_bad_mode_refused_before_support",
+    "test_build.Stage.test_nonlinux_refused_before_support",
+    "test_build.Stage.test_original92_is_fixed_control"
+  ],
+  "controls": 37,
+  "manual_read": {
+    "entire_build": true,
+    "entire_test_build": true,
+    "entire_qualify_cpu": true,
+    "reused_support_guard_fresh_and_source_import": true,
+    "original_selected_Mat_MvJob_contract": true
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "location": "build.verify_q",
+      "issue": "Candidate manifest/all5files, CPUdriver, exact46policyproofeachhost and inherited Python closure are not mandatory. Current positive test accepts onlybuild/test source pins.",
+      "fix": "Require pinnedmanifest andexactcandidatefiles inq/source map; pinqualifiedriver; requireexactbothhostpolicy IDs/maps/rawchildren/limits and inherited importedPythonclosure. Retain one-shotproof/source IDs."
+    },
+    {
+      "id": "F2",
+      "location": "build.main prose_measure import",
+      "issue": "Import occursbefore exacthash/origin validation; CAShelper notmandatoryqinput.",
+      "fix": "Checkknownpath SHA andqpin beforeimport; rejectforeigncachedorigin beforemoduleexecution."
+    },
+    {
+      "id": "F3",
+      "location": "build.main finally",
+      "issue": "A releaseerror skipsselectedownercheck; primary/release/owner errors cannotallbe retained independently.",
+      "fix": "Independent release andownercheck attempts; preserveprimaryplusbothsecondaryerrors. Neverclearforeignreservation."
+    },
+    {
+      "id": "F4",
+      "location": "build.prepare final checks",
+      "issue": "Afterlastdependencychild, inputs/tools arechecked butq.files are not. Changes toreview/helper/proof sources outsidecompilerdeps canescape finalPASS.",
+      "fix": "Freshadmission thencheckq.files, inputs/tools andq digest beforepublish."
+    },
+    {
+      "id": "F5",
+      "location": "test_build Stage coverage",
+      "issue": "Currenttests mockentireprepare/compile functions atmain; no actualnewstage-loop controls forfirstfailure orartifact/link custody.",
+      "fix": "Minimalmockedprepare3 andcompile4 success/firstfailure/changedproducedobject/unknownlink controls. No realcompilerchild."
+    }
+  ],
+  "accepted_design": [
+    "OnlyoriginalGGUFobject replaced; testlinkusescandidatefixture andGGUF plusselectedoriginalothers.",
+    "Originalobjectcontrolrelink92 andnvcc-Mdependencies, stopbeforeCUDAcompile.",
+    "Freshownedoutput; SM80/O3/C++20/no_fast_math/threads1 andexistingserialCPU120/AS4GiB/wall300 supervision.",
+    "Guardbeforequalification andbeforeclaim; ownCASreservation; no nativebinary execution.",
+    "NewCPUdriverbounds30/AS512Linux/wall90/nice15/CUDAhidden; no replay."
+  ],
+  "scope": {
+    "tests_executed": false,
+    "compiler_executed": false,
+    "remote_actions": false,
+    "GPU_admission": false
+  },
+  "candidate_unchanged_review_sha256": "71ace0d36a516b43aa94ad91d77f85d5b9cf48923784ac2f9ced281d7a720581"
+}

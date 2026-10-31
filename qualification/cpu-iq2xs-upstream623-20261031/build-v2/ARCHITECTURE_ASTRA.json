@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-31T05:31:07.215881+00:00",
+  "status": "SOURCE_ONLY_V2_CPU_LEASE_PROPOSAL_NO_EXECUTION_ADMISSION",
+  "preserved_v1": {
+    "qualification_sha256": "d3f71e656e153aac2d56fdce0b03c2c324dae50c89e3a305e0d6035d2a92ee63",
+    "source_review_sha256": "9e675dd36a295c2b20b9c8c0b1f67c84f6b2f833b2c1091a3fd551ecb74fdca5",
+    "CPU_each_host": 88,
+    "raw_lock_deferral_sha256": "fbf2077836c3e95f47acc6a5a79cc91f95c47c6944bdf8978a276cb5e1468b68",
+    "prepare_attempted": false,
+    "classification": "Healthy selected API holds its existing GPU lease. The read-only lock probe deferred before prepare namespace, build claim or tools. Not a compiler/native fault."
+  },
+  "source_basis": {
+    "cpu-iq2xs-upstream623-v1/build-v1/build.py": "e78c258135fe48455627d2bca53310324d35427841ed8b9a35c4f64d3fc99358",
+    "iq2s-persistent-v1/iq2s_build.py": "e8dcd79bd3a80cba931885149438f107d6d840693e508f738fd616fd6885f9ff",
+    "prose-speed-v1/prose_measure.py": "8d10d003bbbd7ffbb87251bacdf53d91af9f074151d34f06c957fa179f3108cf"
+  },
+  "recommended_scope": "New build-v2 four-source package, same recipes/artifacts/resource classes and separate prepare/compile phases; only lease/claim observation plus proof namespaces change. Preserve build-v1 entirely. No native rebuild until separate compile admission; no numerical/native execution.",
+  "lease": {
+    "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/cpu-build.lock",
+    "purpose": "Exclusive nonblocking flock serializes every new CPU build controller sharing this path. It does not acquire, replace, unlink or unlock experiment.lock.",
+    "open": "Canonical owned directory; O_CREAT|O_RDWR|O_NOFOLLOW|O_CLOEXEC, mode0600; fstat regular, one hardlink, expected user, and named-path inode/device equality. Keep inode on disk after release; never delete/recreate an existing lock.",
+    "lifetime": "Acquire before any canonical claim or prepare/build namespace; hold through all children, cleanup, own claim release and final selected-owner verification. Descriptor not inherited by exec children.",
+    "record": "Controller PID, Linux start ticks, unique nonce, mode, q pin, exact selected binding and CPU-lock device/inode. Fresh per-attempt receipts; no stale-claim auto-clear or retry."
+  },
+  "GPU_lease_observation": {
+    "input": "Exact existing experiment.lock canonical regular path, stable fstat device/inode; /proc/locks observed read-only.",
+    "require": "Exactly one matching FLOCK ADVISORY WRITE row, PID equals selected API MainPID, range0 EOF; reject missing/malformed/ambiguous/foreign holder or blocked waiter for this inode. Check device major/minor and inode, not inode alone. Pin selected systemd invocation/MainPID/native-startticks via unchanged host.guard_binding before and after observation.",
+    "repeated": "Before claim, before/after each child, during <=1s child guard loop and after cleanup; preserve raw matching row plus path identity in receipts. Never substitute nativePID for API lease holder.",
+    "limit": "Read-only observation, not acquisition of the production lock or proof of exclusivity against noncooperating processes."
+  },
+  "canonical_claim": {
+    "method": "Within held CPU flock, reuse pinned optimistic compare/readback state helper to set active_cpu_build to unique owned record after fresh phase-free genuine-idle/current-binding/root136 guards. Verify own record each guard.",
+    "release": "Only after owned children/groups gone; reread current state, require exact owned record, preserve every other current field, CAS only active_cpu_build=False. Never clear another owner or restore a stale whole-state snapshot. Preserve primary and cleanup/release/owner faults.",
+    "critical_limit": "This is atomic CPU-controller serialization only. Existing legacy phase writers do not acquire cpu-build.lock, and existing cas_state is not a global atomic compare-and-swap. Root must freeze all other maintenance/controller launches while this CPU lease is held. Guards detect conflicting state/owner changes and stop owned compilation, but do not eliminate a simultaneous uncooperative writer race.",
+    "admission_required": "Explicit single-coordinator/no-other-controller-launch condition in qualification and action-time admission; if this operational condition cannot be ensured, this design is insufficient and requires separately reviewed common writer coordination rather than pretending the lock fixes global CAS.",
+    "crash": "OS releases flock but canonical claim remains. Subsequent invocation refuses stale/nonempty claim; no automatic cleanup/retry. Root must separately verify any orphan child group before recovery."
+  },
+  "unchanged_guards": [
+    "Full q/self/import/tool/source closure before imports and repeated checks",
+    "Current selected binding3a72 and sole native owner; genuine idle/default before heavy work and every child guard",
+    "Root136, no private phase/build/restoration or pending verification, downloader paused with actual worker exit/absence",
+    "Owned child PID/PGID/limits/cleanup and stop-on-busy partial preservation; no retry",
+    "Control relink exact92, three scans, actual dependency review then separately admitted compilation"
+  ],
+  "prospective_new_controls": [
+    "Actual two independent CPU-lease contenders: one holder succeeds, second nonblocking contender refuses before CAS/child",
+    "CPU-lock symlink/hardlink/ancestor/path-to-fd inode replacement refusal; no unlink after normal or exceptional release",
+    "Exact /proc/locks parser: device+inode, API vs native PID, wrong type/range, malformed/duplicate/OFD/blocked waiter/absent holder refusal",
+    "Selected invocation/startticks or GPU-lock inode/holder changes before claim or during child: no next child, owned group cleanup",
+    "Lease claim creation and release order; record nonce/startticks/mode/q bound; foreign canonical claim remains untouched",
+    "CAS changed-before-write or readback conflict: fail closed, preserve primary and release errors",
+    "Busy after claim: controlled deferral with partials preserved, own claim cleared only after child group gone",
+    "Parent crash/staleclaim: no automatic adoption/clear/retry",
+    "Preserved prepare/compile command, deps, exact control, archive and produced-object custody controls from88 with new source/input/proof maps"
+  ],
+  "qualification_sequence": [
+    "Root agreement on cooperative coordination boundary before implementation",
+    "Write only new build-v2 source/tests/driver; no mutation of v1 or original N42/mixed fixture",
+    "Both reviewers read all new source/test deltas and exact closure; fresh both-host bounded CPU30/AS512Linux/wall90/nice15/-B controls",
+    "Freeze new q with unchanged selected tools/source objects and preserved v1 deferral/evidence; fresh actual all-pin and lease-owner checks",
+    "Separate single prepare-only admission; no compile/fixture/GPU admission implied"
+  ],
+  "documentation": [
+    {
+      "url": "https://man7.org/linux/man-pages/man5/proc_locks.5.html",
+      "scope": "FLOCK type, owner PID, device/inode and range fields; OFD PID -1 is not acceptable here."
+    },
+    {
+      "url": "https://man7.org/linux/man-pages/man2/flock.2.html",
+      "scope": "Nonblocking exclusive advisory lock; lock follows open file description and is released when all descriptors close. It cannot force uncooperative writers to participate."
+    }
+  ],
+  "implementation_performed": false,
+  "tests_or_builds_or_remote_actions_performed": false,
+  "prepare_compile_GPU_service_admission": false
+}

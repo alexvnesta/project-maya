@@ -1,0 +1,121 @@
+{
+  "status": "ROOT_MANUAL_QS1_TARGETED_SCREEN_REVIEW_PASSED",
+  "arm": "QS1",
+  "original_controller_session": 52446,
+  "original_controller_OS_returncode": 0,
+  "terminal_sha256": "a308d2a979fddec5ff3ce36aa3967888199c259ffa7826f3ea34de71f23b960b",
+  "six_independent_FIRST_stages": [
+    {
+      "stage": "metadata",
+      "pid": 3769471,
+      "returncode": 0,
+      "wall_seconds": 1.8206433840095997,
+      "certificate_sha256": "2400e148ff9956aca0f67ee3c8e3a75f046a7ab2d90d0bca5186e3d245b42201",
+      "binding": {
+        "invocation": "e423a3b1d886412797b9a6a609ae8631",
+        "main_pid": 3762719,
+        "native_pid": 3762754,
+        "native_start_ticks": 167180667
+      }
+    },
+    {
+      "stage": "scan-1",
+      "pid": 3769620,
+      "returncode": 0,
+      "wall_seconds": 2.571166839916259,
+      "certificate_sha256": "f5d75f0783dded3cf69c5894c1dfc861830ba56576f61f186ecc0fb0043fb7de",
+      "binding": {
+        "invocation": "e423a3b1d886412797b9a6a609ae8631",
+        "main_pid": 3762719,
+        "native_pid": 3762754,
+        "native_start_ticks": 167180667
+      }
+    },
+    {
+      "stage": "scan-2",
+      "pid": 3769777,
+      "returncode": 0,
+      "wall_seconds": 2.721460219938308,
+      "certificate_sha256": "2f923989bc3305db6518ca50f65b85abece1b6c105c5d24c1d4012861bc4ff69",
+      "binding": {
+        "invocation": "e423a3b1d886412797b9a6a609ae8631",
+        "main_pid": 3762719,
+        "native_pid": 3762754,
+        "native_start_ticks": 167180667
+      }
+    },
+    {
+      "stage": "scan-3",
+      "pid": 3769937,
+      "returncode": 0,
+      "wall_seconds": 2.1207964099012315,
+      "certificate_sha256": "8c72e8509ec5c69daba9f66d70b4eb085608a7b75f2b990a3f4d01c967262670",
+      "binding": {
+        "invocation": "e423a3b1d886412797b9a6a609ae8631",
+        "main_pid": 3762719,
+        "native_pid": 3762754,
+        "native_start_ticks": 167180667
+      }
+    },
+    {
+      "stage": "scan-4",
+      "pid": 3770110,
+      "returncode": 0,
+      "wall_seconds": 2.6214033600408584,
+      "certificate_sha256": "7b3f5a08aceda95dc2d54d5f57dd2f4903155b1ead0c0594d999e7c48aa897c2",
+      "binding": {
+        "invocation": "e423a3b1d886412797b9a6a609ae8631",
+        "main_pid": 3762719,
+        "native_pid": 3762754,
+        "native_start_ticks": 167180667
+      }
+    },
+    {
+      "stage": "assemble",
+      "pid": 3770284,
+      "returncode": 0,
+      "wall_seconds": 1.4694438620936126,
+      "certificate_sha256": "964c471fce7e12f067034f2f5701e36f465d354b2778545de9cec2a76c692f2d",
+      "binding": {
+        "invocation": "e423a3b1d886412797b9a6a609ae8631",
+        "main_pid": 3762719,
+        "native_pid": 3762754,
+        "native_start_ticks": 167180667
+      }
+    }
+  ],
+  "raw_files_reconciled": 54,
+  "full_four_content_and_reasoning_manually_read": true,
+  "known_answer_values_1_through64_and_ordered_red_blue_correct": true,
+  "complete_finite_logit_bytes": 341816320,
+  "variable_batch_rows": [
+    185,
+    197,
+    96,
+    183
+  ],
+  "native_privateAPI_window_exit0": true,
+  "native_pid": 3757868,
+  "privateAPI_pid": 3757846,
+  "old_native_close0": 3746243,
+  "post_stop_memory_bytes": 98382147584,
+  "required_bytes": 94489280512,
+  "resources": {
+    "root_min_GiB": 348.8470230102539,
+    "system_swapout_delta_bytes": 0,
+    "swap_not_attributed_to_model": true
+  },
+  "selected_binding_snapshot": {
+    "invocation": "e423a3b1d886412797b9a6a609ae8631",
+    "main_pid": 3762719,
+    "native_pid": 3762754,
+    "native_start_ticks": 167180667
+  },
+  "public401_authmodels200_default_assembledREADY_stop_DONE": true,
+  "accepted_scope": "Only four-state known-answer, finite-byte, cache/image/lifecycle/resource screen",
+  "performance_comparison_accepted": false,
+  "broad_quality_or_numerical_equivalence": false,
+  "promotion_admitted": false,
+  "next_arm_admitted": false,
+  "dump_enabled_observed_rates_are_not_controlled_timing": true
+}

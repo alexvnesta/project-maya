@@ -1,0 +1,153 @@
+{
+  "arm": "N0",
+  "arm_results": {
+    "complete": true,
+    "rows": [
+      {
+        "id": "cold-text",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 203,
+          "prompt_tokens": 8466,
+          "prompt_ms": 8730.8,
+          "decode_ms": 4374.0,
+          "finish": "stop",
+          "drafts_accepted": 140,
+          "drafts_offered": 166,
+          "reused": 0,
+          "hits": 53077,
+          "lookups": 57375
+        },
+        "observed_tokens": 203,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 118420480,
+          "rows": 229,
+          "finite_or_equivalence_proven": false
+        }
+      },
+      {
+        "id": "rewind-text",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 171,
+          "prompt_tokens": 8466,
+          "prompt_ms": 52.4,
+          "decode_ms": 3140.8,
+          "finish": "stop",
+          "drafts_accepted": 126,
+          "drafts_offered": 132,
+          "reused": 8465,
+          "hits": 42023,
+          "lookups": 44325
+        },
+        "observed_tokens": 171,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 92047360,
+          "rows": 178,
+          "finite_or_equivalence_proven": false
+        }
+      },
+      {
+        "id": "two-images",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 78,
+          "prompt_tokens": 8653,
+          "prompt_ms": 9794.3,
+          "decode_ms": 2082.1,
+          "finish": "stop",
+          "drafts_accepted": 42,
+          "drafts_offered": 61,
+          "reused": 0,
+          "hits": 23469,
+          "lookups": 24630
+        },
+        "observed_tokens": 78,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 50677760,
+          "rows": 98,
+          "finite_or_equivalence_proven": false
+        }
+      },
+      {
+        "id": "restore-text",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 169,
+          "prompt_tokens": 8466,
+          "prompt_ms": 41.3,
+          "decode_ms": 3454.8,
+          "finish": "stop",
+          "drafts_accepted": 122,
+          "drafts_offered": 140,
+          "reused": 8465,
+          "hits": 45808,
+          "lookups": 46905
+        },
+        "observed_tokens": 169,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 97218560,
+          "rows": 188,
+          "finite_or_equivalence_proven": false
+        }
+      }
+    ],
+    "incomplete_reason": null,
+    "native_count": 4,
+    "case_scores": [
+      {
+        "id": "cold-text",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      },
+      {
+        "id": "rewind-text",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      },
+      {
+        "id": "two-images",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      },
+      {
+        "id": "restore-text",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      }
+    ],
+    "unrun_ids": [],
+    "quality_or_speed_pass": false,
+    "numerical_review_pending": true,
+    "retry": false,
+    "actual_native_count": 4,
+    "activation": {
+      "mode": 1,
+      "source": 20,
+      "retained_rows": 2668,
+      "activation_early_rows": [
+        5798,
+        5985
+      ]
+    },
+    "IQ2S": {
+      "persistent": 0,
+      "eligible_dispatch_observed": false,
+      "per_model_kernel_launch_count_observed": false,
+      "scope": "One branch receipt after first launch, not completion/count; separate both-device exact fixture required"
+    },
+    "DSI1_leftovers": []
+  },
+  "native_server_cleanup_passed": true,
+  "seconds_including_load": 474.3234722930938,
+  "not_a_promotion": true,
+  "speed_pass": false
+}

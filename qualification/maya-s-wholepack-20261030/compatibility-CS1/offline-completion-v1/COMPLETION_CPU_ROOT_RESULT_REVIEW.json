@@ -1,0 +1,133 @@
+{
+  "utc": "2026-10-30T19:41:51.050188+00:00",
+  "passed": true,
+  "root_full_raw_logs_and_receipts_read": true,
+  "source_sha256": {
+    "ms_compat_completion.py": "5528fa400afaf1901cbf0057138289aa6aa731a2cbb01b1fcffbc7a0c502cd4e",
+    "test_ms_compat_completion.py": "639c0769d7bc3bc3eb86bcd7209808a5ece83bacc2b082c1517230415e5b3c3c",
+    "ms_compat_completion_dispatch.py": "dd71f59a3a42d58de52ca140214668a3789b35e55ada5f301a66e012579ba182",
+    "test_ms_compat_completion_dispatch.py": "1abfc5da4dc181c4e394f99a7aed8d49e330e316577ccec12567a38182c0a94c",
+    "ms_completion_cpu.py": "94af6fe4e9e8b954dd047f9e0ee18d7412b1334e0c54fef3be7cbe0096b99989"
+  },
+  "input_count": 869,
+  "ordered_test_ids": {
+    "completion": [
+      "test_ms_compat_completion.Completion.test_alias_public_evidence_refused",
+      "test_ms_compat_completion.Completion.test_capped_changed_or_wrong_typed_public_request_refused",
+      "test_ms_compat_completion.Completion.test_changed_current_binding_refused",
+      "test_ms_compat_completion.Completion.test_changed_public_prompt_refused",
+      "test_ms_compat_completion.Completion.test_completion_is_read_only_and_does_not_publish",
+      "test_ms_compat_completion.Completion.test_duplicate_or_nonfinite_public_request_refused",
+      "test_ms_compat_completion.Completion.test_exact_producer_membership_required",
+      "test_ms_compat_completion.Completion.test_full_saved_terminal_with_actual_filename_and_fragmented_READY_contracts",
+      "test_ms_compat_completion.Completion.test_incomplete_wrong_or_duplicate_DONE_public_stream_refused",
+      "test_ms_compat_completion.Completion.test_missing_default_request_refused",
+      "test_ms_compat_completion.Completion.test_missing_default_stream_refused",
+      "test_ms_compat_completion.Completion.test_old_filename_only_cannot_clear_completion",
+      "test_ms_compat_completion.Completion.test_original_model_qualification_still_required",
+      "test_ms_compat_completion.Completion.test_private_native_exit_failure_retained",
+      "test_ms_compat_completion.Completion.test_raw_old_API_exit_failure_not_hidden_by_producer_pass",
+      "test_ms_compat_completion.Completion.test_transient_fence_collection_required",
+      "test_ms_compat_completion.Completion.test_wrong_model_literal_still_refused",
+      "test_ms_compat_completion.ProducerContract.test_request_and_filenames_match_exact_producer_source_without_execution"
+    ],
+    "supervision": [
+      "test_ms_compat_completion_dispatch.Artifacts.test_auditor_claim_pid_and_attempt_are_bound",
+      "test_ms_compat_completion_dispatch.Artifacts.test_foreign_evidence_path_refused_before_payload_hash",
+      "test_ms_compat_completion_dispatch.Artifacts.test_matching_real_saved_hashes_and_actual_child_observations",
+      "test_ms_compat_completion_dispatch.Artifacts.test_pass_label_cannot_override_nonzero_or_cleanup_error",
+      "test_ms_compat_completion_dispatch.Artifacts.test_performance_or_advance_claim_refused_even_with_matching_bytes",
+      "test_ms_compat_completion_dispatch.Artifacts.test_raw_evidence_mutation_refused",
+      "test_ms_compat_completion_dispatch.Artifacts.test_regrade_or_new_execution_claim_refused",
+      "test_ms_compat_completion_dispatch.Artifacts.test_wrong_actual_pid_or_missing_limits_refused",
+      "test_ms_compat_completion_dispatch.CPUProof.test_cpu_input_map_omission_refused",
+      "test_ms_compat_completion_dispatch.CPUProof.test_exact_matching_both_host_raw_proofs",
+      "test_ms_compat_completion_dispatch.CPUProof.test_ids_counts_and_source_maps_must_match",
+      "test_ms_compat_completion_dispatch.CPUProof.test_missing_raw_membership_refused",
+      "test_ms_compat_completion_dispatch.CPUProof.test_nonzero_error_or_cleanup_refused",
+      "test_ms_compat_completion_dispatch.CPUProof.test_observed_CPU_AS_nice_environment_required",
+      "test_ms_compat_completion_dispatch.CPUProof.test_parent_wall_resource_contract_required",
+      "test_ms_compat_completion_dispatch.Child.test_audit_failure_keeps_observer_and_never_finishes",
+      "test_ms_compat_completion_dispatch.Child.test_busy_after_complete_preserves_raw_without_any_post_audit_hash",
+      "test_ms_compat_completion_dispatch.Child.test_changed_observed_bounds_keeps_raw_but_prevents_finished_proof",
+      "test_ms_compat_completion_dispatch.Child.test_child_observes_before_import_calls_exact_source_entry_once",
+      "test_ms_compat_completion_dispatch.Child.test_foreign_parent_or_command_cannot_enter_auditor",
+      "test_ms_compat_completion_dispatch.Child.test_post_auditor_busy_preserves_raw_without_finished_proof",
+      "test_ms_compat_completion_dispatch.Child.test_real_observer_requires_own_group_and_actual_environment",
+      "test_ms_compat_completion_dispatch.Child.test_resource_refusal_precedes_any_bootstrap_import",
+      "test_ms_compat_completion_dispatch.EntryBinding.test_complete_passes_original_admission_and_exact_helpers",
+      "test_ms_compat_completion_dispatch.Qualification.test_failed_new_cpu_proof_not_suppressed",
+      "test_ms_compat_completion_dispatch.Qualification.test_missing_changed_source_refused_before_import",
+      "test_ms_compat_completion_dispatch.Qualification.test_new_map_and_original_admission_checked_separately",
+      "test_ms_compat_completion_dispatch.Qualification.test_omitted_control_id_refused",
+      "test_ms_compat_completion_dispatch.Qualification.test_original_admission_or_source_failure_not_suppressed",
+      "test_ms_compat_completion_dispatch.Qualification.test_original_map_omission_refused",
+      "test_ms_compat_completion_dispatch.Qualification.test_source_mutation_or_alias_refused_before_import",
+      "test_ms_compat_completion_dispatch.Qualification.test_wrong_mode_manual_or_original_pin_refused",
+      "test_ms_compat_completion_dispatch.Supervisor.test_busy_blocks_hashes_directories_and_child",
+      "test_ms_compat_completion_dispatch.Supervisor.test_existing_attempt_never_starts_second_child",
+      "test_ms_compat_completion_dispatch.Supervisor.test_exited_child_still_has_owned_group_cleanup",
+      "test_ms_compat_completion_dispatch.Supervisor.test_nonzero_child_never_certifies_success",
+      "test_ms_compat_completion_dispatch.Supervisor.test_partial_parent_receipt_failure_prevents_child",
+      "test_ms_compat_completion_dispatch.Supervisor.test_popen_failure_keeps_attempt_without_cleanup_foreign_process",
+      "test_ms_compat_completion_dispatch.Supervisor.test_post_child_busy_preserves_raw_without_posthash_or_publish",
+      "test_ms_compat_completion_dispatch.Supervisor.test_post_child_custody_failure_keeps_raw_unpublished",
+      "test_ms_compat_completion_dispatch.Supervisor.test_success_one_isolated_child_then_supervision_then_publication",
+      "test_ms_compat_completion_dispatch.Supervisor.test_terminal_write_failure_never_rewrites_supervision_or_raw",
+      "test_ms_compat_completion_dispatch.Supervisor.test_timeout_and_cleanup_failure_both_preserved"
+    ]
+  },
+  "proofs": {
+    "completion": {
+      "darwin": {
+        "controls": 18,
+        "child_returncode": 0,
+        "wall_seconds": 0.7468270410317928,
+        "raw_sha256": {
+          "receipt.json": "ccbfd014539d2ab526a3323b73cbd285571512520aa433ec697ef32e9def9e0b",
+          "child.json": "4440a841717678f3b52a84ae9a3cb45a77dc85f1822c3e528c8cfe0bcc3b0d66",
+          "child.log": "b1f9ff4ed055a4f807be7a8af86bbd71c373f2789f4a2ff3d4d05ac84c44b980"
+        }
+      },
+      "linux": {
+        "controls": 18,
+        "child_returncode": 0,
+        "wall_seconds": 0.8364913139957935,
+        "raw_sha256": {
+          "receipt.json": "ef8af62e35f76e0796fcf79e71f94fe2757a9f29188b48d9627966a0ca633c0a",
+          "child.json": "4ea9191a8e8e42efed2c22b5a882b2b8cdbc40fb7f66bffd1ffbf1ef7bac0349",
+          "child.log": "bf2474e1748e4d179d68b39f4dd26c4fa28e4bbd7fbf0b624c6fc3faab00ae36"
+        }
+      }
+    },
+    "supervision": {
+      "darwin": {
+        "controls": 43,
+        "child_returncode": 0,
+        "wall_seconds": 0.31348958396119997,
+        "raw_sha256": {
+          "receipt.json": "c37feb05ae0906b395988f097e026384e837bd022f25e3806478b912ee0e3008",
+          "child.json": "97e8ba1806be7ad5dd0e85f1e81ebcb50dcf39f25425b0c6717b1dd635e4562c",
+          "child.log": "ce1cd8bdf8c7b92396fc539a1f8be92aee8f5541a919d3edb1ea0f738d1eedfe"
+        }
+      },
+      "linux": {
+        "controls": 43,
+        "child_returncode": 0,
+        "wall_seconds": 0.4396235670428723,
+        "raw_sha256": {
+          "receipt.json": "a130ccd0ef877be71d7062568588f3fd06bc3161f02cd6081ef8dba4aeafd579",
+          "child.json": "f6fb51252c3e7a3ea5e630b4115bd4448d68bc708625c787b36ff85e42357ad3",
+          "child.log": "8ed71ecbec731ad761c68abf43339d9260f3a288649dee030e21a98651b4bb16"
+        }
+      }
+    }
+  },
+  "original_failed_audit_preserved": true,
+  "CPU_only": true,
+  "source_manual_reviews": [
+    "COMPLETION_SOURCE_ROOT_REVIEW.json",
+    "COMPLETION_SOURCE_ASTRA_REVIEW.json"
+  ],
+  "scope": "New pure saved CS1 schema completion and bounded parent only; no model replay or advancement."
+}

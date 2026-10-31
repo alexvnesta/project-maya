@@ -1,0 +1,192 @@
+--- symbol-inventory-v1/static_diagnostic.py
++++ focused-q5-v1/static_diagnostic.py
+@@ -1,4 +1,4 @@
+-"""Two read-only cuobjdump symbol inventories. No compilation, native loading or GPU use.
++"""Twelve read-only, exact-function Q5 fallback SASS/resource captures. No compilation, native loading or GPU use.
+ 
+ The existing cooperative CPU reservation coordinates with other owned work; it
+ is not an OS lock. Raw disassembly is evidence, not a numerical acceptance test.
+@@ -22,7 +22,7 @@
+ E = R / 'reliability-optimization-20261025'
+ P = E / 'decode-optimization-20261028'
+ M = P / 'model-v1'
+-EXPECTED_HERE = M / 'symbol-inventory-v1'
++EXPECTED_HERE = M / 'focused-q5-v1'
+ TOOL = Path('/usr/local/cuda/bin/cuobjdump')
+ TOOL_REAL = Path('/usr/local/cuda-13.3/bin/cuobjdump')
+ TOOL_SHA = '2498659e83ab63ffd63b560caf3078e2c8d2839aa331780d2861cdf485070485'
+@@ -73,10 +73,20 @@
+         stream.write('\n')
+ 
+ 
++Q5_FUNCTIONS = {
++    1: {'old': '_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi1EEEvNS3_4JobsE', 'candidate': '_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi1EEEvNS3_4JobsE'},
++    4: {'old': '_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi4EEEvNS3_4JobsE', 'candidate': '_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi4EEEvNS3_4JobsE'},
++    16: {'old': '_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b010059mv_kernelILi13ELi16EEEvNS3_4JobsE', 'candidate': '_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a9mv_kernelILi13ELi16EEEvNS3_4JobsE'},
++}
++
++
+ def commands():
+-    return [(label + '-symbols',
+-             [str(TOOL), '--gpu-architecture', 'sm_80', '--dump-elf-symbols', str(pair[0])])
+-            for label, pair in OBJECTS.items()]
++    return [(label + '-q5-nc' + str(nc) + '-' + kind,
++             [str(TOOL), '--gpu-architecture', 'sm_80', option,
++              '--function', functions[label], str(OBJECTS[label][0])])
++            for nc, functions in Q5_FUNCTIONS.items()
++            for label in ('old', 'candidate')
++            for kind, option in [('sass', '--dump-sass'), ('resources', '--dump-resource-usage')]]
+ 
+ 
+ def check_inputs():
+@@ -217,7 +227,7 @@
+ 
+ 
+ def run_child(name, argv, out, admission, aggregate):
+-    require((name, argv) in commands(), 'Command outside exact two-command symbol inventory plan')
++    require((name, argv) in commands(), 'Command outside exact twelve-command Q5 fallback plan')
+     child = None
+     failure = None
+     clean = None
+@@ -334,7 +344,7 @@
+     check_inputs()
+     require(sha(HERE / 'qualification.json') == expected_digest, 'Qualification changed before reservation')
+     require(json.loads(state_path.read_text()) == state, 'Coordination changed before reservation')
+-    reservation = {'controller_pid': os.getpid(), 'mode': 'STATIC_IQ_SYMBOL_INVENTORY_ONLY',
++    reservation = {'controller_pid': os.getpid(), 'mode': 'STATIC_Q5_FALLBACK_CAPTURE_ONLY',
+                    'output': str(out), 'qualification_sha256': expected_digest}
+     original = dict(state)
+     state['active_cpu_build'] = reservation
+@@ -361,7 +371,7 @@
+         admission()
+         check_inputs()
+         require(sha(HERE / 'qualification.json') == expected_digest, 'Qualification changed')
+-        result = {'status': 'TWO_STATIC_SYMBOL_CHILDREN_COMPLETE_UNINTERPRETED', 'children': rows,
++        result = {'status': 'TWELVE_FOCUSED_Q5_CHILDREN_COMPLETE_UNINTERPRETED', 'children': rows,
+                   'qualification_sha256': expected_digest, 'total_log_bytes': aggregate[0],
+                   'selected_binding': binding, 'numerical_gate': 'HOLD_TOKEN_PATH_DIFFERS',
+                   'GPU_execution': False, 'compiler_execution': False, 'performance_admitted': False}
+--- symbol-inventory-v1/test_static_diagnostic.py
++++ focused-q5-v1/test_static_diagnostic.py
+@@ -23,14 +23,23 @@
+ 
+ 
+ class Files(TemporaryFiles):
+-    def test_exact_two_symbol_commands_no_compiler_or_execution(self):
++    def test_exact_twelve_q5_commands_no_compiler_or_execution(self):
+         plan = s.commands()
+-        self.assertEqual([n for n, _ in plan], ['old-symbols', 'candidate-symbols'])
+-        for label, argv in plan:
+-            self.assertEqual(argv[:4], [str(s.TOOL), '--gpu-architecture', 'sm_80', '--dump-elf-symbols'])
+-            self.assertEqual(argv[4], str(s.OBJECTS[label.removesuffix('-symbols')][0]))
+-            self.assertEqual(len(argv), 5)
+-        self.assertEqual(s.EXPECTED_HERE, s.M / 'symbol-inventory-v1')
++        expected_labels = [label + '-q5-nc' + str(nc) + '-' + kind
++                           for nc in (1, 4, 16) for label in ('old', 'candidate')
++                           for kind in ('sass', 'resources')]
++        self.assertEqual([name for name, _ in plan], expected_labels)
++        prefixes = {'old': '_ZN6strata3ds44gguf2iq41_GLOBAL__N__64a98507_9_ds4_iq_cu_e4b01005',
++                    'candidate': '_ZN6strata3ds44gguf2iq41_GLOBAL__N__e9ef5ebd_9_ds4_iq_cu_c1f28e7a'}
++        for name, argv in plan:
++            label, _, count, kind = name.split('-')
++            nc = int(count.removeprefix('nc'))
++            exact_function = prefixes[label] + '9mv_kernelILi13ELi' + str(nc) + 'EEEvNS3_4JobsE'
++            flag = '--dump-sass' if kind == 'sass' else '--dump-resource-usage'
++            self.assertEqual(argv, [str(s.TOOL), '--gpu-architecture', 'sm_80', flag,
++                                   '--function', exact_function, str(s.OBJECTS[label][0])])
++            self.assertEqual(argv.count('--function'), 1)
++        self.assertEqual(s.EXPECTED_HERE, s.M / 'focused-q5-v1')
+         self.assertEqual((s.CPU, s.WALL, s.ADDRESS_SPACE), (30, 90, 512 * 2**20))
+         self.assertEqual(s.STREAM_LIMITS, {'stdout': 64 * 2**20, 'stderr': 2**20})
+         self.assertEqual(s.TOTAL_LIMIT, 384 * 2**20)
+@@ -151,7 +160,7 @@
+         self.assertIs(kwargs['preexec_fn'], s.child_limits)
+         self.assertEqual(kwargs['env']['CUDA_VISIBLE_DEVICES'], '')
+         self.assertEqual(kwargs['stdin'], subprocess.DEVNULL)
+-        self.assertEqual((self.root / 'old-symbols.stdout').read_bytes(), b'assembly\n')
++        self.assertEqual((self.root / 'old-q5-nc1-sass.stdout').read_bytes(), b'assembly\n')
+ 
+     def test_pipe_eof_waits_remaining_work_with_guards(self):
+         admission = Mock()
+@@ -175,7 +184,7 @@
+             self.call(admission=admission)
+         self.assertEqual(self.input_check.call_count, 1)
+         self.clean.assert_called_once_with(self.child)
+-        row = json.loads((self.root / 'old-symbols.json').read_text())
++        row = json.loads((self.root / 'old-q5-nc1-sass.json').read_text())
+         self.assertEqual(row['post_input_custody'], 'POST_CUSTODY_UNVERIFIED_HOLD')
+         self.assertIn('private phase', str(row['secondary_notes']))
+ 
+@@ -187,13 +196,13 @@
+     def test_keyboardinterrupt_retains_primary_and_cleanup_receipt(self):
+         with self.assertRaises(KeyboardInterrupt):
+             self.call(admission=Mock(side_effect=[None, KeyboardInterrupt('interrupt')]))
+-        row = json.loads((self.root / 'old-symbols.json').read_text())
++        row = json.loads((self.root / 'old-q5-nc1-sass.json').read_text())
+         self.assertIn('KeyboardInterrupt', row['error']); self.assertTrue(row['owned_cleanup']['complete'])
+ 
+     def test_stdout_overflow_bounded_and_terminal_hold(self):
+         with patch.dict(s.STREAM_LIMITS, {'stdout': 3, 'stderr': 1}):
+             with self.assertRaisesRegex(ValueError, 'OUTPUT_OVERFLOW'): self.call()
+-        self.assertEqual((self.root / 'old-symbols.stdout').read_bytes(), b'ass')
++        self.assertEqual((self.root / 'old-q5-nc1-sass.stdout').read_bytes(), b'ass')
+         self.clean.assert_called_once_with(self.child)
+ 
+     def test_nonzero_exit_stops_child(self):
+@@ -203,7 +212,7 @@
+     def test_post_input_change_cleans_and_preserves(self):
+         with self.assertRaisesRegex(ValueError, 'changed'):
+             self.call(check=[None, ValueError('changed')])
+-        self.assertIn('changed', json.loads((self.root / 'old-symbols.json').read_text())['error'])
++        self.assertIn('changed', json.loads((self.root / 'old-q5-nc1-sass.json').read_text())['error'])
+         self.assertEqual(self.input_check.call_count, 2)
+ 
+     def test_selector_creation_failure_after_spawn_is_owned_cleanup(self):
+@@ -228,13 +237,16 @@
+             with self.assertRaises(ValueError): s.run_child('new', ['nvcc'], self.root, Mock(), [0])
+         spawn.assert_not_called()
+ 
+-    def test_whole_capture_and_arbitrary_flags_or_objects_refused_before_spawn(self):
++    def test_unfiltered_foreign_q6_or_multiple_selector_refused_before_spawn(self):
+         for name, argv in s.commands():
+-            variants = []
+-            for flag in ['--dump-sass', '--dump-resource-usage', '--dump-elf', '--list-text']:
++            variants = [argv[:4] + argv[6:], [*argv, '--function', argv[5]],
++                        [*argv, '--all-fatbin']]
++            for function in ['/foreign/function', argv[5].replace('ILi13E', 'ILi14E'),
++                             argv[5] + ',' + argv[5], 'mv_kernel']:
++                changed = list(argv); changed[5] = function; variants.append(changed)
++            changed = list(argv); changed[6] = '/foreign/object'; variants.append(changed)
++            for flag in ['--dump-elf', '--dump-elf-symbols', '--list-text']:
+                 changed = list(argv); changed[3] = flag; variants.append(changed)
+-            changed = list(argv); changed[4] = '/foreign/object'; variants.append(changed)
+-            variants.append([*argv, '--all-fatbin'])
+             for forbidden in variants:
+                 with self.subTest(name=name, argv=forbidden), patch.object(s.subprocess, 'Popen') as spawn:
+                     admission = Mock()
+@@ -414,18 +426,20 @@
+         self.host.idle.assert_not_called()
+         self.assertEqual(json.loads(self.state.read_text()),state)
+ 
+-    def test_two_serial_children_and_own_reservation_release(self):
++    def test_twelve_serial_children_and_own_reservation_release(self):
+         seen = []
+         def child(name, argv, out, admission, total):
+             seen.append(name)
+             reservation = json.loads(self.state.read_text())['active_cpu_build']
+             self.assertEqual(reservation['controller_pid'], s.os.getpid())
+-            self.assertEqual(reservation['mode'], 'STATIC_IQ_SYMBOL_INVENTORY_ONLY')
++            self.assertEqual(reservation['mode'], 'STATIC_Q5_FALLBACK_CAPTURE_ONLY')
+             return {'returncode': 0}
+         result = self.run_execute(child=child)
+-        self.assertEqual(seen, ['old-symbols', 'candidate-symbols'])
+-        self.assertEqual(self.child_call.call_count, 2)
+-        self.assertEqual(result['status'], 'TWO_STATIC_SYMBOL_CHILDREN_COMPLETE_UNINTERPRETED')
++        self.assertEqual(seen, [label + '-q5-nc' + str(nc) + '-' + kind
++                                for nc in (1, 4, 16) for label in ('old', 'candidate')
++                                for kind in ('sass', 'resources')])
++        self.assertEqual(self.child_call.call_count, 12)
++        self.assertEqual(result['status'], 'TWELVE_FOCUSED_Q5_CHILDREN_COMPLETE_UNINTERPRETED')
+         self.assertEqual(json.loads(self.state.read_text()), self.initial)
+         self.assertEqual(result['numerical_gate'], 'HOLD_TOKEN_PATH_DIFFERS')
+ 

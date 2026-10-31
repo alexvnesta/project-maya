@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-29T12:50:34.315791+00:00",
+  "status": "FROZEN_FOR_DISTINCT_IQ2_S_CANDIDATE_BEFORE_FIRST_GPU_OR_MODEL_OUTCOME_NOT_ADMISSION",
+  "factors": {
+    "baseline": "selected native92/STRATA_DS4_IQ_PERSIST=DS4_IQ_PERSIST=0/chunk4096",
+    "candidate": "isolated nativeda28/STRATA_DS4_IQ_PERSIST=DS4_IQ_PERSIST=1/chunk4096"
+  },
+  "settings": "Exact same selected model, Q8 checks, DSpark confidence/max4/drafter, mode1, context1048576/output262144, native images, L22/all40 projection,24CPU/auto19-21/allRAM/stream0. Benchmark requests cap32768 and effort100.",
+  "numerical_gate": "Natural fullcap N0 then separately reviewedN1: exact typed known answers, positive DSpark offered/accepted, exact matched emitted IDs and finite complete logit-file bytes/rowcounts plus native prompt/generated/reuse/draft state; any drift/partial/wrong/cap/UNRUN/overflow blocks performance. No tolerance/replay/row realignment.",
+  "new_performance_schedule": [
+    "A1",
+    "B1",
+    "B2",
+    "A2"
+  ],
+  "first_pair_required_before_reverse_confirmation": true,
+  "screen_each_matched_pair": {
+    "coding_native_generated_over_decode_ms_min_gain_percent": 5.0,
+    "cold32761_native_prefill_max_regression_percent": 3.0,
+    "timed256_sequence_client_full_max_regression_percent": 3.0
+  },
+  "fair_interval": "Coding emitted token index256 through4096:3840/(t4096-t256) only if matched arms share at least4096 identical ordered token IDs. Retain native full generated/decode/prompt/reuse/draft and client timestamps separately. If common path insufficient or output lengths differ materially, no overall-task speed claim or automatic advancement; independent review before any confirmation.",
+  "quality_gates": "All original5main task/quality cases, code+all suppliedtests read ROOT+sameAstra before new bounded independent cases each physicalhost, tool/image/cache, queued/active cancellation, actualprefillcancelgen0, recovery, lifecycle/kernel/resources. Wrong/cap/partial/UNRUN remain scored and block selection.",
+  "replication": "Both separately admitted pairs must pass screen and all quality/resource/lifecycle gates; separate reviewed existing-owner activation required.",
+  "claims": "Practical replicated measured screen, not statistical confidence bound. No nearfilled1M/full256K output or overalltask speed extrapolation.",
+  "GPU_admission": false,
+  "old_IMMA": "Original candidatebef0 numerical HOLD remains closed and is neither reused nor regraded.",
+  "policy_scope": "IQ2_S-only token/window scheduling around original arithmetic; no IMMA/light-prompt/IQ1/CPU/model/API/PDL/Q8sharing changes."
+}

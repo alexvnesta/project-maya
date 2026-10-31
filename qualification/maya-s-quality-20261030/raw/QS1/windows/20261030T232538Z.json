@@ -1,0 +1,50 @@
+{
+  "units": {
+    "glm": true,
+    "router": true,
+    "watchdog_timer": true
+  },
+  "health_before": {
+    "status": "ok",
+    "profile_digest": "39f19af28dbf88e494a3fb77d440bf9a27820518d57224f4b76dbc43244e1658",
+    "weightless": {
+      "enabled": true,
+      "mode": "project",
+      "alpha": 2.0,
+      "layers": 44,
+      "width": 16384,
+      "vector_sha256": "0ccce6b748f87da81505ff2bc3ca82429110940b6c0def60063d304785ccc00c",
+      "base_revision": "3f1971b7b5f7a528c9c4ef6212c8785298a8c24a",
+      "numerics_verified_devices": [
+        "cuda:0",
+        "cuda:1"
+      ]
+    }
+  },
+  "glm_unit": "ExecStart={ path=/data2/llm-models/glm53-production/venv/bin/python ; argv[]=/data2/llm-models/glm53-production/venv/bin/python -u /data2/llm-models/glm53-production/profile-db01c25/service/glm/glm_api.py -m /data2/llm-models/glm53-production/models/GLM-5.3-Flash-exl3-3.05bpw -dm /data2/llm-models/glm53-production/models/GLM-5.3-Flash-DFlash2-exl3-6bpw -cq 8 -cs 655360 --context-cap 392960 -ndt 7 -chunk_size 2048 -ambs 4 -gs 62,63 -lv -tp --experimental-dflash2-tp --q8-staging --q8-head-gpu0 --experimental-concurrent-generation --concurrent-max-sequences 4 --concurrent-fair-gen-rounds 4 --concurrent-fair-chunk-size 512 --host 127.0.0.1 --port 8014 --experimental-b2-session-cache --b2-target-cpu-cache-gib 8 --recurrent-cache-gib 5 --experimental-b2-shared-prefix --experimental-vision --vision-decode-sandbox bwrap --vision-max-image-tokens 6144 --vision-cache-mib 4096 --vision-max-images 16 --vision-max-request-image-bytes 67108864 --vision-device 0 --hybrid-draft-tokens 15 -tpb nccl --disk_cache_dir /data2/llm-models/glm53-production/disk-cache --disk_cache_size 50 --persistent-cache-min-free-gib 16 --experimental-json-mode ; ignore_errors=no ; start_time=[Sun 2026-10-25 03:25:54 UTC] ; stop_time=[n/a] ; pid=972991 ; code=(null) ; status=0/0 }\n",
+  "command": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-B",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/qv_owner.py",
+    "--phase",
+    "--mode",
+    "quality",
+    "--arm",
+    "QS1",
+    "--output",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS1-20261030T232434Z",
+    "--proof",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-quality-v2-QS1-20261030T232434Z/proof.json"
+  ],
+  "mutation_started": true,
+  "restored": false,
+  "glm_kept_resident": false,
+  "admission_mode": "continued-explicit-deepseek-maintenance",
+  "continued_from": "/home/alex/strata-deepseek-test-20261024/windows/20261030T225816Z.json",
+  "maintenance_root_window": "20261025T032914Z.json",
+  "test_returncode": 0,
+  "maintenance_held": true,
+  "restoration_deferred_by_user": "stop going back to glm - you are wasting time. we are focused on deepseek.",
+  "maintenance_held_utc": "2026-10-30T23:38:53.845865+00:00",
+  "maintenance_resume_allowed": true
+}

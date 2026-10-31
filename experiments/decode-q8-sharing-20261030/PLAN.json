@@ -1,0 +1,31 @@
+{
+  "authorization": "Alex: Go ahead and test Q8 input sharing first, then output-head batching. Keep the same model, quality, context and output limits, and only deploy if the tests show a real improvement.",
+  "status": "SOURCE_QUALIFICATION_ONLY_NO_TEST_BUILD_OR_GPU_EXECUTION_YET",
+  "order": ["Q8 input sharing", "output-head batching"],
+  "selected_native": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "selected_config": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "preserve": {"model_and_weights": true, "quality_and_effort": true, "total_context": 1048576, "output_allowance": 262144, "benchmark_cap": 32768, "benchmark_effort": 100, "images": true, "mode": 1, "chunk": 4096, "Q8_batch_check": [1,1], "runtime_projection": "L22 direction scale1/all40 blocks", "drafter": "unchanged DSpark/confidence0.65", "TP": 1, "automatic_split": [19,21], "CPU_threads": 24, "all_CPU_experts_RAM": true, "stream": 0},
+  "Q8_candidate_scope": "Replace only the selected GGUF object with exact-input-view sharing. Do not import IQ2_S, IMMA, HC, head, staging-ring, restore-point or full-release changes.",
+  "stages": [
+    "ROOT plus SAME Astra read all new source/tests; exact bounded controller and portable C++ policy controls on physical Mac and Ubuntu",
+    "Fresh idle/default/zero demand/no phase; prospective original92 relink and exact compiler/tool/header discovery; STOP for input review",
+    "Separate immutable compile qualification, isolated compilation and link; no model execution",
+    "Separately admitted bounded finite exact GPU fixture on each physical GPU, all bytes/canaries/dispatch cases required",
+    "New family numerical source/CPU qualification, distinct selected control and candidate windows with complete finite logits/state and exact source-aligned token paths before any timing",
+    "Only after numerical pass: fully frozen source/fixture/CPU-qualified four-arm timing A1/B1/B2/A2, each separately admitted and audited",
+    "Resolve Q8 before the separate output-head family. If Q8 HOLD, head can proceed independently from92 after clean restoration. If Q8 wins, a newly qualified head family may use that tested native privately as its baseline. Keep92 hosted between tests until final separate activation qualification."
+  ],
+  "timing_screen_prefrozen_before_data": {
+    "prose_and_coding_native_decode_gain_each_matched_order_min_percent": 5,
+    "matched_orders": ["A1/B1", "A2/B2"],
+    "same_input_cold_prefill_regression_max_percent": 3,
+    "client_latency": "Descriptive if generated/reasoning paths differ. Any matched-client nonregression gate must be frozen with an identical emitted-token prefix and native timestamp interval before the first timing arm; absent exact matching, UNAVAILABLE and no automatic qualification.",
+    "all_outputs": "Natural stop, complete, correct, manually read with every supplied test before independent execution; wrong/cap/partial/UNRUN blocks advancement.",
+    "replication": "No fifth arm, retries, data-dependent shorter intervals, post-data gate changes or regrading."
+  },
+  "bounds": {"window_seconds": 1200, "soft_seconds": 1000, "cleanup_seconds": 200, "root_admission_GiB": 132, "root_runtime_GiB": 120, "swap_delta_GiB_less_than": 1, "private_cache_GiB": 8, "logs_GiB": 4},
+  "faults": "First genuine execution/native/API/lifecycle fault gets owned cleanup, HOLD and offline diagnosis. No blind retry. Numerical mismatch HOLD stays binding for that family.",
+  "historical": "All earlier comparisons and IMMA/IQ2_S numerical HOLDs remain closed. Current authorization is for distinct new input-sharing/head experiments.",
+  "agent": "/root/astra_deepseek_architecture_review only",
+  "deployment": "Only a reproducible whole-model gain with all correctness/lifecycle/resource gates permits separate reviewed existing-owner activation. No automatic promotion from kernel or CPU checks."
+}

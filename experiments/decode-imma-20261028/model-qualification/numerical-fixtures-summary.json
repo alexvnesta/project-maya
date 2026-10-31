@@ -1,0 +1,86 @@
+{
+  "id": "imma-fullcap-numeric-state64-v1",
+  "purpose": "UNMEASURED_NUMERICAL_ONLY",
+  "context": 1048576,
+  "default_output": 262144,
+  "policy": {
+    "max_tokens": 32768,
+    "model": "deepseek-v4.1-flash-iq2-xs",
+    "reasoning_budget_tokens": 0,
+    "reasoning_effort": 100,
+    "seed": 1,
+    "stream": true,
+    "temperature": 1.0,
+    "top_p": 1.0
+  },
+  "API_sha256": "b1be40294f6c49692829ad5f85a7aa2867218180fdc8fbc9bef7710371ba3b9f",
+  "synthetic_image_source_sha256": "251f89c1949f43308994a2a08805195ff7069eb4f11642920ed442168db10061",
+  "images_sha256": [
+    "af35d52460779aeeefd0611ac303ac83679f8cf501f90d8302ef5532ed55f717",
+    "00532cb04c7808acee2d3e48e18da1272cc3eb49153ee48267d815369b14bb8c"
+  ],
+  "expected_reuse_tokens": [
+    0,
+    8465,
+    0,
+    8465
+  ],
+  "expected_mode1_activation_skipped_tokens": [
+    5798,
+    5985
+  ],
+  "canonical_answer_token_lengths_CPU_only": {
+    "256": 515,
+    "64": 131
+  },
+  "gate": "Require natural stop/exact typed JSON and actual DSpark offered>0 and accepted>0; finite complete dumps, emitted IDs, state and lifecycle checks. Any nonzero drift, path/row mismatch, overflow or partial result is HOLD; no tolerance or retry.",
+  "full_fixture_sha256": "976b0cf51e3cfc2950774714fb1a5fb075f08e7d8619b028b6d9b1b0f67ffe67",
+  "cases": [
+    {
+      "id": "cold-text",
+      "purpose": "UNMEASURED_NUMERICAL_STATE",
+      "prompt_tokens": 8466,
+      "prompt_ids_sha256": "30fb9d6ad5865a61755a53880e228e9686e3ea72d6daa73962407f52e420dbfb",
+      "request_sha256": "1afe6819dd6bd4dfd2e3c8125450e2b0885099d5c6c0c2472f023c77c2bc095b",
+      "image_spans": [],
+      "expected_reuse": "zero"
+    },
+    {
+      "id": "rewind-text",
+      "purpose": "UNMEASURED_NUMERICAL_STATE",
+      "prompt_tokens": 8466,
+      "prompt_ids_sha256": "30fb9d6ad5865a61755a53880e228e9686e3ea72d6daa73962407f52e420dbfb",
+      "request_sha256": "1afe6819dd6bd4dfd2e3c8125450e2b0885099d5c6c0c2472f023c77c2bc095b",
+      "image_spans": [],
+      "expected_reuse": "prompt-minus-one"
+    },
+    {
+      "id": "two-images",
+      "purpose": "UNMEASURED_NUMERICAL_STATE",
+      "prompt_tokens": 8653,
+      "prompt_ids_sha256": "e2621e465649f17f3f8f2811dee069738b9df4e8d77f846cc29f2e974f8dca99",
+      "request_sha256": "a191629c9c89d3af1d8fbcca1da354067fcd7fb7aeac10107971d085cfd1f6d7",
+      "image_spans": [
+        {
+          "length": 206,
+          "start": 294
+        },
+        {
+          "length": 206,
+          "start": 6901
+        }
+      ],
+      "expected_reuse": "zero"
+    },
+    {
+      "id": "restore-text",
+      "purpose": "UNMEASURED_NUMERICAL_STATE",
+      "prompt_tokens": 8466,
+      "prompt_ids_sha256": "30fb9d6ad5865a61755a53880e228e9686e3ea72d6daa73962407f52e420dbfb",
+      "request_sha256": "1afe6819dd6bd4dfd2e3c8125450e2b0885099d5c6c0c2472f023c77c2bc095b",
+      "image_spans": [],
+      "expected_reuse": "prompt-minus-one"
+    }
+  ],
+  "full_fixture_storage": "Retained in original qualified workspace; deterministic builder source archived here. Full token arrays are omitted from Git review."
+}

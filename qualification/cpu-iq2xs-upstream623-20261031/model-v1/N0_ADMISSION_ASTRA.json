@@ -1,0 +1,110 @@
+{
+  "utc": "2026-10-31T09:34:55.486645+00:00",
+  "status": "CONDITIONAL_SINGLE_N0_ADMISSION",
+  "arm": "N0",
+  "mode": "numerical",
+  "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+  "evidence_sha256": {
+    "numerical-qualification.json": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+    "numerical-qualification-DRAFT.json": "c46a34e7a5ccebe5bed4fc2998f27455d530b4451df81e440e24ac0200e77562",
+    "MAP_ASTRA_REVIEW.json": "99132ad0fc58e33a550b1cef693d78169bf9e7e21566fb9bf169ca424f4c0b46",
+    "SOURCE_R2_ROOT_REVIEW.json": "5003f4784f1f1818d874657902d5f16ec155471898253d8c8874534f51da497b",
+    "SOURCE_R2_ASTRA_REVIEW.json": "efb06c2d4eca2de5cc7e281cc2a962a4cec864d66204d7453af2f8b3481b194b",
+    "CPU_R2_ROOT_RESULT_REVIEW.json": "87b612070d6cee89449984002c74a4f965528492e025b3868f65e1c57747a6f1",
+    "CPU_R2_RESULT_ASTRA_REVIEW.json": "4f7ef86c6bd568d9cac7efcd53a594e1d5532c3ab3baafd20fb2e2c378883a4a",
+    "ACTUAL_FINAL_MAP_FIRST.json": "37ac6430c47964582c7990a89d091c3d9a1aa2d3eb5b84788b4d96adcdc44b34",
+    "ACTUAL_N0_READONLY_FIRST/child.json": "ec3ebf302553e16bc8f405ff1c23c4e50770095c53df1437e609afc3cf89d004",
+    "ACTUAL_N0_READONLY_FIRST/child.log": "711dbf8721d2f6321f69d1cac35ea009a017ccbfdb79fe4f2841c443a53f9926",
+    "N0_FRESH_ADMISSION_CONTEXT.json": "17dfad42d14fcc28398b4eb84b3e71137aaa9882f5b79bdb2389110ce1299f67"
+  },
+  "final_delta": {
+    "all_4585_draft_pins_unchanged": true,
+    "only_one_map_review_pin_added": true,
+    "final_files": 4586,
+    "actual_physical_checks_including_self": 4587,
+    "final_pending_physical_flag_is_immutable_metadata_only": true,
+    "separate_actual_physical_receipt_passed": true
+  },
+  "readonly_preflight": {
+    "actual_child_pid": 4136786,
+    "actual_exitcode": 0,
+    "elapsed_seconds": 1.9712294868659228,
+    "cleanup": [],
+    "status": "READ_ONLY_PREFLIGHT_PASS",
+    "all_4586_proof_file_hashes_exact_final_map": true,
+    "no_run_flag": true,
+    "arm_registry_empty_at_review": true,
+    "proof_output_is_readonly_namespace_not_reused_for_run": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-cpu-iq2xs-numerical-N0-20261031T092937Z"
+  },
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "saved_fresh_context_utc": "2026-10-31T09:32:24.733921+00:00",
+  "saved_health_default_idle_and_work_zero": true,
+  "saved_root_free_bytes": 373739470848,
+  "saved_previous_window_sha256": "300e8d61cdb6c7c0090dcc86c8ec2cc68d47717e12eef19558a2f061b2e8fa08",
+  "saved_kernel_since": "2026-10-31 08:47:00 UTC",
+  "saved_kernel_fault_lines": [],
+  "saved_download_paused_and_PID_absent": 4006139,
+  "GPU_lifetime_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "scope": {
+    "one_fresh_baseline_N0_four_state_private_phase": true,
+    "baseline_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "selected_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "fixture_sha256": "976b0cf51e3cfc2950774714fb1a5fb075f08e7d8619b028b6d9b1b0f67ffe67",
+    "canonical_controller": "cpu_model_numerical.py --arm N0 --run",
+    "canonical_foreground_controller_only": true,
+    "capture_actual_controller_OS_exit": true,
+    "no_new_wrapper_service_native_owner_or_build": true,
+    "selected_restoration_and_independent_saved_output_audit_required": true
+  },
+  "retained_policy": {
+    "context": 1048576,
+    "output_allowance": 262144,
+    "request_cap": 32768,
+    "effort": 100,
+    "startup_soft_wall_cleanup_seconds": [
+      800,
+      1000,
+      1200,
+      200
+    ],
+    "private_memory_GiB": 80,
+    "private_swap_bytes": 0,
+    "actual_poststop_available_floor_GiB": 88,
+    "root_admission_GiB": 132,
+    "root_runtime_GiB": 120,
+    "same_images_Q8_TP_auto_chunk4096_CPU24_all_RAM_DSparK_L22_policy": true
+  },
+  "action_time_conditions": [
+    "Immediately before launch require the same exact selected invocation, API PID, native PID and start ticks, selected92/configc43, source and qualification pins. Refuse changed custody.",
+    "Repeat source-defined genuine idle/default/health, phase-free/no CPU build/no restoration, sole GPU owner, download pause and worker absence, root/kernel/previous-window and fresh output/metadata/registry checks. Saved observations are not timeless authority.",
+    "Use only the already qualified canonical controller and its owned stop/window/fence/cleanup/restoration path. Actual post-stop 88 GiB admission and all runtime limits remain mandatory.",
+    "Capture actual foreground controller exit plus private API wait, native close, window, fence restoration/collection and selected public restoration evidence. Preserve every failed or partial attempt; no retry, timeout extension or cap reduction.",
+    "After restoration, independent bounded finite-file scans and metadata/assembly audit plus full manual review are required before N0 acceptance."
+  ],
+  "limits": [
+    "This authorizes one N0 attempt, not its successful outcome or numerical equality.",
+    "N1 requires separately accepted N0 evidence, fresh preflight and separate admission.",
+    "No timing, promotion, deployment, candidate rebuild or additional arm is admitted.",
+    "Hosted GPU slot count is explicitly inferred in the baseline identity; this review does not relabel it as a directly observed hosted INFO value.",
+    "Prior failed CPU and observer receipts remain unchanged."
+  ],
+  "N1_admitted": false,
+  "timing_admitted": false,
+  "deployment_admitted": false,
+  "retry_admitted": false,
+  "reviewer_remote_or_execution_actions": false,
+  "reviewer_paused_after_admission": true
+}

@@ -1,0 +1,84 @@
+{
+  "utc": "2026-10-30T03:26:58.862518+00:00",
+  "decision": "FIRST_CORRECTED_R2_BOUNDED_22_CPU_CONTROLS_ONLY",
+  "source_sha256": {
+    "head_startup.py": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "test_head_startup.py": "3040c6a8be1b8f008b38e05a183a04177c1c9efa2db295140b8771a7330f5072"
+  },
+  "driver_sha256": "852e8186d38cae3e509be23e4f5f7aeb706963675a95f3bb3de91be41bddba86",
+  "original_owner_sha256": "b2bb7676969661f98bf77d9969a840a4fcb44367f9644ab6f05ac19d70709056",
+  "test_ids": [
+    "test_head_startup.Capture.test_actual_old_method_reproduces_empty_snapshot_transition_failure",
+    "test_head_startup.Capture.test_binding_receipt_fault_is_not_suppressed",
+    "test_head_startup.Capture.test_bool_negative_or_float_main_is_fault",
+    "test_head_startup.Capture.test_disappearing_bound_native_is_fault",
+    "test_head_startup.Capture.test_disappearing_observed_main_is_fault",
+    "test_head_startup.Capture.test_empty_invocation_after_any_frozen_owner_is_fault",
+    "test_head_startup.Capture.test_initial_zero_never_queries_or_claims_native",
+    "test_head_startup.Capture.test_invocation_replacement_at_zero_is_fault",
+    "test_head_startup.Capture.test_native_absence_does_not_claim_or_emit",
+    "test_head_startup.Capture.test_native_replacement_never_recaptured",
+    "test_head_startup.Capture.test_native_snapshot_error_is_not_suppressed",
+    "test_head_startup.Capture.test_new_method_waits_then_captures_same_initial_transition",
+    "test_head_startup.Capture.test_old_or_empty_invocation_is_not_claimed",
+    "test_head_startup.Capture.test_other_unit_state_does_not_query_native",
+    "test_head_startup.Capture.test_positive_main_replacement_is_fault",
+    "test_head_startup.Capture.test_positive_stable_owner_captured_once",
+    "test_head_startup.Capture.test_positive_unit_change_during_snapshot_remains_fault",
+    "test_head_startup.Capture.test_reverted_old_invocation_after_any_frozen_owner_is_fault",
+    "test_head_startup.Factory.test_exact_owner_wrapper_preserves_other_methods",
+    "test_head_startup.Factory.test_foreign_module_refused_before_reading_owner",
+    "test_head_startup.OriginalSupervisor.test_actual_unchanged_1250_deadline_and_owned_CLI_cleanup",
+    "test_head_startup.OriginalSupervisor.test_actual_unchanged_supervisor_one_start_zero_then_positive"
+  ],
+  "controls": 22,
+  "evidence_sha256": {
+    "startup-CPU-darwin/child.json": "2ed98aacac067f5154f07950ba493e74a38b437f9135eb5f6fe25dfd9db07754",
+    "startup-CPU-darwin/child.log": "104759d03f42a112b50174483ad8a2530f2bfd0f764bf02bf85a56d6e8f9332d",
+    "startup-CPU-darwin/receipt.json": "62217873adc48006cda6316dd56e25a8b0ba74cc560d3d2451ed0e8e5d9cb566",
+    "startup-CPU-linux/child.json": "51aa0edd4cbff9f49e19e53d581b67a931623dd5787e49cf5f9f83dc05d80b2c",
+    "startup-CPU-linux/child.log": "0a6fdb6521646a715b661e1db610ff9be672989bed232f923c1ccde5014b4868",
+    "startup-CPU-linux/receipt.json": "62217873adc48006cda6316dd56e25a8b0ba74cc560d3d2451ed0e8e5d9cb566",
+    "STARTUP_FIRST_CPU_DIAGNOSIS.json": "18c904e6b9f5fc1cab1dbe3dec723abbcd9cca0f4feb0ca19018521f62927a00",
+    "STARTUP_SOURCE_ASTRA_REVIEW_v2.json": "a9868fcbd61a1deccca04b538dcfb2030c5a69b3b8086a7065d851a543b4f3a1"
+  },
+  "preserved_failed_source_sha256": {
+    "head_startup.py": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "test_head_startup.py": "33c175991fb6fada1b7c715881578615aa48dcb2e71cee6cf6ae73f4a75d3e06",
+    "qualify_startup_cpu.py": "06e8b14ab420e39ea89217623988cfb8c3f7fe93789be7d371c196b1972e7553"
+  },
+  "classification": "TEST_DOUBLE_MISSING_SUBPROCESS_CONSTANTS_NOT_OBSERVED_ADAPTER_OR_NATIVE_FAULT",
+  "review": {
+    "both_entire_raw_logs_receipts_and_child_receipts_read": true,
+    "corrected_entire_supervisor_test_helper_read": true,
+    "original_exact_restore_ds_body_reread": true,
+    "only_two_source_files_changed": true,
+    "adapter_original_owner_unchanged": true,
+    "driver_delta_only_fresh_output_namespace": true,
+    "old_failed_proofs_regraded": false,
+    "execution_by_reviewer": false
+  },
+  "first_results": {
+    "darwin": {
+      "pid": 40731,
+      "returncode": 1,
+      "passed": 20,
+      "errors": 2
+    },
+    "linux": {
+      "pid": 2725141,
+      "returncode": 1,
+      "passed": 20,
+      "errors": 2
+    },
+    "cause": "Both supervisor tests raised AttributeError at subprocess.DEVNULL argument evaluation before mockedPopen was called. STDOUT was also missing and would have been the nextmissingattribute. No native subprocess can be launched by these scripted tests."
+  },
+  "repair": "Fake subprocess now provides DEVNULL=-3 andSTDOUT=-2 and asserts original supervisor forwards both. Existing success/deadline/ownedCLIcleanup assertions remain. Driver writes only startup-CPU-r2-{darwin,linux}; same22IDs.",
+  "conditions": [
+    "ROOT must preserve/finalize startup-source-review.json to these exact corrected test/driver hashes before first r2child; currentlyread startup-source-review still contains failed-v1 test/driver hashes and correctly would refuse execution.",
+    "Both newr2proofdirectories must be fresh; old failures/source/reviews stay immutable.",
+    "CPU30/LinuxAS512MiB/wall90/nice15/CUDAhidden/currentLinuxidle/owner/phase/rootguards andownedchildcleanup remain mandatory."
+  ],
+  "findings": [],
+  "no_build_gpu_model_or_deployment_admission": true
+}

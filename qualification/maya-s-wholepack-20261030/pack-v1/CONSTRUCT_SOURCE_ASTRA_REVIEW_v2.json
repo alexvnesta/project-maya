@@ -1,0 +1,57 @@
+{
+  "utc": "2026-10-30T15:20:51.180992+00:00",
+  "decision": "FIRST_BOUNDED_SYNTHETIC_CONSTRUCTOR_CPU_ONLY_AFTER_ROOT_EXACT_FREEZE",
+  "source_sha256": {
+    "pack_guard.py": "774610e0e1d85834aefaf1192e5676ac02dbf5797bd745405a3a1efd094956dc",
+    "construct_pack.py": "f5995ea2e95973b322aa46d98344fb5e1215c8c37ae24f73b6b4a8eae9b3fb18",
+    "test_construct_pack.py": "f76461552d86482b7034418c179e744c05348abc156fa074514399e98c560f74",
+    "construct_cpu.py": "e18fa1aa7bccae7356ac45fa743f137b6f299bc5ceb33b50d9ffefd80e2e737c"
+  },
+  "test_ids": [
+    "test_construct_pack.ConstructTests.test_active_private_phase_guard_before_pack_output_write",
+    "test_construct_pack.ConstructTests.test_both_exact_physical_proofs",
+    "test_construct_pack.ConstructTests.test_changed_acquisition_source_before_import",
+    "test_construct_pack.ConstructTests.test_changed_explicit_qualification_pin_before_inputs",
+    "test_construct_pack.ConstructTests.test_changed_input_map",
+    "test_construct_pack.ConstructTests.test_changed_test_ids",
+    "test_construct_pack.ConstructTests.test_current_source_hash_must_match_group",
+    "test_construct_pack.ConstructTests.test_duplicate_CPU_group_rejected",
+    "test_construct_pack.ConstructTests.test_empty_source_map_rejected",
+    "test_construct_pack.ConstructTests.test_environment_literal_no_global_change",
+    "test_construct_pack.ConstructTests.test_exact_child_paths_before_actions",
+    "test_construct_pack.ConstructTests.test_exited_parent_descendants_still_cleaned",
+    "test_construct_pack.ConstructTests.test_failed_child_kept",
+    "test_construct_pack.ConstructTests.test_first_child_fault_kept_no_second_child",
+    "test_construct_pack.ConstructTests.test_first_receipt_preserved",
+    "test_construct_pack.ConstructTests.test_foreign_source_path_rejected",
+    "test_construct_pack.ConstructTests.test_missing_AS_observation",
+    "test_construct_pack.ConstructTests.test_missing_other_host",
+    "test_construct_pack.ConstructTests.test_no_manual_source_review",
+    "test_construct_pack.ConstructTests.test_only_exact_inherited_external_pin_allowed",
+    "test_construct_pack.ConstructTests.test_raw_log_pin_omitted",
+    "test_construct_pack.ConstructTests.test_source_omitted_from_qualification",
+    "test_construct_pack.ConstructTests.test_source_pin_checks_content",
+    "test_construct_pack.ConstructTests.test_successful_supervision_one_child_cleanup_even_after_exit",
+    "test_construct_pack.ConstructTests.test_symlink_source_rejected",
+    "test_construct_pack.ConstructTests.test_terminal_attempt_path_not_mutable_state",
+    "test_construct_pack.ConstructTests.test_terminal_attempt_requires_complete_eight",
+    "test_construct_pack.ConstructTests.test_timeout_kept_no_second_child"
+  ],
+  "controls": 28,
+  "entire_new_source_all_test_bodies_and_unchanged_driver_read": true,
+  "execution_by_reviewer": false,
+  "fixed_findings": [
+    "External paths allowed only by immutable81-file acquisition inventory; no general external exception",
+    "Distinct pack_guard vs construct_controller CPU source/AST-ID maps tied to currentbytes and mandatory q rawproof file membership",
+    "Owned PG cleanup invoked after any started child including exited leader, group disappearance checked",
+    "Supervisor success/nonzero/timeout/no-retry/descendant and gate-before-write controls",
+    "Darwin tempfixture root resolved; production alias rejection unchanged"
+  ],
+  "scope": [
+    "CPU30/LinuxAS512MiB/wall90/nice15/CUDAhidden; only synthetic current28 controls, no acquired payload or model",
+    "Unchanged pack60 proof remains separate and must be pinned with fullnewbothhost28 proof",
+    "Actual construction requires all8 finalasset receipts, exact contract/qualification and fresh selectedGate/sharedacquisition lock; not admitted bythisreview",
+    "No capacity/GPU/runtime/quality/performance admission"
+  ],
+  "blockers_for_CPU": []
+}

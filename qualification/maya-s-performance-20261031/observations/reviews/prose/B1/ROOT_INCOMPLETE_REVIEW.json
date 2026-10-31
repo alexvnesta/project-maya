@@ -1,0 +1,162 @@
+{
+  "utc": "2026-10-31T01:14:13.737218+00:00",
+  "decision": "INCOMPLETE_HOLD_NO_RETRY_NO_ADVANCEMENT",
+  "mode": "prose",
+  "arm": "B1",
+  "raw_manifest_sha256": "0553468e8b9dc08c06258fad8de978715710e824bfa49e88c0e77e6cafbd60f8",
+  "all81_raw_hashes_matched_local_copies": true,
+  "actual_controller_outer_returncode": 0,
+  "private_native": 3797082,
+  "private_API": 3797057,
+  "window_test_returncode": 0,
+  "strict_FIRST_independent_audit": {
+    "outer_returncode": 1,
+    "child": {
+      "pid": 3809469,
+      "returncode": 1,
+      "error": null,
+      "cleanup_errors": [],
+      "wall_seconds": 1.6626365990377963,
+      "CPU_limit_seconds": 30,
+      "Linux_AS_bytes": 536870912,
+      "wall_limit_seconds": 90,
+      "nice_increment": 15,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "command": [
+        "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+        "-B",
+        "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_dispatch.py",
+        "--mode",
+        "prose",
+        "--arm",
+        "B1",
+        "--qualification-sha",
+        "2c7b4f378a5d539c2f04025ad7343000d23379c74e31291a9090706db1d66e61",
+        "--child"
+      ]
+    },
+    "failure": "ValueError: Wrong/capped/partial/UNRUN main panel",
+    "correct_fail_closed": true,
+    "terminal_audit_or_finished_success_absent": true,
+    "rerun_or_regraded": false,
+    "checks_after_complete_contract_not_reached": true
+  },
+  "reason": "786.9s native load plus three natural main requests and tool/followup left less than unchanged90s admission for prefill cancellation. It was never launched; recovery UNRUN. No changed cap/context/effort/output/deadline or replay.",
+  "whole_content_and_reasoning_manual_read": {
+    "main_content_chars": 5154,
+    "reasoning_chars": 21430,
+    "word_count_whitespace": 905,
+    "paragraphs": 6,
+    "exact_last_sentence": true,
+    "hash_functions_buckets_chaining_load_factor_resize_expected_vs_worstcase": true,
+    "cedar_maple_pine_explicit_invented_example": true,
+    "no_headings_lists_tables_code": true,
+    "general_quality_or_equivalence_proved": false
+  },
+  "manual_saved_completed_five_rows": {
+    "all_original_native_prompt_ids_exact": true,
+    "all_cap32768_effort100_requests_unchanged": true,
+    "followup_only_two_actual_call_ID_substitutions": true,
+    "all_native_statistics_rawDONE_T_counts_and_ordered_tokenhashes_reconciled": true,
+    "all_HTTP200_rawSSE_event_assembly_content_reasoning_toolfragments_singleDONE_finishes_reconciled": true,
+    "cold_warm_values_1_to_64_correct": true,
+    "tool_lookup_quote_exact_sku_quantity": true,
+    "typed_followup_JSON_correct": true,
+    "reuse": [
+      0,
+      8468,
+      0,
+      0,
+      372
+    ]
+  },
+  "unrun": [
+    "ms-prose-prefill-cancel",
+    "ms-prose-prefill-recovery"
+  ],
+  "original_aggregate_unrun_array_omits_failed_current_cancel": true,
+  "main_raw_observation": {
+    "id": "ms-prose-main",
+    "passed": true,
+    "native": {
+      "generated": 6051,
+      "prompt_tokens": 169,
+      "prompt_ms": 1984.1,
+      "decode_ms": 121662.3,
+      "finish": "stop",
+      "drafts_accepted": 3269,
+      "drafts_offered": 4030,
+      "reused": 0,
+      "hits": 1698979,
+      "lookups": 1735725
+    },
+    "observed_tokens": 6051,
+    "native_decode_tokens_per_second": 49.73603162195684,
+    "client_seconds": 123.66032171412371,
+    "content_characters": 5154,
+    "reasoning_characters": 21430,
+    "manual_review_pending": true,
+    "general_quality_or_equivalence_claim": false,
+    "emitted_token_contract": {
+      "count": 6051,
+      "valid_vocabulary_ids": true,
+      "ordered_ids_sha256": "23bbd37cfbbad0b1007d9ab099b5dfc772af1b4153019b2ef5abc01b07b601bb"
+    }
+  },
+  "cold_prefill_raw_ms": 11623.3,
+  "warm_prefill_raw_ms": 52.0,
+  "native_load_seconds": 786.9,
+  "phase_seconds_including_load": 947.7299804189242,
+  "actual_placement": {
+    "GPU_slots_direct_private_INFO": 9738,
+    "CPU_experts_all_RAM": 5622,
+    "trunk_split": [
+      19,
+      21
+    ]
+  },
+  "manual_cleanup_resource_review": {
+    "old_selected_API_native_close0": true,
+    "private_API_native_window0": true,
+    "native_FSIZE_unlimited": true,
+    "post_stop_available_bytes": 98373652480,
+    "required_bytes": 94489280512,
+    "private_memory_max_bytes": 85899345920,
+    "peak_cgroup_bytes_including_cache": 80534290432,
+    "max_OOM_events_delta": 0,
+    "captured_properties_restored_and_transient_collected": true,
+    "root_min_bytes": 374303567872,
+    "system_swapout_delta_bytes": 0,
+    "kernel_capture_returncode": 0,
+    "kernel_fault_lines": []
+  },
+  "selected_restored": {
+    "binding": {
+      "invocation": "8ada74a684754613a2e04f9c4f049d99",
+      "main_pid": 3802896,
+      "native_pid": 3802933,
+      "native_start_ticks": 167685086
+    },
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "total_context": 1048576,
+    "output_allowance": 262144,
+    "public401_authmodels200_assembledREADY_stop_DONE": true
+  },
+  "performance_family_accepted": false,
+  "not_a_completed_measured_loss": true,
+  "no_reverse_coding_next_arm_or_deployment_admission": true,
+  "nearfull1M_or262K_generation_proved": false,
+  "limitations": [
+    "Manual raw review is distinct from failed FIRST qualified terminal audit. No success file fabricated and no downstream automated checks silently completed.",
+    "Raw main49.736tok/s versus baseline45.979 includes unequal reasoning/output paths and lacks full lifecycle completion; no accepted speed gain, causal kernel or overall task speed claim.",
+    "Cold8469 raw prefill11.6233s versus8.7351s historical baseline is retained, no completed pair classification.",
+    "FIRST local summary attempted json.loads on child.log due suffix comparison typo; observer failed before changes and was corrected for read-only inspection. No test/model/audit was replayed."
+  ]
+}

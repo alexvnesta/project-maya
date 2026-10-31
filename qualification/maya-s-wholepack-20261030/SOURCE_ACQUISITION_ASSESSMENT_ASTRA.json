@@ -1,0 +1,175 @@
+{
+  "utc": "2026-10-30T13:51:28.237232+00:00",
+  "decision": "SOURCE_COMPATIBLE_IN_PRINCIPLE_ACQUISITION_DESIGN_ONLY_NO_MODEL_ADMISSION",
+  "scope": "Read-only local source and small pinned public metadata review. No downloaded code executed, tests, weight transfer, SSH, staging, build, inference or service action. Future acquisition requires independently reviewed new source and both physical-host CPU proof.",
+  "family": "Published Maya-S six-shard trunk/Engram plus its exact dspark.bin/json on unchanged selected native92 with current runtime policy. This is a whole published pack comparison, NOT quant-only, exactS2, or author-stock-engine quality reproduction.",
+  "author_correction": "The supplied private S2 document is by Discord Mbelli, per parent independently verified source-channel provenance. SeriousRising public recipes are a separate source; no attribution or identity equivalence is assumed.",
+  "candidate": {
+    "repo": "peasantsmith/DeepSeek-V4.1-Flash-1017-Maya-GGUF",
+    "revision": "d1fc01009f21e26157acb6858c315d0365483b72",
+    "files": [
+      {
+        "path": "Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00001-of-00006.gguf",
+        "bytes": 47887697312,
+        "sha256": "1f3437f57042e69f94c141ffbcba0d5610dab63feb07244fb468be4940d6763f"
+      },
+      {
+        "path": "Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00002-of-00006.gguf",
+        "bytes": 47669578400,
+        "sha256": "66501fee8702ffd54e6f065323ab54bb3150d20b10b01922c589e7462c7b5ba6"
+      },
+      {
+        "path": "Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00003-of-00006.gguf",
+        "bytes": 47103347360,
+        "sha256": "3195b23f33337c46a07c48583946d99147c3635412bc4adc6acdc4cf42bf30ad"
+      },
+      {
+        "path": "Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00004-of-00006.gguf",
+        "bytes": 35532532032,
+        "sha256": "d60dba35fac9601cd5c6026439dd980c457a5bb1c009192ea539b220108ea0db"
+      },
+      {
+        "path": "Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00005-of-00006.gguf",
+        "bytes": 80641295472,
+        "sha256": "c98d46f96a25d17c4c54da5a60782c130255c364a22e621ea28d5c98a692ceb2"
+      },
+      {
+        "path": "Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00006-of-00006.gguf",
+        "bytes": 80643503412,
+        "sha256": "98d65ef4f36e0b193935d44c3586241ca09b1b47e90f118e85332cfdb5860263"
+      },
+      {
+        "path": "dspark/dspark.bin",
+        "bytes": 7967616768,
+        "sha256": "42df65159f980a9189d80597e42b30012c7b10e0dd385a47051f3b2fd659bb7b"
+      },
+      {
+        "path": "dspark/dspark.json",
+        "bytes": 96965,
+        "sha256": "639c3144bca8cfe4db59057047dca40411f0cc732796e2a9321feb98fee2295f"
+      }
+    ],
+    "total_bytes": 347445667721,
+    "total_GiB": 323.5839938009158,
+    "publisher_API_url": "https://huggingface.co/api/models/peasantsmith/DeepSeek-V4.1-Flash-1017-Maya-GGUF/revision/d1fc01009f21e26157acb6858c315d0365483b72",
+    "publisher_metadata": {
+      "architecture": "deepseek41",
+      "context_length": 1048576,
+      "totalFileSize": 339477953988,
+      "limit": "Repository-level metadata independently read. Six actual shard header consistency remains required; no weight/header transfer performed here."
+    },
+    "dspark_metadata": {
+      "url": "https://huggingface.co/peasantsmith/DeepSeek-V4.1-Flash-1017-Maya-GGUF/blob/d1fc01009f21e26157acb6858c315d0365483b72/dspark/dspark.json",
+      "bytes": 96965,
+      "sha256": "639c3144bca8cfe4db59057047dca40411f0cc732796e2a9321feb98fee2295f",
+      "records": 1224,
+      "dtypes": {
+        "F32": 27,
+        "BF16": 20,
+        "Q8_0": 25,
+        "MXFP4": 1152
+      },
+      "dense": "Q8_0",
+      "experts": "keep",
+      "max_end": 7967616768,
+      "scope": "Parsed small JSON only; source binary bytes not downloaded or compared with selected drafter."
+    }
+  },
+  "constant_profile": {
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "baseline_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "total_context": 1048576,
+    "output_allowance": 262144,
+    "main_request_cap": 32768,
+    "effort": 100,
+    "chunk": 4096,
+    "tp": 1,
+    "cpu_threads": 24,
+    "reserve_MiB_per_device": 2048,
+    "images": true,
+    "projection": "Same exact runtime-direction-L22 file/scale1 and selected ablation implementation; record this policy explicitly. Published pack plus current runtime projection is not the author stock-quality measurement.",
+    "drafter": "Public Maya-S dspark.bin/json, confidence0.65/max4/cumulative0 unchanged. Different asset identity from selected shared Q8_0 GGUF is intentional and must be reported.",
+    "other": "Q8_BATCH1/CHECK1, STREAM0, mode1, DS4_REQUIRE_ALL_RAM1/mmapoff, existing fit_max_tokensfalse and reasoning/recovery policies unchanged. New cache/profile/lane/Lt paths and own output namespaces only."
+  },
+  "source_findings": [
+    {
+      "source": "E/ablation-pr469-v2/candidate/src/ds4/ds4_model.cu dfe326",
+      "lines": "2069\u20132121",
+      "finding": "Supports IQ2_XXS/IQ3_XXS/IQ2_S/IQ3_S and MXFP4. Requires per-layer gate/up type agreement, compatible down type, exact shape/byte counts, all expert records with constant stride and no mixedMXFP4/lowbit roles."
+    },
+    {
+      "source": "P/selected-base/src/ds4/ds4_iq.cu",
+      "lines": "54\u201356,253\u2013278,1059\u20131061",
+      "finding": "Retained selected CUDA source includes IQ2_S/IQ3_S formats/dispatch. Base4615 CPU iq_avx2.cpp632+ includes type21 IQ3_S rows1 and IQ2_S general support. No newengine build indicated by advertised formats; this is source applicability, not candidate runtime validation."
+    },
+    {
+      "source": "dfe326 model",
+      "lines": "1879\u20131900,3054\u20133102",
+      "finding": "Dense Q8_0 and Engram Q6_K already supported. Preserve candidate own Q6_K Engram rather than substituting selected IQ4_NL."
+    },
+    {
+      "source": "dfe326 model",
+      "lines": "5252\u20135405",
+      "finding": "mmapoff alone can partially copy and fall back to files; existing DS4_REQUIRE_ALL_RAM1 bypasses that fallback and rejects incomplete allocation. Preserve strictflag and demand actual RAM-completeness receipts. It is not a pre-start safe memory-size estimate."
+    },
+    {
+      "source": "dfe326 model",
+      "lines": "2580\u20132628,2826,3341\u20133370",
+      "finding": "Compressed caches and chunk attention scores allocate from max_context and source geometry. Actual candidate metadata/placement must feed budget calculation before startup;1M metadata alone is not a memory proof."
+    },
+    {
+      "source": "E/native-vision-v2/runtime/tools/dsv41/pack_gguf.py",
+      "lines": "675\u2013679,843\u2013846",
+      "finding": "Automatically discovered sibling dspark-*.gguf takes precedence even with explicit --drafter JSON. Isolate candidate under a parent with no matching siblingGGUF; verify resulting file/tensor map uses the requested public dspark.bin."
+    },
+    {
+      "source": "same existing packbuilder",
+      "lines": "412\u2013450,896\u2013902",
+      "finding": "Pin exact builder source and explicit six --shards, --out, --drafter and --vision. It requires GGUF chat_template; base4615 builder instead prefers its own template and is not interchangeable. Block unrelated expert/dense/T16/Engram override or implicit mmproj paths. Existing builder is a template for new qualification, not automatic approval."
+    }
+  ],
+  "prepack_and_metadata_gates": [
+    "All six exact filenames/revision/LFS sizes/SHA256s plus small JSONSHA. Require fresh owned regular paths, no extra/mixed shards, complete split indices/count6 and compatible architecture in every header.",
+    "Bound metadata string/array/tensor counts and dimensions before allocation; reject malformed/truncated/duplicate/unknown type/name/overflow/out-of-file/unaligned/block-incompatible records. No implicit missing-table substitution.",
+    "Independently inventory actual per-layer/role types, shape5120/2304/384 layout and vocabulary129280, 40 trunk layers, all three MTP blocks, exact DSpark geometry and noise/target IDs; compare relevant geometry with selected, do not infer from filename.",
+    "Read actual context_length1048576 and RoPE original-context/factor/theta/compressor/indexer/KV source lists. Preserve command/API1Mtotal+262144allowance and fitfalse; refuse incompatible metadata rather than patching capacities.",
+    "Validate both candidate Engram tables/hash metadata/token map, correct Q6_K rows and complete tensor naming. Validate DSpark JSON all offsets/lengths/dtypes/shapes and exact bin boundary with no overlaps/duplicates; actual tensor asset bytes remain candidatepack.",
+    "Pin actual tokenizer vocab/merges/specialtokens/EOS and candidate template. CPU compare encoding of text/multiturn/tool/image/effort100 requests against intended selected policy; no silent fallback or token remapping.",
+    "Explicit same vision.bin/vision.json, L22 direction file and selected runtime/projection source hashes. Validate image dimensions/marker spans and projection5120 geometry.",
+    "Pack output is only metadata referencing immutable model files, not a second339GB copy. Validate generated ds4.txt/tensors.txt/engram.bin/tokenizer/template and every resolved model file against allowed manifest. Do not run fetched setup/build/start scripts."
+  ],
+  "static_budget": {
+    "fresh_parent_observation": {
+      "time": "2026-10-30T13:47:55Z",
+      "free_root_bytes": 897242066944,
+      "MemAvailable_KiB": 49709624,
+      "selected_CPU_expert_copy": "39.5GB reported by parent; not all process memory can be assumed reclaimable"
+    },
+    "single_copy_remaining_root_bytes": 549796399223,
+    "single_copy_remaining_root_GiB": 512.0377980386838,
+    "root_floor_GiB": 132,
+    "interpretation": "One complete347445667721B asset set leaves about512GiB from this snapshot before other writes. New fresh checks and declared partial/tmp/cache/log allowance are still mandatory. Keep current selected model and recovery evidence. Do not count resumable partial plus final as separate full copies if atomic rename is used.",
+    "RAM_VRAM": "UNPROVEN. Publisher says178.2GB model plus8GBdrafter with161.3GBEngram read from SSD; these rounded aggregate figures do not determine per-device capacity. Current MemAvailable while selected is running is not candidate post-stop budget. Require exact tensor-byte sums/dense+vision+drafter/caches/context/chunk/2GiBreserves/staging and per-layer placement, CPU strictRAM bytes plusmargin, cgroup and physical headroom. No1M fit or allRAM claim now.",
+    "placement": "Keep auto placement policy, but do not demand selected11315GPU/4045CPUcounts on a different-sized pack. Record actual candidate counts/bytes and that placement differences affect observed performance."
+  },
+  "acquisition_CPU_controls_required": [
+    "Manifest exact immutable revision/names/sizes/digests; reject missingJSONhash, duplicates/traversal/absoluteforeignpaths/symlinkancestors, unexpected pre-existingfinalfile.",
+    "Real loopbackHTTP: success, short/overlongbody, HTTPerror, timeout/cancel and group/socketcleanup, wrongContentRange/ETag or ignoredRange, changedrevision/manifest, hashmismatch. No actualHF/weight transfer inCPUproof.",
+    "Resume only owned manifest-bound partial with exact validated offsets; atomically publish only complete length+SHA, exclusive destination, preservefailedreceipts. No delete/prune of existing model assets.",
+    "Fresh canonical owner/idle/no-phase/root before any output/heavyI/O and repeatedly while streaming/hash validation. On busy or resource loss stop only owned work and retain resumable custody, never touch live service.",
+    "Bound streaming buffers/network timeouts/childwall/CPU/aggregate bytes; largefilehash/download limits separately justified for347GB work, not misrepresented as30sCPU unit controls. Reuse completed source/receipts without repeated blind full hashing.",
+    "Source+inputmap exact before/after, imported helper origin/pins, meaningful cleanup failure/foreign reservation/partial claim controls and first both-host bounded CPU proof before transfer."
+  ],
+  "proposed_later_test_freeze": {
+    "not_authorized_by_this_report": true,
+    "steps": [
+      "First separately reviewed metadata-only pack construction/CPU validation and exactstaticbudget. Noenginebuild planned.",
+      "Then one separately admitted isolated Maya-S startup/smoke/quality window on selectednative92 with known current baseline restoration and same existing startupadapter. Fresh owner/source/clock/resource guards required.",
+      "Freeze small known-answer text, tool, image, executable-code correctness and natural prose panel before outcomes; preserve full responses/reasoning, cap32768/effort100 and absence oftruncation, native/client/draft/cache/placement counters. Do not execute generated code without manual review/CPU limits.",
+      "If bounded quality/lifecycle gates pass, freeze genuinely new matched-order baseline/candidate measurement arms; oldP1/X0/X1 results only background. No arbitrary fixed gain assertion or deployment from one natural sample."
+    ],
+    "numerical_scope": "Different quantized weights/drafter/Engram are intentional, so cross-pack exact-token/logit equality is not an appropriate unchanged-arithmetic gate. Define a new model-quality comparison honestly; do not weaken or relabel any closed IMMA/IQ2/Q8/head failure. Finite outputs and several correct answers are bounded checks, not general quality equivalence.",
+    "speed_scope": "Compare same useful tasks, retain total generated/reasoning tokens and completion latency, exactnativecount/decode only when attributable. Common-prefix timings only for a prospectively fixed interval actually shared; otherwise rates are descriptive and variable-length client times are not a kernel-only speedup.",
+    "near_full_context": "Configured1M capacity or shortprompt success does not prove near-full1M or262144-token generation; report this limitation explicitly."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "all_actual_compile_receipts_new_resource_blocks_and_link_closures_read": true,
+  "receipt_sha256": "fbf494d1169b821bad207661d99a1d3175d9dd1007cf770b5a1f0a65a97e6a1b",
+  "outputs": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/ds4_iq.cu.o": "359d0c3666a55cb3bcf17b1aeebe3bd380cc5e1a66e1ea968d7c741d3dbcd8f4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/ds4_gguf_test.cu.o": "bd702be3a74f682036a3490db6cadb989d897e803599b509a23c6b6d78925ac7",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/maya-ds4-candidate": "da28ca8b108048990f5950e76909cccacacb9f921d8e37fad9f16b440bb513a6",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/build-FIRST/ds4_gguf_test-candidate": "1e86117f24c435e6630d57f858628ea019ff0a36adc9495b5c141113c76fd0a4"
+  },
+  "all4_children_exit0": true,
+  "unknown_link_inputs": [],
+  "GPU_execution": false,
+  "native_or_model_execution": false,
+  "gate_registers_NE1_4_8_16": [
+    64,
+    80,
+    80,
+    98
+  ],
+  "down_registers_NE1_4_8_16": [
+    47,
+    58,
+    64,
+    64
+  ],
+  "gate_NE4_NE8_stack_and_spill_bytes_each": 8,
+  "other_new_persistent_kernel_spills": 0,
+  "shared_bytes_min_max": [
+    8196,
+    8320
+  ],
+  "scope": "Compilerresources only;8Bspills retained asactualrisk, notlatentperformanceproof. No untimedfixture ormodel execution."
+}

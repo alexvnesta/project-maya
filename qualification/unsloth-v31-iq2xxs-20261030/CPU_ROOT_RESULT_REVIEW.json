@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-30T15:47:46.751752+00:00",
+  "passed": true,
+  "FIRST_controls_each_physical_host": 40,
+  "source_count": 3,
+  "input_count": 5,
+  "proofs": {
+    "darwin": {
+      "seconds": 0.21289641701150686,
+      "sha256": {
+        "receipt.json": "8f427d4a72594a10533c84e43263f5ff45281eef59f5df7177e78d45bed6a62e",
+        "child.json": "13c046828e6b3c26b6cbb082043aae0e72b7d17beea091a28fe9b82e0d594bca",
+        "child.log": "8d4f11ebe529ea5f645bddd45199c63461e695e226433da2def8cd1076865958"
+      }
+    },
+    "linux": {
+      "seconds": 0.22441403404809535,
+      "sha256": {
+        "receipt.json": "3f671076d2870426f772dc2c02f9bfeef2c0a1ca1909f6ee33e710bac4bdd60c",
+        "child.json": "97341da99b1513cfcbe751bad9a2324559781f6af4bcb8ab24cf37dc6d83186c",
+        "child.log": "b717bd0f1ff3ae7d924b151306200f2372ccdc591b8a4d9a3e0a017b96932e6c"
+      }
+    }
+  },
+  "transfer_model_or_service_actions": 0,
+  "scope": "Source/CPU only; no actual Unsloth transfer or model test yet."
+}

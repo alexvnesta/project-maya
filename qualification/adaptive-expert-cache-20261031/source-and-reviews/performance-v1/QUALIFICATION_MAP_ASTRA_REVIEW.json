@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-31T03:39:39.438969+00:00",
+  "decision": "DRAFT_MAP_REVIEWED_CONDITIONAL_FINALIZATION_AND_READONLY_PREFLIGHT_ONLY",
+  "draft_sha256": "505bad541af834f0a68df5060fe4e818146bfe85e97c354be35ac6346c94030a",
+  "draft_file_pins": 1498,
+  "inherited_PV_file_pins_unchanged": 1402,
+  "new_local_small_files_verified": 96,
+  "CPU_groups": {
+    "owner": 197,
+    "audit": 91,
+    "source_files_each": 14,
+    "inputs_each": 1152,
+    "physical_hosts": [
+      "darwin",
+      "linux"
+    ]
+  },
+  "CPU_result_review_sha256": "88700596c5a21d4a43ac041098108b4092d9aa248d92529c34d53c7ec7783878",
+  "checks": [
+    "Exact new groups only; old PV groups not used as new-mode CPU qualification.",
+    "All current source/input/12 raw CPU proof memberships match reviewed exact R3 maps and IDs.",
+    "All four selected mechanism source pins mandatory and included; no new binary or build.",
+    "All1402 inherited dependencies unchanged, including old pack evidence as dependencies only. Both new arms use selected pack/drafter/tokenizer.",
+    "New authorization, seed, equal A/B composition and frozen criteria explicitly pinned.",
+    "Actual automatic cut must be19/21 on both arms; no manual forcing or other cut silently admitted.",
+    "Five main plus four lifecycle requests; full caps, natural output, no dumps/unlimited native FSIZE, no reverse/autopromotion.",
+    "800startup/1000soft/1200wall/200cleanup,80GiB fence+8GiB margin,88GiB poststopfloor,root132/120,swapdelta1GiB/cache8/log4 unchanged.",
+    "No current mutable registry pinned; inherited failed-FIRST STATE is immutable historical evidence only.",
+    "First and R2 failed proofs preserved; R3 pass does not regrade them."
+  ],
+  "finalization_required": [
+    {
+      "path": "CPU_R3_RESULT_ASTRA_REVIEW.json",
+      "sha256": "88700596c5a21d4a43ac041098108b4092d9aa248d92529c34d53c7ec7783878"
+    },
+    {
+      "path": "QUALIFICATION_MAP_ASTRA_REVIEW.json",
+      "sha256": "pin this completed review after writing"
+    }
+  ],
+  "permitted_final_delta": "Add exactly these two review pins, update file count to1500, review/pending metadata and final filename; no source/test/CPU/criteria/policy changes.",
+  "action_time_required": [
+    "Fresh genuine idle/default/phasefree/sole exact selected owner and binding before staging/heavy hashing.",
+    "Cooperatively pause download and retain actual process exit/absence; no private phase overlaps.",
+    "Physically verify entire final1500file map plusqself before project imports, including native/config/canonicalwindow/selectedsource.",
+    "Exact runtime.qualified and original public/source/current owner/clean previous window/kernel/root preflight; fresh namespaces and empty A1 registry.",
+    "Separate SINGLE A1-only admission after actual receipt review; B1 separately after complete audited restored A1."
+  ],
+  "GPU_admitted": false,
+  "model_execution_performed": false,
+  "completion_feasibility_claim": false
+}

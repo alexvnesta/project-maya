@@ -1,0 +1,95 @@
+{
+  "utc": "2026-10-29T16:42:07.823646+00:00",
+  "decision": "PROPOSE_DISTINCT_TWO_ARM_FOUR_REQUEST_EXPLORATORY_DECODE_SOURCE_ONLY",
+  "implementation_authorized_by_this_report": false,
+  "GPU_admitted": false,
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/iq2s_config.py": "aa8d222d5f9d5885ee87993b0418f471f4fe44f4f79bfdfffc859f1c4fee88d7",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/iq2s_model_runtime.py": "1516752104307ffc159fbb80afd972ccd43c5cb9a96cf3e47de126f62482d510",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/iq2s_numerical.py": "f1a90e9cde514d6c65c057fc20a3319b8886d2a7193bb247707b78aaf38f621f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/iq2s_numerical_audit.py": "c5b2a6a48024bf935fbb45889ff9a141ae0a899f6172f0760b374bd6e02f88cd",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/iq2s_dependencies.py": "b905c5d3f5102a3e02bf95fb0078e0a7e36ac9e8594f1e90c5216107a3b67c51",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/iq2s-persistent-v1/model-v1/exact-comparison-result-astra-review.json": "6c181cf865d5dd01cfc166c986164ecd00dbc95533875ce0850de12728342e6d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/imma_fixtures.py": "c70d008d3277166b8ff5276f22cb4547ab76a6688eab4647ff2d1a024ec89e4a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1/imma_numeric_controls.py": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/prefill-cache-improvements-20261027/skip_controls.py": "da2354fa0982c6887c841105e3a3b170912d8f7454d08439732fe709a1f0b0e2",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/hosting-1m-output256k-v3-20261027/capacity_observer.py": "84e7616db4d7e4279fef5b567789a113bffb18d82e074251581a0a281f55fdb0"
+  },
+  "namespace": "decode-iq2s-exploratory-X0|X1-UTC",
+  "panel": [
+    {
+      "id": "sequence256-cold",
+      "answer": {
+        "values": "integers1..256 exactly once ascending"
+      },
+      "reuse": 0
+    },
+    {
+      "id": "sequence256-rewind",
+      "answer": "same exact typed JSON",
+      "reuse": "prompt_tokens-1"
+    },
+    {
+      "id": "two-images",
+      "answer": {
+        "first": "red",
+        "second": "blue"
+      },
+      "reuse": 0
+    },
+    {
+      "id": "sequence256-return",
+      "answer": "same exact typed JSON",
+      "reuse": "prompt_tokens-1"
+    }
+  ],
+  "arms": [
+    "X0 selected92, persistentaliases0",
+    "X1 candidate da28, persistentaliases1; only after X0 full raw audit/restoration and separate fresh admission"
+  ],
+  "limits": {
+    "context": 1048576,
+    "default_output": 262144,
+    "request_max_tokens": 32768,
+    "effort": 100,
+    "temperature": 1,
+    "seed": 1,
+    "window_s": 1200,
+    "soft_s": 1000,
+    "cleanup_s": 200,
+    "root_admission_GiB": 132,
+    "root_runtime_GiB": 120,
+    "swapout_limit_GiB": 1,
+    "private_cache_GiB": 8,
+    "logs_aux_GiB": 4
+  },
+  "scope": [
+    "Exact same520-line synthetic prefix and two synthetic image bytes/order, only sequence request endpoint64->256. Prior encoder supports sequence_request(256) but validate_requests/encode_cases intentionally require64; new explicit256 validator/encoder needed, never monkeypatch or mutate old fixtures.",
+    "Require first CPU-produced prompt IDs/counts identical across hosts and no longer than maximum already exercised8653 (text expected near8466). If longer, source HOLD before GPU; no truncate or silent cap expansion. Canonical compact answer CPU length515 is informational, actual reasoning/token path variable.",
+    "DumpOFF in both factors, prove DS4_SERVE_DUMP absent in actual environment/no logits files; do not install numerical-only RLIMIT_FSIZE. Retain cache8GiB/log4GiB monitor. No weight/model/math/Q8/DSpark/ablation/placement/context/output/effort changes.",
+    "Exactly4native/4HTTP per arm. No coding/tool/general-task claims from this smallest fixed JSON/image panel. Adding code/tool panel would be distinct broader scope, unnecessary to answer narrow exploratory rate question.",
+    "Two fresh arms only for this descriptive diagnostic. No reused old timings, N0/N1 replay, automatic repeat/reversed arms, selection threshold or promotion. Closed exactHOLD is pinned prominently as unresolved."
+  ],
+  "measurements": [
+    "For each request retain raw generated count/native decode_ms and tokens/(decode_ms/1000), prefill_ms, client total/firstdelta, prompt/reuse/drafts offered+accepted, actual emitted token IDs/timestamps, correct natural answer. Do not pool warm/cold/image into one headline or present count variation as speedup.",
+    "Primary useful matched-work observation: paired sequence256-rewind client completion latency for the identical correct JSON task under identical cache state. It includes variable reasoning and is a single-run task-specific observation, not numerical equivalence or a general speedup. Cold and slot-return reported separately; image latency only a bounded correctness/context-switch observation.",
+    "Native tokens/s remains diagnostic when full reasoning/token paths differ. Do not infer throughput improvement from shorter wall time with fewer tokens.",
+    "Optional fixed shared-prefix metric only if first128 emitted token IDs are exactly equal AND t127>t0:127/(t127-t0), excluding prefill. Otherwise UNAVAILABLE_TOKEN_PATH_MISMATCH, never shorten interval posthoc or align after divergence. DSpark batching/host emission timestamps limit interpretation; native decode counters remain separate."
+  ],
+  "gates": [
+    "All4 exact typed known answers, naturalstop/DONE/HTTP200, 1<generated<32768, no cap/partial/UNRUN, positive valid drafts each, exact cache reuse, unique traces/nativePID, image DSI cleanup, actual placement/Q8/1Mcapacity/configfactor and candidate once-only branch receipt.",
+    "Oldhosted native0+stableAPIinactiveExecMainCode1/Status0/success before restoration; privateAPI/native/window0; kernel/resources; selected92/c43 same-owner restoration/public401/auth200/assembledREADYstopDONE. Any failure keeps all raw outcomes and stops after owned cleanup; no retry.",
+    "Existing canonical coordinate/window and qualified async ownership/cleanup reused through separately frozen caller/runtime. Fresh currentbinding from canonical state, no datedPID/admissionclock or deletedheartbeat. Busy leaves work untouched."
+  ],
+  "implementation_plan": [
+    "New distinct iq2s_explore_config/runtime/controller/audit/fixtures/summary and tests under exploratory-decode-v1. Small explicit adaptation of reviewed numerical code with separate P/mode/arm/status/registry/path/q bindings; preserve all closed files. Current runtime/config only allow numerical and basename contracts, so cannot simply pass exploratory to old API or patch module globals.",
+    "Reuse pinned existing owner/coordinate/window, dependency loader, trace_class, skip_controls.issue, natural_contract and owned_storage_snapshot where contracts genuinely fit. New bounded requester excludes dump policy and finite scans; keep cancel-on-soft-budget and cleanup. No new service/proxy/protocol/owner.",
+    "Tests: exact typed config and dump absence;256 fixture+image/cut/reuse+prompt bound; actual4HTTP/scriptednative and branch/draft/natural negatives; registry/namespace/reservation/foreignownership/partialstartup/pendingpublic/cancel/primary+secondaryfaults; raw-auditor missing/duplicate trace/close/resource/config negatives; summary variable-length and fixed128prefix unavailable/strict interval/zero-time negatives.",
+    "ROOT and Astra manually read all new source/test bodies before first controls. FIRST boundedCPU30/LinuxAS512/wall90/nice15/CUDAhidden eachphysicalhost, exactsource/input/orderedtestIDs/rawlogs, actualtokenizer once perhost. Pin unchanged dependencyproofs; no blind rerun all prior controls.",
+    "After bothhostproof, freeze immutable q including kernel104/candidate/build/selectedpack/profile/projection/closedHOLD/currentclosure. Separate actual idle source/root/binding preflight and X0-only admission; X1 after X0 independent audit/restoration and fresh admission. Comparison CPU-only after both raw audits."
+  ],
+  "unanswered": [
+    "Actual256 reasoning/output length and all4 completions within1000s are not measured. Prior64 totalphase459-474s is only capacity context, not a runtime guarantee for256. Overflow/deadline yields incomplete diagnostic, no cap reduction or retry.",
+    "This user-authorized exploratory mode intentionally measures despite an unresolved exact-path gate. It cannot qualify deployment or overturn the existing numericalHOLD."
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "decision": "CANDIDATE_SOURCE_MANUALLY_REVIEWED_ELIGIBLE_FOR_FIRST_BOUNDED_POLICY_CPU_ONLY",
+  "all_new_source_and_tests_read": true,
+  "execution_performed": false,
+  "source_sha256": {
+    "src/ds4/ds4_iq.cu": "717b925659cf0c0212413e5c0ba7cdb40a2d7d9d79196dc1babd468b5d8e6d64",
+    "src/ds4/ds4_iq.cuh": "34a9755682ee0eed8f3383521b6bdfe0a66aa34c9348090ce228c81877ef1610",
+    "src/ds4/ds4_iq2s_persist_policy.hpp": "8d8d74977165eda350d8542207fd73228d8bae0a9e7855f34e09baf650116052",
+    "tests/ds4_iq2s_persist_policy_test.cpp": "6bc16e2fc478a8da822088102b7ca0b2331f8ea6745d068721ed3616d15e157b",
+    "tests/ds4_gguf_test.cu": "daca15e6c37f45305399af3c9564502d063d13c35d07f31ff9f38c71d157bfd9"
+  },
+  "manifest_sha256": "4a500fb2955a5162d3d447be21d660946bcc2faa20b37c9597e85c939a4e0800",
+  "upstream_exact_sha256": "2b52a4b545faccaea0f4c36da9c919918d74e35d135745c575929201af042b0e",
+  "assessment_v2_sha256": "0dcdad5f6abeb6b91d66ab803984f8c0b8addb172eb186c2afd3d97f4fd90de8",
+  "policy_test_ids": [
+    "default_off",
+    "primary_on",
+    "secondary_on",
+    "aliases_on",
+    "aliases_off",
+    "alias_conflict",
+    "alias_conflict_reverse",
+    "invalid_mode_0",
+    "invalid_device_0",
+    "invalid_mode_1",
+    "invalid_device_1",
+    "invalid_mode_2",
+    "invalid_device_2",
+    "invalid_mode_3",
+    "invalid_device_3",
+    "invalid_mode_4",
+    "invalid_device_4",
+    "invalid_mode_5",
+    "invalid_device_5",
+    "invalid_mode_6",
+    "invalid_device_6",
+    "invalid_mode_7",
+    "invalid_device_7",
+    "invalid_mode_8",
+    "invalid_device_8",
+    "null_device",
+    "two_exact_devices",
+    "actual_full_window_geometry",
+    "small_geometry",
+    "zero_dimension",
+    "negative_dimension",
+    "unaligned_dimension",
+    "zero_groups",
+    "group_product_overflow",
+    "resident_product",
+    "failed_queries",
+    "negative_queries",
+    "resident_overflow",
+    "grid_under_capacity",
+    "grid_at_capacity",
+    "grid_reuses_blocks",
+    "empty_grid",
+    "item_overflow",
+    "unknown_occupancy_fallback",
+    "test_single_resident",
+    "test_cap_never_adds_work"
+  ],
+  "policy_stdout_final": "ALL 46 policy checks passed",
+  "GPU_fixture": {
+    "cases_per_device": 52,
+    "devices": [
+      0,
+      1
+    ],
+    "scope": "46 direct gate/down pair cases including empty/null groups, NE1/2/4/5/8/9/16, actual occupancy and forced-one-block cap, 512x256 and5120x2304, zero/extreme/subnormal activation scales; four public GGUF Q8 token/window cases; two unaffected IQ2_XS cases. Exact memcmp, finite outputs, direct canaries, inactive slots, actual dispatch counters.",
+    "required_env": {
+      "STRATA_DS4_Q8_BATCH": "1",
+      "DS4_Q8_CHECK": "1"
+    },
+    "entry": "--iq2s-persist-check 0|1",
+    "final_line": "ALL 52 IQ2_S checks passed deviceN",
+    "UNRUN": true
+  },
+  "reviewed_properties": [
+    "Selected883cec/072922 basis, not IMMA or mixed ownfork. Original fallback/arithmetic/light kernels retained unchanged; additional persistent IQ2_S-only kernels.",
+    "Each new block strides flattened group/row work and reuses identical 8192-byte codebook; selected lane/reduction/fmaf/swiglu bodies unchanged, with shared barriers before every mm and table first use.",
+    "Host geometry guards int work-product, long long loop stride avoids final-increment overflow. No new persistent device allocation.",
+    "Production default OFF; literal alias conflict fails off. Per-device/per-template occupancy; query failure takes old path. Test overrides are explicitly single caller and production never writes test counts.",
+    "Once-only IQ2_S_PERSIST dispatch kind=... blocks=... stderr receipt proves entry into selected branch, not completion or amount of routed work. Normal runtime error/exit gates remain required.",
+    "Public token arrays padded to eight slots; public window includes repeated experts and CPU participation. Direct downstream test independently supplies hq; public GGUF cases cover actual gate-to-Q8-to-down chain.",
+    "Existing compiler include search -I original tests resolves unchanged ../src/ds4/ds4_gguf.cuh; new IQ header/policy resolve in candidate directory. Actual nvcc-M remains required before compile."
+  ],
+  "remaining_gates": [
+    "ROOT independently read candidate/diffs/tests/manifest before FIRST bounded both-host C++ policy controls.",
+    "Controller corrections and both-host pure CPU proof, exact dependency PREPARE review, separate compile admission.",
+    "New kernel-only both-device owned window then prospective exact whole-model emitted-path/source-aligned finite-logit/state gate; any mismatch HOLD.",
+    "Separate full-cap quality/performance only after exact numerical gate, no old IMMA regrade/replay."
+  ],
+  "no_claims": [
+    "Not compiled",
+    "Not GPU-tested",
+    "Not model-qualified",
+    "No speed result",
+    "No deployment authority"
+  ],
+  "old_IMMA_gate": "HOLD_TOKEN_PATH_DIFFERS unchanged"
+}

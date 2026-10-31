@@ -1,0 +1,226 @@
+{
+  "stage": "COMPATIBILITY_TERMINAL",
+  "passed": true,
+  "mode": "compatibility",
+  "arm": "CS1",
+  "qualification_sha256": "a8d5ff19fa187f46adf70b53287b652241a5f4b256a61811643d750cd770c090",
+  "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z",
+  "window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T190500Z.json",
+  "evidence_sha256": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/compatibility-arms.json": "6425be5db6c0429243a093331ffb4d8387b348a99978838b709d5edf4bd5fcbb",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/state.json": "85a4f4a96a0e5de3f89612e87418499a22a3e376ad0de616f9199e37a44b0ae8",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/proof.json": "edae0414403ad20677abeac680d90baa38ff764fa1c32f04acb53e7563a59b00",
+    "/home/alex/strata-deepseek-test-20261024/windows/20261030T190500Z.json": "7a97d8d025350a9e127a141f84b0d4c3399da7ee91ef3a80f97f3cf6d9b3a658",
+    "/home/alex/strata-deepseek-test-20261024/windows/20261030T190500Z.telemetry.jsonl": "04578eae6c11da2ceb99844e6752e7d97d3b84b73076f5c7443ad4dd60bbe501",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/public-default-output-request.json": "93bb8806b80adc0a4793b4302b8387e13ae2d02b04932ddd2b2f166be29a455a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/public-default-output-sse.txt": "c53b0d8d60469e0824e4e3a2a4d66a623798a6b23313b1915af285af24fc469d",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/old-owner-close.json": "beb8bcd7434a0c672e7101f49a51d5589414f2e7f1333982ec2f6f6128f43e8a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/prose-fixtures-B.json": "d572147c2f668b7702531ec62a90b5ba9fe8e0b47ac864f05ecca8c73402c601",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/fixtures.json": "45f93b5c701a2f782388571b1d99d4a440836ddf0ae9cac03d7fd612f722009d",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/candidate-config.json": "242b298d6013ba8e20a83b41070e5b44b1019ac7ab5f98e9a62484e7fbcb0bdc",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/candidate-config.shared-settings.json": "9dccb6db4fd0d5e1596ad0845decb60c24aae2756a4eca216cb9b914d310fdc9",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-ready.json": "bb5a167d61efaecc6dffeea6007778a49f51037546223a2f8511009b4cc6377c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/engine.log": "77184891b5d5c794f2f60184ffaeb633cee299684a46928c8b25b19900152bf4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/startup-audit.json": "2f218ccef3817a48418f8bbe07d11bd5aef7f8ffcbb9c29163319038112ab934",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/entry-audit.json": "fca7a6565ec9a9ae35fcf6c6f8dc2fbcb814fd0e8701bbaf8eeccc9a61f2fcc4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/server-start.json": "eaa8722526a94dc3b1ba042ad0f23000db71010def8103737d16e003afef1416",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/server-cleanup.json": "ca5655209c6d604a57b7f2bacd5d0de998d2e1e99fa6090c820c9966ff1502a9",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-close.jsonl": "71d3a02cbd50dc04c200c10a81435fa782d2e709380127b3d8140426d6035ac8",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/server.log": "1cbffddb8de0dcda92d529902c9a3b395e193db89fea1a28020f0387a6492d57",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/receipt.json": "6e6dc1f1b407534b75546ef967fa317a45cfcc9c653a0f046b73dad0efa14008",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/private-memory-fence.json": "ee3fbab4f3952b5111f2669d17deb8d604145fc1c316d6f12a1d6c4690ecaf47",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/private-memory-fence-restored.json": "1bfb543331924673446597bb29c3539fcdef5cf9af90d5d4c165d5b600eb8db3",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya-s-compatibility-CS1-20261030T190356Z/private-memory-fence-collected.json": "821aa0eb9f6bad09c2711f20448c6800c99a31595e7a971eaf791b70f0437156",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-000/request.json": "770894141d9289c09fa989ec687ba424b4525c1fcbf37a324ce745cecafe78ed",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-000/trace-receipt.json": "1ade6a7ec5132b9c498e8dc8257ef860d08a58e5f4e8b2949a3c0d94075a8e92",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-000/native-statistics.json": "9956af4315ff64ff4dda8c1bf35f2311fb9996c4e47337d76ea16bd5f045175c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/native-000/tokens.jsonl": "28b7fa01fed8ad0ebcedf3a16cc01dbbef386c6b1b5ff97d92504fa614c55337",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/skip-controls/ms-compatibility-short-cold/request.json": "8c1dc93f6df05c33ab8dea1b5eba704dd1728ba5af2b4edaf08b30ff121d3e16",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/skip-controls/ms-compatibility-short-cold/response.json": "af9d3c437c5089033d739a8818fb7427fde0344d998b308b86b97a3c9f973c1b",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya-s-compatibility-CS1-20261030T190356Z/native/skip-controls/ms-compatibility-short-cold/native-audit.json": "a40d3bbbf6d1c403054c1a0525b530758417650614b4ef158c19194ed66cb8ae"
+  },
+  "whole_pack_factor": {
+    "candidate": true,
+    "exe": "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "pack": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST",
+    "factor": "whole-published-Maya-S-pack",
+    "includes_published_drafter_and_Engram": true,
+    "runtime_projection_policy": "L22 scale1 unchanged",
+    "numerical_equivalence_claim": false
+  },
+  "rows": [
+    {
+      "id": "ms-compatibility-short-cold",
+      "literal_correct": true,
+      "natural_stop": true,
+      "native": {
+        "generated": 34,
+        "prompt_tokens": 44,
+        "prompt_ms": 662.1,
+        "decode_ms": 601.6,
+        "finish": "stop",
+        "drafts_accepted": 20,
+        "drafts_offered": 20,
+        "reused": 0,
+        "hits": 7370,
+        "lookups": 8370
+      },
+      "observed_tokens": 34,
+      "token_contract": {
+        "count": 34,
+        "valid_vocabulary_ids": true,
+        "ordered_ids_sha256": "c77f5444407212642ed2b9a7e5e7401dbd139768373e5b59b132ec22b39bcb40"
+      },
+      "SSE": {
+        "DONE": true,
+        "finish": "stop",
+        "raw_SSE_reconstructed": true,
+        "content_characters": 20,
+        "reasoning_characters": 94
+      }
+    }
+  ],
+  "completion_scope": "EXISTING_CS1_PUBLIC_DEFAULT_OUTPUT_SCHEMA_COMPLETION_ONLY",
+  "original_audit_regraded": false,
+  "model_execution_performed": false,
+  "resources": {
+    "root_min_GiB": 349.73278045654297,
+    "system_swapout_delta_bytes": 905216,
+    "swap_not_attributed_to_model": true
+  },
+  "private_fence": {
+    "passed": true,
+    "memory_max": 81604378624,
+    "swap_max": 0,
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 2855,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "prior_properties_restored": true,
+    "transient_collected": true
+  },
+  "tokenizer_custody": {
+    "passed": true,
+    "tokenizer_source_sha256": {
+      "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+    },
+    "effective_template": {
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "effective_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "effective_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "pack_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "pack_template_replaced": false,
+      "pack_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  },
+  "actual_native_pid": 3530421,
+  "selected_identity": {
+    "native_pid": 3535559,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "c913c003e08649078ebd7279ef4beae7",
+      "main_pid": 3535523,
+      "native_pid": 3535559,
+      "native_start_ticks": 165605174
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "purpose": "ONE_SHORT_COLD_LITERAL_COMPATIBILITY_SCREEN_ONLY",
+  "manual_full_output_review_required": true,
+  "cross_pack_numeric_equivalence": false,
+  "finite_logits_checked": false,
+  "near_full_context_or_output_tested": false,
+  "general_quality_claim": false,
+  "performance_claim": false,
+  "deployment_admitted": false,
+  "automatic_next_arm": false,
+  "retry": false,
+  "completion_qualification_sha256": "dd2b17daaf5a2d905163972848e08410296f20838bc66cb9c9875fa0065c05f8",
+  "audit_source_sha256": "5528fa400afaf1901cbf0057138289aa6aa731a2cbb01b1fcffbc7a0c502cd4e",
+  "observed_before_project_imports": {
+    "CPU": [
+      30,
+      30
+    ],
+    "AS": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    }
+  },
+  "audit_started_sha256": "a3dfe5e47ccf0759c4b3ee3aee70417d5fbcbec33065ec747ced83690d852c52",
+  "dispatch_attempt_sha256": "92b3f83081c00851c52a3d54a8ec6f98488d89fd7d0e71316d3b314625d75593",
+  "parent_exit0_cleanup_and_wall90_proof_required": true
+}

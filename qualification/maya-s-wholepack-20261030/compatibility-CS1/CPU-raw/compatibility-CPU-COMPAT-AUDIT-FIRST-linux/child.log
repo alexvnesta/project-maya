@@ -1,0 +1,39 @@
+test_actual_child_limits_observed_before_project_import (test_ms_compat_audit.Contracts.test_actual_child_limits_observed_before_project_import) ... ok
+test_actual_observed_environment_and_limits (test_ms_compat_audit.Contracts.test_actual_observed_environment_and_limits) ... ok
+test_all_new_auditor_controls_must_be_qualified (test_ms_compat_audit.Contracts.test_all_new_auditor_controls_must_be_qualified) ... ok
+test_duplicate_nonfinite_and_alias_receipts_refused (test_ms_compat_audit.Contracts.test_duplicate_nonfinite_and_alias_receipts_refused) ... ok
+test_foreign_origin_or_missing_pin_blocks_import (test_ms_compat_audit.Contracts.test_foreign_origin_or_missing_pin_blocks_import) ... ok
+test_large_receipt_rejected_without_payload_read (test_ms_compat_audit.Contracts.test_large_receipt_rejected_without_payload_read) ... ok
+test_receipt_bytes_changed_during_audit_refused (test_ms_compat_audit.Contracts.test_receipt_bytes_changed_during_audit_refused) ... ok
+test_source_aligned_case_44_and_policy_required (test_ms_compat_audit.Contracts.test_source_aligned_case_44_and_policy_required) ... ok
+test_attempt_mutation_or_foreign_arm_refused (test_ms_compat_audit.Dispatch.test_attempt_mutation_or_foreign_arm_refused) ... ok
+test_busy_prevents_qualification_import_and_claim (test_ms_compat_audit.Dispatch.test_busy_prevents_qualification_import_and_claim) ... ok
+test_failed_audit_retained_and_not_retried (test_ms_compat_audit.Dispatch.test_failed_audit_retained_and_not_retried) ... ok
+test_one_bounded_saved_audit_and_no_replay (test_ms_compat_audit.Dispatch.test_one_bounded_saved_audit_and_no_replay) ... ok
+test_post_audit_busy_prevents_heavy_posthash (test_ms_compat_audit.Dispatch.test_post_audit_busy_prevents_heavy_posthash) ... ok
+test_post_audit_mutation_keeps_started_attempt (test_ms_compat_audit.Dispatch.test_post_audit_mutation_keeps_started_attempt) ... ok
+test_preimport_support_omission_refused (test_ms_compat_audit.Dispatch.test_preimport_support_omission_refused) ... ok
+test_config_output_policy_change_refused (test_ms_compat_audit.Terminal.test_config_output_policy_change_refused) ... ok
+test_current_binding_cannot_be_substituted (test_ms_compat_audit.Terminal.test_current_binding_cannot_be_substituted) ... ok
+test_effective_template_hash_cannot_be_substituted (test_ms_compat_audit.Terminal.test_effective_template_hash_cannot_be_substituted) ... ok
+test_extra_native_trace_even_non_three_digit_refused (test_ms_compat_audit.Terminal.test_extra_native_trace_even_non_three_digit_refused) ... ok
+test_fence_restore_and_collection_required (test_ms_compat_audit.Terminal.test_fence_restore_and_collection_required) ... ok
+test_foreign_native_cgroup_refused (test_ms_compat_audit.Terminal.test_foreign_native_cgroup_refused) ... ok
+test_full_saved_terminal_success_with_actual_byte_contracts (test_ms_compat_audit.Terminal.test_full_saved_terminal_success_with_actual_byte_contracts) ... ok
+test_kernel_fault_or_window_nonzero_refused (test_ms_compat_audit.Terminal.test_kernel_fault_or_window_nonzero_refused) ... ok
+test_logits_rejected_without_scan (test_ms_compat_audit.Terminal.test_logits_rejected_without_scan) ... ok
+test_memory_oom_or_root_resource_failure_refused (test_ms_compat_audit.Terminal.test_memory_oom_or_root_resource_failure_refused) ... ok
+test_missing_DONE_or_changed_native_count_refused (test_ms_compat_audit.Terminal.test_missing_DONE_or_changed_native_count_refused) ... ok
+test_private_API_nonzero_cannot_be_overridden_by_pass (test_ms_compat_audit.Terminal.test_private_API_nonzero_cannot_be_overridden_by_pass) ... ok
+test_private_native_nonzero_is_not_hidden_by_cleanup_label (test_ms_compat_audit.Terminal.test_private_native_nonzero_is_not_hidden_by_cleanup_label) ... ok
+test_producer_retry_or_automatic_advance_refused (test_ms_compat_audit.Terminal.test_producer_retry_or_automatic_advance_refused) ... ok
+test_public_READY_must_be_reconstructed (test_ms_compat_audit.Terminal.test_public_READY_must_be_reconstructed) ... ok
+test_raw_old_API_unit_exit_failure_refused (test_ms_compat_audit.Terminal.test_raw_old_API_unit_exit_failure_refused) ... ok
+test_raw_old_native_close_failure_refused (test_ms_compat_audit.Terminal.test_raw_old_native_close_failure_refused) ... ok
+test_tokenizer_missing_membership_refused (test_ms_compat_audit.Terminal.test_tokenizer_missing_membership_refused) ... ok
+test_wrong_literal_not_cleared_by_producer_pass (test_ms_compat_audit.Terminal.test_wrong_literal_not_cleared_by_producer_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.545s
+
+OK

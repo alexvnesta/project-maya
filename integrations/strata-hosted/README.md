@@ -34,3 +34,15 @@ before framing when the full output allowance is reserved. These settings passed
 allocation and targeted image/tool/cache/cancellation/recovery checks on the selected native;
 they are not a filled-1M or full-256K-generation result. See
 [`FORK_BENCHMARK.md`](../../docs/FORK_BENCHMARK.md#capacity-update-2026-10-27) for the bounded result.
+
+The current portable profile retains mode1 prompt skipping and a 4096-token prefill chunk.
+A separately frozen four-arm comparison reproduced about 21.90% less cold 32K prefill time
+than chunk2048 on the selected dual-CMP170HX setup; coding decode stayed roughly flat.
+Chunk4096 was activated and publicly verified at 16:28:49 UTC on 2026-10-28 after separate
+source, both-host CPU and existing-owner lifecycle qualification. The earlier chunk2048
+result remains documented as a historical comparison.
+Cache namespaces include direction, mode and chunk identity; retain older namespaces.
+The portable pathname uses the full direction placeholder, so template bytes deliberately
+differ from installation-specific production bytes. Portable CPU controls qualify templates,
+not a new deployment. See [`prefill-chunk4096-20261028.md`](../../docs/prefill-chunk4096-20261028.md)
+for measured results, activation evidence and limitations.

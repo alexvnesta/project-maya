@@ -12,16 +12,19 @@
     "Q8_check": 1,
     "images": true,
     "runtime_projection_scale": 1,
-    "cache_namespace_must_include_direction_identity": true
+    "cache_namespace_must_include_direction_identity": true,
+    "prefill_chunk": 4096,
+    "prompt_skip_mode": 1,
+    "cache_namespace_must_include_skip_mode_and_chunk": true
   },
   "files": {
     "model_ready_gate.py": "a5f22fa941cbdc914e0bef7e395e99b603567982a700b7c243aca31bd8fa7c77",
     "controller.py": "46584b8687c3e1abfb524333ba4a9e78feeb75374779c44e023f5cae1d9a9045",
-    "hosting_preflight.py": "5f8bbe7e081d53a05f899b0e7c0f67818906b407912442d32ee8bca3f75d9242",
+    "hosting_preflight.py": "4af6805520c9eaccf7d7b060e9b294cc4e712eef8a712ff40bbede31f2865702",
     "hosting_defaults.py": "846ed06043c81c791fee5fb1b6d383b88706d3e6d827aec1833dbb3b011ab37f",
     "native-vision-and-tools.patch": "801a65d7982dea025f473ded03356cb68e0dcb1b4e59a0f5d972b82b32326e9a",
     "switcher.py": "d0e1ff140593ec6b020d86ecee3c5a539f71321cf1e25195a9349e4bc2f97484",
-    "config.example.json": "b96635a16a735d06c66c96c3b461f5c7e0fb2fd244781c3ac5ac51f66433d09c",
+    "config.example.json": "3c5a1b2ae2dc4ccd956b4ce22c18533147c9379c580412ab3c31cce0f4529074",
     "hosting_ready.py": "fe7b6f2602c8fb68a0eab5fed343aeb2c5f658e5d297f3ca3c53b22698a6316b",
     "config.shared-settings.example.json": "9dccb6db4fd0d5e1596ad0845decb60c24aae2756a4eca216cb9b914d310fdc9",
     "LICENSE-Strata.txt": "949b9b0aada7476006469e58ee4ffb0e0f68c2d9137e90a356757b61a09d37f0",
@@ -55,6 +58,71 @@
     "public_auth_and_raw_streaming_READY": true,
     "initial_harness_failures_retained_unqualified": true,
     "nearfilled1M_or_full256K_output_tested": false,
-    "speed_or_broadquality_claim": false
+    "speed_or_broadquality_claim": false,
+    "historical_prefill_chunk": 1024
+  },
+  "chunk2048_qualification": {
+    "date": "2026-10-28",
+    "same_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "actual_production_config_sha256": "e3219ee32dc8ac5540a66b21909210df6e45b5a6be9ffbf1349b95016b45768b",
+    "actual_production_preflight_sha256": "51bf692be0ed184a092303d61e0d2b7de74eca5473098d4b78a705d4b83c7bb2",
+    "activation_utc": "2026-10-28T10:30:28.264625+00:00",
+    "four_arms_complete": true,
+    "cold32761_prefill_time_reduction_pct": 30.455213157731908,
+    "coding_decode_change_pct": 2.1914482112068256,
+    "coding_generated_tokens_change_pct": -19.13504544798731,
+    "overall_task_speedup_claim": false,
+    "raw_basic_full": [
+      20,
+      12
+    ],
+    "natural_main": 20,
+    "native_HTTP_requests": [
+      52,
+      56
+    ],
+    "new_mode_CPU_controls_each_host": 178,
+    "activation_CPU_controls_each_host": 43,
+    "actual_GPU_expert_slots": 11410,
+    "actual_CPU_experts_all_RAM": 3950,
+    "new_separate_cache_old_retained": true,
+    "actual_public_auth_READY_rawSSE_verified": true,
+    "nearfilled1M_full256K_generation_proven": false
+  },
+  "chunk4096_qualification": {
+    "date": "2026-10-28",
+    "same_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "actual_production_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "actual_production_preflight_sha256": "b15c66b2fb7d96f689995525618583f12b30b890f7f713a1e4323718093ffc26",
+    "actual_production_release_sha256": "b921b85827fa63fd448cadc808fafb3e027c192ddaa2af45c5dcf0f373d1bed8",
+    "activation_utc": "2026-10-28T16:28:49.788911+00:00",
+    "four_arms_complete": true,
+    "comparison_sha256": "3817b07cee63fda124890abe3a5857d04d35209f3347a24f47ad5f8c534bd020",
+    "cold32761_prefill_time_reduction_pct": 21.904904774543244,
+    "coding_decode_change_pct": 0.9940187032624781,
+    "coding_generated_tokens_change_pct": 21.907107073108612,
+    "overall_task_speedup_claim": false,
+    "raw_basic_full": [
+      20,
+      12
+    ],
+    "natural_main": 20,
+    "native_HTTP_requests": [
+      52,
+      56
+    ],
+    "new_mode_CPU_controls_each_host": 239,
+    "activation_CPU_controls_each_host": 62,
+    "GPU_expert_slots_from_qualified_private_INFO": 11315,
+    "hosted_GPU_slots_inferred": 11315,
+    "hosted_direct_GPU_INFO_receipt": false,
+    "CPU_experts_all_RAM": 4045,
+    "new_separate_cache_old_retained": true,
+    "actual_public_auth_READY_rawSSE_verified": true,
+    "first_extra_observer_returncode": 1,
+    "extra_observer_defect": "Offline literal-string check expected READY in one SSE chunk. Preserved valid stream has READ then Y; serving public probe passed. First failure retained separately.",
+    "offline_saved_response_assembler_controls_each_host": 12,
+    "new_inference_or_restart_for_audit_repair": false,
+    "nearfilled1M_full256K_generation_proven": false
   }
 }
