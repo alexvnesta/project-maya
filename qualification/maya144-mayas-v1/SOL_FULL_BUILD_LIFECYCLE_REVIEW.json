@@ -1,0 +1,60 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-10-31T15:00:18.013727+00:00",
+  "status": "CHANGES_REQUESTED_BEFORE_ACTUAL_BUILD",
+  "scope": "Targeted full-build subprocess/admission/claim lifecycle source review; no blanket qualification review",
+  "source_sha256": {
+    "build_current.py": "6df907c7f4b94687288c88316670b1c71912b64b7f31313fb68715de85cd1d23",
+    "test_build_current.py": "afda26aeaa908648cc5571a650c5b5ec6ba43c44631749573ba4738545d1fbd2",
+    "run_build_cpu.py": "4183b298ed9c820ba5b1cd1d43c8d3c476d2060b46c8c4ab34493e6430a975dc"
+  },
+  "findings": [
+    {
+      "id": "FULL_BUILD_UNQUALIFIED_ENVIRONMENT",
+      "priority": "P1",
+      "file": "build_current.py",
+      "lines": [
+        157,
+        180
+      ],
+      "title": "Use a clean qualified CMake/compiler environment",
+      "finding": "b.environment() copies the entire inherited environment and removes only a compiler-oriented blacklist. It retains CMAKE_TOOLCHAIN_FILE, CXXFLAGS, CFLAGS, CUDAFLAGS, LDFLAGS, NVCC_PREPEND_FLAGS/NVCC_APPEND_FLAGS, MAKEFLAGS and PATH. Unlike direct fixed compiler argv, fresh CMake configure consumes these variables: an inherited toolchain file can execute arbitrary execute_process commands and LDFLAGS can insert a historical archive. Therefore fixed plan() does not enforce compiler-only execution or current-source CPU linkage. The reused preexec helper observes only b.ENV/TMPDIR, so its successful witness cannot reveal the extra effective inputs.",
+      "related_refs": [
+        "../cpu-iq2xs-upstream623-v1/build-v3/build.py:386-394",
+        "../cpu-iq2xs-upstream623-v1/build-v3/build.py:408-416"
+      ],
+      "requested_change": "Build a local explicit environment allowlist with a pinned tool search PATH and necessary HOME/locale/temp/bounds values; record and compare the full actual preexec environment. Add negative inherited toolchain/flags/MAKEFLAGS/NVCC injection cases without launching CMake. Keep pinned shared helper unchanged if a local wrapper is sufficient."
+    },
+    {
+      "id": "FULL_BUILD_PREMATURE_SUCCESS_RECEIPT",
+      "priority": "P1",
+      "file": "build_current.py",
+      "lines": [
+        245,
+        265
+      ],
+      "title": "Publish success only after verified owned closure and canonical release",
+      "finding": "result.json with passed:true is emitted before finally checks owned.absence(), releases the exact claim and runs the final check. A late busy condition or release/final-guard fault leaves this successful result alongside failed supervision. The subsequent compile gate at220 accepts only configure-FIRST/result.json.is_file(), so a failed configure closure can still satisfy its prior-stage gate. The file is neither consumed as a typed successful chain nor bound here to released supervision.",
+      "related_refs": [
+        "build_current.py:220",
+        "build_current.py:251-265"
+      ],
+      "requested_change": "Hold the prospective result in memory, complete owned absence and exact claim release, run final guards, then emit the success result. For compile, consume the qualified configure result and successful supervision/own-claim-release evidence, binding them to the configure command/source/qualification and retained generated build inputs. Add scripted main-flow controls for a post-run busy transition, release failure and failed configure supervision; all must prevent success publication/compile admission."
+    }
+  ],
+  "bounded_positive_assessment": [
+    "OwnedChildren.starting occurs before Popen, and the obtained handle is registered before downstream receipt acceptance; registered journal failure still reaches cleanup through the local Popen handle.",
+    "run_owned cleans the captured group in finally and records cleanup faults; main retains canonical claim if owned absence is uncertain.",
+    "check includes strict_idle at immediate pre-spawn admission and while the child runs, addressing the earlier inherited busy-guard gap.",
+    "Fixed plan requests a fresh CMake build and only maya-ds4 with serial -j1; no direct model/test/native binary invocation appears in the three inspected files. This does not qualify uninspected CMake custom commands or generated linkage."
+  ],
+  "limits": {
+    "tests_run": false,
+    "project_modules_imported": false,
+    "compiler_native_or_GPU_execution": false,
+    "ubuntu_accessed": false,
+    "source_edited": false,
+    "runtime_or_promotion_admission": false
+  },
+  "test_gap": "Existing controls exercise run_owned with simple mocks but do not exercise actual main claim/release/final-publication ordering or a running-child late-busy transition."
+}

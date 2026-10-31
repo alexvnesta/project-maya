@@ -214,6 +214,44 @@ int main() {
               "a negative abliterate.scale: refused");
     }
 
+    std::printf("fork projection guards on rebased Maya\n");
+    {
+        auto tensors = adapter_tensors(2);
+        for (auto& t : tensors)
+            if (t.name == "blk.1.ffn_down_exps.weight.lora_b") t.v[kDim] += 1.0f;
+        check(!loads(mk(write("ad_second_expert_diff", adapter_kv(), tensors)), 0, 2, 0.0f),
+              "a second routed expert's different direction: refused");
+        tensors = adapter_tensors(2);
+        check(!loads(mk(write("ad_last_expert_cut", adapter_kv(), tensors, 4)), 0, 2, 0.0f),
+              "whole last routed tensor checked beyond its first direction");
+        for (auto& t : tensors)
+            if (t.name == "blk.1.ffn_down_exps.weight.lora_b") t.ne = {2, kDim};
+        check(!loads(mk(write("ad_bad_expert_shape", adapter_kv(), tensors)), 0, 2, 0.0f),
+              "incompatible routed direction rank/shape: refused");
+        check(!loads(mk(write("ad_scale_product_large", adapter_kv(1e6f, 1e6f), adapter_tensors(2))), 0, 2, 0.0f),
+              "metadata scale product above bound: refused");
+        check(!loads(mk(write("ad_scale_product_small", adapter_kv(1e-6f, 1e-6f), adapter_tensors(2))), 0, 2, 0.0f),
+              "metadata scale product below bound: refused");
+        using strata::ds4::ablate::target_layer;
+        check(target_layer(0, 40) && target_layer(39, 40), "first and last main blocks projected");
+        check(!target_layer(-1, 40) && !target_layer(40, 40) && !target_layer(41, 40) && !target_layer(42, 40),
+              "drafter blocks and negative index never projected");
+        check(!target_layer(0, 0) && !target_layer(0, -1), "invalid main-block count never projected");
+        using strata::ds4::ablate::projection_reference;
+        std::vector<float> projected;
+        std::string error;
+        check(projection_reference({3, 4, 5, 6}, {1, 0}, 1, 2, projected, error) &&
+                  projected == std::vector<float>({0, 4, 0, 6}), "two-row full projection reference");
+        check(projection_reference({4, 8}, {1, 0}, 0.25f, 1, projected, error) &&
+                  projected == std::vector<float>({3, 8}), "fractional-scale projection reference");
+        check(!projection_reference({4, 8}, {2, 0}, 1, 1, projected, error), "nonunit direction refused by reference");
+        check(!projection_reference({4, 8, 1}, {1, 0}, 1, 2, projected, error), "ragged rows refused by reference");
+        check(!projection_reference({4, std::numeric_limits<float>::infinity()}, {1, 0}, 1, 1, projected, error),
+              "nonfinite input refused by reference");
+        check(!projection_reference({4, 8}, {1, 0}, std::numeric_limits<float>::quiet_NaN(), 1, projected, error),
+              "nonfinite reference scale refused");
+    }
+
     for (const auto& p : made) {
         std::error_code ec;
         std::filesystem::remove(p, ec);

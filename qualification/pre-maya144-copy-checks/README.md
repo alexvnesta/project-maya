@@ -1,0 +1,1 @@
+These are the historical fake-device copy/placement controls for the pre-Maya-1.1.44 candidate. Their original source and raw qualification remain in the preserved branch and experiment archives. They are not controls for the rebased native and must not be used to qualify it.

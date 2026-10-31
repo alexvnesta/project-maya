@@ -1,3 +1,5 @@
+> Historical pre-Maya-1.1.44 experiment. The losing runtime bundle described below is not included in the rebased candidate. Original source and evidence remain in the preserved branch and qualification archives.
+
 # Q5_K and cache migration candidate
 
 Status: implemented, built, GPU-checked and benchmarked as one bundle. Coding decode regressed3.66%; the candidate is not selected. Production is unchanged. See [the full comparison](Q5K_CACHE_BENCHMARK.md).
