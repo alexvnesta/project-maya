@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-31T06:40:24.533074+00:00",
+  "status": "ROOT_PRECISE_ARCHITECTURE_AGREEMENT_SOURCE_IMPLEMENTATION_ONLY",
+  "astra_architecture_sha256": "7914ac948088fcf6667db97c9782e9427d288a94b28186e0d8ebd03eb3d14a81",
+  "root_entire_architecture_and_fault_diagnosis_read": true,
+  "exact_CPP_delta": {
+    "before": "std::vector<uint8_t> quantized_via_selected(ab);",
+    "after": "std::vector<uint8_t> quantized_via_selected(ab, 0x3c);",
+    "all_other_original_fixture_bytes_must_remain": true
+  },
+  "scope": "New fixture-repair-v4 namespace only. Minimal destination initialization repair keeps fullmemcmp/canaries/all6336cases/46jobs/finitebits/dispatch; source+linked-object diagnosis establishes invalid original auxiliary-byte comparison, without regrading numerical-v3 HOLD or qualifying candidate math. Current candidateCAB/archive514b/twoobjects unchanged. No original92 control relink or candidate native/objects rebuild.",
+  "new_fixture_build": {
+    "children": [
+      "Compile only repaired fixture source with original arithmetic/ISA flags and known full header closure",
+      "Link only new fixture object with original ds4 wrapper/ggml/core plus unchanged existing candidate CPU archive"
+    ],
+    "helpers": "Reuse immutable build-v3 CPULease/OwnedChildren/run_child compiler whitelist/load_cas/metadata primitives. No monkeypatch or arbitrarybinary allowance. New narrow controller and tests must cover exact two-child scope and actual closure.",
+    "aggregate_wall_seconds": 600,
+    "aggregate_soft_seconds": 400,
+    "cleanup_reserve_seconds": 200,
+    "compile_child": "Existing CPU120/AS4GiB/wall300/nice15/CUDAhidden/threadenv1",
+    "link_child": "Existing CPU30/AS4GiB/wall90/nice15/CUDAhidden/threadenv1",
+    "deadline_policy": "Whole budget starts before bootstrap and further bounds children via source guards; no extension/retry. This is CPU-only and does not alter inference windows."
+  },
+  "required_gates": [
+    "Root+same Astra whole new source/tests/delta read before FIRST exact matching both-physical-host CPU proof. Include unequal/equal partial-write initializer control and altered-written-byte rejection plus exact CPP one-line custody.",
+    "New immutable fixture-only compile map/action-time current selected/idle/default/root136/DLpause/CPUlock/GPUlease/namespace/source preflight and separate same-Astra build admission.",
+    "Actual new fixture object/ELF/inputs/resources/supervision/ownedabsence/claimrelease review then distinct numerical-v4 source/controller qualification with unchanged full46jobs and1000+200budget; no old attempt replay.",
+    "Original numerical-v3 failed firstchild and45neverattempted/raw/source/qualification remain untouched. No model/GPU/performance or activation admitted."
+  ],
+  "source_CPU_build_or_numerical_execution_admitted": false
+}

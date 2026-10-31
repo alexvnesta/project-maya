@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-31T06:07:23.271293+00:00",
+  "status": "ROOT_ARCHITECTURE_AGREEMENT_SOURCE_IMPLEMENTATION_ONLY",
+  "astra_architecture_sha256": "085941f0095762e5f7ef73fd22cdc1c201acd26204227e7cadf21504bbb2f62f",
+  "root_entire_architecture_read": true,
+  "aggregate_budget": {
+    "wall_seconds": 1200,
+    "soft_seconds": 1000,
+    "cleanup_reserve_seconds": 200,
+    "scope": "CPU-only finite numerical sequence. Does not use/acquire GPU experiment.lock or extend any inference timeout. Each child retains CPU30/AS512/wall90/run85/cleanup5, further bounded by remaining whole-sequence deadline. If budget insufficient stop/HOLD partials, no automatic repeat or longer timeout."
+  },
+  "conditions": [
+    "Immutable build-v3 source must not be patched or monkeypatched; reuse CPU lease/OwnedChildren/cleanup/load_cas via pinned imports only. New narrow fixture runner exclusively whitelists actual compiled ELF and exact46 configurations.",
+    "Actual compile complete/reviewed plus future exact ELF/linked closure pinned before numerical admission. No invented binary identity.",
+    "New parser and runner/tests/driver source manually Root+same Astra read, FIRST matching bounded CPU proof both hosts and separate map/preflight/admission.",
+    "Exact6336 case rows and dynamic mixed direct path counts; strict finite typed JSON, dispatch, empty stderr and no unsupported CPU skip.",
+    "Prospective sanitized child-only dispatch overrides; fallback1 only its child; all actualenv/resources/PID/PG/OSstatus retained.",
+    "Capture all Popen handles before writes; retain canonical own CPU claim on unresolved spawn/cleanup/orphans; no other Root maintenance during CPU lease.",
+    "No protocol/ACK expansion or deliberate wait inside numerical ELF for live identity sample. Do not label Python preexec executable as actual ELF; argv/hash/output/wait proof and any unavailable transient identity limitation explicit."
+  ],
+  "source_or_CPU_or_numerical_execution_admitted": false,
+  "production_changed": false
+}

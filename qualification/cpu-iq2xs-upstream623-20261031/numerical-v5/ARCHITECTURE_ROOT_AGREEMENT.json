@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-31T07:17:34.032023+00:00",
+  "status": "ROOT_AGREES_DISTINCT_REMAINING_21_COVERAGE_ARCHITECTURE",
+  "astra_architecture_sha256": "163ff4abe40f53095063d4d145e5d27751bc23b4173fe6c1dac3455e9bc1bf7b",
+  "source_idle_origin": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/prefill-cache-improvements-20261027/performance-v1/performance_mode.py",
+  "source_idle_sha256": "4acd80c3a842c3c7f02aa5433de9015118b28c592e9822d6bde2b5e62fc71f80",
+  "source_idle_lines": [
+    88,
+    90
+  ],
+  "retained_non_work_predicates": [
+    "loaded true",
+    "max_context exact1048576",
+    "images true",
+    "active_model and default_model deepseek",
+    "switcher fault none"
+  ],
+  "additional_strict_predicates": [
+    "status ok",
+    "model exact selected",
+    "service strata",
+    "busy boolean",
+    "all switcher/work counters typed nonnegative",
+    "exact current binding/sole GPU lease and canonical phase/claim/root/resource/source checks"
+  ],
+  "only_relaxation": "Ordinary hosted work busy/active/queued/reserved may be nonzero for CPU-only nice15/512MiB serial numerical witness, under latest user permission to interrupt hosting as needed. No lifecycle stop/restart or GPU model execution required.",
+  "coverage": "First25 independently accepted4824 + exact remaining21/1512; original v4 remains incomplete and job26 unaccepted there. No passed-job replay. New combined report only after new21 complete, clean supervision, manual audits.",
+  "source_CPU_map_preflight_admission_still_required": true,
+  "old_v3_HOLD_and_v4_partial_unchanged": true,
+  "numerical_model_GPU_admitted": false
+}

@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-31T06:27:37.868579+00:00",
+  "status": "NUMERICAL_MAP_REVIEW_PASS_METADATA_FINALIZATION_ONLY",
+  "draft_sha256": "1c4b3a25fd190835f97a95cdb4b9b57f54d0d3b7da60450236dde304c7ff8ba4",
+  "root_map_review_sha256": "99b1620867f9354be55af0ea50a3558f2c01c144404b21ca7372a5793dd2da0d",
+  "source_review_sha256": "7986a3bb319c3637ad6a517f696467643d399a70db805207667cc3247a0aacbc",
+  "CPU_result_review_sha256": "20d2144a30146b4ad56a2e7493b9e790ee6bb0fba0b6bde0eec19cbffb7e075b",
+  "compiled_result_review_sha256": "35a968a7482c06062a56f15901cddab25c6db2109a700f1c1c099e9e7dde960a",
+  "current_counts": {
+    "files": 2228,
+    "inherited_compile_pins_unchanged": 2147,
+    "new_pins": 81,
+    "locally_hashed_new_small_files": 75,
+    "actual_physical_outputs_not_locally_exported": 6,
+    "sources": 6,
+    "inputs": 164,
+    "controls_each_host": 109,
+    "actual_build_inputs": 457,
+    "actual_build_raw_files": 45,
+    "children": 46,
+    "case_rows": 6336
+  },
+  "all_current_source_input_proof_and_build_memberships_match": true,
+  "conflicts_or_omissions_found": [],
+  "permitted_finalization": {
+    "add_only": [
+      "MAP_ROOT_REVIEW.json",
+      "MAP_ASTRA_REVIEW.json"
+    ],
+    "retain_every_existing_2228_pin": true,
+    "final_file_count": 2230,
+    "expected_file_plus_self_checks": 2231,
+    "metadata_only_updates": [
+      "status",
+      "qualification_map_reviewed",
+      "finalized_utc",
+      "draft_sha256",
+      "inventory_summary.file_pins"
+    ],
+    "numerical_admitted_must_remain": false,
+    "GPU_or_model_admitted_must_remain": false
+  },
+  "scope": "Map-only approval. No fixture execution, source change, CPU repeat, compiler/native model/GPU/service action or numerical admission. Future single finite sequence requires actual full2231 checks, exact source-defined import/CPU capability/current owner/root/locks/namespace/download pause guards and separate admission.",
+  "budget": "1000 soft/1200 wall/200 cleanup whole sequence; each child CPU30/AS512/wall90/run85+5 cleanup further capped by remaining sequence time. No timeout extension or replay.",
+  "thread_scope": "OMP/OpenBLAS/MKL/NUMEXPR environment limits are1; the frozen arithmetic witness deliberately exercises explicit native nt1..16 cases. This does not claim every fixture child is single-threaded. Process CPU30 accounting applies to its threads.",
+  "identity_scope": "Preexec Python bounds/PG witness, exact pinned ELF argv/exit/output and pre/post file custody. No sampled-ELF identity, numerical outcome, speed or whole-model claim.",
+  "cooperative_scope": "Selected API GPU FLOCK untouched. Separate stable CPU lock and sole Root maintenance freeze; CAS is not globally atomic. Retain canonical claim on unresolved spawn/cleanup or surviving group.",
+  "physical_verification_limit": "New6 outputs and inherited physical system/tool/library/source pins require fresh Ubuntu checks; local75 small additions were hashed. Physical a907 router provenance is retained without overwriting the different local mirror.",
+  "prior_v2_HOLD_and_all_failed_evidence_preserved": true,
+  "numerical_admitted": false
+}

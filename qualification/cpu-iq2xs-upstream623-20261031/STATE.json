@@ -1,0 +1,119 @@
+{
+  "updated_utc": "2026-10-31T06:37:09.791150+00:00",
+  "status": "FINITE_SYNTHETIC_CPU_COVERAGE_QUALIFIED_WHOLE_MODEL_UNRUN",
+  "selected_native": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "selected_config": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "portable_source_review_sha256": "ed420b79292d99e9eb8e087647bd068dd906bb0c466800ea007574f49aa132cd",
+  "portable_CPU_root_review": "CPU_ROOT_RESULT_REVIEW.json",
+  "portable_CPU_astra_review": "CPU_RESULT_ASTRA_REVIEW.json",
+  "portable_only": true,
+  "arithmetic_proved": false,
+  "build_attempted": true,
+  "numerical_fixture_attempted": true,
+  "model_or_GPU_attempted": false,
+  "production_changed": false,
+  "next": "Separate same-model whole-model numerical/controller/auditor source qualification on both hosts, fresh guarded SINGLE N0 admission, review/restore, separate N1 admission. Then separately frozen replicated decode/prefill measurements if strict numerical/correctness/lifecycle gates pass. No promotion until measured reproducible gain.",
+  "download": {
+    "status": "COOPERATIVELY_PAUSED_PARTIALS_RETAINED",
+    "pid_snapshot": 4006139,
+    "actual_proc_absent": true,
+    "recorded_worker_returncode": 75,
+    "qualification_sha256": "43a5c4c6bb724fd57ae9b8069e817d77473ab0dfb497c898868656344d8342d4",
+    "pause_marker_retained": true,
+    "not_external_waitpid_status_claim": true
+  },
+  "closed_cache_pair": {
+    "rootdecision": "../adaptive-expert-cache-v1/performance-v1/INITIAL_PAIR_ROOT_DECISION.json",
+    "no_gain_or_new_deployment": true,
+    "fork_commit": "231116c",
+    "PR": "https://github.com/alexvnesta/project-maya/pull/3"
+  },
+  "no_automation_or_new_chat": true,
+  "root_manual_progress": "build-v1/ROOT_REVIEW_NOTES.json and root-read-snapshot/*",
+  "build_observations": [
+    "build-v1/DEPENDENCY_OBSERVATION.json (408compiledependencyfiles)",
+    "build-v1/LINK_TOOL_CLOSURE_OBSERVATION.json (53link/toolpathswresolvedtargets)"
+  ],
+  "prepare_attempted": true,
+  "actual_build_q_sha256": "64acb1becb8ea7b61fa5867578bc46347f667a78ae864071ed6791decf0d9e08",
+  "actual_file_self_verification_before_lock_deferral": 2037,
+  "lock_holder_snapshot": {
+    "pid": 3998190,
+    "scope": "CurrentselectedAPIholdingexistingGPUexperiment.lock; no foreignworkclaim"
+  },
+  "cooperative_boundary": "Root will launch no other maintenance controller while the future CPU lease is held. The CPU lock serializes participating CPU controllers only; legacy optimistic state updates are not globally atomic.",
+  "build_v2_architecture": "build-v2/ARCHITECTURE_ASTRA.json",
+  "build_v2_root_agreement": "build-v2/ARCHITECTURE_ROOT_AGREEMENT.json",
+  "prepare_controller_attempted": true,
+  "compiler_attempted": true,
+  "hold_record": "build-v2/PREPARE_STARTUP_FAULT_HOLD.json",
+  "actual_file_self_verification_before_work": 2148,
+  "current_source_proof": {
+    "version": "build-v3",
+    "source_maps": 4,
+    "input_maps": 90,
+    "controls_each_host": 130,
+    "CPU_result": "build-v3/CPU_ROOT_RESULT_REVIEW.json"
+  },
+  "prepare_result": {
+    "controller_pid_snapshot": 4043750,
+    "exit": 0,
+    "original92_reproduced": true,
+    "dependency_scans": 3,
+    "new_header_pins": 18,
+    "actual_inputs": 456,
+    "supervision_PASS_groups_absent_claim_released": true,
+    "rootreview": "build-v3/PREPARE_ROOT_RESULT_REVIEW.json",
+    "productionclosure": "build-v3/PREPARE_PRODUCTION_CLOSURE.json"
+  },
+  "build_result": {
+    "controller_pid_snapshot": 4049202,
+    "controller_exit": 0,
+    "seven_children_exit0_cleanup_empty": true,
+    "supervision_PASS_groups_absent_claim_released": true,
+    "CPU_archive_exact11members_only2replaced": true,
+    "candidate_native_sha256": "cab346ccefedad1d2b80384db215325a445f474729812ea288a829d843007da4",
+    "fixture_sha256": "d5c0bfdf33c645251e0598f02ca764ab003959c1c12b722931ce30ee012a17eb",
+    "root_review": "build-v3/COMPILE_ROOT_RESULT_REVIEW.json",
+    "production_closure": "build-v3/COMPILE_PRODUCTION_CLOSURE.json"
+  },
+  "numerical_result": {
+    "qualification_sha256": "067bdfbd0caad55ac0715215e110734cb4659f7b4f448e61e791e5ae7e35bf8d",
+    "controller_PID_snapshot": 4062625,
+    "controller_exit": 1,
+    "attempted_failed": 1,
+    "never_attempted": 45,
+    "complete_accepted": 0,
+    "panel_rows_accepted": 0,
+    "first_child_PID_snapshot": 4062773,
+    "first_child_exit": 1,
+    "fault": "Actual ds4 activation quantization differs",
+    "owned_cleanup_absence_claim_release_verified": true,
+    "root_review": "numerical-v3/FIRST_FAULT_ROOT_REVIEW.json",
+    "production_closure": "numerical-v3/HOLD_PRODUCTION_CLOSURE.json",
+    "prior_raw_unmodified": true
+  },
+  "utc": "2026-10-31T07:41:40.796002+00:00",
+  "finite_synthetic_arithmetic_coverage_passed": true,
+  "whole_model_numerical_passed": false,
+  "whole_model_speed_measured": false,
+  "numerical_v3_original_failure_preserved": true,
+  "numerical_v4_incomplete_busy_deferral_preserved": true,
+  "numerical_v5": {
+    "accepted_new_jobs": 21,
+    "accepted_new_rows": 1512,
+    "combined_jobs": 46,
+    "combined_rows": 6336,
+    "combined_result_sha256": "c9f2d8b94abe870beb9404224da23cc23599d08d459b5f08afa5ad8fd8fbb86f",
+    "root_review_sha256": "4e1f6a0edc8e92216e71ffd6e2ed97a2ccec8216a98089df483edb95193500eb",
+    "astra_review_sha256": "6a146bacd13dd2c2d0bb8c38a5a75ccd5266e12eb2b21632766b880597fbcd88",
+    "qualification_sha256": "e379bb4e440c61caeb42d03af1c254c786eabdc8173261372de12dfa4900adb5",
+    "production_closure_sha256": "6eec54410e3a8c51c39525d56306da60be8d9cdebc439d7ffacd9cdd3bc4851b"
+  }
+}

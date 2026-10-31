@@ -1,0 +1,35 @@
+{
+  "job": {
+    "id": "mixed-16-16-5120-fallback",
+    "n": 5120,
+    "mode": "fallback",
+    "pair": [
+      16,
+      16
+    ]
+  },
+  "argv": [
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact",
+    "--n",
+    "5120",
+    "--expect",
+    "fallback",
+    "--pair",
+    "16:16"
+  ],
+  "pid": 4099257,
+  "returncode": 0,
+  "error": null,
+  "cleanup": [],
+  "fixture_sha256": "890041fdfb7efa9b3d9e2a7078823e5278c4ddb12da29bfa7ca5e6752b7073f6",
+  "run_seconds": 85.0,
+  "deadline_monotonic": 1700613.068465048,
+  "identity_scope": "Pinned ELF argv plus Popen/exit/output proof; preexec Python identity only",
+  "elapsed_seconds": 0.2987877409905195,
+  "output_sha256": {
+    "stdout": "e3cbe4c8495acc6eb583b6b3fe02384ab72923de6d1771e6c7aa167bb2699b69",
+    "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "error_notes": [],
+  "status": "PASS"
+}

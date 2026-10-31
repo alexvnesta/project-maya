@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-31T07:06:44.770342+00:00",
+  "status": "ROOT_NUMERICAL_V4_DRAFT_MAP_PASS_PENDING_SAME_ASTRA",
+  "draft_sha256": "af8fc211b50f385c5d41eccf8c9b9aee13ead0ad37d3181ed6f402c7c715fb6c",
+  "file_count": 2333,
+  "inherited_2277_pins_unchanged": true,
+  "new_files": 56,
+  "source_input_ID_counts": [
+    6,
+    266,
+    120
+  ],
+  "exact_46_jobs_6336_cases_unchanged": true,
+  "fixture_path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact",
+  "fixture_sha256": "890041fdfb7efa9b3d9e2a7078823e5278c4ddb12da29bfa7ca5e6752b7073f6",
+  "fixture_source_sha256": "559daba1f5e18a7cc7d2ddc91f0850e215997ab39d955e9b7e8fd751d05e4b25",
+  "old_v3_HOLD_and_raw_preserved": true,
+  "numerical_admitted": false,
+  "GPU_or_model_admitted": false,
+  "review": "All original immutable2277 pins retained. Added original/repair qualified raw evidence, independently reviewed two-child repaired build and exact new mode source/CPU receipts. Physical-only ELF/object pins derived from actual build plus closure, not local binaries. Final may add only Root/Astra map reviews and corresponding freeze metadata, then separately stage actual preflight/admission.",
+  "all_266_CPU_inputs_and_6_sources_in_file_map": true,
+  "initial_root_map_incomplete_assertion_corrected_before_execution": true,
+  "missing_metadata_added": [
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v3/CPU_STAGE_IDLE_PREFLIGHT.json",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v3/METADATA_STAGE_RECEIPT.json",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v3/qualification-DRAFT.json"
+  ]
+}

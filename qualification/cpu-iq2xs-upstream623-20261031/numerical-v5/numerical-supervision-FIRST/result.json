@@ -1,0 +1,189 @@
+{
+  "status": "PASS",
+  "record": {
+    "controller_pid": 4097123,
+    "controller_start_ticks": 170046578,
+    "nonce": "4c726bd1a41649959ccde55e879f951b",
+    "mode": "iq2xs-numerical-v5",
+    "qualification_sha256": "e379bb4e440c61caeb42d03af1c254c786eabdc8173261372de12dfa4900adb5",
+    "start_binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "cpu_lease": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 2894342
+    }
+  },
+  "error": null,
+  "error_notes": [],
+  "owned_groups_absence": {
+    "passed": true,
+    "pending_spawn": null,
+    "cleanup_faults": [],
+    "children": [
+      {
+        "name": "mixed-17-17-5120-fallback",
+        "pid": 4097254,
+        "pgid": 4097254,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-16-2304-optimized",
+        "pid": 4097342,
+        "pgid": 4097342,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-16-2304-fallback",
+        "pid": 4097427,
+        "pgid": 4097427,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-16-5120-optimized",
+        "pid": 4097551,
+        "pgid": 4097551,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-16-5120-fallback",
+        "pid": 4097655,
+        "pgid": 4097655,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-18-2304-optimized",
+        "pid": 4097743,
+        "pgid": 4097743,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-18-2304-fallback",
+        "pid": 4097829,
+        "pgid": 4097829,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-18-5120-optimized",
+        "pid": 4097918,
+        "pgid": 4097918,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-18-5120-fallback",
+        "pid": 4098004,
+        "pgid": 4098004,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-22-2304-optimized",
+        "pid": 4098094,
+        "pgid": 4098094,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-22-2304-fallback",
+        "pid": 4098180,
+        "pgid": 4098180,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-22-5120-optimized",
+        "pid": 4098270,
+        "pgid": 4098270,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-22-5120-fallback",
+        "pid": 4098457,
+        "pgid": 4098457,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-17-2304-optimized",
+        "pid": 4098610,
+        "pgid": 4098610,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-17-2304-fallback",
+        "pid": 4098698,
+        "pgid": 4098698,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-17-5120-optimized",
+        "pid": 4098802,
+        "pgid": 4098802,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-17-5120-fallback",
+        "pid": 4098908,
+        "pgid": 4098908,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-16-2304-optimized",
+        "pid": 4098994,
+        "pgid": 4098994,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-16-2304-fallback",
+        "pid": 4099083,
+        "pgid": 4099083,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-16-5120-optimized",
+        "pid": 4099169,
+        "pgid": 4099169,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-16-16-5120-fallback",
+        "pid": 4099257,
+        "pgid": 4099257,
+        "returncode": 0,
+        "group_absent": true
+      }
+    ]
+  },
+  "own_claim_released": true,
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "21: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "retry_authorized": false,
+  "elapsed_seconds": 58.98513724911027
+}

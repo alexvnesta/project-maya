@@ -1,0 +1,83 @@
+{
+  "utc": "2026-10-31T06:56:51.656668+00:00",
+  "status": "CONDITIONAL_SINGLE_FIXTURE_BUILD_ONLY_ADMISSION",
+  "qualification_sha256": "01acb187f2c74475783666ecc04e5013b0fa06c11b8a72ef34b7a6bdcc921658",
+  "actual_preflight_sha256": "e2cd1e3df1e326508a92f202a58c22f79e461f7a2a2ee33099a7c895ba484446",
+  "actual_preflight_utc": "2026-10-31T06:52:49.264234+00:00",
+  "source_sha256": {
+    "build.py": "d2af840efc5989dcc5de6174f4b11a3ebd7c9da2ecc8c14e630ec41e4982bea7",
+    "iq2xs_exact.cpp": "559daba1f5e18a7cc7d2ddc91f0850e215997ab39d955e9b7e8fd751d05e4b25",
+    "test_build.py": "205e0af60639f7d271268e3250d1c4595005a3653119e55ac59104c7eaddedda",
+    "cpu_driver.py": "730fb023fed65e17894d2a9b2d019131458a53ff13b070fc9ea61c0f27a38e33",
+    "test_cpu_driver.py": "b33e52afb6735cec6f0842b2121682b781cbb304ca2ccec800a0997b4ec4dd47"
+  },
+  "review_sha256": {
+    "SOURCE_ROOT_REVIEW.json": "31bc5323cfc18160a9192e500d1b2530d3454d45c07a2c9899fad4ec8039374c",
+    "SOURCE_ASTRA_REVIEW.json": "123ab0ab1372d76a289701a47cfb437d1bf2160df4f9f2c0468ba53e02c85763",
+    "CPU_ROOT_RESULT_REVIEW.json": "bed2052d0f4a0bd98788aa63bff39eb05eecf2d5dab279897c8bb5ef196e7c19",
+    "CPU_RESULT_ASTRA_REVIEW.json": "e02765dd98f910e7c8bfb2c4afaf800ce1682fde4bd3c6d5fe9bb22c0ad94bb1",
+    "MAP_ROOT_REVIEW.json": "8b3262d0a59fb4025946fb0ccf53dc36be4b5a021deeec8b8269fa53af33af24",
+    "MAP_ASTRA_REVIEW.json": "fe94593dd8dbe8f98db0e57a1d43914834bd501630525ccd971d34386544f0a9"
+  },
+  "actual_file_checks": 2278,
+  "final_map_delta": "All2275 draft pins unchanged; only the two approved map reviews added. Final2277 equals prior2230+45draft additions+2map reviews. inventory_summary.new_files45 describes pre-final additions, not the final47 delta.",
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "CPU_lock_identity": {
+    "device_major": 252,
+    "device_minor": 1,
+    "inode": 2894342
+  },
+  "admitted_children": [
+    "fixture-compile",
+    "fixture-link"
+  ],
+  "single_controller_only": true,
+  "scope": "Compile only repaired559daba1 fixture source and link only its new object against unchanged candidate514b archive plus original wrapper/core/ggml. CandidateCAB native, both CPU replacement objects, selected92 and production config remain immutable inputs.",
+  "aggregate_budget": {
+    "soft_seconds": 400,
+    "wall_seconds": 600,
+    "cleanup_seconds": 200
+  },
+  "child_budgets": {
+    "fixture-compile": {
+      "CPU_seconds": 120,
+      "AS_bytes": 4294967296,
+      "wall_seconds": 300
+    },
+    "fixture-link": {
+      "CPU_seconds": 30,
+      "AS_bytes": 4294967296,
+      "wall_seconds": 90
+    }
+  },
+  "budget_conditions": "Start600wall/400soft before bootstrap; reserve the full child wall plus1s within remaining soft time. No extension, retry, second controller or later fixture execution.",
+  "action_time_conditions": [
+    "Immediately repeat source-defined genuine idle/default/current exact selected binding/no active phase or CPU claim/root136 guards. Receipt phase/ownership values are historical observations, not permission to skip fresh checks.",
+    "Verify exact final qualification and all declared files before imports; actual pinned load_cas path and exact one-line delta must remain valid.",
+    "GPU FLOCK must remain owned by selected API3998190 with exact device/inode and no waiter; do not mutate that lease.",
+    "Downloader stays paused and absent; Root launches no other maintenance through this cooperative CPU lease. Global CAS is not claimed atomic.",
+    "build-FIRST and build-supervision-FIRST must be fresh; acquire only the separate stable CPU coordination lock.",
+    "Keep all owned child handles/journal; first fault or busy deferral stops. Claim release only after all owned groups are proved absent; uncertain cleanup retains HOLD/claim."
+  ],
+  "after_build": "Review actual two child commands, resource/PID/exit/cleanup receipts, new object/ELF hashes and dependency closure, supervision and unchanged production. A distinct numerical-v4 qualification/preflight/admission is still required.",
+  "original_numerical_v3_failure": "Preserved HOLD: one attempted-failed,45 never attempted,zero accepted panel cases. This admission neither retries nor regrades that attempt.",
+  "numerical_execution_admitted": false,
+  "native_model_GPU_service_actions_admitted": false,
+  "candidate_rebuild_admitted": false,
+  "automatic_next_stage": false,
+  "reviewer_live_actions": false
+}
