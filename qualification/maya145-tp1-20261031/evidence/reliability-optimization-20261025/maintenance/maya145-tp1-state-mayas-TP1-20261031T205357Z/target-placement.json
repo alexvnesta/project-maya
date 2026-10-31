@@ -1,0 +1,33 @@
+{
+  "trunk_split": [
+    19,
+    21
+  ],
+  "drafter_on_GPU0": true,
+  "head_on_GPU1": true,
+  "actual_human_rows": [
+    {
+      "device": 0,
+      "first_layer": 0,
+      "last_layer": 42,
+      "weights_GB_rounded": 3.31,
+      "experts_GB_rounded": 58.32,
+      "human_experts_with_drafter": 5746,
+      "human_total_with_drafter": 7680,
+      "caches_GB_rounded": 0.58,
+      "free_MiB": 2026
+    },
+    {
+      "device": 1,
+      "first_layer": 19,
+      "last_layer": 39,
+      "weights_GB_rounded": 3.31,
+      "experts_GB_rounded": 58.86,
+      "human_experts_with_drafter": 5953,
+      "human_total_with_drafter": 8064,
+      "caches_GB_rounded": 0.54,
+      "free_MiB": 2030
+    }
+  ],
+  "exact_prompt_bytes_observed": false
+}

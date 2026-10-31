@@ -1,0 +1,41 @@
+{
+  "utc": "2026-10-31T22:09:53.855512+00:00",
+  "decision": "ACCEPT_SINGLE_TP1_PROSE_OBSERVATION_ONLY",
+  "entire_answer_and_reasoning_manually_read": true,
+  "words": 939,
+  "requested_topics_and_invented_example_and_exact_ending": true,
+  "generated_tokens": 5777,
+  "native_decode_tps": 56.51795768343878,
+  "native_decode_ms": 102215.3,
+  "client_seconds": 104.08998646517284,
+  "prompt_tokens": 169,
+  "prompt_ms": 1849.9,
+  "DSpark": {
+    "configured_and_loaded_separate": true,
+    "execution_proven": true,
+    "draft_rounds": 1744,
+    "draft_ms": 10308.251,
+    "verify_ms": 70372.986,
+    "acceptance_can_be_zero": true,
+    "samples": 723,
+    "raw_lines_sha256": "4cd8158dd8d256ffd3d84176807d46fb379462b7d6f8d282f0bb67c450960ad2"
+  },
+  "terminal_audit_sha256": "cedf0fca502589ab6fcdacd66b779a25b2d20e768f530f1473876e0eac06c194",
+  "native_API_window_exit": [
+    0,
+    0,
+    0
+  ],
+  "resources": {
+    "root_min_GiB": 255.43507766723633,
+    "system_swapout_delta_bytes": 0,
+    "swap_not_attributed_to_model": true
+  },
+  "selected_binding": {
+    "invocation": "60e368a207fc40bcb08d353c2ad5a9db",
+    "main_pid": 577305,
+    "native_pid": 577343,
+    "native_start_ticks": 175225900
+  },
+  "no_general_quality_or_replication_or_promotion": true
+}

@@ -1,0 +1,38 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "scope": "Complete mechanical three-file recovery delta against previously reviewed maya145-decode-v1/recovery-v1; no duplicate lifecycle qualification",
+  "verdict": "SCOPED_SOURCE_DELTA_ACCEPTED",
+  "findings": [],
+  "source_sha256": {
+    "recovery.py": "97998dea4e09c579b06d7c844e3971c6f6d8de04bdf6fedfbbbbb337136a4095",
+    "test_recovery.py": "97588db5d9eb34f7ffc5a87c46faf617ab986984e81a7bb259a90b45688b6301",
+    "run_cpu.py": "9ed712d30c3b17d8e417aa68703e82c7f0516d70c0fb0c5f7292c89e47091726"
+  },
+  "baseline_source_sha256": {
+    "recovery.py": "56c714954cd42f1bba6ade037e6259adb343569d8c08c084632ef548ab4462c3",
+    "test_recovery.py": "13019eb15f1f78d0974a63e61492bbce8296acb1852577180a5d2b5aa6a3c79a",
+    "run_cpu.py": "9ed712d30c3b17d8e417aa68703e82c7f0516d70c0fb0c5f7292c89e47091726"
+  },
+  "exact_mechanical_substitution_checks": {
+    "recovery.py": true,
+    "test_recovery.py": true,
+    "run_cpu.py": true
+  },
+  "reviewed_contracts": {
+    "mode": "decode",
+    "only_failed_arm": "PTP1",
+    "failed_controller_pattern": "maya145-tp1-decode-mayas-TP1-[0-9]{8}T[0-9]{6}Z/state.json",
+    "cas_key": "maya145tp1decode_recovery_current",
+    "recovery_namespace": "maya145tp1decode-baseline-recovery-",
+    "health_namespace": "maya145tp1decode-baseline-health-",
+    "tests_follow_namespace_and_arm": true,
+    "driver_byte_identical": true,
+    "lifecycle_algorithm_changed": false
+  },
+  "complete_changed_source_and_test_diff_read": true,
+  "tests_executed": false,
+  "project_imports_executed": false,
+  "host_actions_performed": false,
+  "runtime_or_gpu_admission": false,
+  "limitations": "Scoped source review only; fresh matching CPU proof and separate phase admission remain required."
+}

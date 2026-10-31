@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-31T22:17:54.101261+00:00",
+  "entire_new_source_tests_read": true,
+  "scope": "Current145/publicMayaS four unchanged known-answer8K text/image/cache states, fullpolicy, no dumps/roundlog/FSIZE. Prior full source plus complete new delta/tests manually read ROOT and Sol. No GPU or promotion authority.",
+  "source_sha256": {
+    "current_audit.py": "adb795c670ddbb1866bd07a0b40fcc881d5006c9c94b159fd4cc27f8d1f8bbf6",
+    "test_current_audit.py": "548f27986e18374890b0fb3c015beecc88b4013b191406b1a6ea7d2c14bd32ef",
+    "run_audit_cpu.py": "bd4ffe74e33a8d4d65f8e700945c2f055c165ec855b38c744f3cfde0b1fff1cb"
+  },
+  "input_sha256": {},
+  "input_paths_local": {},
+  "test_ids": [
+    "test_current_audit.Audit.test_cap_partial_UNRUN_retry_and_broader_claim_refused",
+    "test_current_audit.Audit.test_complete_short_scope_only",
+    "test_current_audit.Audit.test_duplicate_and_nonfinite_saved_JSON_refused",
+    "test_current_audit.Audit.test_exact_comparison_preserves_types",
+    "test_current_audit.Audit.test_exact_window_exit0",
+    "test_current_audit.Audit.test_old_entry_or_other_arm_refused",
+    "test_current_audit.Audit.test_private_cleanup_required",
+    "test_current_audit.Audit.test_recorder_hashes_exact_small_bytes",
+    "test_current_audit.Audit.test_recorder_refuses_alias_and_large_evidence",
+    "test_current_audit.Audit.test_unreviewed_or_wrong_scoring_refused",
+    "test_current_audit.Audit.test_wrong_or_unfinished_window_refused",
+    "test_current_audit.CurrentFenceAudit.test_actual80_resource_contract",
+    "test_current_audit.CurrentFenceAudit.test_missing_failed_or_wrong_actual_install_refused",
+    "test_current_audit.CurrentFenceAudit.test_old76_and_unclean_or_foreign_resource_contract_refused"
+  ],
+  "root_full_source_and_test_diff_read_against_qualified_P2_and_state_sources": true,
+  "actual_native_file_limit_must_be_untouched_unlimited": true,
+  "reject_contradictory_partial_reason": true,
+  "root_full_new_delta_and_tests_read": true,
+  "sol_diff_review_sha256": "3d3c3251fad7a542d88291a3747ba570e228a4536c1c27389f5830081e7dbf08"
+}

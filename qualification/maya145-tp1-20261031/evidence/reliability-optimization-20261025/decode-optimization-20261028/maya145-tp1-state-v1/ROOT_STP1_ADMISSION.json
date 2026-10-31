@@ -1,0 +1,41 @@
+{
+  "utc": "2026-10-31T20:53:57.441130+00:00",
+  "decision": "SINGLE_FIRST_STP1_FINITE_SCHEDULE_STATE_ONLY",
+  "qualification_sha256": "fd4eee6133a0c1d3f27fa81f35f9f8ab2c028010e6a2c7714d2ee4260f9c504f",
+  "pins": 2467,
+  "CPU_each_physical_host": [
+    76,
+    22,
+    14,
+    61
+  ],
+  "binding": {
+    "invocation": "cd21c0eb03b7487eb4aa1f91ef87fea3",
+    "main_pid": 403753,
+    "native_pid": 403808,
+    "native_start_ticks": 174741736
+  },
+  "native": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+  "TP": 1,
+  "auto_layer_split": true,
+  "same_public_MayaS_model_quality_context_output_drafter": true,
+  "request_seed": 2,
+  "two44token_coldwarm": [
+    0,
+    43
+  ],
+  "first_TP1_state_no_TP2_replay": true,
+  "timing_or_promotion_admitted": false,
+  "natural_benchmark_cap": 32768,
+  "effort": 100,
+  "total_context": 1048576,
+  "output_allowance": 262144,
+  "window": 1200,
+  "soft": 1000,
+  "cleanup": 200,
+  "root_GiB": 132,
+  "private_memory_GiB": 80,
+  "native_only_FSIZE_MiB": 512,
+  "all_agents_stopped": true,
+  "automatic_next_arm": false
+}

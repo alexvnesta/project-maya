@@ -1,0 +1,77 @@
+{
+  "utc": "2026-10-31T21:15:28.588117+00:00",
+  "decision": "ACCEPT_TP1_FINITE_SCHEDULE_DIAGNOSTIC_ONLY_NOT_TIMING_OR_PROMOTION",
+  "qualification_sha256": "fd4eee6133a0c1d3f27fa81f35f9f8ab2c028010e6a2c7714d2ee4260f9c504f",
+  "entire_both_answers_and_reasoning_read": true,
+  "generated_tokens": [
+    29,
+    29
+  ],
+  "finite_rows": [
+    39,
+    39
+  ],
+  "finite_bytes": [
+    20167680,
+    20167680
+  ],
+  "same_emitted_token_path": true,
+  "full_logit_bytes_equal": false,
+  "numeric_equivalence_not_claimed": true,
+  "reused_prompt_tokens": [
+    0,
+    43
+  ],
+  "draft_rounds": [
+    7,
+    7
+  ],
+  "all_speculative_accepted_offered": [
+    [
+      22,
+      31
+    ],
+    [
+      22,
+      31
+    ]
+  ],
+  "lookup_accepted_offered_included": [
+    [
+      7,
+      15
+    ],
+    [
+      7,
+      15
+    ]
+  ],
+  "native_API_window_exit": [
+    0,
+    0,
+    0
+  ],
+  "private_native": 417327,
+  "resources": {
+    "root_min_GiB": 255.55419158935547,
+    "system_swapout_delta_bytes": 0,
+    "swap_not_attributed_to_model": true
+  },
+  "actual_auto_trunk_split": [
+    19,
+    21
+  ],
+  "actual_CPU_experts_all_RAM": 5528,
+  "actual_GPU_trunk_slots": 9832,
+  "public_verification_completed_separately_after_busy_deferral_without_restart": true,
+  "selected_binding": {
+    "invocation": "685cb0f4bb8c48dea33635b894697224",
+    "main_pid": 424352,
+    "native_pid": 424413,
+    "native_start_ticks": 174902414
+  },
+  "terminal_audit_sha256": "d9031d9669d5edd94cfbd0300d5f8b7c1e01105ea20dc34352897f21375e9664",
+  "general_quality_speed_deployment_admitted": false,
+  "automatic_next_arm": false,
+  "prior_failed_arms_preserved": true
+}

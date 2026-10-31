@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "native_pid": 417327,
+  "prompt_tokens": 44,
+  "observed_tokens": 29,
+  "native": {
+    "generated": 29,
+    "prompt_tokens": 44,
+    "prompt_ms": 645.2,
+    "decode_ms": 572.7,
+    "finish": "stop",
+    "drafts_accepted": 22,
+    "drafts_offered": 31,
+    "reused": 0,
+    "hits": 8344,
+    "lookups": 9435
+  },
+  "cancelled_control_or_budget": false,
+  "client_first_reasoning_s": 0.6642213289160281,
+  "client_first_content_s": 1.1268677648622543,
+  "client_first_tool_s": null,
+  "client_full_s": 1.242029381915927,
+  "scope": "Native/client timings separately retained"
+}

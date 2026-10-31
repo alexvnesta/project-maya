@@ -1,0 +1,13 @@
+{
+  "status": "SOURCE_LEAD_ONLY_NOT_QUALIFIED_OR_ADMITTED",
+  "source": "Maya1.1.45 docs/SETTINGS.md1204-1247 andds4_model.cu6476-6509",
+  "observed_TP2_default_free_MiB": [
+    1918,
+    9534
+  ],
+  "observed_TP2_CPU_experts": 6490,
+  "engine_supports_MAYA_DS4_DRAFT_DEV": "1,0,0 moves only first of3drafterblocks onto otherTPmember; keepsweights,fullverification andconfsetting",
+  "rationale": "Shared target slots limited by tightest member. Oneblock can balance unusedVRAM while fewer CPUexperts might reduce decodeandloadcost. Requires exactsource/numerical/task/resource/actualplacementandendtoendcomparison, no gain assumed. Whole-draftermove could only move bottleneck to othermember.",
+  "quality_or_speed_claim": false,
+  "next_priority": "TP1state andsameprose measurement first"
+}

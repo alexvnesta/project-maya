@@ -1,0 +1,61 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "SCOPED_SOURCE_DELTA_ACCEPTED_FOR_FIRST_CPU",
+  "findings": [],
+  "scope": "Complete quality selector/run_suite/phase/auditor and changed tests against reviewed decode predecessor; relevant inherited scorer/reconcile/issue methods checked",
+  "source_sha256": {
+    "engine_profile.py": "8955c6dd750c837646d70951683dc5f97b9eeb77acf008cb8098f5fdf0e39a41",
+    "current_config.py": "babf18f9ec576c94a47427d90e8cd367bd51205659d7212bcd9e89b882596567",
+    "current_runtime.py": "7ec925422eabd2c534175eac5d085b02472870e73a5942d86929edc2cb8b181b",
+    "current_controls.py": "43442b5d4ea6f61dd32504078d55a60e4ccad337fe05a8b28a2e958cd196f798",
+    "current_compat.py": "c7681409cb877bb36a72469366744964ba3c24e79bec76fb019d9d042b1d7e93",
+    "test_current_mode.py": "6d1b2a5460670772d32e7e72fd3524a76733311257197bbc27523ab892904572",
+    "run_current_cpu.py": "bf07ed4c4c26817abe8269ccb5c00cc8df7082720b75babdd514fcb1883b27a6",
+    "current_audit.py": "adb795c670ddbb1866bd07a0b40fcc881d5006c9c94b159fd4cc27f8d1f8bbf6",
+    "test_current_audit.py": "548f27986e18374890b0fb3c015beecc88b4013b191406b1a6ea7d2c14bd32ef",
+    "run_audit_cpu.py": "bd4ffe74e33a8d4d65f8e700945c2f055c165ec855b38c744f3cfde0b1fff1cb"
+  },
+  "baseline_source_sha256": {
+    "engine_profile.py": "71b753a360932154bdfaac35dc8378011bcd1de4594baebc0dea8baf44430c01",
+    "current_config.py": "27ac8601a31eddf0f4baf2e5dc59c302df15d4cacfdd651b95a474cd6eadcac6",
+    "current_runtime.py": "ea71181b6124dd8643891175238f03eba5f6319e6beab51df6d6d36583fba922",
+    "current_controls.py": "43442b5d4ea6f61dd32504078d55a60e4ccad337fe05a8b28a2e958cd196f798",
+    "current_compat.py": "3807bec7d189bc7c8114016ec3d2fcad0cdfbef45dc32618a4adcc1d21cd2d3b",
+    "test_current_mode.py": "636da38ae38060e2682cc8a2dadb3c608b2d6fcea2af2aed8fb32898cfc42a2f",
+    "run_current_cpu.py": "1b14ccc5c82e893d008d81388915bfeeb5c25d2806abddab44659658a5e64841",
+    "current_audit.py": "0f785624d797d66f32ca8e292215663c628e481c17748b03db3164aef307a470",
+    "test_current_audit.py": "0971559fef3addffdc00a0d0ffe2345c4fb61a6ce2b9aaa2610cdbd6996a8ed0",
+    "run_audit_cpu.py": "bd4ffe74e33a8d4d65f8e700945c2f055c165ec855b38c744f3cfde0b1fff1cb"
+  },
+  "resolved_during_review": [
+    {
+      "file": "current_compat.py",
+      "lines": [
+        155,
+        167
+      ],
+      "issue": "Budget-not-started case was counted as a native request by initial exact count invariant. Current trace-aware native_started mapping preserves UNRUN and bounded partial count, with explicit regressions.",
+      "status": "RESOLVED_IN_FINAL_REVIEWED_BYTES"
+    }
+  ],
+  "reviewed_checks": [
+    "Original four-case fixture exact SHA and case ordering",
+    "Known JSON answers, natural termination, exact request/prompt/sampling and prefix reuse reconciled from saved raw evidence",
+    "Exactly one trace per issued case; exact native000-003 set and actual DSpark STAT independently required per completed request",
+    "UNRUN/partial stops subsequent cases, no retries and no incomplete terminal pass",
+    "Exact frozen image-bearing request and native image-presence/prompt evidence; DSI cleanup checked",
+    "Diagnostic dumps and round logger absent; actual native unlimited FSIZE preserved",
+    "Inherited handle capture, API/native/window closure,80GiB fence and fresh selected public restoration"
+  ],
+  "limitations": [
+    "Source acceptance before FIRST CPU only; no tests/imports or runtime qualification performed.",
+    "Image check binds original API bytes, encoded prompt and native has_images; does not establish independent pixel tensor equivalence.",
+    "No general quality, numerical equivalence, performance or promotion acceptance.",
+    "Recovery delta outside this review scope."
+  ],
+  "complete_changed_source_and_tests_delta_read": true,
+  "tests_executed": false,
+  "project_imports_executed": false,
+  "host_actions_performed": false,
+  "runtime_admission": false
+}
