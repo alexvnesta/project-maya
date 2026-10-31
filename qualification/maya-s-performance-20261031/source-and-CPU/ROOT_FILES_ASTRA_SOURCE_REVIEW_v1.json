@@ -1,0 +1,53 @@
+{
+  "decision": "SOURCE_ONLY_FINDINGS_BEFORE_FIRST_CPU",
+  "manual_entire_five_files_and_criteria_read": true,
+  "reviewed_source_sha256": {
+    "pv_audit.py": "4d0afe3f312431e0e701b6c485c3b653b9ca715a3b87af0ccc0a1842923f6b20",
+    "test_pv_audit.py": "c4a38e96ba383607125fd3dca1bd95c9ecf9b00461ec56c0f25a923e2e2bf4eb",
+    "pv_dispatch.py": "1c2002d4f1e6607511e351f9e499e44b6e31e4c6f192b7b3dcfa94bfb96070d2",
+    "test_pv_dispatch.py": "4f858fea5adde07d371202b37695f6f876a8bfd4f57e8747258296d2a90bee46",
+    "pv_cpu.py": "9e0fb173d27a1fdcaa38afe92d266006a22b18140de9033d5551a95d75bd7e19"
+  },
+  "current_sha256_at_review_record": {
+    "pv_audit.py": "18118961a111e7cdb7e7f89898956ebd7cf2eda2723d1f42a77e34aaa46bdf8f",
+    "test_pv_audit.py": "b750d4b59b5fac1db8a7313950657360c35b82c336be83731eeb24c0e8ad0ffb",
+    "pv_dispatch.py": "b52526ba2cde18d6c12592304ca95507511b7034cb0b14b0846eded2c0c81f59",
+    "test_pv_dispatch.py": "4f858fea5adde07d371202b37695f6f876a8bfd4f57e8747258296d2a90bee46",
+    "pv_cpu.py": "9e0fb173d27a1fdcaa38afe92d266006a22b18140de9033d5551a95d75bd7e19"
+  },
+  "CPU_executed": false,
+  "GPU_model_or_remote_actions": false,
+  "criteria_sha256": "ab1f9e91d93326e20899b8f3133f5c016360245b16a71f41dda5564913157a1b",
+  "criteria_assessment": "Descriptive native-rate/prefill screen only; unequal generated work forbids causal or whole-task speed claims. Unknown completion under unchanged clock remains partial/HOLD. No promotion.",
+  "findings": [
+    {
+      "id": "F1",
+      "finding": "Cancellation producer native-audit contains emitted_token_contract but independent case_audit compares entire object to unaugmented reconcile result; successful cancellation is deterministically refused. Validate exact additional token contract, then exact remaining proof."
+    },
+    {
+      "id": "F2",
+      "finding": "Independent cancellation contract must require cancelled transport, no content/reasoning/tool output and cancelled_control_or_budget proof, matching actual producer guards."
+    },
+    {
+      "id": "F3",
+      "finding": "Post-child busy refusal must not be followed by result/observed/finished hashes in dispatcher finally."
+    },
+    {
+      "id": "F4",
+      "finding": "Validate raw post-stop-memory passed/typed available >= required == 88 GiB, rather than merely including its hash."
+    },
+    {
+      "id": "F5",
+      "finding": "Independent first-three main case audit must require positive offered/accepted drafts, preserving nonnegative-only short lifecycle allowance."
+    },
+    {
+      "id": "F6",
+      "finding": "CPU closure must include newly imported lifecycle helper pins, quality prerequisite pins and raw six-stage chain inputs actually read by new controls."
+    },
+    {
+      "id": "F7",
+      "finding": "Add cancellation raw positive/negative, full saved terminal orchestration, successful parent/child supervision and busy-after-run no-hash controls to cover changed integration seams before FIRST."
+    }
+  ],
+  "qualification": "No CPU or GPU admission by this findings record; reread corrected exact source/tests/driver and final map first."
+}
