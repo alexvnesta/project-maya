@@ -1,0 +1,210 @@
+{
+  "utc": "2026-10-31T10:38:14.331339+00:00",
+  "status": "HOLD_EXACT_WHOLE_MODEL_NUMERICAL_COMPARISON_FAILED",
+  "arm": "N1",
+  "passed": false,
+  "accepted": false,
+  "numerical_state_lifecycle_accepted": false,
+  "standalone_four_state_lifecycle_passed": true,
+  "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+  "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-cpu-iq2xs-numerical-N1-20261031T101831Z",
+  "proof_path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-cpu-iq2xs-numerical-N1-20261031T101831Z/proof.json",
+  "private_native_pid": 4158412,
+  "raw_metadata_hashes_checked": 74,
+  "all_finite_rows": 582,
+  "all_finite_bytes": 300963840,
+  "cases": [
+    {
+      "id": "cold-text",
+      "API_request_identical": true,
+      "native_ids_sampling_maxnew_images_identical": true,
+      "known_answer_correct_both": true,
+      "output_tokens_identical": true,
+      "generated": [
+        157,
+        157
+      ],
+      "dump_rows": [
+        169,
+        169
+      ],
+      "dump_bytes": [
+        87393280,
+        87393280
+      ],
+      "dump_sha256": [
+        "147dec8301db56de920faac94b2944357a75365e602ce4349145d058243eece0",
+        "4c48b462a0874d506758882d9eb0bb10e5f1c1f95ec1dc8378fc25d95034e096"
+      ],
+      "full_dump_bytes_identical": false
+    },
+    {
+      "id": "rewind-text",
+      "API_request_identical": true,
+      "native_ids_sampling_maxnew_images_identical": true,
+      "known_answer_correct_both": true,
+      "output_tokens_identical": false,
+      "generated": [
+        159,
+        165
+      ],
+      "dump_rows": [
+        170,
+        176
+      ],
+      "dump_bytes": [
+        87910400,
+        91013120
+      ],
+      "dump_sha256": [
+        "61ffc32143a4cbb90f649f82369e809f137d68f0abe90cc5e99b3e33be0274e2",
+        "b7a3399be9ac6cb9c7ceb6c00145dc3726cb5f34acecafb338a6677eda44dc79"
+      ],
+      "full_dump_bytes_identical": false
+    },
+    {
+      "id": "two-images",
+      "API_request_identical": true,
+      "native_ids_sampling_maxnew_images_identical": true,
+      "known_answer_correct_both": true,
+      "output_tokens_identical": false,
+      "generated": [
+        513,
+        54
+      ],
+      "dump_rows": [
+        697,
+        64
+      ],
+      "dump_bytes": [
+        360432640,
+        33095680
+      ],
+      "dump_sha256": [
+        "954a4e848fe13b3ce937341cc6effc0ed4a7b5cb31fecccc2946efa6545517d6",
+        "ed6b6a3d222e193b2b99fb068acbba75b505d5a15313614f7c0d29b25a69f257"
+      ],
+      "full_dump_bytes_identical": false
+    },
+    {
+      "id": "restore-text",
+      "API_request_identical": true,
+      "native_ids_sampling_maxnew_images_identical": true,
+      "known_answer_correct_both": true,
+      "output_tokens_identical": false,
+      "generated": [
+        166,
+        162
+      ],
+      "dump_rows": [
+        178,
+        173
+      ],
+      "dump_bytes": [
+        92047360,
+        89461760
+      ],
+      "dump_sha256": [
+        "536ffcbdfb98b4198f74be6312e7959c6c406f7ecbaf115353560b6c37c5804e",
+        "13f4c3a0be5e388008eb879ab6b6601f521dbd500902f131ab894d6956f4a05f"
+      ],
+      "full_dump_bytes_identical": false
+    }
+  ],
+  "first_gate_failure": {
+    "status": "HOLD_NONZERO_LOGIT_OR_ROW_DRIFT",
+    "id": "cold-text",
+    "detail": "Same169rows/87393280B and same157 output tokens; full savedfinite bytes SHA differs."
+  },
+  "CPU_audit": {
+    "passed": false,
+    "error": "ValueError('Audit child failed; original attempt retained')",
+    "error_notes": [],
+    "own_claim_released": true,
+    "owned_groups_absence": {
+      "passed": true,
+      "pending_spawn": null,
+      "cleanup_faults": [],
+      "children": [
+        {
+          "name": "scan-0",
+          "pid": 4167396,
+          "pgid": 4167396,
+          "returncode": 0,
+          "group_absent": true
+        },
+        {
+          "name": "scan-1",
+          "pid": 4167421,
+          "pgid": 4167421,
+          "returncode": 0,
+          "group_absent": true
+        },
+        {
+          "name": "scan-2",
+          "pid": 4167463,
+          "pgid": 4167463,
+          "returncode": 0,
+          "group_absent": true
+        },
+        {
+          "name": "scan-3",
+          "pid": 4167487,
+          "pgid": 4167487,
+          "returncode": 0,
+          "group_absent": true
+        },
+        {
+          "name": "assemble",
+          "pid": 4167515,
+          "pgid": 4167515,
+          "returncode": 0,
+          "group_absent": true
+        },
+        {
+          "name": "compare",
+          "pid": 4167569,
+          "pgid": 4167569,
+          "returncode": 1,
+          "group_absent": true
+        }
+      ]
+    },
+    "production_changed": false,
+    "GPU_lease_mutated": false,
+    "elapsed_seconds": 24.01416648318991
+  },
+  "native_private_API_window_controller_returncodes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "manual_lifecycle_review": [
+    "Same1Mtotalcontext/262144output/effort100/request32768/model/images/Q8/mode1/L22all40/drafter/chunk4096/24CPU/TPauto19-21/4045CPUallRAM/11315GPUtrunk; exact4API/nativeinputrequests apartfromownedPIDs.",
+    "Oldselected4143240/API4143187 close0/unitstatus0success; candidate4158412/privateAPI4158327 closed0; actualwindow101934 test0 held/resumeallowed.",
+    "80GiB/Swap0 fence zero max/oom; priorproperties restoredafterchildrenabsent/transientdropinscollected; rootmin346.849GiB/swapoutdelta0/kernelclean.",
+    "Selected92/c43/c62binding restoredpublic401/auth200/assembled READ+Y/stop/DONE; all6CPUgroupsabsent/claimreleased."
+  ],
+  "selected_restored_binding": {
+    "invocation": "c62aca2bdba14f1ebde3f47ab9914cf9",
+    "main_pid": 4161436,
+    "native_pid": 4161473,
+    "native_start_ticks": 171069083
+  },
+  "limits": [
+    "Failedbitwisegate doesnotestablish incorrectanswers/generalqualityloss; all4knownanswers passed.",
+    "CPUarchive arithmetic, GPUexecution andtime-dependentadaptiveexpertcacheplacement notcausallyseparated; startupcounts match but per-expert dynamicresidency/type17traffic notobserved.",
+    "Originalcompare rc1/no terminalaudit retained; assemblypass doesnotregradecomparison.",
+    "Dumpinstrumentednumerical runs donotqualifyspeed; no nearfilled1M/full262144 or generalreasoningquality proof.",
+    "Metadataarchive omittedsynthetic-owned66KB expertprofile.bin; copiedthatimmutablemetadata separately tocomplete Rootreconciliation; no scanner/modelretry."
+  ],
+  "retry": false,
+  "timing_admitted": false,
+  "deployment_admitted": false,
+  "controller_exit_evidence_sha256": "579c081a45a9970d42e3d0d86c32900debfa9fd40b579a0329b022c80ed01f16",
+  "audit_transport_exit_sha256": "67e301421508d50c5cb90c52aa6482b804ff787d76c37617ce2aebb74c69d9cd",
+  "assembly_result_sha256": "a6756ec588a5d5ea0f6d67de1c439ebbd2074e80058a39e1ed01dbcf7dbe25e6",
+  "compare_log_sha256": "87f9e8ba70367f2d351b41d74c2a6a3a82293442bac75084fdf767b797e3129e",
+  "raw_archive_sha256": "b4bbc841b8261efafe7530425086d099c3a9524257d49179b876a09ae2874592"
+}

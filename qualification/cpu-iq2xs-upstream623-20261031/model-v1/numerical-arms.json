@@ -1,0 +1,32 @@
+{
+  "N0": {
+    "attempted": true,
+    "fully_reviewed": true,
+    "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-cpu-iq2xs-numerical-N0-20261031T093804Z",
+    "proof": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-cpu-iq2xs-numerical-N0-20261031T093804Z/proof.json",
+    "controller_pid": 4139863,
+    "accepted": true,
+    "numerical_state_lifecycle_accepted": true,
+    "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+    "terminal_audit_sha256": "10383a6e06f28857ac3de37ad7643dbc2f4d354247867435d1e513f8e234fe77",
+    "root_result_review_sha256": "9cf8eda2426fb5f9d8cbacfa4cfe63b19516e7cd960d94e89b3f5cbb314f4fc7",
+    "astra_result_review_sha256": "021c5449d55d2faee5a578b90c14dda7027b67d4eefe8b27fb726c7afa9e635b"
+  },
+  "N1": {
+    "attempted": true,
+    "fully_reviewed": true,
+    "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-cpu-iq2xs-numerical-N1-20261031T101831Z",
+    "proof": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-cpu-iq2xs-numerical-N1-20261031T101831Z/proof.json",
+    "controller_pid": 4157906,
+    "accepted": false,
+    "numerical_state_lifecycle_accepted": false,
+    "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+    "standalone_four_state_lifecycle_passed": true,
+    "status": "HOLD_EXACT_WHOLE_MODEL_NUMERICAL_COMPARISON_FAILED",
+    "root_result_review_sha256": "652ffc5355ce7fabbab654360f5085bd2cd511ef16215b5f000da26c22dd342d",
+    "astra_result_review_sha256": "464e84b08032a2e1eeaf8f5a294b40ad1f9b0b674f4f0e6dab183b405222a5cc",
+    "comparison_retry": false,
+    "timing_admitted": false,
+    "deployment_admitted": false
+  }
+}

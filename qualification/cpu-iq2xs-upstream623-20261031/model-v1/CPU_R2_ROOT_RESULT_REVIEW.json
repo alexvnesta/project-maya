@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-31T09:13:06.054738+00:00",
+  "status": "R2_FIRST_247_CONTROLS_EACH_PHYSICAL_HOST_PASS_PENDING_INDEPENDENT_REVIEW",
+  "source_review_sha256": "5003f4784f1f1818d874657902d5f16ec155471898253d8c8874534f51da497b",
+  "source_files": 19,
+  "input_files": 3639,
+  "exact_test_ids": 247,
+  "source_and_input_maps_identical_both_hosts": true,
+  "hosts": {
+    "darwin": {
+      "actual_pid": 92304,
+      "parent_pid": 92303,
+      "returncode": 0,
+      "seconds": 7.035893999971449,
+      "cleanup": [],
+      "controls": 247,
+      "dependency_imports_before": 128,
+      "dependency_imports_after": 140,
+      "raw_sha256": {
+        "child.log": "0fba994efadafc7d4713c4a24cf43d9f26a2df012afb3f9b65d18cd5ef29b266",
+        "parent.json": "09a753f5f4f3bdf6fd5c60e27b748550165363b54b3b3ea4f87770a17957a352",
+        "attempt.json": "2ca91e80b438f6a0aaf06316d4166fb45b8be675e923d462e07aed7970ed045e",
+        "child.json": "3a0f097202a99b22ebc012ed4225d95fcb61a10e7a4d14b544cd20bdf688c9aa",
+        "observed.json": "ca26f895be86e0afb82c45da5003c5763b00d74090f7e19db7b59c0926135efb",
+        "receipt.json": "503537d2d9e0ae44074a70159d1e1bc03abc99349f6de0c82b998077948e8348"
+      }
+    },
+    "linux": {
+      "actual_pid": 4130875,
+      "parent_pid": 4130860,
+      "returncode": 0,
+      "seconds": 8.381847236072645,
+      "cleanup": [],
+      "controls": 247,
+      "dependency_imports_before": 126,
+      "dependency_imports_after": 136,
+      "raw_sha256": {
+        "child.log": "d1c465bcd0f492d13f83d03b984e8267fe8e94f849f0bb977e7e0a89b00d427a",
+        "parent.json": "a320607a211fb9648dca5e66fa6b29537e963320eb1dd78246bd6746367b2348",
+        "attempt.json": "68c59447be7c8fa1727ce125a6d068b7cd6c4f178d6eeea7a9aafaf2e9e706bd",
+        "child.json": "f6d2cb809e9e083cbd17c09a16472fb395f4e64824851cae7d9eded89254fa2c",
+        "observed.json": "a8296b923cc0e178c8da798258806cbef17fa594ff717c0b0ac94ac597f14e2f",
+        "receipt.json": "fa441bbf33777b8cc613c59210549944b20631950b8e18864c6f280974244984"
+      }
+    }
+  },
+  "old_first_Mac213_not_regraded": true,
+  "Linux_prechild_metadata_refusal_preserved": "R2_LINUX_PRE_CHILD_METADATA_REFUSAL.json",
+  "native_model_or_GPU_execution": false,
+  "production_changed": false,
+  "whole_model_or_speed_pass": false
+}

@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-31T08:48:38.402452+00:00",
+  "status": "FIRST_MAC_CPU_ENVIRONMENT_IMPORT_FAILURE_HOLD_PRESERVED",
+  "source_review_sha256": "dcaf1c60fdeb932c0004043d31d015989ab7e67c190bbe7e86345bcc9fc9e98a",
+  "actual_child": {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-I",
+      "-B",
+      "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/model-v1/cpu_driver.py",
+      "--child",
+      "--review-pin",
+      "dcaf1c60fdeb932c0004043d31d015989ab7e67c190bbe7e86345bcc9fc9e98a",
+      "--parent-pid",
+      "89986"
+    ],
+    "pid": 89987,
+    "returncode": 1,
+    "error": "ValueError('Child nonzero')",
+    "cleanup": [],
+    "elapsed_seconds": 1.5062638340168633
+  },
+  "tests_run": 213,
+  "failures": 0,
+  "errors": 1,
+  "first_error": "ModuleNotFoundError: jinja2 inActualFullCapAPI underisolated-I child;213controls/212passed/1error. Old-Bhelperqualificationdidnotuse-I.",
+  "Ubuntu_CPU_UNRUN": true,
+  "whole_model_UNRUN": true,
+  "production_changed": false,
+  "old_failure_regraded": false,
+  "raw_sha256": {
+    "child.log": "2720056bbf9fbdde513cb1a67f3826743ce5ed3507e4b231a972e309054b59c1",
+    "attempt.json": "4efea2bfa25e4846add14a2abe5b3ec5021f0247f2a33a4c5eae253ae124b7c0",
+    "child.json": "b6f4e2ed18e412fef6490fc529240eb4ad37f3ab7c3ff6198576be5271e6f4b9",
+    "observed.json": "965601511cc786bc62b86946004e6052bfd3cb1a6030b74cdd1dbe779c1e687e",
+    "receipt.json": "d3dbd7184cc4e20725660173d435d31d972fcb97f145ba47dc022cffb4bf656c"
+  }
+}

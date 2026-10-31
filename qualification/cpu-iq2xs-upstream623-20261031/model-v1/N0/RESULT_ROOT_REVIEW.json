@@ -1,0 +1,81 @@
+{
+  "utc": "2026-10-31T10:15:19.362039+00:00",
+  "status": "N0_BASELINE_NUMERICAL_STATE_LIFECYCLE_ACCEPTED",
+  "passed": true,
+  "numerical_state_lifecycle_accepted": true,
+  "arm": "N0",
+  "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-cpu-iq2xs-numerical-N0-20261031T093804Z",
+  "proof_path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-cpu-iq2xs-numerical-N0-20261031T093804Z/proof.json",
+  "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+  "terminal_audit_sha256": "10383a6e06f28857ac3de37ad7643dbc2f4d354247867435d1e513f8e234fe77",
+  "controller_pid": 4139863,
+  "raw_metadata_hashes_checked": 99,
+  "audit_children": [
+    {
+      "name": "scan-0",
+      "pid": 4151335,
+      "pgid": 4151335,
+      "returncode": 0,
+      "group_absent": true
+    },
+    {
+      "name": "scan-1",
+      "pid": 4151362,
+      "pgid": 4151362,
+      "returncode": 0,
+      "group_absent": true
+    },
+    {
+      "name": "scan-2",
+      "pid": 4151384,
+      "pgid": 4151384,
+      "returncode": 0,
+      "group_absent": true
+    },
+    {
+      "name": "scan-3",
+      "pid": 4151605,
+      "pgid": 4151605,
+      "returncode": 0,
+      "group_absent": true
+    },
+    {
+      "name": "assemble",
+      "pid": 4151649,
+      "pgid": 4151649,
+      "returncode": 0,
+      "group_absent": true
+    }
+  ],
+  "finite_scan_rows": 1214,
+  "finite_scan_bytes": 627783680,
+  "requests": {
+    "effort": 100,
+    "max_tokens": 32768,
+    "configured_output_allowance": 262144,
+    "total_context": 1048576,
+    "unchanged_fixture_sha256": "976b0cf51e3cfc2950774714fb1a5fb075f08e7d8619b028b6d9b1b0f67ffe67"
+  },
+  "manual_review": [
+    "Full four raw responses and reasoning, synthetic text64 and ordered red/blue image known answers, natural stop/DONE, input/token paths, retained draft/cache/native counters.",
+    "Raw startup and actual process/config/Q8/mode1/L22/projection/drafter/placement identity, four finite CPU scans, actual API/native/window exit0, old owner close0, fence restoration/collection, selected public401/auth200/assembled READY-stop-DONE, kernel/resources.",
+    "All five first bounded child process/resource/pre-post source/input/evidence hashes and cleanup/released lease reconciled; no control rerun."
+  ],
+  "selected_restored_binding": {
+    "invocation": "5349f6a440544b9bb15b84c71839bf52",
+    "main_pid": 4143187,
+    "native_pid": 4143240,
+    "native_start_ticks": 170826527
+  },
+  "controller_exit_evidence_sha256": "6f80b11468024767c51ff1f56befe8d0281509a1f273789c296f2098a6c609b5",
+  "limits": [
+    "N0 baseline only; no candidate exactness, equivalence, speed, general task quality or deployment claim.",
+    "1214 finite dump rows are not asserted token-row aligned.",
+    "Controller OS0 is Root-preserved actual tool transport return, not an independent controller-emitted exit file.",
+    "System swapout delta1327104B within1GiB gate; cgroup peak85180993536B/80GiB fence with zero max/oom events; cold-load PSI retained.",
+    "Initial local metadata reconciliation helper omitted windows path mapping and stopped before any review write; mapping completed without rerunning audits or inference."
+  ],
+  "N1_admitted": false,
+  "timing_admitted": false,
+  "deployment_admitted": false
+}
