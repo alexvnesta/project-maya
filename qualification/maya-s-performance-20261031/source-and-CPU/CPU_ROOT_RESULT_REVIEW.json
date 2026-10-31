@@ -1,0 +1,67 @@
+{
+  "status": "FIRST_REVISED248_EXACT_CONTROLS_PASSED_EACH_PHYSICAL_HOST",
+  "results": [
+    {
+      "group": "audit",
+      "host": "darwin",
+      "controls": 71,
+      "pid": 63139,
+      "wall_seconds": 0.4345900409971364,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "receipt.json": "c77c6d96626785f302c3f9c20717b8f4b3ea601d1e6ca8d9e5d003d1f7c1dc19",
+        "child.json": "4b5c8aa9e05573e255f371c9124e5f5940a18943ab37a50ff9d6359cd16fcc86",
+        "child.log": "a2e61f22ecf81579398548e14448579162938e26d2e4569cd94b30ae80c5fc42"
+      }
+    },
+    {
+      "group": "audit",
+      "host": "linux",
+      "controls": 71,
+      "pid": 3777556,
+      "wall_seconds": 0.6332102948799729,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "receipt.json": "0dc92e27731ccf546a09822602e03dc200c7bb37f614bd4136eb767bfd0a74e9",
+        "child.json": "c58712c566d1c24468ffe2ea3528e077285265654de8af1993ed018ea2a3158d",
+        "child.log": "05711957a6676e47fdf873c9ecef4b3b6b5f7b6bc8a0218660d6fe02facdf0bf"
+      }
+    },
+    {
+      "group": "owner",
+      "host": "darwin",
+      "controls": 177,
+      "pid": 63152,
+      "wall_seconds": 0.750388834043406,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "receipt.json": "d9080e917ab0420f89169eae6c52b39b4ede1090071a75b09e559e90940f30f9",
+        "child.json": "131913ca71ff3ce4b58e696c392dc536bb8930f3ed8fae1713043490faa83c14",
+        "child.log": "ef959536ffa3ef9bade3265526e37bf4b7cdf7339b02239f4bb7685bc6a8ac82"
+      }
+    },
+    {
+      "group": "owner",
+      "host": "linux",
+      "controls": 177,
+      "pid": 3777628,
+      "wall_seconds": 0.8969420809298754,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "raw_sha256": {
+        "receipt.json": "4a26b5b232e34e047c98690ba7d4a99e2abf5ef4e8458a3c2c50bd203977720a",
+        "child.json": "a673569cf4b7970e48c1bb6f0c5e0adf5f982eab5709f6d90fa1b36fb14b80ca",
+        "child.log": "6530130310d1b1c62add6a5fa8c0f9936c1208d35eed1e10dbb35568657b6f51"
+      }
+    }
+  ],
+  "source_files": 13,
+  "input_files": 1076,
+  "matching_ordered_IDs_and_every_rawstatus": true,
+  "old_first71_failure_preserved": true,
+  "Ubuntu_missing_two_metadata_refusal_before_child_preserved": true,
+  "no_GPU_or_model_admission": true
+}

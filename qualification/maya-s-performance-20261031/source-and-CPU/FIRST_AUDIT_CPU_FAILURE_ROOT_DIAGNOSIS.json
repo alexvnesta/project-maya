@@ -1,0 +1,17 @@
+{
+  "first_controls": 71,
+  "passed": 70,
+  "errors": 1,
+  "failures": 0,
+  "actual_returncode": 1,
+  "actual_child_pid": 63030,
+  "cleanup_errors": [],
+  "failure": "test_pv_dispatch.Bounds.test_missing_observed_and_finished_refuse expected FileNotFoundError, but regular intentionally rejects missing file with ValueError(\"One regular evidence file\") before read",
+  "classification": "Supplied negative test exception expectation mismatch; production fail-closed check correctly rejected missing evidence",
+  "runtime_source_change_needed": false,
+  "Ubuntu_CPU_or_GPU_started": false,
+  "source_archive": "source-FIRST",
+  "original_source_review_sha256": "f0e5943b69af5b9d1336342347cbb3671ace917b7fdc1b1bdb804b32a1ea7070",
+  "original_regraded": false,
+  "next": "Narrow supplied-test correction and fresh output namespace, full manual exact source review before FIRST revised controls each host"
+}
