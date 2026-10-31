@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-31T19:19:50.218594+00:00",
+  "entire_new_source_tests_read": true,
+  "scope": "First new finite mode only; no GPU, quality, speed or promotion proof",
+  "source_sha256": {
+    "current_audit.py": "2e0010194eff073f7bee30cc8838d6f262499d56d0b4217cf8a40a9bed4e3162",
+    "test_current_audit.py": "e1532a39185b09995f613e624c35d3c5205b8f2405d213654bfb659262675e0e",
+    "run_audit_cpu.py": "bd4ffe74e33a8d4d65f8e700945c2f055c165ec855b38c744f3cfde0b1fff1cb"
+  },
+  "input_sha256": {},
+  "input_paths_local": {},
+  "test_ids": [
+    "test_current_audit.Audit.test_cap_partial_UNRUN_retry_and_broader_claim_refused",
+    "test_current_audit.Audit.test_complete_short_scope_only",
+    "test_current_audit.Audit.test_duplicate_and_nonfinite_saved_JSON_refused",
+    "test_current_audit.Audit.test_exact_comparison_preserves_types",
+    "test_current_audit.Audit.test_exact_window_exit0",
+    "test_current_audit.Audit.test_old_entry_or_other_arm_refused",
+    "test_current_audit.Audit.test_private_cleanup_required",
+    "test_current_audit.Audit.test_recorder_hashes_exact_small_bytes",
+    "test_current_audit.Audit.test_recorder_refuses_alias_and_large_evidence",
+    "test_current_audit.Audit.test_unreviewed_or_wrong_scoring_refused",
+    "test_current_audit.Audit.test_wrong_or_unfinished_window_refused",
+    "test_current_audit.CurrentFenceAudit.test_actual80_resource_contract",
+    "test_current_audit.CurrentFenceAudit.test_missing_failed_or_wrong_actual_install_refused",
+    "test_current_audit.CurrentFenceAudit.test_old76_and_unclean_or_foreign_resource_contract_refused"
+  ],
+  "storage_fix": "3 checkpoint bound plus16 additional source-bound checkpoints and8 zero-image picture bytes; source max16 retained marks",
+  "cold_warm_reuse": [
+    0,
+    43
+  ],
+  "variable_batch_logit_rows_no_per_token_alignment": true
+}

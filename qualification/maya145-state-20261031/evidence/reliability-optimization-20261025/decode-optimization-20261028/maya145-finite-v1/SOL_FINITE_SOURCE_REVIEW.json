@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-31T19:20:13.694485+00:00",
+  "reviewer": "/root/sol_cuda_lifecycle_review",
+  "model": "gpt-6.1-sol",
+  "decision": "NO_REMAINING_BLOCKER_TO_FIRST_BOUNDED_CPU_ONLY",
+  "initial_findings": [
+    "old helper rejects checkpoints19; locally correct3+16extra+8bytepicturecount",
+    "warm label changed to prompt-minus-one; actual43sourceconsistent"
+  ],
+  "source_sha256": {
+    "current_controls.py": "c87985b797a35075b20e00bd1ad46bd1b8c458f394d7e81c261e2e18fc195a51",
+    "current_compat.py": "38f04a26d99de2143d1dd25a0d3c6234dd5e2dd5b7a3a209c776cb74f68472c0",
+    "current_runtime.py": "57d366be1fb4e6e5537f5dadaa0835530669e37a805c84cbfd291b25d39f397c",
+    "current_audit.py": "2e0010194eff073f7bee30cc8838d6f262499d56d0b4217cf8a40a9bed4e3162",
+    "engine_profile.py": "69400fe7fcaf234abd2648a96641d37ca16227cc801d7c7c6b92a1bb0873c607",
+    "test_finite_controls.py": "dee9df1256d3c5b312db4f25f05c89568ebed2b1d9a861c7634674d5e7af2a50",
+    "run_current_cpu.py": "71775c746cd817354b33cfd36c077ac3c681e1e81c23c02d05c0090980cbfb38"
+  },
+  "recovery_source_sha256": {
+    "recovery.py": "f6a4eae64868001ee7108e903670d9f47a9268ae4fc186199f2bb7b40b5c48c7",
+    "test_recovery.py": "18456fa6008bd387d832ca285c5f36f8ceaa1a9020fb4090f870850b71d2cb47",
+    "run_cpu.py": "9ed712d30c3b17d8e417aa68703e82c7f0516d70c0fb0c5f7292c89e47091726"
+  },
+  "review_scope": "Source-specific finite lifecycle/format/storage and full new finite tests plus recovery mechanical diff against previously fully reviewed baseline",
+  "GPU_admission": false,
+  "manual_review_does_not_substitute_CPU": true
+}

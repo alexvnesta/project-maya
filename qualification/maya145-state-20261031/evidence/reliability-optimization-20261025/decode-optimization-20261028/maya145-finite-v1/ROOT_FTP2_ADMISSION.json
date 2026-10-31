@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-31T19:21:52.519511+00:00",
+  "decision": "SINGLE_FIRST_FTP2_UNMEASURED_FINITE_ONLY",
+  "qualification_sha256": "10ec560a6a87e4345d64a33327786c25884f2908c845d5ae1e37b35c598594a1",
+  "pins": 2354,
+  "CPU_each_physical_host": [
+    72,
+    22,
+    14,
+    61
+  ],
+  "binding": {
+    "invocation": "7ad654ccf35845e8825fbb7b829e1092",
+    "main_pid": 330770,
+    "native_pid": 330807,
+    "native_start_ticks": 173987085
+  },
+  "same_native_pack_as_accepted_DTP2": true,
+  "cold_measured_token_path_required": true,
+  "exact_two_requests_reuse": [
+    0,
+    43
+  ],
+  "finite_logit_bytes_not_per_token_alignment_or_equivalence": true,
+  "same_model_quality_policy_context_output": true,
+  "window": 1200,
+  "soft": 1000,
+  "cleanup": 200,
+  "root_admission_GiB": 132,
+  "private_memory_GiB": 80,
+  "native_only_FSIZE_MiB": 512,
+  "general_quality_timing_promotion_admitted": false,
+  "automatic_next_arm": false,
+  "all_agents_stopped": true
+}

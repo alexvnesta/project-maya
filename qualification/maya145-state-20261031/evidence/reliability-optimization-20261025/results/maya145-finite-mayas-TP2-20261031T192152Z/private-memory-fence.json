@@ -1,0 +1,48 @@
+{
+  "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-finite-mayas-TP2-20261031T192152Z",
+  "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service",
+  "memory_max": 85899345920,
+  "swap_max": 0,
+  "prior_properties": {
+    "MemoryMax": "max",
+    "MemorySwapMax": "max"
+  },
+  "unit_before": {
+    "LoadState": "loaded",
+    "FragmentPath": "/run/user/1000/systemd/transient/strata-deepseek-window.service",
+    "DropInPaths": [],
+    "Transient": "yes",
+    "InvocationID": "8dff4c1e0db34dd292d5f396cc2e5710",
+    "ControlGroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service",
+    "MemoryMax": "infinity",
+    "MemorySwapMax": "infinity"
+  },
+  "transient_root": "/run/user/1000/systemd/transient",
+  "fragment": "/run/user/1000/systemd/transient/strata-deepseek-window.service",
+  "owned_dropin_directory": "/run/user/1000/systemd/transient/strata-deepseek-window.service.d",
+  "events_before": {
+    "low": 0,
+    "high": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0,
+    "sock_throttled": 0
+  },
+  "mutation_attempted": true,
+  "unit_installed": {
+    "LoadState": "loaded",
+    "FragmentPath": "/run/user/1000/systemd/transient/strata-deepseek-window.service",
+    "DropInPaths": [
+      "/run/user/1000/systemd/transient/strata-deepseek-window.service.d/50-MemoryMax.conf",
+      "/run/user/1000/systemd/transient/strata-deepseek-window.service.d/50-MemorySwapMax.conf"
+    ],
+    "Transient": "yes",
+    "InvocationID": "8dff4c1e0db34dd292d5f396cc2e5710",
+    "ControlGroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/strata-deepseek-window.service",
+    "MemoryMax": "85899345920",
+    "MemorySwapMax": "0"
+  },
+  "initial_current": 46944256,
+  "installed": true
+}

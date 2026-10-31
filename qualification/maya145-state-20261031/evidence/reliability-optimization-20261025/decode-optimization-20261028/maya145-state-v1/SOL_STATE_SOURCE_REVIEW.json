@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-31T19:50:24.324149+00:00",
+  "reviewer": "/root/sol_cuda_lifecycle_review",
+  "model": "gpt-6.1-sol",
+  "decision": "SOURCE_REVIEWED_WITH_PARSER_COUNTERFACTUAL_FIXES_BEFORE_FIRST_CPU",
+  "source_sha256": {
+    "current_controls.py": "a1a5da398f60d47089cbe8b1a5069116a0f9919e61389df4a24e15a14b149bdf",
+    "current_compat.py": "a22cda70c6735acea4d2fcd35dd008295160c99091aaf7a1517ade70ac3dc02d",
+    "current_runtime.py": "7e0cecfe7a919471e72cb45a6fe50e83e2e8a75658b6924cae2342adb85d774f",
+    "current_audit.py": "47380cbdd2f6eee831d086110b7502fbad9377e9ac1d1328f9eaa0809cf476a9",
+    "engine_profile.py": "60ad5996260d0042f199c8743d2b0f44e50d0e061cdb1a3b03c62763449f0bdd",
+    "test_finite_controls.py": "87c6b6d56da994d7c7093eec0e726dc8dd06b5b6886e7163eea4a4c33d1e464d",
+    "run_current_cpu.py": "3c68327019aa1b5cacb664f87c923932ed3d3f429152cd53d7a8106ae1c36eb1"
+  },
+  "recovery_source_sha256": {
+    "recovery.py": "a1c026006fc8715946a760bc9b4fe7d43d9f937dff0a0d8e2fd34e3a82d0f749",
+    "test_recovery.py": "a56c8aa9dc5874b0c92ba342b60462b95b178dcec8a3d31a63f52ceb397c2c4f",
+    "run_cpu.py": "9ed712d30c3b17d8e417aa68703e82c7f0516d70c0fb0c5f7292c89e47091726"
+  },
+  "review_scope": "New state diagnostic format/lifecycle/source/test diff; unchanged reviewer-read recovery algorithm plus namespace adaptation",
+  "reviewer_findings": [
+    "verified must not exceed made",
+    "following logged position must not overlap previous committed tokens"
+  ],
+  "ROOT_fix_manual_read_before_CPU": true,
+  "fix": "verified<=made and next_min=previous_position+previous_kept+1; both synthetic counterfactuals added",
+  "original_finite_FTP2_HOLD_preserved": true,
+  "GPU_admitted": false,
+  "CPU_proof_still_required": true
+}

@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-31T20:13:32.695795+00:00",
+  "decision": "ACCEPT_FINITE_SCHEDULE_DIAGNOSTIC_ONLY_NOT_MODEL_QUALITY_OR_TIMING",
+  "qualification_sha256": "ac7e30c42c0de1050b5e7e22a4b6bc2b6b08076cf32703d69563ccd3baf6f55c",
+  "entire_cold_warm_answers_and_reasoning_read": true,
+  "terminal_audit_sha256": "d8e71f49e551cd65a3e3ae08e2d31aa3de83cfb10752709f48648c93b28e7b8f",
+  "native_privateAPI_window_exit": [
+    0,
+    0,
+    0
+  ],
+  "finite_rows": [
+    107,
+    77
+  ],
+  "finite_bytes": [
+    55331840,
+    39818240
+  ],
+  "generated_tokens": [
+    76,
+    68
+  ],
+  "reused_prompt_tokens": [
+    0,
+    43
+  ],
+  "draft_rounds": [
+    25,
+    21
+  ],
+  "draft_acceptance": [
+    [
+      50,
+      80
+    ],
+    [
+      44,
+      52
+    ]
+  ],
+  "token_first_difference_zero_based": 19,
+  "schedule_difference_precedes_token_difference": {
+    "token_offset": 12,
+    "cold": "lookup15verified3kept",
+    "warm": "DSpark4verified4kept"
+  },
+  "not_a_proof_of_old_seed1_divergence_cause": true,
+  "not_row_aligned_past_divergent_histories": true,
+  "same_model_quality_settings_context_output_drafter": true,
+  "original_finiteFTP2_remains_HOLD": true,
+  "root_min_GiB": 255.72634506225586,
+  "swapout_delta_bytes": 0,
+  "selected_binding": {
+    "invocation": "d8ed96b9bcf6439285369030371f2d96",
+    "main_pid": 371616,
+    "native_pid": 371669,
+    "native_start_ticks": 174536979
+  },
+  "no_general_quality_speed_or_deployment_admission": true,
+  "automatic_next_arm": false
+}

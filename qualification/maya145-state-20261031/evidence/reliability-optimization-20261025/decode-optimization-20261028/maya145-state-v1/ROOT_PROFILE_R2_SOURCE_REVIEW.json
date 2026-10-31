@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-31T19:49:46.654662+00:00",
+  "entire_new_source_tests_read": true,
+  "scope": "Distinct seed2 stochastic schedule/finite cold-warm state diagnostic only. Original finiteFTP2 HOLD preserved; no equivalence, quality, speed or promotion proof",
+  "source_sha256": {
+    "engine_profile.py": "60ad5996260d0042f199c8743d2b0f44e50d0e061cdb1a3b03c62763449f0bdd",
+    "test_engine_profile.py": "9550b25b24616ff3dd4e7866ac2b664d04e6f53f30ba2c2ad1595658110f6818",
+    "run_profile_cpu.py": "fcaa436f77e71f548f528fd95b1d7c49acac5ca3fdb7923cf6cf71f48d4e90fc",
+    "profile-base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa"
+  },
+  "input_sha256": {
+    "src/ds4/ds4_model.cu": "046277a7be8d385ccc843e64301d5cc14c93516f602b12e04fc9851acf76fcc5",
+    "src/ds4/ds4_gguf.cu": "827f251584c81be7613efe7e780c3c2f7b952124ab6e9b058782f7352183b022",
+    "saved-startup/engine.log": "b398fa10113e263225470e025118a08b34338e2f02b51500079238a374394886",
+    "saved-startup/native-ready.json": "6e3ebde905cb932c4c2decbb99aec07101eb9c1e1efefd6f54ff9e6b52f0eb88",
+    "saved-startup/startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "saved-startup/startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c"
+  },
+  "input_paths_local": {
+    "src/ds4/ds4_model.cu": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_model.cu",
+    "src/ds4/ds4_gguf.cu": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_gguf.cu",
+    "saved-startup/engine.log": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-state-v1/recorded-startup-RTP2-failed/engine.log",
+    "saved-startup/native-ready.json": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-state-v1/recorded-startup-RTP2-failed/native-ready.json",
+    "saved-startup/startup-health.json": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-state-v1/recorded-startup-RTP2-failed/startup-health.json",
+    "saved-startup/startup-models.json": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-state-v1/recorded-startup-RTP2-failed/startup-models.json"
+  },
+  "test_ids": [
+    "test_engine_profile.Profile.test_bad_expert_count_refused",
+    "test_engine_profile.Profile.test_conflicting_same_device_snapshots_refused",
+    "test_engine_profile.Profile.test_duplicate_or_missing_device_check_refused",
+    "test_engine_profile.Profile.test_identical_snapshots_recorded_without_extra_owners",
+    "test_engine_profile.Profile.test_modified_model_quality_context_base_refused",
+    "test_engine_profile.Profile.test_new_tp1_startup",
+    "test_engine_profile.Profile.test_new_tp2_startup",
+    "test_engine_profile.Profile.test_no_old_cache_crossload",
+    "test_engine_profile.Profile.test_old_namespace_refused",
+    "test_engine_profile.Profile.test_old_q8_footer_refused",
+    "test_engine_profile.Profile.test_projection_drafter_dim_or_finite_failure_refused",
+    "test_engine_profile.Profile.test_quality_capacity_output_reductions_refused",
+    "test_engine_profile.Profile.test_real_tp_fallback_refused",
+    "test_engine_profile.Profile.test_stale_native_cannot_enter_new_profile",
+    "test_engine_profile.Profile.test_third_gpu_check_or_placement_refused",
+    "test_engine_profile.Profile.test_tp1_keeps_policy_and_base_unchanged",
+    "test_engine_profile.Profile.test_tp2_explicit_uneven_blocks_and_real_checks",
+    "test_engine_profile.Profile.test_tp2_fp16_wire_or_disabled_reduce_refused",
+    "test_engine_profile.Profile.test_tp2_missing_arithmetic_check_refused",
+    "test_engine_profile.Profile.test_unknown_or_partial_trunk_refused",
+    "test_engine_profile.Profile.test_unmeasured_dump_prefix_stays_inside_owned_native_directory",
+    "test_engine_profile.Profile.test_wrong_variant_namespace_refused"
+  ],
+  "root_full_diff_read_against_frozen_finite_source": true,
+  "observed_source_round_log_omits_plain_steps": true,
+  "seed2_is_distinct_fixture_no_historical186tokenpath_assumption": true
+}

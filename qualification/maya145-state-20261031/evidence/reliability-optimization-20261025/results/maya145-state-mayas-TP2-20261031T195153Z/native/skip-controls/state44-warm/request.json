@@ -1,0 +1,16 @@
+{
+  "max_tokens": 32768,
+  "messages": [
+    {
+      "content": "Return exactly RECOVERED_Q8_LITERAL and nothing else.",
+      "role": "user"
+    }
+  ],
+  "model": "deepseek-v4.1-flash-iq2-xs",
+  "reasoning_budget_tokens": 0,
+  "reasoning_effort": 100,
+  "seed": 2,
+  "stream": true,
+  "temperature": 1.0,
+  "top_p": 1.0
+}

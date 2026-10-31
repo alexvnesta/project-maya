@@ -1,0 +1,12 @@
+data: {"id": "chatcmpl-f8d2783797df4f81841af3b1", "object": "chat.completion.chunk", "created": 1793477389, "model": "deepseek-v4.1-flash-iq2-xs", "choices": [{"index": 0, "delta": {"role": "assistant", "content": ""}, "finish_reason": null}]}
+
+: keep-alive
+
+data: {"id": "chatcmpl-f8d2783797df4f81841af3b1", "object": "chat.completion.chunk", "created": 1793477389, "model": "deepseek-v4.1-flash-iq2-xs", "choices": [{"index": 0, "delta": {"content": "READ"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-f8d2783797df4f81841af3b1", "object": "chat.completion.chunk", "created": 1793477389, "model": "deepseek-v4.1-flash-iq2-xs", "choices": [{"index": 0, "delta": {"content": "Y"}, "finish_reason": null}]}
+
+data: {"id": "chatcmpl-f8d2783797df4f81841af3b1", "object": "chat.completion.chunk", "created": 1793477389, "model": "deepseek-v4.1-flash-iq2-xs", "choices": [{"index": 0, "delta": {}, "finish_reason": "stop"}], "usage": {"prompt_tokens": 30, "completion_tokens": 3, "total_tokens": 33, "prompt_tokens_details": {"cached_tokens": 0}}, "timings": {"cache_n": 0, "prompt_n": 30, "prompt_ms": 465.8, "prompt_per_token_ms": 15.527, "prompt_per_second": 64.4, "predicted_n": 3, "predicted_ms": 90.5, "predicted_per_token_ms": 30.167, "predicted_per_second": 33.1, "draft_n": 4, "draft_n_accepted": 2}}
+
+data: [DONE]
+

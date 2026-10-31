@@ -1,0 +1,68 @@
+{
+  "complete": true,
+  "scores": [
+    {
+      "id": "state44-cold",
+      "passed": true,
+      "status": "FINITE_LITERAL_SOURCE_STATE_PASSED"
+    },
+    {
+      "id": "state44-warm",
+      "passed": true,
+      "status": "FINITE_LITERAL_SOURCE_STATE_PASSED"
+    }
+  ],
+  "rows": [
+    {
+      "id": "state44-cold",
+      "passed": true,
+      "native": {
+        "generated": 76,
+        "prompt_tokens": 44,
+        "prompt_ms": 647.9,
+        "decode_ms": 1820.1,
+        "finish": "stop",
+        "drafts_accepted": 50,
+        "drafts_offered": 80,
+        "reused": 0,
+        "hits": 23402,
+        "lookups": 26565
+      },
+      "observed_tokens": 76,
+      "native_decode_tokens_per_second": 41.75594747541344,
+      "client_seconds": 2.4995223339647055,
+      "content_characters": 20,
+      "reasoning_characters": 263,
+      "manual_review_pending": false,
+      "general_quality_or_equivalence_claim": false
+    },
+    {
+      "id": "state44-warm",
+      "passed": true,
+      "native": {
+        "generated": 68,
+        "prompt_tokens": 44,
+        "prompt_ms": 31.8,
+        "decode_ms": 1285.5,
+        "finish": "stop",
+        "drafts_accepted": 44,
+        "drafts_offered": 52,
+        "reused": 43,
+        "hits": 17762,
+        "lookups": 19185
+      },
+      "observed_tokens": 68,
+      "native_decode_tokens_per_second": 52.8977051730844,
+      "client_seconds": 1.3388859911356121,
+      "content_characters": 20,
+      "reasoning_characters": 233,
+      "manual_review_pending": false,
+      "general_quality_or_equivalence_claim": false
+    }
+  ],
+  "retry": false,
+  "automatic_next_arm": false,
+  "quality_or_performance_pass": false,
+  "manual_review_required": true,
+  "unmeasured_numerical": true
+}

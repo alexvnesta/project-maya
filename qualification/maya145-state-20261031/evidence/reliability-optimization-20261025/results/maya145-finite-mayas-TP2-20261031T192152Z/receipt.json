@@ -1,0 +1,60 @@
+{
+  "mode": "finite",
+  "arm": "FTP2",
+  "arm_results": {
+    "complete": false,
+    "scores": [
+      {
+        "id": "finite44-cold",
+        "passed": false,
+        "status": "INCOMPLETE_HOLD",
+        "reason": "Measured identical cold token path changed; no numerical/timing advancement"
+      },
+      {
+        "id": "finite44-warm",
+        "passed": false,
+        "status": "UNRUN"
+      }
+    ],
+    "rows": [],
+    "retry": false,
+    "automatic_next_arm": false,
+    "quality_or_performance_pass": false,
+    "manual_review_required": true,
+    "unmeasured_numerical": true,
+    "native_request_count": 1,
+    "mode1_activation": {
+      "mode": 1,
+      "source": 20,
+      "retained_rows": 2668,
+      "activation_early_rows": []
+    },
+    "DSI1_leftovers": []
+  },
+  "seconds_including_load": 742.4668024049606,
+  "private_cleanup_passed": true,
+  "resource_fence_terminal": {
+    "passed": true,
+    "events_after": {
+      "low": 0,
+      "high": 0,
+      "max": 987,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 987,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "cache_charging_disclosure": "memory.current/peak include charged file cache and pinned memory; not process RSS"
+  },
+  "manual_review_pending": true,
+  "not_a_promotion": true
+}

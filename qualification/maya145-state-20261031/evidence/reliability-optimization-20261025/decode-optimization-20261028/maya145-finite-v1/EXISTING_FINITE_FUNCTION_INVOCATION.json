@@ -1,0 +1,8 @@
+{
+  "function": "imma_numeric_controls.finite_dump",
+  "function_module_sha256": "cb3252d95fdbeef733b7f14a1dea1629f59f2d7f6b741709b95b4ac654eab323",
+  "invocation": "import sys,json,os;from pathlib import Path;sys.path.insert(0,'/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-v1');import imma_numeric_controls as n;r=n.finite_dump('/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-finite-mayas-TP2-20261031T192152Z/native/logits.1.f32');r.update(original_FTP2_remains_HOLD=True,quality_or_equivalence_or_speed_claim=False);Path('/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-finite-v1/EXISTING_FINITE_FUNCTION_FIRST/result.json').open(\"x\").write(json.dumps(r,indent=2));print(json.dumps(r))",
+  "new_algorithm_or_production_runtime": false,
+  "manual_invocation_read": true,
+  "original_gate_not_regraded": true
+}

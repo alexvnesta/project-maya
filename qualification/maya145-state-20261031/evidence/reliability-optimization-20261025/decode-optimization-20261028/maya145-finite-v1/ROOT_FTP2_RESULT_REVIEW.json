@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-31T19:46:51.490810+00:00",
+  "decision": "FROZEN_FTP2_INCOMPLETE_HOLD_PRESERVED",
+  "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-finite-mayas-TP2-20261031T192152Z",
+  "window": "/home/alex/strata-deepseek-test-20261024/windows/20261031T192258Z.json",
+  "strict_gate": "Measured identical cold token path changed; no numerical/timing advancement",
+  "cold_tokens": 176,
+  "historical_reference_tokens": 186,
+  "first_divergence_zero_based": 10,
+  "old_token": 7231,
+  "new_token": 5115,
+  "both_final_literal_correct": true,
+  "original_temperature": 1.0,
+  "top_p": 1.0,
+  "seed": 1,
+  "warm": "UNRUN",
+  "native_private_API_window_exit": [
+    0,
+    0,
+    0
+  ],
+  "native_pid": 351082,
+  "private_API_pid": 351058,
+  "native_only_FSIZE_MiB": 512,
+  "observed_logit_file_bytes": 118937600,
+  "full_finite_scan_not_yet_performed": true,
+  "prior_gate_not_regraded": true,
+  "no_quality_or_speed_or_equivalence_or_promotion": true,
+  "restored_binding": {
+    "invocation": "f7d3c64a974249abb6875cdfbe04fd01",
+    "main_pid": 355593,
+    "native_pid": 355671,
+    "native_start_ticks": 174359271
+  },
+  "public_restoration_verified": {
+    "unauthenticated_models": 401,
+    "authenticated_models": 200,
+    "SSE_done": true,
+    "finish": "stop",
+    "known_answer_passed": true,
+    "content": "READY"
+  },
+  "kernelclean": true,
+  "root_min_GiB": 255.8212890625,
+  "swap_out_delta": 0,
+  "native_dump_instrumentation_and_adaptive_sampling_causality_unproven": true
+}

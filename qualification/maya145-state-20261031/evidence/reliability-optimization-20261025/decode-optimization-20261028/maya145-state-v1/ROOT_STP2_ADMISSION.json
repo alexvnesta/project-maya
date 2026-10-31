@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-31T19:51:53.673347+00:00",
+  "decision": "SINGLE_DISTINCT_STP2_SEED2_SCHEDULE_FINITE_STATE_DIAGNOSTIC_ONLY",
+  "qualification_sha256": "ac7e30c42c0de1050b5e7e22a4b6bc2b6b08076cf32703d69563ccd3baf6f55c",
+  "pins": 2411,
+  "CPU_each_physical_host": [
+    76,
+    22,
+    14,
+    61
+  ],
+  "binding": {
+    "invocation": "f7d3c64a974249abb6875cdfbe04fd01",
+    "main_pid": 355593,
+    "native_pid": 355671,
+    "native_start_ticks": 174359271
+  },
+  "same_native_pack_quality_settings_context_output_drafter": true,
+  "distinct_seed": 2,
+  "existing_DS4_ROUND_LOG_added": true,
+  "prior_FTP2_HOLD_preserved_no_replay_or_regrade": true,
+  "reason": "Offline source shows seeded sample paths depend on proposals/plain-versus-verify schedule; original186path assertion unqualified. Actual index10 cause remains unproven. New diagnostic records schedule, full finite logit bytes and exact source/transport/cache/lifecycle; no retrospective equivalence.",
+  "window": 1200,
+  "soft": 1000,
+  "cleanup": 200,
+  "root_GiB": 132,
+  "private_memory_GiB": 80,
+  "native_only_FSIZE_MiB": 512,
+  "quality_timing_promotion_admitted": false,
+  "automatic_next_arm": false,
+  "all_agents_stopped": true
+}
