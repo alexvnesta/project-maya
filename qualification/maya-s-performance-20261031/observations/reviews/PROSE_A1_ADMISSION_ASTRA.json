@@ -1,0 +1,78 @@
+{
+  "utc": "2026-10-31T00:16:55.180054+00:00",
+  "decision": "CONDITIONAL_SINGLE_PROSE_A1_PERFORMANCE_V2_ONLY",
+  "qualification_sha256": "2c7b4f378a5d539c2f04025ad7343000d23379c74e31291a9090706db1d66e61",
+  "mode": "prose",
+  "arm": "A1",
+  "selected_binding": {
+    "invocation": "e423a3b1d886412797b9a6a609ae8631",
+    "main_pid": 3762719,
+    "native_pid": 3762754,
+    "native_start_ticks": 167180667
+  },
+  "root_explicit_interruption_authorization_sha256": "cb2698ff10b5bd42b029968f20f59aa78d3d6924b4b8a4b5548bc3b28e78ce5a",
+  "final_map_review": {
+    "files": 1402,
+    "self_checks": 1403,
+    "draft_all1400_unchanged": true,
+    "only_two_review_pins_added": {
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/CPU_RESULT_ASTRA_REVIEW.json": "412165212228f216e11ce825a82fc3296349944b1ebaa59ad5bfa3af0dee6f23",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/QUALIFICATION_MAP_ASTRA_REVIEW.json": "5a752cc957e6609002c9d33d3962f52ac0c047315786e27dab91e9eec198b23a"
+    },
+    "flags_and_count_pending_notes_and_provenance_references_only": true,
+    "CPU_source_or_input_changes": false,
+    "coding_sibling_metadata_reviewed_but_no_coding_admission": true
+  },
+  "actual_readonly_preflight": {
+    "utc": "2026-10-31T00:15:38.891256+00:00",
+    "receipt_sha256": "f3d09c9aec2fe9567ede5ac455b508a3b719774ff15aa041a7d8ea5507c26d0b",
+    "target_placement_sha256": "ef4a2ed40afd55980c6d708513c81745798ac97997ac83127674e699bda291d6",
+    "all1402_returned_proof_pins_exact_final_q": true,
+    "checks": 1403,
+    "root_free_bytes": 374557081600,
+    "previous_window": "/home/alex/strata-deepseek-test-20261024/windows/20261030T232538Z.json",
+    "previous_sha256": {
+      "/home/alex/strata-deepseek-test-20261024/windows/20261030T232538Z.json": "67294bfa55e4c59863fd3e546f0219cd2a6735e622292bf0ab3213384a2baffd",
+      "/home/alex/strata-deepseek-test-20261024/windows/20261030T232538Z.telemetry.jsonl": "79252829e5b4751a1f54a29e6f430a742f0cc3d7c6dea14944ac533ae827acb4"
+    },
+    "kernel_since": "2026-10-30 23:24:34 UTC",
+    "kernel_helper_passed": true,
+    "download_worker_absent": true,
+    "pause_marker_sha256": "a6f03e03d210402a1922af5a732040965a678a6505c448f6b043ee4f496ca9f5",
+    "quality_registry_sha256": "a4af69976b9b0e6e94294db5d8c22a5bf9d353e5ea1885d73d00d74a5d7cdb90",
+    "registry_empty_no_reservation_or_model_actions": true
+  },
+  "preflight_scope_limits": [
+    "Source-bound h.preflight permits healthy selected serving under the explicit interruption authorization; it is not itself proof of zero concurrent user work. Root separately reports genuine idle/zero work at this physical observer. Repeat genuine idle before action-time hashing/staging and recheck binding/phase immediately before owned run.",
+    "Hosted GPU expert count11315 is labeled inferred in actual target identity; no direct hosted INFO or exact prompt byte allocation claim is added.",
+    "The physical map/preflight is read-only evidence; it does not predict natural seven-request completion inside1000 seconds."
+  ],
+  "immediate_conditions": [
+    "Exact final proseq1402+self and reviewed source unchanged; selected native92/configc43/release/soleowner binding e423/main3762719/native3762754/ticks167180667 unchanged, same default model and phase-free ownership.",
+    "Fresh genuine idle before hashing/staging; root>=132GiB, previous232538window clean/kernel since2026-10-30 23:24:34 UTC, both acquisition workers absent and cooperative pause retained.",
+    "Fresh new proseA1 output/metadata/ownedwindow namespace and empty prose registry; existing canonical ownership only, no second native owner or old arm replay.",
+    "After owned stop, actual MemAvailable>=88GiB before any private native; private cgroup MemoryMax80GiB/SwapMax0 and exact captured-property restore plus transient collection required.",
+    "Run only original three main prose cases then all four lifecycle cases, exact frozen A manifest/full32768 cap/effort100/1M total/262144 default allowance and unchanged image/Q8/L22/TP1auto/CPU24/chunk4096/allCPU-RAM/DSpark.65/stream0 policy.",
+    "800startup and1000soft from before load within1200window/200cleanup unchanged; no dumps/nativeFSIZE hook and actual native FSIZE unlimited must pass.",
+    "First fault/timeout/partial/UNRUN/cap/lifecycle failure remains HOLD/incomplete with no retry or reversed confirmation; preserve raw and perform owned cleanup/qualified selected restoration, no speculative recovery after genuine fault.",
+    "Old selected API+native close0, private API+native+window0, restored exact selected identity/public401/auth200/assembledREADY-stop-DONE/kernel/root/swap/fence collection and separately bounded independent terminal audit all required before result acceptance."
+  ],
+  "scope": {
+    "single_owned_private_prose_A1": true,
+    "main_cases": 3,
+    "required_lifecycle_cases": 4,
+    "no_B1_B2_A2_coding_or_promotion_admitted": true,
+    "timing_screen_criteria_frozen_sha256": "ab1f9e91d93326e20899b8f3133f5c016360245b16a71f41dda5564913157a1b",
+    "no_general_or_causal_speed_quality_equivalence_claim": true,
+    "no_new_native_build": true,
+    "no_request_reencode_resize_output_truncation_timeout_extension": true
+  },
+  "preserved_refusal": {
+    "path": "PHYSICAL_QUALIFICATION_METADATA_STAGING_FIRST_REFUSAL.json",
+    "sha256": "bc1011621558732c0bf1ed86a560e3242931f0065ce95bb1799bf6a53c706e44",
+    "original_outer_returncode": 1,
+    "classification": "Declared QS0 Root review metadata missing before project import/observer/controller/model. Exact metadata only staged under fresh guard; original refusal not regraded."
+  },
+  "reviewer_actions": "Local source/JSON/hash review only; no project imports/tests/remote/model/service operations. After this admission the reviewer pauses all work until parent confirms private/restoration terminal.",
+  "pause_during_private_and_restoration": true
+}
