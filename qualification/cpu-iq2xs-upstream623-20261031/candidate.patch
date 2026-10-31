@@ -1,0 +1,145 @@
+--- base/src/kernels/cpu/iq_avx2.cpp
++++ candidate/src/kernels/cpu/iq_avx2.cpp
+@@ -56,6 +56,27 @@
+ }
+ // One scale for the whole 32-value half (IQ2_XXS, IQ3_XXS, IQ3_S).
+ inline __m256i sc32(int s) { return _mm256_set1_epi16(s); }
++
++// sc16_4[k] = sc16(2 (k & 15) + 1, 2 (k >> 4) + 1) (IQ2_XS's scale byte k), as a table: one load instead of sc16's
++// broadcasts and insert (all on port 5, Haswell / Broadwell's only shuffle port).  constexpr: this TU is
++// built with -mavx2, so a run-time constructor would be vectorized and run before main, before cpu_avx2_ok().
++struct Sc16Tab {
++    alignas(32) int16_t v[256][16]{};
++    constexpr Sc16Tab() {
++        for (int k = 0; k < 256; ++k)
++            for (int l = 0; l < 16; ++l) v[k][l] = (int16_t) (2 * ((l < 8 ? k : k >> 4) & 15) + 1);
++    }
++    __m256i operator[](unsigned k) const { return _mm256_load_si256((const __m256i*) v[k]); }
++};
++constexpr Sc16Tab sc16_4;
++
++// qwords t[a] t[b] t[c] t[d] without the shuffle port: broadcast loads put together by dword blends (p015), not
++// set_epi64x's inserts (ds4_iq_cpu.cpp's tab4)
++inline __m256i bq(const uint64_t* p) { return _mm256_castpd_si256(_mm256_broadcast_sd((const double*) p)); }
++inline __m256i tab4(const uint64_t* t, unsigned a, unsigned b, unsigned c, unsigned d) {
++    return _mm256_blend_epi32(_mm256_blend_epi32(bq(t + a), bq(t + b), 0x0C),
++                              _mm256_blend_epi32(bq(t + c), bq(t + d), 0xC0), 0xF0);
++}
+ 
+ // The four 7-bit sign indices of a 32-value half (IQ2_XXS, IQ3_XXS: bits 0-27 of w) -> 32 bytes of -1 (sign bit set)
+ // / +1, in registers: each index's eighth bit is the parity of its seven (a
+@@ -221,8 +242,8 @@
+ // ---- IQ2_XS (17) with ggml's vectorized sign decode (arch/x86/quants.c, ggml_vec_dot_iq2_xs_q8_K):
+ // the 7-bit sign indices never touch ksigns_iq2xs - the 8th sign bit is reconstructed by parity (two
+ // shifts, a xor and ggml's bit_helper pshufb) and the per-half sign vectors come out of shuffles of one
+-// 32-byte load.  The 8 scale bytes become all 16 half-scales with ggml's unpack trick.  The grid lookups
+-// stay scalar loads into set_epi64x (ggml does the same).  Every token still only pays a load, a sign,
++// 32-byte load.  The half-scales come from sc16_4 and the grid entries by tab4 (ggml: an unpack + pshufb, and
++// set_epi64x - port-5 work that bounds Broadwell).  Every token still only pays a load, a sign,
+ // a maddubs, a madd and an add per half, into alternating accumulators.
+ template <int NT>
+ inline void row_dot_iq2xs(const uint8_t* row, int nblocks, const block_q8_K* const* y, float* res) {
+@@ -240,31 +261,16 @@
+         (uint8_t) 0x80, 0x00, 0x00, (uint8_t) 0x80, 0x00, (uint8_t) 0x80, (uint8_t) 0x80, 0x00,
+         0x00, (uint8_t) 0x80, (uint8_t) 0x80, 0x00, (uint8_t) 0x80, 0x00, 0x00, (uint8_t) 0x80,
+         (uint8_t) 0x80, 0x00, 0x00, (uint8_t) 0x80, 0x00, (uint8_t) 0x80, (uint8_t) 0x80, 0x00 };
+-    static const uint8_t k_sc_shuffle[128] = {  // half h -> scale bytes 2h (lanes 0-7), 2h+1 (lanes 8-15)
+-        0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+-        2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3,
+-        4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5,
+-        6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7,
+-        8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9,
+-        10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11,
+-        12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13, 13, 13, 13, 13, 13,
+-        14, 14, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15 };
+     const __m256i bsel = _mm256_loadu_si256((const __m256i*) bit_sel);
+     const __m256i shev = _mm256_loadu_si256((const __m256i*) shuf_even);
+     const __m256i shod = _mm256_loadu_si256((const __m256i*) shuf_odd);
+     const __m256i bhelp = _mm256_loadu_si256((const __m256i*) bit_help);
+-    const __m256i m511 = _mm256_set1_epi16(511);
+-    const __m128i m4 = _mm_set1_epi8(0xf), m1 = _mm_set1_epi8(1);
+     const __m256i one8 = _mm256_set1_epi8(1);
+ 
+     __m256 accf[NT];
+     for (int t = 0; t < NT; ++t) accf[t] = _mm256_setzero_ps();
+     for (int i = 0; i < nblocks; ++i) {
+         const uint8_t* blk = row + (size_t) i * 74;
+-        // the 8 scale bytes -> 16 half-scales of 2*s+1, interleaved [a0, b0, a1, b1, ...] (ggml's unpack)
+-        __m128i st = _mm_set1_epi64x((long long) u64(blk + 66));
+-        st = _mm_unpacklo_epi8(_mm_and_si128(st, m4), _mm_and_si128(_mm_srli_epi16(st, 4), m4));
+-        const __m128i scales = _mm_add_epi8(_mm_slli_epi16(st, 1), m1);
+         __m256i acc[NT][2];
+         for (int t = 0; t < NT; ++t) acc[t][0] = acc[t][1] = _mm256_setzero_si256();
+         for (int jj = 0; jj < 2; ++jj) {   // 128 values (16 u16) per step
+@@ -275,19 +281,14 @@
+                 _mm256_shuffle_epi8(bhelp, _mm256_xor_si256(p7, p3)));  // + the parity sign bit 7
+             const __m256i s01 = _mm256_broadcastsi128_si256(_mm256_castsi256_si128(fsb)); // u16 0-7
+             const __m256i s23 = _mm256_broadcastsi128_si256(_mm256_extracti128_si256(fsb, 1)); // u16 8-15
+-            alignas(32) uint16_t gi[16];
+-            _mm256_store_si256((__m256i*) gi, _mm256_and_si256(q2, m511));
+             for (int h = 0; h < 4; ++h) {   // the four 32-value halves of this group
+                 const int H = 4 * jj + h;   // global half index -> scales byte pair
+-                const __m256i g = _mm256_set_epi64x((long long) iq2xs_grid[gi[4 * h + 3]],
+-                                                   (long long) iq2xs_grid[gi[4 * h + 2]],
+-                                                   (long long) iq2xs_grid[gi[4 * h + 1]],
+-                                                   (long long) iq2xs_grid[gi[4 * h]]);
++                const uint8_t* gi = blk + 2 + 32 * jj + 8 * h;   // (scalar loads: gcc turns a stored copy into vpextrw)
++                const __m256i g = tab4(iq2xs_grid, u16(gi) & 511u, u16(gi + 2) & 511u, u16(gi + 4) & 511u, u16(gi + 6) & 511u);
+                 const __m256i sb = _mm256_shuffle_epi8(h < 2 ? s01 : s23, (h & 1) ? shod : shev);
+                 const __m256i sgn = _mm256_or_si256(
+                     _mm256_cmpeq_epi8(_mm256_and_si256(sb, bsel), bsel), one8);
+-                const __m256i sc = _mm256_cvtepi8_epi16(
+-                    _mm_shuffle_epi8(scales, _mm_loadu_si128((const __m128i*) k_sc_shuffle + H)));
++                const __m256i sc = sc16_4[blk[66 + H]];   // (scale byte H: values 0-15 low nibble, 16-31 high)
+                 const int off = 128 * jj + 32 * h;
+                 for (int t = 0; t < NT; ++t) {
+                     const __m256i yv = _mm256_loadu_si256((const __m256i*) (y[t][i].qs + off));
+@@ -629,13 +630,14 @@
+ 
+ }  // namespace
+ 
+-bool iq256_rows1_supported(int type) noexcept { return type == 18 || type == 21 || type == 29; }
++bool iq256_rows1_supported(int type) noexcept { return type == 17 || type == 18 || type == 21 || type == 29; }
+ 
+ void iq256_rows1(int type, const uint8_t* w, size_t row_bytes, int n, const void* const* act, int nt, float* const* out,
+                  int r0, int r1) {
+     if (type == 18) rows1<18>(w, row_bytes, n, act, nt, out, r0, r1);
+     else if (type == 21) rows1<21>(w, row_bytes, n, act, nt, out, r0, r1);
+     else if (type == 29) dot_rows_nt<29>(nt, w, row_bytes, n, act, out, r0, r1);
++    else if (type == 17) dot_rows_nt<17>(nt, w, row_bytes, n, act, out, r0, r1);
+ }
+ 
+ bool iq256_supported(int type) noexcept {
+--- base/src/kernels/cpu/native_expert.cpp
++++ candidate/src/kernels/cpu/native_expert.cpp
+@@ -189,6 +189,8 @@
+ 
+ bool native_multi_rows_exact(int type) { return exact_rows(type) != nullptr; }
+ 
++bool native_rows1_exact(int type) { return exact_rows1(type) != nullptr; }
++
+ bool native_fmt(int gu_type, int d_type, int64_t n_embd, int64_t n_ff, NativeFmt& f, std::string& err) {
+     if (gu_type < 0 || gu_type >= GGML_TYPE_COUNT || d_type < 0 || d_type >= GGML_TYPE_COUNT) {
+         err = "native experts: type " + std::to_string(gu_type) + "/" + std::to_string(d_type) + " is not a ggml type";
+--- base/include/strata/kernels/cpu/native_expert.hpp
++++ candidate/include/strata/kernels/cpu/native_expert.hpp
+@@ -61,6 +61,8 @@
+ /// Whether the split variants take the multi-token kernels for this weight type here (the CPU has
+ /// them, they are not switched off, and they matched ggml-cpu's dot bit for bit on synthetic rows).
+ bool native_multi_rows_exact(int ggml_type);
++/// The same for the one-token rows (iq256_rows1 / iq512_one_rows; false: ggml-cpu's dot).
++bool native_rows1_exact(int ggml_type);
+ /// out[t][r] = down_r . hq[t] for rows r in [r0, r1).
+ void native_down_rows(const NativeFmt& f, const uint8_t* blob, const void* const* hq, int nt, float* const* out,
+                       int r0, int r1);
+--- base/include/strata/kernels/cpu/iq_avx2.hpp
++++ candidate/include/strata/kernels/cpu/iq_avx2.hpp
+@@ -21,7 +21,7 @@
+ /// See iq512_set_q5k_fused.
+ void iq256_set_q5k_fused(bool fused) noexcept;
+ 
+-/// Decode-step rows for IQ1_M, IQ3_XXS and IQ3_S with cheaper decoding; iq256_rows' arguments and exactness.
++/// Decode-step rows for IQ1_M, IQ2_XS, IQ3_XXS and IQ3_S with cheaper decoding; iq256_rows' arguments and exactness.
+ bool iq256_rows1_supported(int ggml_type) noexcept;
+ void iq256_rows1(int ggml_type, const uint8_t* w, size_t row_bytes, int n, const void* const* act, int nt,
+                  float* const* out, int r0, int r1);

@@ -1,0 +1,332 @@
+{
+  "utc": "2026-10-31T07:36:16.347577+00:00",
+  "status": "CONDITIONAL_SINGLE_REMAINING_21_CPU_NUMERICAL_SEQUENCE_ADMITTED",
+  "reviewer": "Astra",
+  "qualification_sha256": "e379bb4e440c61caeb42d03af1c254c786eabdc8173261372de12dfa4900adb5",
+  "actual_preflight_sha256": "3dd5bb782f970e7205504d91ca8e184054a26bd0cf460df33713ef43f7cad7bb",
+  "map_review_sha256": "b5241096a64822ddc394afc37086a7dbee23f81c19255b63049c95213fd3aae3",
+  "source_review_sha256": "a11d498e8fb8766d6013c831b00e4a3d5cc699e171093fb9d675b7d0a4cd1cdf",
+  "CPU_result_review_sha256": "858733ea6985bb83a4fb74e112f9a23f07be7ea9de6eecae9a4e536db009030c",
+  "final_delta_verified": {
+    "old2538_unchanged": true,
+    "only_two_map_reviews_added": {
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v5/MAP_ASTRA_REVIEW.json": "b5241096a64822ddc394afc37086a7dbee23f81c19255b63049c95213fd3aae3",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v5/MAP_ROOT_REVIEW.json": "36e18f932140b833a4837faf799c5ea245b289131ab6dad9e0c440cde39cac6b"
+    },
+    "matching_freeze_metadata_only": true,
+    "final_files": 2540,
+    "files_plus_self": 2541
+  },
+  "preflight_review": {
+    "utc": "2026-10-31T07:35:17.039111+00:00",
+    "status": "READ_ONLY_REMAINING_21_ACTUAL_PREFLIGHT_PASS",
+    "qualification_sha256": "e379bb4e440c61caeb42d03af1c254c786eabdc8173261372de12dfa4900adb5",
+    "actual_files_plus_self": 2541,
+    "source_input_ID_counts": [
+      10,
+      468,
+      149
+    ],
+    "binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "GPU_lease": {
+      "identity": {
+        "device_major": 252,
+        "device_minor": 1,
+        "inode": 1449998
+      },
+      "main_pid": 3998190,
+      "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+    },
+    "CPU_lock_inode": 2894342,
+    "CPU_kernel_rows": [],
+    "root_GiB": 348.20678329467773,
+    "phase": null,
+    "active_cpu_build": false,
+    "actual_CAS_import_identity_passed": true,
+    "CPU_capability_identity": {
+      "vendor_id": "AuthenticAMD",
+      "cpu family": "23",
+      "model": "49",
+      "model name": "AMD Ryzen Threadripper 3970X 32-Core Processor",
+      "stepping": "0"
+    },
+    "allowed_processors": 64,
+    "repaired_fixture_sha256": "890041fdfb7efa9b3d9e2a7078823e5278c4ddb12da29bfa7ca5e6752b7073f6",
+    "prior_coverage": {
+      "prior_accepted_jobs": 25,
+      "prior_case_rows": 4824,
+      "new_required_jobs": 21,
+      "new_required_case_rows": 1512,
+      "combined_required_jobs": 46,
+      "combined_required_case_rows": 6336,
+      "old_v4_complete": false,
+      "old_unaccepted_child_regraded": false
+    },
+    "previous26_groups_absent": true,
+    "old_v3_HOLD_and_v4_partial_preserved": true,
+    "download_paused_worker_absent": true,
+    "fresh_sequence": true,
+    "planned_children": 21,
+    "planned_case_rows": 1512,
+    "kernel_rc": 0,
+    "kernel_faults": [],
+    "numerical_execution_attempted": false,
+    "model_GPU_service_actions": false
+  },
+  "admitted_scope": {
+    "single_sequence": true,
+    "CPU_only": true,
+    "mode": "numerical-remaining",
+    "jobs": [
+      {
+        "id": "mixed-17-17-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          17,
+          17
+        ]
+      },
+      {
+        "id": "mixed-17-16-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          17,
+          16
+        ]
+      },
+      {
+        "id": "mixed-17-16-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          17,
+          16
+        ]
+      },
+      {
+        "id": "mixed-17-16-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          17,
+          16
+        ]
+      },
+      {
+        "id": "mixed-17-16-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          17,
+          16
+        ]
+      },
+      {
+        "id": "mixed-17-18-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          17,
+          18
+        ]
+      },
+      {
+        "id": "mixed-17-18-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          17,
+          18
+        ]
+      },
+      {
+        "id": "mixed-17-18-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          17,
+          18
+        ]
+      },
+      {
+        "id": "mixed-17-18-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          17,
+          18
+        ]
+      },
+      {
+        "id": "mixed-16-22-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          16,
+          22
+        ]
+      },
+      {
+        "id": "mixed-16-22-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          16,
+          22
+        ]
+      },
+      {
+        "id": "mixed-16-22-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          16,
+          22
+        ]
+      },
+      {
+        "id": "mixed-16-22-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          16,
+          22
+        ]
+      },
+      {
+        "id": "mixed-16-17-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          16,
+          17
+        ]
+      },
+      {
+        "id": "mixed-16-17-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          16,
+          17
+        ]
+      },
+      {
+        "id": "mixed-16-17-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          16,
+          17
+        ]
+      },
+      {
+        "id": "mixed-16-17-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          16,
+          17
+        ]
+      },
+      {
+        "id": "mixed-16-16-2304-optimized",
+        "n": 2304,
+        "mode": "optimized",
+        "pair": [
+          16,
+          16
+        ]
+      },
+      {
+        "id": "mixed-16-16-2304-fallback",
+        "n": 2304,
+        "mode": "fallback",
+        "pair": [
+          16,
+          16
+        ]
+      },
+      {
+        "id": "mixed-16-16-5120-optimized",
+        "n": 5120,
+        "mode": "optimized",
+        "pair": [
+          16,
+          16
+        ]
+      },
+      {
+        "id": "mixed-16-16-5120-fallback",
+        "n": 5120,
+        "mode": "fallback",
+        "pair": [
+          16,
+          16
+        ]
+      }
+    ],
+    "job_count": 21,
+    "case_rows": 1512,
+    "fixture_path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact",
+    "fixture_sha256": "890041fdfb7efa9b3d9e2a7078823e5278c4ddb12da29bfa7ca5e6752b7073f6",
+    "same_original_candidate_and_archive": true,
+    "prior_25_replayed": false,
+    "old_v4_regraded": false
+  },
+  "conditions": [
+    "Qualified runner repeats final immutable self/source/input/build/CPU/prior-coverage checks and current exact selected/default/healthy-work guard before CPU claim and at defined child boundaries. Compact physical preflight is saved observer evidence, not a replacement for those action-time checks.",
+    "Maintain exact selected3a72/API3998190/native3998227/ticks168891838 and GPU lifetime lease fc:01:1449998; do not acquire, unlock or delete that GPU lock. Separate stable CPU inode2894342 only.",
+    "Root>=136GiB, no private/model/build/restoration or foreign CPU claim, same CPU64 capability/affinity, paused absent downloader and fresh namespace; Root launches no other maintenance through lease.",
+    "Ordinary healthy hosted work may be nonzero only through newly qualified CPU-only guard; all health/default/fault/type/identity/source/resource conditions remain. No service interruption is admitted by this sequence.",
+    "Whole1000soft/1200wall/200cleanup starts as implemented before bootstrap; childCPU30/AS512MiB/wall90/run85+5 further capped by remaining budget, nice15/CUDAhidden/thread-env1/dispatch scrub. No extension or retry.",
+    "First fault stops with raw/partial and precise attempted-versus-never taxonomy. Capture every Popen group before fallible receipt work; release only own claim after all handles/groups proven absent.",
+    "After21 complete, revalidate prior25 and deadline before pending receipt; independent actual raw/lifecycle/production/combined coverage review is required before6336 finite acceptance."
+  ],
+  "aggregate_budget": {
+    "soft_seconds": 1000,
+    "wall_seconds": 1200,
+    "cleanup_seconds": 200
+  },
+  "child_budget": {
+    "CPU_seconds": 30,
+    "Linux_AS_bytes": 536870912,
+    "wall_seconds": 90,
+    "run_seconds": 85,
+    "cleanup_seconds": 5,
+    "nice": 15,
+    "CUDA_VISIBLE_DEVICES": "",
+    "threads": 1,
+    "further_capped_by_remaining_sequence_budget": true
+  },
+  "prior_evidence": {
+    "prior_accepted_jobs": 25,
+    "prior_accepted_rows": 4824,
+    "new_jobs": 21,
+    "new_rows": 1512,
+    "combined_jobs": 46,
+    "combined_rows": 6336,
+    "old_v4_complete": false,
+    "old_v4_regraded": false,
+    "prior_q_sha256": "572938dfef80ef6f38d521116ed2d6288f91a969354e233888c02ba83c7871d3",
+    "old_unaccepted_job_requires_new_qualification": "mixed-17-17-5120-fallback"
+  },
+  "limitations": [
+    "V3 remains HOLD; v4 remains an incomplete sequence with25 accepted, one attempted-unaccepted and20 never launched. New21 includes only that unaccepted job plus20 unstarted jobs.",
+    "No unconditional candidate numerical pass, whole-model correctness, performance, deployment or next phase is inferred.",
+    "Resource observed.json is preexec Python evidence; actual fixture execution binds pinned ELF argv/Popen/exit/output rather than sampled postexec executable identity.",
+    "Environment thread values are not a universal native thread-count or affinity claim. Concurrent hosting may affect latency."
+  ],
+  "numerical_admitted": true,
+  "single_scope_only": true,
+  "compiler_model_GPU_service_or_promotion_admitted": false,
+  "actions_executed_by_reviewer": false,
+  "pause_reviewer_until_terminal": true
+}

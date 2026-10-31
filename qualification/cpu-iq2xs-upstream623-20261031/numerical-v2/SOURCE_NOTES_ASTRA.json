@@ -1,0 +1,24 @@
+{
+  "status": "SOURCE_ONLY_UNBUILT_UNRUN",
+  "source_sha256": "33ede583a7c299a9bac83520050a6ea48233ae596fe6bb0a0f8195dbb7dfd6e7",
+  "original_fixture_sha256": "46054c27abe0538fea5d3c58c0c7585a40ba89c2002a3ca4e7abd98491dc8b6b",
+  "original_unchanged": true,
+  "metadata_sha256": "6f88898634629b9a7ec5fd5e7f54346e72f9bb8af1c11a76253463084c8113e6",
+  "CLI_original": "--n {256,2304,5120} --expect {optimized,fallback}",
+  "CLI_mixed": "--n {2304,5120} --expect {optimized,fallback} --pair {22:22,22:17,22:16,17:22,17:17,17:16,17:18,16:22,16:17,16:16}",
+  "original_cases_per_child": 576,
+  "mixed_cases_per_child": 72,
+  "proposed_children": 46,
+  "proposal_only": true,
+  "no_execution_admission": true,
+  "coverage": "Type17 nt1..16; each actual mixed pair nt1/16; stride0/32; six finite fp16/sign/subnormal/extreme patterns; seven sampled rows with full/interior/empty ranges; actual selected ds4 wrappers/native split, clamp20/unclamped, exact pinned ggml dots/activation quantization, input/output/padding canaries.",
+  "dispatch": "Physical AVX2 and successful type17 one/multi startup acceptance required in optimized children; exact disabled fallback expected separately. Mixed selected own dispatch recorded. Direct rows1 absent for16/22 by selected source, explicitly excluded while native/ds4 wrapper fallbacks remain required.",
+  "not_established": [
+    "Numerical pass",
+    "Exhaustive rows or every production state",
+    "CPU traffic/residency fractions",
+    "Performance gain",
+    "Whole-model equivalence"
+  ],
+  "future_bounds": "Each separately admitted numerical child CPU30/AS512/wall90, no skips or retries; first fault stops remaining children."
+}

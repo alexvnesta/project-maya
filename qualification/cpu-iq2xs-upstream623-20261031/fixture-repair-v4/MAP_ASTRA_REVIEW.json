@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-31T06:51:37.552968+00:00",
+  "status": "INDEPENDENT_FIXTURE_BUILD_MAP_REVIEW_PASS_METADATA_FINALIZATION_ONLY",
+  "draft_sha256": "135fa085babf934ac75c8db30d0034c21f20c96e1e2e7c2ba9b4abf86bb58da6",
+  "root_map_review_sha256": "8b3262d0a59fb4025946fb0ccf53dc36be4b5a021deeec8b8269fa53af33af24",
+  "CPU_result_review_sha256": "e02765dd98f910e7c8bfb2c4afaf800ce1682fde4bd3c6d5fe9bb22c0ad94bb1",
+  "pins": 2275,
+  "prior2230_unchanged": true,
+  "new45_local_bytes_verified": true,
+  "source_input_ID_counts": [
+    5,
+    209,
+    100
+  ],
+  "exact_raw_CPU_membership": true,
+  "literal_unchanged_candidate_and_failed_evidence_membership": true,
+  "scope": "Compile/link only a new fixture with exact one-line initializer repair. No original92 relink, candidate rebuild, fixture arithmetic execution, model/GPU/service action. Original numerical-v3 HOLD unchanged.",
+  "permitted_final_delta": {
+    "add_only": [
+      "MAP_ROOT_REVIEW.json",
+      "MAP_ASTRA_REVIEW.json"
+    ],
+    "expected_final_pins": 2277,
+    "existing2275_pin_mutation_allowed": false,
+    "metadata_only_fields": [
+      "finalized_utc",
+      "status",
+      "qualification_map_reviewed=true",
+      "draft_sha256",
+      "inventory_summary updated for two review additions"
+    ],
+    "build_admitted_must_remain": false,
+    "numerical_admitted_must_remain": false,
+    "GPU_or_model_admitted_must_remain": false
+  },
+  "physical_preflight_required": "All2277 files plus final qself, actual import path and five sources/209inputs/100proofs, exact initializer delta and old HOLD/candidate custody, same current selected binding/default/genuine idle/GPU FLOCK without waiter, no phase or CPU claim, stable unheld CPU lock, root136, paused downloader absent, fresh two output namespaces. Root cooperative maintenance freeze.",
+  "budget": {
+    "soft_seconds": 400,
+    "wall_seconds": 600,
+    "cleanup_seconds": 200
+  },
+  "admission": "No build admission here. Separate actual preflight review and SINGLE two-child admission required.",
+  "verification_limit": "All45 additions are local small bytes checked. Prior physical-only input pins are inherited unchanged; no claim of physical rehash on Mac.",
+  "source_changed": false,
+  "tests_or_imports_executed": false,
+  "live_actions": false
+}

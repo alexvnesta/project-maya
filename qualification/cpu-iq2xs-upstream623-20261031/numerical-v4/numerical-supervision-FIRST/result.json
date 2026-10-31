@@ -1,0 +1,224 @@
+{
+  "status": "DEFERRED_BUSY_PARTIALS_RETAINED",
+  "record": {
+    "controller_pid": 4082051,
+    "controller_start_ticks": 169885936,
+    "nonce": "de120ad5b9254d28975af1d18cb09ce5",
+    "mode": "iq2xs-numerical-v4",
+    "qualification_sha256": "572938dfef80ef6f38d521116ed2d6288f91a969354e233888c02ba83c7871d3",
+    "start_binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "cpu_lease": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 2894342
+    }
+  },
+  "error": "ValueError('DEFERRED_BUSY_UNTOUCHED_OR_CLEANUP_OWNED_COMPILER')",
+  "error_notes": [],
+  "owned_groups_absence": {
+    "passed": true,
+    "pending_spawn": null,
+    "cleanup_faults": [],
+    "children": [
+      {
+        "name": "pure-256-optimized",
+        "pid": 4082179,
+        "pgid": 4082179,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "pure-256-fallback",
+        "pid": 4082267,
+        "pgid": 4082267,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "pure-2304-optimized",
+        "pid": 4082353,
+        "pgid": 4082353,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "pure-2304-fallback",
+        "pid": 4082627,
+        "pgid": 4082627,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "pure-5120-optimized",
+        "pid": 4082723,
+        "pgid": 4082723,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "pure-5120-fallback",
+        "pid": 4082811,
+        "pgid": 4082811,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-22-2304-optimized",
+        "pid": 4082897,
+        "pgid": 4082897,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-22-2304-fallback",
+        "pid": 4082985,
+        "pgid": 4082985,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-22-5120-optimized",
+        "pid": 4083071,
+        "pgid": 4083071,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-22-5120-fallback",
+        "pid": 4083198,
+        "pgid": 4083198,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-17-2304-optimized",
+        "pid": 4083286,
+        "pgid": 4083286,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-17-2304-fallback",
+        "pid": 4083372,
+        "pgid": 4083372,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-17-5120-optimized",
+        "pid": 4083460,
+        "pgid": 4083460,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-17-5120-fallback",
+        "pid": 4083546,
+        "pgid": 4083546,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-16-2304-optimized",
+        "pid": 4083633,
+        "pgid": 4083633,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-16-2304-fallback",
+        "pid": 4083719,
+        "pgid": 4083719,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-16-5120-optimized",
+        "pid": 4083807,
+        "pgid": 4083807,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-22-16-5120-fallback",
+        "pid": 4083893,
+        "pgid": 4083893,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-22-2304-optimized",
+        "pid": 4083981,
+        "pgid": 4083981,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-22-2304-fallback",
+        "pid": 4084067,
+        "pgid": 4084067,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-22-5120-optimized",
+        "pid": 4084162,
+        "pgid": 4084162,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-22-5120-fallback",
+        "pid": 4084284,
+        "pgid": 4084284,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-17-2304-optimized",
+        "pid": 4084372,
+        "pgid": 4084372,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-17-2304-fallback",
+        "pid": 4084458,
+        "pgid": 4084458,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-17-5120-optimized",
+        "pid": 4084546,
+        "pgid": 4084546,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "mixed-17-17-5120-fallback",
+        "pid": 4084632,
+        "pgid": 4084632,
+        "returncode": 0,
+        "group_absent": true
+      }
+    ]
+  },
+  "own_claim_released": true,
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "21: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "retry_authorized": false,
+  "elapsed_seconds": 70.71239244402386
+}

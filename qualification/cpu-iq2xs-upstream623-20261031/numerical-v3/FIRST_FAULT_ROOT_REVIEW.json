@@ -1,0 +1,434 @@
+{
+  "utc": "2026-10-31T06:35:32.209852+00:00",
+  "status": "FIRST_ACTUAL_NUMERICAL_FAILURE_HOLD_PRESERVED_OFFLINE_FIXTURE_DIAGNOSIS",
+  "qualification_sha256": "067bdfbd0caad55ac0715215e110734cb4659f7b4f448e61e791e5ae7e35bf8d",
+  "controller_OS_exit": 1,
+  "controller_PID_snapshot": 4062625,
+  "attempted_failed": [
+    {
+      "id": "pure-256-optimized",
+      "n": 256,
+      "mode": "optimized",
+      "pair": null
+    }
+  ],
+  "never_attempted": [
+    {
+      "id": "pure-256-fallback",
+      "n": 256,
+      "mode": "fallback",
+      "pair": null
+    },
+    {
+      "id": "pure-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": null
+    },
+    {
+      "id": "pure-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": null
+    },
+    {
+      "id": "pure-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": null
+    },
+    {
+      "id": "pure-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": null
+    },
+    {
+      "id": "mixed-22-22-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-22-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-22-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-22-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-17-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-17-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-17-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-17-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-16-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-22-16-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-22-16-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-22-16-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-22-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-22-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-22-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-22-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-17-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-17-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-17-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-17-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-16-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-16-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-16-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-16-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-18-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-17-18-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-17-18-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-17-18-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-16-22-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-22-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-22-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-22-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-17-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-17-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-17-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-17-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-16-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "mixed-16-16-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "mixed-16-16-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "mixed-16-16-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        16,
+        16
+      ]
+    }
+  ],
+  "complete_accepted_children": 0,
+  "panel_case_rows_passed": 0,
+  "raw_partial_schema_limit": "Original partial.unrun includes the failed first job as well as the45 neverattempted jobs. Preserve raw; normalized attemptedfailed/neverattempted fields here distinguish outcomes without regrading.",
+  "raw_sha256": {
+    "numerical-FIRST/partial.json": "ea48c23ac0e4de6df3219a134b567f30c502e7c38f56482c49674d48990ce8f3",
+    "numerical-FIRST/pure-256-optimized/stdout": "ee058be323ed043834d8837eac75f2ef9b7730e4544be1185df6dd226f5614a0",
+    "numerical-FIRST/pure-256-optimized/stderr": "537670122ee3703664cf1ff66ac95e9e896e4c53b4480841767030180b7a913f",
+    "numerical-FIRST/pure-256-optimized/dispatch-environment.json": "b39da09e1567e278beeaf86c8ce584088275fe4c860ea3b6e5c27019e1d61f63",
+    "numerical-FIRST/pure-256-optimized/child.json": "14758fbc52575011495f7ec7a94763e1998a39b83a46728cdf31d134b46f2bc2",
+    "numerical-FIRST/pure-256-optimized/observed.json": "4a3152a1a4b81145d774690a87e59a62159d6404d9fa18119d62760ed101f81a",
+    "numerical-supervision-FIRST/result.json": "d08d4b4830786819f750379982a29f4c950d8bce6888a7ea586787e571378a00",
+    "numerical-supervision-FIRST/attempt.json": "3a27290479f2607e1b23aed151e28bd36222ff20c64e65cc03676f762416b5ee",
+    "numerical-supervision-FIRST/owned-children.jsonl": "1d318bb018eeb3960f68e57f7f473974e3f170b2fd5e3d8b64afc508d8e014dc",
+    "read-only-quantizer-disassembly/child.log": "c9c8fadecab815d536e9d76cc51a254d7e15ae1f08739c297c85bc843a3092e6",
+    "read-only-quantizer-disassembly/observation.json": "10ca322a47b89f76b58dcf2828fda50d7dc8734a7579430b1ec5496902871189",
+    "read-only-quantizer-disassembly/child.json": "2ffcbd3647c4a3969423b099a95dde98104bbd177b236a14687c169dde4ba8ad",
+    "controller.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "controller.stderr": "34a9921e785793d99053f87060f3d6126c4ab65c0b430b61d9676e7b43fe5747",
+    "HOLD_PRODUCTION_CLOSURE.json": "59bed4035a85f5a721db34cbfe4a52f6acf5ca7e6610e02871f0810ef1f345bc",
+    "GGML_QUANTIZER_SOURCE_OBSERVATION.json": "c35c80858b1e6e98b2bef9086ac4fef2f4de616818a492cad621944dae0252b4"
+  },
+  "source_diagnosis": "The firstpattern0 Q8_K quantization comparison uses identical selected ggml from_float through two call paths, but initializes destinations differently: reference0x3c, selectedzero. Exact physical source and read-only object disassembly show zero branch writes d/qs and leaves32bytebsums auxiliary area untouched. Whole292byte memcmp therefore compares different pre-existing bytes. This is an invalid fixture initialization/equivalence assertion, not evidence of differing quantizer arithmetic. Actual mismatch bytes/offsets were not logged.",
+  "binary_corroboration": "Original quantizer object21f2167 disassembly: rsi=dest+4, zero branch3ba0e writes d and qs[256], skips bsums[32], jumps3b9eb to stride0x124. No new arithmetic execution.",
+  "important_limit": "DISPATCH17one1/multi1 follows native startup selfchecks and can execute candidate rows. Failure is before the first explicit6336-panel case/PASS, not proof of no candidate arithmetic. Candidate matrix/numerical/model quality and speed remain unqualified.",
+  "production_unchanged_cleanup_verified": true,
+  "no_retry_replay_or_acceptance": true,
+  "next": "Same Astra independent diagnosis; only a separately reviewed/qualified prospective fixture initialization repair may be considered. Preserve this failed source/attempt; no blind retry or later model phase."
+}

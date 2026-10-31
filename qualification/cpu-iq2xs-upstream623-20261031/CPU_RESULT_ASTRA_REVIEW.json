@@ -1,0 +1,171 @@
+{
+  "decision": "BOTH_PHYSICAL_HOSTS_42_PORTABLE_CONTROLS_REVIEWED_NO_BUILD_OR_NUMERICAL_ADMISSION",
+  "source_review_sha256": "ed420b79292d99e9eb8e087647bd068dd906bb0c466800ea007574f49aa132cd",
+  "source_sha256": {
+    "candidate/include/strata/kernels/cpu/iq_avx2.hpp": "669943775b48a05f87ff5984dd1c05df94185d7a7f73e693c830df67b9bc71c7",
+    "candidate/include/strata/kernels/cpu/native_expert.hpp": "af881c474d3896b996de8068f7aaed6918ac2f303172c55d59d663a40cb2ac0e",
+    "candidate/src/kernels/cpu/iq_avx2.cpp": "0f2151cd0b1e4a77467e132ba92d2cea626f92fd079508ef393c5622b2d71edb",
+    "candidate/src/kernels/cpu/native_expert.cpp": "614191b7aef3bf15dacb3b04c8ef5a1b390b8a28ffbb13e2195430c5f0be3120",
+    "candidate.patch": "639cb7c533827cee486c7bfdffafe5ae6d102fbdc20c3efb67778c9980b4bf43",
+    "source_contract.py": "6d116441cb559a5e136eaae4f5bfc148cb2e02b8b85808a270ed83e182b51e68",
+    "test_source_contract.py": "8f979db35e72b52e9524065322feea2addab759301941770a0b91f0ca3e4b595",
+    "tests/iq2xs_exact.cpp": "46054c27abe0538fea5d3c58c0c7585a40ba89c2002a3ca4e7abd98491dc8b6b",
+    "cpu_driver.py": "3fed5bef32fa584b08f2dfb684ddf944d39ce02d5daa48e0bd07eb94f8b02707",
+    "test_cpu_driver.py": "b33e52afb6735cec6f0842b2121682b781cbb304ca2ccec800a0997b4ec4dd47"
+  },
+  "input_sha256": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/adaptive-expert-cache-v1/SELECTED_CPU_LINK_OBSERVATION.json": "0a4d3f3fa2141afdab5f43f47eff11c014aa74558cb6d5a3c5d3765899164f0b",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/adaptive-expert-cache-v1/SELECTED_CPU_SOURCE_BUILD_OBSERVATION.json": "7025fb879bc350998dc6de3aa3d58c5a490c1248046bf8c6eba580514d28e1ee",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/adaptive-expert-cache-v1/upstream-PR623-files-20261031T0438.json": "c215f2fa974c7295635d99d7a3d893135263964740d1f56ff24d723e28aae62b",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/SELECTED_MAIN_EXPERT_FORMATS_ROOT.json": "6f88898634629b9a7ec5fd5e7f54346e72f9bb8af1c11a76253463084c8113e6",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/base/include/strata/kernels/cpu/iq_avx2.hpp": "878cafbeef8144fd4e0b48f492f4812985ab4544dfb06c14523903a46821cd74",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/base/include/strata/kernels/cpu/native_expert.hpp": "c22c92c0d18a6c045f9534d52b8cad51a8c8f25c58b2e138991d1708a9cdd050",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/base/src/ds4/ds4_iq_cpu.cpp": "7894f430fdfb48ba030ee9aff21414833e7f498052d322aeb33b53655da6118a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/base/src/kernels/cpu/iq_avx2.cpp": "e4dddd81e6c657d677fff4f92c8a1167f0634ed323301ec2396bf30f231b81d4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/base/src/kernels/cpu/native_expert.cpp": "29c706324adaf639e553f266bda6ca1c0c6d755746622e1e80f0af0dbafa3de4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/inputs/selected-tensors.txt": "bc5229fa509356053d07bbcc97e1245f05ac29934c9f92605b21659b4675c966",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/selected-ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/selected-pack-quant-inventory-FIRST.json": "55a170d4e8c2dc758f19fb21f4b36836b91b43036ddc213599954b5378011f07"
+  },
+  "test_ids": [
+    "test_cpu_driver.Parent.test_child_attempt_missing_input_membership_refused",
+    "test_cpu_driver.Parent.test_child_attempt_requires_exact_parent_and_maps",
+    "test_cpu_driver.Parent.test_existing_attempt_refuses_without_child",
+    "test_cpu_driver.Parent.test_forged_observed_pid_refused",
+    "test_cpu_driver.Parent.test_full_parent_consumes_exact_child_and_command",
+    "test_cpu_driver.Parent.test_ignored_environment_bytecode_flag_refused",
+    "test_cpu_driver.Parent.test_missing_actual_as_bound_refused",
+    "test_cpu_driver.Parent.test_missing_success_receipt_refused",
+    "test_cpu_driver.Parent.test_precheck_refusal_creates_no_attempt",
+    "test_cpu_driver.Parent.test_source_changed_after_child_refused",
+    "test_cpu_driver.Parent.test_wrong_receipt_ids_refused",
+    "test_cpu_driver.Qualification.test_alias_and_hardlink_refused",
+    "test_cpu_driver.Qualification.test_bad_review_digest_refused",
+    "test_cpu_driver.Qualification.test_canonical_path_escape_refused",
+    "test_cpu_driver.Qualification.test_full_positive_no_project_import",
+    "test_cpu_driver.Qualification.test_input_change_before_import_refused",
+    "test_cpu_driver.Qualification.test_missing_input_membership_refused",
+    "test_cpu_driver.Qualification.test_missing_manual_review_refused",
+    "test_cpu_driver.Qualification.test_source_change_before_import_refused",
+    "test_cpu_driver.Qualification.test_wrong_control_order_refused",
+    "test_cpu_driver.Supervisor.test_changed_live_group_refused_without_signal",
+    "test_cpu_driver.Supervisor.test_declared_budget_refuses_unbounded",
+    "test_cpu_driver.Supervisor.test_existing_log_refuses_before_start",
+    "test_cpu_driver.Supervisor.test_exited_parent_still_checks_and_kills_descendants",
+    "test_cpu_driver.Supervisor.test_foreign_group_refused_without_signal",
+    "test_cpu_driver.Supervisor.test_nonzero_and_cleanup_error_both_retained",
+    "test_cpu_driver.Supervisor.test_real_child_observes_exact_bounds_and_environment",
+    "test_cpu_driver.Supervisor.test_real_timeout_terminates_owned_group",
+    "test_cpu_driver.Supervisor.test_start_refusal_has_no_cleanup_target",
+    "test_cpu_driver.Supervisor.test_surviving_group_is_error",
+    "test_source_contract.Custody.test_candidate_mutation_refused",
+    "test_source_contract.Custody.test_exact_selected_base_and_candidate",
+    "test_source_contract.Custody.test_hardlink_refused",
+    "test_source_contract.Custody.test_missing_accessor_refused",
+    "test_source_contract.Custody.test_missing_selected_source_refused",
+    "test_source_contract.Custody.test_root_alias_refused",
+    "test_source_contract.Custody.test_symlink_refused",
+    "test_source_contract.Custody.test_unrelated_candidate_file_refused",
+    "test_source_contract.Scope.test_exact_upstream_iq2xs_hunks_only",
+    "test_source_contract.Scope.test_iq1m_and_all_float_recurrence_tail_unchanged",
+    "test_source_contract.Scope.test_native_runtime_unchanged_except_observer",
+    "test_source_contract.Scope.test_no_new_pdep_cpuid_or_runtime_option"
+  ],
+  "hosts": {
+    "darwin": {
+      "pid": 36240,
+      "parent_pid": 36239,
+      "os_exit": 0,
+      "elapsed_seconds": 0.32134604098973796,
+      "tests": 42,
+      "status": "PASS",
+      "observed": {
+        "pid": 36240,
+        "ppid": 36239,
+        "pgid": 36240,
+        "cpu": [
+          30,
+          30
+        ],
+        "as": null,
+        "nice": 15,
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "MALLOC_ARENA_MAX": "1",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "platform": "darwin",
+        "dont_write_bytecode": true
+      },
+      "error": null,
+      "cleanup": [],
+      "raw_sha256": {
+        "attempt.json": "218898456b90ae4d618d99a31f598929a64f8a58a6f98a5ec2857c0e4cf9df74",
+        "child.json": "003e7e69dabc74fb351ad7fbaa9ffc84154a9a2f98d322ddd36099ccd0cfeb6b",
+        "child.log": "a1c758d76f1315cb11d73034ba0d6be52ffc3a1a72e084dd39882f1dac645d40",
+        "observed.json": "694a3568bf8ba57bed52ca42f14855f90e665d67ea172c62803d16740da52328",
+        "receipt.json": "2c6c8dd4f837c0fadd10c63cff0ad7bc05270cb231bb7f686d64f7d224ed3f39",
+        "parent.json": "7effdfce92b2876405eee4bcc44e78eddf34eca018e131e6a79eff33a0e71ae9"
+      }
+    },
+    "linux": {
+      "pid": 4013910,
+      "parent_pid": 4013909,
+      "os_exit": 0,
+      "elapsed_seconds": 0.3168992381542921,
+      "tests": 42,
+      "status": "PASS",
+      "observed": {
+        "pid": 4013910,
+        "ppid": 4013909,
+        "pgid": 4013910,
+        "cpu": [
+          30,
+          30
+        ],
+        "as": [
+          536870912,
+          536870912
+        ],
+        "nice": 15,
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "MALLOC_ARENA_MAX": "1",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "platform": "linux",
+        "dont_write_bytecode": true
+      },
+      "error": null,
+      "cleanup": [],
+      "raw_sha256": {
+        "attempt.json": "90862c61a587cc8239eaabb325f482d0917e6e386d0cf5143244e56441746fa8",
+        "child.json": "4ab4fcceb99c99a9d5b9459213cf4f0716c2f1d935e7da97753c50daabc98e27",
+        "child.log": "279ae9fa62cacc02cb451e8c2c18300eb78017cf746b17a560d96d71d583cea4",
+        "observed.json": "d41267fc9600eed4ddde4c4a0d0ad4c7f7f80ca5ce26803dd4a410e3eb03811a",
+        "receipt.json": "98e3f6d7018095c32471673fcf52878f8e6fb2011d56cc3b73ec50d9f0a33dcb",
+        "parent.json": "030fbddf53d0c02643d64ad0facb314ad4cb3474169cf05b08abbc7fe86c9f1c"
+      }
+    }
+  },
+  "manual_review": "Both full raw logs, attempts, child receipts, observations, test receipts and parent attestations read. All source/input/ID before-after maps, actual PID/PPID/PGID, limits/env/-B and parent receipt/log/child digests independently reconciled using local saved data only.",
+  "linux_prechild_refusal": {
+    "sha256": "44acc50c4f21adca3d3926402e7163b6638c2e490d3acc0454173f9ead5635ac",
+    "classification": "Missing declared historical metadata before Linux driver/child/proof directory; exact-copy completion after fresh idle reported by Root. Original refusal preserved. No failed Linux control or control replay inferred."
+  },
+  "scope": [
+    "Portable source custody and process-supervisor controls only.",
+    "Real synthetic subprocess limit/timeout witnesses are CPU tests, not native numerical execution.",
+    "AVX2 fixture remains unbuilt/unrun; mixed-format witness and build-controller source/controls are separately pending.",
+    "No build, model, GPU, service, deployment or numerical correctness admission."
+  ],
+  "actions_by_reviewer": "Local saved evidence/metadata only; no project import, test, compiler, remote, inference or service action."
+}
