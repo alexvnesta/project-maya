@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/model-v1/cpu_driver.py",
+    "--child",
+    "--review-pin",
+    "dcaf1c60fdeb932c0004043d31d015989ab7e67c190bbe7e86345bcc9fc9e98a",
+    "--parent-pid",
+    "89986"
+  ],
+  "pid": 89987,
+  "returncode": 1,
+  "error": "ValueError('Child nonzero')",
+  "cleanup": [],
+  "elapsed_seconds": 1.5062638340168633
+}

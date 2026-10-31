@@ -1,0 +1,1328 @@
+{
+  "content": "{\"first\":\"red\",\"second\":\"blue\"}",
+  "reasoning": "We need answer only JSON keys first second, lowercase string naming corresponding picture predominant color. Need identify pictures: first is red/black? Let's parse: There are images? The prompt includes two colored blocks: first image red with black top? Need determine first and second pictures. It says \"Synthetic numerical state fixture I.\" then ledger repetitions, then a red image (looks red with black upper-left? Actually image: mostly red rectangle, top-left maybe black? Let's inspect: The first image shown is 640x480, predominantly red, with a black vertical strip top-left? Wait description: The first image after initial text: a red rectangle with a black area at top-left? Let's look: The alt rendering maybe an image: red background, with black rectangle at top-left corner? The displayed image has a large red area and perhaps black top-left corner (the red color starts x? Actually in Markdown image, visually: first image is mostly red, with a black region occupying top-left? Need see. The provided image in prompt: \n`![...](...)`? It displays as a red rectangle with a black vertical bar at top-left? Let me recall from text: It shows an image with red background; at top left maybe black? The image rendered in prompt: I see a bright red rectangle occupying most, with a black strip at top-left? Wait actual visual embedded: \"![...]\" maybe not visible in text. It appears as a red rectangle with black at top left? Let's re-evaluate from conversation: The first image: a large red block, with a narrow black vertical area on the left? The text I see:\n`![image]`? Actually the prompt content includes an image displayed. The first image is a red rectangle with a black top-left corner? In the raw, I can inspect dimensions: There is a red field and at top-left a black region maybe 8 pixels? The screenshot: \"...\" Need infer predominant color. The first image likely predominantly red (the title says red?); second image predominantly blue. There are two images: first is red (top-left black? but predominant red), second is blue. The instruction: \"keys 'first' and 'second', each a lowercase string naming the corresponding picture predominant color.\" So likely {\"first\":\"red\",\"second\":\"blue\"}.\n\nNeed ensure exact output JSON only. Could there be first image red and second blue. Yes.\n\nReturn only JSON.",
+  "finish_reason": "stop",
+  "done": true,
+  "cancelled": false,
+  "status": 200,
+  "events": [
+    {
+      "id": "chatcmpl-518c379b7c744e9383ba69d1",
+      "object": "chat.completion.chunk",
+      "created": 1793439961,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          },
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-518c379b7c744e9383ba69d1",
+      "object": "chat.completion.chunk",
+      "created": 1793439961,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": "{\"first\":\"red\",\"second\":\"blue\"}",
+            "reasoning_content": "We need answer only JSON keys first second, lowercase string naming corresponding picture predominant color. Need identify pictures: first is red/black? Let's parse: There are images? The prompt includes two colored blocks: first image red with black top? Need determine first and second pictures. It says \"Synthetic numerical state fixture I.\" then ledger repetitions, then a red image (looks red with black upper-left? Actually image: mostly red rectangle, top-left maybe black? Let's inspect: The first image shown is 640x480, predominantly red, with a black vertical strip top-left? Wait description: The first image after initial text: a red rectangle with a black area at top-left? Let's look: The alt rendering maybe an image: red background, with black rectangle at top-left corner? The displayed image has a large red area and perhaps black top-left corner (the red color starts x? Actually in Markdown image, visually: first image is mostly red, with a black region occupying top-left? Need see. The provided image in prompt: \n`![...](...)`? It displays as a red rectangle with a black vertical bar at top-left? Let me recall from text: It shows an image with red background; at top left maybe black? The image rendered in prompt: I see a bright red rectangle occupying most, with a black strip at top-left? Wait actual visual embedded: \"![...]\" maybe not visible in text. It appears as a red rectangle with black at top left? Let's re-evaluate from conversation: The first image: a large red block, with a narrow black vertical area on the left? The text I see:\n`![image]`? Actually the prompt content includes an image displayed. The first image is a red rectangle with a black top-left corner? In the raw, I can inspect dimensions: There is a red field and at top-left a black region maybe 8 pixels? The screenshot: \"...\" Need infer predominant color. The first image likely predominantly red (the title says red?); second image predominantly blue. There are two images: first is red (top-left black? but predominant red), second is blue. The instruction: \"keys 'first' and 'second', each a lowercase string naming the corresponding picture predominant color.\" So likely {\"first\":\"red\",\"second\":\"blue\"}.\n\nNeed ensure exact output JSON only. Could there be first image red and second blue. Yes.\n\nReturn only JSON."
+          },
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-518c379b7c744e9383ba69d1",
+      "object": "chat.completion.chunk",
+      "created": 1793439961,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {},
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 8653,
+        "completion_tokens": 513,
+        "total_tokens": 9166,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 8653,
+        "prompt_ms": 9860.6,
+        "prompt_per_token_ms": 1.14,
+        "prompt_per_second": 877.5,
+        "predicted_n": 513,
+        "predicted_ms": 14760.5,
+        "predicted_per_token_ms": 28.773,
+        "predicted_per_second": 34.8,
+        "draft_n": 426,
+        "draft_n_accepted": 243
+      }
+    }
+  ],
+  "raw": [
+    {
+      "seconds": 3.325051061110571,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.325058746151626,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.374960520071909,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.3749628351069987,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.4250002871267498,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.4250019202008843,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.4751419271342456,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.475150323007256,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.5250974129885435,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.5251006190665066,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.5753897891845554,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.5753984451293945,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.626036396017298,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.626049101119861,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.6755269111599773,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.6755292750895023,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.7257974850945175,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.725806783186272,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.7758032269775867,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.7758107711561024,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.82691109017469,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.826933863107115,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.8761933990754187,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.8762014941312373,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.926642060978338,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.926673931069672,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.976393090095371,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.976399492006749,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.026482500135899,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.026489794021472,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.076419922057539,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.076420884113759,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.126641805050895,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.126649740152061,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.176593544194475,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.176594726042822,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.226844700984657,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.226852555992082,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.276756345061585,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.276757828192785,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.327052257023752,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.327060302020982,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.37691255309619,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.376913774991408,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.426985352067277,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.426987066166475,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.477258161175996,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.477263441076502,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.527339857071638,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.527349094161764,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.577396305045113,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.577403809176758,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.6281138269696385,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.628144726157188,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.677735971054062,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.6777430640067905,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.727678052149713,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.727680838201195,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.778343294980004,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.778354285983369,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.828017217107117,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.828019953100011,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.8789924590382725,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.879022926092148,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.928409414133057,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.928417820017785,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.97830797219649,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 4.978308804100379,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.028373778099194,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.028375160181895,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.078618071973324,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.078623892972246,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.128546527121216,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.1285477101337165,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.179332009050995,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.179347668075934,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.228960445150733,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.228964603040367,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.279005631105974,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.279007866047323,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.329154705163091,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.329157200176269,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.379149656975642,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.379151890985668,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.4292784021236,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.429281166987494,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.479314099997282,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.479316384997219,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.529424601001665,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.529427226167172,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.5794662709813565,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.579468646086752,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.629888693103567,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.629892050055787,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.6797936540097,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.679795879172161,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.730179848149419,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.7301829741336405,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.780133381020278,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.780135695124045,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.830157628050074,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.830160433193669,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.880375482141972,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.880378067027777,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.930373409064487,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.930376254022121,
+      "line": "\n"
+    },
+    {
+      "seconds": 5.98043878399767,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 5.980441238032654,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.030574302189052,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.030577608151361,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.080589923076332,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.080592167098075,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.1309291971847415,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.130932172993198,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.1809291280806065,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.180931623093784,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.2313321239780635,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.23133504902944,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.28122674417682,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.281229089014232,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.331274106167257,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.331277101067826,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.381374787073582,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.381377181969583,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.431402972200885,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.431405727053061,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.481749030062929,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.481751474086195,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.531721377978101,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.531724474160001,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.581738581182435,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.581740996101871,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.63187535200268,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.631877887062728,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.68190301512368,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.68190536997281,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.731982958037406,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.731985773192719,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.782648822059855,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.782659613061696,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.8322899921331555,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.832292958162725,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.8826809951569885,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.88268399098888,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.932606304064393,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.932610462186858,
+      "line": "\n"
+    },
+    {
+      "seconds": 6.98256703116931,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 6.982569395098835,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.032694023102522,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.032698121154681,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.082720885053277,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.082723189145327,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.133102971129119,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.133106507128105,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.183072173036635,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.1830745581537485,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.233223380986601,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.233231817139313,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.2843809181358665,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.284384465077892,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.333729724166915,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.333736987086013,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.383543210104108,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.383544894168153,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.433631389169022,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.433633603155613,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.483675884082913,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.483677698066458,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.5339848410803825,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.533991434145719,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.583836140111089,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.583837463054806,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.633898500120267,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.633901515044272,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.684177139075473,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.684184132143855,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.7340771711897105,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.7340794750489295,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.784344318090007,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.784354157047346,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.8342345610726625,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.834236795082688,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.884844148997217,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.88485201401636,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.934452936984599,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.93445454002358,
+      "line": "\n"
+    },
+    {
+      "seconds": 7.985076571116224,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 7.985103192040697,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.034857186023146,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.034862947184592,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.084856015164405,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.084859390975907,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.134861326077953,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.134863239014521,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.185108746169135,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.185115168103948,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.235005962196738,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.235007595038041,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.286149573046714,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.286177376052365,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.335649254033342,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.335658472031355,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.385448465123773,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.38544981717132,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.43647324014455,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.43649547197856,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.486042654141784,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.486049366183579,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.536917755147442,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.536939796991646,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.586359868058935,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.58636609907262,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.636248657014221,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.63625010009855,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.687429819023237,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.687455969164148,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.736763667082414,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.736769959097728,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.786645694170147,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.786647045984864,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.836910085985437,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.836915988009423,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.886819946113974,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.886821259045973,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.937935864087194,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.937960912007838,
+      "line": "\n"
+    },
+    {
+      "seconds": 8.987321960972622,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 8.987329635070637,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.038255653111264,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.038288946030661,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.087655906099826,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.087663209997118,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.137551278108731,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.137555907014757,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.188545857090503,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.188564853044227,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.238076637033373,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.238085043150932,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.288845647126436,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.28886481304653,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.338478522142395,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.338485615095124,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.388296457007527,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.38829918205738,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.438558415044099,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.43856567912735,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.488447035197169,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.488449359079823,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.538709864020348,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.538723490200937,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.588597011053935,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.588599325157702,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.639757644152269,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.639785767067224,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.689145554089919,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.689152257051319,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.740137577056885,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.740169967990369,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.789428462041542,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.789434293052182,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.840233189985156,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.84025523206219,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.889704187167808,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.889725167071447,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.94053433299996,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.940566775156185,
+      "line": "\n"
+    },
+    {
+      "seconds": 9.989998948993161,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 9.990006152074784,
+      "line": "\n"
+    },
+    {
+      "seconds": 10.016269520157948,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 10.016272566048428,
+      "line": "\n"
+    },
+    {
+      "seconds": 11.030863377032802,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 11.030871222028509,
+      "line": "\n"
+    },
+    {
+      "seconds": 12.044801430078223,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 12.04481144901365,
+      "line": "\n"
+    },
+    {
+      "seconds": 13.06601268099621,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 13.066020185127854,
+      "line": "\n"
+    },
+    {
+      "seconds": 14.09739509015344,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 14.097403937019408,
+      "line": "\n"
+    },
+    {
+      "seconds": 15.105132348136976,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 15.105141305131838,
+      "line": "\n"
+    },
+    {
+      "seconds": 16.162567395018414,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 16.16257554013282,
+      "line": "\n"
+    },
+    {
+      "seconds": 17.173184947110713,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 17.173191961133853,
+      "line": "\n"
+    },
+    {
+      "seconds": 18.202250751201063,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 18.2022559910547,
+      "line": "\n"
+    },
+    {
+      "seconds": 19.241999231046066,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 19.242006404092535,
+      "line": "\n"
+    },
+    {
+      "seconds": 20.274026633007452,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 20.274034989066422,
+      "line": "\n"
+    },
+    {
+      "seconds": 21.283142948057503,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 21.283151113195345,
+      "line": "\n"
+    },
+    {
+      "seconds": 22.334022537106648,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 22.33403105312027,
+      "line": "\n"
+    },
+    {
+      "seconds": 23.350032040150836,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 23.350040856050327,
+      "line": "\n"
+    },
+    {
+      "seconds": 24.409504550974816,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 24.409513759193942,
+      "line": "\n"
+    },
+    {
+      "seconds": 24.79937018197961,
+      "line": "data: {\"id\": \"chatcmpl-518c379b7c744e9383ba69d1\", \"object\": \"chat.completion.chunk\", \"created\": 1793439961, \"model\": \"deepseek-v4.1-flash-iq2-xs\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"finish_reason\": null}]}\n"
+    },
+    {
+      "seconds": 24.7994019521866,
+      "line": "\n"
+    },
+    {
+      "seconds": 24.799424804979935,
+      "line": "data: {\"id\": \"chatcmpl-518c379b7c744e9383ba69d1\", \"object\": \"chat.completion.chunk\", \"created\": 1793439961, \"model\": \"deepseek-v4.1-flash-iq2-xs\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"{\\\"first\\\":\\\"red\\\",\\\"second\\\":\\\"blue\\\"}\", \"reasoning_content\": \"We need answer only JSON keys first second, lowercase string naming corresponding picture predominant color. Need identify pictures: first is red/black? Let's parse: There are images? The prompt includes two colored blocks: first image red with black top? Need determine first and second pictures. It says \\\"Synthetic numerical state fixture I.\\\" then ledger repetitions, then a red image (looks red with black upper-left? Actually image: mostly red rectangle, top-left maybe black? Let's inspect: The first image shown is 640x480, predominantly red, with a black vertical strip top-left? Wait description: The first image after initial text: a red rectangle with a black area at top-left? Let's look: The alt rendering maybe an image: red background, with black rectangle at top-left corner? The displayed image has a large red area and perhaps black top-left corner (the red color starts x? Actually in Markdown image, visually: first image is mostly red, with a black region occupying top-left? Need see. The provided image in prompt: \\n`![...](...)`? It displays as a red rectangle with a black vertical bar at top-left? Let me recall from text: It shows an image with red background; at top left maybe black? The image rendered in prompt: I see a bright red rectangle occupying most, with a black strip at top-left? Wait actual visual embedded: \\\"![...]\\\" maybe not visible in text. It appears as a red rectangle with black at top left? Let's re-evaluate from conversation: The first image: a large red block, with a narrow black vertical area on the left? The text I see:\\n`![image]`? Actually the prompt content includes an image displayed. The first image is a red rectangle with a black top-left corner? In the raw, I can inspect dimensions: There is a red field and at top-left a black region maybe 8 pixels? The screenshot: \\\"...\\\" Need infer predominant color. The first image likely predominantly red (the title says red?); second image predominantly blue. There are two images: first is red (top-left black? but predominant red), second is blue. The instruction: \\\"keys 'first' and 'second', each a lowercase string naming the corresponding picture predominant color.\\\" So likely {\\\"first\\\":\\\"red\\\",\\\"second\\\":\\\"blue\\\"}.\\n\\nNeed ensure exact output JSON only. Could there be first image red and second blue. Yes.\\n\\nReturn only JSON.\"}, \"finish_reason\": null}]}\n"
+    },
+    {
+      "seconds": 24.79944753809832,
+      "line": "\n"
+    },
+    {
+      "seconds": 24.79944868106395,
+      "line": "data: {\"id\": \"chatcmpl-518c379b7c744e9383ba69d1\", \"object\": \"chat.completion.chunk\", \"created\": 1793439961, \"model\": \"deepseek-v4.1-flash-iq2-xs\", \"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"stop\"}], \"usage\": {\"prompt_tokens\": 8653, \"completion_tokens\": 513, \"total_tokens\": 9166, \"prompt_tokens_details\": {\"cached_tokens\": 0}}, \"timings\": {\"cache_n\": 0, \"prompt_n\": 8653, \"prompt_ms\": 9860.6, \"prompt_per_token_ms\": 1.14, \"prompt_per_second\": 877.5, \"predicted_n\": 513, \"predicted_ms\": 14760.5, \"predicted_per_token_ms\": 28.773, \"predicted_per_second\": 34.8, \"draft_n\": 426, \"draft_n_accepted\": 243}}\n"
+    },
+    {
+      "seconds": 24.799464700976387,
+      "line": "\n"
+    },
+    {
+      "seconds": 24.799468628130853,
+      "line": "data: [DONE]\n"
+    },
+    {
+      "seconds": 24.799470151076093,
+      "line": "\n"
+    }
+  ],
+  "tool_calls": [],
+  "usage": {
+    "prompt_tokens": 8653,
+    "completion_tokens": 513,
+    "total_tokens": 9166,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 8653,
+    "prompt_ms": 9860.6,
+    "prompt_per_token_ms": 1.14,
+    "prompt_per_second": 877.5,
+    "predicted_n": 513,
+    "predicted_ms": 14760.5,
+    "predicted_per_token_ms": 28.773,
+    "predicted_per_second": 34.8,
+    "draft_n": 426,
+    "draft_n_accepted": 243
+  },
+  "client_first_content_seconds": 24.799439954105765,
+  "client_first_reasoning_seconds": 24.799439954105765,
+  "client_first_tool_seconds": null,
+  "client_full_seconds": 24.799588756170124
+}

@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-31T09:27:51.791796+00:00",
+  "passed": true,
+  "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+  "actual_file_pins": 4586,
+  "actual_checks_including_self": 4587,
+  "source_sha256": {
+    "cpu_dependencies.py": "aad3b274ef7b06ee5a04e66d23a3fd94ec9ab37aa2f63b618cca98c8172736c7",
+    "cpu_driver.py": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71",
+    "cpu_guard.py": "4f40c04a69701cf86e478bdf4f13a021de05f18fae1b943fcd7b88aee19295fd",
+    "cpu_model_audit_runner.py": "5818f60d4267a246d8deebb7c98d4e21a31e5393ec38d68a9003d3256ab2171a",
+    "cpu_model_config.py": "2e01daa27542bdf8e7460f86bf09af58e037b8bc9d5434f9a0beb5b0af4de203",
+    "cpu_model_controls.py": "c6742bf8ebac79be631769d29e8d63dd3084a86497d434dd5397ed90a24fed6d",
+    "cpu_model_dependencies.py": "b626f4745ca63ba253a9eab6996fc1c796a15421b003cd4816481c79a33bbe90",
+    "cpu_model_numerical.py": "78c9871c24465e94211843c94339ed56bde98a85257dc61487375cdbf7202878",
+    "cpu_model_numerical_audit.py": "f96ced0f4cb1a417328b82e7365de019e2403bb800d8d2e17c13014cbe507e1c",
+    "cpu_model_runtime.py": "c991c77c1b0e7180869a0d4c672015ff230e47d12dd2792d44f16962f44f0493",
+    "test_cpu_dependencies.py": "72c25e00e37a07aa8c84a68b73581bbec45c34905d5b2d369947c96203a74218",
+    "test_cpu_driver.py": "b1b16c08620dbdeffee75f51932df525238885d57750116b5c0a83e6a7ca75b9",
+    "test_cpu_guard.py": "03a04292ecaa70f887cbe88caee4ce5a7695ddba8f08d53ff93b146ffa41aeb7",
+    "test_cpu_model_audit.py": "2a95e7812f4779664732e65f867de639243f674731cf67c30fc699c5a339f150",
+    "test_cpu_model_config.py": "6d49bf1b0034ba411e16aa2a868fc9916a715343313766f4ae863062c25a66b2",
+    "test_cpu_model_controls.py": "821889c016c9c621edf46ca7e0bf66b7eab0df2d7cc3abc28f717fb0ca9941ab",
+    "test_cpu_model_dependencies.py": "ec41842262b1df2cbc8775e23bdbbd34d39ce6080059980cd9b70d4a760bccc4",
+    "test_cpu_model_numerical.py": "9f5ae9f75f71f6f3ec353e18947f5909d82eeee515ae679505b58057199249a4",
+    "test_cpu_model_runtime.py": "1dc5691cd8336532a443197d3ef534817894d6c5e19edd59eaab868523d9ea52"
+  },
+  "CPU_input_count": 3639,
+  "test_ID_count": 247,
+  "seconds": 0.6224386019166559,
+  "bad": [],
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "root_free_bytes": 373741690880,
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "source_CPU_proof_only": true,
+  "model_or_GPU_admitted": false
+}

@@ -1,0 +1,138 @@
+{
+  "utc": "2026-10-31T10:16:39.940270+00:00",
+  "arm": "N1",
+  "scope": "REQUEST_SEPARATE_SINGLE_N1_NUMERICAL_ADMISSION_ONLY",
+  "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+  "readonly_child": {
+    "argv": [
+      "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+      "-B",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/model-v1/cpu_model_numerical.py",
+      "--arm",
+      "N1"
+    ],
+    "pid": 4156500,
+    "returncode": 0,
+    "error": null,
+    "cleanup": [],
+    "elapsed_seconds": 1.8707334359642118
+  },
+  "readonly_status": "READ_ONLY_PREFLIGHT_PASS",
+  "readonly_receipt_sha256": "332923d07f5e6bf51e239a57d95c9200d2cd3498727d08d68063661b43b5ba4e",
+  "readonly_proof": {
+    "qualified": true,
+    "file_pins": 4586,
+    "mode_preflight": {
+      "fixture_sha256": "976b0cf51e3cfc2950774714fb1a5fb075f08e7d8619b028b6d9b1b0f67ffe67",
+      "storage_bound": {
+        "max_position": 44768,
+        "identity_bytes_upper_bound": 848,
+        "max_checkpoints": 3,
+        "native_owned_file_bounds": {
+          "slot_bin_or_tmp": 53090040,
+          "slot_meta_or_tmp": 179992,
+          "expert_profile_or_tmp": 66048
+        },
+        "hard_per_file": 536870912,
+        "soft_dump_aggregate": 1073741824,
+        "hard_dump_aggregate": 2147483648,
+        "max_dump_files": 4,
+        "scope": "Fresh four-case native numerical child only; no imported cache or other requests. API image staging, driver caches, logs and other child processes require separate caller inventory."
+      },
+      "factor": {
+        "exe": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/maya-ds4-candidate",
+        "native_sha256": "cab346ccefedad1d2b80384db215325a445f474729812ea288a829d843007da4",
+        "CPU_IQ2XS_candidate": true
+      },
+      "purpose": "UNMEASURED_NUMERICAL_ONLY",
+      "speed_or_promotion_admitted": false
+    }
+  },
+  "binding": {
+    "invocation": "5349f6a440544b9bb15b84c71839bf52",
+    "main_pid": 4143187,
+    "native_pid": 4143240,
+    "native_start_ticks": 170826527
+  },
+  "health": {
+    "status": "ok",
+    "max_context": 1048576,
+    "model": "deepseek-v4.1-flash-iq2-xs",
+    "images": true,
+    "api_key": false,
+    "image_generation": false,
+    "loaded": true,
+    "service": "strata",
+    "busy": false,
+    "switcher": {
+      "active_model": "deepseek",
+      "inflight": 0,
+      "waiting": 0,
+      "nondefault_idle_seconds": 900.0,
+      "default_model": "deepseek",
+      "fault": null
+    }
+  },
+  "work": {
+    "slots_requested": 1,
+    "slots_effective": 1,
+    "active": 0,
+    "occupied_slots": null,
+    "queued": 0,
+    "waiting": null,
+    "outside_slots": null,
+    "slots": [],
+    "groups": null,
+    "effective_rows_window": null,
+    "batch_active_rows_window": null,
+    "batch_sample_windows": null,
+    "batch_sample_rows": null,
+    "batch_sample_active_rows": null,
+    "batch_sample_span_s": null,
+    "batch_sample_age_s": null,
+    "stage_in_flight": [],
+    "stage_sample_span_s": null,
+    "stage_sample_age_s": null,
+    "requests": [],
+    "requests_omitted": 0,
+    "max_queue": null,
+    "admission_limit": null,
+    "admission_reserved": 0,
+    "admission_rejected": 0,
+    "oldest_queue_s": 0,
+    "queue_timeout_s": null,
+    "queue_timeouts": 0,
+    "client_disconnect_cancels": 0
+  },
+  "root_free_GiB": 347.2821273803711,
+  "phase_keys_free": true,
+  "previous_window": {
+    "path": "/home/alex/strata-deepseek-test-20261024/windows/20261031T093910Z.json",
+    "sha256": "2ef351e53a84ff70300e60ea8e1457722ffcad652ba35ffd32a8bf528ec5fba3",
+    "test_returncode": 0,
+    "maintenance_held": true,
+    "resume_allowed": true
+  },
+  "kernel_since": "2026-10-31 09:38:04 UTC",
+  "kernel_faults": [],
+  "download_paused": {
+    "authorization_sha256": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648",
+    "pause_before_private_phase": true
+  },
+  "download_worker_absent": true,
+  "accepted_N0": {
+    "attempted": true,
+    "fully_reviewed": true,
+    "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/decode-cpu-iq2xs-numerical-N0-20261031T093804Z",
+    "proof": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/decode-cpu-iq2xs-numerical-N0-20261031T093804Z/proof.json",
+    "controller_pid": 4139863,
+    "accepted": true,
+    "numerical_state_lifecycle_accepted": true,
+    "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+    "terminal_audit_sha256": "10383a6e06f28857ac3de37ad7643dbc2f4d354247867435d1e513f8e234fe77",
+    "root_result_review_sha256": "9cf8eda2426fb5f9d8cbacfa4cfe63b19516e7cd960d94e89b3f5cbb314f4fc7",
+    "astra_result_review_sha256": "021c5449d55d2faee5a578b90c14dda7027b67d4eefe8b27fb726c7afa9e635b"
+  },
+  "controller_N1_files_absent": true,
+  "metadata_observer_limit": "Initial context helper checked wrong pause key and stopped before writing; actual pause_before_private_phase true read and completed here, no readonly/model retry."
+}

@@ -1,0 +1,58 @@
+{
+  "passed": false,
+  "error": "ValueError('Audit child failed; original attempt retained')",
+  "error_notes": [],
+  "own_claim_released": true,
+  "owned_groups_absence": {
+    "passed": true,
+    "pending_spawn": null,
+    "cleanup_faults": [],
+    "children": [
+      {
+        "name": "scan-0",
+        "pid": 4167396,
+        "pgid": 4167396,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "scan-1",
+        "pid": 4167421,
+        "pgid": 4167421,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "scan-2",
+        "pid": 4167463,
+        "pgid": 4167463,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "scan-3",
+        "pid": 4167487,
+        "pgid": 4167487,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "assemble",
+        "pid": 4167515,
+        "pgid": 4167515,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "compare",
+        "pid": 4167569,
+        "pgid": 4167569,
+        "returncode": 1,
+        "group_absent": true
+      }
+    ]
+  },
+  "production_changed": false,
+  "GPU_lease_mutated": false,
+  "elapsed_seconds": 24.01416648318991
+}

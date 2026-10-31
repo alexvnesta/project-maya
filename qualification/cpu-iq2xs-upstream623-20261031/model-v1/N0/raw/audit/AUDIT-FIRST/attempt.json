@@ -1,0 +1,32 @@
+{
+  "record": {
+    "mode": "cpu-iq2xs-model-offline-audit",
+    "arm": "N0",
+    "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+    "controller_pid": 4151301,
+    "controller_start_ticks": 170912107,
+    "nonce": "b04020f2e8d74d9f84366d8831d91210",
+    "start_binding": {
+      "invocation": "5349f6a440544b9bb15b84c71839bf52",
+      "main_pid": 4143187,
+      "native_pid": 4143240,
+      "native_start_ticks": 170826527
+    },
+    "cpu_lease": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 2894342
+    }
+  },
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 4143187,
+    "kernel_lock": "9: FLOCK  ADVISORY  WRITE 4143187 fc:01:1449998 0 EOF"
+  },
+  "global_state_CAS_atomic": false,
+  "single_coordinator_maintenance_freeze": true
+}
