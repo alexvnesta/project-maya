@@ -1,0 +1,94 @@
+test_actual_cpu_child_bounds_environment_and_exact_pipe_bytes (test_construct_native.Codec.test_actual_cpu_child_bounds_environment_and_exact_pipe_bytes) ... ok
+test_actual_nonzero_stderr_short_and_long_output_fail (test_construct_native.Codec.test_actual_nonzero_stderr_short_and_long_output_fail) ... ok
+test_actual_timeout_closes_captured_pid_in_inherited_owner_group (test_construct_native.Codec.test_actual_timeout_closes_captured_pid_in_inherited_owner_group) ... ERROR
+test_invalid_payload_and_shape_refuse_before_spawn (test_construct_native.Codec.test_invalid_payload_and_shape_refuse_before_spawn) ... ok
+test_no_separate_group_or_unbounded_timeout_can_be_requested (test_construct_native.Codec.test_no_separate_group_or_unbounded_timeout_can_be_requested) ... ok
+test_timeout_cleans_only_captured_pid_never_owner_group (test_construct_native.Codec.test_timeout_cleans_only_captured_pid_never_owner_group) ... ok
+test_actual_source_and_codec_drift_signatures_detectable (test_construct_native.Construction.test_actual_source_and_codec_drift_signatures_detectable) ... ERROR
+test_complete_order_byte_custody_and_independent_readback (test_construct_native.Construction.test_complete_order_byte_custody_and_independent_readback) ... ok
+test_existing_partial_never_overwritten (test_construct_native.Construction.test_existing_partial_never_overwritten) ... ok
+test_incomplete_plan_never_publishes (test_construct_native.Construction.test_incomplete_plan_never_publishes) ... ok
+test_overlap_refuses_before_second_codec_and_preserves_first (test_construct_native.Construction.test_overlap_refuses_before_second_codec_and_preserves_first) ... ok
+test_pause_or_deadline_stops_before_read_or_codec (test_construct_native.Construction.test_pause_or_deadline_stops_before_read_or_codec) ... ok
+test_wrong_codec_status_bytes_or_hash_retains_partial_and_stops (test_construct_native.Construction.test_wrong_codec_status_bytes_or_hash_retains_partial_and_stops) ... ok
+test_exact_range_and_truncation_bounds (test_construct_native.Files.test_exact_range_and_truncation_bounds) ... ok
+test_exclusive_publish_retains_collision_partial (test_construct_native.Files.test_exclusive_publish_retains_collision_partial) ... ok
+test_hash_stream_reads_all_bytes_and_paces (test_construct_native.Files.test_hash_stream_reads_all_bytes_and_paces) ... ok
+test_publish_new_final_exact_bytes_and_nlink1 (test_construct_native.Files.test_publish_new_final_exact_bytes_and_nlink1) ... ERROR
+test_publish_refuses_empty_alias_or_foreign_parent (test_construct_native.Files.test_publish_refuses_empty_alias_or_foreign_parent) ... ok
+test_regular_open_identity_and_signature (test_construct_native.Files.test_regular_open_identity_and_signature) ... ERROR
+test_symlink_hardlink_directory_refused (test_construct_native.Files.test_symlink_hardlink_directory_refused) ... ok
+test_both_actual_platform_resource_contracts_accepted (test_construct_native.Qualification.test_both_actual_platform_resource_contracts_accepted) ... ok
+test_failed_or_unclean_cpu_child_refused (test_construct_native.Qualification.test_failed_or_unclean_cpu_child_refused) ... ok
+test_unbounded_or_foreign_child_refused (test_construct_native.Qualification.test_unbounded_or_foreign_child_refused) ... ok
+test_wrong_partial_or_source_cpu_proof_refused (test_construct_native.Qualification.test_wrong_partial_or_source_cpu_proof_refused) ... ok
+
+======================================================================
+ERROR: test_actual_timeout_closes_captured_pid_in_inherited_owner_group (test_construct_native.Codec.test_actual_timeout_closes_captured_pid_in_inherited_owner_group)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/test_construct_native.py", line 85, in test_actual_timeout_closes_captured_pid_in_inherited_owner_group
+    pid=int(pidfile.read_text())
+            ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/nh/_pj824_s7b1gcw0cmlnf60xh0000gn/T/tmps542t2vj/pid'
+
+======================================================================
+ERROR: test_actual_source_and_codec_drift_signatures_detectable (test_construct_native.Construction.test_actual_source_and_codec_drift_signatures_detectable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/test_construct_native.py", line 162, in test_actual_source_and_codec_drift_signatures_detectable
+    p=Path(d)/'x';p.write_bytes(b'a');first=c.signature(p);p.write_bytes(b'b');self.assertNotEqual(c.signature(p),first)
+                                            ~~~~~~~~~~~^^^
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/construct_native.py", line 45, in signature
+    require(p.is_absolute() and p.resolve()==p and stat.S_ISREG(s.st_mode) and s.st_nlink==1,'One canonical regular source')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/construct_native.py", line 39, in require
+    if not ok:raise ValueError(why)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: One canonical regular source
+
+======================================================================
+ERROR: test_publish_new_final_exact_bytes_and_nlink1 (test_construct_native.Files.test_publish_new_final_exact_bytes_and_nlink1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/test_construct_native.py", line 45, in test_publish_new_final_exact_bytes_and_nlink1
+    p=Path(d)/'partial';f=Path(d)/'final';p.write_bytes(b'new');c.publish(p,f)
+                                                                ~~~~~~~~~^^^^^
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/construct_native.py", line 123, in publish
+    require(Path(partial).parent==Path(final).parent and signature(partial)[2]>0,'Owned nonempty output')
+                                                         ~~~~~~~~~^^^^^^^^^
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/construct_native.py", line 45, in signature
+    require(p.is_absolute() and p.resolve()==p and stat.S_ISREG(s.st_mode) and s.st_nlink==1,'One canonical regular source')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/construct_native.py", line 39, in require
+    if not ok:raise ValueError(why)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: One canonical regular source
+
+======================================================================
+ERROR: test_regular_open_identity_and_signature (test_construct_native.Files.test_regular_open_identity_and_signature)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/test_construct_native.py", line 22, in test_regular_open_identity_and_signature
+    p=Path(d)/'x';p.write_bytes(b'original');f,s=c.open_source(p)
+                                                 ~~~~~~~~~~~~~^^^
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/construct_native.py", line 49, in open_source
+    before=signature(p);fd=os.open(p,os.O_RDONLY|os.O_NOFOLLOW)
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/construct_native.py", line 45, in signature
+    require(p.is_absolute() and p.resolve()==p and stat.S_ISREG(s.st_mode) and s.st_nlink==1,'One canonical regular source')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/construct_native.py", line 39, in require
+    if not ok:raise ValueError(why)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: One canonical regular source
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.283s
+
+FAILED (errors=4)

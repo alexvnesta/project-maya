@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "controls": 7,
+  "test_ids": [
+    "test_mxpack.Codec.test_all_nibble_values_and_scale_bytes",
+    "test_mxpack.Codec.test_every_logical_value_matches_original_fp4_e8m0",
+    "test_mxpack.Codec.test_full_original_gate_up_geometry_and_bytes",
+    "test_mxpack.Codec.test_invalid_or_oversized_geometry_before_allocation",
+    "test_mxpack.Codec.test_nan_scale_refused_before_any_output",
+    "test_mxpack.Codec.test_rows_and_block_order_with_independent_oracle",
+    "test_mxpack.Codec.test_truncation_and_extra_input_never_emit"
+  ],
+  "source_sha256": {
+    "mxpack.cpp": "9cd219b7133b33fd73d299ed7c7be371f434ae60251b4678de19f620c750c4bb",
+    "test_mxpack.py": "3dccc8c37f65b9fdf4b395c1fa9389fe38936a217ee085c45a420111980d531f",
+    "run_codec_cpu.py": "22a34afa978fb4b9507e11872390fae783a4e5a569a87f464c24499a4130fc90"
+  },
+  "input_sha256": {
+    "upstream-lossless-format-reference": "bd32b017403fad3b4e4377395c61f007999c6dea7db059c9d22953a42def0d44",
+    "CPU-supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "observed": {
+    "pid": 614134,
+    "ppid": 614133,
+    "pgid": 614134,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "inference_native_executed": false,
+  "CPU_converter_executed": true,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false,
+  "converter": {
+    "compiler": "/usr/bin/x86_64-linux-gnu-g++-15",
+    "compiler_sha256": "e6718f7e0c7d057c3ff77b550c603da9bc4030e3ede3c053705acce1293dbe4d",
+    "compiler_version": "x86_64-linux-gnu-g++-15 (Ubuntu 15.2.0-16ubuntu1) 15.2.0\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "argv": [
+      "/usr/bin/x86_64-linux-gnu-g++-15",
+      "-std=c++17",
+      "-O2",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/mxpack.cpp",
+      "-o",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/CODEC-CPU-FIRST-linux/mxpack"
+    ],
+    "returncode": 0,
+    "executable": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/CODEC-CPU-FIRST-linux/mxpack",
+    "sha256": "341ed4182032fffe9f290043e9094fab879dfda59d0ee5982f99c932d332fd14",
+    "source_sha256": "9cd219b7133b33fd73d299ed7c7be371f434ae60251b4678de19f620c750c4bb"
+  }
+}

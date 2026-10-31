@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-31T22:58:40.385113+00:00",
+  "status": "OFFLINE_CONSTRUCTION_CPU_HOLD_NO_REAL_WEIGHT_CONVERSION",
+  "actual_failures": [
+    "3tests used macOS/var tempalias violating intendedcanonicalpathguard; correct productionguard retained",
+    "Timeouttest assumed childscript PIDfilewrittenwithin.1s; child correctlyreapedbeforeinitialization, PIDcapturetestfixtureinvalid"
+  ],
+  "passed_controls": 20,
+  "failed_controls": 4,
+  "repair": "New r2namespace resolves own temporaryroots; timeouttestcaptures actualPopenhandle immediately, no startupdeadline assumption; productionboundsunchanged. Preserveoriginalsource/rawfailure."
+}

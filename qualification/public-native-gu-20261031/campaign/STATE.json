@@ -1,0 +1,201 @@
+{
+  "utc": "2026-10-31T23:20:57.114192+00:00",
+  "status": "PUBLIC_NATIVE_GU_PACK_BUILT_UNSLOTH_FINAL_TRANSFER_PENDING",
+  "selected_production": "native92/configc43/chunk4096, same1Mtotal/256Koutput; unchanged",
+  "last_verified_binding": {
+    "invocation": "60e368a207fc40bcb08d353c2ad5a9db",
+    "main_pid": 577305,
+    "native_pid": 577343,
+    "native_start_ticks": 175225900
+  },
+  "TP1_TP2": "Firstprosepair audited, TP2leads10.405%; broader/replication/deploymentpending",
+  "official_native_sources": {
+    "utc": "20261031T223605400219Z",
+    "pid": 609172,
+    "status": "BOTH_COMPLETE_OFFICIAL_SHARDS_SHA256_VERIFIED_NO_MODEL_RUN",
+    "files": [
+      {
+        "path": "model-00028-of-00048.safetensors",
+        "status": "DOWNLOADED_VERIFIED",
+        "bytes": 7389761368,
+        "sha256": "3c0e5ad6a4e8e811c1a55fd8f5b59c9fa329b241c671997c28fc7a01944d5a77"
+      },
+      {
+        "path": "model-00029-of-00048.safetensors",
+        "status": "DOWNLOADED_VERIFIED",
+        "bytes": 7389761368,
+        "sha256": "392a950bcb062b89f683abc52d49a17e92c66f80cd1cb6fb92b71091da75319b"
+      }
+    ],
+    "qualification_sha256": "0fc3cf5334aa779ca02085b520d7a3a096e8bc5925196f7f7e3680c9e70eb62a",
+    "manifest_sha256": "8fea071855665f114972f3b9581736af745fa4653e35043af275a71be88bff9a",
+    "budget": {
+      "free": 274234204160,
+      "required": 209605545889,
+      "own_remaining": 14779522736,
+      "other_remaining": 30312837361,
+      "future_overlay": 9625927680,
+      "floor": 154618822656
+    },
+    "model_service_GPU_actions": 0,
+    "rate": 67108864,
+    "wall": 21600,
+    "returncode": 0,
+    "updated_utc": "2026-10-31T22:45:07.823904+00:00"
+  },
+  "hybrid_cpu_proof": {
+    "PLAN-R2-darwin": {
+      "controls": 11,
+      "source_sha256": {
+        "hybrid_plan_r2.py": "86bdd5bdcb4563d9b67a1b2c1981e7e326614ec1cdb714fcd3965a3b8091939c",
+        "test_hybrid_plan_r2.py": "ac1b577cc9fc3c6abc81b7160105e1fae6cb365b9789edf663c945e16948274e",
+        "run_plan_cpu_r2.py": "ed11153f3419543ce6e6728a545c54b0121b4aed97fb118b9f8143c135e62837"
+      },
+      "test_ids": [
+        "test_hybrid_plan_r2.Pack.test_actual_rank1_vectors_are_present_and_byte_preserved",
+        "test_hybrid_plan_r2.Pack.test_foreign_overlay_and_duplicate_original_files_refused",
+        "test_hybrid_plan_r2.Pack.test_missing_duplicate_or_different_original_role_refused",
+        "test_hybrid_plan_r2.Pack.test_only_declared_role_rows_and_file_addresses_change",
+        "test_hybrid_plan_r2.Pack.test_unknown_target_or_output_overlap_refused",
+        "test_hybrid_plan_r2.SourcePlan.test_actual_complete_role_coverage_and_source_ranges",
+        "test_hybrid_plan_r2.SourcePlan.test_duplicate_nonfinite_or_unbounded_header_refused",
+        "test_hybrid_plan_r2.SourcePlan.test_missing_or_different_shard_mapping_refused",
+        "test_hybrid_plan_r2.SourcePlan.test_overlapping_source_planes_refused",
+        "test_hybrid_plan_r2.SourcePlan.test_short_negative_and_outside_file_ranges_refused",
+        "test_hybrid_plan_r2.SourcePlan.test_wrong_native_dtype_shape_or_boolean_dimension_refused"
+      ],
+      "receipt_sha256": "963c1ae25e6dab4a65402a660677a7bb00cc67a2fcf9d725055f2cc8d36590ce"
+    },
+    "PLAN-R2-linux": {
+      "controls": 11,
+      "source_sha256": {
+        "hybrid_plan_r2.py": "86bdd5bdcb4563d9b67a1b2c1981e7e326614ec1cdb714fcd3965a3b8091939c",
+        "test_hybrid_plan_r2.py": "ac1b577cc9fc3c6abc81b7160105e1fae6cb365b9789edf663c945e16948274e",
+        "run_plan_cpu_r2.py": "ed11153f3419543ce6e6728a545c54b0121b4aed97fb118b9f8143c135e62837"
+      },
+      "test_ids": [
+        "test_hybrid_plan_r2.Pack.test_actual_rank1_vectors_are_present_and_byte_preserved",
+        "test_hybrid_plan_r2.Pack.test_foreign_overlay_and_duplicate_original_files_refused",
+        "test_hybrid_plan_r2.Pack.test_missing_duplicate_or_different_original_role_refused",
+        "test_hybrid_plan_r2.Pack.test_only_declared_role_rows_and_file_addresses_change",
+        "test_hybrid_plan_r2.Pack.test_unknown_target_or_output_overlap_refused",
+        "test_hybrid_plan_r2.SourcePlan.test_actual_complete_role_coverage_and_source_ranges",
+        "test_hybrid_plan_r2.SourcePlan.test_duplicate_nonfinite_or_unbounded_header_refused",
+        "test_hybrid_plan_r2.SourcePlan.test_missing_or_different_shard_mapping_refused",
+        "test_hybrid_plan_r2.SourcePlan.test_overlapping_source_planes_refused",
+        "test_hybrid_plan_r2.SourcePlan.test_short_negative_and_outside_file_ranges_refused",
+        "test_hybrid_plan_r2.SourcePlan.test_wrong_native_dtype_shape_or_boolean_dimension_refused"
+      ],
+      "receipt_sha256": "baea557ad9a5d3be7992d11bd19e17579a2635ed4831f4cf90f995db0ce916fa"
+    },
+    "CODEC-darwin": {
+      "controls": 7,
+      "source_sha256": {
+        "mxpack.cpp": "9cd219b7133b33fd73d299ed7c7be371f434ae60251b4678de19f620c750c4bb",
+        "test_mxpack.py": "3dccc8c37f65b9fdf4b395c1fa9389fe38936a217ee085c45a420111980d531f",
+        "run_codec_cpu.py": "22a34afa978fb4b9507e11872390fae783a4e5a569a87f464c24499a4130fc90"
+      },
+      "test_ids": [
+        "test_mxpack.Codec.test_all_nibble_values_and_scale_bytes",
+        "test_mxpack.Codec.test_every_logical_value_matches_original_fp4_e8m0",
+        "test_mxpack.Codec.test_full_original_gate_up_geometry_and_bytes",
+        "test_mxpack.Codec.test_invalid_or_oversized_geometry_before_allocation",
+        "test_mxpack.Codec.test_nan_scale_refused_before_any_output",
+        "test_mxpack.Codec.test_rows_and_block_order_with_independent_oracle",
+        "test_mxpack.Codec.test_truncation_and_extra_input_never_emit"
+      ],
+      "receipt_sha256": "62f935c46ad6732db189a3a977360fe6c34f2ab0670c65643852ab37ddbbeb9c"
+    },
+    "CODEC-linux": {
+      "controls": 7,
+      "source_sha256": {
+        "mxpack.cpp": "9cd219b7133b33fd73d299ed7c7be371f434ae60251b4678de19f620c750c4bb",
+        "test_mxpack.py": "3dccc8c37f65b9fdf4b395c1fa9389fe38936a217ee085c45a420111980d531f",
+        "run_codec_cpu.py": "22a34afa978fb4b9507e11872390fae783a4e5a569a87f464c24499a4130fc90"
+      },
+      "test_ids": [
+        "test_mxpack.Codec.test_all_nibble_values_and_scale_bytes",
+        "test_mxpack.Codec.test_every_logical_value_matches_original_fp4_e8m0",
+        "test_mxpack.Codec.test_full_original_gate_up_geometry_and_bytes",
+        "test_mxpack.Codec.test_invalid_or_oversized_geometry_before_allocation",
+        "test_mxpack.Codec.test_nan_scale_refused_before_any_output",
+        "test_mxpack.Codec.test_rows_and_block_order_with_independent_oracle",
+        "test_mxpack.Codec.test_truncation_and_extra_input_never_emit"
+      ],
+      "receipt_sha256": "a305eb437d4e9d567200d892aebbd450e5dac6f35a76347710529cd1ad82b790"
+    }
+  },
+  "preserved_failures": [
+    "s2-public-hybrid-v1/PLAN-CPU-FIRST-darwin: rank1metadata rejected, sourcefixedseparatelyinr2",
+    "s2-public-hybrid-v1/PLAN_R2_REVIEW_INCOMPLETE_INPUT_MAP_PRESERVED.json: parententrymissingmetadata refusedbeforechild",
+    "s2-public-hybrid-v1/SOL_CONSTRUCT_SOURCE_REVIEW.json: reviewer caught potentialseparategrouporphan beforetests; inheritedgrouprepairunderreview"
+  ],
+  "hybrid_scope": "OriginalMXFP4guwholeL25/26, MayaSallotherweights unchanged. Independentpubliccandidate, notexactprivateS2. NooutputpackorGPUtestyet.",
+  "no_optimization_activated": true,
+  "private_phase_active": false,
+  "remaining": [
+    "FinishUnsloth6shards",
+    "FirstconstructorCPUbothhosts/qualifiedoriginaloverlayconstruction",
+    "CurrentMaya145known-answer/tool/coding/cancel/cachechecks",
+    "ReplicatedmatchedTP1/TP2/fullmodeltiming",
+    "HybridandUnslothqualifiedcomparisons",
+    "Verifiedwinneractivation"
+  ],
+  "native_gu_construction": {
+    "status": "PUBLIC_NATIVE_GU_PACK_CONSTRUCTED_NOT_MODEL_QUALIFIED",
+    "pid": 629745,
+    "qualification_sha256": "799541403a7f6de55a6d60636d3a0ccf4c28546b083ee9fc445f992b3af8fb99",
+    "exact_private_S2": false,
+    "model_GPU_service_actions": 0,
+    "started_utc": "2026-10-31T23:00:19.347981+00:00",
+    "overlay": {
+      "bytes": 9625927680,
+      "sha256": "e386661b7ca9faf94188d8a9cb899e39faf9b54c8b85ad81639e18c993a17b1a",
+      "matrices": 1536
+    },
+    "returncode": 0,
+    "source_signatures": {
+      "model-00028-of-00048.safetensors": [
+        64513,
+        2911057,
+        7389761368,
+        1793486431963665138,
+        1793486431988665710
+      ],
+      "model-00029-of-00048.safetensors": [
+        64513,
+        2911056,
+        7389761368,
+        1793486707800982804,
+        1793486707822983308
+      ]
+    },
+    "codec_signature": [
+      64513,
+      2911069,
+      17360,
+      1793486483806947777,
+      1793486483806970851
+    ],
+    "pack_files": {
+      "ds4.txt": "75fa22995fd2a35d7b81a4ae9e015037a07d7295790b46c85f13ac426c085db7",
+      "engram.bin": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142",
+      "tensors.txt": "1527371944e32643e2d974ccd2f2364436c6b17aeef9bd0b93619ab1f8f89d26",
+      "tokenizer/chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "tokenizer/merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "tokenizer/token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "tokenizer/vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+    },
+    "finished_utc": "2026-10-31T23:11:10.102154+00:00"
+  },
+  "unsloth_offline_CPU": {
+    "metadata_reader": 7,
+    "pack_mapper": 18,
+    "constructor": 15,
+    "each_physical_host": true,
+    "source_input_ID_maps_exact": true,
+    "actual_model_or_pack_admission": false
+  },
+  "next_action": "Afterclosed6fileUnslothdownload: frozenconstructorqualification/currentowner/idle/assetstats, singleboundedmetadata-onlypackconstruction; thenadmittedcurrentMayaSqualityQTP2. NoGPUnowwhiledownloadrunning."
+}

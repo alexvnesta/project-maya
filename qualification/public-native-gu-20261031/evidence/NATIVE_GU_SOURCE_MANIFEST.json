@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-31T22:28:25.592973+00:00",
+  "repo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170",
+  "files": [
+    {
+      "path": "model-00028-of-00048.safetensors",
+      "size": 7389761368,
+      "sha256": "3c0e5ad6a4e8e811c1a55fd8f5b59c9fa329b241c671997c28fc7a01944d5a77"
+    },
+    {
+      "path": "model-00029-of-00048.safetensors",
+      "size": 7389761368,
+      "sha256": "392a950bcb062b89f683abc52d49a17e92c66f80cd1cb6fb92b71091da75319b"
+    }
+  ],
+  "total_bytes": 14779522736,
+  "purpose": "Two complete source shards for exact original MXFP4 gate/up L25,L26; independent S2-inspired public hybrid candidate",
+  "selected_layers": [
+    25,
+    26
+  ],
+  "selected_roles": [
+    "w1",
+    "w3"
+  ],
+  "experts_per_layer": 384,
+  "matrix_shape": [
+    2304,
+    5120
+  ],
+  "raw_weights_shape": [
+    2304,
+    2560
+  ],
+  "raw_scale_shape": [
+    2304,
+    160
+  ],
+  "output_matrix_bytes": 6266880,
+  "output_matrix_count": 1536,
+  "output_overlay_bytes": 9625927680,
+  "context_total": 1048576,
+  "output_allowance": 262144,
+  "drafter": "Unchanged published Maya-S DSpark",
+  "T16_overlay_included": false,
+  "exact_private_S2": false,
+  "model_or_GPU_run": false,
+  "index_sha256": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+  "HF_metadata_sha256": "974b541c0ac843794c749be79c90ed54b726f4dcfda50e8c4b8c0d7e625e114f"
+}

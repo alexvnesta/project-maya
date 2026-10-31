@@ -1,0 +1,34 @@
+{
+  "utc": "20261031T223605400219Z",
+  "pid": 609172,
+  "status": "BOTH_COMPLETE_OFFICIAL_SHARDS_SHA256_VERIFIED_NO_MODEL_RUN",
+  "files": [
+    {
+      "path": "model-00028-of-00048.safetensors",
+      "status": "DOWNLOADED_VERIFIED",
+      "bytes": 7389761368,
+      "sha256": "3c0e5ad6a4e8e811c1a55fd8f5b59c9fa329b241c671997c28fc7a01944d5a77"
+    },
+    {
+      "path": "model-00029-of-00048.safetensors",
+      "status": "DOWNLOADED_VERIFIED",
+      "bytes": 7389761368,
+      "sha256": "392a950bcb062b89f683abc52d49a17e92c66f80cd1cb6fb92b71091da75319b"
+    }
+  ],
+  "qualification_sha256": "0fc3cf5334aa779ca02085b520d7a3a096e8bc5925196f7f7e3680c9e70eb62a",
+  "manifest_sha256": "8fea071855665f114972f3b9581736af745fa4653e35043af275a71be88bff9a",
+  "budget": {
+    "free": 274234204160,
+    "required": 209605545889,
+    "own_remaining": 14779522736,
+    "other_remaining": 30312837361,
+    "future_overlay": 9625927680,
+    "floor": 154618822656
+  },
+  "model_service_GPU_actions": 0,
+  "rate": 67108864,
+  "wall": 21600,
+  "returncode": 0,
+  "updated_utc": "2026-10-31T22:45:07.823904+00:00"
+}

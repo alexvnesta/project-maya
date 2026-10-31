@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/run_construct_cpu.py",
+    "--review-sha256",
+    "4a6f4d1acd39a2266da050e2a33f135aebc17b6242ba35d0dd7713d87373fc46",
+    "--input-root",
+    "/Users/alex/strata-deepseek-qualification-20261024",
+    "--child",
+    "--parent",
+    "1489"
+  ],
+  "pid": 1527,
+  "returncode": 1,
+  "error": "ValueError('Child nonzero')",
+  "cleanup": [],
+  "elapsed_seconds": 1.443364750011824
+}

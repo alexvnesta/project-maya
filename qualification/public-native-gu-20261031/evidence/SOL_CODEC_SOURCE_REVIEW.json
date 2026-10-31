@@ -1,0 +1,46 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "SOURCE_ACCEPTED_FOR_FIRST_BOUNDED_CPU_COMPILE_AND_TEST",
+  "findings": [],
+  "sol_source_read": true,
+  "sol_entire_new_source_and_tests_read": true,
+  "scope": "Entire mxpack.cpp,test_mxpack.py,run_codec_cpu.py; upstream fp4_to_mxfp4/header format reference",
+  "source_sha256": {
+    "mxpack.cpp": "9cd219b7133b33fd73d299ed7c7be371f434ae60251b4678de19f620c750c4bb",
+    "test_mxpack.py": "3dccc8c37f65b9fdf4b395c1fa9389fe38936a217ee085c45a420111980d531f",
+    "run_codec_cpu.py": "22119607996213e1a0e834c3f0baad287298180ed774aaf294f8d922963da7d8"
+  },
+  "input_sha256": {
+    "upstream-lossless-format-reference": "bd32b017403fad3b4e4377395c61f007999c6dea7db059c9d22953a42def0d44",
+    "CPU-supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "test_ids": [
+    "test_mxpack.Codec.test_all_nibble_values_and_scale_bytes",
+    "test_mxpack.Codec.test_every_logical_value_matches_original_fp4_e8m0",
+    "test_mxpack.Codec.test_full_original_gate_up_geometry_and_bytes",
+    "test_mxpack.Codec.test_invalid_or_oversized_geometry_before_allocation",
+    "test_mxpack.Codec.test_nan_scale_refused_before_any_output",
+    "test_mxpack.Codec.test_rows_and_block_order_with_independent_oracle",
+    "test_mxpack.Codec.test_truncation_and_extra_input_never_emit"
+  ],
+  "test_count": 7,
+  "checked_contracts": [
+    "Unsigned decimal parse and bounded rows1..2304,k32..5120 divisible32 before allocation",
+    "Complete weight plane then complete scale plane,exact length and E8M0NaN255 refused before stdout",
+    "Adjacent FP4 code j maps to low nibble j%16 or high nibble j-16; exact scale byte retained; no float/requantization in codec",
+    "Maximum368640blocks,6266880outputbytes; allocation/index arithmetic bounded",
+    "Independent logical adjacent-nibble oracle,all code/scale byte cases,logical numeric factor consistency,full2304x5120 geometry and malformed input tests",
+    "Compilation and converter tests occur only inside existing CPU30/AS512/nice15/CUDAhidden owned group/wall90 supervisor",
+    "Exact source/input/manual review and discovered test IDs checked; compiler argv/version/hash and converter artifact hash recorded;fresh output namespaces"
+  ],
+  "tests_or_compilers_executed_by_reviewer": false,
+  "project_imports_executed_by_reviewer": false,
+  "source_edits_performed": false,
+  "host_or_network_actions_performed": false,
+  "runtime_or_weights_admission": false,
+  "limitations": [
+    "Source acceptance only; FIRST actual compiler/CPU observations remain unrun.",
+    "Byte-layout losslessness does not establish checkpoint tensor selection,overlay integration,model quality or performance.",
+    "The receipt native_executed:false is interpreted as no native model engine; the authorized CPU proof intentionally compiles/executes this small converter."
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "utc": "2026-10-31T23:03:44.003244+00:00",
+  "status": "FROZEN_FOR_FUTURE_FORMAL_COMPARISONS_NOT_RETROACTIVE_ADMISSION",
+  "already_observed_exploratory_only": {
+    "Maya145_MayaS_TP2_prose_tps": 62.39886262536619,
+    "Maya145_MayaS_TP1_prose_tps": 56.51795768343878,
+    "different_generated_lengths": true,
+    "not_fresh_confirmation_or_deployment": true
+  },
+  "candidates": [
+    "CurrentMaya145/MayaS TP1 versusTP2 after broaderknown-answer gates",
+    "PublicL25/26 originalMXFP4gu+MayaSotherweights, bestqualifiedtopology",
+    "WholeUnslothUD-IQ2_XXS withsamequalifieddrafter/vision/runtimepolicy"
+  ],
+  "selected_baseline": "Actualproductionnative92/configc43/chunk4096 pluscurrentexactbinding; freshmatchedtiming needed before replacement",
+  "fixed_policy": {
+    "context_total": 1048576,
+    "output_allowance": 262144,
+    "benchmark_max_tokens": 32768,
+    "effort": 100,
+    "temperature": 1,
+    "top_p": 1,
+    "seed": 1,
+    "Q8_check": [
+      1,
+      1
+    ],
+    "mode": 1,
+    "prefill_chunk": 4096,
+    "CPU_threads": 24,
+    "CPU_experts": "allRAM",
+    "stream": 0,
+    "DSpark_confidence": 0.65,
+    "DSpark_max": 4,
+    "projection": "sameL22scale1direction/all40main;drafterunchanged",
+    "native_images": true,
+    "no_expert_deferral_or_pruning": true
+  },
+  "families": [
+    "originalprose",
+    "originalcoding"
+  ],
+  "formal_comparison_order": [
+    "A1",
+    "B1",
+    "B2",
+    "A2"
+  ],
+  "initial_pair_before_separate_reversed_confirmation": true,
+  "first_pair_screen": {
+    "minimum_native_generated_over_decode_ms_gain_percent": 5,
+    "maximum_cold_known_fixture_native_prefill_regression_percent": 3,
+    "all_quality_lifecycle_resource_gates": true,
+    "fully_read_generated_answer_code_and_all_supplied_tests_before_CPU": true,
+    "independent_code_checks_both_physical_hosts": true
+  },
+  "output_length_policy": "Retainallreasoning/finaltokens,lengths,nativeandclientcounters. Differentlengths forbidoveralltask-speed/causalclaims; judgefrozenrateplusknownanswers/lifecycle withoutfitting,truncatingoroutputchange. No automaticadvance on ambiguousdrift.",
+  "replication": "Eachmatchedorder mustpass; scorepartial/wrong/cap/UNRUN asblocking. Separatereviewedexisting-owneractivation onlyafterreproducibleimprovement againstactualselectedbaseline.",
+  "memory_and_bounds": {
+    "private_MemoryMax": 85899345920,
+    "hostmargin": 8589934592,
+    "root_admission": 141733920768,
+    "root_runtime": 128849018880,
+    "swap_out_delta_max": 1073741824,
+    "window": 1200,
+    "soft": 1000,
+    "cleanup": 200,
+    "startup": 800,
+    "private_cache_max": 8589934592,
+    "private_log_max": 4294967296
+  },
+  "broader_gates": [
+    "finitecompleteactualstateandtypedknownanswers;noequivalenceclaimbetweenquants",
+    "cold/warmidenticalprefixreuse",
+    "twoimagesandreturntotext",
+    "typedtoolcall/followup",
+    "actualprefillcancelbeforefirstoutput/nativegen0andindependentrecovery",
+    "native/privateAPI/windowexit0/rawoldownerclosure",
+    "kernel/resources/exactselectedidentity/soleGPUowner/public401/authmodels200/assembledREADY-stop-DONE"
+  ],
+  "no_retries_replays_or_regrades": true,
+  "exact_private_S2": false,
+  "near_filled1M_or_actual256K_generation_proven": false,
+  "promotion_authorization": "Userauthorizesverifiedbestdeployment; thiscriteriafilealoneisnotactivationadmission"
+}

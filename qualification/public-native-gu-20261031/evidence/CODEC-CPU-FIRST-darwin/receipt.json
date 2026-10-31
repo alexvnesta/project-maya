@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "controls": 7,
+  "test_ids": [
+    "test_mxpack.Codec.test_all_nibble_values_and_scale_bytes",
+    "test_mxpack.Codec.test_every_logical_value_matches_original_fp4_e8m0",
+    "test_mxpack.Codec.test_full_original_gate_up_geometry_and_bytes",
+    "test_mxpack.Codec.test_invalid_or_oversized_geometry_before_allocation",
+    "test_mxpack.Codec.test_nan_scale_refused_before_any_output",
+    "test_mxpack.Codec.test_rows_and_block_order_with_independent_oracle",
+    "test_mxpack.Codec.test_truncation_and_extra_input_never_emit"
+  ],
+  "source_sha256": {
+    "mxpack.cpp": "9cd219b7133b33fd73d299ed7c7be371f434ae60251b4678de19f620c750c4bb",
+    "test_mxpack.py": "3dccc8c37f65b9fdf4b395c1fa9389fe38936a217ee085c45a420111980d531f",
+    "run_codec_cpu.py": "22a34afa978fb4b9507e11872390fae783a4e5a569a87f464c24499a4130fc90"
+  },
+  "input_sha256": {
+    "upstream-lossless-format-reference": "bd32b017403fad3b4e4377395c61f007999c6dea7db059c9d22953a42def0d44",
+    "CPU-supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "observed": {
+    "pid": 46640,
+    "ppid": 46639,
+    "pgid": 46640,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "inference_native_executed": false,
+  "CPU_converter_executed": true,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false,
+  "converter": {
+    "compiler": "/usr/bin/c++",
+    "compiler_sha256": "179301dcb41ea78accc3fa0048a7e6f6710d891945a751a34addd622020c1818",
+    "compiler_version": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.5.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+    "argv": [
+      "/usr/bin/c++",
+      "-std=c++17",
+      "-O2",
+      "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/mxpack.cpp",
+      "-o",
+      "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/CODEC-CPU-FIRST-darwin/mxpack"
+    ],
+    "returncode": 0,
+    "executable": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/CODEC-CPU-FIRST-darwin/mxpack",
+    "sha256": "549a67f48f5b5de317a20963086ea15c551ddb46ad8b4a0266e2c71270a61b2d",
+    "source_sha256": "9cd219b7133b33fd73d299ed7c7be371f434ae60251b4678de19f620c750c4bb"
+  }
+}

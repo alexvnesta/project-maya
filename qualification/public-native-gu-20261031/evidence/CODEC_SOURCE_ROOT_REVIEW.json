@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-31T22:41:12.760438+00:00",
+  "root_source_read": true,
+  "sol_source_read": true,
+  "source_sha256": {
+    "mxpack.cpp": "9cd219b7133b33fd73d299ed7c7be371f434ae60251b4678de19f620c750c4bb",
+    "test_mxpack.py": "3dccc8c37f65b9fdf4b395c1fa9389fe38936a217ee085c45a420111980d531f",
+    "run_codec_cpu.py": "22a34afa978fb4b9507e11872390fae783a4e5a569a87f464c24499a4130fc90"
+  },
+  "input_sha256": {
+    "upstream-lossless-format-reference": "bd32b017403fad3b4e4377395c61f007999c6dea7db059c9d22953a42def0d44",
+    "CPU-supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "sol_review_sha256": "6c7e78e72db6c00c405ab761ebbb6e333985608734abdc76e7c5f69696b6503e",
+  "sol_label_diff_sha256": "bc0d6b4a2fa9f7ba11eda4fe840aae0065f30a02fae6a7b3b9a994fce9b69e33",
+  "scope": "Entire pure byte converter, independent logical-value/fullgeometry suppliedtests and bounded compiler/test driver read before first execution; no model/GPU/weights processing.",
+  "test_ids": [
+    "test_mxpack.Codec.test_all_nibble_values_and_scale_bytes",
+    "test_mxpack.Codec.test_every_logical_value_matches_original_fp4_e8m0",
+    "test_mxpack.Codec.test_full_original_gate_up_geometry_and_bytes",
+    "test_mxpack.Codec.test_invalid_or_oversized_geometry_before_allocation",
+    "test_mxpack.Codec.test_nan_scale_refused_before_any_output",
+    "test_mxpack.Codec.test_rows_and_block_order_with_independent_oracle",
+    "test_mxpack.Codec.test_truncation_and_extra_input_never_emit"
+  ]
+}

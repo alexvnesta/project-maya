@@ -1,0 +1,32 @@
+test_foreign_pause_or_insufficient_budget_refused (test_acquire_native.Gate.test_foreign_pause_or_insufficient_budget_refused) ... ok
+test_owned_pause_defers (test_acquire_native.Gate.test_owned_pause_defers) ... ok
+test_selected_rechecked_and_no_assets_created_by_guard (test_acquire_native.Gate.test_selected_rechecked_and_no_assets_created_by_guard) ... ok
+test_concurrent_other_link_publish_counted_once (test_acquire_native.Inventory.test_concurrent_other_link_publish_counted_once) ... ok
+test_foreign_or_oversized_leaf_refused (test_acquire_native.Inventory.test_foreign_or_oversized_leaf_refused) ... ok
+test_missing_and_partial_and_final (test_acquire_native.Inventory.test_missing_and_partial_and_final) ... ok
+test_other_ambiguous_or_parent_alias_refused (test_acquire_native.Inventory.test_other_ambiguous_or_parent_alias_refused) ... ok
+test_own_alias_and_ambiguous_publish_refused (test_acquire_native.Inventory.test_own_alias_and_ambiguous_publish_refused) ... ok
+test_changed_binding_or_namespace_before_lock_mutation (test_acquire_native.Main.test_changed_binding_or_namespace_before_lock_mutation) ... ok
+test_fault_stops_before_second_file (test_acquire_native.Main.test_fault_stops_before_second_file) ... ok
+test_lock_alias_refused (test_acquire_native.Main.test_lock_alias_refused) ... ok
+test_nonphysical_namespace_before_lock_mutation (test_acquire_native.Main.test_nonphysical_namespace_before_lock_mutation) ... ok
+test_two_source_files_complete_no_model_action (test_acquire_native.Main.test_two_source_files_complete_no_model_action) ... ok
+test_changed_manifest_or_transport_refused_before_import (test_acquire_native.Pure.test_changed_manifest_or_transport_refused_before_import) ... ok
+test_completed_downloads_still_reserve_future_overlay (test_acquire_native.Pure.test_completed_downloads_still_reserve_future_overlay) ... ok
+test_exact_two_source_shards_and_scope (test_acquire_native.Pure.test_exact_two_source_shards_and_scope) ... ok
+test_explicit_qualification_pin_before_parse (test_acquire_native.Pure.test_explicit_qualification_pin_before_parse) ... ok
+test_floor_both_downloads_and_overlay_reserved (test_acquire_native.Pure.test_floor_both_downloads_and_overlay_reserved) ... ok
+test_progress_preserves_combined_headroom (test_acquire_native.Pure.test_progress_preserves_combined_headroom) ... ok
+test_typed_counters_refuse_bool_negative_and_overflow (test_acquire_native.Pure.test_typed_counters_refuse_bool_negative_and_overflow) ... ok
+test_executing_source_input_and_raw_log_cannot_be_omitted (test_acquire_native.Qualification.test_executing_source_input_and_raw_log_cannot_be_omitted) ... ok
+test_failed_or_unbounded_child_refused (test_acquire_native.Qualification.test_failed_or_unbounded_child_refused) ... ok
+test_false_manual_review_or_empty_ids_refused (test_acquire_native.Qualification.test_false_manual_review_or_empty_ids_refused) ... ok
+test_source_exact_matching_cpu_positive (test_acquire_native.Qualification.test_source_exact_matching_cpu_positive) ... ok
+test_complete_official_url_exact_bytes_hash_and_publication (test_acquire_native.Transfer.test_complete_official_url_exact_bytes_hash_and_publication) ... ok
+test_corrupt_bytes_not_published (test_acquire_native.Transfer.test_corrupt_bytes_not_published) ... ok
+test_transport_fault_no_automatic_retry (test_acquire_native.Transfer.test_transport_fault_no_automatic_retry) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.071s
+
+OK

@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "controls": 11,
+  "test_ids": [
+    "test_hybrid_plan_r2.Pack.test_actual_rank1_vectors_are_present_and_byte_preserved",
+    "test_hybrid_plan_r2.Pack.test_foreign_overlay_and_duplicate_original_files_refused",
+    "test_hybrid_plan_r2.Pack.test_missing_duplicate_or_different_original_role_refused",
+    "test_hybrid_plan_r2.Pack.test_only_declared_role_rows_and_file_addresses_change",
+    "test_hybrid_plan_r2.Pack.test_unknown_target_or_output_overlap_refused",
+    "test_hybrid_plan_r2.SourcePlan.test_actual_complete_role_coverage_and_source_ranges",
+    "test_hybrid_plan_r2.SourcePlan.test_duplicate_nonfinite_or_unbounded_header_refused",
+    "test_hybrid_plan_r2.SourcePlan.test_missing_or_different_shard_mapping_refused",
+    "test_hybrid_plan_r2.SourcePlan.test_overlapping_source_planes_refused",
+    "test_hybrid_plan_r2.SourcePlan.test_short_negative_and_outside_file_ranges_refused",
+    "test_hybrid_plan_r2.SourcePlan.test_wrong_native_dtype_shape_or_boolean_dimension_refused"
+  ],
+  "source_sha256": {
+    "hybrid_plan_r2.py": "86bdd5bdcb4563d9b67a1b2c1981e7e326614ec1cdb714fcd3965a3b8091939c",
+    "test_hybrid_plan_r2.py": "ac1b577cc9fc3c6abc81b7160105e1fae6cb365b9789edf663c945e16948274e",
+    "run_plan_cpu_r2.py": "ed11153f3419543ce6e6728a545c54b0121b4aed97fb118b9f8143c135e62837"
+  },
+  "input_sha256": {
+    "manifest": "8fea071855665f114972f3b9581736af745fa4653e35043af275a71be88bff9a",
+    "index": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+    "header28": "6dffc2e311e17c5538f2dd92dd3fc8ba7685e3ea67af066603b815e1b722c668",
+    "header29": "611e9ea2b143014df6037e285a3e1a865676e0954091dcbf95b3f57ec825336b",
+    "ds4": "a075c437417cf74926702badea9737eeb19d2ebc8d9a0ce1fcecc383bc98e709",
+    "tensors": "ed50bff5a053206f7b26396e0a3226d3a59848e39edc6c2eea91d5865f1b6d88",
+    "CPU-supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "observed": {
+    "pid": 624427,
+    "ppid": 624426,
+    "pgid": 624427,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "native_executed": false,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false
+}

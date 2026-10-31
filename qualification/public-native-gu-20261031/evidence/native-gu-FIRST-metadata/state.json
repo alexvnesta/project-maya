@@ -1,0 +1,48 @@
+{
+  "status": "PUBLIC_NATIVE_GU_PACK_CONSTRUCTED_NOT_MODEL_QUALIFIED",
+  "pid": 629745,
+  "qualification_sha256": "799541403a7f6de55a6d60636d3a0ccf4c28546b083ee9fc445f992b3af8fb99",
+  "exact_private_S2": false,
+  "model_GPU_service_actions": 0,
+  "started_utc": "2026-10-31T23:00:19.347981+00:00",
+  "overlay": {
+    "bytes": 9625927680,
+    "sha256": "e386661b7ca9faf94188d8a9cb899e39faf9b54c8b85ad81639e18c993a17b1a",
+    "matrices": 1536
+  },
+  "returncode": 0,
+  "source_signatures": {
+    "model-00028-of-00048.safetensors": [
+      64513,
+      2911057,
+      7389761368,
+      1793486431963665138,
+      1793486431988665710
+    ],
+    "model-00029-of-00048.safetensors": [
+      64513,
+      2911056,
+      7389761368,
+      1793486707800982804,
+      1793486707822983308
+    ]
+  },
+  "codec_signature": [
+    64513,
+    2911069,
+    17360,
+    1793486483806947777,
+    1793486483806970851
+  ],
+  "pack_files": {
+    "ds4.txt": "75fa22995fd2a35d7b81a4ae9e015037a07d7295790b46c85f13ac426c085db7",
+    "engram.bin": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142",
+    "tensors.txt": "1527371944e32643e2d974ccd2f2364436c6b17aeef9bd0b93619ab1f8f89d26",
+    "tokenizer/chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+    "tokenizer/merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+    "tokenizer/token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+    "tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "tokenizer/vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+  },
+  "finished_utc": "2026-10-31T23:11:10.102154+00:00"
+}

@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "controls": 27,
+  "test_ids": [
+    "test_acquire_native.Gate.test_foreign_pause_or_insufficient_budget_refused",
+    "test_acquire_native.Gate.test_owned_pause_defers",
+    "test_acquire_native.Gate.test_selected_rechecked_and_no_assets_created_by_guard",
+    "test_acquire_native.Inventory.test_concurrent_other_link_publish_counted_once",
+    "test_acquire_native.Inventory.test_foreign_or_oversized_leaf_refused",
+    "test_acquire_native.Inventory.test_missing_and_partial_and_final",
+    "test_acquire_native.Inventory.test_other_ambiguous_or_parent_alias_refused",
+    "test_acquire_native.Inventory.test_own_alias_and_ambiguous_publish_refused",
+    "test_acquire_native.Main.test_changed_binding_or_namespace_before_lock_mutation",
+    "test_acquire_native.Main.test_fault_stops_before_second_file",
+    "test_acquire_native.Main.test_lock_alias_refused",
+    "test_acquire_native.Main.test_nonphysical_namespace_before_lock_mutation",
+    "test_acquire_native.Main.test_two_source_files_complete_no_model_action",
+    "test_acquire_native.Pure.test_changed_manifest_or_transport_refused_before_import",
+    "test_acquire_native.Pure.test_completed_downloads_still_reserve_future_overlay",
+    "test_acquire_native.Pure.test_exact_two_source_shards_and_scope",
+    "test_acquire_native.Pure.test_explicit_qualification_pin_before_parse",
+    "test_acquire_native.Pure.test_floor_both_downloads_and_overlay_reserved",
+    "test_acquire_native.Pure.test_progress_preserves_combined_headroom",
+    "test_acquire_native.Pure.test_typed_counters_refuse_bool_negative_and_overflow",
+    "test_acquire_native.Qualification.test_executing_source_input_and_raw_log_cannot_be_omitted",
+    "test_acquire_native.Qualification.test_failed_or_unbounded_child_refused",
+    "test_acquire_native.Qualification.test_false_manual_review_or_empty_ids_refused",
+    "test_acquire_native.Qualification.test_source_exact_matching_cpu_positive",
+    "test_acquire_native.Transfer.test_complete_official_url_exact_bytes_hash_and_publication",
+    "test_acquire_native.Transfer.test_corrupt_bytes_not_published",
+    "test_acquire_native.Transfer.test_transport_fault_no_automatic_retry"
+  ],
+  "source_sha256": {
+    "acquire_native.py": "3d4a773c726cc32d945b95cdfe28a531412ba616a9c698f73fb096d2b5ef9647",
+    "test_acquire_native.py": "fca267b69caef3bd0e5bccb626cdc7100db32640f7f4ebc09bade39f62e590a5",
+    "run_acquire_cpu.py": "bef37565939e7050cf440fcfa83276128645c3e7cc524277e143c7bf248526c2"
+  },
+  "input_sha256": {
+    "manifest": "8fea071855665f114972f3b9581736af745fa4653e35043af275a71be88bff9a",
+    "transport": "6a399f4eec7b9cb23b7ff7aa03d60deb490787825ae92e43ccde8d40065885b5",
+    "transport-qualification": "3f89fe089d629bb65b5c517908ae76a731b9020fb0a8cb02a1b1ef58472596b0",
+    "other-manifest": "4fb4c0ff9c0b55f46afa15c2cbc84ee09372c85944efafb63e36a5ca6e73c73c",
+    "selected-runtime": "1516752104307ffc159fbb80afd972ccd43c5cb9a96cf3e47de126f62482d510",
+    "selected-config": "aa8d222d5f9d5885ee87993b0418f471f4fe44f4f79bfdfffc859f1c4fee88d7",
+    "CPU-supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "observed": {
+    "pid": 10241,
+    "ppid": 10239,
+    "pgid": 10241,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "native_executed": false,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false
+}

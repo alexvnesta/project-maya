@@ -1,0 +1,59 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "SOURCE_HOLD_LIFECYCLE_FINDING",
+  "sol_entire_new_source_and_tests_read": true,
+  "source_sha256": {
+    "construct_native.py": "59528c7d93213e97c17f1aa75669d60d53a137ab70b01ec7942db9fd38061c99",
+    "test_construct_native.py": "f7728e3e813aa9da1490d432d7d1b83b617acd0440835a7c3f30d15f68ecd2e0",
+    "run_construct_cpu.py": "5d220a8ff16d230ffaad38d32ec8a3441a944da2ac71132ca637e1c737ed14b3"
+  },
+  "test_ids": [
+    "test_construct_native.Codec.test_actual_cpu_child_bounds_environment_and_exact_pipe_bytes",
+    "test_construct_native.Codec.test_actual_nonzero_stderr_short_and_long_output_fail",
+    "test_construct_native.Codec.test_invalid_payload_and_shape_refuse_before_spawn",
+    "test_construct_native.Codec.test_timeout_cleans_only_fresh_owned_group",
+    "test_construct_native.Construction.test_actual_source_and_codec_drift_signatures_detectable",
+    "test_construct_native.Construction.test_complete_order_byte_custody_and_independent_readback",
+    "test_construct_native.Construction.test_existing_partial_never_overwritten",
+    "test_construct_native.Construction.test_incomplete_plan_never_publishes",
+    "test_construct_native.Construction.test_overlap_refuses_before_second_codec_and_preserves_first",
+    "test_construct_native.Construction.test_pause_or_deadline_stops_before_read_or_codec",
+    "test_construct_native.Construction.test_wrong_codec_status_bytes_or_hash_retains_partial_and_stops",
+    "test_construct_native.Files.test_exact_range_and_truncation_bounds",
+    "test_construct_native.Files.test_exclusive_publish_retains_collision_partial",
+    "test_construct_native.Files.test_hash_stream_reads_all_bytes_and_paces",
+    "test_construct_native.Files.test_publish_new_final_exact_bytes_and_nlink1",
+    "test_construct_native.Files.test_publish_refuses_empty_alias_or_foreign_parent",
+    "test_construct_native.Files.test_regular_open_identity_and_signature",
+    "test_construct_native.Files.test_symlink_hardlink_directory_refused",
+    "test_construct_native.Qualification.test_both_actual_platform_resource_contracts_accepted",
+    "test_construct_native.Qualification.test_failed_or_unclean_cpu_child_refused",
+    "test_construct_native.Qualification.test_unbounded_or_foreign_child_refused",
+    "test_construct_native.Qualification.test_wrong_partial_or_source_cpu_proof_refused"
+  ],
+  "test_count": 22,
+  "findings": [
+    {
+      "priority": 1,
+      "file": "construct_native.py",
+      "lines": [
+        87,
+        88
+      ],
+      "title": "Codec group can outlive outer FIRST CPU timeout",
+      "detail": "Each codec starts a separate session/process group and communicate waits85seconds. The pinned outer CPU supervisor also times out at85seconds and cleans only its Python child group. If the outer limit expires before convert finally runs, the separate codec group escapes outer cleanup;CPU30does not bound a sleeping/stalled child wall time. This can occur even with a shorter per-convert timeout when conversion starts late in the suite. Current timeout test mocks Popen and cannot verify this outer-timeout closure.",
+      "recommendation": "For bounded CPU controls keep spawned codec children in the outer owned group,or explicitly register and close their groups from the outer supervisor. Preserve production ownership cleanup separately. Add a real short outer-timeout regression proving the spawned converter is gone."
+    }
+  ],
+  "other_source_observations": [
+    "Source hashes,exact header comparison,full source rehash,per-matrix input/output hashes,contiguous output/readback and exclusive link/unlink publication are coherent by inspection.",
+    "Original partial/final evidence is retained on constructor failures;existing output directory refuses replay.",
+    "No model,GPU,service or inference-engine actions found in new builder."
+  ],
+  "tests_executed": false,
+  "project_imports_executed": false,
+  "source_edits_performed": false,
+  "host_or_network_actions_performed": false,
+  "acceptance": false,
+  "limitations": "Whole new source/tests/driver read;no CPU or weights action qualified. Full input hash map deferred because source remains HOLD on concrete lifecycle finding."
+}

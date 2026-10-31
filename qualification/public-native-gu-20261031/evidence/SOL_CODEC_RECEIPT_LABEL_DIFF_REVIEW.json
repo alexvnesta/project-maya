@@ -1,0 +1,18 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "EXACT_RECEIPT_LABEL_DELTA_ACCEPTED",
+  "findings": [],
+  "scope": "Single receipt-label replacement only; reconstructing previous labels exactly reproduces prior reviewed driver SHA256",
+  "current_driver_sha256": "22a34afa978fb4b9507e11872390fae783a4e5a569a87f464c24499a4130fc90",
+  "prior_driver_sha256": "22119607996213e1a0e834c3f0baad287298180ed774aaf294f8d922963da7d8",
+  "prior_source_review_sha256": "6c7e78e72db6c00c405ab761ebbb6e333985608734abdc76e7c5f69696b6503e",
+  "current_labels": {
+    "inference_native_executed": false,
+    "CPU_converter_executed": true,
+    "device_executed": false
+  },
+  "algorithm_changed": false,
+  "tests_executed": false,
+  "project_imports_executed": false,
+  "host_actions_performed": false
+}

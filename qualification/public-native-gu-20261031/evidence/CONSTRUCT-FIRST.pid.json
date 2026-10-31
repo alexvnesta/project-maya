@@ -1,0 +1,17 @@
+{
+  "pid": 629745,
+  "start_ticks": 175588624,
+  "argv": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-I",
+    "-B",
+    "-c",
+    "import sys;sys.path.insert(0,'/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1');import construct_native_r2 as c;raise SystemExit(c.main('799541403a7f6de55a6d60636d3a0ccf4c28546b083ee9fc445f992b3af8fb99'))"
+  ],
+  "qualification_sha256": "799541403a7f6de55a6d60636d3a0ccf4c28546b083ee9fc445f992b3af8fb99",
+  "outer_group": 629745,
+  "io_parent_AS": 536870912,
+  "io_parent_nice": 15,
+  "io_parent_CPU30": false,
+  "reason": "Qualified longIOworker6h; eachCPUcodecchildCPU30/wall90; no inference"
+}

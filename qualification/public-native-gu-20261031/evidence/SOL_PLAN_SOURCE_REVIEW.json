@@ -1,0 +1,56 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "SOURCE_ACCEPTED_FOR_FIRST_BOUNDED_CPU",
+  "findings": [],
+  "root_source_read": false,
+  "sol_source_read": true,
+  "sol_entire_new_source_and_tests_read": true,
+  "scope": "Entire hybrid_plan.py,test_hybrid_plan.py,run_plan_cpu.py and relevant frozen index/header/basepack metadata; no weight conversion or model execution",
+  "source_sha256": {
+    "hybrid_plan.py": "f6e53a806558e71244cc21c3cbdb0e6689bb1691313f2154011d759bb7aab5a7",
+    "test_hybrid_plan.py": "97d5fedde9f787965b1b7b0436342948992f5143cec444714674ca5f96071275",
+    "run_plan_cpu.py": "ae31a67f85a2d99848404deef8c59bfbe279277d27b22835d3e492731e2979f2"
+  },
+  "input_sha256": {
+    "manifest": "8fea071855665f114972f3b9581736af745fa4653e35043af275a71be88bff9a",
+    "index": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+    "header28": "6dffc2e311e17c5538f2dd92dd3fc8ba7685e3ea67af066603b815e1b722c668",
+    "header29": "611e9ea2b143014df6037e285a3e1a865676e0954091dcbf95b3f57ec825336b",
+    "ds4": "a075c437417cf74926702badea9737eeb19d2ebc8d9a0ce1fcecc383bc98e709",
+    "tensors": "ed50bff5a053206f7b26396e0a3226d3a59848e39edc6c2eea91d5865f1b6d88",
+    "CPU-supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "test_ids": [
+    "test_hybrid_plan.Pack.test_foreign_overlay_and_duplicate_original_files_refused",
+    "test_hybrid_plan.Pack.test_missing_duplicate_or_different_original_role_refused",
+    "test_hybrid_plan.Pack.test_only_declared_role_rows_and_file_addresses_change",
+    "test_hybrid_plan.Pack.test_unknown_target_or_output_overlap_refused",
+    "test_hybrid_plan.SourcePlan.test_actual_complete_role_coverage_and_source_ranges",
+    "test_hybrid_plan.SourcePlan.test_duplicate_nonfinite_or_unbounded_header_refused",
+    "test_hybrid_plan.SourcePlan.test_missing_or_different_shard_mapping_refused",
+    "test_hybrid_plan.SourcePlan.test_overlapping_source_planes_refused",
+    "test_hybrid_plan.SourcePlan.test_short_negative_and_outside_file_ranges_refused",
+    "test_hybrid_plan.SourcePlan.test_wrong_native_dtype_shape_or_boolean_dimension_refused"
+  ],
+  "test_count": 10,
+  "checked_contracts": [
+    "Selected source planes require exactI8/F8_E8M0 geometry,typed nonnegative offsets,exact byte spans,file bounds and selected-plane disjointness",
+    "Actual frozen raw header lengths260472 plus8 and final data end exactly match each7389761368byte shard;index SHA matches manifest",
+    "Exactly1536L25/L26,w1/w3,384expert matrices with contiguous6266880byte output spans totaling9625927680",
+    "Original eight file addresses preserved by lexical rebasing;all non-target tensor rows and all geometry except model_dir preserved",
+    "Targets require originalIQ2_XXS2304x5120/3041280byte rows;overlay remains within new model root and usesfile8",
+    "Tests use actual frozen metadata plus meaningful missing/mismapped/overlap/type/range/duplicate/header/target/output/overlay negatives and complete unchanged-row/address assertions",
+    "CPU driver source/input and review custody checked before imports;actual discovered IDs,resource observations and sources rechecked;fresh bounded child namespace"
+  ],
+  "tests_executed": false,
+  "project_imports_executed": false,
+  "source_edits_performed": false,
+  "host_or_network_actions_performed": false,
+  "weights_or_runtime_admission": false,
+  "limitations": [
+    "Pure planning source acceptance only; FIRST actual bounded CPU controls remain unrun.",
+    "Range provenance relies on frozen raw headers/index and later acquired shard hashes; this source review does not read acquired weight bytes or prove output codec/overlay integration.",
+    "Lexical unchanged file-address semantics assume the qualified physical pack namespace,not arbitrary symlinked model directories.",
+    "Root review flag is deliberately false here because this is the Sol reviewer receipt,not a claim of root review."
+  ]
+}
