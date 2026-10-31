@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "error": null,
+  "error_notes": [],
+  "own_claim_released": true,
+  "owned_groups_absence": {
+    "passed": true,
+    "pending_spawn": null,
+    "cleanup_faults": [],
+    "children": [
+      {
+        "name": "scan-0",
+        "pid": 4151335,
+        "pgid": 4151335,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "scan-1",
+        "pid": 4151362,
+        "pgid": 4151362,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "scan-2",
+        "pid": 4151384,
+        "pgid": 4151384,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "scan-3",
+        "pid": 4151605,
+        "pgid": 4151605,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "assemble",
+        "pid": 4151649,
+        "pgid": 4151649,
+        "returncode": 0,
+        "group_absent": true
+      }
+    ]
+  },
+  "production_changed": false,
+  "GPU_lease_mutated": false,
+  "elapsed_seconds": 29.149178803898394
+}

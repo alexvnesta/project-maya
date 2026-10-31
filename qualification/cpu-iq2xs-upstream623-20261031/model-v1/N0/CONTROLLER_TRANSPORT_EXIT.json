@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-10-31T10:08:12.793662+00:00",
+  "controller_pid": 4139863,
+  "controller_start_ticks": 170775054,
+  "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+  "arm": "N0",
+  "transport": "DirectforegroundSSH. Remoteguardprocessusedos.execvintocanonicalcontroller; no interveningstatus-swallowingwrapper.",
+  "tool_session_id": 87914,
+  "tool_observation_source": "functions.exec tools.write_stdin result reportedactualexit_code0 whenforegroundsessionclosed; copiedfromtheactualtoolreturn, notinferredfromcontrollerJSONstatus.",
+  "actual_tool_return": {
+    "chunk_id": "92cbd8",
+    "exit_code": 0,
+    "output": "",
+    "original_token_count": 0,
+    "wall_time_seconds": 1e-05
+  },
+  "raw_controller_stdout_sha256": "1945ea8bcd0d7cc038da623d4e755613ac2fbb9d37de58e3587b755e1222e5a6",
+  "raw_controller_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "independent_native_API_window_exit_sources": "Separate raw private-api-exit/server-cleanup/native-close/window files inthisarm, verifiedbyfirstterminalaudit.",
+  "limitation": "ThisisRoot-preservedtooltransportobservation; notanadditionalOS-exitfilewrittenbythecontroller. No runwasrepeated."
+}

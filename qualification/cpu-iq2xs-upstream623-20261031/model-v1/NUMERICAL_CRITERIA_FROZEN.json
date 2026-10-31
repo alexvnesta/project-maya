@@ -1,0 +1,76 @@
+{
+  "status": "SOURCE_ONLY_NEW_MODEL_NUMERICAL_PROTOCOL_NOT_LAUNCH_ADMISSION",
+  "arms": [
+    "N0",
+    "N1"
+  ],
+  "factor": "Selected92 versus compiledCAB CPU IQ2_XS-only native; same model/expert pack/drafter andquality/capacitypolicy",
+  "total_context": 1048576,
+  "output_allowance": 262144,
+  "benchmark_max_tokens": 32768,
+  "effort": 100,
+  "native_images": true,
+  "Q8_check": [
+    1,
+    1
+  ],
+  "YOCO": 1,
+  "prompt_skip": 1,
+  "prefill_chunk": 4096,
+  "TP": 1,
+  "automatic_allowed_cuts": {
+    "N0": [
+      19
+    ],
+    "N1": [
+      19
+    ]
+  },
+  "cpu_threads": 24,
+  "all_CPU_experts_RAM": true,
+  "stream": 0,
+  "window": {
+    "wall_seconds": 1200,
+    "soft_seconds": 1000,
+    "cleanup_seconds": 200,
+    "startup_seconds": 800
+  },
+  "private_memory_bytes": 85899345920,
+  "swap_max_bytes": 0,
+  "poststop_available_required_bytes": 94489280512,
+  "root_admission_bytes": 141733920768,
+  "root_runtime_bytes": 128849018880,
+  "swapout_delta_limit_bytes": 1073741824,
+  "private_cache_bytes": 8589934592,
+  "log_bytes": 4294967296,
+  "fixture_sha256": "976b0cf51e3cfc2950774714fb1a5fb075f08e7d8619b028b6d9b1b0f67ffe67",
+  "comparison": "Exact emitted token IDs, complete finite full dumpbytes SHA/rows/bytes and native prompt/generated/reuse/draft state; exact architectural placement counts. No tolerances/row realignment/retry/regrade.",
+  "actual_private_API_wait0_required": true,
+  "old_selected_API_native_close0_required": true,
+  "native_window_controller_exit0_required": true,
+  "restoration": "Existing selected4096 native92/configc43 exact owned binding, soleGPU owner,router/default/public401/auth200/assembledREADY-stop-DONE/kernel/resources.",
+  "admissions": "Root and sameAstra fresh singleN0 only after new bothhost CPU+actualmap; N0 fullyaudited restored+accepted then separateN1 admission; noautomatic advancement.",
+  "CPU_audit": "Four fresh isolated finite scan children, then bounded independent assembly. N1 adds strict comparisonchild. CPU30s/LinuxAS512MiB/wall90/nice15/CUDAhidden/thread1/arena1 child-only; CPUlease/CASclaim/actualPopen/groups absent. HealthyordinaryworkexceptionCPUonly.",
+  "timing_admitted": false,
+  "deployment_admitted": false,
+  "general_quality_claim": false,
+  "nearfilled_1M_or_full262K_bound_proven": false,
+  "cpu_dependency_setup": {
+    "manifest_sha256": "35d2b26370d7ad7345b579e44ae7eb8500399206ded02af6be144122df201701",
+    "packages": [
+      "jinja2",
+      "markupsafe",
+      "regex",
+      "PIL",
+      "numpy"
+    ],
+    "task_local_exact_copies_only": true,
+    "installation_or_global_environment_changes": false,
+    "both_platform_trees_identical_input_membership": true,
+    "native_package_bytes_are_platform_specific": true,
+    "isolated_no_bytecode": true,
+    "actual_pre_and_post_import_witness_required": true,
+    "new_proof_prefix": "CPU-R2-FIRST-",
+    "original_CPU_FIRST_regraded": false
+  }
+}

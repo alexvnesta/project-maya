@@ -1,0 +1,174 @@
+{
+  "arm": "N0",
+  "arm_results": {
+    "complete": true,
+    "rows": [
+      {
+        "id": "cold-text",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 157,
+          "prompt_tokens": 8466,
+          "prompt_ms": 8723.2,
+          "decode_ms": 3049.5,
+          "finish": "stop",
+          "drafts_accepted": 119,
+          "drafts_offered": 131,
+          "reused": 0,
+          "hits": 37691,
+          "lookups": 41985
+        },
+        "observed_tokens": 157,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 87393280,
+          "rows": 169,
+          "finite_or_equivalence_proven": false
+        }
+      },
+      {
+        "id": "rewind-text",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 159,
+          "prompt_tokens": 8466,
+          "prompt_ms": 53.0,
+          "decode_ms": 3026.3,
+          "finish": "stop",
+          "drafts_accepted": 121,
+          "drafts_offered": 131,
+          "reused": 8465,
+          "hits": 39270,
+          "lookups": 42225
+        },
+        "observed_tokens": 159,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 87910400,
+          "rows": 170,
+          "finite_or_equivalence_proven": false
+        }
+      },
+      {
+        "id": "two-images",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 513,
+          "prompt_tokens": 8653,
+          "prompt_ms": 9860.6,
+          "decode_ms": 14760.5,
+          "finish": "stop",
+          "drafts_accepted": 243,
+          "drafts_offered": 426,
+          "reused": 0,
+          "hits": 174819,
+          "lookups": 177795
+        },
+        "observed_tokens": 513,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 360432640,
+          "rows": 697,
+          "finite_or_equivalence_proven": false
+        }
+      },
+      {
+        "id": "restore-text",
+        "natural_stop": true,
+        "typed_answer_correct": true,
+        "native": {
+          "generated": 166,
+          "prompt_tokens": 8466,
+          "prompt_ms": 41.8,
+          "decode_ms": 3090.0,
+          "finish": "stop",
+          "drafts_accepted": 125,
+          "drafts_offered": 136,
+          "reused": 8465,
+          "hits": 43681,
+          "lookups": 44325
+        },
+        "observed_tokens": 166,
+        "numerical_equivalence_pass": false,
+        "dump_size_only": {
+          "bytes": 92047360,
+          "rows": 178,
+          "finite_or_equivalence_proven": false
+        }
+      }
+    ],
+    "incomplete_reason": null,
+    "native_count": 4,
+    "case_scores": [
+      {
+        "id": "cold-text",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      },
+      {
+        "id": "rewind-text",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      },
+      {
+        "id": "two-images",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      },
+      {
+        "id": "restore-text",
+        "status": "NATURAL_ANSWER_AND_STATE_PASSED",
+        "passed": true
+      }
+    ],
+    "unrun_ids": [],
+    "quality_or_speed_pass": false,
+    "numerical_review_pending": true,
+    "retry": false,
+    "actual_native_count": 4,
+    "activation": {
+      "mode": 1,
+      "source": 20,
+      "retained_rows": 2668,
+      "activation_early_rows": [
+        5798,
+        5985
+      ]
+    },
+    "CPU_IQ2XS": {
+      "CPU_IQ2XS_candidate": false,
+      "per_model_type17_dispatch_count_observed": false,
+      "scope": "Exact private native identity plus independently qualified finite CPU rows; no model-level type17 traffic count claim"
+    },
+    "DSI1_leftovers": []
+  },
+  "native_server_cleanup_passed": true,
+  "resource_fence_terminal": {
+    "passed": true,
+    "events_after": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "cache_charging_disclosure": "memory.current/peak include charged file cache and pinned memory; not process RSS"
+  },
+  "seconds_including_load": 443.1782484620344,
+  "not_a_promotion": true,
+  "speed_pass": false
+}

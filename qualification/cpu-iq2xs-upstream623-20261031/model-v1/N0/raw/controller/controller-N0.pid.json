@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-31T09:38:04.669295+00:00",
+  "pid": 4139863,
+  "ppid": 4139862,
+  "start_ticks": 170775054,
+  "argv": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-B",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/model-v1/cpu_model_numerical.py",
+    "--arm",
+    "N0",
+    "--run"
+  ],
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "qualification_sha256": "dab22359ef430012591d8113c4483e633a5f50e2fef24334d4c9d365f0b61849",
+  "admission_sha256": "9d014777bc3f07b741fbce855b01ec474b28ed5fe731ae1df83fd2d9fdc360e0",
+  "scope": "SINGLE_N0_NUMERICAL_ONLY_CANONICAL_OWNED_LIFECYCLE",
+  "new_native_build": false
+}
