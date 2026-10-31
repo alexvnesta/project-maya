@@ -1,0 +1,16 @@
+{
+  "max_tokens": 32768,
+  "messages": [
+    {
+      "content": "Synthetic prose speed fixture P0 expository, 2026-10-29.\nWrite about 800 to 1000 words of clear continuous prose for a curious general reader explaining how a hash table finds a value. Explain hash functions and buckets, collision handling by chaining, the load factor and resizing, and why expected constant-time lookup differs from worst-case linear lookup. Include one small worked example using the keys cedar, maple and pine with explicitly made-up bucket assignments, without presenting those assignments as a real hash function. Use paragraphs, not code, tables, lists or headings. Complete the explanation naturally. End with exactly this sentence: That is how the lookup finds its way.",
+      "role": "user"
+    }
+  ],
+  "model": "deepseek-v4.1-flash-iq2-xs",
+  "reasoning_budget_tokens": 0,
+  "reasoning_effort": 100,
+  "seed": 1,
+  "stream": true,
+  "temperature": 1.0,
+  "top_p": 1.0
+}

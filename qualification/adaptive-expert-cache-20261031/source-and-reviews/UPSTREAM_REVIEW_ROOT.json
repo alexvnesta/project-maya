@@ -1,0 +1,68 @@
+{
+  "checked_utc": "2026-10-31T03:16:15.764762+00:00",
+  "identity": "Seven CMP170HX PRs authored SeriousRising are the strongest public lead from the user clue; Discord Mbelli identity not verified",
+  "primary_repo": "https://github.com/mw00/project-maya",
+  "latest_reviewed_release": "v1.1.42",
+  "latest_reviewed_commit": "cd48762b6d4888205c130238dbc0c7f7904993cf",
+  "already_upstream": {
+    "v1.1.36": [
+      618,
+      619,
+      620
+    ],
+    "v1.1.37": [
+      625
+    ],
+    "v1.1.41": [
+      622,
+      623
+    ],
+    "v1.1.42": "Issue609 PCIe probe/ring correction"
+  },
+  "open_unmerged": [
+    624
+  ],
+  "important_inclusion_note": "Closed PR merged_at null is not absence: maintainer comments record manual squash and release inclusion",
+  "selected_CPU": "AMD Ryzen Threadripper3970X Zen2; others reports Broadwell and Zen4 are not our speed evidence",
+  "rank_after_current_cache_screen": [
+    {
+      "PR": 623,
+      "why": "IQ2_XS CPU rows relevant to selected weights; Zen1/2 PDEP-free path must be qualified on physical host",
+      "status": "source lead only, not a whole-model gain or deployment"
+    },
+    {
+      "PR": 625,
+      "why": "Stable tool ordering preserves prefix reuse when tools reorder; reuse maintainer implementation, no second rewrite",
+      "status": "separate server/template and transport qualification before adoption"
+    },
+    {
+      "PR": 622,
+      "why": "Lazy drafting exists upstream with fast batched-head exception; naive staging may regress on new head",
+      "status": "not bundled into cache comparison"
+    }
+  ],
+  "not_current_selected_gain": "Selected dfe source has no link_h2d/ring_slots probe; Issue609 fix does not establish 20percent improvement versus selected native92",
+  "old_HOLD_preserved": "Q5K IMMA and Maya-S incomplete prose not replayed",
+  "S2_artifacts": "No verified public Mbelli S2 fork/release found in reviewed sources; not a universal absence claim",
+  "current_cache_fact": "Existing native expert_cache defaults true; stream0 distinct; next distinct policy comparison no native rebuild",
+  "source_snapshots_sha256": {
+    "maya_PR618.json": "8022f43caa62a36a7ceb307df416b02380da73669156373d0a7f99f48782b965",
+    "maya_PR619.json": "30aa92f7b31e1462f1be7eb0d25a635b6815cbfefd9afac20924011d885d4f4c",
+    "maya_PR620.json": "53223b8f7c5fd437117ed4dc20fff16fe05955a563fd1a057df89ebcbb71ed70",
+    "maya_PR622.json": "a8add1a4f4aa4c8c3a25ca0e1ace3874631d98bef219be4d204fe80bffea6323",
+    "maya_PR623.json": "f8402e97f251e22416c93fd4b75b3069170d6b8e46d5d281ddb50762b9f13cfc",
+    "maya_PR624.json": "857470be43869651c09b4c31aec54ef739d3b57f23661ac5c84009c9992346ea",
+    "maya_PR625.json": "c212b780d16008cfde8c50f8afde2a82807940d5c3dd07c7a7aada7a8a8633d8",
+    "maya_PR618_comments.json": "0696e406320edffffba68c49f7b905f5f2f95dbc3e71527574e5f4e46b923979",
+    "maya_PR622_comments.json": "2759ca2230a7f565f6ba5d287d9785eaadbe59049df5eb64bdb3fb0cf3c09c5c",
+    "maya_PR623_comments.json": "6d8a0c0294226cecf302224ff4f6752ef0bdb8ec0531b82557bc8f3952a56f47",
+    "maya_PR625_comments.json": "50bc3dcbfd2a987a80717fc0801cd925abf4a954c52d5f0233b6ab3620f51740",
+    "maya_issue609.json": "365aab444f4232e9b65313c6f0305ecca97c21f5a588642e5ce53458b78923dd",
+    "maya_issue609_comments.json": "d530e8052b2e0b880bf114188e6fcd59e078967201e0223ff84a7e223d329efd",
+    "maya_latest_commits.json": "9c947bcea00702a8f27fd4c6a376cf3a1eaf6193a56772aefdf116e6023dd21c",
+    "SeriousRising_branches.json": "09994bf9f860213d23b07eaff179060a8b253780ee1b225c0d29b87e49a9a350",
+    "SeriousRising_recipe_metadata.json": "e40e79cbdb5dffe10f2ca8bf1a65fdc5c3cd6e16f151ee1110631f8545283b6a"
+  },
+  "runtime_changes": false,
+  "speed_test_performed": false
+}

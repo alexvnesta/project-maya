@@ -1,0 +1,168 @@
+{
+  "content": "{\"values\":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64]}",
+  "reasoning": "We need answer exactly JSON object single key \"values\" array integers 1..64 ascending exactly once. Need not include ledger. Ensure JSON valid, no markdown. Must use every required? Schema says object no properties specified? User says key values. Return exactly one JSON object. Need only JSON. Final.",
+  "finish_reason": "stop",
+  "done": true,
+  "cancelled": false,
+  "status": 200,
+  "events": [
+    {
+      "id": "chatcmpl-2408371179c743a3a07d4800",
+      "object": "chat.completion.chunk",
+      "created": 1793418768,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "role": "assistant",
+            "content": ""
+          },
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-2408371179c743a3a07d4800",
+      "object": "chat.completion.chunk",
+      "created": 1793418768,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": "{\"values\":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64]}",
+            "reasoning_content": "We need answer exactly JSON object single key \"values\" array integers 1..64 ascending exactly once. Need not include ledger. Ensure JSON valid, no markdown. Must use every required? Schema says object no properties specified? User says key values. Return exactly one JSON object. Need only JSON. Final."
+          },
+          "finish_reason": null
+        }
+      ]
+    },
+    {
+      "id": "chatcmpl-2408371179c743a3a07d4800",
+      "object": "chat.completion.chunk",
+      "created": 1793418768,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {},
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 8469,
+        "completion_tokens": 196,
+        "total_tokens": 8665,
+        "prompt_tokens_details": {
+          "cached_tokens": 8468
+        }
+      },
+      "timings": {
+        "cache_n": 8468,
+        "prompt_n": 1,
+        "prompt_ms": 49.8,
+        "prompt_per_token_ms": 49.8,
+        "prompt_per_second": 20.1,
+        "predicted_n": 196,
+        "predicted_ms": 3971.6,
+        "predicted_per_token_ms": 20.263,
+        "predicted_per_second": 49.4,
+        "draft_n": 147,
+        "draft_n_accepted": 134
+      }
+    }
+  ],
+  "raw": [
+    {
+      "seconds": 0.059776270063593984,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 0.05978591809980571,
+      "line": "\n"
+    },
+    {
+      "seconds": 1.070259106112644,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 1.070266320137307,
+      "line": "\n"
+    },
+    {
+      "seconds": 2.1363786160945892,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 2.136391440173611,
+      "line": "\n"
+    },
+    {
+      "seconds": 3.1787409870885313,
+      "line": ": keep-alive\n"
+    },
+    {
+      "seconds": 3.1787491920404136,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.056540111079812,
+      "line": "data: {\"id\": \"chatcmpl-2408371179c743a3a07d4800\", \"object\": \"chat.completion.chunk\", \"created\": 1793418768, \"model\": \"deepseek-v4.1-flash-iq2-xs\", \"choices\": [{\"index\": 0, \"delta\": {\"role\": \"assistant\", \"content\": \"\"}, \"finish_reason\": null}]}\n"
+    },
+    {
+      "seconds": 4.056584946112707,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.056603572098538,
+      "line": "data: {\"id\": \"chatcmpl-2408371179c743a3a07d4800\", \"object\": \"chat.completion.chunk\", \"created\": 1793418768, \"model\": \"deepseek-v4.1-flash-iq2-xs\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"{\\\"values\\\":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64]}\", \"reasoning_content\": \"We need answer exactly JSON object single key \\\"values\\\" array integers 1..64 ascending exactly once. Need not include ledger. Ensure JSON valid, no markdown. Must use every required? Schema says object no properties specified? User says key values. Return exactly one JSON object. Need only JSON. Final.\"}, \"finish_reason\": null}]}\n"
+    },
+    {
+      "seconds": 4.056631284067407,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.0566330179572105,
+      "line": "data: {\"id\": \"chatcmpl-2408371179c743a3a07d4800\", \"object\": \"chat.completion.chunk\", \"created\": 1793418768, \"model\": \"deepseek-v4.1-flash-iq2-xs\", \"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"stop\"}], \"usage\": {\"prompt_tokens\": 8469, \"completion_tokens\": 196, \"total_tokens\": 8665, \"prompt_tokens_details\": {\"cached_tokens\": 8468}}, \"timings\": {\"cache_n\": 8468, \"prompt_n\": 1, \"prompt_ms\": 49.8, \"prompt_per_token_ms\": 49.8, \"prompt_per_second\": 20.1, \"predicted_n\": 196, \"predicted_ms\": 3971.6, \"predicted_per_token_ms\": 20.263, \"predicted_per_second\": 49.4, \"draft_n\": 147, \"draft_n_accepted\": 134}}\n"
+    },
+    {
+      "seconds": 4.056657023029402,
+      "line": "\n"
+    },
+    {
+      "seconds": 4.056664267089218,
+      "line": "data: [DONE]\n"
+    },
+    {
+      "seconds": 4.056666291086003,
+      "line": "\n"
+    }
+  ],
+  "tool_calls": [],
+  "usage": {
+    "prompt_tokens": 8469,
+    "completion_tokens": 196,
+    "total_tokens": 8665,
+    "prompt_tokens_details": {
+      "cached_tokens": 8468
+    }
+  },
+  "timings": {
+    "cache_n": 8468,
+    "prompt_n": 1,
+    "prompt_ms": 49.8,
+    "prompt_per_token_ms": 49.8,
+    "prompt_per_second": 20.1,
+    "predicted_n": 196,
+    "predicted_ms": 3971.6,
+    "predicted_per_token_ms": 20.263,
+    "predicted_per_second": 49.4,
+    "draft_n": 147,
+    "draft_n_accepted": 134
+  },
+  "client_first_content_seconds": 4.056617798982188,
+  "client_first_reasoning_seconds": 4.056617798982188,
+  "client_first_tool_seconds": null,
+  "client_full_seconds": 4.0568046029657125
+}

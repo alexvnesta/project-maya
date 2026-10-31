@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "native_pid": 3877559,
+  "prompt_tokens": 8471,
+  "observed_tokens": 0,
+  "native": {
+    "generated": 0,
+    "prompt_tokens": 8471,
+    "prompt_ms": 4407.6,
+    "decode_ms": 0.0,
+    "finish": "cancel",
+    "drafts_accepted": 0,
+    "drafts_offered": 0,
+    "reused": 0,
+    "hits": 0,
+    "lookups": 0
+  },
+  "cancelled_control_or_budget": true,
+  "client_first_reasoning_s": null,
+  "client_first_content_s": null,
+  "client_first_tool_s": null,
+  "client_full_s": 2.664093512110412,
+  "scope": "Cancelled observations are partial and never quality/speed passes",
+  "emitted_token_contract": {
+    "count": 0,
+    "valid_vocabulary_ids": true,
+    "ordered_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  }
+}

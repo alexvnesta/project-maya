@@ -1,0 +1,40 @@
+{
+  "utc": "2026-10-31T04:36:45.892698+00:00",
+  "decision": "INITIAL_PAIR_CLOSED_NO_ADAPTIVE_GAIN_NO_ADVANCEMENT_CURRENT_DEPLOYMENT_RETAINED",
+  "root_pair_decision_sha256": "84e77ebbf4a6f1d6bc0bc2cc853712ffd5d1bed2c428fdb30ddbecf53363c592",
+  "qualification_sha256": "e76c8762858e05648495c428579978173138d0a6b822d0325805a9cfde9c7b29",
+  "criteria_sha256": "28b5619df88deaa8dc4cba2898ea3016448024de4463335874c215935890a27f",
+  "all_six_input_hashes_verified": true,
+  "inputs": {
+    "prose/A1/terminal-audit.json": "19a79d516399f2d028fc47af88ab85af2ddef7c28f12ed7c158b150d500235a5",
+    "A1_ROOT_RESULT_REVIEW.json": "99dbe5a91e2fd3507c4b526337c4a96c120ecb8382856acf9eea5468d3a98cb4",
+    "A1_RESULT_ASTRA_REVIEW.json": "c600dd2be029e18a551d4f233327f0cb60a5798d111820da869cb57f8a6e3450",
+    "prose/B1/terminal-audit.json": "aa94c248ba188626ba8b683f4d672bf16abe34576addd7b873077a36301ce7f5",
+    "B1_ROOT_RESULT_REVIEW.json": "fa5a2e5834057f184d054529bf5c87891e6398dbf6b6b3b725c62df873631798",
+    "B1_RESULT_ASTRA_REVIEW.json": "4605016dad8a816e2d8931ac5d130e9ca45bd9a72b207aebb7a4fd4648864bbd"
+  },
+  "native_main_rate_change_percent": -16.003292601911625,
+  "cold_prefill_regression_percent": 0.2407172022811821,
+  "frozen_adaptive_gain_gate_passed": false,
+  "cold_prefill_gate_passed": true,
+  "both_targeted_nine_case_screens_passed": true,
+  "limitations": [
+    "One initial pair; no reproducibility or general-quality claim.",
+    "Main2353versus5573generatedtokens include different reasoning paths and differing draft acceptance; no equal-work end-to-end speed conclusion.",
+    "B1 memory.events.max953 (A1zero), oom/oom_killzero; system swapout73728bytes not attributed to model. Memory pressure limits causal interpretation.",
+    "Policy also changes placement11355versus11315GPUslots and CPU4005versus4045; sameauto19/21. Not transfer-only comparison.",
+    "Positive rounded promotion proves adaptive activity; no exact migration-byte/count proof.",
+    "Preserved1Mcontext/256Kallowance are configuredcapacity, not nearfilled1M/full256Kgeneration stress proof."
+  ],
+  "interpretation": "Adaptive failed the frozen initial screen, not a causal proof that disabling cache is globally faster. Unequal reasoning/output paths, different draft acceptance,40GPU-slot placement change and B1 memory pressure remain material. Higher hit rates and positive rounded promotion are not an improvement criterion.",
+  "reverse_admitted": false,
+  "promotion_or_deployment_admitted": false,
+  "current_selected_adaptive_deployment_retained": true,
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "old_arms_and_raw_auditor_statuses_unchanged": true
+}

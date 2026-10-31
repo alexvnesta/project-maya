@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-31T03:29:55.551439+00:00",
+  "root_full_previous_source_and_delta_read": true,
+  "new_deltas_manually_read": [
+    "test_ae_owner one negative selectively corrupts exactly two manifestpaths; other SHA real; exact regex unchanged",
+    "ae_cpu andtest_ae_cpu proofnames R2 preservesfirstfailure"
+  ],
+  "runtime_change": false,
+  "failed_original_regraded": false,
+  "original_195_raw_log_entire_read": true,
+  "source_sha256": {
+    "ae_audit.py": "75f35827ff8233f3012309b2539e51a91402687e7b5e905a8acc1f368e3096e5",
+    "ae_config.py": "e31a30b829be090a13e518f3a6ab1a4cb5600286261c0bc6457854c7bc021d20",
+    "ae_controls.py": "2ffec310fffaf166ac243826c91fd733fd4bb8a3a8ac903632b93d92132d5465",
+    "ae_cpu.py": "e5de2c45b771059043dcfdfa0b2440d20ecd54e8f2fb3f174b2161215aba7fd6",
+    "ae_dispatch.py": "9a2c600b50ee103427cb9629f4001698de9334247068acf34c6b488d6ee14f8e",
+    "ae_owner.py": "1b7e555de4fd2bf5b9851fcbf671542464232d43914d38d10c61498dbb668c3a",
+    "ae_runtime.py": "011c88639ab4cfb7291705b1cbfb21273454dc0477f9e94699b2d4067b978455",
+    "test_ae_audit.py": "3a45909870807a87399638bc24b8d65af3d683204a7beb3d0aa3e8b4ecb89301",
+    "test_ae_config.py": "58ce13be229f1bc36f093b3c437b9fcd38b106be0d418ab3a550020e3d3d9760",
+    "test_ae_controls.py": "16204c08f564b3292b6155e57707c876f9a31d96da70ad47e0b7fed650c2ddef",
+    "test_ae_cpu.py": "46156d13b40b9c94b47c039c668f83ff5f78fc9f41df51eeda5711771ac5861d",
+    "test_ae_dispatch.py": "b1ecb99ec5ca5aae7e41d6f798b82da44f22c691d01215c60498c0c49138fa5e",
+    "test_ae_owner.py": "52cb104f0be162d117fae925e0a2d10a0b5acd94cac5b9fab7ffabd6a7c22dbe",
+    "test_ae_runtime.py": "5e8066f2968e55c5b01a77921cdc58b1c7a5b4920989c9e3786b23df4c11a4e9"
+  },
+  "input_map_sha256": "1bbf98ef195a2c1cbe6f263707d064db1229afc47dd4f6ab6eb1e641b268855a",
+  "input_count": 1122,
+  "CPU_executed_revised": false,
+  "GPU_admitted": false
+}

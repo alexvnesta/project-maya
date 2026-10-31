@@ -1,0 +1,405 @@
+{
+  "mode": "prose",
+  "arm": "A1",
+  "arm_results": {
+    "complete": true,
+    "rows": [
+      {
+        "id": "ae-quality-cold-text",
+        "passed": true,
+        "native": {
+          "generated": 175,
+          "prompt_tokens": 8469,
+          "prompt_ms": 8890.1,
+          "decode_ms": 3793.0,
+          "finish": "stop",
+          "drafts_accepted": 128,
+          "drafts_offered": 154,
+          "reused": 0,
+          "hits": 45179,
+          "lookups": 50265
+        },
+        "observed_tokens": 175,
+        "native_decode_tokens_per_second": 46.137621935143684,
+        "client_seconds": 12.737474981928244,
+        "content_characters": 195,
+        "reasoning_characters": 179,
+        "manual_review_pending": false,
+        "general_quality_or_equivalence_claim": false,
+        "emitted_token_contract": {
+          "count": 175,
+          "valid_vocabulary_ids": true,
+          "ordered_ids_sha256": "689ac5260f86fca3ff3bc993df65eeac368055909571ca42f477b409776cbd04"
+        }
+      },
+      {
+        "id": "ae-quality-warm-text",
+        "passed": true,
+        "native": {
+          "generated": 196,
+          "prompt_tokens": 8469,
+          "prompt_ms": 49.8,
+          "decode_ms": 3971.6,
+          "finish": "stop",
+          "drafts_accepted": 134,
+          "drafts_offered": 147,
+          "reused": 8468,
+          "hits": 47239,
+          "lookups": 52350
+        },
+        "observed_tokens": 196,
+        "native_decode_tokens_per_second": 49.35038775304663,
+        "client_seconds": 4.0568046029657125,
+        "content_characters": 195,
+        "reasoning_characters": 302,
+        "manual_review_pending": false,
+        "general_quality_or_equivalence_claim": false,
+        "emitted_token_contract": {
+          "count": 196,
+          "valid_vocabulary_ids": true,
+          "ordered_ids_sha256": "c8c985784eab476e7eafb4b2442d1dfe587f4454b2386b4f7c27f472fc482f0b"
+        }
+      },
+      {
+        "id": "ae-quality-two-images",
+        "passed": true,
+        "native": {
+          "generated": 76,
+          "prompt_tokens": 8656,
+          "prompt_ms": 10216.1,
+          "decode_ms": 2000.6,
+          "finish": "stop",
+          "drafts_accepted": 46,
+          "drafts_offered": 73,
+          "reused": 0,
+          "hits": 23787,
+          "lookups": 25980
+        },
+        "observed_tokens": 76,
+        "native_decode_tokens_per_second": 37.98860341897431,
+        "client_seconds": 12.382578912191093,
+        "content_characters": 31,
+        "reasoning_characters": 335,
+        "manual_review_pending": false,
+        "general_quality_or_equivalence_claim": false,
+        "emitted_token_contract": {
+          "count": 76,
+          "valid_vocabulary_ids": true,
+          "ordered_ids_sha256": "8aad5cd44c315234012f1852a375742d9312fec07a2080c091732b0a6a30d529"
+        }
+      },
+      {
+        "id": "ae-quality-return-text",
+        "passed": true,
+        "native": {
+          "generated": 204,
+          "prompt_tokens": 8469,
+          "prompt_ms": 47.0,
+          "decode_ms": 4485.2,
+          "finish": "stop",
+          "drafts_accepted": 140,
+          "drafts_offered": 165,
+          "reused": 8468,
+          "hits": 51719,
+          "lookups": 57615
+        },
+        "observed_tokens": 204,
+        "native_decode_tokens_per_second": 45.48292160884687,
+        "client_seconds": 4.566637160023674,
+        "content_characters": 195,
+        "reasoning_characters": 329,
+        "manual_review_pending": false,
+        "general_quality_or_equivalence_claim": false,
+        "emitted_token_contract": {
+          "count": 204,
+          "valid_vocabulary_ids": true,
+          "ordered_ids_sha256": "4dbeb6daa3aff9921bdb4a455b7aad26359a223938b77910329ef3fc57a60cbe"
+        }
+      },
+      {
+        "id": "ae-prose-main",
+        "passed": true,
+        "native": {
+          "generated": 5573,
+          "prompt_tokens": 169,
+          "prompt_ms": 2283.5,
+          "decode_ms": 121794.1,
+          "finish": "stop",
+          "drafts_accepted": 3472,
+          "drafts_offered": 4006,
+          "reused": 0,
+          "hits": 1405181,
+          "lookups": 1546455
+        },
+        "observed_tokens": 5573,
+        "native_decode_tokens_per_second": 45.75755311628396,
+        "client_seconds": 124.1019217169378,
+        "content_characters": 5636,
+        "reasoning_characters": 19158,
+        "manual_review_pending": true,
+        "general_quality_or_equivalence_claim": false,
+        "emitted_token_contract": {
+          "count": 5573,
+          "valid_vocabulary_ids": true,
+          "ordered_ids_sha256": "3788fe87eb87079c07b85a63ba21c721332e35b7f356f327ee415274396b6326"
+        }
+      }
+    ],
+    "scores": [
+      {
+        "id": "ae-quality-cold-text",
+        "passed": true,
+        "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+      },
+      {
+        "id": "ae-quality-warm-text",
+        "passed": true,
+        "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+      },
+      {
+        "id": "ae-quality-two-images",
+        "passed": true,
+        "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+      },
+      {
+        "id": "ae-quality-return-text",
+        "passed": true,
+        "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+      },
+      {
+        "id": "ae-prose-main",
+        "passed": true,
+        "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+      }
+    ],
+    "lifecycle": {
+      "required": true,
+      "complete": true,
+      "rows": [
+        {
+          "id": "ae-prose-tool",
+          "passed": true,
+          "native": {
+            "generated": 82,
+            "prompt_tokens": 372,
+            "prompt_ms": 3256.3,
+            "decode_ms": 1713.0,
+            "finish": "stop",
+            "drafts_accepted": 58,
+            "drafts_offered": 71,
+            "reused": 0,
+            "hits": 21173,
+            "lookups": 23835
+          },
+          "observed_tokens": 82,
+          "native_decode_tokens_per_second": 47.869235259778165,
+          "client_seconds": 5.002819485031068,
+          "content_characters": 0,
+          "reasoning_characters": 102,
+          "manual_review_pending": false,
+          "general_quality_or_equivalence_claim": false,
+          "emitted_token_contract": {
+            "count": 82,
+            "valid_vocabulary_ids": true,
+            "ordered_ids_sha256": "6708be9e9cf17ffc2402680d81403a512ad24590e5b66befb405bd3bd9c392d4"
+          }
+        },
+        {
+          "id": "ae-prose-tool-followup",
+          "passed": true,
+          "native": {
+            "generated": 45,
+            "prompt_tokens": 465,
+            "prompt_ms": 1531.1,
+            "decode_ms": 1063.4,
+            "finish": "stop",
+            "drafts_accepted": 29,
+            "drafts_offered": 42,
+            "reused": 372,
+            "hits": 13119,
+            "lookups": 14550
+          },
+          "observed_tokens": 45,
+          "native_decode_tokens_per_second": 42.31709610682715,
+          "client_seconds": 2.6169014261104167,
+          "content_characters": 66,
+          "reasoning_characters": 61,
+          "manual_review_pending": false,
+          "general_quality_or_equivalence_claim": false,
+          "emitted_token_contract": {
+            "count": 45,
+            "valid_vocabulary_ids": true,
+            "ordered_ids_sha256": "40797a2339ee4ab2829793f420ee54fd4c0d809b6cf461dec090c67047b36b8d"
+          }
+        },
+        {
+          "id": "ae-prose-prefill-cancel",
+          "passed": true,
+          "native": {
+            "generated": 0,
+            "prompt_tokens": 8471,
+            "prompt_ms": 4407.6,
+            "decode_ms": 0.0,
+            "finish": "cancel",
+            "drafts_accepted": 0,
+            "drafts_offered": 0,
+            "reused": 0,
+            "hits": 0,
+            "lookups": 0
+          },
+          "observed_tokens": 0,
+          "purpose": "INTENTIONAL_PREFILL_CANCELLATION_NOT_QUALITY_OR_SPEED",
+          "cancel_control": {
+            "passed": true,
+            "replay": false,
+            "purpose": "INTENTIONAL_PREFILL_CANCELLATION_NOT_QUALITY_OR_SPEED",
+            "activation": {
+              "mode": 1,
+              "source": 20,
+              "retained_rows": 2668,
+              "activation_early_rows": [
+                5803
+              ]
+            },
+            "observed_before_cancel": {
+              "state": "reading",
+              "read": 2824,
+              "total": 8471,
+              "first_delta": false
+            },
+            "client_disconnect_cancels_delta": 1,
+            "classification": "confirmed_prefill_cancel",
+            "recovery_required": true,
+            "transport": {
+              "content": "",
+              "reasoning": "",
+              "finish_reason": null,
+              "done": false,
+              "cancelled": true,
+              "status": 200,
+              "events": [],
+              "raw": [
+                {
+                  "seconds": 2.616934529040009,
+                  "line": ": keep-alive\n"
+                },
+                {
+                  "seconds": 2.616941150976345,
+                  "line": "\n"
+                }
+              ],
+              "tool_calls": [],
+              "usage": null,
+              "timings": null,
+              "client_first_content_seconds": null,
+              "client_first_reasoning_seconds": null,
+              "client_first_tool_seconds": null,
+              "client_full_seconds": 2.664093512110412
+            }
+          },
+          "emitted_token_contract": {
+            "count": 0,
+            "valid_vocabulary_ids": true,
+            "ordered_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "recovery_required": true
+        },
+        {
+          "id": "ae-prose-prefill-recovery",
+          "passed": true,
+          "native": {
+            "generated": 147,
+            "prompt_tokens": 44,
+            "prompt_ms": 1158.7,
+            "decode_ms": 3118.8,
+            "finish": "stop",
+            "drafts_accepted": 90,
+            "drafts_offered": 125,
+            "reused": 0,
+            "hits": 42891,
+            "lookups": 45870
+          },
+          "observed_tokens": 147,
+          "native_decode_tokens_per_second": 47.133512889572906,
+          "client_seconds": 4.29947212501429,
+          "content_characters": 20,
+          "reasoning_characters": 571,
+          "manual_review_pending": false,
+          "general_quality_or_equivalence_claim": false,
+          "emitted_token_contract": {
+            "count": 147,
+            "valid_vocabulary_ids": true,
+            "ordered_ids_sha256": "0d2943ab3d15b96a2d431820f185edc3957cd8ca64810a792d408fc96088c9e0"
+          }
+        }
+      ],
+      "scores": [
+        {
+          "id": "ae-prose-tool",
+          "passed": true,
+          "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+        },
+        {
+          "id": "ae-prose-tool-followup",
+          "passed": true,
+          "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+        },
+        {
+          "id": "ae-prose-prefill-cancel",
+          "passed": true,
+          "status": "CONFIRMED_PREFILL_CANCEL_PASSED"
+        },
+        {
+          "id": "ae-prose-prefill-recovery",
+          "passed": true,
+          "status": "NATURAL_RESULT_SOURCE_AND_STATE_PASSED"
+        }
+      ],
+      "unrun_ids": []
+    },
+    "reason": null,
+    "retry": false,
+    "manual_review_required": true,
+    "unrun_ids": [],
+    "performance_accepted": false,
+    "deployment_admitted": false,
+    "native_request_count": 9,
+    "mode1_activation": {
+      "mode": 1,
+      "source": 20,
+      "retained_rows": 2668,
+      "activation_early_rows": [
+        5801,
+        5988,
+        5803
+      ]
+    },
+    "DSI1_leftovers": []
+  },
+  "seconds_including_load": 615.7961066309363,
+  "private_cleanup_passed": true,
+  "resource_fence_terminal": {
+    "passed": true,
+    "events_after": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "cache_charging_disclosure": "memory.current/peak include charged file cache and pinned memory; not process RSS"
+  },
+  "manual_review_pending": true,
+  "not_a_promotion": true
+}

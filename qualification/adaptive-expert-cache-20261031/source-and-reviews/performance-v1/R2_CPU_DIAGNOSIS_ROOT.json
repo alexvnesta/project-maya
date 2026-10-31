@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-31T03:33:05.272050+00:00",
+  "status": "R2_SYNTHETIC_NATIVE_INTERFACE_MISSING_HELPER_NOT_PRODUCTION_FAULT",
+  "owner_controls": 195,
+  "owner_passed": 194,
+  "owner_failed": 1,
+  "audit_controls_passed": 91,
+  "cause": "Loopback synthetic Engine borrows real native generate but lacks _stall_check referenced on queue.Empty; normal native class has it. Complete STAT proof correctlyfalse. No real model/native/service mutation.",
+  "first_mismatch_repaired": true,
+  "all_failures_preserved_not_regraded": true,
+  "runtime_change": false,
+  "raw_sha256": {
+    "owner": {
+      "child.json": "cd5765e101adc834e4e04a62b48f12e4fd2627da2ae24a1609b50f6cf3b40a00",
+      "receipt.json": "75d9a5be2e5108c585b7cce42f8b2a43dc8ecd23e16ad4fdb702de46cf18b953",
+      "child.log": "6749aaa7e50388686c0fe4ed6c153e7f31e3565f382c27f65213dd996fde1c5d"
+    },
+    "audit": {
+      "child.json": "a58d93f65c4245bd0f4af66183cd528811922ab2ca36233294ea08d7bef1ae8c",
+      "receipt.json": "4ae99454d37dfcfbe2f7b6a5c81caf8bca00210bd397649edfe653764fd7d73a",
+      "child.log": "119e41ae2b62fa9fd51c255d03f68baae0870af5f207dd086ec8b1d181853dfa"
+    }
+  }
+}
