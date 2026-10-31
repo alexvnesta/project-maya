@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-31T05:05:06.824181+00:00",
+  "status": "PRE_FIRST_MANUAL_REVIEW_IN_PROGRESS_NO_EXECUTION",
+  "entire_build_py_snapshot_read": true,
+  "snapshot_sha256": "5ebfb746ab2e3b8b1d659945140f12198c81702b1239585b43826d291fa20167",
+  "source_not_frozen": true,
+  "findings_before_first_test": [
+    "Control and candidate link both redirect -o and linker dependency output to freshcwd. All inputobjects stay original exceptexact2newCPUobjects. Whole archive11members/order/hashes verified.",
+    "Explicit -I -B/actualPID/groups/resources/source/testpreimport/posthash pattern required in newCPUdriver; oldN42frozen untouched.",
+    "Source review found potential512MiB linkeraddressspace issue fromlargeCUDAinputDSOs; separatecompiler/linker/helperresourceclasses prospectively accepted bysameAstra beforeFIRST. LinkCPU30/AS4GiB/wall90, compile120/AS4GiB/wall300, helpers/scans30/AS512/wall90. NoCPUproof/numerical/inferenceboundsincreased.",
+    "Controlledbusydeferral mustretainownedpartialbuild andclearonlyownCASrecord, separatefromcleanup/owner/nativefault.",
+    "Currentbuild_v1source+tests and numerical-v2 fixture notyetfinal/frozen orCPUqualified.",
+    "Currentselectedbinding3a72/native3998227 unchanged; Unslothworker4006139running. Needcooperativepause/actualabsencebeforeprivate andavoidprematuredatahashingrestarts."
+  ],
+  "build_execution_authorized": false,
+  "GPU_execution_authorized": false,
+  "entire_new_mixed_fixture_snapshot_read": true,
+  "mixed_fixture_snapshot_sha256": "1152be0ac51509deffb472765a4eee0ddc57659ce12c71314dc134ea7b7dc707",
+  "mixed_fixture_review": "All source read. Ten metadata-backedGU/down combos, valid16/17/18/22 blocks, original six-pattern/type17wide matrix plusnt1/16 mixed72case children, exactggml andselectedwrappers, clamp/unclamped/ranges/guardbytes. Explicitno-oprows1unsupported16/22excluded whilewrapperfallbackmandatory. Arithmeticunrun."
+}

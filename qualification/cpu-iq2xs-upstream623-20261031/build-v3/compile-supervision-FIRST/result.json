@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "record": {
+    "controller_pid": 4049202,
+    "controller_start_ticks": 169520834,
+    "nonce": "878b5609b02041839aec0ef161a69a71",
+    "mode": "iq2xs-cpu-v2-compile",
+    "qualification_sha256": "64acb1becb8ea7b61fa5867578bc46347f667a78ae864071ed6791decf0d9e08",
+    "start_binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "cpu_lease": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 2894342
+    }
+  },
+  "error": null,
+  "error_notes": [],
+  "owned_groups_absence": {
+    "passed": true,
+    "pending_spawn": null,
+    "cleanup_faults": [],
+    "children": [
+      {
+        "name": "compile-iq_avx2.cpp",
+        "pid": 4049332,
+        "pgid": 4049332,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "compile-native_expert.cpp",
+        "pid": 4049513,
+        "pgid": 4049513,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "compile-iq2xs_exact.cpp",
+        "pid": 4049604,
+        "pgid": 4049604,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "archive-replace",
+        "pid": 4049726,
+        "pgid": 4049726,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "archive-index",
+        "pid": 4049816,
+        "pgid": 4049816,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "candidate-link",
+        "pid": 4049893,
+        "pgid": 4049893,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "fixture-link",
+        "pid": 4049986,
+        "pgid": 4049986,
+        "returncode": 0,
+        "group_absent": true
+      }
+    ]
+  },
+  "own_claim_released": true,
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "GPU_lease_mutated": false,
+  "retry_authorized": false
+}

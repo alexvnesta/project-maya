@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-31T05:25:02.746670+00:00",
+  "pid": 4006139,
+  "actual_proc_absent": true,
+  "recorded_worker_returncode": 75,
+  "not_external_waitpid_status_claim": true,
+  "pause_marker_retained": true,
+  "raw_worker_state": {
+    "utc": "2026-10-31T04:37:46.388697+00:00",
+    "pid": 4006139,
+    "status": "DEFERRED_PARTIALS_RETAINED",
+    "manifest_sha256": "4fb4c0ff9c0b55f46afa15c2cbc84ee09372c85944efafb63e36a5ca6e73c73c",
+    "authorization_sha256": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648",
+    "revision": "8a6ec9cf118e785a362ea94ee123c61c70553be6",
+    "files": [
+      {
+        "path": "UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00001-of-00006.gguf",
+        "status": "VERIFIED_EXISTING",
+        "bytes": 5780923,
+        "sha256": "22ad51c224e499883c1a753ad35719af44c296bbc8bcb9c931de6bdf950fa3aa"
+      }
+    ],
+    "model_or_service_actions": 0,
+    "combined_space_at_admission": {
+      "free_bytes": 374010068992,
+      "required_bytes": 281552739395,
+      "Unsloth_remaining_bytes": 126665481283,
+      "Maya_S_remaining_bytes": 0,
+      "root_plus_comparison_floor_bytes": 154618822656
+    },
+    "rate_bytes_per_second": 16777216,
+    "wall_seconds": 21600,
+    "error_type": "Deferred",
+    "reason": "Paused before separately admitted Maya-S private comparison; partials retained",
+    "returncode": 75,
+    "updated_utc": "2026-10-31T05:24:48.702196+00:00"
+  }
+}

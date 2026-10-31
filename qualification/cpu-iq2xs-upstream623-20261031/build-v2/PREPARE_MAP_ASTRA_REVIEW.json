@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-31T05:47:33.459335+00:00",
+  "status": "BUILD_V2_PREPARE_MAP_REVIEWED_FINALIZATION_ONLY_NO_LIVE_ADMISSION",
+  "draft_sha256": "18836cc8520161b1c8a76840e4f145b35758f51943d182ced118dd64ba279caa",
+  "root_map_review_sha256": "f6601427b2cd428ccbd6c86a6def155d414db7df33eb0044b137d978225e68a0",
+  "CPU_result_review_sha256": "8256986a5530d35f2d1d25e7de142a94124f5586de584a150d2980e69becc9f5",
+  "source_review_sha256": "ddf72767adba7f4172517ab9f870666ecff07c2c07ba8c177828bb7c34ba7a96",
+  "verified": {
+    "all2060_inventory_entries_classified": true,
+    "prior2036_file_pins_exactly_unchanged": true,
+    "new24_paths_and_actual_local_bytes_match": true,
+    "current_source_input_ordered_ID_maps": [
+      4,
+      65,
+      121
+    ],
+    "source_and_CPU_proofs_unchanged": true,
+    "old_proofs_are_dependency_custody_only": true,
+    "cooperative_CPU_lock_path_exact": true,
+    "global_atomic_STATE_claim_explicitly_false": true,
+    "GPU_lock_is_observed_not_acquired_or_mutated": true,
+    "orphan_or_cleanup_fault_retains_CPU_claim": true
+  },
+  "permitted_finalization": {
+    "add_only_map_review_files": [
+      "PREPARE_MAP_ROOT_REVIEW.json",
+      "PREPARE_MAP_ASTRA_REVIEW.json"
+    ],
+    "final_pin_count": 2062,
+    "retain_existing2060_file_pins_exactly": true,
+    "other_metadata_changes_only": [
+      "created_utc",
+      "status",
+      "qualification_map_reviewed to true",
+      "inventory_summary.file_pins to2062"
+    ],
+    "prepare_admitted_remains_false": true
+  },
+  "required_before_single_prepare_admission": [
+    "Actual final2062 pins plus qualification self SHA, including all physical-only files, before project imports",
+    "Fresh genuine idle/default/sole selected3a72 binding/no phase/build/restoration/root136",
+    "Download paused with actual worker absence and sole Root maintenance coordinator freeze",
+    "Read-only exact selected API GPU lock holder/path/device/inode observation; no attempt to acquire experiment.lock",
+    "Fresh v2 prepare and supervision namespaces; new CPU lease available or safely created only by separately admitted controller",
+    "Same compiler/link recipes and role bounds, original92 control plus three scans only; no fixture/native/GPU execution"
+  ],
+  "local_limit": "732 canonical local copies matched plus the separately preserved canonical switcher copy;1327 other physical-only inputs remain action-time checks. The differing local router mirror was not changed.",
+  "later_compile_limit": "Requires actual dependency review and successful prepare-supervision journal/absence/own-claim release/final selected binding proof, not tool success alone.",
+  "prepare_compile_numerical_GPU_or_service_admission": false,
+  "reviewer_imports_tests_remote_actions": false
+}
