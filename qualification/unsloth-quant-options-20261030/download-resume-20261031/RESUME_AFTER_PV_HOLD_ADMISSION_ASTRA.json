@@ -1,0 +1,61 @@
+{
+  "utc": "2026-10-31T01:16:08.936993+00:00",
+  "decision": "CONDITIONAL_SINGLE_RESUME_EXISTING_UNSLOTH_DOWNLOAD_ONLY_AFTER_MAYA_S_HOLD",
+  "previous_qualification_sha256": "caa9f9e3f57cae1d5d2036379ba4defbf5bc6abddc82431a7e8eb50a9fbc0703",
+  "reviewed_new_qualification_sha256": "ac4259ee485c3ec9f8fa530ed4835cc2eb5ccefc23452d4fdf870a69b4b3464a",
+  "only_changed_fields": [
+    "utc",
+    "selected_binding",
+    "resume_after_Maya_S_incomplete_closeout"
+  ],
+  "selected_binding": {
+    "invocation": "8ada74a684754613a2e04f9c4f049d99",
+    "main_pid": 3802896,
+    "native_pid": 3802933,
+    "native_start_ticks": 167685086
+  },
+  "immutable_file_pins": 97,
+  "physical_checks_required": 98,
+  "source3_input5_ordered40IDs_bothhost_CPU_and_all97_filemaps_unchanged": true,
+  "source_sha256_rechecked": {
+    "acquire_unsloth.py": "f20084778b5c68fbb810326643b6cb1236e953c277637560425300772578ddf1",
+    "test_acquire_unsloth.py": "9a87075484423423218dff3bec97784165a213b4cbfa89a5f9054e75a2a67e01",
+    "run_cpu.py": "9150c2acc372055d295503fc461f5319415c3223592449be1d0e2e4db6381665"
+  },
+  "input_sha256_rechecked": {
+    "decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+    "decode-optimization-20261028/maya-s-comparison-v1/acquisition-authorized-v2/acquire.py": "6a399f4eec7b9cb23b7ff7aa03d60deb490787825ae92e43ccde8d40065885b5",
+    "decode-optimization-20261028/maya-s-comparison-v1/acquisition-authorized-v2/acquisition-qualification.json": "3f89fe089d629bb65b5c517908ae76a731b9020fb0a8cb02a1b1ef58472596b0",
+    "decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/ASSET_MANIFEST.json": "4fb4c0ff9c0b55f46afa15c2cbc84ee09372c85944efafb63e36a5ca6e73c73c",
+    "decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/AUTHORIZATION.json": "3885bafb209d6eb86e76191da185163b9c342337bba56eb8df533e714abca648"
+  },
+  "bothhost6rawCPU_files_rechecked_against_q": true,
+  "actual_restored_saved_B1_binding_matches": true,
+  "prior_pattern_review_sha256": "d0e4e0c6070eac1f2370a19efa4ab37691906b4815db47b5ed73d87b4af5ee4e",
+  "scope": {
+    "repo": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
+    "revision": "8a6ec9cf118e785a362ea94ee123c61c70553be6",
+    "quant": "UD-IQ2_XXS",
+    "exact_shards": 6,
+    "total_bytes": 300475464795,
+    "existing_verified_or_partial_bytes_resume_with_same_SHA_Range_custody": true,
+    "new_download_attempt_only": true,
+    "Maya_S_incomplete_HOLD_unchanged": true,
+    "no_model_comparison_or_deployment_authority": true
+  },
+  "conditions": [
+    "Preserve old caa9 qualification/pause marker/all original exit75 and partial receipts; new qualification installation must be exactly reviewed ac4259 bytes with own immutable copy. Fresh uniquely named attempt, no overwrite/regrade or automatic HTTP retry.",
+    "Fresh physical genuine-idle/default/healthy selected92/configc43 exact8ada/main3802896/native3802933/ticks167685086/soleowner/phase-free guard before metadata staging and hashing; verify all97 files plus new qself BEFORE project imports, then current qualified helper checks and exact binding again.",
+    "Confirm every prior acquisition worker absent and own download.lock free; preserve/archive exact own pause marker only as part of this explicitly authorized resume, never ignore foreign/unknown marker. No production experiment.lock operation.",
+    "Actual disk budget must reserve BOTH remaining full downloads plus144GiB (root132+cache8+logs4) plus256MiB cushion. Maya-S retained stat inventory is budget-only, not new checksum custody.",
+    "One low-priority worker:16MiB/s transfer, six-hour cooperative wall limit, LinuxAS512MiB/nice15/CUDAhidden/OMP1/OpenBLAS1/arena1/PYTHONDONTWRITEBYTECODE1. CPU30 is test-only, not applied to long transfer.",
+    "Existing Gate continues exact selected owner/healthy fullcontext/default and rejects private/build/restoration/pause; healthy active inference allowed under pinned human authorization. Pause and verify worker absence before any future separately admitted private phase.",
+    "Transport or source/ownership/resource failure preserves partials and original status, no automatic retry/new inference/service/build/native/GPU action."
+  ],
+  "limitations": [
+    "Binding review uses saved restored B1 evidence; fresh physical action-time verification remains mandatory and is not claimed performed by reviewer.",
+    "Six-hour wall is cooperative, not an independently hard-killed deadline.",
+    "No new model/quality/performance admission; Maya-S B1 remains strict incomplete/HOLD and no further arms are admitted."
+  ],
+  "reviewer_actions": "Local complete acquire_unsloth source read, JSON/AST/source/input/raw-proof hash comparisons and this review only; no tests/project imports/remote/download actions."
+}
