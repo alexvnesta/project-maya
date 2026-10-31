@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "prior_record": {
+    "active": true,
+    "candidate_retry": false,
+    "evidence_sha256": {
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya144-mayas-TP2-20261031T165111Z/old-owner-close.json": "5f38e211eb4798ddf993c1131fdacb40d9413fcbf97606a8ea435459a632b24e",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya144-mayas-TP2-20261031T165111Z/private-memory-fence-collected.json": "b590aa886bf98ed7b22e502b45852cefe3846c5487e2a40a4c16950168ca7e68",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-mayas-TP2-20261031T165111Z/native/server-cleanup.json": "6f935b5fa5634d6b1d438a3190b4bf2edf6bcb52b8ce46e9d2d7eec947b87eea",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-mayas-TP2-20261031T165111Z/phase-error.json": "05185a7493570a36403d9f7719c4fece7834a46603d880057fc59f4589eb5a82",
+      "/home/alex/strata-deepseek-test-20261024/windows/20261031T165214Z.json": "44a5dafa816b39f9d5126be94705cf66e2cfd424017cc12ae6947c6445acbc9b",
+      "/home/alex/strata-deepseek-test-20261024/windows/20261031T165214Z.telemetry.jsonl": "0cfdfaab7ba1fde0c1db379c7d0f81ab16e488b78f22b595d7fcfba5a3a5adfd"
+    },
+    "failed_controller": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya144-mayas-TP2-20261031T165111Z/state.json",
+    "pid": 268978,
+    "source_review_sha256": "c44fe80729fb92392f2cb690d4872fc1916b9b7e117be435ea4f9970eee2b5d5",
+    "status": "SINGLE_SELECTED_RESTORATION_RUNNING"
+  },
+  "final_record": {
+    "active": false,
+    "candidate_retry": false,
+    "evidence_sha256": {
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya144-mayas-TP2-20261031T165111Z/old-owner-close.json": "5f38e211eb4798ddf993c1131fdacb40d9413fcbf97606a8ea435459a632b24e",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya144-mayas-TP2-20261031T165111Z/private-memory-fence-collected.json": "b590aa886bf98ed7b22e502b45852cefe3846c5487e2a40a4c16950168ca7e68",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-mayas-TP2-20261031T165111Z/native/server-cleanup.json": "6f935b5fa5634d6b1d438a3190b4bf2edf6bcb52b8ce46e9d2d7eec947b87eea",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-mayas-TP2-20261031T165111Z/phase-error.json": "05185a7493570a36403d9f7719c4fece7834a46603d880057fc59f4589eb5a82",
+      "/home/alex/strata-deepseek-test-20261024/windows/20261031T165214Z.json": "44a5dafa816b39f9d5126be94705cf66e2cfd424017cc12ae6947c6445acbc9b",
+      "/home/alex/strata-deepseek-test-20261024/windows/20261031T165214Z.telemetry.jsonl": "0cfdfaab7ba1fde0c1db379c7d0f81ab16e488b78f22b595d7fcfba5a3a5adfd"
+    },
+    "failed_controller": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya144-mayas-TP2-20261031T165111Z/state.json",
+    "pid": 268978,
+    "source_review_sha256": "c44fe80729fb92392f2cb690d4872fc1916b9b7e117be435ea4f9970eee2b5d5",
+    "status": "HOLD_START_PREFLIGHT_INTERLOCK_NO_NATIVE_SPAWNED",
+    "failure": {
+      "error": "CalledProcessError(1, ['systemctl', '--user', 'start', 'deepseek-hosted.service'])",
+      "start_binding": null,
+      "retry": false
+    },
+    "stopped_unit": {
+      "ActiveState": "failed",
+      "InvocationID": "9de0c6677ae74f198a9f1586d3d01946",
+      "MainPID": "0",
+      "Result": "exit-code"
+    },
+    "next": "Existing hosting preflight requires a separately admitted clean baseline-health window before a new selected start. Do not replay candidate or bypass preflight."
+  },
+  "no_GPU_owner": true,
+  "no_native_spawned": true,
+  "failed_candidate_regraded": false
+}

@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-31T16:32:14.036537+00:00",
+  "reviewer": "ROOT",
+  "arm": "CTP2",
+  "decision": "ADMIT_SINGLE_NEW_NATIVE_MAYAS_TP2_SHORT_COMPATIBILITY_ONLY",
+  "qualification_sha256": "871079f07fc66ca3575eee0426d75dc157686ac75cd8326e43ba09908fab746e",
+  "filepins": 2243,
+  "new_CPU_controls_each_host": [
+    35,
+    11,
+    20
+  ],
+  "selected_binding": {
+    "invocation": "c62aca2bdba14f1ebde3f47ab9914cf9",
+    "main_pid": 4161436,
+    "native_pid": 4161473,
+    "native_start_ticks": 171069083
+  },
+  "readonly_preflight": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya144-mayas-TP2-20261031T163118Z/result.json",
+  "readonly_preflight_sha256": "f8e622b54ee19519e5003640568aadd6fb5ba85e5b88022c268144bb53b9d37f",
+  "drafter": true,
+  "context_total": 1048576,
+  "output_allowance": 262144,
+  "window": 1200,
+  "soft": 1000,
+  "cleanup": 200,
+  "unrelated_acquisition_worker_absent": true,
+  "automatic_next_arm": false,
+  "timing_or_promotion_admitted": false
+}

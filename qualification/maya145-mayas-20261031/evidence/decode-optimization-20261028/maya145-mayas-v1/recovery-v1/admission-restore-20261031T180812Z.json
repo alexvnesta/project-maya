@@ -1,0 +1,27 @@
+{
+  "decision": "SINGLE_SELECTED_BASELINE_RESTORE_ONLY",
+  "baseline_only": true,
+  "single_use": true,
+  "manual_review": true,
+  "run_id": "20261031T180812Z",
+  "binary_sha256": "250157320079ca4a263e152ecd09dd7b7c8f2a9504e583a0f64e6c53a7a67b4c",
+  "diagnosis": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/recovery-v1/diagnosis-20261031T180812Z.json",
+  "diagnosis_sha256": "90e4fe0dc76eeace62273e3c3c6fe2befde01bf6416e73fabbef4534e05a6208",
+  "qualification_sha256": "6447096e589c2d867ad6bca160a90ebabd081f5f8b2aa9a8eb30360cef98b1bf",
+  "health_receipt_sha256": "264f5398e17c3e9bbc5522773e03ba47814066b545e846e5350c474a3abebcd4",
+  "health_window_sha256": "d59be7a0def8fd535383f0c291f8e27351fba4f966eae5b691988e8d870f9472",
+  "health_telemetry_sha256": "d52e72ed58e789868f29b9c92cc4f7c99e453d4c5668198e207a8e74a49e1946",
+  "independent_health_review": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/recovery-v1/ROOT_HEALTH_RESULT_REVIEW_FIRST.json",
+  "independent_health_review_sha256": "439a44e5d2930e9d0fe6421cf187349b140bea6f864ce8cf58f161ce7248c383",
+  "health_raw_sha256": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-baseline-health-20261031T180812Z/receipt.json": "264f5398e17c3e9bbc5522773e03ba47814066b545e846e5350c474a3abebcd4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-baseline-health-20261031T180812Z/gpu0.stdout": "edc06f3cd6bd38ee3d4438785a8168aa33cabca1540f844805d6136c9ddfab50",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-baseline-health-20261031T180812Z/gpu0.stderr": "1352d167957e284ba2b09a7ba2079069d92ba1becf745a9e7933c4d22110f250",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-baseline-health-20261031T180812Z/gpu0-start.json": "7745f798a1e7413924ceb0f75cfce837457167b1cf96556017a12b4e2efc35cc",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-baseline-health-20261031T180812Z/gpu0-exit.json": "a39b85bef36f26e235f06eae23913a9843f8952ced11bb4b49e66f587bf66fc5",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-baseline-health-20261031T180812Z/gpu1.stdout": "fc341d2657eaf8c1d6383d30acacafb6dbb14d2bc450e8356173e3a9319642d4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-baseline-health-20261031T180812Z/gpu1.stderr": "1307f200f95b1d23fc426a325b3472a934b814bdc5fa19de6c0ad1aae0ce4ac8",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-baseline-health-20261031T180812Z/gpu1-start.json": "46676d5d3b0332c170b0f066d2a51705ca1b1f3ac1ed1f47e84bc3cd7fb6904d",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-baseline-health-20261031T180812Z/gpu1-exit.json": "a0083033cee613fa2857af1f4ad29363e93b86bc159bb5e36ebda82a0f4309d9"
+  }
+}

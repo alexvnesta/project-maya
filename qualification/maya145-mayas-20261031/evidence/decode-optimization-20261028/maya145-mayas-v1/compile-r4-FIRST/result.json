@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "stage": "compile",
+  "child": {
+    "argv": [
+      "/usr/bin/cmake",
+      "--build",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/native-build-r2-FIRST",
+      "--target",
+      "maya-ds4",
+      "--",
+      "-j1"
+    ],
+    "pid": 289869,
+    "returncode": 0,
+    "error": null,
+    "cleanup": [],
+    "elapsed_seconds": 696.4474361860193
+  },
+  "model_executed": false,
+  "production_changed": false
+}

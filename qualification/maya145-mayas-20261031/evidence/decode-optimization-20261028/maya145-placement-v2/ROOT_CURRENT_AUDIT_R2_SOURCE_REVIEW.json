@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-31T18:18:47.340177+00:00",
+  "entire_new_source_tests_read": true,
+  "source_sha256": {
+    "current_audit.py": "258870c28752ced63d23353256aee208751dbe4ea6ee949b077e935aac1048dc",
+    "test_current_audit.py": "8d4f5c9f966c413d5e3374a231101d9961bfd5a853db1e0a212edb9d08d5c39d",
+    "run_audit_cpu.py": "bd4ffe74e33a8d4d65f8e700945c2f055c165ec855b38c744f3cfde0b1fff1cb"
+  },
+  "input_sha256": {},
+  "test_ids": [
+    "test_current_audit.Audit.test_cap_partial_UNRUN_retry_and_broader_claim_refused",
+    "test_current_audit.Audit.test_complete_short_scope_only",
+    "test_current_audit.Audit.test_duplicate_and_nonfinite_saved_JSON_refused",
+    "test_current_audit.Audit.test_exact_comparison_preserves_types",
+    "test_current_audit.Audit.test_exact_window_exit0",
+    "test_current_audit.Audit.test_old_entry_or_other_arm_refused",
+    "test_current_audit.Audit.test_private_cleanup_required",
+    "test_current_audit.Audit.test_recorder_hashes_exact_small_bytes",
+    "test_current_audit.Audit.test_recorder_refuses_alias_and_large_evidence",
+    "test_current_audit.Audit.test_unreviewed_or_wrong_scoring_refused",
+    "test_current_audit.Audit.test_wrong_or_unfinished_window_refused",
+    "test_current_audit.CurrentFenceAudit.test_actual80_resource_contract",
+    "test_current_audit.CurrentFenceAudit.test_missing_failed_or_wrong_actual_install_refused",
+    "test_current_audit.CurrentFenceAudit.test_old76_and_unclean_or_foreign_resource_contract_refused"
+  ],
+  "scope": "Full prior reviewed sources plus entire parser-only and namespace deltas read; actual previous startup log is new source-schema CPU regression only, not prior arm regrade."
+}

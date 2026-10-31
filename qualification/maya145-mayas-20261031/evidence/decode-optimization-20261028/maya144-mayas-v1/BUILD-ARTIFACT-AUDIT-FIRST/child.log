@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import sys,json;from pathlib import Path;sys.path.insert(0,'/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1');import build_artifact as a;p=Path('/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1');s=a.inspect(p);(p/"BUILD-ARTIFACT-AUDIT-FIRST/snapshot.json").open("x").write(json.dumps(s,indent=2)+"\n");v=a.validate(s);(p/"BUILD-ARTIFACT-AUDIT-FIRST/result.json").open("x").write(json.dumps(v,indent=2)+"\n");print(json.dumps(v))
+                                                                                                                                                                                                                                                                                                                                                           ~~~~~~~~~^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/build_artifact.py", line 57, in inspect
+    after = hashlib.sha256(p.read_bytes()).hexdigest() if p.is_file() else None
+                           ~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 779, in read_bytes
+    return f.read()
+           ~~~~~~^^
+MemoryError

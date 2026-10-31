@@ -1,0 +1,46 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-10-31T18:18:38.255841+00:00",
+  "status": "BOUNDED_SOURCE_DELTA_ACCEPTANCE",
+  "scope": "Complete small placement/profile/controller/auditor/CPU-driver diffs against reviewed Maya145 root, all new/changed tests, and saved startup regression data; no execution",
+  "source_and_config_sha256": {
+    "engine_profile.py": "ec0f94d12f57b5e8c604297ce8db831e93e00ad1ed11b52c988558072c73692b",
+    "test_engine_profile.py": "dab34766a458f943966750f0e1c8c1b6fa966f9745fae20b35414419b81f3ee0",
+    "run_profile_cpu.py": "fcaa436f77e71f548f528fd95b1d7c49acac5ca3fdb7923cf6cf71f48d4e90fc",
+    "current_config.py": "f883855bcf16a9b90a7a634dac80d7fb8d84da624be20c1c3c2be7dcc343155b",
+    "current_runtime.py": "cf61a05d9970c8e78a218ab8df1ce93428200c54b826525dcb0d4997b2bf15a6",
+    "current_controls.py": "40858d29d03941ddec84a1728b02c0c9a9c5eba0238eb758838953c4af28a80f",
+    "current_compat.py": "9f9fa3f356232a2b35fb3e2d622c178451a8161e767cab866880684640ff0aa6",
+    "test_current_mode.py": "0313100f886d28931b7bc71ff54a974b4ea44da112c6bd86cf737a6513144cff",
+    "run_current_cpu.py": "1b14ccc5c82e893d008d81388915bfeeb5c25d2806abddab44659658a5e64841",
+    "current_audit.py": "258870c28752ced63d23353256aee208751dbe4ea6ee949b077e935aac1048dc",
+    "test_current_audit.py": "8d4f5c9f966c413d5e3374a231101d9961bfd5a853db1e0a212edb9d08d5c39d",
+    "run_audit_cpu.py": "bd4ffe74e33a8d4d65f8e700945c2f055c165ec855b38c744f3cfde0b1fff1cb",
+    "profile-base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa"
+  },
+  "saved_startup_sha256": {
+    "engine.log": "b398fa10113e263225470e025118a08b34338e2f02b51500079238a374394886",
+    "native-ready.json": "6e3ebde905cb932c4c2decbb99aec07101eb9c1e1efefd6f54ff9e6b52f0eb88",
+    "startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c"
+  },
+  "actionable_findings": [],
+  "assessment": [
+    "Deduplication is by device and full parsed placement-row equality. Any same-device conflict fails; identical repeats increment a disclosed counter and leave exactly two owning devices. Existing Q8/projection/device-count and TP2 arithmetic/reduction gates remain intact.",
+    "Synthetic tests cover identical TP1/TP2 repeats, conflicting same-device count changes, missing checks and foreign GPU rows. Saved native log has exactly two identical two-device placement snapshots with single Q8/projection checks per device, matching the intended narrow repair.",
+    "Saved startup CPU observation remains startup-only and reports drafter execution unproven and no quality/speed proof. Both new input-map drivers include all four saved startup files. This does not regrade the historical RTP2 attempt or establish an inference result.",
+    "DTP2/DTP1 namespaces are distinct from original attempted arms. Native path and artifact audit explicitly reference the unchanged Maya145 build; SHA remains adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f. No new build is implied."
+  ],
+  "limits": {
+    "tests_run": false,
+    "project_imports_executed": false,
+    "host_contacted_or_mutated": false,
+    "native_or_GPU_execution": false,
+    "source_edited": false,
+    "private_or_runtime_admission": false
+  },
+  "conditions": [
+    "New exact CPU proofs, source/input qualification and separate action-time admission remain required.",
+    "Historical HOLD and original failed evidence remain unchanged; this report does not claim new arm completion or native binary verification."
+  ]
+}

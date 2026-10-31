@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/baseline_restore.py", line 133, in <module>
+    print(json.dumps(run(args.review_sha256)),flush=True)
+                     ~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/baseline_restore.py", line 126, in run
+    try:return restore_sequence(h,save)
+               ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/baseline_restore.py", line 52, in restore_sequence
+    host.restore_ds()  # exact existing single-start owner and its unchanged1250s bound
+    ~~~~~~~~~~~~~~~^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/q8-sharing-v1/model-v1/q8share_model_runtime.py", line 312, in restore_ds
+    return super().restore_ds()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/activate_chunk4096.py", line 393, in restore_ds
+    if rc != 0: raise subprocess.CalledProcessError(rc, command)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+subprocess.CalledProcessError: Command '['systemctl', '--user', 'start', 'deepseek-hosted.service']' returned non-zero exit status 1.

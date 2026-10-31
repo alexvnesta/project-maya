@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/current_audit.py", line 338, in <module>
+    args=parser.parse_args();result=run(args.qualification_sha256,args.arm,parse(args.binding_json))
+                                    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/current_audit.py", line 324, in run
+    result=audit_saved(runtime,config,fixtures,saved,qa,q,pin,binding,arm)
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/current_audit.py", line 201, in audit_saved
+    rec.bytes(metadata / name)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/current_audit.py", line 52, in bytes
+    path = regular(path); require(path.stat().st_size <= MAX_EVIDENCE_BYTES, 'Saved receipt too large for bounded audit')
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/current_audit.py", line 28, in regular
+    require(path.is_file() and path.stat().st_nlink == 1, 'One regular evidence file')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/current_audit.py", line 14, in require
+    if not value: raise ValueError(why)
+                  ^^^^^^^^^^^^^^^^^^^^^
+ValueError: One regular evidence file

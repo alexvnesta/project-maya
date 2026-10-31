@@ -1,0 +1,39 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-10-31T17:44:30.529373+00:00",
+  "status": "BOUNDED_SOURCE_ACCEPTANCE_NATIVE_BINDING_PENDING",
+  "source_sha256": {
+    "engine_profile.py": "bbd727b107cb37fdeaf2ed3372e1b2d6ac79a6350f9eaef44a386d23494b1685",
+    "current_config.py": "683356767b3fb4b8f42a618d6120475fe81cbb961c327e762585b904e15dc348",
+    "current_runtime.py": "4e9e57354597bfc730505fe6a7ab3a67b2c5d9ef763a42a9c24ebef3aea0c337",
+    "current_controls.py": "40858d29d03941ddec84a1728b02c0c9a9c5eba0238eb758838953c4af28a80f",
+    "current_compat.py": "f45da256fd948e605da31757847c6f8ae4c19c6538b7e0b25e301da632818323",
+    "test_current_mode.py": "28cf699c5a1ce03a62e635e580f2497c0f42643101769174af96cd9396451bec",
+    "run_current_cpu.py": "2693b1f8e3306221f02eb45200e93a18ddf34e7f0f7baa7649fc30a663efe7db"
+  },
+  "auditor_source_sha256": {
+    "current_audit.py": "e44e9c77473f35e23ac5afcd2e34a07a7e0fb4b387bbfaec563be834882889e7",
+    "test_current_audit.py": "a51a93d3c77e3e093c022402901faeaf39173f11d75d3451c0efa00c2b5ab988",
+    "run_audit_cpu.py": "bd4ffe74e33a8d4d65f8e700945c2f055c165ec855b38c744f3cfde0b1fff1cb"
+  },
+  "review_scope": "Entire changed current_controls, all new current-mode and fence-auditor tests, complete current_compat/current_runtime/current_audit/run_current_cpu and namespace/profile diffs against prior reviewed family; final fence-fix delta inspected. run_audit_cpu is unchanged.",
+  "actionable_findings": [],
+  "resolved_finding": {
+    "id": "FENCE_INSTALL_READBACK",
+    "resolution": "Consumer now requires installed/mutation_attempted true, typed 0<=initial_current<80GiB, raw unit_installed 80GiB/zero-swap properties and exact Transient/InvocationID/ControlGroup/FragmentPath lineage. Positive fixture reflects successful install; counterfactuals reject failed flags, bool/exhausted current,76GiB,swap and foreign identity."
+  },
+  "bounded_assessment": [
+    "Local capacity validator retains old context/cancel/RAM/chunk/HTTP/image gates and consumes the exact current borrowed-chunk vision accounting without rewriting raw observations.",
+    "Fence runtime aliases use pinned pv_controls80GiB while legacy scoring and transport remain separate. Independent audit consumes installed, terminal, restored and collected evidence.",
+    "Pinned ae_controls STAT queue tap composes over the existing trace class. Request-scoped saved STAT validation checks identity, sample count, raw hash, bounded lines, unique fields and finite nonnegative DSpark values. Compatibility may truthfully leave execution unproven; required=True is available for later separately qualified timing.",
+    "RTP namespaces and profile path substitutions retain original selected92 restoration and do not reopen prior CTP arms."
+  ],
+  "conditions": [
+    "BASE_NATIVE remains the old6c25 placeholder during this review. Root must bind the completed new binary hash and exact actual native path; this report does not admit the placeholder as Maya145.",
+    "Final source hashes, fresh CPU proofs and action-time qualification must include any native-hash binding changes. No GPU/private/model or production mutation admission granted."
+  ],
+  "tests_run": false,
+  "project_imports_executed": false,
+  "host_contacted_or_mutated": false,
+  "source_edited": false
+}

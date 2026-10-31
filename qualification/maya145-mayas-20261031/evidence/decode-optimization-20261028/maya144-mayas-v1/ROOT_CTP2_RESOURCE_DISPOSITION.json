@@ -1,0 +1,110 @@
+{
+  "utc": "2026-10-31T16:46:51.833338+00:00",
+  "disposition": "RESOURCE_DEFERRED_BEFORE_RESERVE_OR_WINDOW_NOT_MODEL_ATTEMPT",
+  "actual_post_stop_available_bytes": 79044030464,
+  "required_bytes": 94489280512,
+  "private_attempted": false,
+  "new_GPU_window": false,
+  "old_owner_closed_exit0": true,
+  "selected_restored_public_verified": {
+    "passed": true,
+    "selected_identity": {
+      "native_pid": 246668,
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+      "context": 1048576,
+      "output_default": 262144,
+      "prompt_skip_mode": 1,
+      "prefill_chunk": 4096,
+      "Q8": [
+        1,
+        1
+      ],
+      "TP": 1,
+      "images": true,
+      "runtime_ablation": true,
+      "DSpark": true,
+      "CPU_experts": 4045,
+      "all_CPU_experts_RAM": true,
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.32,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2026
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.86,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2030
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "GPU_expert_slots_inferred": 11315,
+      "GPU_slots_direct_hosted_INFO": false,
+      "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+      "start_binding": {
+        "invocation": "6821dcdb48ab4cbe9d1773100e7b9f75",
+        "main_pid": 246394,
+        "native_pid": 246668,
+        "native_start_ticks": 173266903
+      },
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+    },
+    "public": {
+      "unauthenticated_models": 401,
+      "authenticated_models": 200,
+      "SSE_done": true,
+      "finish": "stop",
+      "known_answer_passed": true,
+      "content": "READY"
+    },
+    "health": {
+      "status": "ok",
+      "max_context": 1048576,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "images": true,
+      "api_key": false,
+      "image_generation": false,
+      "loaded": true,
+      "service": "strata",
+      "busy": false,
+      "switcher": {
+        "active_model": "deepseek",
+        "inflight": 0,
+        "waiting": 0,
+        "nondefault_idle_seconds": 900.0,
+        "default_model": "deepseek",
+        "fault": null
+      }
+    }
+  },
+  "registry_empty": true,
+  "restored_binding": {
+    "invocation": "6821dcdb48ab4cbe9d1773100e7b9f75",
+    "main_pid": 246394,
+    "native_pid": 246668,
+    "native_start_ticks": 173266903
+  },
+  "original_receipts_preserved": true,
+  "memory_observation": "At16:41 after restoration,121.4GiBtotal,50.4GiBavailable, selected native37.3GiBanon/4.9GiBshmem/0swap; /dev/shm22.15GiB allocated in941unreferenced files, five2GiB files fromOct12-20. No deletion/pruning/VM changes. Shared-memory data ownership not proven."
+}

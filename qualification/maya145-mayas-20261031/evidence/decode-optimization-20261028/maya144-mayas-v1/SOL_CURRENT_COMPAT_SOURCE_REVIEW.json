@@ -1,0 +1,31 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-10-31T16:21:55.585473+00:00",
+  "status": "NO_ACTIONABLE_BUG_IDENTIFIED_IN_INSPECTED_SOURCE",
+  "scope": "Selective prospective compatibility-owner source integration review; no GPU admission",
+  "source_sha256": {
+    "current_runtime.py": "04a7d12221b2d7f088943a66e1a9859a1195f755673d76da4bd7a29446b936ef",
+    "current_compat.py": "d0baaa1385763881e44544a6e9b72c03b8f0e11bb0f0117bf0bb3a45540628b3",
+    "current_config.py": "aa04add2dd322a4c003e7a07bf112347519f28f759343bfc0d54f0dcf010f96d",
+    "current_controls.py": "73dfbe859233dd222519b945da44f62bc59e3a018872d5d7ef155c23449e72f0",
+    "engine_profile.py": "a6ebdeada78953b3e21eb31b6623622881b7da9948efb4a2355a6aa4d1b27d04"
+  },
+  "actionable_findings": [],
+  "bounded_observations": [
+    "P is the new owner directory and E resolves to reliability-optimization-20261025; new output/metadata/registry namespaces remain distinct from inherited original arms.",
+    "CurrentHost overrides qualification/preflight/phase launch while retaining inherited selected4096 restoration; no patch of inherited runtime/config globals appears. selected native92 and candidate native6c25 have distinct custody checks.",
+    "The private API Popen handle is appended to api_processes before server-start receipt emission or startup wait. Existing body_and_cleanup is enclosed by the owned resource fence.",
+    "The TP2 profile sets --tp2, DS4_TP_GGUF_UNEVEN=1, DS4_TP_CHECK=1 and DS4_AR2=1. The process consumer compares actual argv and all controlled native env keys. Source-specific startup validation requires both owning-device Q8/projection checks, actual TP2 trunk/member placement and TP-check/FP32-reduction log evidence.",
+    "Single frozen short-cold literal only, zero expected reuse, one native request on success and no long-prompt activation claim. No quality, numerical equivalence or timing acceptance is inferred."
+  ],
+  "reviewed_reuse": [
+    "Relevant make_host/support/coordination custody from performance-v2/pv_runtime.py",
+    "Relevant original model-v1/ms_compat.py phase/controller integration"
+  ],
+  "limitations": [
+    "Read-only source inspection and stdlib report generation only; no project imports, tests, model/native/GPU execution, staging or Ubuntu access.",
+    "Transitive implementation of inherited restoration/coordinate/fence/admission helpers was not independently reopened; relevant pv_runtime/ms_compat reuse was inspected. Root separately confirmed by manual read that ms_controls.fenced_phase and q8_phase.admission enforce generic exact ownership and proof arm/output equality without an old namespace/arm restriction.",
+    "CPU proofs, exact input maps and real physical TP2/startup results remain separate admission/evidence work. This report grants no private phase or production mutation permission."
+  ],
+  "root_confirmation": "Root confirmed latest user authority permits interrupting active inference via inherited drain/coordinate; no strict-idle private admission requirement is inferred by this review."
+}

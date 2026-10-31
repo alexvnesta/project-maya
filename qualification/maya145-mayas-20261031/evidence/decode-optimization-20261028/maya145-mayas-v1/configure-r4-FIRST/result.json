@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "stage": "configure",
+  "child": {
+    "argv": [
+      "/usr/bin/cmake",
+      "-S",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2",
+      "-B",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/native-build-r2-FIRST",
+      "-G",
+      "Unix Makefiles",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DSTRATA_ENABLE_CUDA=ON",
+      "-DSTRATA_ENABLE_HIP=OFF",
+      "-DSTRATA_BUILD_TESTS=OFF",
+      "-DCMAKE_CUDA_ARCHITECTURES=80",
+      "-DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc",
+      "-DCMAKE_CXX_COMPILER=/usr/bin/c++",
+      "-DCMAKE_C_COMPILER=/usr/bin/cc",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DSTRATA_GGML_DIR=/home/alex/strata-deepseek-test-20261024/llama.cpp",
+      "-DFETCHCONTENT_FULLY_DISCONNECTED=ON",
+      "-DCMAKE_FIND_USE_PACKAGE_REGISTRY=OFF",
+      "-DCMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY=OFF"
+    ],
+    "pid": 288670,
+    "returncode": 0,
+    "error": null,
+    "cleanup": [],
+    "elapsed_seconds": 3.5674641649238765
+  },
+  "model_executed": false,
+  "production_changed": false
+}

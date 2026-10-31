@@ -1,0 +1,24 @@
+{
+  "run_id": "20261031T180812Z",
+  "mode": "compatibility",
+  "arm": "RTP2",
+  "controller": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145-mayas-TP2-20261031T175329Z/state.json",
+  "controller_sha256": "233439376c812688e1984bdbbb3aa9897b6ce8677541786ff960e7d9cb58c699",
+  "failed_window": "/home/alex/strata-deepseek-test-20261024/windows/20261031T175433Z.json",
+  "failed_window_sha256": "c650d59d215f695ee279ec2b7db9e39a1f678f569a540ef7d9ec86d4e3d23a10",
+  "last_clean_window": "/home/alex/strata-deepseek-test-20261024/windows/20261031T172408Z.json",
+  "last_clean_window_sha256": "92711f91b6f7760da1498cbf94b8f1d9302a996a392e2695398cba3628efd73b",
+  "last_clean_telemetry_sha256": "1eebbca42fb4ce3d447ba9c7510919c683b1dccefdc4d828f347d38692fd993b",
+  "old_close": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145-mayas-TP2-20261031T175329Z/old-owner-close.json",
+  "old_close_sha256": "b92b74ef96f081392193636a14c70bca212cba607f3f547f1b8eb0ec5fd1b6c4",
+  "stopped_unit": {
+    "ActiveState": "inactive",
+    "InvocationID": "5300391529984dbe92fdfeb783c3b979",
+    "MainPID": "0",
+    "Result": "success"
+  },
+  "kernel_since": "2026-10-31 17:53:29 UTC",
+  "manual_diagnosis_complete": true,
+  "failed_arm_remains_HOLD": true,
+  "diagnosis": "Native1.1.45 and privateAPI loaded then exited0. Native emits two identical placement snapshots; validator incorrectly counts4 rows as4 owners. No inference issued. Actual80GiB/Swap0 installed and kernelclean. Preserve attemptedRTP2 unchangedHOLD; independently clean baselinehealth24 and separately restore selected92 before prospective distinct parser-only qualification. No rerun/regrade."
+}

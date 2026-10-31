@@ -1,0 +1,24 @@
+{
+  "run_id": "20261031T171736Z",
+  "mode": "compatibility",
+  "arm": "CTP2",
+  "controller": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya144-mayas-TP2-20261031T165111Z/state.json",
+  "controller_sha256": "59751fcab1083e5069bebd00931e6b5842bcf68023d4e9958db6b5eeac480293",
+  "failed_window": "/home/alex/strata-deepseek-test-20261024/windows/20261031T165214Z.json",
+  "failed_window_sha256": "44a5dafa816b39f9d5126be94705cf66e2cfd424017cc12ae6947c6445acbc9b",
+  "last_clean_window": "/home/alex/strata-deepseek-test-20261024/windows/20261031T101934Z.json",
+  "last_clean_window_sha256": "a87baddfb058f44b77c0bb20e38cf8ed2f2d3aaa8990fb1869f3d88e696dff6e",
+  "last_clean_telemetry_sha256": "1c9d74084e831096ca2448a75118eba1f86b6b71bdcc1f1e3ecc549d37947617",
+  "old_close": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya144-mayas-TP2-20261031T165111Z/old-owner-close.json",
+  "old_close_sha256": "5f38e211eb4798ddf993c1131fdacb40d9413fcbf97606a8ea435459a632b24e",
+  "stopped_unit": {
+    "ActiveState": "failed",
+    "InvocationID": "9de0c6677ae74f198a9f1586d3d01946",
+    "MainPID": "0",
+    "Result": "exit-code"
+  },
+  "kernel_since": "2026-10-31 16:51:11 UTC",
+  "manual_diagnosis_complete": true,
+  "failed_arm_remains_HOLD": true,
+  "diagnosis": "New native/API loaded then closed0; stale vision-memory observer rejected before any inference, borrowed76GiB fence differs intended80GiB. Previous selected start refused in ExecStartPre before native spawn because latest window failed. Preserve all failures; run unchanged baseline health24 in new owned window, independently review, separately admit selected92 restoration. No candidate replay or hosting preflight bypass."
+}

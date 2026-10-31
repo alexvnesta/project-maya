@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-31T16:13:00.028680+00:00",
+  "entire_new_source_tests_read": true,
+  "reviewer": "ROOT",
+  "source_sha256": {
+    "build_artifact.py": "30c7b2398cfbdef92bb8ec40c73310fc5e8f1cfb4203ce38054f1b3ab198a4ea",
+    "test_build_artifact.py": "c4568c3c5399540cbb69a34bf6879026081be8159129013417b5f977fe6f189c",
+    "run_artifact_cpu.py": "dc9da15350b6f0464984051024d0dbb37b19e9d355d398223f5c7ebcb64c873b"
+  },
+  "input_sha256": {},
+  "test_ids": [
+    "test_build_artifact.Audit.test_claim_or_surviving_group_refused",
+    "test_build_artifact.Audit.test_complete_independent_scope",
+    "test_build_artifact.Audit.test_different_error_refused",
+    "test_build_artifact.Audit.test_failed_child_refused",
+    "test_build_artifact.Audit.test_input_omission_refused",
+    "test_build_artifact.Audit.test_progress_cleanup_command_required",
+    "test_build_artifact.Audit.test_progress_modified_instead_of_absent_refused",
+    "test_build_artifact.Audit.test_regraded_original_refused",
+    "test_build_artifact.Audit.test_source_change_refused",
+    "test_build_artifact.Audit.test_wrong_artifact_or_format_refused",
+    "test_build_artifact.Audit.test_wrong_build_command_refused",
+    "test_build_artifact.Audit.test_wrong_qualification_refused"
+  ],
+  "scope": "Separate saved-build artifact completion; original supervisor rc1 stays unchanged; no rebuild, model or GPU proof"
+}

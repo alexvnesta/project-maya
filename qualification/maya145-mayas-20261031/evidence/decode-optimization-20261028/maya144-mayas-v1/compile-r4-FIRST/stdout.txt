@@ -1,0 +1,106 @@
+[  8%] Built target ggml-base
+[ 11%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/vec.cpp.o
+[ 11%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/ops.cpp.o
+[ 11%] Building C object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/quants.c.o
+[ 11%] Building CXX object ggml/src/CMakeFiles/ggml-cpu.dir/ggml-cpu/arch/x86/repack.cpp.o
+[ 14%] Linking CXX static library libggml-cpu.a
+[ 22%] Built target ggml-cpu
+[ 22%] Built target maya_build_id
+[ 22%] Building CUDA object CMakeFiles/strata_core.dir/src/core/device.cu.o
+[ 25%] Building CUDA object CMakeFiles/strata_core.dir/src/core/pinned.cu.o
+[ 25%] Building CXX object CMakeFiles/strata_core.dir/src/platform/memory.cpp.o
+[ 25%] Building CXX object CMakeFiles/strata_core.dir/src/core/graph.cpp.o
+[ 28%] Building CXX object CMakeFiles/strata_core.dir/src/core/weights.cpp.o
+[ 28%] Building CXX object CMakeFiles/strata_core.dir/src/core/layout.cpp.o
+[ 28%] Linking CXX static library libstrata_core.a
+[ 28%] Built target strata_core
+[ 28%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/dequant_s2.cu.o
+[ 28%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/s2_gemv.cu.o
+[ 31%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/s_gemv.cu.o
+[ 31%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/s2_gemv_quads.cu.o
+[ 31%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/s2_gemv_fast.cu.o
+[ 31%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/router_top10.cu.o
+[ 34%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/router_sigmoid.cu.o
+[ 34%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/quantize_act.cu.o
+[ 34%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/rope.cu.o
+[ 37%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/sampler.cu.o
+[ 37%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/s2_gemv_q8.cu.o
+[ 37%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/s2_expert_grouped.cu.o
+[ 40%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/shared_expert.cu.o
+[ 40%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/gr.cu.o
+[ 40%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/gdn.cu.o
+[ 40%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/glm_hc.cu.o
+[ 42%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/glm_kda.cu.o
+[ 42%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/glm_ffn.cu.o
+[ 42%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/glm_dsa.cu.o
+[ 45%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/qsa.cu.o
+[ 45%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/elementwise.cu.o
+[ 45%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/bf16_gemv.cu.o
+[ 45%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_mmvq.cu.o
+[ 48%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_bf16.cu.o
+[ 48%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_gr_norm.cu.o
+[ 48%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_moe.cu.o
+[ 51%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_gdn.cu.o
+[ 51%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_gr_postops.cu.o
+[ 51%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_router.cu.o
+[ 54%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_gdn_preprocess.cu.o
+[ 54%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_qsa.cu.o
+[ 54%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_rope.cu.o
+[ 54%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_ple_postops.cu.o
+[ 57%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_flash_attn.cu.o
+[ 57%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_qsa_indexer.cu.o
+[ 57%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/native_qsa_score.cu.o
+[ 60%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/ple.cu.o
+[ 60%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/kv_q8.cu.o
+[ 60%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/kv_stream.cu.o
+[ 60%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/kv_q4.cu.o
+[ 62%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/fused_gr.cu.o
+[ 62%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/cvec.cu.o
+[ 62%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/qsa_decode_attn.cu.o
+[ 65%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/qsa_prompt_attn.cu.o
+[ 65%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/fused_gdn.cu.o
+[ 65%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/dequant_bf16.cu.o
+[ 68%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/qsa_select.cu.o
+[ 68%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/verify_kernels.cu.o
+[ 68%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/iq_kernels.cu.o
+[ 68%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/glm_fast.cu.o
+[ 71%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/glm_batch.cu.o
+[ 71%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/exl3.cu.o
+[ 71%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/exl3_legacy.cu.o
+[ 74%] Building CUDA object CMakeFiles/strata_kernels.dir/src/kernels/cuda/glm_kv_stream.cu.o
+[ 74%] Building CXX object CMakeFiles/strata_kernels.dir/src/kernels/ngram.cpp.o
+[ 74%] Building CXX object CMakeFiles/strata_kernels.dir/src/ngram/ple_reader.cpp.o
+[ 74%] Building CXX object CMakeFiles/strata_kernels.dir/src/platform/direct_file.cpp.o
+[ 77%] Linking CXX static library libstrata_kernels.a
+[ 77%] Built target strata_kernels
+[ 80%] Building CXX object CMakeFiles/strata_spec.dir/src/spec/suffix_drafter.cpp.o
+[ 80%] Building CXX object CMakeFiles/strata_spec.dir/src/spec/controller.cpp.o
+[ 80%] Building CXX object CMakeFiles/strata_spec.dir/src/spec/draft_policy.cpp.o
+[ 82%] Linking CXX static library libstrata_spec.a
+[ 82%] Built target strata_spec
+[ 82%] Building CXX object CMakeFiles/strata_kernels_cpu.dir/src/kernels/cpu/pool.cpp.o
+[ 82%] Building CXX object CMakeFiles/strata_kernels_cpu.dir/src/kernels/cpu/expert_layout.cpp.o
+[ 85%] Building CXX object CMakeFiles/strata_kernels_cpu.dir/src/kernels/cpu/exl3_ref.cpp.o
+[ 85%] Building CXX object CMakeFiles/strata_kernels_cpu.dir/src/kernels/cpu/expert.cpp.o
+[ 85%] Building CXX object CMakeFiles/strata_kernels_cpu.dir/src/kernels/cpu/q2_avx2.cpp.o
+[ 88%] Building CXX object CMakeFiles/strata_kernels_cpu.dir/src/kernels/cpu/exl3_cpu.cpp.o
+[ 88%] Building CXX object CMakeFiles/strata_kernels_cpu.dir/src/kernels/cpu/native_expert.cpp.o
+[ 88%] Building CXX object CMakeFiles/strata_kernels_cpu.dir/src/kernels/cpu/iq_avx512.cpp.o
+[ 88%] Building CXX object CMakeFiles/strata_kernels_cpu.dir/src/kernels/cpu/iq_avx2.cpp.o
+[ 91%] Building CXX object CMakeFiles/strata_kernels_cpu.dir/src/kernels/cpu/kq_avx512.cpp.o
+[ 91%] Building CXX object CMakeFiles/strata_kernels_cpu.dir/src/kernels/cpu/iq_avx512_one.cpp.o
+[ 91%] Linking CXX static library libstrata_kernels_cpu.a
+[ 91%] Built target strata_kernels_cpu
+[ 91%] Building CXX object CMakeFiles/maya-ds4.dir/src/ds4/ds4_main.cpp.o
+[ 91%] Building CUDA object CMakeFiles/maya-ds4.dir/src/ds4/ds4_model.cu.o
+[ 94%] Building CUDA object CMakeFiles/maya-ds4.dir/src/ds4/ds4_kernels.cu.o
+[ 94%] Building CUDA object CMakeFiles/maya-ds4.dir/src/ds4/ds4_vision.cu.o
+[ 94%] Building CUDA object CMakeFiles/maya-ds4.dir/src/ds4/ds4_gguf.cu.o
+[ 94%] Building CXX object CMakeFiles/maya-ds4.dir/src/ds4/ds4_gguf_cpu.cpp.o
+[ 97%] Building CUDA object CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq.cu.o
+[ 97%] Building CXX object CMakeFiles/maya-ds4.dir/src/ds4/ds4_iq_cpu.cpp.o
+[ 97%] Building CUDA object CMakeFiles/maya-ds4.dir/src/ds4/ds4_lt.cu.o
+[100%] Building CXX object CMakeFiles/maya-ds4.dir/src/ds4/ds4_host_ar.cpp.o
+[100%] Building CXX object CMakeFiles/maya-ds4.dir/src/ds4/ds4_packinfo.cpp.o
+[100%] Linking CXX executable maya-ds4
+[100%] Built target maya-ds4

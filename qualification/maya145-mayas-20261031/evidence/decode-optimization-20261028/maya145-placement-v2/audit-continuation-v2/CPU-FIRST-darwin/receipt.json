@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "controls": 7,
+  "test_ids": [
+    "test_continuation.Continuation.test_candidate_identity_cannot_be_used_for_baseline",
+    "test_continuation.Continuation.test_current_producer_consumer_uses_selected_not_candidate",
+    "test_continuation.Continuation.test_downstream_window_is_bound_to_recorded_canonical_phase",
+    "test_continuation.Continuation.test_exact_first_failure_preserved",
+    "test_continuation.Continuation.test_original_producer_contract_no_max_tokens_override",
+    "test_continuation.Continuation.test_undetected_native_or_other_fault_never_continued",
+    "test_continuation.Continuation.test_wrong_or_boolean_exit_and_unclean_failure_refused"
+  ],
+  "source_sha256": {
+    "continuation.py": "06c31d746092a5c33dd959cd75850cae7ce797422bb63bc86020cbd89cd02f99",
+    "test_continuation.py": "e4aed859d9a9b5f65041ffc84c8b9b9db6b3552519befa5c936259795c8eb03c",
+    "run_cpu.py": "9a97dd92c00a7d0153e73ababe3e3a6925c194c54a111803ce00ce922b8d9b7c"
+  },
+  "input_sha256": {
+    "original/current_audit.py": "258870c28752ced63d23353256aee208751dbe4ea6ee949b077e935aac1048dc",
+    "original/current_runtime.py": "cf61a05d9970c8e78a218ab8df1ce93428200c54b826525dcb0d4997b2bf15a6",
+    "original/current_config.py": "f883855bcf16a9b90a7a634dac80d7fb8d84da624be20c1c3c2be7dcc343155b",
+    "original/engine_profile.py": "ec0f94d12f57b5e8c604297ce8db831e93e00ad1ed11b52c988558072c73692b",
+    "original/qualification.json": "255a9243c1172bb17b26092c69b3264cf974e31446e9b4a58dea6c8c4ac89659",
+    "original/failed-child.json": "02ccb564eeb6e88fbe0fe6f8c2a1fd954ae71ea84aa3ae828049890976b6d2c1",
+    "original/failed-child.log": "b67a8f5badb1eb196d54df01171d946a80b68c4426888857208391fe3da8f400",
+    "PREFIX_ROOT_REVIEW.json": "0ea29d2118b072142de8d8e8db1348308cd11e40c129abea4a72f025652993fd",
+    "lc_audit.py": "04c74fdbed213ea037e94827fe5fdd6c52af3981cca7d59b64219bfc78960334"
+  },
+  "observed": {
+    "pid": 26082,
+    "ppid": 26081,
+    "pgid": 26082,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "native_or_service_executed": false
+}

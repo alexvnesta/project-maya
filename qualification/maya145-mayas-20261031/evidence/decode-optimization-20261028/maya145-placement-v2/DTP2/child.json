@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-I",
+    "-B",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/current_audit.py",
+    "--qualification-sha256",
+    "255a9243c1172bb17b26092c69b3264cf974e31446e9b4a58dea6c8c4ac89659",
+    "--arm",
+    "DTP2",
+    "--binding-json",
+    "{\"invocation\":\"7ad654ccf35845e8825fbb7b829e1092\",\"main_pid\":330770,\"native_pid\":330807,\"native_start_ticks\":173987085}"
+  ],
+  "pid": 335783,
+  "returncode": 1,
+  "error": "ValueError('Child nonzero')",
+  "cleanup": [],
+  "elapsed_seconds": 0.7688182250130922
+}

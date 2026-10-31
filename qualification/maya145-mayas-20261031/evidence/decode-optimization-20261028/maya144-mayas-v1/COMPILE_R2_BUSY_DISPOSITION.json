@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-31T15:53:18.135448+00:00",
+  "status": "DEFERRED_BUSY_OWN_COMPILER_CLEANLY_STOPPED_PARTIALS_RETAINED",
+  "native_or_API_or_GPU_fault": false,
+  "original_child_returncode": -15,
+  "original_supervision_not_regraded": true,
+  "own_group_cleanup_passed": true,
+  "CPU_claim_released": true,
+  "reason": "An ordinary hosted request arrived during CPU compilation; prior guard required idle throughout. New R4 will still admit idle but let a captured CUDA-hidden bounded CPU group continue alongside healthy work, with 20GiB physical headroom.",
+  "continuation_requires_fresh_CPU_source_proof_and_partial_input_pin_review": true,
+  "download_note": "Frozen acquisition independently deferred itself at15:27:36 when configure claimed active_cpu_build. Its worker exited75; verified and partial assets remain. Do not restart it during build/private phases. This is independent from Maya-S assets, already fully verified."
+}

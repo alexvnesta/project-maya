@@ -1,0 +1,36 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-10-31T17:23:14.299770+00:00",
+  "status": "BOUNDED_SOURCE_ACCEPTANCE",
+  "sol_entire_source_and_tests_read": true,
+  "read_basis": "Previously fully read recovery-v2 bytes verified unchanged against prior review hashes, then complete v3 diffs in all three files read, including every new historical-path test. run_cpu.py is byte-identical.",
+  "source_sha256": {
+    "recovery.py": "b67ab5454211b9f47d4e4463bef0a03c232e72af456e27037153d9a0235caca8",
+    "test_recovery.py": "581ad1fc5266acd39e956f7eb9d6d7b7a2709591c5402eb8e49ab66ced3e814b",
+    "run_cpu.py": "9ed712d30c3b17d8e417aa68703e82c7f0516d70c0fb0c5f7292c89e47091726"
+  },
+  "reviewed_v2_source_sha256": {
+    "recovery.py": "bb08e9f77fc4459e809eb498c4dd9040c4b51571a3fbae44a3a0687b085da851",
+    "test_recovery.py": "649b1a88afa89746bc2fa4e6d2042c591a8afd5aa237b71657ec6755c9cdc766",
+    "run_cpu.py": "9ed712d30c3b17d8e417aa68703e82c7f0516d70c0fb0c5f7292c89e47091726"
+  },
+  "actionable_findings": [],
+  "assessment": [
+    "Historical input-map bytes remain pinned to OLD_MAP_SHA. Only those map keys are lexically normalized; each original and normalized path must refer to the same inode via samefile, avoiding silent reinterpretation of symlink/parent traversal.",
+    "Normalized-key collisions with different pins fail closed. Qualification still requires every normalized historical pin and hashes the canonical files. The general qualified input-map rule continues to reject parent components.",
+    "New tests cover an actual parent-component path to the same file, conflicting normalized pins, relative input refusal and different-resolution refusal. No claim that these tests were run.",
+    "All changed namespace checks and recovery-state reads/writes consistently use recovery-v3 / maya144_recovery_v3_current. Separate health/restore admissions, no-replay audit/output paths, own-claim cleanup and public-only pending continuation retain the previously reviewed logic."
+  ],
+  "boundaries": {
+    "tests_run": false,
+    "project_imports_executed": false,
+    "host_contacted_or_mutated": false,
+    "GPU_or_native_execution": false,
+    "source_edited": false,
+    "health_restore_or_private_admission": false
+  },
+  "limitations": [
+    "This is a narrow source-delta review. Actual historical paths/inodes and current production state were not queried on Ubuntu.",
+    "Fresh exact CPU proof and separate concrete health/restore admissions remain required. No action, replay or bypass is authorized."
+  ]
+}

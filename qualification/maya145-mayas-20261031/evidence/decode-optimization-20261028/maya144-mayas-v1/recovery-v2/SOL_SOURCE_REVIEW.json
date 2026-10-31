@@ -1,0 +1,40 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-10-31T17:15:36.862773+00:00",
+  "status": "BOUNDED_SOURCE_ACCEPTANCE",
+  "sol_entire_source_and_tests_read": true,
+  "scope": "Complete new recovery wrapper, tests and CPU driver source review, with all diffs against unchanged original counterparts inspected",
+  "source_sha256": {
+    "recovery.py": "bb08e9f77fc4459e809eb498c4dd9040c4b51571a3fbae44a3a0687b085da851",
+    "test_recovery.py": "649b1a88afa89746bc2fa4e6d2042c591a8afd5aa237b71657ec6755c9cdc766",
+    "run_cpu.py": "9ed712d30c3b17d8e417aa68703e82c7f0516d70c0fb0c5f7292c89e47091726"
+  },
+  "original_counterpart_sha256": {
+    "ms_recovery.py": "c08902604306b3ad689e14706025ba88a0d437dd13b2c25fc588fde9f3923d4f",
+    "test_ms_recovery.py": "b92d1f09801076e4910a3a4631e39267c3f1083974b11f29a0e060e2b0414221",
+    "run_cpu.py": "da17ec90135e0cb64d7f336a230b26f2628f280fea6ed8a68c806c297237df30"
+  },
+  "actionable_findings": [],
+  "assessment": [
+    "The diff is confined to the new family/controller/output/state namespaces, recovery/test module names, compatibility CTP2 restriction and Sol review labels. No health binary, helper pin or startup/restoration implementation change was introduced.",
+    "Diagnosis requires the exact new CTP2 failed controller, distinct failed/clean windows, frozen stopped-unit identity, old-owner close evidence and manual HOLD diagnosis. The failed controller and arm evidence remain retained.",
+    "Health and restore are separately admitted. Health reserves a fresh output/audit namespace and parent-bound canonical entry; it invokes only the unchanged two-device baseline-health binary and does not start a model.",
+    "Restore consumes pinned complete health raw files, per-child identity/bounds and result contracts, an independently reviewed 24-case receipt and the actual latest clean health window before its sole restore_ds call. No health failure branch attempts restoration.",
+    "Own-state claims and releases consistently use maya144_recovery_v2_current. Foreign replacement checks remain intact; uncertain cleanup retains the active phase. Partial CAS write/readback failure has an exact own-claim capture path.",
+    "Public-pending continuation binds the restored owner and original admission, refuses other phases, checks idle before claiming and invokes only verify_target. It never starts or restarts the native/model unit.",
+    "The CPU driver and synthetic tests retain source/input/ID binding and bounded child cleanup. New exact both-host CPU proofs remain required; source review does not substitute for them."
+  ],
+  "boundaries": {
+    "tests_run": false,
+    "project_imports_executed": false,
+    "ubuntu_contacted": false,
+    "health_binary_executed": false,
+    "native_or_model_started": false,
+    "source_edited": false,
+    "GPU_health_or_restoration_admission": false
+  },
+  "notes": [
+    "The earlier direct restoration failure and current stopped production facts were supplied by the parent; this review did not independently inspect live state or raw run receipts.",
+    "This accepts the inspected mechanical adaptation at source level only. Diagnosis pins, new CPU proofs and each concrete health/restore admission remain separate. No replay, bypass, candidate retry or failed-arm regrade is authorized."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "controls": 12,
+  "test_ids": [
+    "test_build_artifact.Audit.test_claim_or_surviving_group_refused",
+    "test_build_artifact.Audit.test_complete_independent_scope",
+    "test_build_artifact.Audit.test_different_error_refused",
+    "test_build_artifact.Audit.test_failed_child_refused",
+    "test_build_artifact.Audit.test_input_omission_refused",
+    "test_build_artifact.Audit.test_progress_cleanup_command_required",
+    "test_build_artifact.Audit.test_progress_modified_instead_of_absent_refused",
+    "test_build_artifact.Audit.test_regraded_original_refused",
+    "test_build_artifact.Audit.test_source_change_refused",
+    "test_build_artifact.Audit.test_wrong_artifact_or_format_refused",
+    "test_build_artifact.Audit.test_wrong_build_command_refused",
+    "test_build_artifact.Audit.test_wrong_qualification_refused"
+  ],
+  "source_sha256": {
+    "build_artifact.py": "30c7b2398cfbdef92bb8ec40c73310fc5e8f1cfb4203ce38054f1b3ab198a4ea",
+    "test_build_artifact.py": "c4568c3c5399540cbb69a34bf6879026081be8159129013417b5f977fe6f189c",
+    "run_artifact_cpu.py": "dc9da15350b6f0464984051024d0dbb37b19e9d355d398223f5c7ebcb64c873b"
+  },
+  "input_sha256": {},
+  "observed": {
+    "pid": 140925,
+    "ppid": 140924,
+    "pgid": 140925,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "native_executed": false,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false
+}

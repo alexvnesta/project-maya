@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-31T15:31:10.446268+00:00",
+  "status": "FIRST_CONFIGURE_HOLD_OFFLINE_DIAGNOSED",
+  "cause": "Source snapshot omitted tests/; current upstream CMake declares eleven test targets despite STRATA_BUILD_TESTS=OFF. Compiler ABI checks succeeded; CMake generation refused absent sources.",
+  "child_pid": 111773,
+  "returncode": 1,
+  "owned_cleanup_complete": true,
+  "CPU_claim_released": true,
+  "no_model_or_GPU_phase": true,
+  "production_not_stopped": true,
+  "raw_files": {
+    "attempt.json": "85c2e5a7d238f62eff799c6435f324a706768f5c5ab06519ffdf1391db10334a",
+    "child.json": "b1bef0a919f5165ff2fc865aaca5780ce109907ff8e83b38dbee3783418d1b45",
+    "supervision.json": "660566180e0df327e2b894478ddf02fc0c4a9a4e58f9eeb1c172a4558cb06342",
+    "stdout.txt": "96f0305d298065134c591ddbc6a3a174a0a7f9aee4e92cbe7ad54728da826adc",
+    "stderr.txt": "a011b96642b61607cae0eb273e94da903fb372ad32a358f67c3793fe9df5b79f"
+  },
+  "repair": "Fresh source-r2 full build tree including tests/bench/tools, literal referenced-source preflight before configure, new exact both-host CPU qualification and fresh configure/build directories; original failure and source remain intact. No blind retry/regrade."
+}

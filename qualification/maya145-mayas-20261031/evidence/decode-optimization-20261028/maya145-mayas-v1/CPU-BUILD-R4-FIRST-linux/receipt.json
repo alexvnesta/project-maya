@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "controls": 37,
+  "test_ids": [
+    "test_build_current.Controls.test_active_work_refused",
+    "test_build_current.Controls.test_active_worker_refused",
+    "test_build_current.Controls.test_actual_cmake_has_unconditional_test_sources",
+    "test_build_current.Controls.test_actual_configure_closure_required",
+    "test_build_current.Controls.test_actual_resource_drift_refused",
+    "test_build_current.Controls.test_after_cpu_spawn_ordinary_healthy_work_allowed",
+    "test_build_current.Controls.test_busy_refused",
+    "test_build_current.Controls.test_changed_capacity_model_default_refused",
+    "test_build_current.Controls.test_cleanup_fault_blocks",
+    "test_build_current.Controls.test_compiler_memory_margin_and_typed_observation",
+    "test_build_current.Controls.test_complete_download",
+    "test_build_current.Controls.test_complete_literal_source_inventory",
+    "test_build_current.Controls.test_configure_full_source_and_current_cpu",
+    "test_build_current.Controls.test_counter_bool_or_missing_refused",
+    "test_build_current.Controls.test_each_wrong_asset_field_refused",
+    "test_build_current.Controls.test_empty_map_refused",
+    "test_build_current.Controls.test_failed_configure_closure_blocks_compile",
+    "test_build_current.Controls.test_failed_download_refused",
+    "test_build_current.Controls.test_fault_refused",
+    "test_build_current.Controls.test_fixed_architecture_no_gpu_probe",
+    "test_build_current.Controls.test_foreign_stage_refused",
+    "test_build_current.Controls.test_guard_refuses_before_spawn",
+    "test_build_current.Controls.test_healthy_idle",
+    "test_build_current.Controls.test_healthy_work_guard_fault_still_terminal",
+    "test_build_current.Controls.test_inherited_toolchain_flags_excluded",
+    "test_build_current.Controls.test_initial_build_admission_remains_idle",
+    "test_build_current.Controls.test_inputs_missing_changed_or_alias_refused",
+    "test_build_current.Controls.test_nonzero_preserved",
+    "test_build_current.Controls.test_omitted_source_refused_before_configure",
+    "test_build_current.Controls.test_owned_clean_completion",
+    "test_build_current.Controls.test_partial_download_refused",
+    "test_build_current.Controls.test_serial_native_target_only",
+    "test_build_current.Controls.test_source_reviewed_inactive_bench_guard",
+    "test_build_current.Controls.test_spawn_callback_follows_handle_capture",
+    "test_build_current.Controls.test_switcher_work_refused",
+    "test_build_current.Controls.test_unguarded_bench_stays_required",
+    "test_build_current.Controls.test_unpinned_configure_closure_blocks_compile"
+  ],
+  "source_sha256": {
+    "build_current.py": "e27fb496a5000a1e8d83f91459e21617231fa90c454c1e800d006a4f2aa24728",
+    "test_build_current.py": "dd1f52ca8c8df6a80ab4676f8cf610ab127d6c6c83a7e575aec479fc6f42b362",
+    "run_build_cpu.py": "36f7017b4aea12b131b9f3e268028f5b818003a6d4868c9b6703cda3c706f686",
+    "CMakeLists.reviewed.txt": "dcf150ae0329cbef6c69b1ad2c93cdb80fbec5c85c5c98d6c536d0eeb5404e30"
+  },
+  "observed": {
+    "pid": 288065,
+    "ppid": 288062,
+    "pgid": 288065,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "compiler_executed": false,
+  "device_executed": false,
+  "production_changed": false
+}

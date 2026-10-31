@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-31T17:09:44.284028+00:00",
+  "entire_new_source_tests_read": true,
+  "reviewer": "ROOT",
+  "source_sha256": {
+    "baseline_restore.py": "2a9c54d9be4ba8d8b0703edb1a692432965b8c41061e04939dc7f9285dc6b8b8",
+    "test_baseline_restore.py": "08293cad711c44b413b3e4700d103bcd1f7c6992b1b7be685efa5afeef5cda67",
+    "run_restore_cpu.py": "64cf77815a2fae4c0425e8a73bf590e0a667503bc7e58482bdad0dc35fc9a10c"
+  },
+  "input_sha256": {},
+  "test_ids": [
+    "test_baseline_restore.Restore.test_another_phase_or_recovery_blocks",
+    "test_baseline_restore.Restore.test_busy_public_probe_preserved_as_pending_without_restart",
+    "test_baseline_restore.Restore.test_exact_clean_observer_failure_only",
+    "test_baseline_restore.Restore.test_failed_verification_not_silently_accepted",
+    "test_baseline_restore.Restore.test_foreign_controller_or_live_native_blocks",
+    "test_baseline_restore.Restore.test_kernel_fault_or_unclean_window_blocks",
+    "test_baseline_restore.Restore.test_native_or_API_failure_blocks",
+    "test_baseline_restore.Restore.test_one_selected_start_then_router_verify_save",
+    "test_baseline_restore.Restore.test_other_failure_or_retry_blocks",
+    "test_baseline_restore.Restore.test_selected_start_fault_never_retried",
+    "test_baseline_restore.Restore.test_uncollected_transient_blocks",
+    "test_baseline_restore.Restore.test_wrong_selected_model_policy_or_drafter_refused"
+  ],
+  "scope": "Single selected92 baseline restoration after independently read exact old-owner and candidateAPI/native exit0, kernelclean, collectedfailedwindow. Native loaded644.3s; no inference ran; failure was stale image-memory observer and76GiB borrowed fence. No candidate replay, promotion, CUDA health rerun or source/binary change. All original failed receipts/HOLD retained. Original qualified MainPID0 adapter and1250s single-start owner reused."
+}

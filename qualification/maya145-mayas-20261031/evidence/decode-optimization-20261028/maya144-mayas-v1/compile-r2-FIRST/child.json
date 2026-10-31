@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/usr/bin/cmake",
+    "--build",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/native-build-r2-FIRST",
+    "--target",
+    "maya-ds4",
+    "--",
+    "-j1"
+  ],
+  "pid": 118287,
+  "returncode": -15,
+  "error": "ValueError('DEFERRED_BUSY_UNTOUCHED_OR_CLEANUP_OWNED_COMPILER')",
+  "cleanup": [],
+  "elapsed_seconds": 33.254016407066956
+}

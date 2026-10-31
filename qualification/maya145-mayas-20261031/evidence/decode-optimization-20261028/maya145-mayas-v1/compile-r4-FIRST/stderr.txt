@@ -1,0 +1,170 @@
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/core/weights.cpp: In member function 'bool strata::core::WeightTable::load(const std::string&, void*, uint64_t, std::string&, const std::set<std::__cxx11::basic_string<char> >*)':
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/core/weights.cpp:144:51: warning: format '%llu' expects argument of type 'long long unsigned int*', but argument 6 has type 'uint64_t*' {aka 'long unsigned int*'} [-Wformat=]
+  144 |                                   "%255s %d %d %llu %llu %llu %llu %lld %lld %d %d %d %d %d %llu %llu %llu %d %d",
+      |                                                ~~~^
+      |                                                   |
+      |                                                   long long unsigned int*
+      |                                                %lu
+  145 |                                   name, &r.file, &kind, &r.src_off, &r.src_bytes, &r.dst_off, &r.dst_bytes,
+      |                                                         ~~~~~~~~~~
+      |                                                         |
+      |                                                         uint64_t* {aka long unsigned int*}
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/core/weights.cpp:144:56: warning: format '%llu' expects argument of type 'long long unsigned int*', but argument 7 has type 'uint64_t*' {aka 'long unsigned int*'} [-Wformat=]
+  144 |                                   "%255s %d %d %llu %llu %llu %llu %lld %lld %d %d %d %d %d %llu %llu %llu %d %d",
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int*
+      |                                                     %lu
+  145 |                                   name, &r.file, &kind, &r.src_off, &r.src_bytes, &r.dst_off, &r.dst_bytes,
+      |                                                                     ~~~~~~~~~~~~
+      |                                                                     |
+      |                                                                     uint64_t* {aka long unsigned int*}
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/core/weights.cpp:144:61: warning: format '%llu' expects argument of type 'long long unsigned int*', but argument 8 has type 'uint64_t*' {aka 'long unsigned int*'} [-Wformat=]
+  144 |                                   "%255s %d %d %llu %llu %llu %llu %lld %lld %d %d %d %d %d %llu %llu %llu %d %d",
+      |                                                          ~~~^
+      |                                                             |
+      |                                                             long long unsigned int*
+      |                                                          %lu
+  145 |                                   name, &r.file, &kind, &r.src_off, &r.src_bytes, &r.dst_off, &r.dst_bytes,
+      |                                                                                   ~~~~~~~~~~
+      |                                                                                   |
+      |                                                                                   uint64_t* {aka long unsigned int*}
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/core/weights.cpp:144:66: warning: format '%llu' expects argument of type 'long long unsigned int*', but argument 9 has type 'uint64_t*' {aka 'long unsigned int*'} [-Wformat=]
+  144 |                                   "%255s %d %d %llu %llu %llu %llu %lld %lld %d %d %d %d %d %llu %llu %llu %d %d",
+      |                                                               ~~~^
+      |                                                                  |
+      |                                                                  long long unsigned int*
+      |                                                               %lu
+  145 |                                   name, &r.file, &kind, &r.src_off, &r.src_bytes, &r.dst_off, &r.dst_bytes,
+      |                                                                                               ~~~~~~~~~~~~
+      |                                                                                               |
+      |                                                                                               uint64_t* {aka long unsigned int*}
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/core/weights.cpp:144:71: warning: format '%lld' expects argument of type 'long long int*', but argument 10 has type 'int64_t*' {aka 'long int*'} [-Wformat=]
+  144 |                                   "%255s %d %d %llu %llu %llu %llu %lld %lld %d %d %d %d %d %llu %llu %llu %d %d",
+      |                                                                    ~~~^
+      |                                                                       |
+      |                                                                       long long int*
+      |                                                                    %ld
+  145 |                                   name, &r.file, &kind, &r.src_off, &r.src_bytes, &r.dst_off, &r.dst_bytes,
+  146 |                                   &r.ne0, &r.ne1, &r.code_bits, &r.code_bias, &r.group_elems, &r.codebook,
+      |                                   ~~~~~~                               
+      |                                   |
+      |                                   int64_t* {aka long int*}
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/core/weights.cpp:144:76: warning: format '%lld' expects argument of type 'long long int*', but argument 11 has type 'int64_t*' {aka 'long int*'} [-Wformat=]
+  144 |                                   "%255s %d %d %llu %llu %llu %llu %lld %lld %d %d %d %d %d %llu %llu %llu %d %d",
+      |                                                                         ~~~^
+      |                                                                            |
+      |                                                                            long long int*
+      |                                                                         %ld
+  145 |                                   name, &r.file, &kind, &r.src_off, &r.src_bytes, &r.dst_off, &r.dst_bytes,
+  146 |                                   &r.ne0, &r.ne1, &r.code_bits, &r.code_bias, &r.group_elems, &r.codebook,
+      |                                           ~~~~~~                            
+      |                                           |
+      |                                           int64_t* {aka long int*}
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/core/weights.cpp:144:96: warning: format '%llu' expects argument of type 'long long unsigned int*', but argument 17 has type 'uint64_t*' {aka 'long unsigned int*'} [-Wformat=]
+  144 |                                   "%255s %d %d %llu %llu %llu %llu %lld %lld %d %d %d %d %d %llu %llu %llu %d %d",
+      |                                                                                             ~~~^
+      |                                                                                                |
+      |                                                                                                long long unsigned int*
+      |                                                                                             %lu
+......
+  147 |                                   &r.has_offset, &r.codes_bytes, &r.scales_bytes, &r.offset_bytes,
+      |                                                  ~~~~~~~~~~~~~~                                 
+      |                                                  |
+      |                                                  uint64_t* {aka long unsigned int*}
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/core/weights.cpp:144:101: warning: format '%llu' expects argument of type 'long long unsigned int*', but argument 18 has type 'uint64_t*' {aka 'long unsigned int*'} [-Wformat=]
+  144 |                                   "%255s %d %d %llu %llu %llu %llu %lld %lld %d %d %d %d %d %llu %llu %llu %d %d",
+      |                                                                                                  ~~~^
+      |                                                                                                     |
+      |                                                                                                     long long unsigned int*
+      |                                                                                                  %lu
+......
+  147 |                                   &r.has_offset, &r.codes_bytes, &r.scales_bytes, &r.offset_bytes,
+      |                                                                  ~~~~~~~~~~~~~~~                     
+      |                                                                  |
+      |                                                                  uint64_t* {aka long unsigned int*}
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/core/weights.cpp:144:106: warning: format '%llu' expects argument of type 'long long unsigned int*', but argument 19 has type 'uint64_t*' {aka 'long unsigned int*'} [-Wformat=]
+  144 |                                   "%255s %d %d %llu %llu %llu %llu %lld %lld %d %d %d %d %d %llu %llu %llu %d %d",
+      |                                                                                                       ~~~^
+      |                                                                                                          |
+      |                                                                                                          long long unsigned int*
+      |                                                                                                       %lu
+......
+  147 |                                   &r.has_offset, &r.codes_bytes, &r.scales_bytes, &r.offset_bytes,
+      |                                                                                   ~~~~~~~~~~~~~~~         
+      |                                                                                   |
+      |                                                                                   uint64_t* {aka long unsigned int*}
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/s2_gemv_quads.cu(31): warning #177-D: variable "strata::kernels::<unnamed>::CODES_PER_BYTE_S2" was declared but never referenced
+  constexpr int CODES_PER_BYTE_S2 = 4;
+                ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/shared_expert.cu(71): warning #177-D: function "strata::kernels::<unnamed>::to_f16_kernel" was declared but never referenced
+            void to_f16_kernel(const float* __restrict__ in, uint16_t* __restrict__ out, int n) {
+                 ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/gr.cu(112): warning #177-D: function "strata::kernels::<unnamed>::block_sum" was declared but never referenced
+            double block_sum(double v, double* scratch) {
+                   ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/gdn.cu(35): warning #177-D: function "strata::kernels::<unnamed>::softplus_f" was declared but never referenced
+                            float softplus_f(float x) { return x > 20.0f ? x : log1pf(expf(x)); }
+                                  ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/glm_ffn.cu(11): warning #177-D: function "strata::kernels::<unnamed>::dsigmoid" was declared but never referenced
+                            float dsigmoid(float x) { return 1.0f / (1.0f + __expf(-x)); }
+                                  ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/glm_fast.cu(6592): warning #549-D: variable "prof_h" is used before its value is set
+              const unsigned long long n = prof_h[15] > 0 ? prof_h[15] : 1;
+                                           ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/glm_fast.cu(6592): warning #549-D: variable "prof_h" is used before its value is set
+              const unsigned long long n = prof_h[15] > 0 ? prof_h[15] : 1;
+                                           ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/glm_fast.cu(120): warning #177-D: variable "strata::kernels::glmf::<unnamed>::kLaneSum" was declared but never referenced
+  constexpr bool kLaneSum = false;
+                 ^
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/glm_fast.cu(748): warning #177-D: function "strata::kernels::glmf::<unnamed>::dot_t<T>(const void *, const block_q8_1 *, int, int, const uint32_t *) [with T=23]" was declared but never referenced
+                                       float dot_t<23>(const void* v, const block_q8_1* y, int kbx, int iqs, const uint32_t*) { return dot_iq4_xs(v, y, kbx, iqs); }
+                                             ^
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/glm_fast.cu(747): warning #177-D: function "strata::kernels::glmf::<unnamed>::dot_t<T>(const void *, const block_q8_1 *, int, int, const uint32_t *) [with T=18]" was declared but never referenced
+                                       float dot_t<18>(const void* v, const block_q8_1* y, int kbx, int iqs, const uint32_t* tab) { return dot_iq3_xxs_t(v, y, kbx, iqs, tab); }
+                                             ^
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/glm_fast.cu(746): warning #177-D: function "strata::kernels::glmf::<unnamed>::dot_t<T>(const void *, const block_q8_1 *, int, int, const uint32_t *) [with T=16]" was declared but never referenced
+                                       float dot_t<16>(const void* v, const block_q8_1* y, int kbx, int iqs, const uint32_t* tab) { return dot_iq2_xxs_t(v, y, kbx, iqs, tab); }
+                                             ^
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/glm_fast.cu(745): warning #177-D: function "strata::kernels::glmf::<unnamed>::dot_t<T>(const void *, const block_q8_1 *, int, int, const uint32_t *) [with T=19]" was declared but never referenced
+                                       float dot_t<19>(const void* v, const block_q8_1* y, int kbx, int iqs, const uint32_t* tab) { return dot_iq1_s_t(v, y, kbx, iqs, tab); }
+                                             ^
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/kernels/cuda/exl3.cu(3047): warning #177-D: function "strata::kernels::exl3::wmma_rows" was declared but never referenced
+  static int wmma_rows() {
+             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_kernels.cu(3976): warning #177-D: variable "NW" was declared but never referenced
+      constexpr int d = 512, NW = kV7Threads / 32;
+                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+

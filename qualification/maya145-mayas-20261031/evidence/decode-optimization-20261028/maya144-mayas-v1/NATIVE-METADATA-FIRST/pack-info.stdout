@@ -1,0 +1,66 @@
+pack-info /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST
+  GGUF, model_dir /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S
+  40 layers x 384 routed experts, 6 a token; dim 5120, ff 2304, vocab 129280; the DSpark drafter: 3 blocks
+routed experts (gate, up / down; an expert's bytes, a token's picks):
+   layer  gate, up               down                      an expert      a token
+       0  IQ2_S                  IQ3_S                      12.63 MB     75.76 MB
+       1  IQ2_S                  IQ3_S                      12.63 MB     75.76 MB
+       2  IQ2_S                  IQ3_S                      12.63 MB     75.76 MB
+       3  IQ2_S                  IQ3_S                      12.63 MB     75.76 MB
+       4  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+       5  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+       6  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+       7  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+       8  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+       9  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      10  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      11  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      12  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      13  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      14  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      15  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      16  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      17  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      18  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      19  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      20  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      21  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      22  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      23  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      24  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      25  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      26  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      27  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      28  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      29  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      30  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      31  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      32  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      33  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      34  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      35  IQ2_XXS                IQ3_XXS                    10.60 MB     63.59 MB
+      36  IQ2_S                  IQ3_S                      12.63 MB     75.76 MB
+      37  IQ2_S                  IQ3_S                      12.63 MB     75.76 MB
+      38  IQ2_S                  IQ3_S                      12.63 MB     75.76 MB
+      39  IQ2_S                  IQ3_S                      12.63 MB     75.76 MB
+   mtp.0  MXFP4                  MXFP4                      18.80 MB     56.40 MB
+   mtp.1  MXFP4                  MXFP4                      18.80 MB     56.40 MB
+   mtp.2  MXFP4                  MXFP4                      18.80 MB     56.40 MB
+  expert matrices by type: IQ2_S 6144, IQ2_XXS 24576, IQ3_S 3072, IQ3_XXS 12288, MXFP4 1152
+  the trunk's 15360 experts 169.02 GB, 2.49 bits a weight; a token reads 2.641 GB of them (6 a layer)
+  the drafter's experts 7.22 GB
+where it goes (GB):
+  the GPUs: dense 7.76 (attention, shared experts, routers, norms), head 0.70, the drafter's blocks 0.75 + their experts 7.22
+  the routed experts 169.02: VRAM, RAM and the files, the most-routed first (the expert profile, below)
+  pinned RAM: the token embedding 1.32 (BF16 rows; 0.70 in the files)
+  read from the files as tokens need them: the Engram tables 161.28
+  borrowed while a picture is read: the vision tower 0.97
+  dense types: BF16 F32 Q8_0
+expert profile /home/alex/deepseek-hosted-20261025/profile-seed.bin: 16512 counts (the drafter's too), 426449520 routes, about 1776873 tokens' worth
+  the most-routed experts holding 50% of its routes: 3358 (37.0 GB); 80%: 8115 (89.4 GB); 90%: 10584 (116.5 GB); 95%: 12266 (135.0 GB); 99%: 14293 (157.3 GB)
+  never routed: 0 experts (0.0 GB)
+drafter: 3 blocks in the tensors, 3 loaded; block size 5, noise token 128799, markov rank 256, 128 experts (3 a token), reading trunk layers 37,38,39
+Engram: layers 1,14, tables in Q6_K
+no GPU kernel: none (every tensor is of a type the engine reads)
+files: 8 in model_dir, all there and long enough (348.4 GB)
+pack-info: the pack can load

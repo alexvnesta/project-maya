@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "controls": 13,
+  "test_ids": [
+    "test_build_artifact.Audit.test_claim_or_surviving_group_refused",
+    "test_build_artifact.Audit.test_complete_independent_scope",
+    "test_build_artifact.Audit.test_different_error_refused",
+    "test_build_artifact.Audit.test_failed_child_refused",
+    "test_build_artifact.Audit.test_input_omission_refused",
+    "test_build_artifact.Audit.test_large_input_hash_streams_with_fixed_read_size",
+    "test_build_artifact.Audit.test_progress_cleanup_command_required",
+    "test_build_artifact.Audit.test_progress_modified_instead_of_absent_refused",
+    "test_build_artifact.Audit.test_regraded_original_refused",
+    "test_build_artifact.Audit.test_source_change_refused",
+    "test_build_artifact.Audit.test_wrong_artifact_or_format_refused",
+    "test_build_artifact.Audit.test_wrong_build_command_refused",
+    "test_build_artifact.Audit.test_wrong_qualification_refused"
+  ],
+  "source_sha256": {
+    "build_artifact.py": "cf8d43a2cf0487a225aec186e8c863e4ed560a386dbdacf6859c59f26710bb17",
+    "test_build_artifact.py": "1c523ae04f287d1afe942153594f461f1bfca65c62360c3f21b80915beb87758",
+    "run_artifact_cpu.py": "dc85b532557bf642d5a98a3d3073a24200edd04156f8bcb532f4e6c303331361"
+  },
+  "input_sha256": {},
+  "observed": {
+    "pid": 141500,
+    "ppid": 141499,
+    "pgid": 141500,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "native_executed": false,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false
+}

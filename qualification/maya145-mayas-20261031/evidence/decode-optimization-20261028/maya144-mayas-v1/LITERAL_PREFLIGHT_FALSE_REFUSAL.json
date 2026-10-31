@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-31T15:33:23.285631+00:00",
+  "status": "SOURCE_ONLY_PREFLIGHT_REFUSAL_NO_CONFIGURE_ATTEMPT",
+  "cause": "Conservative literal inventory included four absent upstream bench sources, each explicitly guarded by STRATA_BUILD_TESTS and EXISTS in pinned CMake. Tests are OFF; these targets are not declared.",
+  "source_r2_fully_staged": true,
+  "configure_r2_started": false,
+  "repair": "Treat only those four source-reviewed exact guarded bench references as inapplicable when their matching EXISTS guard is present. Unconditional or newly missing sources remain refused. Add positive and guard-removal controls; new exact both-host CPU proof."
+}

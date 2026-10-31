@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-31T16:51:11.470553+00:00",
+  "reviewer": "ROOT",
+  "decision": "ADMIT_SINGLE_UNATTEMPTED_CTP2_NEW_NATIVE_SHORT_COMPATIBILITY_WITH_BOUNDED_ACTUAL_RAM_OBSERVATION",
+  "arm": "CTP2",
+  "qualification_sha256": "151b2f13eb028adcb54f964ddecba94de3d52b77a5300ab67bd13560e0815a3b",
+  "filepins": 2267,
+  "FIRST_CPU_controls_each_host": [
+    45,
+    11,
+    20
+  ],
+  "selected_binding": {
+    "invocation": "6821dcdb48ab4cbe9d1773100e7b9f75",
+    "main_pid": 246394,
+    "native_pid": 246668,
+    "native_start_ticks": 173266903
+  },
+  "prior_resource_deferral_preserved": true,
+  "prior_GPU_or_model_attempt": false,
+  "RAM_floor_bytes": 94489280512,
+  "RAM_observation_seconds_before_window": 60,
+  "private_memory_max_bytes": 85899345920,
+  "window_seconds": 1200,
+  "soft_seconds": 1000,
+  "cleanup_seconds": 200,
+  "context_total": 1048576,
+  "output_allowance": 262144,
+  "drafter": true,
+  "automatic_next_arm": false,
+  "timing_or_promotion_admitted": false
+}

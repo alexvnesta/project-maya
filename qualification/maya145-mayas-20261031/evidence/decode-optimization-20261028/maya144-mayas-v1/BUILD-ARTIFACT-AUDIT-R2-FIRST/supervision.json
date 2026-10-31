@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-I",
+    "-B",
+    "-c",
+    "import sys,json;from pathlib import Path;sys.path.insert(0,'/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1');import build_artifact as a;p=Path('/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1');s=a.inspect(p);(p/\"BUILD-ARTIFACT-AUDIT-R2-FIRST/snapshot.json\").open(\"x\").write(json.dumps(s,indent=2)+\"\\n\");v=a.validate(s);(p/\"BUILD-ARTIFACT-AUDIT-R2-FIRST/result.json\").open(\"x\").write(json.dumps(v,indent=2)+\"\\n\");print(json.dumps(v))"
+  ],
+  "pid": 141585,
+  "returncode": 0,
+  "error": null,
+  "cleanup": [],
+  "elapsed_seconds": 1.1198519819881767
+}

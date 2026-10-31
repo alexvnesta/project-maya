@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-31T17:24:44.948209+00:00",
+  "decision": "BASELINE_HEALTH_24_CASES_REVIEWED",
+  "root_manual_raw_result_read": true,
+  "source_binary_unchanged": true,
+  "cases_each_device": 12,
+  "actual_children": [
+    277342,
+    277355
+  ],
+  "children_exit0": true,
+  "window_exit0": true,
+  "window": "/home/alex/strata-deepseek-test-20261024/windows/20261031T172408Z.json",
+  "raw_health_sha256": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-baseline-health-20261031T172350Z/receipt.json": "79be2d850d2aa8db44487bf2ff6f4262661afbf176e41c903c23c8a1097a7102",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-baseline-health-20261031T172350Z/gpu0.stdout": "edc06f3cd6bd38ee3d4438785a8168aa33cabca1540f844805d6136c9ddfab50",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-baseline-health-20261031T172350Z/gpu0.stderr": "1352d167957e284ba2b09a7ba2079069d92ba1becf745a9e7933c4d22110f250",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-baseline-health-20261031T172350Z/gpu0-start.json": "98943716e730761b9ab3d188af94b38e87bd76e21f9551b24562eec3e513ea50",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-baseline-health-20261031T172350Z/gpu0-exit.json": "c5c0334e46e7d214189c569b5b0340a7dbec8fe13f9442c8ca652f826627f632",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-baseline-health-20261031T172350Z/gpu1.stdout": "fc341d2657eaf8c1d6383d30acacafb6dbb14d2bc450e8356173e3a9319642d4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-baseline-health-20261031T172350Z/gpu1.stderr": "1307f200f95b1d23fc426a325b3472a934b814bdc5fa19de6c0ad1aae0ce4ac8",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-baseline-health-20261031T172350Z/gpu1-start.json": "b1ea8fad5dbc7d79b2b09e550765e20b7adbfa187a580b30c4fe21850f2421fc",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya144-baseline-health-20261031T172350Z/gpu1-exit.json": "97fbaee33dda2166ffb96dcac0c39dc2b5b22c137ddd9b73621eb34c98164139"
+  },
+  "kernel_fault_lines": [],
+  "swap_out_delta_bytes": 0,
+  "minimum_root_free_bytes": 275444535296,
+  "failed_candidate_remains_HOLD": true,
+  "no_model_or_speed_claim": true
+}

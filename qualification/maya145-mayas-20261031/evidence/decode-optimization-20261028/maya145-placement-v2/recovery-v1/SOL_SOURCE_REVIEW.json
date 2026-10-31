@@ -1,0 +1,24 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-10-31T18:18:38.256697+00:00",
+  "status": "BOUNDED_SOURCE_DELTA_ACCEPTANCE",
+  "sol_entire_source_and_tests_read": true,
+  "read_basis": "Prior fully reviewed recovery implementation plus complete three-file namespace/test diff against Maya145 recovery-v1. run_cpu.py byte-identical.",
+  "source_sha256": {
+    "recovery.py": "c2bc47f37ca7ade0e9829372b0ee27ffe05fa064921e5e771a1d2a415be6f136",
+    "test_recovery.py": "528d7ca78936403a8f5f937e43cfe54b4ed65f0afcbb40c755c5a16fc332e1d3",
+    "run_cpu.py": "9ed712d30c3b17d8e417aa68703e82c7f0516d70c0fb0c5f7292c89e47091726"
+  },
+  "actionable_findings": [],
+  "assessment": [
+    "Schema explicitly targets compatibility/DTP2 with maya145p2-mayas-TP2 controller namespace, new family Q, isolated output/audit names and maya145p2_recovery_current state key.",
+    "Every changed claim/release/pending/entry access uses the new key consistently. One-shot health/restore separation, canonical historical path handling, exact lineage and public-only pending continuation retain reviewed behavior."
+  ],
+  "tests_run": false,
+  "project_imports_executed": false,
+  "host_contacted_or_mutated": false,
+  "health_restore_or_private_admission": false,
+  "conditions": [
+    "Prospective family-specific CPU qualification and any concrete health/restore admissions remain separate; no replay, bypass or historical arm regrade authorized."
+  ]
+}

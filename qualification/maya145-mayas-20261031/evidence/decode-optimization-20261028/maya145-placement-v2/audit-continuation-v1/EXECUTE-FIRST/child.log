@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/audit-continuation-v1/continuation.py", line 166, in <module>
+    parser=argparse.ArgumentParser();parser.add_argument('--qualification-sha256',required=True);args=parser.parse_args();result=run(args.qualification_sha256);print(json.dumps({'passed':result['passed'],'purpose':result['purpose'],'original_auditor_regraded':False}))
+                                                                                                                                 ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/audit-continuation-v1/continuation.py", line 156, in run
+    result=downstream(runtime,config,fixtures,saved,qa,q,qpin,binding,'DTP2',rec,output,metadata,state,prefix['resources'])
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/audit-continuation-v1/continuation.py", line 83, in downstream
+    and entry['owned_window'] == str(window) and entry['context'] == 1048576
+                                     ^^^^^^
+NameError: name 'window' is not defined

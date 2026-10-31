@@ -1,0 +1,76 @@
+[strata] 2026-10-31 18:21:38 engine started: /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/native-build-r2-FIRST/maya-ds4 --serve --pack /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST --gpus 0,1 --max-context 1048576 --reserve-mib 2048 --cpu-threads 24 --tp 2 --dspark on --prefill-chunk 4096 --eos 1 --dspark-conf 0.65 --mmap-experts off --expert-profile /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145p2-mayas-TP2-20261031T182031Z/native/expert-profile.bin --serve --vision on --ablate /home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf --ablate-scale 1 --verbose --layer-split auto
+ds4: build 5c9ba2f (Maya 1.1.45)
+abliteration check: device 0 rows 2 dim 5120 target blocks 40 drafter untouched max_abs 5.96046448e-08 PASS
+abliteration check: device 1 rows 2 dim 5120 target blocks 40 drafter untouched max_abs 5.96046448e-08 PASS
+ds4: CUDA0 Q8 batch check: 8 jobs (k 32 .. 5120, rows 1 .. 16, strided, one input read with two k, two jobs sharing a rounding): 50976 int8 and 1593 scales the per-job launches' bit for bit, every guard intact (DS4_Q8_CHECK)
+ds4: CUDA1 Q8 batch check: 8 jobs (k 32 .. 5120, rows 1 .. 16, strided, one input read with two k, two jobs sharing a rounding): 50976 int8 and 1593 scales the per-job launches' bit for bit, every guard intact (DS4_Q8_CHECK)
+ds4: tensor parallel 2: the experts' n_ff 2304 in 256-value blocks, 1280 to 1024 a member (the odd blocks going round the members layer by layer) (DS4_TP_GGUF_UNEVEN)
+ds4: the one-GPU decode path (in-place pulls, windows streamed, landings): off (v1.1.27's path: not NVIDIA + one GPU)
+ds4: vision tower (32 blocks) for CUDA0: its weights 926 MiB in pinned RAM, a picture's room 319 MiB (lent for each picture), up to 9189 patches, 0.8 s
+ds4: DS4_AR2=1: the prompt chunks' all-reduces on CUDA0, CUDA1 pipelined (64 blocks, 128 KB pieces), the other member's rows read 16 bytes a lane; the sums bit for bit
+ds4: dense weights loaded in 10.0 s
+ds4: Engram rows read on 16 threads, issued with the tokens, collected before their layer; row cache 256 MB (1016800 rows)
+ds4: CUDA0 prompt slabs: the attention 4096 rows, the dense weights' FP16 scratch 128 MB
+ds4: CUDA0 prompt ring: 4 slots of 6.7 MB, 1 a batch (27 MB) for its 6.8 GB/s link (DS4_RING_MB sets it)
+ds4: CUDA1 prompt slabs: the attention 4096 rows, the dense weights' FP16 scratch 128 MB
+ds4: CUDA1 prompt ring: 4 slots of 6.7 MB, 1 a batch (27 MB) for its 6.8 GB/s link (DS4_RING_MB sets it)
+ds4: the experts VRAM leaves over (~63.4 GB) are read in place from the model's files (copied into RAM after the GPUs' share when the RAM holds them all; --mmap-experts on keeps them in place) (85.4 GB of RAM free to keep them: the most-routed 63.4 GB read ahead; prompts in chunks of 4096)
+ds4: group 0 (2 GPUs): 48.78 GB a member for experts, 9294 of 15744 in VRAM
+ds4: experts 0 / 9254 (0.0 GB, 0.11 GB/s)
+ds4: experts 1024 / 9254 (12.4 GB, 4.07 GB/s)
+ds4: experts 2048 / 9254 (23.3 GB, 4.25 GB/s)
+ds4: experts 3072 / 9254 (34.1 GB, 4.36 GB/s)
+ds4: experts 4096 / 9254 (45.0 GB, 4.40 GB/s)
+ds4: experts 5120 / 9254 (55.8 GB, 4.41 GB/s)
+ds4: experts 6144 / 9254 (66.7 GB, 4.39 GB/s)
+ds4: experts 7168 / 9254 (77.6 GB, 4.34 GB/s)
+ds4: experts 8192 / 9254 (88.7 GB, 4.30 GB/s)
+ds4: experts 9216 / 9254 (103.6 GB, 4.33 GB/s)
+ds4: strict RAM: all 6490 CPU experts selected, no disk fallback
+ds4: copying experts 0 / 6490 (0.1 GB, 1.84 GB/s)
+ds4: copying experts 2048 / 6490 (23.3 GB, 3.17 GB/s)
+ds4: copying experts 4096 / 6490 (44.8 GB, 0.26 GB/s)
+ds4: copying experts 6144 / 6490 (67.5 GB, 0.13 GB/s)
+ds4: copied expert cache: DONTNEED hints accepted for 71.818 GB of whole source pages (eviction is advisory)
+ds4: the copied experts pinned (72.3 GB in 49.6 s): the prompt path DMAs them in place
+ds4: 6490 of the CPU lane's 6490 experts copied into RAM (71.9 GB, 1 NUMA part) in 638.5 s
+ds4: CPU lane: 24 threads, MXFP4 rows avx2 ()
+ds4: CPU lane's experts pinned in 0.0 s
+ds4: TP check: IQ2_S/IQ2_S/IQ3_S (layer 0, member 0 takes 1280 of 2304): 2 members' parts summed against the whole - routed (3 experts) 8.04e-08 of the largest, shared 9.3e-08
+ds4: TP check: IQ2_S/IQ2_S/IQ3_S (layer 1, member 1 takes 1280 of 2304): 2 members' parts summed against the whole - routed (3 experts) 2.13e-07 of the largest, shared 1.25e-07
+ds4: TP check: IQ2_XXS/IQ2_XXS/IQ3_XXS (layer 4, member 0 takes 1280 of 2304): 2 members' parts summed against the whole - routed (3 experts) 1.95e-07 of the largest, shared 1.39e-07
+ds4: TP check: IQ2_XXS/IQ2_XXS/IQ3_XXS (layer 5, member 1 takes 1280 of 2304): 2 members' parts summed against the whole - routed (3 experts) 2.19e-07 of the largest, shared 1.56e-07
+ds4: TP check passed (4 expert formats and rotations, all the split layers have) (DS4_TP_CHECK)
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 3 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 0 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 0 member 1 expert 3 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 0 member 1 expert 0 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 1 member 0 expert 1 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 1 member 0 expert 0 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 1 expert 1 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 1 expert 0 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 4 member 0 expert 1 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 4 member 0 expert 0 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 4 member 1 expert 1 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 4 member 1 expert 0 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 5 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 5 member 0 expert 1 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 5 member 1 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 5 member 1 expert 1 from file: bytes and guards PASS
+ds4: TP check: the prompt path's copies passed (16 experts' parts, from RAM in place and from the file, on the devices byte for byte)
+ds4: loaded in 684.9 s
+ds4: abliteration: /home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf direction.1, scale 1, projected out of every layer's attention and MoE writes
+ds4: CUDA0 layers [0, 42] (tensor parallel 2, part 0) + head: weights 5.65 GB, experts 55.95 GB (9254 of 15744 in VRAM), caches 0.97 GB, 1918 MiB free
+ds4: CUDA1 layers [0, 39] (tensor parallel 2, part 1): weights 4.90 GB, experts 48.83 GB (8870 of 15360 in VRAM), caches 0.97 GB, 9534 MiB free
+ds4: 6490 routed experts on the CPU lane (71.9 GB): 6490 copied into RAM (1 NUMA parts), the rest in place in the model's files; 24 threads
+ds4: abliteration: /home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf direction.1, scale 1, projected out of every layer's attention and MoE writes
+ds4: CUDA0 layers [0, 42] (tensor parallel 2, part 0) + head: weights 5.65 GB, experts 55.95 GB (9254 of 15744 in VRAM), caches 0.97 GB, 1918 MiB free
+ds4: CUDA1 layers [0, 39] (tensor parallel 2, part 1): weights 4.90 GB, experts 48.83 GB (8870 of 15360 in VRAM), caches 0.97 GB, 9534 MiB free
+ds4: 6490 routed experts on the CPU lane (71.9 GB): 6490 copied into RAM (1 NUMA parts), the rest in place in the model's files; 24 threads
+maya ds4 serve: GEN <max_new> [keys] <ids>; GENI <max_new> [keys] <pictures> <ids>; STOP, QUIT
+ds4 slots: folder /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145p2-mayas-TP2-20261031T182031Z/native/cache: 0 conversation(s) kept from earlier runs (0.00 GB)
+ds4: the prompt path's GEMMs warmed up on 2 GPUs in 234 ms
+maya ds4 serve: prompt read: 44 tokens in 0.6 s; VRAM free CUDA0 1.9 of 63.4, CUDA1 9.3 of 63.4 GB before, 1.9, 9.3 after
+maya ds4 serve: prompt 44 tokens = 0 reused + 44 read in 632 ms (69.6 tok/s), 186 generated in 4194 ms (44.35 tok/s); CPU lane 10.1% of the experts
+maya ds4 serve: drafts 109 of 179 kept; per position (kept / reached): 1: 43/60 72% 2: 26/31 84% 3: 21/23 91% 4: 18/20 90% 5: 1/1 100% 6: 0/1 0%
+maya ds4 serve: prompt lookup: 2 rounds, 6 of its 30 drafts kept (in the above)

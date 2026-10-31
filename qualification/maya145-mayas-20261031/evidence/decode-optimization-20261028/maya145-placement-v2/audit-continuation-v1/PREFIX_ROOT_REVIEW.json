@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-31T18:45:17.470924+00:00",
+  "root_manual_source_and_raw_prefix_review": true,
+  "first_auditor_returncode": 1,
+  "first_auditor_not_regraded": true,
+  "diagnosed_first_missing_gate": "stale public-ready-sse.txt; actual producer owns public-default-output-request.json/public-default-output-sse.txt, exact qualified LC consumer reused for downstream closure",
+  "original_source_preceding_failure_read": true,
+  "original_qualification_sha256": "255a9243c1172bb17b26092c69b3264cf974e31446e9b4a58dea6c8c4ac89659",
+  "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145p2-mayas-TP2-20261031T182031Z",
+  "metadata": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145p2-mayas-TP2-20261031T182031Z",
+  "expected_binding": {
+    "invocation": "7ad654ccf35845e8825fbb7b829e1092",
+    "main_pid": 330770,
+    "native_pid": 330807,
+    "native_start_ticks": 173987085
+  },
+  "resources": {
+    "root_min_GiB": 255.95442581176758,
+    "system_swapout_delta_bytes": 0,
+    "swap_not_attributed_to_model": true
+  },
+  "input_sha256": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/compatibility-qualification.json": "255a9243c1172bb17b26092c69b3264cf974e31446e9b4a58dea6c8c4ac89659",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/compatibility-arms.json": "baa7e0e42a15c5506b008de4afd883e2ffa04176a3f66d5a1376e51bd7373c4a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145p2-mayas-TP2-20261031T182031Z/state.json": "eee824aaaee4388ef2140e2bed54e7d55e0766b315b06157e2d855579ac337f4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145p2-mayas-TP2-20261031T182031Z/proof.json": "59854bb3c664de74a5eee1ed14f37c32935d9c92d4603efdaf7f841237a65480",
+    "/home/alex/strata-deepseek-test-20261024/windows/20261031T182135Z.json": "eeac9c1dd85045da5d390b377ae45ab11307df08a89084476bab0b548bea03a6",
+    "/home/alex/strata-deepseek-test-20261024/windows/20261031T182135Z.telemetry.jsonl": "78b478f41a6d7bef50a07ec815a308b6078d5a44f36a7afad84ca34aa1e3371e",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/DTP2/child.json": "02ccb564eeb6e88fbe0fe6f8c2a1fd954ae71ea84aa3ae828049890976b6d2c1",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/DTP2/child.log": "b67a8f5badb1eb196d54df01171d946a80b68c4426888857208391fe3da8f400",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145p2-mayas-TP2-20261031T182031Z/old-owner-close.json": "cb97669c01ffe442f056bcf6fa9569f221e841c521490a016965438c6f677c85",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-placement-v2/current_audit.py": "258870c28752ced63d23353256aee208751dbe4ea6ee949b077e935aac1048dc"
+  },
+  "native_API_and_window_exit0": true,
+  "scope": "Manual read of unchanged already-completed prefix plus immutable receipt pins; separately CPU qualify missing downstream audit, no inference/restart/window replay or first audit regrade."
+}

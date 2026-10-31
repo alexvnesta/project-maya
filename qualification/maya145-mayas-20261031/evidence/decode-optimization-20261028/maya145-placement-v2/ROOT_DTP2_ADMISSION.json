@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-31T18:20:16.349269+00:00",
+  "decision": "SINGLE_DISTINCT_DTP2_PARSER_ONLY_SHORT_COMPATIBILITY",
+  "qualification_sha256": "255a9243c1172bb17b26092c69b3264cf974e31446e9b4a58dea6c8c4ac89659",
+  "pins": 2301,
+  "binding": {
+    "invocation": "0716fe8a3a0c4dbc929e14e9074fc54e",
+    "main_pid": 318402,
+    "native_pid": 318437,
+    "native_start_ticks": 173843621
+  },
+  "new_native_build": false,
+  "native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+  "actual_saved_startup_source_regression_each_host": true,
+  "CPU_each_host": [
+    58,
+    21,
+    14
+  ],
+  "recovery_CPU_each_host": 61,
+  "earlier_failed_Maya144_CTP2_and_Maya145_RTP2_preserved": true,
+  "native_API_closed0_and_kernelclean": true,
+  "previous_selected_restoration_fully_verified": true,
+  "no_timing_quality_promotion_admission": true,
+  "window": 1200,
+  "soft": 1000,
+  "cleanup": 200,
+  "root_admission_GiB": 132,
+  "private_memory_GiB": 80,
+  "swap_max": 0,
+  "read_only_preflight_sha256": "0d1aebb16fcb1e8f4edf1487453d8c2cab82a813c9b9c0315f039bbbc52ee88a",
+  "all_agents_paused_during_private": true
+}

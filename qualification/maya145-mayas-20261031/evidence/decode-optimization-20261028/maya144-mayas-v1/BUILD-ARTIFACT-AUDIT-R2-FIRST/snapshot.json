@@ -1,0 +1,48 @@
+{
+  "qualification_sha256": "58fd0cc88f53bf0c329690548dbff8635e084d58bdb80aee91af3193c056e3e9",
+  "pins": 5768,
+  "verified_unchanged": 5767,
+  "differences": [
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/native-build-r2-FIRST/CMakeFiles/Progress/count.txt",
+      "before": "90d7ec0f0acef104d8b6252794295f661a0149634868d02a1ae0c358099638f5",
+      "after": null
+    }
+  ],
+  "child": {
+    "argv": [
+      "/usr/bin/cmake",
+      "--build",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/native-build-r2-FIRST",
+      "--target",
+      "maya-ds4",
+      "--",
+      "-j1"
+    ],
+    "pid": 124029,
+    "returncode": 0,
+    "error": null,
+    "cleanup": [],
+    "elapsed_seconds": 673.7344878541771
+  },
+  "supervision": {
+    "passed": false,
+    "owned_claim_released": true,
+    "error": "ValueError('Pinned input changed: /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/native-build-r2-FIRST/CMakeFiles/Progress/count.txt')"
+  },
+  "active_cpu_build": false,
+  "owned_group_members": [],
+  "cmake_terminal_progress_command": "\t$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/native-build-r2-FIRST/CMakeFiles 0",
+  "outputs": {
+    "maya-ds4": {
+      "sha256": "6c25ea8ab364ae52e306b3e8aeea2a30708252eb943bfea6e79519c3dd21aed7",
+      "bytes": 44669336,
+      "magic": "7f454c46"
+    },
+    "libstrata_kernels_cpu.a": {
+      "sha256": "d5e443b5b0e5135fe2ab41c366d35732e86dcfc0ccc44628bd2484f757b7d059",
+      "bytes": 4206302,
+      "magic": "213c617263683e0a"
+    }
+  }
+}

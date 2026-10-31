@@ -1,0 +1,26 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-10-31T17:44:30.529938+00:00",
+  "status": "BOUNDED_SOURCE_ACCEPTANCE",
+  "sol_entire_source_and_tests_read": true,
+  "read_basis": "Previously fully read Maya144 recovery-v3 baseline plus complete new-family diffs for all three files, including all test namespace and state-key changes. run_cpu.py remains identical.",
+  "source_sha256": {
+    "recovery.py": "e270c3ac1783e54cd8430932b9d989d6fc03e959db60ec2da46b4e3f3330138e",
+    "test_recovery.py": "96b8e49e3343738839d4e3066d0339386002300d12debf67d884241ed3e41748",
+    "run_cpu.py": "9ed712d30c3b17d8e417aa68703e82c7f0516d70c0fb0c5f7292c89e47091726"
+  },
+  "actionable_findings": [],
+  "assessment": [
+    "New schema explicitly targets compatibility/RTP2 and maya145-mayas-TP2 controller namespace. It does not reuse an old CTP2 controller regex as recovery authority.",
+    "Q/HERE/output namespaces and all canonical own-state accesses consistently use Maya145/recovery-v1/maya145_recovery_current.",
+    "Historical path canonicalization, immutable health binary/helper lineage, separate one-shot health/restore admissions, no replay and public-only pending continuation retain reviewed behavior."
+  ],
+  "tests_run": false,
+  "project_imports_executed": false,
+  "host_contacted_or_mutated": false,
+  "source_edited": false,
+  "health_restore_or_private_admission": false,
+  "conditions": [
+    "Fresh family-specific exact CPU qualification and concrete admissions remain separate. Existing baseline health24 evidence is not a replay or a new controller admission."
+  ]
+}

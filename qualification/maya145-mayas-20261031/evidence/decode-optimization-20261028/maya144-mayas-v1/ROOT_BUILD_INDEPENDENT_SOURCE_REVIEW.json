@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-31T15:23:52.339185+00:00",
+  "entire_new_source_tests_read": true,
+  "source_sha256": {
+    "build_current.py": "aee4754652a9ea4d6cc7f00b2e50def89d8bb806cb65a41a376153a2ff8ab377",
+    "test_build_current.py": "1d622b93af97927a996a8cfae77e6d09176faa3ad23772cb04fc744730e9dfee",
+    "run_build_cpu.py": "997cf65946841cc2b180a81cc32f03ed28a4d14448590767c64136f0b3a520db"
+  },
+  "test_ids": [
+    "test_build_current.Controls.test_active_work_refused",
+    "test_build_current.Controls.test_active_worker_refused",
+    "test_build_current.Controls.test_actual_configure_closure_required",
+    "test_build_current.Controls.test_actual_resource_drift_refused",
+    "test_build_current.Controls.test_busy_refused",
+    "test_build_current.Controls.test_changed_capacity_model_default_refused",
+    "test_build_current.Controls.test_cleanup_fault_blocks",
+    "test_build_current.Controls.test_complete_download",
+    "test_build_current.Controls.test_configure_full_source_and_current_cpu",
+    "test_build_current.Controls.test_counter_bool_or_missing_refused",
+    "test_build_current.Controls.test_each_wrong_asset_field_refused",
+    "test_build_current.Controls.test_empty_map_refused",
+    "test_build_current.Controls.test_failed_configure_closure_blocks_compile",
+    "test_build_current.Controls.test_failed_download_refused",
+    "test_build_current.Controls.test_fault_refused",
+    "test_build_current.Controls.test_fixed_architecture_no_gpu_probe",
+    "test_build_current.Controls.test_foreign_stage_refused",
+    "test_build_current.Controls.test_guard_refuses_before_spawn",
+    "test_build_current.Controls.test_healthy_idle",
+    "test_build_current.Controls.test_inherited_toolchain_flags_excluded",
+    "test_build_current.Controls.test_inputs_missing_changed_or_alias_refused",
+    "test_build_current.Controls.test_nonzero_preserved",
+    "test_build_current.Controls.test_owned_clean_completion",
+    "test_build_current.Controls.test_partial_download_refused",
+    "test_build_current.Controls.test_serial_native_target_only",
+    "test_build_current.Controls.test_switcher_work_refused",
+    "test_build_current.Controls.test_unpinned_configure_closure_blocks_compile"
+  ],
+  "scope": "New full-source CMake build admission/owned compiler lifecycle; no CUDA/model/speed proof",
+  "reviewer": "ROOT",
+  "sol_findings_resolved": [
+    "fixed child allowlist excludes CMake/compiler/loader injection",
+    "passed result published only after own claim release/final guard; compile requires pinned complete configure closure"
+  ],
+  "prior_draft_preserved": "source-before-sol-build-findings-v1",
+  "independent_CPU_build_rationale": "Fixed serial compiler group has CUDA hidden, CPU120/AS4GiB per process, wall900, strict idle/default/owner/root132 throughout. It reads no model assets. The unchanged 16MiB/s acquisition can continue; acquisition completion remains mandatory before GPU/model timing. Prior drafts/proofs retained. No system or service changes."
+}

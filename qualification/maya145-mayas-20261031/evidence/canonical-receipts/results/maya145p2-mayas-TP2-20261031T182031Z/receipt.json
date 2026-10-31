@@ -1,0 +1,87 @@
+{
+  "mode": "compatibility",
+  "arm": "DTP2",
+  "arm_results": {
+    "complete": true,
+    "scores": [
+      {
+        "id": "ms-compatibility-short-cold",
+        "passed": true,
+        "status": "SHORT_LITERAL_SOURCE_AND_STATE_PASSED"
+      }
+    ],
+    "rows": [
+      {
+        "id": "ms-compatibility-short-cold",
+        "passed": true,
+        "native": {
+          "generated": 186,
+          "prompt_tokens": 44,
+          "prompt_ms": 631.9,
+          "decode_ms": 4193.6,
+          "finish": "stop",
+          "drafts_accepted": 109,
+          "drafts_offered": 179,
+          "reused": 0,
+          "hits": 59262,
+          "lookups": 64260
+        },
+        "observed_tokens": 186,
+        "native_decode_tokens_per_second": 44.353300267073635,
+        "client_seconds": 4.8491004190873355,
+        "content_characters": 20,
+        "reasoning_characters": 692,
+        "manual_review_pending": false,
+        "general_quality_or_equivalence_claim": false
+      }
+    ],
+    "retry": false,
+    "automatic_next_arm": false,
+    "quality_or_performance_pass": false,
+    "manual_review_required": true,
+    "native_request_count": 1,
+    "drafter_execution": {
+      "configured_and_loaded_separate": true,
+      "execution_proven": true,
+      "draft_rounds": 68,
+      "draft_ms": 313.944,
+      "verify_ms": 3280.298,
+      "acceptance_can_be_zero": true,
+      "samples": 24,
+      "raw_lines_sha256": "66bb0b7e0797709f83fc11932319c67d35a4a089945914a099735732928fef4c"
+    },
+    "mode1_activation": {
+      "mode": 1,
+      "source": 20,
+      "retained_rows": 2668,
+      "activation_early_rows": []
+    },
+    "DSI1_leftovers": []
+  },
+  "seconds_including_load": 702.111132111866,
+  "private_cleanup_passed": true,
+  "resource_fence_terminal": {
+    "passed": true,
+    "events_after": {
+      "low": 0,
+      "high": 0,
+      "max": 1090,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 1090,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "cache_charging_disclosure": "memory.current/peak include charged file cache and pinned memory; not process RSS"
+  },
+  "manual_review_pending": true,
+  "not_a_promotion": true
+}

@@ -1,0 +1,30 @@
+{
+  "startup_retries": 0,
+  "default_effort": 100,
+  "inference_source_changed": false,
+  "observer_subclass_only": true,
+  "server_pid": 260889,
+  "owned_window": "/home/alex/strata-deepseek-test-20261024/windows/20261031T165214Z.json",
+  "native_sha256": "6c25ea8ab364ae52e306b3e8aeea2a30708252eb943bfea6e79519c3dd21aed7",
+  "config_sha256": "a446979a79d81b4e62e4fcdf8f733931f960a7a31c533ef8822f905bdbe27cac",
+  "context": 1048576,
+  "output_allowance": 262144,
+  "whole_pack_factor": {
+    "variant": "TP2",
+    "tp": 2,
+    "native": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/native-build-r2-FIRST/maya-ds4",
+    "pack": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST",
+    "drafter": "published Maya-S DSpark, enabled",
+    "context_total": 1048576,
+    "output_allowance": 262144,
+    "effort": 100,
+    "prefill_chunk": 4096,
+    "numerical_equivalence_claim": false,
+    "candidate": true,
+    "exe": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/native-build-r2-FIRST/maya-ds4",
+    "native_sha256": "6c25ea8ab364ae52e306b3e8aeea2a30708252eb943bfea6e79519c3dd21aed7",
+    "factor": "Maya144-public-MayaS-TP2",
+    "includes_published_drafter_and_Engram": true,
+    "runtime_projection_policy": "L22 scale1 all40 main blocks; drafter unchanged"
+  }
+}

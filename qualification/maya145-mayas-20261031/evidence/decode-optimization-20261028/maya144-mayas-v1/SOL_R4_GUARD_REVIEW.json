@@ -1,0 +1,44 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-10-31T15:51:41.974338+00:00",
+  "status": "BOUNDED_SOURCE_ACCEPTANCE",
+  "scope": "R4 idle-to-healthy-work transition, captured subprocess ownership and canonical claim closure only",
+  "source_sha256": {
+    "build_current.py": "1a32d22240db863d152b1a259e2f3931a8ab36331984712a3cab4fb9c01684db",
+    "test_build_current.py": "86222af5c68fa889c61cf99eef4743d26d6385a055558a37a293df6c6ee2c059"
+  },
+  "actionable_findings": [],
+  "assessment": [
+    {
+      "file": "build_current.py",
+      "line": 151,
+      "finding": "Strict idle remains the pre-spawn admission contract. The post-spawn branch delegates to the exact pinned healthy-work guard with the current binding and reservation, as requested; allowing ordinary hosted inference after admission is intentional."
+    },
+    {
+      "file": "build_current.py",
+      "line": 229,
+      "finding": "The local process handle exists before ownership registration; the transition callback runs only after registered returns. A registration or callback error still reaches local finally cleanup, and uncertain owned absence retains the canonical claim."
+    },
+    {
+      "file": "build_current.py",
+      "line": 301,
+      "finding": "Every check, before admission and after transition, checks MemAvailable>=20GiB in addition to lease identity, pinned health/coordination guard, early guard, observed GPU-lease identity and qualification pin. Private phase, owner/profile/fault/resource changes are not replaced by an idle-only exemption."
+    },
+    {
+      "file": "build_current.py",
+      "line": 323,
+      "finding": "Claim release follows positive owned absence and exact own-record comparison. Final check and successful supervision precede result publication. The cpu_started flag staying true through closure preserves the intended healthy ordinary-work policy without losing phase or owner checks."
+    },
+    {
+      "file": "test_build_current.py",
+      "line": 250,
+      "finding": "Source controls cover guard branch selection, guard failure propagation, memory boundary parsing and registration-before-transition ordering. These are mocked controls, not actual R4 physical execution evidence."
+    }
+  ],
+  "bounded_limitations": [
+    "No execution, project import, tests, staging, SSH, native/GPU work or source edits performed. Only the two requested local source files were read.",
+    "No routine qualification-map review, output/input pin acceptance, build-tree continuation admission or model/runtime promotion is granted.",
+    "No concrete newly introduced lost-group, insufficient late-guard or claim-release bug identified in the inspected R4 transition.",
+    "Actual continuation still requires the separately requested fresh both-host R4 CPU proofs, exact input/output review and fresh compile-r4 evidence namespace."
+  ]
+}

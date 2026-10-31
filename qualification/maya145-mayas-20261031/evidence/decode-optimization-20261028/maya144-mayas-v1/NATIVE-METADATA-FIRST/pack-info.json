@@ -1,0 +1,40 @@
+{
+  "argv": [
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/native-build-r2-FIRST/maya-ds4",
+    "--pack",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST",
+    "--expert-profile",
+    "/home/alex/deepseek-hosted-20261025/profile-seed.bin",
+    "--pack-info"
+  ],
+  "model_loaded": false,
+  "CUDA_visible_devices": "",
+  "CPU_limit": 30,
+  "AS_bytes": 4294967296,
+  "wall_limit": 90,
+  "nice": 15,
+  "pid": 141925,
+  "returncode": 0,
+  "elapsed_seconds": 0.2286914549767971,
+  "absence": {
+    "passed": true,
+    "pending_spawn": null,
+    "cleanup_faults": [],
+    "children": [
+      {
+        "name": "version",
+        "pid": 141920,
+        "pgid": 141920,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "pack-info",
+        "pid": 141925,
+        "pgid": 141925,
+        "returncode": 0,
+        "group_absent": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "job": "extract",
+  "source_sha256": {
+    "src/ds4/ds4_model.cu": "046277a7be8d385ccc843e64301d5cc14c93516f602b12e04fc9851acf76fcc5",
+    "src/ds4/ds4_ablate.hpp": "6af30f3ad1f79eccbcf0f42b6a8b97dab9d9fb9e4a65ea2afb5bfe0bb3ba8599",
+    "include/strata/artifact/gguf_reader.hpp": "3dcb179e0d9e40a20c02ea397afc6f0707ce008bd2d4484e64bdd2094469fbf5",
+    "tools/extract_prompt_copy_check.py": "8e2d41e8405208bb021c3e5da7f97b6172fb16f5bcd1c00d95571b93ae8a7103",
+    "tests/ds4_ablate_test.cpp": "892c6fb64e0b3729f197cb7f35170f208b914d8c235e02a6c68df4cb86a2578a",
+    "tests/ds4_prompt_copy_check_test.cpp": "c657698a4d46e7cee9a6acec39786370afe6cbbbf1f38084694bdb2ac6b79b4b",
+    "qualify_rebase_guards.py": "449cf9d9479847cb76e530c9b584e49a7996e969a91d93e806fab0e720cd5ddb"
+  },
+  "observed": {
+    "pid": 288066,
+    "ppid": 288063,
+    "pgid": 288066,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "passed": true
+}

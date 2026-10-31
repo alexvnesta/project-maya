@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/current_compat.py", line 287, in <module>
+    if __name__ == '__main__': raise SystemExit(main())
+                                                ~~~~^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/current_compat.py", line 284, in main
+    print(json.dumps(controller(args)), flush=True); return 0
+                     ~~~~~~~~~~^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/current_compat.py", line 251, in controller
+    result = runtime.coordinate(old, h, out, state, save, preflight_only=not args.run)
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/current_runtime.py", line 305, in coordinate
+    return old.coordinate(host, output, state, save, preflight_only=preflight_only,
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          post_drain_root_free_bytes=lambda: shutil.disk_usage('/').free)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-profile-v1/maintenance.py", line 168, in coordinate
+    window=host.launch(prior,output,proofpath);host.free();host.kernel(state['utc'])
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya144-mayas-v1/current_runtime.py", line 240, in launch
+    return self.launch_owned(prior,self.phase_argv(output,proofpath),1200)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-profile-v1/maintenance.py", line 70, in launch_owned
+    if not clean_prior(s,k):raise ValueError('Private phase fault; stop and diagnose offline')
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Private phase fault; stop and diagnose offline
