@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v2/build.py", line 778, in <module>
+    print(json.dumps(main(args.mode, args.qualification_sha256)))
+                     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v2/build.py", line 689, in main
+    cas = load_exact('prose_measure', D / 'prose-speed-v1/prose_measure.py', CAS_SHA)
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v2/build.py", line 497, in load_exact
+    old = importlib.util.module_from_spec(spec); sys.modules[name] = old; spec.loader.exec_module(old)
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/prose-speed-v1/prose_measure.py", line 18, in <module>
+    import transport
+ModuleNotFoundError: No module named 'transport'

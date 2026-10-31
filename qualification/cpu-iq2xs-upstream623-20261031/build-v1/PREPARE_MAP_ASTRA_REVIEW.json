@@ -1,0 +1,64 @@
+{
+  "utc": "2026-10-31T05:23:30.170497+00:00",
+  "status": "PREPARE_DRAFT_MAP_REVIEWED_METADATA_FINALIZATION_ONLY",
+  "draft_sha256": "733cf9719d27b7dbab875310b7be6923f050ab3e00d24f1d18d3c9e4933b8348",
+  "root_map_review_sha256": "398657624d1c225e2f8b54b8e293d2afbf60e1e2866fa70586003b288361179a",
+  "CPU_result_review_sha256": "07d7e8188e23b3c03397a59a7b1bae9316d31547e22e569677302cd1ef846ce2",
+  "manual_source_review_sha256": "9e675dd36a295c2b20b9c8c0b1f67c84f6b2f833b2c1091a3fd551ecb74fdca5",
+  "independent_checks": {
+    "existing_file_pins": 2034,
+    "essential_union": 2008,
+    "remaining_entries_manually_classified": 26,
+    "all1510_inherited_Python_pins_unchanged": true,
+    "compile408_linktool53_conflicting_pins": 0,
+    "normalized_or_recorded_resolved_alias_conflicts": 0,
+    "source4_input42_ordered88_matches": true,
+    "both_host_six_raw_file_memberships_match": true,
+    "selected_binding_matches_both_physical_observations": true,
+    "no_old_held_candidate_binaries_added": true,
+    "no_mutable_registry_or_new_arm_reused": true
+  },
+  "local_evidence_limit": {
+    "canonical_local_matching": 704,
+    "physical_switcher_copy_matches_original_pin": true,
+    "physical_switcher_provenance_sha256": "e385440bc2a980278fa3d2998880c330a5aa23d8722fc7f68b0b0de579a5c04d",
+    "different_local_switcher_preserved": true,
+    "other_physical_only_or_not_locally_mirrored_pins": 1327,
+    "fresh_physical_all_file_and_self_verification_still_required": true
+  },
+  "permitted_finalization": {
+    "add_only_file_pins": [
+      "PREPARE_MAP_ROOT_REVIEW.json",
+      "PREPARE_MAP_ASTRA_REVIEW.json"
+    ],
+    "retain_all_existing2034_pins_exactly": true,
+    "final_file_count": 2036,
+    "change_only_other_metadata": [
+      "created_utc",
+      "status",
+      "qualification_map_reviewed to true",
+      "inventory_summary.file_pins to 2036"
+    ],
+    "prepare_admitted_must_remain": false,
+    "source_input_ID_binding_role_budget_changes_permitted": false
+  },
+  "next_admission_requirements": [
+    "Fresh physical 2036 files plus final qualification self pin checked before imports",
+    "Fresh genuine idle/default, exact 3a72 selected owner and sole ownership, phase/build/restoration free",
+    "Root available at least 136 GiB, fresh prepare-FIRST output namespace, existing experiment lock available and owned CAS claim",
+    "Downloader cooperatively paused and actual worker exit/absence evidenced before prepare claim",
+    "Source-qualified bootstrap/verify_q and matching new both-host88 proof checks, no reuse of old CPU groups as new proof",
+    "Separate single prepare-only admission; one selected92 control relink plus three dependency scans; stop for actual dependency review"
+  ],
+  "no_authority_for": [
+    "candidate compilation",
+    "CPU numerical fixture execution",
+    "native/model/GPU execution",
+    "service changes",
+    "activation",
+    "old arm replay"
+  ],
+  "prepare_admitted": false,
+  "compile_or_numerical_or_GPU_admitted": false,
+  "reviewer_project_imports_tests_remote_actions": false
+}

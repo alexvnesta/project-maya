@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-31T06:08:48.365371+00:00",
+  "decision": "CONDITIONAL_SINGLE_V3_SEVEN_CHILD_COMPILE_ONLY",
+  "qualification_sha256": "64acb1becb8ea7b61fa5867578bc46347f667a78ae864071ed6791decf0d9e08",
+  "actual_preflight_sha256": "ba67b25ca642331a6548fcc9ff42534c1ee48c73010dd5238d458b6ede6552df",
+  "actual_preflight_utc": "2026-10-31T06:08:07.383508+00:00",
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "source_input_ID_counts": [
+    4,
+    90,
+    130
+  ],
+  "map_review_sha256": "6ddb397e85fabdc15a29117839bd031069147aa924b974befa32381167d4b569",
+  "prepare_result_review_sha256": "6bcfa0a5880ae03d45cee475bab1bf62e59e69f67171d27d60fa1b71946356a4",
+  "allowed_children": [
+    "compile-iq_avx2.cpp",
+    "compile-native_expert.cpp",
+    "compile-iq2xs_exact.cpp",
+    "archive-replace",
+    "archive-index",
+    "candidate-link",
+    "fixture-link"
+  ],
+  "conditions": [
+    "Immediate source-defined fresh genuine idle/default/phase-free exact selected owner/GPU lease/root136/download paused-worker absent guards, source/bootstrap/fullq and actual CAS identity before CPU claim.",
+    "Hold qualified CPU lock stable inode2894342; never acquire/mutate GPU experiment.lock. Root launches no other maintenance/controller while held; legacy CAS is not globally atomic.",
+    "Fresh build-FIRST and compile-supervision-FIRST only. Refuse stale/foreign CPU claim and changed prior prepare custody.",
+    "Repeat selected-relink92 and actual456input/18header pin verification before tools; exact original recipe/nativeGPU/ds4IQ/ggml/core objects preserved.",
+    "Three compilations CPU120/AS4GiB/wall300; archive steps CPU30/AS512MiB/wall90; both links CPU30/AS4GiB/wall90. All nice15/CUDAhidden/threads1 with owned process groups.",
+    "Copy original CPU archive then replace only exact two members; verify all eleven members/order and other hashes. No other output mutation.",
+    "Capture owned Popen handles before receipts; prove all groups absent before own claim release, retain HOLD/claim for unknown spawn/cleanup/orphan. Stop on first failure or busy; no automatic retry/continuation.",
+    "Stop after seven compiler/archive/link children. Preserve all raw commands/deps/logs/artifact hashes/supervision and current production closure for independent actual build review."
+  ],
+  "evidence_limit": "Physical preflight summary records checks and actual import/relink/header/cleanup witnesses; this local review is not a new physical verification or per-file transcript. Source-qualified launch repeats prospective guards.",
+  "numerical_fixture_execution_admitted": false,
+  "native_model_GPU_execution_admitted": false,
+  "service_or_production_change_admitted": false,
+  "automatic_retry_or_next_stage_admitted": false,
+  "prior_v2_HOLD_preserved": true,
+  "reviewer_execution_or_remote_actions": false
+}

@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-31T05:26:53.632638+00:00",
+  "lock_holders": [
+    {
+      "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF",
+      "pid": 3998190,
+      "comm": "python"
+    }
+  ],
+  "phase": null,
+  "build": false,
+  "pending": null,
+  "binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "status": "READONLY_PREFLIGHT_DEFERRED_LOCK_UNTOUCHED",
+  "prepare_attempted": false,
+  "all_file_verification_completed_before_lock_probe": true,
+  "lock_not_removed_or_interrupted": true
+}

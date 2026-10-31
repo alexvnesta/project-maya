@@ -1,0 +1,104 @@
+{
+  "utc": "2026-10-31T05:50:04.118347+00:00",
+  "decision": "CONDITIONAL_SINGLE_BUILD_V2_PREPARE_ONLY",
+  "qualification_sha256": "b22c1468268c55bb9559aac1b38f343339dcb9d0c5e523d148876c421c7ede2a",
+  "actual_readonly_preflight_sha256": "8875b3a0fa90ab68c0c422d7f0a493bbaec11d104c9b0989c2762640bff2d855",
+  "source_review_sha256": "ddf72767adba7f4172517ab9f870666ecff07c2c07ba8c177828bb7c34ba7a96",
+  "CPU_result_review_sha256": "8256986a5530d35f2d1d25e7de142a94124f5586de584a150d2980e69becc9f5",
+  "map_review_sha256": "fb1492399be759ff1bfdce3c5a70e088a25a53eeeb91fab18dbfb09b94b6ed06",
+  "metadata_transport_refusal_sha256": "b0820c7c8f8c653e614cdbca6c8fc61b34db82e4f53888b6870b6b0ad259ae50",
+  "final_metadata_review": {
+    "all2060_draft_pins_unchanged": true,
+    "only_two_review_files_added": true,
+    "final_file_count": 2062,
+    "actual_files_plus_self_reported_checked": 2063,
+    "current_source_input_ordered_ID_counts": [
+      4,
+      65,
+      121
+    ],
+    "extra_finalized_utc_and_draft_sha_are_provenance_only": true,
+    "no_source_or_CPU_delta": true
+  },
+  "actual_preflight": {
+    "utc": "2026-10-31T05:48:43.189212+00:00",
+    "status": "READ_ONLY_ACTUAL_PREPARE_PREFLIGHT_PASS_NO_CPU_LEASE_CREATED",
+    "q_sha256": "b22c1468268c55bb9559aac1b38f343339dcb9d0c5e523d148876c421c7ede2a",
+    "actual_files_plus_self": 2063,
+    "source_maps": 4,
+    "input_maps": 65,
+    "ordered_controls_each_host": 121,
+    "selected_binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "GPU_lease": {
+      "identity": {
+        "device_major": 252,
+        "device_minor": 1,
+        "inode": 1449998
+      },
+      "main_pid": 3998190,
+      "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+    },
+    "root_GiB": 348.3167266845703,
+    "phase": null,
+    "active_cpu_build": false,
+    "download_paused_and_worker_absent": true,
+    "cpu_lock_exists": false,
+    "prepare_attempted": false,
+    "no_other_maintenance_launches_required": true,
+    "preflight_child_bounds": {
+      "CPU_s": [
+        30,
+        30
+      ],
+      "AS": [
+        536870912,
+        536870912
+      ],
+      "nice": 15,
+      "CUDA": "",
+      "bytecode": true
+    }
+  },
+  "evidence_limit": "The saved physical receipt records the complete check count and successful source-bound preflight. It is not a per-file raw hash transcript. Fresh controller bootstrap, verify_q and guards must recheck the qualified inputs and live state immediately before work. No inference success or arithmetic claim follows from these CPU controls.",
+  "authorized_once": {
+    "entry": "build-v2/build.py prepare --qualification-sha256 b22c1468268c55bb9559aac1b38f343339dcb9d0c5e523d148876c421c7ede2a",
+    "outputs": [
+      "build-v2/prepare-supervision-FIRST",
+      "build-v2/prepare-FIRST"
+    ],
+    "children": [
+      "Original native92 control relink",
+      "IQ2_XS candidate iq_avx2.cpp header dependency scan",
+      "Candidate native_expert.cpp header dependency scan",
+      "Unbuilt numerical-v2 fixture header dependency scan"
+    ],
+    "must_stop": "PREPARED_STOP_FOR_ACTUAL_INPUT_REVIEW",
+    "control_relink_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1"
+  },
+  "conditions_immediately_before_and_during": [
+    "Fresh genuine idle/default and exact selected invocation3a72/API3998190/native3998227/startticks168891838; sole selected GPU owner and no active phase/build/restoration/pending verification.",
+    "Final qualification self SHA and all2062 pins unchanged; complete current4/65/121 proof contracts; selected native92/configc43 and original objects/archives unchanged.",
+    "Root available at least136GiB; downloader remains paused with actual worker absent; fresh supervision and prepare namespaces.",
+    "Root launches no other maintenance/window/controller until CPU lease and own claim lifecycle terminate. This is a cooperative boundary, not globally atomic STATE CAS.",
+    "Acquire only E/cpu-build.lock using qualified alias/inode/ownership/CLOEXEC checks. A new stable CPU-lock inode may be created by this admitted mode. Never acquire, unlock, unlink, replace or write experiment.lock.",
+    "Read-only GPU lease remains exact selected API FLOCK WRITE fc:01:1449998 with no blocked waiter and unchanged selected binding; repeated source-defined guards apply.",
+    "All four children are serial, nice15/CUDAhidden/thread1, CPU30/wall90; control linker AS4GiB and header scans AS512MiB. Record exact PID/PGID and actual preexec limits.",
+    "Any busy condition stops owned work and preserves partials; any failure stops the sequence. No automatic retry, adoption or stale claim clearing.",
+    "Clear own canonical CPU claim only after every tracked child/group is absent, no pending spawn and no latched cleanup fault. Otherwise retain claim and HOLD evidence; preserve foreign state."
+  ],
+  "not_authorized": [
+    "Candidate compilation/archive replacement/link",
+    "Numerical fixture execution",
+    "Native/model/GPU execution",
+    "Service restart or restoration",
+    "Old deferred v1 prepare replay",
+    "Automatic compile continuation or deployment"
+  ],
+  "after_prepare": "Review actual dependency files and all children plus supervision attempt/journal/result, group absence, canonical claim release and final selected owner before a separate compile qualification/admission.",
+  "reviewer_live_actions_performed": false
+}

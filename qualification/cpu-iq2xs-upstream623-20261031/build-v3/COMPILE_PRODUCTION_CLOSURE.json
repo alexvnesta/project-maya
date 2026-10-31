@@ -1,0 +1,153 @@
+{
+  "utc": "2026-10-31T06:10:43.399390+00:00",
+  "status": "ACTUAL_BUILD_OUTPUT_ARCHIVE_AND_UNCHANGED_PRODUCTION_CLOSURE_PASS",
+  "controller_exit": 0,
+  "binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "phase": null,
+  "active_cpu_build": false,
+  "seven_owned_groups_actual_absent": true,
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "CPU_lock_inode": 2894342,
+  "CPU_kernel_rows": [],
+  "root_GiB": 348.22400665283203,
+  "kernel_warning_query": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "actual_archive_members_before": [
+    [
+      "expert.cpp.o",
+      "11a835046741d99a01ab3b4d368df2f2258d968e29ffe83c8e97a72795d2b613"
+    ],
+    [
+      "pool.cpp.o",
+      "8115ca1d42328e7dd9e6a03fdb832358bb1c8a89132042a24951c8f2920d1762"
+    ],
+    [
+      "expert_layout.cpp.o",
+      "6bbab4046778054c75f810a487a0ae1e427f31d198d2f82370fecd56ad396e7d"
+    ],
+    [
+      "q2_avx2.cpp.o",
+      "6cb0888b5def348c97943a4979d953604c3764c93347bf340a205f1bc54e3f3f"
+    ],
+    [
+      "exl3_ref.cpp.o",
+      "91c4c2bb5d56952c91bf6f5bbe6c06069c682ad914030b8a4fdcdd28967d5437"
+    ],
+    [
+      "exl3_cpu.cpp.o",
+      "636d341e53b506a615fc72ecd4c042845f46b4f808b5b4c76c28db9743a82c14"
+    ],
+    [
+      "native_expert.cpp.o",
+      "7d196b72112d8fd315ba160a423d20bc97f9cd0230e221b6c708ca82f6830654"
+    ],
+    [
+      "iq_avx512.cpp.o",
+      "8ae33b3c65c76d49019bf2a60e26490c3f5dc26171a831df8a022181e099564b"
+    ],
+    [
+      "iq_avx2.cpp.o",
+      "9abb7d82af72912df2bd5af4902ac65f40d4c0242d9cdca2b50fb667052c49da"
+    ],
+    [
+      "kq_avx512.cpp.o",
+      "b8b8b4bcb14ef91d352f5170cb31d6719b4b733808e4085f6f8ab6b5bfabc89c"
+    ],
+    [
+      "iq_avx512_one.cpp.o",
+      "8fc6093c68e7da5bb2ee293142867de9efd12d5abc60e74ad20a81fbac13e1bc"
+    ]
+  ],
+  "actual_archive_members_after": [
+    [
+      "expert.cpp.o",
+      "11a835046741d99a01ab3b4d368df2f2258d968e29ffe83c8e97a72795d2b613"
+    ],
+    [
+      "pool.cpp.o",
+      "8115ca1d42328e7dd9e6a03fdb832358bb1c8a89132042a24951c8f2920d1762"
+    ],
+    [
+      "expert_layout.cpp.o",
+      "6bbab4046778054c75f810a487a0ae1e427f31d198d2f82370fecd56ad396e7d"
+    ],
+    [
+      "q2_avx2.cpp.o",
+      "6cb0888b5def348c97943a4979d953604c3764c93347bf340a205f1bc54e3f3f"
+    ],
+    [
+      "exl3_ref.cpp.o",
+      "91c4c2bb5d56952c91bf6f5bbe6c06069c682ad914030b8a4fdcdd28967d5437"
+    ],
+    [
+      "exl3_cpu.cpp.o",
+      "636d341e53b506a615fc72ecd4c042845f46b4f808b5b4c76c28db9743a82c14"
+    ],
+    [
+      "native_expert.cpp.o",
+      "52013e05368020780d3373fa1818b8e8ba3976018d9e8bd1db814a99e9ef1fb5"
+    ],
+    [
+      "iq_avx512.cpp.o",
+      "8ae33b3c65c76d49019bf2a60e26490c3f5dc26171a831df8a022181e099564b"
+    ],
+    [
+      "iq_avx2.cpp.o",
+      "82a3228e873a435efa60e17b0ea9f3747914f2256e751700c921696fa12897a2"
+    ],
+    [
+      "kq_avx512.cpp.o",
+      "b8b8b4bcb14ef91d352f5170cb31d6719b4b733808e4085f6f8ab6b5bfabc89c"
+    ],
+    [
+      "iq_avx512_one.cpp.o",
+      "8fc6093c68e7da5bb2ee293142867de9efd12d5abc60e74ad20a81fbac13e1bc"
+    ]
+  ],
+  "actual_two_changed_members": [
+    "native_expert.cpp.o",
+    "iq_avx2.cpp.o"
+  ],
+  "all_six_output_hashes_reverified": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/iq_avx2.cpp.o": "82a3228e873a435efa60e17b0ea9f3747914f2256e751700c921696fa12897a2",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/native_expert.cpp.o": "52013e05368020780d3373fa1818b8e8ba3976018d9e8bd1db814a99e9ef1fb5",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/iq2xs_exact.cpp.o": "f0768b97bc6ae8339bb6c0e956096ee3bf523bd6ffc9a65bbbd59c0dd391ce17",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/libstrata_kernels_cpu.a": "514b8346a1df0663f2868c1de6b9bc1adbdd82a1c5422abc33cc6875dad67448",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/maya-ds4-candidate": "cab346ccefedad1d2b80384db215325a445f474729812ea288a829d843007da4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/iq2xs_exact": "d5c0bfdf33c645251e0598f02ca764ab003959c1c12b722931ce30ee012a17eb"
+  },
+  "ELF": {
+    "maya-ds4-candidate": {
+      "sha256": "cab346ccefedad1d2b80384db215325a445f474729812ea288a829d843007da4",
+      "bytes": 41330000,
+      "ELF_class": 64,
+      "machine": "x86_64",
+      "executed": false
+    },
+    "iq2xs_exact": {
+      "sha256": "d5c0bfdf33c645251e0598f02ca764ab003959c1c12b722931ce30ee012a17eb",
+      "bytes": 2603336,
+      "ELF_class": 64,
+      "machine": "x86_64",
+      "executed": false
+    }
+  },
+  "native_or_fixture_or_GPU_executed": false,
+  "production_changed": false
+}
