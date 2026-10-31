@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-31T03:44:13.040635+00:00",
+  "error": "Remote ops wrapper newline quoting SyntaxError at parse time before any statement executed",
+  "controller_started": false,
+  "private_arm_attempted": false,
+  "source_or_CPU_proof_changed": false,
+  "fix": "Use chr(10) for metadata final newline; actual qualified controller and arm unchanged",
+  "failed_receipt_preserved": true
+}

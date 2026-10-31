@@ -1,0 +1,36 @@
+{
+  "updated_utc": "2026-10-31T04:39:48.628482+00:00",
+  "status": "INITIAL_PAIR_COMPLETE_REVIEWED_NO_GAIN_NO_ADVANCEMENT",
+  "production_changed": false,
+  "CPU_qualified": true,
+  "arms": {
+    "A1": {
+      "attempted": true,
+      "targeted_quality_lifecycle_reviewed": true
+    },
+    "B1": {
+      "attempted": true,
+      "targeted_quality_lifecycle_reviewed": true
+    }
+  },
+  "native_build": false,
+  "first_CPU_preserved": "performance-v1/owner-CPU-AE1-FIRST-darwin",
+  "first_failure": "Supplied selective-hash fixture guard expectation mismatch only;194/195passed. Revised source review pending.",
+  "new_native_build": false,
+  "CPU_controls_each_host": 288,
+  "CPU_sources": 14,
+  "CPU_inputs": 1152,
+  "qualification_sha256": "e76c8762858e05648495c428579978173138d0a6b822d0325805a9cfde9c7b29",
+  "GPU_attempted": true,
+  "download_cooperative_pause_observed": true,
+  "pair_decision": "performance-v1/INITIAL_PAIR_ROOT_DECISION.json",
+  "pair_review": "performance-v1/FINAL_PAIR_ASTRA_REVIEW.json",
+  "reversed_confirmation_admitted": false,
+  "deployment_admitted": false,
+  "selected_start_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  }
+}

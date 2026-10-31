@@ -1,0 +1,61 @@
+{
+  "utc": "2026-10-31T03:43:06.791018+00:00",
+  "decision": "CONDITIONAL_SINGLE_A1_FIXED_POLICY_ONLY",
+  "mode": "prose",
+  "arm": "A1",
+  "qualification_sha256": "e76c8762858e05648495c428579978173138d0a6b822d0325805a9cfde9c7b29",
+  "actual_preflight_summary_sha256": "9730c9fc8f335bb713c24fdba9f260734beb400b9041513fe7152dad75a50805",
+  "actual_preflight_raw_sha256": "cff0f432ec8fa76e949d30336fcea4aff41bc31328a7d3b3cc41c7fff88d3074",
+  "source_review_sha256": "2fcc5480c118546a039e3938c73aef85bd0f1d5c9ce91f1c993c571edab9a939",
+  "CPU_review_sha256": "88700596c5a21d4a43ac041098108b4092d9aa248d92529c34d53c7ec7783878",
+  "map_review_sha256": "d765576d224c06c811059358bd7afb508da05562a2129af3f016313cf83a0d13",
+  "expected_selected_binding": {
+    "invocation": "8ada74a684754613a2e04f9c4f049d99",
+    "main_pid": 3802896,
+    "native_pid": 3802933,
+    "native_start_ticks": 167685086
+  },
+  "fixed_policy": "Selected92 plus sole --no-expert-cache policy factor; same selected pack/drafter/tokenizer/full profile. Own immutable original seed copied into new arm namespace.",
+  "scope": {
+    "main_cases": 5,
+    "lifecycle_cases": 4,
+    "context": 1048576,
+    "output_allowance": 262144,
+    "max_tokens": 32768,
+    "effort": 100,
+    "startup_seconds": 800,
+    "soft_seconds": 1000,
+    "wall_seconds": 1200,
+    "cleanup_seconds": 200,
+    "private_memory_bytes": 85899345920,
+    "poststop_memory_floor_bytes": 94489280512,
+    "cancel_admission_seconds": 90,
+    "root_admission_bytes": 141733920768,
+    "root_runtime_bytes": 128849018880,
+    "swap_delta_limit_bytes": 1073741824,
+    "cache_limit_bytes": 8589934592,
+    "log_limit_bytes": 4294967296
+  },
+  "review_findings": [
+    "Final map equals reviewed1498 plus exactly two approved result/map reviews; all1500 actualfilepins copied in rawpreflight proof match finalq.",
+    "Actual baseline identity native92/configc43/fullcontext/defaultoutput/chunk4096/images/Q8/TP1/allRAM and19/21 split match selected contract. Hosted GPUslots11315 remain inferred, not a new direct INFO claim.",
+    "Actual preflight summary records root374281154560, download75/absence/pause, empty registry/no phase and previous clean004709window.",
+    "New fixed policy actual cache placement is observed during arm;19/21 required, no source tuning or bit-identical arithmetic assertion."
+  ],
+  "conditions_immediately_before_launch": [
+    "Reconfirm same selected binding/healthy default, phasefree/no pending restoration or CPUbuild, no foreign owner, source/q exact and root132.",
+    "Ensure downloader remains absent with actual prior75 and retained pause; fresh genuineidle for staging/heavyCPU.",
+    "New --run controller/output namespace must be fresh and A1 registry unattempted; preflight-only metadata is not an attempted arm and must not be overwritten.",
+    "Use only qualified canonical owned lifecycle. After owned selectedstop require actual>=88GiB before private native; apply andverify80GiB/swap0 private fence.",
+    "One attempt only; preserve partial/UNRUN/fault evidence and cleanup/restoration outcomes. No retries or budget resets.",
+    "Require full independent bounded source-qualified audit and manual raw review after selected restoration."
+  ],
+  "admitted_next_arms": [],
+  "B1_admitted": false,
+  "reverse_or_coding_admitted": false,
+  "deployment_admitted": false,
+  "performance_benefit_established": false,
+  "completion_feasibility_established": false,
+  "reviewer_live_actions": false,
+  "reviewer_pause_during_private_and_restoration": true
+}

@@ -1,0 +1,168 @@
+{
+  "utc": "2026-10-31T04:35:48.602056+00:00",
+  "status": "INITIAL_A1_B1_SCREEN_CLOSED_NO_ADVANCEMENT",
+  "criteria_sha256": "28b5619df88deaa8dc4cba2898ea3016448024de4463335874c215935890a27f",
+  "qualification_sha256": "e76c8762858e05648495c428579978173138d0a6b822d0325805a9cfde9c7b29",
+  "inputs": {
+    "prose/A1/terminal-audit.json": "19a79d516399f2d028fc47af88ab85af2ddef7c28f12ed7c158b150d500235a5",
+    "A1_ROOT_RESULT_REVIEW.json": "99dbe5a91e2fd3507c4b526337c4a96c120ecb8382856acf9eea5468d3a98cb4",
+    "A1_RESULT_ASTRA_REVIEW.json": "c600dd2be029e18a551d4f233327f0cb60a5798d111820da869cb57f8a6e3450",
+    "prose/B1/terminal-audit.json": "aa94c248ba188626ba8b683f4d672bf16abe34576addd7b873077a36301ce7f5",
+    "B1_ROOT_RESULT_REVIEW.json": "fa5a2e5834057f184d054529bf5c87891e6398dbf6b6b3b725c62df873631798",
+    "B1_RESULT_ASTRA_REVIEW.json": "4605016dad8a816e2d8931ac5d130e9ca45bd9a72b207aebb7a4fd4648864bbd"
+  },
+  "arms": {
+    "A1_fixed": {
+      "main": {
+        "generated_tokens": 5573,
+        "native_decode_ms": 121794.1,
+        "native_decode_tps": 45.75755311628396,
+        "prompt_tokens": 169,
+        "prompt_ms": 2283.5,
+        "reused": 0,
+        "drafts_offered": 4006,
+        "drafts_accepted": 3472,
+        "client_full_seconds": 124.1019217169378,
+        "client_first_content_seconds": 102.94454521196894,
+        "client_first_reasoning_seconds": 2.2877378819976,
+        "buffered_stream0_first_delta_is_not_true_TTFT": true
+      },
+      "cold": {
+        "generated_tokens": 175,
+        "native_decode_ms": 3793.0,
+        "native_decode_tps": 46.137621935143684,
+        "prompt_tokens": 8469,
+        "prompt_ms": 8890.1,
+        "reused": 0,
+        "drafts_offered": 154,
+        "drafts_accepted": 128,
+        "client_full_seconds": 12.737474981928244,
+        "client_first_content_seconds": 12.737323645036668,
+        "client_first_reasoning_seconds": 12.737323645036668,
+        "buffered_stream0_first_delta_is_not_true_TTFT": true
+      },
+      "quality_lifecycle_targeted_pass": true,
+      "memory_events_max_delta": 0,
+      "resources": {
+        "root_min_GiB": 345.0914497375488,
+        "system_swapout_delta_bytes": 0,
+        "swap_not_attributed_to_model": true
+      }
+    },
+    "B1_current_adaptive": {
+      "main": {
+        "generated_tokens": 2353,
+        "native_decode_ms": 61220.5,
+        "native_decode_tps": 38.434838003609904,
+        "prompt_tokens": 169,
+        "prompt_ms": 2234.4,
+        "reused": 0,
+        "drafts_offered": 1302,
+        "drafts_accepted": 928,
+        "client_full_seconds": 63.4804115628358,
+        "client_first_content_seconds": 40.11590740294196,
+        "client_first_reasoning_seconds": 2.2384776058606803,
+        "buffered_stream0_first_delta_is_not_true_TTFT": true
+      },
+      "cold": {
+        "generated_tokens": 159,
+        "native_decode_ms": 2953.2,
+        "native_decode_tps": 53.83990247866721,
+        "prompt_tokens": 8469,
+        "prompt_ms": 8911.5,
+        "reused": 0,
+        "drafts_offered": 125,
+        "drafts_accepted": 119,
+        "client_full_seconds": 11.898090085946023,
+        "client_first_content_seconds": 11.897890568012372,
+        "client_first_reasoning_seconds": 11.897890568012372,
+        "buffered_stream0_first_delta_is_not_true_TTFT": true
+      },
+      "quality_lifecycle_targeted_pass": true,
+      "memory_events_max_delta": 953,
+      "resources": {
+        "root_min_GiB": 348.32494735717773,
+        "system_swapout_delta_bytes": 73728,
+        "swap_not_attributed_to_model": true
+      }
+    }
+  },
+  "native_prose_rate_change_percent": -16.003292601911625,
+  "cold_prefill_regression_percent": 0.2407172022811821,
+  "frozen_adaptive_gain_gate_passed": false,
+  "cold_regression_gate_passed": true,
+  "reversed_confirmation_admitted": false,
+  "deployment_admitted": false,
+  "production_changed": false,
+  "selected_restored": {
+    "native_pid": 3998227,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "limitations": [
+    "One initial pair; no reproducibility or general-quality claim.",
+    "Main2353versus5573generatedtokens include different reasoning paths and differing draft acceptance; no equal-work end-to-end speed conclusion.",
+    "B1 memory.events.max953 (A1zero), oom/oom_killzero; system swapout73728bytes not attributed to model. Memory pressure limits causal interpretation.",
+    "Policy also changes placement11355versus11315GPUslots and CPU4005versus4045; sameauto19/21. Not transfer-only comparison.",
+    "Positive rounded promotion proves adaptive activity; no exact migration-byte/count proof.",
+    "Preserved1Mcontext/256Kallowance are configuredcapacity, not nearfilled1M/full256Kgeneration stress proof."
+  ],
+  "decision": "Retain current qualified hosted deployment. No adaptive gain under frozen criteria, therefore no automatic reversed confirmation/promotion. Fixed policy is not a qualified production winner from this pair."
+}

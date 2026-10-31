@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-31T04:37:46.170905+00:00",
+  "guard": "Physical qualified fresh idle/current exact selected binding before metadata staging; no model or service action",
+  "path": "/home/alex/deepseek-hosted-20261025/runtime-native-vision-v2/serve/frontend.py",
+  "sha256": "e0fded1ab8c856afa8cda7464b40d2753737de18dead42fc75381def13b1c6a1",
+  "equals_selected_local_and_frozen_frontend": true,
+  "finding": "Ordinary OpenAI and Anthropic converter _tool_list path already invokes _stable_tool_order; no DeepSeek bypass in this selected version. New namespace semantics are not claimed.",
+  "source_reference": "native-vision-v2/runtime/serve/frontend.py:470,522,581,661"
+}

@@ -1,0 +1,25 @@
+{
+  "startup_retries": 0,
+  "default_effort": 100,
+  "inference_source_changed": false,
+  "observer_subclass_only": true,
+  "request_scoped_STAT_observer": true,
+  "server_pid": 3993413,
+  "owned_window": "/home/alex/strata-deepseek-test-20261024/windows/20261031T041534Z.json",
+  "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "config_sha256": "eddc68bd7c7e2ad491ea6c76e91b65dfa0e914a17fd77608ff1d2f6a99ea9b03",
+  "context": 1048576,
+  "output_allowance": 262144,
+  "adaptive_cache_policy": {
+    "candidate": true,
+    "exe": "/home/alex/deepseek-hosted-20261025/bin/maya-ds4",
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "pack": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1",
+    "factor": "adaptive-expert-cache-policy",
+    "adaptive_cache_policy": "current-adaptive",
+    "same_selected_weights_drafter_tokenizer": true,
+    "placement_and_prompt_path_may_differ": true,
+    "runtime_projection_policy": "L22 scale1 unchanged",
+    "numerical_equivalence_claim": false
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "decision": "SUPPLIED_TEST_TARGETING_DEFECT_NARROW_SOURCE_REPAIR_REVIEWED_NO_EXECUTION",
+  "original_first_preserved": true,
+  "original_test_sha256": "a106e275d072c098e129420530f4fd908ac7f0cf57384409391dc32cc107a05a",
+  "revised_test_sha256": "52cb104f0be162d117fae925e0a2d10a0b5acd94cac5b9fab7ffabd6a7c22dbe",
+  "actual_first_raw_sha256": {
+    "child.log": "f7ad3c42614d47a88fc2648af5db2193f3870752e1982129f70fbef474f83735",
+    "child.json": "f98fb3ff44e7ba7ec335d4eb3dd73cfb1a7c5638af86b1c068288d4cf5d40e56",
+    "receipt.json": "11cf6f9e61f1fe9f0cb684cf89304077fd3fc487c69d723f5170056f9a7ce539"
+  },
+  "actual_first_returncode": 1,
+  "original_controls": 195,
+  "diagnosis": "Unconditional r.sha mock invalidated original_module helper guard before source_manifests reached the intended manifest check. Production guard failed closed; one expectation failure among195, not a model/runtime fault.",
+  "repair": "Select each of the two exact source manifest paths individually; all helper and other hashes call original_sha. Require the original precise manifest error and exactly one targeted hash interception. No regex broadening or runtime edits.",
+  "tests_executed_by_reviewer": false,
+  "new_exact_source_and_both_host_CPU_qualification_required": true,
+  "GPU_admission": false
+}
