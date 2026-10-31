@@ -1,0 +1,63 @@
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 1 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 0 expert 1 from file: bytes and guards PASS
+ds4: TP check: the prompt path's copies passed (4 experts' parts, from RAM in place and from the file, on the devices byte for byte)
+ds4: prompt copy check: N/A (no staged non-flow member; flow paths are not checked here)
+ds4: prompt copy check: CUDA1 layer 1 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 0 expert 1 from file: bytes and guards PASS
+ds4: TP check: the prompt path's copies passed (2 experts' parts, from RAM in place and from the file, on the devices byte for byte)
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 1 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 0 expert 1 from file: bytes and guards PASS
+ds4: TP check: the prompt path's copies passed (4 experts' parts, from RAM and from the file, on the devices byte for byte)
+ds4: prompt copy check: N/A (no staged non-flow member; flow paths are not checked here)
+ds4: prompt copy check: N/A (no staged non-flow member; flow paths are not checked here)
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 1 from file: bytes and guards PASS
+ds4: TP check: prompt copies 1/1/2 (layer 0, member 0 takes 256 of 512, expert 0 from RAM, in place) FAILED: 1 bytes, 0 guard bytes differ
+ds4: TP check: prompt copies 1/1/2 (layer 0, member 0 takes 256 of 512, expert 0 from RAM, in place) FAILED: 0 bytes, 1 guard bytes differ
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 1 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 0 expert 1 from file: bytes and guards PASS
+ds4: TP check: the prompt path's copies passed (4 experts' parts, from RAM in place and from the file, on the devices byte for byte)
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 1 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 0 expert 1 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 1 from file: bytes and guards PASS
+ds4: TP check: the prompt path's copies passed (6 experts' parts, from RAM in place and from the file, on the devices byte for byte)
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 1 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 0 member 1 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 0 member 1 expert 1 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 1 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA0 layer 1 member 0 expert 1 from file: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 1 expert 0 from RAM: bytes and guards PASS
+ds4: prompt copy check: CUDA1 layer 1 member 1 expert 1 from file: bytes and guards PASS
+ds4: TP check: the prompt path's copies passed (8 experts' parts, from RAM in place and from the file, on the devices byte for byte)
+ds4: prompt copy check: N/A (no staged non-flow member; flow paths are not checked here)
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 0 from RAM: bytes and guards PASS
+ds4: TP check: the prompt path's copies passed (1 experts' parts, from RAM in place and from the file, on the devices byte for byte)
+ds4: prompt copy check: CUDA0 layer 0 member 0 expert 0 from file: bytes and guards PASS
+ds4: TP check: the prompt path's copies passed (1 experts' parts, from RAM in place and from the file, on the devices byte for byte)
+PASS two-devices-ram-and-file
+PASS all-flow-pinned-not-applicable
+PASS mixed-flow-only-nonflow-checked
+PASS unpinned-staged-path-checked
+PASS no-staging-not-applicable
+PASS missing-chunk-not-applicable
+PASS eligible-without-experts-refused
+PASS copy-error-terminal
+PASS byte-error-terminal
+PASS guard-error-terminal
+PASS repeated-device-format-deduplicated
+PASS new-device-format-covered
+PASS both-split-rotations-and-members
+PASS drafter-excluded
+PASS ram-only-member
+PASS file-only-member
+SUMMARY 16 controls passed; synthetic copy backend, no GPU proof
