@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-31T06:34:38.459429+00:00",
+  "scope": "Bounded read-only disassembly of original unchanged linked ggml quantizer object. No arithmetic, fixture or model execution, no source change/regrade.",
+  "object_path": "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o",
+  "object_sha256": "21f216723ab129dbda0444d47318cfa8b7f32418354b7e9e77e984a04ebed889",
+  "tool_path": "/usr/bin/objdump",
+  "tool_sha256": "44f07f8da860b15bd4dec909f229dec536595fb170a616fe3ab29c7b21c9736f",
+  "driver_sha256": "8cc32d6321db15ad9ac4ad0fea22dfea639432d2c94506a02b377f3f0d3168d4",
+  "configured_child_CPU30_AS512_nice15_CUDAhidden": true,
+  "actual_resource_witness_not_claimed_for_external_objdump": true,
+  "result": {
+    "argv": [
+      "/usr/bin/objdump",
+      "-d",
+      "--disassemble=quantize_row_q8_K_ref",
+      "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o"
+    ],
+    "pid": 4065115,
+    "returncode": 0,
+    "error": null,
+    "cleanup": [],
+    "elapsed_seconds": 0.011551487958058715
+  },
+  "disassembly_sha256": "c9c8fadecab815d536e9d76cc51a254d7e15ae1f08739c297c85bc843a3092e6",
+  "binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  }
+}

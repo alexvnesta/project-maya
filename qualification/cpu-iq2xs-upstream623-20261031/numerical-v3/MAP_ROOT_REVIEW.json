@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-31T06:26:47.551128+00:00",
+  "status": "ROOT_NUMERICAL_LOCAL_MAP_REVIEW_PASS_PENDING_ACTUAL_AND_SINGLE_ADMISSION",
+  "draft_sha256": "1c4b3a25fd190835f97a95cdb4b9b57f54d0d3b7da60450236dde304c7ff8ba4",
+  "pins": 2228,
+  "old2147_exactly_unchanged": true,
+  "new81_classified": true,
+  "local75_new_metadata_source_proof_hashes_checked": true,
+  "physical_six_output_hashes_require_fresh_check": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/iq_avx2.cpp.o": "82a3228e873a435efa60e17b0ea9f3747914f2256e751700c921696fa12897a2",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/native_expert.cpp.o": "52013e05368020780d3373fa1818b8e8ba3976018d9e8bd1db814a99e9ef1fb5",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/iq2xs_exact.cpp.o": "f0768b97bc6ae8339bb6c0e956096ee3bf523bd6ffc9a65bbbd59c0dd391ce17",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/libstrata_kernels_cpu.a": "514b8346a1df0663f2868c1de6b9bc1adbdd82a1c5422abc33cc6875dad67448",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/maya-ds4-candidate": "cab346ccefedad1d2b80384db215325a445f474729812ea288a829d843007da4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/build-FIRST/iq2xs_exact": "d5c0bfdf33c645251e0598f02ca764ab003959c1c12b722931ce30ee012a17eb"
+  },
+  "current_source_input_ID_counts": [
+    6,
+    164,
+    109
+  ],
+  "actual_model_inventory_pairs": 10,
+  "children": 46,
+  "case_rows": 6336,
+  "scope": "Single finite CPU-only numerical sequence for exact compiled fixture, strict parser/custody/dispatch/environment/resource/cleanup and whole1000+200 gates. Recheck exact CPU64/Zen2 identity/flags/affinity/currentselected/GPUlease/CPUlock/root136/noactivephase/DLpause and fullphysicalclosure before separate admission. No candidate model/GPU/performance or service change. No old arms replayed."
+}

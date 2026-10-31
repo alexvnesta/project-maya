@@ -1,0 +1,56 @@
+{
+  "utc": "2026-10-31T06:52:49.264234+00:00",
+  "status": "READ_ONLY_FIXTURE_REPAIR_BUILD_ACTUAL_PREFLIGHT_PASS",
+  "q_sha256": "01acb187f2c74475783666ecc04e5013b0fa06c11b8a72ef34b7a6bdcc921658",
+  "actual_files_plus_self": 2278,
+  "source_input_ID_counts": [
+    5,
+    209,
+    100
+  ],
+  "binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "CPU_lock_identity": {
+    "device_major": 252,
+    "device_minor": 1,
+    "inode": 2894342
+  },
+  "CPU_kernel_rows": [],
+  "root_GiB": 348.21875,
+  "phase": null,
+  "active_cpu_build": false,
+  "actual_CAS_import_identity_passed": true,
+  "exact_one_line_CPP_delta_verified": true,
+  "unchanged_candidate_four_outputs_rehashed": {
+    "maya-ds4-candidate": "cab346ccefedad1d2b80384db215325a445f474729812ea288a829d843007da4",
+    "libstrata_kernels_cpu.a": "514b8346a1df0663f2868c1de6b9bc1adbdd82a1c5422abc33cc6875dad67448",
+    "iq_avx2.cpp.o": "82a3228e873a435efa60e17b0ea9f3747914f2256e751700c921696fa12897a2",
+    "native_expert.cpp.o": "52013e05368020780d3373fa1818b8e8ba3976018d9e8bd1db814a99e9ef1fb5"
+  },
+  "old_v3_HOLD_raw_preserved_group_absent_claim_released": true,
+  "download_paused_worker_absent": true,
+  "planned_children": [
+    "fixture-compile",
+    "fixture-link"
+  ],
+  "aggregate_budget": {
+    "soft_seconds": 400,
+    "wall_seconds": 600,
+    "cleanup_seconds": 200
+  },
+  "build_attempted": false,
+  "numerical_or_GPU_or_model_or_service_actions": false
+}

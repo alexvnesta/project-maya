@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-31T06:32:22.015506+00:00",
+  "status": "NUMERICAL_FIRST_FAULT_HOLD_OWNED_CLEANUP_COMPLETE_SELECTED_UNCHANGED",
+  "binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "phase": null,
+  "active_cpu_build": false,
+  "controller_OS_exit": 1,
+  "attempted_failed_children": 1,
+  "never_attempted_children": 45,
+  "complete_accepted_children": 0,
+  "fixture_PID_snapshot": 4062773,
+  "fixture_OS_exit": 1,
+  "actual_group_absent": true,
+  "own_claim_released": true,
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "CPU_lock_inode": 2894342,
+  "CPU_kernel_rows": [],
+  "root_GiB": 348.22026443481445,
+  "kernel_warning_query": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "native_model_or_GPU_or_service_change": false,
+  "retry_or_progression_authorized": false
+}

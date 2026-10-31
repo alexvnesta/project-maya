@@ -1,0 +1,155 @@
+{
+  "metadata_sha256": "bc5229fa509356053d07bbcc97e1245f05ac29934c9f92605b21659b4675c966",
+  "scope": "Exact main layers.0..39 routed384expert matrices grouped as gate(w1),up(w3),down(w2); metadata only, no CPU residency or traffic fraction claim.",
+  "main_experts": 15360,
+  "combinations": [
+    {
+      "gate_up_down": [
+        "IQ2_S",
+        "IQ2_S",
+        "IQ2_S"
+      ],
+      "experts": 384,
+      "layers": [
+        25
+      ]
+    },
+    {
+      "gate_up_down": [
+        "IQ2_S",
+        "IQ2_S",
+        "IQ2_XS"
+      ],
+      "experts": 384,
+      "layers": [
+        17
+      ]
+    },
+    {
+      "gate_up_down": [
+        "IQ2_S",
+        "IQ2_S",
+        "IQ2_XXS"
+      ],
+      "experts": 384,
+      "layers": [
+        30
+      ]
+    },
+    {
+      "gate_up_down": [
+        "IQ2_XS",
+        "IQ2_XS",
+        "IQ2_S"
+      ],
+      "experts": 768,
+      "layers": [
+        24,
+        38
+      ]
+    },
+    {
+      "gate_up_down": [
+        "IQ2_XS",
+        "IQ2_XS",
+        "IQ2_XS"
+      ],
+      "experts": 1536,
+      "layers": [
+        9,
+        12,
+        26,
+        27
+      ]
+    },
+    {
+      "gate_up_down": [
+        "IQ2_XS",
+        "IQ2_XS",
+        "IQ2_XXS"
+      ],
+      "experts": 384,
+      "layers": [
+        31
+      ]
+    },
+    {
+      "gate_up_down": [
+        "IQ2_XS",
+        "IQ2_XS",
+        "IQ3_XXS"
+      ],
+      "experts": 384,
+      "layers": [
+        23
+      ]
+    },
+    {
+      "gate_up_down": [
+        "IQ2_XXS",
+        "IQ2_XXS",
+        "IQ2_S"
+      ],
+      "experts": 2688,
+      "layers": [
+        8,
+        10,
+        16,
+        21,
+        22,
+        32,
+        39
+      ]
+    },
+    {
+      "gate_up_down": [
+        "IQ2_XXS",
+        "IQ2_XXS",
+        "IQ2_XS"
+      ],
+      "experts": 2304,
+      "layers": [
+        11,
+        14,
+        18,
+        28,
+        29,
+        34
+      ]
+    },
+    {
+      "gate_up_down": [
+        "IQ2_XXS",
+        "IQ2_XXS",
+        "IQ2_XXS"
+      ],
+      "experts": 6144,
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        13,
+        15,
+        19,
+        20,
+        33,
+        35,
+        36,
+        37
+      ]
+    }
+  ],
+  "all_gate_up_types_equal": true,
+  "main_types": [
+    "IQ2_XXS",
+    "IQ2_XS",
+    "IQ2_S",
+    "IQ3_XXS"
+  ],
+  "MTP_and_other_tensors_not_counted": true
+}

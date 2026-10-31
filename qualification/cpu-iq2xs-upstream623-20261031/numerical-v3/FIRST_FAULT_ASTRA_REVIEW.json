@@ -1,0 +1,112 @@
+{
+  "utc": "2026-10-31T06:38:44.603958+00:00",
+  "status": "FIRST_FAULT_HOLD_SOURCE_AND_OBJECT_CORROBORATED_FIXTURE_INITIALIZATION_DEFECT",
+  "scope": "Independent offline review of saved failure receipts, frozen fixture and wrapper source, physical source/link observation, and original-object disassembly. No project import, arithmetic execution, retry, source repair or live action.",
+  "qualification_sha256": "067bdfbd0caad55ac0715215e110734cb4659f7b4f448e61e791e5ae7e35bf8d",
+  "raw_sha256": {
+    "numerical-FIRST/partial.json": "ea48c23ac0e4de6df3219a134b567f30c502e7c38f56482c49674d48990ce8f3",
+    "numerical-FIRST/pure-256-optimized/stdout": "ee058be323ed043834d8837eac75f2ef9b7730e4544be1185df6dd226f5614a0",
+    "numerical-FIRST/pure-256-optimized/stderr": "537670122ee3703664cf1ff66ac95e9e896e4c53b4480841767030180b7a913f",
+    "numerical-FIRST/pure-256-optimized/dispatch-environment.json": "b39da09e1567e278beeaf86c8ce584088275fe4c860ea3b6e5c27019e1d61f63",
+    "numerical-FIRST/pure-256-optimized/child.json": "14758fbc52575011495f7ec7a94763e1998a39b83a46728cdf31d134b46f2bc2",
+    "numerical-FIRST/pure-256-optimized/observed.json": "4a3152a1a4b81145d774690a87e59a62159d6404d9fa18119d62760ed101f81a",
+    "numerical-supervision-FIRST/result.json": "d08d4b4830786819f750379982a29f4c950d8bce6888a7ea586787e571378a00",
+    "numerical-supervision-FIRST/attempt.json": "3a27290479f2607e1b23aed151e28bd36222ff20c64e65cc03676f762416b5ee",
+    "numerical-supervision-FIRST/owned-children.jsonl": "1d318bb018eeb3960f68e57f7f473974e3f170b2fd5e3d8b64afc508d8e014dc",
+    "read-only-quantizer-disassembly/child.log": "c9c8fadecab815d536e9d76cc51a254d7e15ae1f08739c297c85bc843a3092e6",
+    "read-only-quantizer-disassembly/observation.json": "10ca322a47b89f76b58dcf2828fda50d7dc8734a7579430b1ec5496902871189",
+    "read-only-quantizer-disassembly/child.json": "2ffcbd3647c4a3969423b099a95dde98104bbd177b236a14687c169dde4ba8ad",
+    "controller.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "controller.stderr": "34a9921e785793d99053f87060f3d6126c4ab65c0b430b61d9676e7b43fe5747",
+    "HOLD_PRODUCTION_CLOSURE.json": "59bed4035a85f5a721db34cbfe4a52f6acf5ca7e6610e02871f0810ef1f345bc",
+    "GGML_QUANTIZER_SOURCE_OBSERVATION.json": "c35c80858b1e6e98b2bef9086ac4fef2f4de616818a492cad621944dae0252b4",
+    "QUANTIZER_LINKED_MEMBER_OBSERVATION.json": "dfcf33ed14816adf15c90831f8b04ceccf5c3516fb9abb6f8233d0920feea78c",
+    "FIRST_FAULT_ROOT_REVIEW.json": "1fe3b4858745259cf45819ca37bc692089f517416c841a9b1d6633a44ddce2ff",
+    "qualification.json": "067bdfbd0caad55ac0715215e110734cb4659f7b4f448e61e791e5ae7e35bf8d",
+    "ACTUAL_PREFLIGHT.json": "2fc85c73f9e4a94ded2a207989dcdf13d730a2236a25e966dd16a7a2f21a032d",
+    "NUMERICAL_ADMISSION_ASTRA.json": "e1fc46c8442a93f16d89c3a4aeab6c2b40b62b448ebc66079da9c145a94bee91"
+  },
+  "local_source_sha256": {
+    "numerical-v2/iq2xs_exact.cpp": "33ede583a7c299a9bac83520050a6ea48233ae596fe6bb0a0f8195dbb7dfd6e7",
+    "base/src/ds4/ds4_iq_cpu.cpp": "7894f430fdfb48ba030ee9aff21414833e7f498052d322aeb33b53655da6118a",
+    "base/src/kernels/cpu/native_expert.cpp": "29c706324adaf639e553f266bda6ca1c0c6d755746622e1e80f0af0dbafa3de4",
+    "candidate/src/kernels/cpu/native_expert.cpp": "614191b7aef3bf15dacb3b04c8ef5a1b390b8a28ffbb13e2195430c5f0be3120",
+    "numerical-v3/runner.py": "474098a4ebdf96d7b8e35b74c93b35ec363f3e0240c8003df09347cc29fcdd7e",
+    "numerical-v3/output_parser.py": "bf4d9a463bd816eab4c8161100d230e417fe65c652a5fcccd1574564e4822bdd"
+  },
+  "outcome": {
+    "controller_pid": 4062625,
+    "controller_exit": 1,
+    "failed_fixture_pid": 4062773,
+    "failed_fixture_exit": 1,
+    "attempted_failed": [
+      "pure-256-optimized"
+    ],
+    "never_attempted_count": 45,
+    "complete_accepted_children": 0,
+    "panel_rows_passed": 0,
+    "planned_panel_rows": 6336,
+    "raw_partial_taxonomy": "partial.unrun contains all46, including the first attempted-failed child. The original is preserved; it must not be reported as46 never attempted."
+  },
+  "diagnosis": {
+    "classification": "Fixture compares partially written Q8_K objects with different initial destination bytes.",
+    "first_case": "n256, nt1, pad0, pattern0 positive zero, range0:7, type17. Failure occurs in the selected activation quantization memcmp before the first explicit panel row calculation.",
+    "fixture": "Reference allocation including activation payload is filled0x3c. quantized_via_selected(ab) is value-initialized to zero. Both calls quantize the same all-zero input and then memcmp the whole292-byte block.",
+    "call_chain": [
+      "Reference: Q8_K CPU traits.from_float",
+      "Selected: gg::iq_cpu_quant -> native_quant_act -> same Q8_K CPU traits.from_float",
+      "Q8_K traits -> quantize_row_q8_K -> quantize_row_q8_K_ref"
+    ],
+    "unchanged_wrapper_body_confirmed": true,
+    "quantizer": "Zero branch writes d and256 qs bytes, then continues before the16 int16 bsums stores. The32 bsums bytes are real block fields, not C++ padding.",
+    "source_predicted_difference": "Block-relative offsets260..291 retain0x3c versus0x00. This is inferred from source and original-object stores, not a recorded memory comparison dump.",
+    "actual_mismatch_bytes_or_offsets_observed": false,
+    "object_corroboration": "rsi is destination+4. Branch3adfb reaches3ba0e; d and qs256 are zeroed; jump3ba43->3b9eb bypasses bsums stores and advances0x124 bytes. Exact object21f2167 is confirmed as ggml-quants.c.o member of linked, qualification-pinned libggml-base.a ad2710f6.",
+    "startup_limit": "DISPATCH type17 one1/multi1 follows native dispatch self-checks that can execute candidate rows. This is not proof of no candidate arithmetic. It is also not acceptance of any6336-panel row.",
+    "candidate_numerical_matrix_status": "UNKNOWN; no panel acceptance or candidate clearance follows from the fixture diagnosis."
+  },
+  "supervision_and_production": {
+    "owned_group_absence_verified": true,
+    "claim_released": true,
+    "cleanup_errors": [],
+    "preexec_observation": "Actual recorded Python preexec PID/PGID, CPU30, AS512MiB, nice15 and scrubbed environment; do not relabel this as an in-ELF resource witness. Pinned argv, Popen exit and output establish the executed fixture chain.",
+    "binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "selected_GPU_lease_unchanged": true,
+    "CPU_lock_unheld": true,
+    "kernel_warning_query_exit": 0,
+    "kernel_warning_output_empty": true,
+    "no_model_GPU_service_action": true
+  },
+  "disassembly_limits": {
+    "read_only": true,
+    "child_pid": 4065115,
+    "exit": 0,
+    "cleanup": [],
+    "configured_CPU30_AS512_nice15": true,
+    "external_objdump_actual_resource_witness_claimed": false,
+    "new_arithmetic_execution": false
+  },
+  "qualification_limit": "Portable109 controls qualified custody, parsing and supervision, not C++ arithmetic. This fixture initialization issue was missed in source review; passed portable controls and original failed run retain their distinct outcomes.",
+  "prospective_repair_architecture_only": {
+    "implementation_authorized_by_this_receipt": false,
+    "minimal_source_delta": "In a new fixture namespace, initialize quantized_via_selected to the same0x3c payload state as the reference immediately before each selected quantizer call. Retain the complete-byte memcmp, all outer canaries, input patterns, values, row ranges, all6336 cases and46jobs. No candidate or ggml changes.",
+    "reason_for_per_call_reset": "Prevents reused destination bytes from making equivalence depend on a preceding token row. The reference payload for each row already starts0x3c.",
+    "meaningful_controls": [
+      "Freeze an exact diff proving only the destination initialization and new provenance metadata changed.",
+      "Exercise a small partial-write stand-in: differing initialization must reject; equal initialization must compare equal; a changed written byte must still reject. Label this as control logic, not real quantizer arithmetic.",
+      "Keep zero and negative-zero cases in the actual full matrix; do not skip bsums or weaken the failure predicate."
+    ],
+    "qualification_sequence": "New source and controller metadata, mutual manual review and both-host bounded controls, fixture-only compile/link with unchanged candidate archive and original ggml/wrapper objects, actual output/dependency review, then a separate numerical qualification and action-time admission. No old attempt or receipt is replayed or regraded.",
+    "candidate_native_sha256_unchanged": "cab346ccefedad1d2b80384db215325a445f474729812ea288a829d843007da4"
+  },
+  "accepted": false,
+  "retry_admitted": false,
+  "numerical_admitted": false,
+  "model_GPU_admitted": false,
+  "original_failure_regraded": false
+}

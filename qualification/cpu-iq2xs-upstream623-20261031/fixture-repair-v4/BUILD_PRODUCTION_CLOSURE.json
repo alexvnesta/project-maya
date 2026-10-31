@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-31T06:57:42.127327+00:00",
+  "status": "READ_ONLY_POST_BUILD_CLOSURE_PASS",
+  "binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "CPU_lock_inode": 2894342,
+  "CPU_kernel_rows": [],
+  "active_cpu_build": false,
+  "phase": null,
+  "root_GiB": 348.21430587768555,
+  "outputs": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact.cpp.o": "d7c646f78d4f8a21a0e0cd496cff94c1b3515105ac52c885faa4285cb3f67a0d",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact": "890041fdfb7efa9b3d9e2a7078823e5278c4ddb12da29bfa7ca5e6752b7073f6"
+  },
+  "actual_inputs": 250,
+  "children": [
+    {
+      "pid": 4074475,
+      "returncode": 0,
+      "elapsed_seconds": 1.3321296200156212
+    },
+    {
+      "pid": 4074609,
+      "returncode": 0,
+      "elapsed_seconds": 0.5173129860777408
+    }
+  ],
+  "owned_groups_absent": true,
+  "kernel_rc": 0,
+  "kernel_faults": [],
+  "candidate_unchanged": true,
+  "numerical_or_model_or_GPU_execution": false
+}

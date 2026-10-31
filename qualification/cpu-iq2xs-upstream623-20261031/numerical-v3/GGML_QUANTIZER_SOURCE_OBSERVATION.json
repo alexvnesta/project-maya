@@ -1,0 +1,131 @@
+{
+  "utc": "2026-10-31T06:33:43.985134+00:00",
+  "status": "READ_ONLY_EXACT_PHYSICAL_GGML_SOURCE_AND_LINKED_ARCHIVE_OBSERVATION_NO_EXECUTION",
+  "files": {
+    "/home/alex/strata-deepseek-test-20261024/llama.cpp/ggml/src/ggml-quants.c": {
+      "sha256": "07143d7068936ae46b3c528b2f3d4bbb666e74d88992165716174d243573965d",
+      "bytes": 228250
+    },
+    "/home/alex/strata-deepseek-test-20261024/llama.cpp/ggml/src/ggml-common.h": {
+      "sha256": "0061131b615c5721fc88a78feeb22c1f8c450f1c2646a317d80796a653bf595c",
+      "bytes": 135161
+    },
+    "/home/alex/strata-deepseek-test-20261024/llama.cpp/ggml/src/ggml-cpu/ggml-cpu.c": {
+      "sha256": "7b451e6528cec3bc27bfd812a1314859c92d22a00c2db371d543cde5b7d5ca94",
+      "bytes": 132596
+    },
+    "/home/alex/strata-deepseek-test-20261024/llama.cpp/ggml/src/ggml-cpu/arch/x86/quants.c": {
+      "sha256": "3c489fdc77e3ab484a5f188bff9c60c0e9483c951ed65c1a562a04c249d5628e",
+      "bytes": 197407
+    },
+    "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/ggml/src/CMakeFiles/ggml-cpu.dir/build.make": {
+      "sha256": "5cc7c7b60c16c5a9ccc0049e84154941b52711755740bc57b04d6820911aeb33",
+      "bytes": 35817
+    },
+    "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/ggml/src/CMakeFiles/ggml-cpu.dir/flags.make": {
+      "sha256": "4d538e4deadb715582b0ea364320a406bdd26372f0307af8fdc3bcccffb73c60",
+      "bytes": 1615
+    },
+    "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/ggml/src/CMakeFiles/ggml-base.dir/build.make": {
+      "sha256": "472716abd26637d0e8f8bf988662de4ab2dc941a0c34cb79159b0a136387c3f8",
+      "bytes": 21968
+    },
+    "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/ggml/src/CMakeFiles/ggml-base.dir/ggml-quants.c.o": {
+      "sha256": "21f216723ab129dbda0444d47318cfa8b7f32418354b7e9e77e984a04ebed889",
+      "bytes": 404576
+    },
+    "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/ggml/src/libggml-base.a": {
+      "sha256": "ad2710f666070cae92b53ce0c6dfb7eca06c15a781cef755c2d914d577372466",
+      "bytes": 1364958
+    },
+    "/home/alex/strata-deepseek-test-20261024/maya-build-sm80-ablate469-v2/ggml/src/libggml-cpu.a": {
+      "sha256": "2f91dc5ec204041f5c39d009369dbffefb85d6fb7da7b4b7cfebaccad499c185",
+      "bytes": 1454016
+    }
+  },
+  "excerpts": {
+    "ggml-quants.c": {
+      "start_line": 2768,
+      "lines": [
+        "void quantize_row_q8_K_ref(const float * GGML_RESTRICT x, block_q8_K * GGML_RESTRICT y, int64_t k) {",
+        "    assert(k % QK_K == 0);",
+        "    const int64_t nb = k / QK_K;",
+        "",
+        "    for (int i = 0; i < nb; i++) {",
+        "",
+        "        float max = 0;",
+        "        float amax = 0;",
+        "        for (int j = 0; j < QK_K; ++j) {",
+        "            float ax = fabsf(x[j]);",
+        "            if (ax > amax) {",
+        "                amax = ax; max = x[j];",
+        "            }",
+        "        }",
+        "        if (!amax) {",
+        "            y[i].d = 0;",
+        "            memset(y[i].qs, 0, QK_K);",
+        "            x += QK_K;",
+        "            continue;",
+        "        }",
+        "        //const float iscale = -128.f/max;",
+        "        // We need this change for IQ2_XXS, else the AVX implementation becomes very awkward",
+        "        const float iscale = -127.f/max;",
+        "        for (int j = 0; j < QK_K; ++j) {",
+        "            int v = nearest_int(iscale*x[j]);",
+        "            y[i].qs[j] = MIN(127, v);",
+        "        }",
+        "        for (int j = 0; j < QK_K/16; ++j) {",
+        "            int sum = 0;",
+        "            for (int ii = 0; ii < 16; ++ii) {",
+        "                sum += y[i].qs[j*16 + ii];",
+        "            }",
+        "            y[i].bsums[j] = sum;",
+        "        }",
+        "        y[i].d = 1/iscale;",
+        "        x += QK_K;",
+        "    }",
+        "}"
+      ]
+    },
+    "ggml-common.h": {
+      "start_line": 370,
+      "lines": [
+        "// This is only used for intermediate quantization and dot products",
+        "typedef struct {",
+        "    float   d;              // delta",
+        "    int8_t  qs[QK_K];       // quants",
+        "    int16_t bsums[QK_K/16]; // sum of quants in groups of 16",
+        "} block_q8_K;",
+        "static_assert(sizeof(block_q8_K) == sizeof(float) + QK_K + QK_K/16*sizeof(int16_t), \"wrong q8_K block size/padding\");"
+      ]
+    },
+    "ggml-cpu/ggml-cpu.c": {
+      "start_line": 388,
+      "lines": [
+        "        .vec_dot                  = ggml_vec_dot_iq4_xs_q8_K,",
+        "        .vec_dot_type             = GGML_TYPE_Q8_K,",
+        "        .nrows                    = 1,",
+        "    },",
+        "    [GGML_TYPE_Q8_K] = {",
+        "        .from_float               = quantize_row_q8_K,",
+        "    },",
+        "    [GGML_TYPE_BF16] = {",
+        "        .from_float               = (ggml_from_float_t) ggml_cpu_fp32_to_bf16,",
+        "        .vec_dot                  = (ggml_vec_dot_t) ggml_vec_dot_bf16,",
+        "        .vec_dot_type             = GGML_TYPE_BF16,",
+        "        .nrows                    = 1,",
+        "    },",
+        "    [GGML_TYPE_TQ1_0] = {"
+      ]
+    },
+    "ggml-cpu/arch/x86/quants.c": {
+      "start_line": 505,
+      "lines": [
+        "void quantize_row_q8_K(const float * GGML_RESTRICT x, void * GGML_RESTRICT y, int64_t k) {",
+        "    quantize_row_q8_K_ref(x, y, k);",
+        "}"
+      ]
+    }
+  },
+  "source_limit": "Build metadata points to these source paths; source excerpt is not itself a disassembly or new arithmetic execution. Original linked libraries and object bytes preserved."
+}

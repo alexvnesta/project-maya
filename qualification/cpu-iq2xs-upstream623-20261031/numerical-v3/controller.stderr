@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v3/runner.py", line 427, in <module>
+    try: print(json.dumps(main(args.qualification_sha256)))
+                          ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v3/runner.py", line 420, in main
+    raise primary
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v3/runner.py", line 383, in main
+    result = execute(b, parser, q, lambda: guard(True, lease), owned, started,
+                     lambda: b.verify_files(q['files'], observed))
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v3/runner.py", line 330, in execute
+    rows.append(run_one(b, parser, q, job, output, guard, owned, started, check_files))
+                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v3/runner.py", line 223, in run_one
+    if primary is not None: raise primary
+                            ^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v3/runner.py", line 192, in run_one
+    require(process.returncode == 0, 'Numerical child nonzero')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/numerical-v3/runner.py", line 35, in require
+    raise ValueError(message)
+ValueError: Numerical child nonzero

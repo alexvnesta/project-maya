@@ -1,0 +1,61 @@
+{
+  "utc": "2026-10-31T07:35:17.039111+00:00",
+  "status": "READ_ONLY_REMAINING_21_ACTUAL_PREFLIGHT_PASS",
+  "qualification_sha256": "e379bb4e440c61caeb42d03af1c254c786eabdc8173261372de12dfa4900adb5",
+  "actual_files_plus_self": 2541,
+  "source_input_ID_counts": [
+    10,
+    468,
+    149
+  ],
+  "binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "CPU_lock_inode": 2894342,
+  "CPU_kernel_rows": [],
+  "root_GiB": 348.20678329467773,
+  "phase": null,
+  "active_cpu_build": false,
+  "actual_CAS_import_identity_passed": true,
+  "CPU_capability_identity": {
+    "vendor_id": "AuthenticAMD",
+    "cpu family": "23",
+    "model": "49",
+    "model name": "AMD Ryzen Threadripper 3970X 32-Core Processor",
+    "stepping": "0"
+  },
+  "allowed_processors": 64,
+  "repaired_fixture_sha256": "890041fdfb7efa9b3d9e2a7078823e5278c4ddb12da29bfa7ca5e6752b7073f6",
+  "prior_coverage": {
+    "prior_accepted_jobs": 25,
+    "prior_case_rows": 4824,
+    "new_required_jobs": 21,
+    "new_required_case_rows": 1512,
+    "combined_required_jobs": 46,
+    "combined_required_case_rows": 6336,
+    "old_v4_complete": false,
+    "old_unaccepted_child_regraded": false
+  },
+  "previous26_groups_absent": true,
+  "old_v3_HOLD_and_v4_partial_preserved": true,
+  "download_paused_worker_absent": true,
+  "fresh_sequence": true,
+  "planned_children": 21,
+  "planned_case_rows": 1512,
+  "kernel_rc": 0,
+  "kernel_faults": [],
+  "numerical_execution_attempted": false,
+  "model_GPU_service_actions": false
+}

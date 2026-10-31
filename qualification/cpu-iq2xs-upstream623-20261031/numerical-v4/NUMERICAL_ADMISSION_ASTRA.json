@@ -1,0 +1,517 @@
+{
+  "status": "CONDITIONAL_SINGLE_NUMERICAL_V4_CPU_SEQUENCE_ADMISSION",
+  "reviewed_utc": "2026-10-31T07:09:34.419379+00:00",
+  "reviewer": "Astra",
+  "qualification_sha256": "572938dfef80ef6f38d521116ed2d6288f91a969354e233888c02ba83c7871d3",
+  "physical_preflight_sha256": "b0567c5547e04cb5423b8a4975dc33c79c653b4b0569a99f93b3efc2b2a35a58",
+  "source_review_sha256": "48f84efe871fa3bc07c0115344101e847dc397ef22c5387405791b464f02855b",
+  "source_sha256": {
+    "runner.py": "6a3a0ab5d255294ea772b6bbad11e8dc15bf38f248887b41ae0703305c6e2f47",
+    "output_parser.py": "bf4d9a463bd816eab4c8161100d230e417fe65c652a5fcccd1574564e4822bdd",
+    "test_runner.py": "6275947f122834e90065bc6de2c9cf656e0b76ff6593a9f5291a138ad4e14ed6",
+    "test_output_parser.py": "edd065bc56c998a3d6521967d43c004ea80c639b2fc572815795e5e6c22fa36b",
+    "cpu_driver.py": "83680758a2564ef7c3cc527d4ebf7da994ef68acfebd0e944060377b2bf9f85b",
+    "test_cpu_driver.py": "b33e52afb6735cec6f0842b2121682b781cbb304ca2ccec800a0997b4ec4dd47"
+  },
+  "CPU_result_review_sha256": "80e7db1ccf36129252a1d7486ee6dbf14b9e30ad45a67bae1feaae1a1b93fec4",
+  "map_review_sha256": "fe19ad843d81d1dd9b479460718a83ac38f60f73fc38a9b49bdec9bc339ceef4",
+  "repair_build_review_sha256": "1777c14c9744b4b09ff9480b93386757f62f6a98234b4116d55745feb46e2cc5",
+  "final_file_count": 2335,
+  "actual_physical_checks_plus_self": 2336,
+  "final_delta_verified": "All2333 reviewed draft pins unchanged; only two exact map review pins and allowed freeze metadata added.",
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "selected_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "fixture_path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/fixture-repair-v4/build-FIRST/iq2xs_exact",
+  "fixture_sha256": "890041fdfb7efa9b3d9e2a7078823e5278c4ddb12da29bfa7ca5e6752b7073f6",
+  "fixture_source_sha256": "559daba1f5e18a7cc7d2ddc91f0850e215997ab39d955e9b7e8fd751d05e4b25",
+  "jobs": [
+    {
+      "id": "pure-256-optimized",
+      "n": 256,
+      "mode": "optimized",
+      "pair": null
+    },
+    {
+      "id": "pure-256-fallback",
+      "n": 256,
+      "mode": "fallback",
+      "pair": null
+    },
+    {
+      "id": "pure-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": null
+    },
+    {
+      "id": "pure-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": null
+    },
+    {
+      "id": "pure-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": null
+    },
+    {
+      "id": "pure-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": null
+    },
+    {
+      "id": "mixed-22-22-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-22-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-22-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-22-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "mixed-22-17-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-17-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-17-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-17-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        22,
+        17
+      ]
+    },
+    {
+      "id": "mixed-22-16-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-22-16-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-22-16-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-22-16-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        22,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-22-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-22-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-22-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-22-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        22
+      ]
+    },
+    {
+      "id": "mixed-17-17-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-17-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-17-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-17-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        17
+      ]
+    },
+    {
+      "id": "mixed-17-16-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-16-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-16-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-16-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        16
+      ]
+    },
+    {
+      "id": "mixed-17-18-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-17-18-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-17-18-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-17-18-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "mixed-16-22-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-22-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-22-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-22-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        16,
+        22
+      ]
+    },
+    {
+      "id": "mixed-16-17-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-17-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-17-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-17-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "mixed-16-16-2304-optimized",
+      "n": 2304,
+      "mode": "optimized",
+      "pair": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "mixed-16-16-2304-fallback",
+      "n": 2304,
+      "mode": "fallback",
+      "pair": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "mixed-16-16-5120-optimized",
+      "n": 5120,
+      "mode": "optimized",
+      "pair": [
+        16,
+        16
+      ]
+    },
+    {
+      "id": "mixed-16-16-5120-fallback",
+      "n": 5120,
+      "mode": "fallback",
+      "pair": [
+        16,
+        16
+      ]
+    }
+  ],
+  "expected_case_rows": 6336,
+  "aggregate_budget": {
+    "soft_seconds": 1000,
+    "wall_seconds": 1200,
+    "cleanup_seconds": 200
+  },
+  "child_budget": {
+    "CPU_seconds": 30,
+    "Linux_AS_bytes": 536870912,
+    "wall_seconds": 90,
+    "run_seconds": 85,
+    "cleanup_seconds": 5,
+    "nice": 15,
+    "CUDA_VISIBLE_DEVICES": "",
+    "threads": 1,
+    "further_capped_by_remaining_sequence_budget": true
+  },
+  "single_sequence_only": true,
+  "no_retry_or_resume": true,
+  "admission_scope": "Only the frozen46 serial CPU fixture jobs against repaired890041fd. No compiler/linker, candidate rebuild, native model, GPU, service, deployment or performance action.",
+  "required_action_time_conditions": [
+    "Launch only the exact reviewed numerical-v4 runner with -I -B and final qualification pin. Its clock begins before bootstrap; preserve1000soft/1200wall/200cleanup and child30CPU/512MiB/90wall further capped by remaining budget.",
+    "Immediately before claim, source-defined guards must reconfirm genuine idle/default, exact current selected binding/sole GPU owner, phase/build/restoration absence, root>=136GiB, unchanged finalq/source/input/output custody, actual CAS/transport origins and full verify_q including repaired build and both-host120 proofs.",
+    "Fresh observed_cpu_capability must confirm exact pinned CPU identity, allowed processors0..63 and AVX/AVX2/FMA/F16C/XSAVE on every allowed CPU. Saved preflight summarizes64 processors; the source-defined current check governs actual admission.",
+    "Keep download paused and worker absent. Root must launch no other maintenance/controller while this CPU lease is held; cooperative legacy CAS is not globally atomic.",
+    "Keep GPU experiment.lock untouched and held solely by exact selected API3998190/device252:1/inode1449998 with no matching waiter. Use only stable CPU lock inode2894342; never adopt or clear a foreign/stale claim.",
+    "Require fresh numerical-FIRST and numerical-supervision-FIRST. Repeat qualified guard/source checks at child boundaries. Scrub dispatch overrides, with STRATA_NO_IQ256=1 only for each fallback job.",
+    "On first fault/busy/deadline, stop progression and preserve partial evidence; clean only captured owned groups. Uncertain spawn/cleanup or surviving group retains claim/HOLD; clear only proven own claim after all groups absent.",
+    "No numerical acceptance follows from admission. Require all46 actual child exits0, complete6336 exact parser rows, successful supervision, raw/manual result review and selected-owner production closure."
+  ],
+  "physical_preflight": {
+    "utc": "2026-10-31T07:08:38.812212+00:00",
+    "status": "READ_ONLY_NUMERICAL_V4_ACTUAL_PREFLIGHT_PASS",
+    "qualification_sha256": "572938dfef80ef6f38d521116ed2d6288f91a969354e233888c02ba83c7871d3",
+    "actual_files_plus_self": 2336,
+    "source_input_ID_counts": [
+      6,
+      266,
+      120
+    ],
+    "binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "GPU_lease": {
+      "identity": {
+        "device_major": 252,
+        "device_minor": 1,
+        "inode": 1449998
+      },
+      "main_pid": 3998190,
+      "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+    },
+    "CPU_lock_inode": 2894342,
+    "CPU_kernel_rows": [],
+    "root_GiB": 348.2118148803711,
+    "phase": null,
+    "active_cpu_build": false,
+    "actual_CAS_import_identity_passed": true,
+    "CPU_capability_identity": {
+      "vendor_id": "AuthenticAMD",
+      "cpu family": "23",
+      "model": "49",
+      "model name": "AMD Ryzen Threadripper 3970X 32-Core Processor",
+      "stepping": "0"
+    },
+    "allowed_processors": 64,
+    "repaired_fixture_sha256": "890041fdfb7efa9b3d9e2a7078823e5278c4ddb12da29bfa7ca5e6752b7073f6",
+    "original_v3_HOLD_preserved_group_absent_claim_released": true,
+    "download_paused_worker_absent": true,
+    "fresh_sequence": true,
+    "planned_children": 46,
+    "planned_case_rows": 6336,
+    "numerical_execution_attempted": false,
+    "model_GPU_service_actions": false
+  },
+  "preflight_attestation_limit": "Saved physical preflight is a compact count/identity receipt; no claim that it embeds every individual check or a separate idle response. The qualified runner must perform its full fresh checks again before claim.",
+  "preserved_local_observer_refusal_sha256": "12c2812d4f9f8a4173811cb6e6656ceb1d08f85f52ce5880ada10a6f5c5ccab1",
+  "observer_refusal_classification": "Local metadata path-filter failure before SSH/staging/runtime; frozen source/q/CPU unchanged. Original refusal preserved, not regraded.",
+  "old_numerical_v3_HOLD_preserved": true,
+  "model_or_GPU_admitted": false,
+  "compiler_or_service_admitted": false,
+  "numerical_result_accepted": false,
+  "reviewer_live_actions": false,
+  "reviewer_will_pause_until_terminal": true
+}

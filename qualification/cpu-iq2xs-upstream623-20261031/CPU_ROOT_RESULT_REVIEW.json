@@ -1,0 +1,92 @@
+{
+  "utc": "2026-10-31T04:53:40.065815+00:00",
+  "status": "FIRST_BOTH_HOST_PORTABLE_CUSTODY_AND_DRIVER_42_PASS",
+  "source_review_sha256": "ed420b79292d99e9eb8e087647bd068dd906bb0c466800ea007574f49aa132cd",
+  "exact_sources": 10,
+  "exact_inputs": 12,
+  "exact_ordered_test_IDs": 42,
+  "hosts": {
+    "darwin": {
+      "raw_sha256": {
+        "child.log": "a1c758d76f1315cb11d73034ba0d6be52ffc3a1a72e084dd39882f1dac645d40",
+        "parent.json": "7effdfce92b2876405eee4bcc44e78eddf34eca018e131e6a79eff33a0e71ae9",
+        "attempt.json": "218898456b90ae4d618d99a31f598929a64f8a58a6f98a5ec2857c0e4cf9df74",
+        "child.json": "003e7e69dabc74fb351ad7fbaa9ffc84154a9a2f98d322ddd36099ccd0cfeb6b",
+        "observed.json": "694a3568bf8ba57bed52ca42f14855f90e665d67ea172c62803d16740da52328",
+        "receipt.json": "2c6c8dd4f837c0fadd10c63cff0ad7bc05270cb231bb7f686d64f7d224ed3f39"
+      },
+      "observed": {
+        "pid": 36240,
+        "ppid": 36239,
+        "pgid": 36240,
+        "cpu": [
+          30,
+          30
+        ],
+        "as": null,
+        "nice": 15,
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "MALLOC_ARENA_MAX": "1",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "platform": "darwin",
+        "dont_write_bytecode": true
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.32134604098973796,
+      "error": null,
+      "cleanup": [],
+      "status": "PASS",
+      "controls": 42
+    },
+    "linux": {
+      "raw_sha256": {
+        "child.log": "279ae9fa62cacc02cb451e8c2c18300eb78017cf746b17a560d96d71d583cea4",
+        "parent.json": "030fbddf53d0c02643d64ad0facb314ad4cb3474169cf05b08abbc7fe86c9f1c",
+        "attempt.json": "90862c61a587cc8239eaabb325f482d0917e6e386d0cf5143244e56441746fa8",
+        "child.json": "4ab4fcceb99c99a9d5b9459213cf4f0716c2f1d935e7da97753c50daabc98e27",
+        "observed.json": "d41267fc9600eed4ddde4c4a0d0ad4c7f7f80ca5ce26803dd4a410e3eb03811a",
+        "receipt.json": "98e3f6d7018095c32471673fcf52878f8e6fb2011d56cc3b73ec50d9f0a33dcb"
+      },
+      "observed": {
+        "pid": 4013910,
+        "ppid": 4013909,
+        "pgid": 4013910,
+        "cpu": [
+          30,
+          30
+        ],
+        "as": [
+          536870912,
+          536870912
+        ],
+        "nice": 15,
+        "environment": {
+          "CUDA_VISIBLE_DEVICES": "",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "MALLOC_ARENA_MAX": "1",
+          "PYTHONDONTWRITEBYTECODE": "1"
+        },
+        "platform": "linux",
+        "dont_write_bytecode": true
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.3168992381542921,
+      "error": null,
+      "cleanup": [],
+      "status": "PASS",
+      "controls": 42
+    }
+  },
+  "scope": "Portable source integrity and bounded CPU supervisor only. No AVX2 arithmetic, build, numerical fixture, model timing, or production qualification.",
+  "prechild_refusal": "LINUX_PARENT_INPUT_REFUSAL.json",
+  "new_build_or_GPU_admitted": false
+}
