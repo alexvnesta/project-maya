@@ -1,0 +1,23 @@
+{
+  "pid": 3796631,
+  "utc": "2026-10-31T00:46:06.967895+00:00",
+  "command": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-B",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_owner.py",
+    "--mode",
+    "prose",
+    "--arm",
+    "B1",
+    "--run"
+  ],
+  "admission_sha256": "bb97e3894706e83845e7bf5ffe31f2a020d58462dbac76abb39eb738064d42a5",
+  "qualification_sha256": "2c7b4f378a5d539c2f04025ad7343000d23379c74e31291a9090706db1d66e61",
+  "binding": {
+    "invocation": "1e16e9475ab54b26b181f3deb09e68a7",
+    "main_pid": 3786574,
+    "native_pid": 3786610,
+    "native_start_ticks": 167478283
+  },
+  "actual_source_checks": 1403
+}

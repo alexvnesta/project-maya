@@ -1,0 +1,72 @@
+{
+  "status": "ROOT_COMPLETE_PROSE_A1_REVIEW_PASSED",
+  "terminal_sha256": "a82794173aa407de9120e896752bd4e6834b066aaf49ebab118f77a43bb11ac5",
+  "bounded_child_sha256": "3a07098599a8d49b13301a08afe0a9c6d069e98ca2ac9854b05d561e36a3a562",
+  "original_controller_OS0": true,
+  "all75_raw_hashes_reconciled": true,
+  "actual_bounded_child_PID": 3793066,
+  "actual_bounded_child_OS0": true,
+  "full_main_content_and21758char_reasoning_read": true,
+  "prose_words": 887,
+  "prose_required_topics_example_format_ending_passed": true,
+  "all3main4lifecycle_passed": true,
+  "actual_prefill_cancel_generated0_recovery_passed": true,
+  "raw_native_API_window_exit0": true,
+  "main_metric": {
+    "generated_tokens": 6056,
+    "native_decode_ms": 131712.3,
+    "native_decode_tps": 45.97900120186194,
+    "prompt_tokens": 169,
+    "prompt_ms": 2265.9,
+    "reused": 0,
+    "drafts_offered": 4119,
+    "drafts_accepted": 3492,
+    "client_full_seconds": 133.99384666699916,
+    "client_first_content_seconds": 116.0476728619542,
+    "client_first_reasoning_seconds": 2.270398640073836,
+    "buffered_stream0_first_delta_is_not_true_TTFT": true
+  },
+  "cold_metric": {
+    "generated_tokens": 189,
+    "native_decode_ms": 3981.2,
+    "native_decode_tps": 47.47312368130212,
+    "prompt_tokens": 8469,
+    "prompt_ms": 8735.1,
+    "reused": 0,
+    "drafts_offered": 144,
+    "drafts_accepted": 129,
+    "client_full_seconds": 12.74933426710777,
+    "client_first_content_seconds": 12.749035981018096,
+    "client_first_reasoning_seconds": 12.749035981018096,
+    "buffered_stream0_first_delta_is_not_true_TTFT": true
+  },
+  "warm_metric": {
+    "generated_tokens": 217,
+    "native_decode_ms": 4265.4,
+    "native_decode_tps": 50.874478360763355,
+    "prompt_tokens": 8469,
+    "prompt_ms": 58.1,
+    "reused": 8468,
+    "drafts_offered": 170,
+    "drafts_accepted": 151,
+    "client_full_seconds": 4.346887836931273,
+    "client_first_content_seconds": 4.346694260137156,
+    "client_first_reasoning_seconds": 4.346694260137156,
+    "buffered_stream0_first_delta_is_not_true_TTFT": true
+  },
+  "resources": {
+    "root_min_GiB": 348.6580581665039,
+    "system_swapout_delta_bytes": 8192,
+    "swap_not_attributed_to_model": true
+  },
+  "selected_binding_snapshot": {
+    "invocation": "1e16e9475ab54b26b181f3deb09e68a7",
+    "main_pid": 3786574,
+    "native_pid": 3786610,
+    "native_start_ticks": 167478283
+  },
+  "candidate_comparison_not_yet_available": true,
+  "next_arm_admitted": false,
+  "no_model_promotion": true,
+  "local_transfer_parent_missing_refusal_preserved_note": "Initial localrsync could not create nested target; parentdirectory thencreated andsameexact75rawfiles copied. No test/audit/model replay or sourcechange."
+}

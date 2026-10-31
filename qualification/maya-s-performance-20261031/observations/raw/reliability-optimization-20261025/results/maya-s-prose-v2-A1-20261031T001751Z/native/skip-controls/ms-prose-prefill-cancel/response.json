@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "replay": false,
+  "purpose": "INTENTIONAL_PREFILL_CANCELLATION_NOT_QUALITY_OR_SPEED",
+  "activation": {
+    "mode": 1,
+    "source": 20,
+    "retained_rows": 2668,
+    "activation_early_rows": [
+      5803
+    ]
+  },
+  "observed_before_cancel": {
+    "state": "reading",
+    "read": 2824,
+    "total": 8471,
+    "first_delta": false
+  },
+  "client_disconnect_cancels_delta": 1,
+  "classification": "confirmed_prefill_cancel",
+  "recovery_required": true,
+  "transport": {
+    "content": "",
+    "reasoning": "",
+    "finish_reason": null,
+    "done": false,
+    "cancelled": true,
+    "status": 200,
+    "events": [],
+    "raw": [
+      {
+        "seconds": 2.3170803890097886,
+        "line": ": keep-alive\n"
+      },
+      {
+        "seconds": 2.31708765309304,
+        "line": "\n"
+      }
+    ],
+    "tool_calls": [],
+    "usage": null,
+    "timings": null,
+    "client_first_content_seconds": null,
+    "client_first_reasoning_seconds": null,
+    "client_first_tool_seconds": null,
+    "client_full_seconds": 2.322624827036634
+  }
+}

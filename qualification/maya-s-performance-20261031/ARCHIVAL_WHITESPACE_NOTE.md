@@ -1,0 +1,1 @@
+The original A1 and B1 raw public-default-output-sse.txt receipts each end with the SSE-required empty line. git diff --cached --check reports only these two blank-at-EOF notices. Both original byte streams and their hashes are preserved; no whitespace normalization was applied. All other staged paths pass the whitespace check.

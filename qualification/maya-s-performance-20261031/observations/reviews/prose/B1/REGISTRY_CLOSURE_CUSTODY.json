@@ -1,0 +1,11 @@
+{
+  "original_raw_manifest_unchanged_sha256": "0553468e8b9dc08c06258fad8de978715710e824bfa49e88c0e77e6cafbd60f8",
+  "historical_registry_resolution": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/prose-arms.json": {
+      "path_relative_to_PV": "prose/B1/prose-arms-at-terminal.json",
+      "sha256": "ac3697e4a3c8bf1ae55168ba755af86111280e037684068dca20bdc1d81f20a9"
+    }
+  },
+  "current_closed_registry_sha256": "7cc5797c43f852f4e7eb15a1fbedbc48d7c34fefe67189d1b2df6b0041416079",
+  "explanation": "Original raw custody manifest preserves action-time mutable registry bytes; after review closure use byte-identical saved terminal snapshot for this one entry. No receipt/audit/qualification retrofit or replay."
+}
