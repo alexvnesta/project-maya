@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-31T04:39:48.709443+00:00",
+  "status": "CLOSED_INITIAL_PAIR_NO_ADAPTIVE_GAIN_NO_DEPLOYMENT",
+  "quality_lifecycle_nine_cases_each_passed": true,
+  "prose_native_tps": {
+    "fixed_A1": 45.75755311628396,
+    "adaptive_B1": 38.434838003609904
+  },
+  "adaptive_rate_change_percent": -16.003292601911625,
+  "cold_prefill_ms": {
+    "fixed_A1": 8890.1,
+    "adaptive_B1": 8911.5
+  },
+  "cold_regression_percent": 0.2407172022811821,
+  "main_generated_tokens": {
+    "fixed_A1": 5573,
+    "adaptive_B1": 2353
+  },
+  "quality_limits": "Targeted synthetic nine-case screen only; unequal reasoning/output paths, draft acceptance, placement and B1 memory pressure prevent a general or causal speed conclusion. No full numerical equivalence or nearfilled1M/full256K generation qualification.",
+  "resource_caveat": "B1 max953/oom0/swap73728; A1max0/swap0, both80GiB fences.",
+  "production": "Unchanged selected92/configc43/chunk4096/adaptive already on; exact1M total/256K output allowance and other quality settings preserved.",
+  "next_arms_admitted": false,
+  "deployment_authorized": false,
+  "archive_scope": "New fourteen source/tests, exact CPU proof and failed controls, immutable qualification/maps and result reviews; exact selected synthetic evidence117 per arm by hash except routing-seed binaries intentionally kept local. Dependency paths remain canonical receipts, not a relocatable runner. No user prompts/images/caches, model files or secrets.",
+  "files": 389
+}

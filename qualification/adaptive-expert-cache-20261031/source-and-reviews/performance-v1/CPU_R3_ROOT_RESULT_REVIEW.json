@@ -1,0 +1,131 @@
+{
+  "source_review_sha256": "2fcc5480c118546a039e3938c73aef85bd0f1d5c9ce91f1c993c571edab9a939",
+  "results": [
+    {
+      "group": "owner",
+      "platform": "darwin",
+      "pid": 68505,
+      "controls": 197,
+      "wall_seconds": 6.010642874985933,
+      "source_files": 14,
+      "input_files": 1152,
+      "CPU": [
+        30,
+        30
+      ],
+      "AS": null,
+      "nice": 15,
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "rc": 0,
+      "cleanup": [],
+      "raw_sha256": {
+        "receipt.json": "be35e03e851477c226c61952e534de1fd084ae71cebc89cd7c847e7870937905",
+        "child.json": "20d3f779f53e1725ced8a58d294513dd3df37506f9c702aaeeca974ba86708f5",
+        "child.log": "f13f896c5d4c075f7ac24c319e337a6636ba22e2919c94fdcdef1851e87effce"
+      }
+    },
+    {
+      "group": "owner",
+      "platform": "linux",
+      "pid": 3873756,
+      "controls": 197,
+      "wall_seconds": 3.699679410783574,
+      "source_files": 14,
+      "input_files": 1152,
+      "CPU": [
+        30,
+        30
+      ],
+      "AS": [
+        536870912,
+        536870912
+      ],
+      "nice": 15,
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "rc": 0,
+      "cleanup": [],
+      "raw_sha256": {
+        "receipt.json": "4bc7f005fbe9f19abbdc180a79c63e8c754edbeec46e6088f9a02cf23150f062",
+        "child.json": "c3d54950d4abe4b74793fdb4dbfc17fe672158f61e28250dfcc98015417e6a4a",
+        "child.log": "130b70bfa20a9d4027eb2fe04554f7b131b47e92cfcb55701f5a327db10bd21e"
+      }
+    },
+    {
+      "group": "audit",
+      "platform": "darwin",
+      "pid": 68503,
+      "controls": 91,
+      "wall_seconds": 1.403813834011089,
+      "source_files": 14,
+      "input_files": 1152,
+      "CPU": [
+        30,
+        30
+      ],
+      "AS": null,
+      "nice": 15,
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "rc": 0,
+      "cleanup": [],
+      "raw_sha256": {
+        "receipt.json": "832273266cfba93188d8284ad3627128b2cfcb46863b954adce43e7b547ad5c5",
+        "child.json": "765b5af6233a02bbb6430e10e9e9f97422fec86a3ff5a476622538db9972535a",
+        "child.log": "805867963d463a43d422b6a0c77dc4836a230023c89c99888297de0b61a674bf"
+      }
+    },
+    {
+      "group": "audit",
+      "platform": "linux",
+      "pid": 3873933,
+      "controls": 91,
+      "wall_seconds": 0.9806434910278767,
+      "source_files": 14,
+      "input_files": 1152,
+      "CPU": [
+        30,
+        30
+      ],
+      "AS": [
+        536870912,
+        536870912
+      ],
+      "nice": 15,
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MALLOC_ARENA_MAX": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "rc": 0,
+      "cleanup": [],
+      "raw_sha256": {
+        "receipt.json": "4436259fed9c21dbceb00ca8a38c877545e390f129d77afac1a907209959bb7d",
+        "child.json": "8e5465f0e0746e38de1fc316c21f72dfa489ea3ae95320c9c9034323cf9d552d",
+        "child.log": "81e9a8b1bb0ee9de7039c1a3f2a9a6fbf3ef3a08255ea07a31178c9fd07b768b"
+      }
+    }
+  ],
+  "both_physical_hosts_matching_maps_and_IDs": true,
+  "failed_R1_R2_preserved": true,
+  "GPU_admitted": false,
+  "native_or_weights_executed": false
+}

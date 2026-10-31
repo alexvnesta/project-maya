@@ -1,0 +1,248 @@
+[
+  {
+    "sha": "cd48762b6d4888205c130238dbc0c7f7904993cf",
+    "node_id": "C_kwDOU-xXotoAKGNkNDg3NjJiNmQ0ODg4MjA1YzEzMDIzOGRiYzBjN2Y3OTA0OTkzY2Y",
+    "commit": {
+      "author": {
+        "name": "mw00",
+        "email": "mw00@users.noreply.github.com",
+        "date": "2026-10-30T18:28:02Z"
+      },
+      "committer": {
+        "name": "mw00",
+        "email": "mw00@users.noreply.github.com",
+        "date": "2026-10-30T18:28:02Z"
+      },
+      "message": "v1.1.42",
+      "tree": {
+        "sha": "852d87112d66bf753a46c261f82dd6db270988d7",
+        "url": "https://api.github.com/repos/mw00/project-maya/git/trees/852d87112d66bf753a46c261f82dd6db270988d7"
+      },
+      "url": "https://api.github.com/repos/mw00/project-maya/git/commits/cd48762b6d4888205c130238dbc0c7f7904993cf",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/mw00/project-maya/commits/cd48762b6d4888205c130238dbc0c7f7904993cf",
+    "html_url": "https://github.com/mw00/project-maya/commit/cd48762b6d4888205c130238dbc0c7f7904993cf",
+    "comments_url": "https://api.github.com/repos/mw00/project-maya/commits/cd48762b6d4888205c130238dbc0c7f7904993cf/comments",
+    "author": {
+      "login": "mw00",
+      "id": 14845178,
+      "node_id": "MDQ6VXNlcjE0ODQ1MTc4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14845178?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mw00",
+      "html_url": "https://github.com/mw00",
+      "followers_url": "https://api.github.com/users/mw00/followers",
+      "following_url": "https://api.github.com/users/mw00/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mw00/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mw00/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mw00/subscriptions",
+      "organizations_url": "https://api.github.com/users/mw00/orgs",
+      "repos_url": "https://api.github.com/users/mw00/repos",
+      "events_url": "https://api.github.com/users/mw00/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mw00/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "mw00",
+      "id": 14845178,
+      "node_id": "MDQ6VXNlcjE0ODQ1MTc4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14845178?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mw00",
+      "html_url": "https://github.com/mw00",
+      "followers_url": "https://api.github.com/users/mw00/followers",
+      "following_url": "https://api.github.com/users/mw00/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mw00/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mw00/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mw00/subscriptions",
+      "organizations_url": "https://api.github.com/users/mw00/orgs",
+      "repos_url": "https://api.github.com/users/mw00/repos",
+      "events_url": "https://api.github.com/users/mw00/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mw00/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "33d776a4cd11e53d362655719a581cc4fb05c017",
+        "url": "https://api.github.com/repos/mw00/project-maya/commits/33d776a4cd11e53d362655719a581cc4fb05c017",
+        "html_url": "https://github.com/mw00/project-maya/commit/33d776a4cd11e53d362655719a581cc4fb05c017"
+      }
+    ]
+  },
+  {
+    "sha": "33d776a4cd11e53d362655719a581cc4fb05c017",
+    "node_id": "C_kwDOU-xXotoAKDMzZDc3NmE0Y2QxMWU1M2QzNjI2NTU3MTlhNTgxY2M0ZmIwNWMwMTc",
+    "commit": {
+      "author": {
+        "name": "mw00",
+        "email": "mw00@users.noreply.github.com",
+        "date": "2026-10-30T13:16:47Z"
+      },
+      "committer": {
+        "name": "mw00",
+        "email": "mw00@users.noreply.github.com",
+        "date": "2026-10-30T15:22:11Z"
+      },
+      "message": "DeepSeek: the EXL3 lend and the DMA read-back of host-summed pieces opt-in (MAYA_DS4_EXL3_LEND=1, DS4_AR_BACK_DMA=1), the lend never on one GPU (#691)\n\nNeither has run on our machines: there is no DeepSeek EXL3 pack on them, and the DMA read-back needs a\ntensor-parallel group of 5+ members and a CUDA 12.5+ build. Both stay as the pull request wrote them, off\nuntil measured here. The lend also refuses to load a layer split whose layers keep too few recent slots for\nthe chunk, where the same setup loaded before, and the pull request's own note says lent buffers gave wrong\nanswers on one GPU: the lend now needs two GPUs or more even when asked for.",
+      "tree": {
+        "sha": "5f892a2283dfc56a2bcc75b1543673885667cf0d",
+        "url": "https://api.github.com/repos/mw00/project-maya/git/trees/5f892a2283dfc56a2bcc75b1543673885667cf0d"
+      },
+      "url": "https://api.github.com/repos/mw00/project-maya/git/commits/33d776a4cd11e53d362655719a581cc4fb05c017",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/mw00/project-maya/commits/33d776a4cd11e53d362655719a581cc4fb05c017",
+    "html_url": "https://github.com/mw00/project-maya/commit/33d776a4cd11e53d362655719a581cc4fb05c017",
+    "comments_url": "https://api.github.com/repos/mw00/project-maya/commits/33d776a4cd11e53d362655719a581cc4fb05c017/comments",
+    "author": {
+      "login": "mw00",
+      "id": 14845178,
+      "node_id": "MDQ6VXNlcjE0ODQ1MTc4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14845178?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mw00",
+      "html_url": "https://github.com/mw00",
+      "followers_url": "https://api.github.com/users/mw00/followers",
+      "following_url": "https://api.github.com/users/mw00/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mw00/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mw00/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mw00/subscriptions",
+      "organizations_url": "https://api.github.com/users/mw00/orgs",
+      "repos_url": "https://api.github.com/users/mw00/repos",
+      "events_url": "https://api.github.com/users/mw00/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mw00/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "mw00",
+      "id": 14845178,
+      "node_id": "MDQ6VXNlcjE0ODQ1MTc4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14845178?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mw00",
+      "html_url": "https://github.com/mw00",
+      "followers_url": "https://api.github.com/users/mw00/followers",
+      "following_url": "https://api.github.com/users/mw00/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mw00/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mw00/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mw00/subscriptions",
+      "organizations_url": "https://api.github.com/users/mw00/orgs",
+      "repos_url": "https://api.github.com/users/mw00/repos",
+      "events_url": "https://api.github.com/users/mw00/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mw00/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c7d08c58a5445e304b1f35a7da70b78c332615f5",
+        "url": "https://api.github.com/repos/mw00/project-maya/commits/c7d08c58a5445e304b1f35a7da70b78c332615f5",
+        "html_url": "https://github.com/mw00/project-maya/commit/c7d08c58a5445e304b1f35a7da70b78c332615f5"
+      }
+    ]
+  },
+  {
+    "sha": "c7d08c58a5445e304b1f35a7da70b78c332615f5",
+    "node_id": "C_kwDOU-xXotoAKGM3ZDA4YzU4YTU0NDVlMzA0YjFmMzVhN2RhNzBiNzhjMzMyNjE1ZjU",
+    "commit": {
+      "author": {
+        "name": "needmorevram",
+        "email": "needmorevram@gmail.com",
+        "date": "2026-10-30T11:39:41Z"
+      },
+      "committer": {
+        "name": "mw00",
+        "email": "mw00@users.noreply.github.com",
+        "date": "2026-10-30T15:22:11Z"
+      },
+      "message": "DeepSeek: long prompts - restore points near the end kept in one read, a chunk streams only the experts it picks, EXL3 chunk buffers lent from the expert cache, host-summed pieces read back by DMA (#691)\n\nSquash of the pull request's 9 commits:\n\n- DeepSeek: a prompt's restore points near its end kept in one read (MAYA_DS4_MARKS_INSIDE; a read from token 0\n  still stops at a shared start, #607; a tail point taken on the way costs no stop, so #668's tail cost counts only\n  the reads that stop at it); maya-ds4 --marks-check compares the two reads\n- DeepSeek on CUDA: a short chunk (up to DS4_SKIP_UNPICKED_ROWS, 1536) streams only the experts it picks - the same\n  slots, batches and summing order\n- DeepSeek on CUDA: a device with a shallow ring skips unpicked experts on every chunk\n- maya-ds4: --ids @FILE reads the ids from a file (a long prompt's are more than one argument may hold)\n- DeepSeek: a group whose chunk sums the host makes pins no F32 rows for the copy engines' sums\n- DeepSeek: a chunk that skips unpicked experts reads their picks at pv_n (copy_ahead read them at n_slots + j once\n  VRAM slots were lent)\n- DeepSeek EXL3: a prompt's chunk buffers lent from the expert cache's recent slots (MAYA_DS4_EXL3_LEND;\n  DS4_CHECK_LEND=1 compares each lent slot before and after)\n- DeepSeek: a chunk's host-summed pieces read back by DMA behind a stream wait (DS4_AR_BACK_DMA; CUDA 12.5+, the\n  kernels as before where the driver refuses the wait)\n- DeepSeek EXL3: a lending GPU's layer that every expert fitted keeps one in RAM, so it has slots to lend\n\ndocs/SETTINGS.md: long prompts on two tensor-parallel groups (--tp 4 + DS4_SPLIT, a setting, not a default).\nDS4_RUN_TRACE=1: each device's timeline of a run of chunks.",
+      "tree": {
+        "sha": "c62ba685cff61d5b5c3bc29ee27fb3f4f8836128",
+        "url": "https://api.github.com/repos/mw00/project-maya/git/trees/c62ba685cff61d5b5c3bc29ee27fb3f4f8836128"
+      },
+      "url": "https://api.github.com/repos/mw00/project-maya/git/commits/c7d08c58a5445e304b1f35a7da70b78c332615f5",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/mw00/project-maya/commits/c7d08c58a5445e304b1f35a7da70b78c332615f5",
+    "html_url": "https://github.com/mw00/project-maya/commit/c7d08c58a5445e304b1f35a7da70b78c332615f5",
+    "comments_url": "https://api.github.com/repos/mw00/project-maya/commits/c7d08c58a5445e304b1f35a7da70b78c332615f5/comments",
+    "author": {
+      "login": "needmorevram",
+      "id": 338662122,
+      "node_id": "U_kgDOFC-S6g",
+      "avatar_url": "https://avatars.githubusercontent.com/u/338662122?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/needmorevram",
+      "html_url": "https://github.com/needmorevram",
+      "followers_url": "https://api.github.com/users/needmorevram/followers",
+      "following_url": "https://api.github.com/users/needmorevram/following{/other_user}",
+      "gists_url": "https://api.github.com/users/needmorevram/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/needmorevram/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/needmorevram/subscriptions",
+      "organizations_url": "https://api.github.com/users/needmorevram/orgs",
+      "repos_url": "https://api.github.com/users/needmorevram/repos",
+      "events_url": "https://api.github.com/users/needmorevram/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/needmorevram/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "mw00",
+      "id": 14845178,
+      "node_id": "MDQ6VXNlcjE0ODQ1MTc4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14845178?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mw00",
+      "html_url": "https://github.com/mw00",
+      "followers_url": "https://api.github.com/users/mw00/followers",
+      "following_url": "https://api.github.com/users/mw00/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mw00/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mw00/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mw00/subscriptions",
+      "organizations_url": "https://api.github.com/users/mw00/orgs",
+      "repos_url": "https://api.github.com/users/mw00/repos",
+      "events_url": "https://api.github.com/users/mw00/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mw00/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4b76907b89acdb90a2697dcf0039a2e854051a5e",
+        "url": "https://api.github.com/repos/mw00/project-maya/commits/4b76907b89acdb90a2697dcf0039a2e854051a5e",
+        "html_url": "https://github.com/mw00/project-maya/commit/4b76907b89acdb90a2697dcf0039a2e854051a5e"
+      }
+    ]
+  }
+]

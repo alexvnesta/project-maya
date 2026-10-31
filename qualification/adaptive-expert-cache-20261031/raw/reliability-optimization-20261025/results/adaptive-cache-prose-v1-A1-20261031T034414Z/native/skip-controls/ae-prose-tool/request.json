@@ -1,0 +1,41 @@
+{
+  "max_tokens": 32768,
+  "messages": [
+    {
+      "content": "Use lookup_quote once for SKU PF2-731, quantity6. After the supplied tool result, return only JSON sku(string),quantity(integer),total_cents(integer),available(boolean). Price is unit_cents times quantity; available means stock is at least quantity.",
+      "role": "user"
+    }
+  ],
+  "model": "deepseek-v4.1-flash-iq2-xs",
+  "reasoning_budget_tokens": 0,
+  "reasoning_effort": 100,
+  "seed": 1,
+  "stream": true,
+  "temperature": 1.0,
+  "tools": [
+    {
+      "function": {
+        "description": "Synthetic stock and price lookup; never contact external systems.",
+        "name": "lookup_quote",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "quantity": {
+              "type": "integer"
+            },
+            "sku": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "sku",
+            "quantity"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ],
+  "top_p": 1.0
+}
