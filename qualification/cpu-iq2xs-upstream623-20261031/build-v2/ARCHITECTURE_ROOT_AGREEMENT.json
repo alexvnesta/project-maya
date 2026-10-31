@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-31T05:32:44.474713+00:00",
+  "status": "OFFLINE_SOURCE_IMPLEMENTATION_ONLY",
+  "astra_architecture_sha256": "6eb9dbf704a14cfb09d9c1537e2a1ffe0f16c131aceeaa9d33e491e0903dbb5a",
+  "root_entire_proposal_read": true,
+  "root_freezes_other_maintenance_launches_while_future_CPU_lease_held": true,
+  "scope": "SeparateE/cpu-build.lock atomicallyserializesparticipatingCPUcontrollers only; oldcanonicalCASstilloptimistic/cooperative, noOSisolationclaim. ExistingGPUexperiment.lock remainsheldbyexactcurrentselectedAPIMainPID andisread-onlyobserved. No host/service/GPUaction.",
+  "additional_condition": "CaptureallownedPopenPGIDs beforeanyreceipt; canonicalCPUclaimmayclearonlyafterallownedgroupsprovenabsent. PreserveclaimandHOLDiforphan/cleanupfailurepossible; noauto-adopt/clear/retry.",
+  "source_tests_to_implement": "Newv2lease/parser/claim/concurrency andprospectiveprepare/compilecontrols, originalv1andcandidate/mixedfixtureunchanged. Allnewcode/testsmanualRoot+sameAstrareadthenFIRSTexactmatchingboundedcontrolsBOTHphysicalhosts.",
+  "live_CPU_lock_created": false,
+  "tests_run": false,
+  "prepare_or_build_or_GPU_admitted": false
+}

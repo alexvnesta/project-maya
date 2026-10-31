@@ -1,0 +1,60 @@
+{
+  "utc": "2026-10-31T06:06:10.583028+00:00",
+  "decision": "COMPILE_MAP_REVIEWED_METADATA_ONLY_FINALIZATION_ALLOWED_NO_COMPILE_ADMISSION",
+  "draft_sha256": "1f8079c383bd55e76623a17675e3d425abb12cebef660d3faa4e55c6ddb55b79",
+  "root_map_review_sha256": "bcf8f12776b5156c1264c5a6ce264780e16c93401046a4d0b785dc08e9306387",
+  "actual_prepare_review_sha256": "6bcfa0a5880ae03d45cee475bab1bf62e59e69f67171d27d60fa1b71946356a4",
+  "file_pins": 2145,
+  "inherited_prepare_pins_unchanged": 2090,
+  "added_pins": 55,
+  "added_local_metadata_hashes_verified": 36,
+  "physical_only_additions": [
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/cpu-iq2xs-upstream623-v1/build-v3/prepare-FIRST/selected-relink",
+    "/usr/include/c++/15/algorithm",
+    "/usr/include/c++/15/bits/algorithmfwd.h",
+    "/usr/include/c++/15/bits/cxxabi_init_exception.h",
+    "/usr/include/c++/15/bits/exception_ptr.h",
+    "/usr/include/c++/15/bits/nested_exception.h",
+    "/usr/include/c++/15/bits/ranges_algo.h",
+    "/usr/include/c++/15/bits/ranges_algobase.h",
+    "/usr/include/c++/15/bits/stl_algo.h",
+    "/usr/include/c++/15/bits/stl_heap.h",
+    "/usr/include/c++/15/bits/stl_relops.h",
+    "/usr/include/c++/15/bits/stl_tempbuf.h",
+    "/usr/include/c++/15/bits/uniform_int_dist.h",
+    "/usr/include/c++/15/exception",
+    "/usr/include/c++/15/pstl/execution_defs.h",
+    "/usr/include/c++/15/pstl/glue_algorithm_defs.h",
+    "/usr/include/c++/15/stdexcept",
+    "/usr/include/c++/15/typeinfo",
+    "/usr/include/c++/15/utility"
+  ],
+  "actual_input_pins": 456,
+  "source_input_control_counts": [
+    4,
+    90,
+    130
+  ],
+  "allowed_final_delta": {
+    "add_only": [
+      "build-v3/COMPILE_MAP_ROOT_REVIEW.json",
+      "build-v3/COMPILE_MAP_ASTRA_REVIEW.json"
+    ],
+    "file_pins": 2147,
+    "existing2145pins": "unchanged",
+    "qualification_map_reviewed": true,
+    "compile_admitted": false,
+    "metadata_only": [
+      "Final UTC/status/count",
+      "draft SHA provenance"
+    ]
+  },
+  "scope": "Seven serial compiler/archive/link children only: exact two CPU replacements plus frozen fixture; original other CPU members/GPU/ds4IQ/ggml/core retained. No executable, numerical, model/GPU or service action.",
+  "conditions": [
+    "Actual2147 files plus final q self verified physically, including18 headers and native92 selected-relink.",
+    "Current source/130-control proof, complete successful prepare supervision/claim-release and explicit load_cas import identity checked before new CPU lease/claim.",
+    "Fresh same selected binding/idle/default/GPU lease/root136/paused download and fresh compile namespaces; sole Root cooperative maintenance freeze; no stale CPU claim adoption.",
+    "Separate SINGLE compile admission after actual preflight; no automatic compile from this map review."
+  ],
+  "reviewer_live_actions_project_imports_or_tests": false
+}

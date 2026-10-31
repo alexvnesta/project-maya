@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-31T06:08:07.383508+00:00",
+  "status": "READ_ONLY_ACTUAL_COMPILE_PREFLIGHT_PASS_NO_COMPILER_ATTEMPT",
+  "q_sha256": "64acb1becb8ea7b61fa5867578bc46347f667a78ae864071ed6791decf0d9e08",
+  "actual_files_plus_self": 2148,
+  "source_input_ID_counts": [
+    4,
+    90,
+    130
+  ],
+  "binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "CPU_lock_identity": {
+    "device_major": 252,
+    "device_minor": 1,
+    "inode": 2894342
+  },
+  "CPU_kernel_rows": [],
+  "root_GiB": 348.276309967041,
+  "phase": null,
+  "active_cpu_build": false,
+  "actual_CAS_import_identity_passed": true,
+  "selected_relink_native92_rehashed": true,
+  "prepare_supervision_PASS_and_four_actual_groups_absent": true,
+  "new18headers_resolved_hashes_checked": true,
+  "download_paused_and_worker_absent": true,
+  "prospective_children": [
+    "compile-iq_avx2.cpp",
+    "compile-native_expert.cpp",
+    "compile-iq2xs_exact.cpp",
+    "archive-replace",
+    "archive-index",
+    "candidate-link",
+    "fixture-link"
+  ],
+  "compile_attempted": false,
+  "numerical_native_or_GPU_attempted": false
+}

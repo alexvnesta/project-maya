@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "record": {
+    "controller_pid": 4043750,
+    "controller_start_ticks": 169468720,
+    "nonce": "b95e16b6525c4e46918e61706e28dd1b",
+    "mode": "iq2xs-cpu-v2-prepare",
+    "qualification_sha256": "7e8a340ac8ea66c72ef6ed56b6342af3f84aeaf62ff15bd20a3778c937c2537c",
+    "start_binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "cpu_lease": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 2894342
+    }
+  },
+  "error": null,
+  "error_notes": [],
+  "owned_groups_absence": {
+    "passed": true,
+    "pending_spawn": null,
+    "cleanup_faults": [],
+    "children": [
+      {
+        "name": "control-link",
+        "pid": 4043880,
+        "pgid": 4043880,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "deps-iq_avx2.cpp",
+        "pid": 4043971,
+        "pgid": 4043971,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "deps-native_expert.cpp",
+        "pid": 4044229,
+        "pgid": 4044229,
+        "returncode": 0,
+        "group_absent": true
+      },
+      {
+        "name": "deps-iq2xs_exact.cpp",
+        "pid": 4044336,
+        "pgid": 4044336,
+        "returncode": 0,
+        "group_absent": true
+      }
+    ]
+  },
+  "own_claim_released": true,
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "20: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "GPU_lease_mutated": false,
+  "retry_authorized": false
+}

@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-31T05:52:48.687261+00:00",
+  "status": "BUILD_V2_STARTUP_IMPORT_FAULT_HOLD_PRODUCTION_UNTOUCHED",
+  "binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "guard_idle_default_sole_selected_passed": true,
+  "phase": null,
+  "active_cpu_build": false,
+  "cpu_lock_exists": false,
+  "prepare_directory_exists": false,
+  "supervision_directory_exists": false,
+  "fault": "ModuleNotFoundError: No module named transport while loading saved prose_measure CAS support",
+  "SSH_and_actual_controller_exit": 1,
+  "compiler_fixture_native_GPU_or_service_actions": false,
+  "retry_authorized": false
+}

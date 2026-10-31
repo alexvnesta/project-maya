@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-31T05:59:52.948156+00:00",
+  "decision": "CONDITIONAL_SINGLE_BUILD_V3_PREPARE_ONLY",
+  "qualification_sha256": "7e8a340ac8ea66c72ef6ed56b6342af3f84aeaf62ff15bd20a3778c937c2537c",
+  "actual_preflight_sha256": "72e65d9ff08b37f2dc4b7b9fe5419ef61ac2e2a4f71b45b816b45f5b0923e72a",
+  "map_review_sha256": "f70af0682e6ee72d84665139aba93f753a159ed50f929ede368fac6a567a4058",
+  "CPU_result_review_sha256": "4b8923643e7729f0f0720ff028503d8721fe0b3c957d1061366405b6694f72cb",
+  "selected_binding": {
+    "invocation": "3a72e758518a4cef8baee8028002aacb",
+    "main_pid": 3998190,
+    "native_pid": 3998227,
+    "native_start_ticks": 168891838
+  },
+  "actual_preflight_utc": "2026-10-31T05:59:12.374719+00:00",
+  "scope": "One original native92 control relink and three dependency scans, then stop for actual input and supervision review. No candidate compilation or executable invocation.",
+  "reviewed": [
+    "Final2090-pin map preserves every2088 draft pin; only two map reviews added and previously approved final metadata changed.",
+    "Saved source-bound physical summary records2091 checks/current4/90/130, exact CAS/transport import identity, same selected binding/GPU lease, root348.3157GiB and no CPU claim/lease/prepare.",
+    "V2 controller remains original exit1/HOLD; v3 is a distinct qualified import repair, not a retry or regrade."
+  ],
+  "evidence_limit": "The read-only preflight is a summary receipt, not a per-file hash transcript or full default-idle raw transcript. This admission requires the qualified controller to recheck its exact bootstrap/q/live guards prospectively; no inference of current live state from local review.",
+  "immediate_launch_conditions": [
+    "Run only frozen v3 build.py prepare with this exact qualification SHA, explicit Python -I -B; no alternate mode or source.",
+    "Fresh source-defined genuine idle/default/phase-free same selected binding and sole owner; root>=136GiB; download paused and old worker absent; fresh prepare-FIRST and prepare-supervision-FIRST.",
+    "Repeat source/bootstrap/full qualification and actual load_cas checks before CPU lease or claim.",
+    "Read-only exact API-owned GPU FLOCK device252:1/inode1449998/no matching waiter, before and after work. Do not acquire/alter/unlock experiment.lock.",
+    "Acquire only the qualified cpu-build.lock. Root must launch no other maintenance/controller while held; optimistic CAS is not globally atomic. Refuse existing/stale claim.",
+    "Retain resource classes: control link CPU30/AS4GiB/wall90, scans CPU30/AS512MiB/wall90, nice15/CUDAhidden/threads1.",
+    "Capture each Popen group before parent receipt writes. Clear only the owned canonical CPU claim after all owned groups are proven absent; unknown cleanup/orphans retain HOLD/claim. No automatic retry/adoption.",
+    "Control output must hash exactly to selected native92 before scans. Stop after all three scans and preserve complete logs, dependency files, tool receipts, supervisor attempt/journal/result."
+  ],
+  "candidate_compile_admitted": false,
+  "numerical_fixture_native_GPU_execution_admitted": false,
+  "service_or_model_actions_admitted": false,
+  "automatic_next_phase_or_retry_admitted": false,
+  "next_required": "Independent actual prepare output, dependencies, resource/cleanup and claim-release review; separate compile qualification/admission.",
+  "reviewer_live_actions_or_project_execution": false
+}

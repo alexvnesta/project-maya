@@ -1,0 +1,31 @@
+{
+  "record": {
+    "controller_pid": 4074316,
+    "controller_start_ticks": 169809043,
+    "nonce": "983ab9d1d22949b185f194df2d5a0d86",
+    "mode": "iq2xs-fixture-repair-v4",
+    "qualification_sha256": "01acb187f2c74475783666ecc04e5013b0fa06c11b8a72ef34b7a6bdcc921658",
+    "start_binding": {
+      "invocation": "3a72e758518a4cef8baee8028002aacb",
+      "main_pid": 3998190,
+      "native_pid": 3998227,
+      "native_start_ticks": 168891838
+    },
+    "cpu_lease": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 2894342
+    }
+  },
+  "GPU_lease": {
+    "identity": {
+      "device_major": 252,
+      "device_minor": 1,
+      "inode": 1449998
+    },
+    "main_pid": 3998190,
+    "kernel_lock": "21: FLOCK  ADVISORY  WRITE 3998190 fc:01:1449998 0 EOF"
+  },
+  "global_state_CAS_atomic": false,
+  "single_coordinator_maintenance_freeze": true
+}
