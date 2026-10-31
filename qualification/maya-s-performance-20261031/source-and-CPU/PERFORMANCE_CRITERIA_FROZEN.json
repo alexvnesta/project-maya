@@ -1,0 +1,69 @@
+{
+  "version": "MAYA_S_PERFORMANCE_V2_FROZEN_BEFORE_TIMING",
+  "families": [
+    "prose",
+    "coding"
+  ],
+  "order": [
+    "A1",
+    "B1",
+    "B2",
+    "A2"
+  ],
+  "initial_pair": [
+    "A1",
+    "B1"
+  ],
+  "reversed_confirmation_only_after_initial_pair_pass": [
+    "B2",
+    "A2"
+  ],
+  "baseline": "selected pack with selected drafter/Engram",
+  "candidate": "whole public Maya-S with public drafter/Engram",
+  "context": 1048576,
+  "output_allowance": 262144,
+  "benchmark_cap": 32768,
+  "reasoning_effort": 100,
+  "same_model_runtime_policy": true,
+  "main_sequence": [
+    "cold8469 JSON",
+    "warm8469 JSON reuse8468",
+    "original main request"
+  ],
+  "prose_first_pair_lifecycle_after_main": [
+    "tool",
+    "actual-call-normalized followup",
+    "confirmed prefill cancellation gen0",
+    "recovery"
+  ],
+  "native_dump_enabled": false,
+  "native_dump_FSIZE_installed": false,
+  "startup_seconds": 800,
+  "soft_seconds_from_before_load": 1000,
+  "window_seconds": 1200,
+  "cleanup_seconds": 200,
+  "private_memory_max_bytes": 85899345920,
+  "host_margin_bytes": 8589934592,
+  "primary_metric": "main native generated *1000 / native decode_ms; all generated tokens including reasoning retained",
+  "decode_change_percent": "100*(candidate_main_native_rate / baseline_main_native_rate -1)",
+  "cold_prefill_change_percent": "100*(candidate_cold_native_prompt_ms / baseline_cold_native_prompt_ms -1)",
+  "required_decode_gain_percent": 5,
+  "maximum_cold_prefill_regression_percent": 3,
+  "rounding_for_decision": "none; use raw native counters and milliseconds, rounded displays only",
+  "each_order_must_pass": true,
+  "quality_gate": "All original known answers, warm reuse, complete native/API/SSE/IDs/drafts, manual complete prose and generated code plus all supplied tests and independent bounded cases both hosts, all required lifecycle, cleanup/restoration/resources/actual placement",
+  "incomplete_policy": "Wrong/cap/partial/UNRUN/lifecycle incomplete blocks advancement; preserve raw and restore selected; no retry/replay/regrade; do not turn unknowns into zero",
+  "completed_screen_loss_policy": "Close that family without reversed confirmation; report measured loss",
+  "reversed_pair_gate": "Separate full source/current-owner/idle/resource/manual Astra admission per arm; no automatic next",
+  "overall_task_speed_claim": false,
+  "matched_token_or_kernel_causal_claim": false,
+  "broad_quality_or_numerical_equivalence_claim": false,
+  "near_full_context_or_output_claim": false,
+  "production_promotion_authorized": false,
+  "unchanged_original_manifests": {
+    "prose-A": "72f1634f0c651dfd6e59f84b5f26f9fcdb957a599440e546097278b7b455c897",
+    "prose-B": "d572147c2f668b7702531ec62a90b5ba9fe8e0b47ac864f05ecca8c73402c601",
+    "coding-A": "b822da75ecc1ff7db0f0264b45ea71ce8b99687aa3ed6b0380277d67d2244f31",
+    "coding-B": "513cebf5837290ef69171d2274240afaa8f38cc441373fb52a6c140ce3e3f4dd"
+  }
+}
