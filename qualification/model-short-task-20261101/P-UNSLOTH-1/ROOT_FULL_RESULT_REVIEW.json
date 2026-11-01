@@ -1,0 +1,67 @@
+{
+  "utc": "2026-11-01T05:41:48.293979+00:00",
+  "reviewer": "ROOT",
+  "arm": "P-UNSLOTH-1",
+  "decision": "FIRST_COMPLETE_SHORT_PROSE_TASK_PASS_ONLY",
+  "full_content_and_reasoning_read": true,
+  "reasoning_read_ranges_characters": [
+    [
+      0,
+      18000
+    ],
+    [
+      18000,
+      40000
+    ],
+    [
+      40000,
+      64426
+    ]
+  ],
+  "words_whitespace": 956,
+  "task_passed": true,
+  "checks": {
+    "800_to_1000_words": true,
+    "paragraphs_no_code_lists_headings": true,
+    "exact_final_sentence": true,
+    "hash_bucket_key_equality": true,
+    "chaining_collision_example_explicitly_invented": true,
+    "load_factor_can_exceed_one_resize_rehash": true,
+    "expected_constant_versus_worst_linear": true,
+    "no_material_factual_or_style_defect": true
+  },
+  "notes": [
+    "Full reasoning repeatedly drafts and manually counts words before delivering a correct answer. This explains longer task work in this observation; it is not a broad quality or reasoning efficiency conclusion.",
+    "Unsloth original template preserved. Same complete source public prompt and request policy; different weights and natural generated lengths.",
+    "1603 memory.max events are preserved; no private swap/OOM/kills, kernel/resource gates pass."
+  ],
+  "observation": {
+    "tokens": 16478,
+    "decode_tok_s": 67.98017444311786,
+    "client_seconds": 244.177669611061,
+    "prompt_tokens": 169,
+    "prefill_ms": 1757.5,
+    "draft_accepted_offered": [
+      11574,
+      13519
+    ]
+  },
+  "owned_execution_closed": true,
+  "independent_terminal_audit_passed": true,
+  "preserve_producer_manual_pending": true,
+  "comparative_speedup_claim": false,
+  "deployment_admitted": false,
+  "next_arm_automatically_admitted": false,
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-UNSLOTH-1-20261101T052538Z/native/skip-controls/ms-prose-main/response.json": "3a65b60fb6f9fcc0c02962fb1b0d2c5767b97c3629c1c4c8ce700b7b39b69708",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-UNSLOTH-1-20261101T052538Z/native/skip-controls/ms-prose-main/request.json": "3bc8bb74e350fd65775b377eb1fc68a22b37b54ed94f4f44540df469c0e1a5bc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-UNSLOTH-1-20261101T052538Z/receipt.json": "01f09a286b9004ae72311e4644d2577459e875622dd6a008c25121cb26900431",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-UNSLOTH-1-20261101T052538Z/startup-audit.json": "152a8f97e3920a58092c2ac4c55ddd0214801540c901179e6c0c3c4db8db9249",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-UNSLOTH-1-20261101T052538Z/native/server-cleanup.json": "5f274b09fdef5be09b620731c083e0af88ac6d5e19109c5e90e1fdaabe85ab12",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-UNSLOTH-1-20261101T052538Z/native/native-close.jsonl": "a2b45c64a758431c387157bcf44b629913cdcc1e802eeaeb120e78cd3ca681d7",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-P-UNSLOTH-1-20261101T052538Z/old-owner-close.json": "51c4d7d5a83f99fda0202d19261527efdd72781a013981e7fb734fba0da3641e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-P-UNSLOTH-1-20261101T052538Z/result.json": "7a58ef91e2cac651178f205b038bf5b4ddfce38547a2186ba894bca9e605ff58",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/controller-P-UNSLOTH-1-exit.json": "27c4ca26d7171b64be840f551b2c00366b32aec1fb66069710d3f19c7fbe2af6",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/P-UNSLOTH-1/terminal-audit.json": "87861991528a93fc4780d79e8bddad4d7dfbaeec2eb0dfe61a0dfed2c9c9cb77"
+  }
+}
