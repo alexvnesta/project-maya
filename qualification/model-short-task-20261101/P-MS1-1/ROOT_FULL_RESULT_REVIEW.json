@@ -1,0 +1,62 @@
+{
+  "utc": "2026-11-01T06:13:24.075166+00:00",
+  "reviewer": "ROOT",
+  "arm": "P-MS1-1",
+  "decision": "FIRST_COMPLETE_SHORT_PROSE_TASK_PASS_ONLY",
+  "full_content_and_reasoning_read": true,
+  "reasoning_read_ranges_characters": [
+    [
+      0,
+      12000
+    ],
+    [
+      12000,
+      19208
+    ]
+  ],
+  "words_whitespace": 939,
+  "task_passed": true,
+  "checks": {
+    "800_to_1000_words": true,
+    "paragraphs_no_code_lists_headings": true,
+    "exact_final_sentence": true,
+    "hash_bucket_key_equality": true,
+    "chaining_collision_example_explicitly_invented": true,
+    "load_factor_resize_rehash_amortized_insertions": true,
+    "expected_constant_versus_worst_linear": true,
+    "no_material_factual_or_style_defect": true
+  },
+  "observation": {
+    "tokens": 5647,
+    "decode_tok_s": 57.185099671390745,
+    "client_seconds": 100.60598983406089,
+    "prompt_tokens": 169,
+    "prefill_ms": 1829.7,
+    "draft_accepted_offered": [
+      3611,
+      4193
+    ]
+  },
+  "notes": [
+    "1618 memory.max events/no private swap/OOM/kills, resources/kernel/publicrestore pass.",
+    "Short169 prompt prefill is not a meaningful long-prefill comparison. Natural generated lengths differ; no equal-work or broad quality conclusion."
+  ],
+  "owned_execution_closed": true,
+  "independent_terminal_audit_passed": true,
+  "preserve_producer_manual_pending": true,
+  "comparative_speedup_claim": false,
+  "deployment_admitted": false,
+  "next_arm_automatically_admitted": false,
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS1-1-20261101T055831Z/native/skip-controls/ms-prose-main/response.json": "2a59936d5d544d70d124cb4805efdeae2029ae8f5ee2cfde0f26204f725bef1f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS1-1-20261101T055831Z/native/skip-controls/ms-prose-main/request.json": "3bc8bb74e350fd65775b377eb1fc68a22b37b54ed94f4f44540df469c0e1a5bc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS1-1-20261101T055831Z/receipt.json": "129b211e54e327098d9b727a78d8c4b65602c0b47ed658bd9f91f649c79fe51b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS1-1-20261101T055831Z/startup-audit.json": "136e8954e13d00356d9df9d6715b154958f556905ca1580308ee07cf3543b198",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS1-1-20261101T055831Z/native/server-cleanup.json": "39a402a76f2e0497e38ab18ae93b9b997e1c8593f08c13058f86c4ab75a8008f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS1-1-20261101T055831Z/native/native-close.jsonl": "29f57ad96487f8f763257006675e9eb931d4ca3c8ae633aba99085d7b984a5cc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-P-MS1-1-20261101T055831Z/old-owner-close.json": "e009d194de37449d8ffb5d325339527abdd4e3bf72b702237e4d9daa2de44b2b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-P-MS1-1-20261101T055831Z/result.json": "091f8765b3bb03b8589cac1380426f056daeeb79dc3a247c7c704e097325b9c9",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/controller-P-MS1-1-exit.json": "37df5d53de767557d889b8c0ddcd019aab0b495911a2f75566181542ca7315e6",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/P-MS1-1/terminal-audit.json": "b6010dbe1a5f7cff3f1c98eef3002eba56830af543a141d4ed2ad3383167b71b"
+  }
+}
