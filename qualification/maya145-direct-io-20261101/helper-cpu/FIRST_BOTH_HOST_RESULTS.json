@@ -1,0 +1,24 @@
+{
+  "utc": "2026-11-01T02:13:11.869996+00:00",
+  "passed": true,
+  "physical_hosts": {
+    "darwin": {
+      "backend": "darwin-buffered-algorithm-only",
+      "controls": 15,
+      "child_pid": 72942,
+      "elapsed_seconds": 1.2068286249996163,
+      "receipt_sha256": "35c7fe58016fe92d3b43a3f85e2f7239941789c244da70806326c39b3cf1cb50"
+    },
+    "linux": {
+      "backend": "linux-real-O_DIRECT",
+      "controls": 15,
+      "child_pid": 811589,
+      "elapsed_seconds": 0.7174271470867097,
+      "receipt_sha256": "8cba7f4fcd5218ccdda00e9e7ab65b2a121d4eb262abe81d81069c8e1703368a"
+    }
+  },
+  "source_input_test_IDs_exact": true,
+  "model_or_runtime_qualified": false,
+  "new_native_build": false,
+  "no_production_actions": true
+}

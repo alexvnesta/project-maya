@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-01T02:38:56.620004+00:00",
+  "reviewer": "ROOT",
+  "entire_source_tests_read": true,
+  "source_sha256": {
+    "bootstrap.py": "e0f9de1357e91379ce6fdc043d2440ae2805de6bf50763185e1d69a27fb95e5f",
+    "test_bootstrap.py": "21101176fad3eda353655da1996f64b432a558a207abacbf8067c5cee14d9bc1",
+    "run_cpu.py": "226bbe05101c7a525ea9d77011a93cbacc3833c4cd380fc03a21d2ff36d0904f"
+  },
+  "test_ids": [
+    "test_bootstrap.Entry.test_changed_dependency_rejected_before_import",
+    "test_bootstrap.Entry.test_real_isolated_subprocess_resolves_qualified_local_import",
+    "test_bootstrap.Entry.test_wrong_mode_rejected_before_import",
+    "test_bootstrap.Entry.test_wrong_pin_or_arm_rejected_before_import"
+  ],
+  "scope": "Pure isolated import entry only: unchanged admitted auditor/modules/q/results/quality/math. Test real -I subprocess localimport+sys.modules identity and before-import wrongdependency/pin/arm/mode refusal. No native/service capability added. Original failedentry never enteredrun and stays rc1; qualified newentry completes only previously missing saved audits.",
+  "repeated_model_or_original_observer": false
+}

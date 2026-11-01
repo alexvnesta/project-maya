@@ -1,0 +1,52 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-11-01T02:21:07.494166+00:00",
+  "decision": "CONDITIONAL_SINGLE_FRESH_ITP2_DIAGNOSTIC_ONLY",
+  "findings": [],
+  "pins": {
+    "directstate-qualification.json": "35a22dd7f24fdef3d6780cdbf32edcb07c33c5f555db26580d1d632a08178a1f",
+    "directstate-qualification-REJECTED-FIRST.json": "d670c47e8fba214e7ca8984a648db7dcc5b13640b476d1022ea29f4bdfaeb175",
+    "QUALIFICATION_ALIAS_DIAGNOSIS.json": "bc0c00659fe7a048e772d3a61145de83d77432456742c5a210ad187a5773754b",
+    "ITP2/actual-controller-preflight-FIRST.log": "2b82938e785cadb389a2c3e005fa213120f1059d15a9af416aec90da703b1d0b",
+    "SOL_DIRECTSTATE_CPU_MAP_REVIEW.json": "b974da55fd0067ac51b6f3f53f28ca3637654ef5f0ac9a088a02a13fffa9d089",
+    "ACTUAL-QUALIFICATION-FIRST-linux/child.json": "da865f9db9912a6a57ef9d31fe2981c102843cbb7518d3afa71527cb52974534",
+    "ACTUAL-QUALIFICATION-FIRST-linux/child.log": "b43f7c92775f72d35d3f2fc2fa521bdfc7ecd65335d79071a6edd9636f30eb2f",
+    "ACTUAL-QUALIFICATION-R2-FIRST-linux/child.json": "b65574d561366f533985886bdc0e708b3c7af569ec111b7a9a9942b7618faccb",
+    "ACTUAL-QUALIFICATION-R2-FIRST-linux/child.log": "9ba6ec017cc8a92034240cc1851ffff4fadd751f585f674eb5b1724520e4a2ec",
+    "ACTUAL-QUALIFICATION-R2-FIRST-linux/OBSERVER_DEFECT.json": "3eb6fce49d8cf2c9164ee7396ba9814fe35fddeb5e8b385d963f685ee1649e1f",
+    "recovery-v1/RECOVERY_QUALIFICATION.json": "f87ac15212e9a3457462e780ba764fd1b6dfb34b2081e437bb329479f97f714d"
+  },
+  "metadata_delta": {
+    "aliases": 89,
+    "removed_alias_keys": 89,
+    "added_canonical_or_evidence_keys": 76,
+    "canonical_hash_conflicts": 0,
+    "existing_key_hash_changes": 0,
+    "new_preservation_evidence_entries": 5,
+    "final_map_entries": 4402,
+    "CPU_source_input_ID_groups_unchanged": true,
+    "recovery_qualification_unchanged": true
+  },
+  "evidence": "Saved actual controller preflight passes at02:19:43UTC for exact final qualification and selected792461/invocation43cca87865b949689fbb8048ad91f84c/main792348/ticks176540991. This is historical observed preflight, not a current host assertion by this reviewer. Prior extra observer rc1 is retained and not regraded; failure occurs at collector target_identity after guarded qualification, no runtime/source repair.",
+  "conditions_before_launch": [
+    "Fresh actual clock, canonical phase/registry and idle/default/healthy selected owner checks; exact same selected binding or stop and separately reassess.",
+    "Re-run actual reviewed controller exact qualification/source/input/root132GiB/current owner guard and preflight at action time. Recorded02:19:43 proof is not a reusable lease.",
+    "One fresh owned ITP2 attempt only, new output/controller/private caches; original rejected qualifications, failed CPU/observer evidence and all older HOLD arms preserved.",
+    "Unchanged adff native, MayaS pack/tokenizer/drafter, DS4_COPY_DIRECT=1, TP2 uneven/check1, FP32 AR2/Q8/mode1/projection; total1048576/output262144/requestcap32768/effort100/seed2/temp1/top_p1.",
+    "Owned1200s window/1000s soft/200s cleanup, private80GiB fence and8GiB host margin; exact native-only512MiBFSIZE and retained dump/storage monitoring.",
+    "Exactly44token cold plus dependent warm reuse43 literal requests; live original/direct8asset inode/size/time witness and positive direct/rounded0.000fallback. Any guard/counter/cache/source/identity/lifecycle fault stops with HOLD, no retries.",
+    "Capture full finite raw-logit/round/state/DSpark and native/API/window closure; independent terminal audit and separately verified selected production public restoration are required before acceptance."
+  ],
+  "not_admitted": [
+    "ITP1",
+    "timing or comparison",
+    "promotion or deployment",
+    "old arm replay",
+    "automatic second attempt or factor sweep"
+  ],
+  "limitations": [
+    "No host/GPU/service/native/test/compiler/import actions performed by this review.",
+    "Alias samefile evidence is supplied from actual Ubuntu resolution; local metadata transformation and unchanged hashes independently reconciled, not re-resolved on Ubuntu.",
+    "No benefit, exact-zero fallback-byte, numerical equivalence or actual memory-fit guarantee."
+  ]
+}

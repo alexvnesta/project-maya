@@ -1,0 +1,15 @@
+PASS aligned backend=darwin-buffered-algorithm-only
+PASS unaligned backend=darwin-buffered-algorithm-only
+PASS tiny backend=darwin-buffered-algorithm-only
+PASS cross_page backend=darwin-buffered-algorithm-only
+PASS exact_eof backend=darwin-buffered-algorithm-only
+PASS numa_roles backend=darwin-buffered-algorithm-only
+PASS scratch_reuse backend=darwin-buffered-algorithm-only
+PASS truncated backend=darwin-buffered-algorithm-only
+PASS bad_fd_fallback backend=darwin-buffered-algorithm-only
+PASS eintr_fallback backend=darwin-buffered-algorithm-only
+PASS ioerror_fallback backend=darwin-buffered-algorithm-only
+PASS zero_fallback backend=darwin-buffered-algorithm-only
+PASS zero_and_overflow backend=darwin-buffered-algorithm-only
+PASS span_oracle backend=darwin-buffered-algorithm-only
+PASS identity_replacement backend=darwin-buffered-algorithm-only

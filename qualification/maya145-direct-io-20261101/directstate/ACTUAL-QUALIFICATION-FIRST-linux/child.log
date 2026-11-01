@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<string>", line 6, in <module>
+    q=r.qualified('directstate','d670c47e8fba214e7ca8984a648db7dcc5b13640b476d1022ea29f4bdfaeb175')
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-directstate-v1/current_runtime.py", line 175, in qualified
+    p=Path(name);require(p.is_absolute() and p.resolve()==p and not p.is_symlink() and p.is_file()
+                 ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and sha(p)==pin,'Immutable qualification input changed: '+name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-directstate-v1/current_runtime.py", line 37, in require
+    if not ok:raise ValueError(why)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: Immutable qualification input changed: /lib/x86_64-linux-gnu/libc.so.6

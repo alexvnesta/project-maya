@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "controls": 4,
+  "test_ids": [
+    "test_bootstrap.Entry.test_changed_dependency_rejected_before_import",
+    "test_bootstrap.Entry.test_real_isolated_subprocess_resolves_qualified_local_import",
+    "test_bootstrap.Entry.test_wrong_mode_rejected_before_import",
+    "test_bootstrap.Entry.test_wrong_pin_or_arm_rejected_before_import"
+  ],
+  "source_sha256": {
+    "bootstrap.py": "e0f9de1357e91379ce6fdc043d2440ae2805de6bf50763185e1d69a27fb95e5f",
+    "test_bootstrap.py": "21101176fad3eda353655da1996f64b432a558a207abacbf8067c5cee14d9bc1",
+    "run_cpu.py": "226bbe05101c7a525ea9d77011a93cbacc3833c4cd380fc03a21d2ff36d0904f"
+  },
+  "observed": {
+    "pid": 90773,
+    "ppid": 90772,
+    "pgid": 90773,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "CPU_only": true,
+  "native_or_service_actions": false
+}

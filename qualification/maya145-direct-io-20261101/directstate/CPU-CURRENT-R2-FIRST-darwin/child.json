@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-directstate-v1/run_current_cpu.py",
+    "--review-sha256",
+    "244b0a186c37c88d10a506b613c6c3d2e1a663fa1fa7f11ff1b16828dbb981f1",
+    "--native-source-root",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2",
+    "--child",
+    "--parent",
+    "75904"
+  ],
+  "pid": 75905,
+  "returncode": 1,
+  "error": "ValueError('Child nonzero')",
+  "cleanup": [],
+  "elapsed_seconds": 0.2946005000267178
+}

@@ -1,0 +1,139 @@
+{
+  "passed": true,
+  "controls": 15,
+  "test_ids": [
+    "aligned",
+    "unaligned",
+    "tiny",
+    "cross_page",
+    "exact_eof",
+    "numa_roles",
+    "scratch_reuse",
+    "truncated",
+    "bad_fd_fallback",
+    "eintr_fallback",
+    "ioerror_fallback",
+    "zero_fallback",
+    "zero_and_overflow",
+    "span_oracle",
+    "identity_replacement"
+  ],
+  "source_sha256": {
+    "direct_probe.cpp": "3b96f81649bdbd72783d2b0791c8875c607cf69ed29cb35a227ed89e2c1eba88",
+    "run_cpu.py": "f777319e2f0c5a6b5e9329665bd479abaae75092f958d3eb0451da98ed35d314"
+  },
+  "input_sha256": {
+    "ds4_os.hpp": "546398916715a0de7a73954549bbad64e8d90155e766f247930c680a8565fd25",
+    "ds4_model.cu": "046277a7be8d385ccc843e64301d5cc14c93516f602b12e04fc9851acf76fcc5"
+  },
+  "observed": {
+    "pid": 811589,
+    "ppid": 811588,
+    "pgid": 811589,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "exact_helper_sha256": "9511c6df3da29a3ab9a2f17889c19de2d7dc5346db766a7f9ede96dd16c6e37d",
+  "backend": "linux-real-O_DIRECT",
+  "compile_returncode": 0,
+  "compiler": "/usr/bin/g++",
+  "binary_sha256": "eff732a50d2dfcc2ee60ff43622663e39010967a029bc512889c41453341c951",
+  "results": [
+    {
+      "id": "aligned",
+      "returncode": 0,
+      "stdout": "PASS aligned backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "unaligned",
+      "returncode": 0,
+      "stdout": "PASS unaligned backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "tiny",
+      "returncode": 0,
+      "stdout": "PASS tiny backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "cross_page",
+      "returncode": 0,
+      "stdout": "PASS cross_page backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "exact_eof",
+      "returncode": 0,
+      "stdout": "PASS exact_eof backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "numa_roles",
+      "returncode": 0,
+      "stdout": "PASS numa_roles backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "scratch_reuse",
+      "returncode": 0,
+      "stdout": "PASS scratch_reuse backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "truncated",
+      "returncode": 0,
+      "stdout": "PASS truncated backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "bad_fd_fallback",
+      "returncode": 0,
+      "stdout": "PASS bad_fd_fallback backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "eintr_fallback",
+      "returncode": 0,
+      "stdout": "PASS eintr_fallback backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "ioerror_fallback",
+      "returncode": 0,
+      "stdout": "PASS ioerror_fallback backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "zero_fallback",
+      "returncode": 0,
+      "stdout": "PASS zero_fallback backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "zero_and_overflow",
+      "returncode": 0,
+      "stdout": "PASS zero_and_overflow backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "span_oracle",
+      "returncode": 0,
+      "stdout": "PASS span_oracle backend=linux-real-O_DIRECT\n"
+    },
+    {
+      "id": "identity_replacement",
+      "returncode": 0,
+      "stdout": "PASS identity_replacement backend=linux-real-O_DIRECT\n"
+    }
+  ],
+  "native_executed": false,
+  "device_executed": false,
+  "whole_model_or_speed_proof": false
+}

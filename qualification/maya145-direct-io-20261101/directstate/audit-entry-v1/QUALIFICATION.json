@@ -1,0 +1,19 @@
+{
+  "review_sha256": "51ce48eaf5b9ab891aa84e8e5f07ffe55751fa06aa73d9221bbbf55a5d4422a5",
+  "source_sha256": {
+    "bootstrap.py": "e0f9de1357e91379ce6fdc043d2440ae2805de6bf50763185e1d69a27fb95e5f",
+    "test_bootstrap.py": "21101176fad3eda353655da1996f64b432a558a207abacbf8067c5cee14d9bc1",
+    "run_cpu.py": "226bbe05101c7a525ea9d77011a93cbacc3833c4cd380fc03a21d2ff36d0904f"
+  },
+  "test_ids": [
+    "test_bootstrap.Entry.test_changed_dependency_rejected_before_import",
+    "test_bootstrap.Entry.test_real_isolated_subprocess_resolves_qualified_local_import",
+    "test_bootstrap.Entry.test_wrong_mode_rejected_before_import",
+    "test_bootstrap.Entry.test_wrong_pin_or_arm_rejected_before_import"
+  ],
+  "each_host_controls": 4,
+  "original_mode_qualification_unchanged": "35a22dd7f24fdef3d6780cdbf32edcb07c33c5f555db26580d1d632a08178a1f",
+  "old_entry_rc1_preserved": true,
+  "saved_auditor_checks_never_entered_before": true,
+  "native_actions": false
+}

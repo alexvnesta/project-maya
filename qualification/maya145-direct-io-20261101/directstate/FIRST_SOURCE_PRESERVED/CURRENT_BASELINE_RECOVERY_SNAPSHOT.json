@@ -1,0 +1,212 @@
+{
+  "active_private_phase": null,
+  "active_GPU_phase": null,
+  "active_gpu_experiment": false,
+  "private_window": null,
+  "active_cpu_build": false,
+  "production_restore_in_progress": false,
+  "production_verification_pending": false,
+  "production_temporarily_stopped": false,
+  "current_native_pid": 714544,
+  "decode_optimization_current": {
+    "arm": "QTP2",
+    "cleanup_error": null,
+    "complete_status": "MAYA145_QUALITY_SELECTED4096_RESTORED",
+    "completion_scope": "Four unchanged known-answer text/cache/image states; bounded quality checks only, no generalquality/equivalence/promotion",
+    "controller_pid": 701118,
+    "error": "ValueError('Private phase fault; stop and diagnose offline')",
+    "kernel_since": "2026-10-31 23:39:45 UTC",
+    "mode": "quality",
+    "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-quality-mayas-TP2-20261031T233945Z",
+    "proof_path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145-quality-mayas-TP2-20261031T233945Z/proof.json",
+    "qualification_sha256": "07337ccee431a8c1fa649b3b3940d33578a91fa471be32a0c00035ef9ba0458b",
+    "running_status": "MAYA145_QUALITY_PRIVATE_RUNNING",
+    "selected_identity": {
+      "CPU_experts": 4045,
+      "DSpark": true,
+      "GPU_expert_slots_inferred": 11315,
+      "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+      "GPU_slots_direct_hosted_INFO": false,
+      "Q8": [
+        1,
+        1
+      ],
+      "TP": 1,
+      "all_CPU_experts_RAM": true,
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096",
+      "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+      "context": 1048576,
+      "images": true,
+      "native_pid": 714544,
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "output_default": 262144,
+      "placement": {
+        "actual_human_rows": [
+          {
+            "caches_GB_rounded": 0.58,
+            "device": 0,
+            "experts_GB_rounded": 58.32,
+            "first_layer": 0,
+            "free_MiB": 2026,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31
+          },
+          {
+            "caches_GB_rounded": 0.54,
+            "device": 1,
+            "experts_GB_rounded": 58.86,
+            "first_layer": 19,
+            "free_MiB": 2030,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31
+          }
+        ],
+        "drafter_on_GPU0": true,
+        "exact_prompt_bytes_observed": false,
+        "head_on_GPU1": true,
+        "trunk_split": [
+          19,
+          21
+        ]
+      },
+      "prefill_chunk": 4096,
+      "prompt_skip_mode": 1,
+      "runtime_ablation": true,
+      "start_binding": {
+        "invocation": "8b57bb9b2def42b2aea6575d5853a3df",
+        "main_pid": 714507,
+        "native_pid": 714544,
+        "native_start_ticks": 175925851
+      }
+    },
+    "start_binding": null,
+    "start_command_cleanup_error": null,
+    "status": "STOPPED_FOR_OFFLINE_DIAGNOSIS",
+    "utc": "2026-10-31 23:39:45 UTC"
+  },
+  "maya145quality_recovery_current": {
+    "active": false,
+    "admission_sha256": "cc0a0e68fb17da771449d4b5cce90984e55586f8cbbce5d7bf2039a2f11e2b7f",
+    "diagnosis_sha256": "0983e6b25f04530bf761136d4615980df2aa0a5938edb82e7a64397ad9d0ab81",
+    "error": null,
+    "failed_controller": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145-quality-mayas-TP2-20261031T233945Z/state.json",
+    "operation": "restore",
+    "pid": 714440,
+    "qualification_sha256": "9c105c07fc977ad182d1b5f22028a71be9c7d1af9e414007bc5650fbc1780a4d",
+    "result": {
+      "native_restarts_requested": 1,
+      "start_binding": {
+        "invocation": "8b57bb9b2def42b2aea6575d5853a3df",
+        "main_pid": 714507,
+        "native_pid": 714544,
+        "native_start_ticks": 175925851
+      },
+      "status": "SELECTED_BASELINE_RESTORED_FAILED_ARM_REMAINS_HOLD",
+      "verified": {
+        "health": {
+          "api_key": false,
+          "busy": false,
+          "image_generation": false,
+          "images": true,
+          "loaded": true,
+          "max_context": 1048576,
+          "model": "deepseek-v4.1-flash-iq2-xs",
+          "service": "strata",
+          "status": "ok",
+          "switcher": {
+            "active_model": "deepseek",
+            "default_model": "deepseek",
+            "fault": null,
+            "inflight": 0,
+            "nondefault_idle_seconds": 900.0,
+            "waiting": 0
+          }
+        },
+        "passed": true,
+        "public": {
+          "SSE_done": true,
+          "authenticated_models": 200,
+          "content": "READY",
+          "finish": "stop",
+          "known_answer_passed": true,
+          "unauthenticated_models": 401
+        },
+        "selected_identity": {
+          "CPU_experts": 4045,
+          "DSpark": true,
+          "GPU_expert_slots_inferred": 11315,
+          "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+          "GPU_slots_direct_hosted_INFO": false,
+          "Q8": [
+            1,
+            1
+          ],
+          "TP": 1,
+          "all_CPU_experts_RAM": true,
+          "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096",
+          "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+          "context": 1048576,
+          "images": true,
+          "native_pid": 714544,
+          "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+          "output_default": 262144,
+          "placement": {
+            "actual_human_rows": [
+              {
+                "caches_GB_rounded": 0.58,
+                "device": 0,
+                "experts_GB_rounded": 58.32,
+                "first_layer": 0,
+                "free_MiB": 2026,
+                "human_experts_with_drafter": 5746,
+                "human_total_with_drafter": 7680,
+                "last_layer": 42,
+                "weights_GB_rounded": 3.31
+              },
+              {
+                "caches_GB_rounded": 0.54,
+                "device": 1,
+                "experts_GB_rounded": 58.86,
+                "first_layer": 19,
+                "free_MiB": 2030,
+                "human_experts_with_drafter": 5953,
+                "human_total_with_drafter": 8064,
+                "last_layer": 39,
+                "weights_GB_rounded": 3.31
+              }
+            ],
+            "drafter_on_GPU0": true,
+            "exact_prompt_bytes_observed": false,
+            "head_on_GPU1": true,
+            "trunk_split": [
+              19,
+              21
+            ]
+          },
+          "prefill_chunk": 4096,
+          "prompt_skip_mode": 1,
+          "runtime_ablation": true,
+          "start_binding": {
+            "invocation": "8b57bb9b2def42b2aea6575d5853a3df",
+            "main_pid": 714507,
+            "native_pid": 714544,
+            "native_start_ticks": 175925851
+          }
+        }
+      }
+    },
+    "run_id": "20261031T235416Z",
+    "start_binding": {
+      "invocation": "8b57bb9b2def42b2aea6575d5853a3df",
+      "main_pid": 714507,
+      "native_pid": 714544,
+      "native_start_ticks": 175925851
+    },
+    "start_ticks": 175925382,
+    "status": "SELECTED_BASELINE_RESTORED_FAILED_ARM_REMAINS_HOLD"
+  }
+}

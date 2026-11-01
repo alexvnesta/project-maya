@@ -1,0 +1,14 @@
+{
+  "utc": "2026-11-01T02:14:28.228125+00:00",
+  "stage": "FIRST_BOUNDED_CPU_ONLY",
+  "actual_controls": 97,
+  "passed": 96,
+  "failure": "test fixture compared canonical asset_paths output to macOS /var symlink spelling. Native/runtime observer used resolve as intended.",
+  "diagnosis": "Synthetic fixture root now canonicalized before creation/expected paths; runtime/source policy unchanged. New driver review/folder namespace for exactbothhostproof. No native/service/model phase attempted or regrade.",
+  "change": [
+    "test_direct_io.py p=Path(x).resolve()",
+    "run_current_cpu.py new review/folder namespace only"
+  ],
+  "root_entire_delta_read": true,
+  "old_child_and_source_preserved": true
+}

@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-01T02:19:43.292688+00:00",
+  "classification": "EXTRA_ROOT_OBSERVER_DEFECT_NO_GPU_OR_CONTROLLER_ATTEMPT",
+  "fault": "h.target_identity requires audit_dir; inline final collector omitted it, after both qualified functions and post guard succeeded. Original rc1 remains.",
+  "whole_observer_regraded_or_rerun": false,
+  "next": "Use actual reviewed controller preflight entry, which sets audit_dir, before any separate run admission. New action time exact source check is required by that entry.",
+  "same_production_binding": {
+    "invocation": "43cca87865b949689fbb8048ad91f84c",
+    "main_pid": 792348,
+    "native_pid": 792461,
+    "native_start_ticks": 176540991
+  }
+}

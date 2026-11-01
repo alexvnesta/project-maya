@@ -1,0 +1,154 @@
+{
+  "utc": "2026-11-01T02:42:05.084526+00:00",
+  "decision": "ITP2_DIRECT_IO_FINITE_LITERAL_CACHE_DIAGNOSTIC_ACCEPTED_ONLY",
+  "first_terminal_entry_rc1_preserved": true,
+  "failure_scope": "Import before run() entered; separately CPU-qualified4-control BOTH-host isolated entry completes previously missing audit, unchanged original auditor/q/benchmark. No new model run or regrade.",
+  "terminal_audit_sha256": "888269eece96dc15db25938717a9f64b62cf8d8b2579925cfd2a5c8ab0d6af97",
+  "terminal_completion_child": {
+    "argv": [
+      "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+      "-I",
+      "-B",
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-directstate-v1/audit-entry-v1/bootstrap.py",
+      "--qualification-sha256",
+      "35a22dd7f24fdef3d6780cdbf32edcb07c33c5f555db26580d1d632a08178a1f",
+      "--binding-json",
+      "{\"invocation\": \"95ff5e796eab4d86b0e78d1611b9ada4\", \"main_pid\": 828763, \"native_pid\": 828819, \"native_start_ticks\": 176859041}"
+    ],
+    "pid": 835168,
+    "returncode": 0,
+    "error": null,
+    "cleanup": [],
+    "elapsed_seconds": 5.62549507105723
+  },
+  "entire_both_answers_and_reasoning_read": true,
+  "literal_correct_natural_stop_both": true,
+  "generated_counts": [
+    109,
+    149
+  ],
+  "reused": [
+    0,
+    43
+  ],
+  "finite_dumps": [
+    {
+      "bytes": 76533760,
+      "rows": 148,
+      "sha256": "def3758e5068a32c81e827195594aefd027ee8ae3624fb34f3975c8eade813a1",
+      "all_finite": true,
+      "token_row_alignment_claimed": false
+    },
+    {
+      "bytes": 100321280,
+      "rows": 194,
+      "sha256": "2fed3eb9224cde05deb1c862b85f35e44da9aa793f1fd7c55e1d9fbd51577c0f",
+      "all_finite": true,
+      "token_row_alignment_claimed": false
+    }
+  ],
+  "full_vocabulary_rows": 129280,
+  "raw_per_token_logit_alignment_claimed": false,
+  "cold_warm_token_paths_same": false,
+  "cross_condition_numerical_equivalence_claim": false,
+  "direct_io_counters": {
+    "direct_GB_rounded": 71.898,
+    "buffered_fallback_GB_rounded": 0.0,
+    "rounding_GB": 0.001,
+    "exact_byte_count_exported": false,
+    "exact_zero_fallback_proven": false
+  },
+  "actual_readonly_original_and_O_DIRECT_descriptor_pairs": 8,
+  "same_inode_size_mtime_ctime_witness": true,
+  "phase_seconds_including_load": 538.750103030121,
+  "native_API_window_controller_exit0": true,
+  "private_fence": {
+    "passed": true,
+    "memory_max": 85899345920,
+    "swap_max": 0,
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 179,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "prior_properties_restored": true,
+    "transient_collected": true
+  },
+  "kernel_resource_audit_passed": true,
+  "resources": {
+    "root_min_GiB": 205.80670166015625,
+    "system_swapout_delta_bytes": 602112,
+    "swap_not_attributed_to_model": true
+  },
+  "selected_identity": {
+    "native_pid": 828819,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "95ff5e796eab4d86b0e78d1611b9ada4",
+      "main_pid": 828763,
+      "native_pid": 828819,
+      "native_start_ticks": 176859041
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "qualifies_full_context_fill_or_full_output_generation": false,
+  "general_quality_or_performance_claim": false,
+  "ITP1_or_further_GPU_admission": false,
+  "deployment_admitted": false,
+  "scope": "Existing compiled loading flag only, same fullpolicy/drafter/model; bounded byte-helper CPU proof and this complete finite state/literal/coldwarm/lifecycle result. No reproducible loading or decode gain claimed."
+}

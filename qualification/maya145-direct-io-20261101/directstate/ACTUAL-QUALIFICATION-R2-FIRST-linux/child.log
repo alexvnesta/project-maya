@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<string>", line 9, in <module>
+    row={'passed':True,'mode':'directstate','arm':'ITP2','qualification_sha256':r.sha(r.qualification_path()),'files':len(q['files']),'self_checks':len(q['files'])+1,'recovery_files':len(rq['files']),'selected_binding':b,'rootfreeGiB':shutil.disk_usage('/').free/2**30,'selected_identity':h.target_identity(),'GPU_phase_or_native_actions':False,'registry':json.loads((p/'directstate-arms.json').read_text())}
+                                                                                                                                                                                                                                                                                                 ~~~~~~~~~~~~~~~~~^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/activate_chunk4096.py", line 370, in target_identity
+    emit(self.audit_dir / 'target-placement.json', placement)
+         ^^^^^^^^^^^^^^
+AttributeError: 'ChunkProductionHost' object has no attribute 'audit_dir'

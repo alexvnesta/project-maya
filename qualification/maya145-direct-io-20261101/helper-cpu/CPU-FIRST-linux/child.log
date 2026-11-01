@@ -1,0 +1,15 @@
+PASS aligned backend=linux-real-O_DIRECT
+PASS unaligned backend=linux-real-O_DIRECT
+PASS tiny backend=linux-real-O_DIRECT
+PASS cross_page backend=linux-real-O_DIRECT
+PASS exact_eof backend=linux-real-O_DIRECT
+PASS numa_roles backend=linux-real-O_DIRECT
+PASS scratch_reuse backend=linux-real-O_DIRECT
+PASS truncated backend=linux-real-O_DIRECT
+PASS bad_fd_fallback backend=linux-real-O_DIRECT
+PASS eintr_fallback backend=linux-real-O_DIRECT
+PASS ioerror_fallback backend=linux-real-O_DIRECT
+PASS zero_fallback backend=linux-real-O_DIRECT
+PASS zero_and_overflow backend=linux-real-O_DIRECT
+PASS span_oracle backend=linux-real-O_DIRECT
+PASS identity_replacement backend=linux-real-O_DIRECT
