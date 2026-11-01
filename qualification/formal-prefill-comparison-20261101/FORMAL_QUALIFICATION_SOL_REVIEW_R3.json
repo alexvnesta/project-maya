@@ -1,0 +1,222 @@
+{
+  "utc": "2026-11-01T09:39:10.905138+00:00",
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "R3_SOURCE_MAP_CPU_PREFIX_HOLD_RESOLVED_CONDITIONAL_A1_ONLY_NO_GPU_ADMISSION",
+  "findings": [],
+  "scope": "Narrow local current-core/map/receipt reconciliation. No imports/tests/host/remote/native actions; unchanged independently passed profile/auditor/recovery groups not re-read/repeated.",
+  "qualification_sha256": "3933938a7a891368898baffdc6eb4a291f0eb14bce242949e8ecb5cc23bae32e",
+  "file_pins": 4890,
+  "recovery_sha256": "7d965e0c89fe6fb0481cf8b20c5ed63414eabbf21970aab662e99124da1b2611",
+  "recovery_file_pins": 2371,
+  "core": {
+    "controls": 163,
+    "sources": 29,
+    "inputs": 177,
+    "exact_current_source_and_input_hashes_match": true,
+    "both_host_source_input_orderedIDs_equal": true,
+    "proofs": {
+      "darwin": {
+        "pid": 60820,
+        "returncode": 0,
+        "cleanup": [],
+        "observed": {
+          "pid": 60820,
+          "ppid": 60819,
+          "pgid": 60820,
+          "cpu": [
+            30,
+            30
+          ],
+          "as": null,
+          "nice": 15,
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "NUMEXPR_NUM_THREADS": "1",
+            "MALLOC_ARENA_MAX": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          },
+          "platform": "darwin",
+          "dont_write_bytecode": true
+        },
+        "log_tail": [
+          "----------------------------------------------------------------------",
+          "Ran 163 tests in 0.469s",
+          "",
+          "OK"
+        ]
+      },
+      "linux": {
+        "pid": 1145005,
+        "returncode": 0,
+        "cleanup": [],
+        "observed": {
+          "pid": 1145005,
+          "ppid": 1145001,
+          "pgid": 1145005,
+          "cpu": [
+            30,
+            30
+          ],
+          "as": [
+            536870912,
+            536870912
+          ],
+          "nice": 15,
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "",
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "NUMEXPR_NUM_THREADS": "1",
+            "MALLOC_ARENA_MAX": "1",
+            "PYTHONDONTWRITEBYTECODE": "1"
+          },
+          "platform": "linux",
+          "dont_write_bytecode": true
+        },
+        "log_tail": [
+          "----------------------------------------------------------------------",
+          "Ran 163 tests in 0.859s",
+          "",
+          "OK"
+        ]
+      }
+    }
+  },
+  "unchanged_groups": {
+    "profile11_and_auditor16_exact_group_maps_equal_old": true,
+    "recovery64_qualification_identical": true,
+    "inherited_helper15_and_old_closure_retained": true
+  },
+  "delta": {
+    "added_map_keys": 19,
+    "removed_map_keys": [],
+    "changed_or_added_pins": {
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/selected92_observer.py": {
+        "old": "859b1ec032fe186eae38a9b2e077a0c88ef464f8f89e643068e3796820a9685f",
+        "new": "090b1f03d8810afba9fde931ad532898f743bb40b412a7ec12000a102f29afd6"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/test_selected92_observer.py": {
+        "old": "43b551738e3adeeeff616803f9093c8e15980e1e099a5454770f46fb818a332d",
+        "new": "a949e8ab4d3ef52921496b817ef8b84eba46ebf10453c02fc20c7392ec3696a7"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/test_task_mode.py": {
+        "old": "eb2ff7e65ce414bdbcb9b204f17c1971394d9dd553ab7c8ccdea68674120c0bb",
+        "new": "7393af4d0c23cac6a7aba9e5fb89aeee90febe466a9adc0c3817b98bad985f2d"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/run_current_cpu.py": {
+        "old": "6e78961745070b748b1dea039167ce1f6da1569bd810aed523af4b5393890e97",
+        "new": "a579b76feed59db6b8dbd5125978ebf8fdac7506ffe6bbf8daee987b7541e23c"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/recorded-selected92-8469/request.json": {
+        "old": null,
+        "new": "2f6b7c53d22ea98ecbab4dad5a826007c02d334834aab446900dd02667b25c37"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/ROOT_CURRENT_SOURCE_REVIEW.json": {
+        "old": "5487fdecdb17e512d1eab49b90501f0d9964432aec3386315efc5eab35caed6d",
+        "new": "d7c6aa858a6626d0290c9f206edf7f8a30d13bb8191f86d413fc668ea946d911"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-darwin/receipt.json": {
+        "old": null,
+        "new": "b2da620d6cd6552509812bd99435640b5ba7db812594767f2821be01c4c3557d"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-darwin/child.json": {
+        "old": null,
+        "new": "5f137d4b82598132b37a919c4cd11eee8e7f5241cb55af32c6ee17f61fc8ff59"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-darwin/child.log": {
+        "old": null,
+        "new": "9061fce06cae65ccdf0ab88794a9f475228e8d069d1f426169063def75065ce8"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-linux/receipt.json": {
+        "old": null,
+        "new": "185d0912136502a6ba374e2c6f0f5f0db5c5ec93291162bd780c9c68f9f75fed"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-linux/child.json": {
+        "old": null,
+        "new": "71d6e5d7cf436d86636500c91ecbdfa4609631ffa00de98c8155fa24423270c6"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-linux/child.log": {
+        "old": null,
+        "new": "9ebf5582f819ab841b1586c104c910e042eef57fa2d6054baa53e94cef0e476b"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/PREFIX_HOLD_PRE_CPU_PRESERVED/FIRST_BOTH_HOST_CPU_AND_QUALIFICATION_SUMMARY.json": {
+        "old": null,
+        "new": "1c1c185f4b7a3a10c1355a477df8f8454d2ea6362011d9710a8a615e71b654da"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/PREFIX_HOLD_PRE_CPU_PRESERVED/FORMAL_QUALIFICATION_SOL_REVIEW.json": {
+        "old": null,
+        "new": "5e73e6bf99afca5cb9c66977fc1c386e1bfecc45c07b450081521e383327e923"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/PREFIX_HOLD_PRE_CPU_PRESERVED/FORMAL_QUALIFICATION_SOL_REVIEW_PREFIX_HOLD.json": {
+        "old": null,
+        "new": "c1d7125324b374a3374666cad5c3def97563307f8f45782d255aa6e830e2b90e"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/PREFIX_HOLD_PRE_CPU_PRESERVED/ROOT_CURRENT_SOURCE_REVIEW.json": {
+        "old": null,
+        "new": "5487fdecdb17e512d1eab49b90501f0d9964432aec3386315efc5eab35caed6d"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/PREFIX_HOLD_PRE_CPU_PRESERVED/run_current_cpu.py": {
+        "old": null,
+        "new": "6e78961745070b748b1dea039167ce1f6da1569bd810aed523af4b5393890e97"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/PREFIX_HOLD_PRE_CPU_PRESERVED/selected92_observer.py": {
+        "old": null,
+        "new": "859b1ec032fe186eae38a9b2e077a0c88ef464f8f89e643068e3796820a9685f"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/PREFIX_HOLD_PRE_CPU_PRESERVED/task-qualification.json": {
+        "old": null,
+        "new": "27070f6c7d15953c65eeb8881b6c042113f3ec241ca0a518abb1a42143f4a9b3"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/PREFIX_HOLD_PRE_CPU_PRESERVED/test_selected92_observer.py": {
+        "old": null,
+        "new": "43b551738e3adeeeff616803f9093c8e15980e1e099a5454770f46fb818a332d"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/PREFIX_HOLD_PRE_CPU_PRESERVED/test_task_mode.py": {
+        "old": null,
+        "new": "eb2ff7e65ce414bdbcb9b204f17c1971394d9dd553ab7c8ccdea68674120c0bb"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_PREFIX_REPAIR_SOL_REVIEW.json": {
+        "old": null,
+        "new": "83af311d22abe1da49c6d165316a536454b0c9740fa35648a0a7efee91704f8e"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_QUALIFICATION_SOL_REVIEW.json": {
+        "old": null,
+        "new": "5e73e6bf99afca5cb9c66977fc1c386e1bfecc45c07b450081521e383327e923"
+      },
+      "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_QUALIFICATION_SOL_REVIEW_PREFIX_HOLD.json": {
+        "old": null,
+        "new": "c1d7125324b374a3374666cad5c3def97563307f8f45782d255aa6e830e2b90e"
+      }
+    }
+  },
+  "HOLD_scope": "The prefix source-suitability blocker is resolved ONLY for repaired source/newq393393 and exact R3 proofs. Original q27070 remains blocked/preserved; historical failures and priorHOLD receipts remain unchanged. CPU/group consistency does not regrade old runs or qualify new model inference.",
+  "criteria": "Exact complete8469 commonknownanswer with natural32768/effort100/1Mtotal262144allowance. A=actual92/c43 originalpackTP1/no newflags; B=adff/originalMayaSTP2/direct1. FrozenA1B1B2A2 and<=3% meaningful-prefill eachorder, independently reviewed manual/ownedclosure and separate reversal. HistoricalQS0 fullfinite/workload not freshtiming; no sustained205-token decode, topologycausal, near1M/fulloutput or promotion claim.",
+  "conditional_single_A1_gate": [
+    "Only one fresh A1 may be considered after actual staged main qualified()+recovery.qualified() and canonical real controller readonly preflight pass all pins/qself/current92c43owner/source/root/idle/default/cleanpreviouswindow/noactivephase.",
+    "Immediately before separately admitted launch recheck clock/idle/exact currentowner/source/root; preserve native92 unchangedsettings/drafter/Q8/mode1/projection/allRAM/no directflag/no dumps/unlimitednativeFSIZE.",
+    "Keep80GiBzeroownedswap/8margin/root132runtime120/window1200/soft1000/cleanup200/startup800/cache8/log4. Exact8469 prompt/reused0/typed1..64 naturalanswer/source-bound94prefix/actualselectedSTAT+DONE/activation5801, raw captured process closure and publicrestore required.",
+    "No B1/B2/A2 or timing/promotion automatically admitted; partial/wrong/cap/fault remainsblocking. No retry or endpointchange."
+  ],
+  "action_proof_status": "Parent reports metadata staged and fresh checks in progress. Summary snapshot still says qualification_staged=false; not treated as currenthost proof. No actual fresh preflight read/verified here. Separate singleA1 action admission remains required.",
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/task-qualification.json": "3933938a7a891368898baffdc6eb4a291f0eb14bce242949e8ecb5cc23bae32e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-darwin/receipt.json": "b2da620d6cd6552509812bd99435640b5ba7db812594767f2821be01c4c3557d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-darwin/child.json": "5f137d4b82598132b37a919c4cd11eee8e7f5241cb55af32c6ee17f61fc8ff59",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-darwin/child.log": "9061fce06cae65ccdf0ab88794a9f475228e8d069d1f426169063def75065ce8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-linux/receipt.json": "185d0912136502a6ba374e2c6f0f5f0db5c5ec93291162bd780c9c68f9f75fed",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-linux/child.json": "71d6e5d7cf436d86636500c91ecbdfa4609631ffa00de98c8155fa24423270c6",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R3-FIRST-linux/child.log": "9ebf5582f819ab841b1586c104c910e042eef57fa2d6054baa53e94cef0e476b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/recovery-v1/RECOVERY_QUALIFICATION.json": "7d965e0c89fe6fb0481cf8b20c5ed63414eabbf21970aab662e99124da1b2611",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_PREFIX_REPAIR_SOL_REVIEW.json": "83af311d22abe1da49c6d165316a536454b0c9740fa35648a0a7efee91704f8e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_QUALIFICATION_SOL_REVIEW.json": "5e73e6bf99afca5cb9c66977fc1c386e1bfecc45c07b450081521e383327e923",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_QUALIFICATION_SOL_REVIEW_PREFIX_HOLD.json": "c1d7125324b374a3374666cad5c3def97563307f8f45782d255aa6e830e2b90e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FIRST_BOTH_HOST_CPU_AND_QUALIFICATION_SUMMARY.json": "5d4734504903a0259b93b6999ed507113a03a888daa8dfb6d12ba77613e1416e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_PREFILL_PLAN_FROZEN.json": "bece74b44b1a85d772a6ad8eba957796a3058ff7af4c0340dbed846209a90883",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/ROOT_CURRENT_SOURCE_REVIEW.json": "d7c6aa858a6626d0290c9f206edf7f8a30d13bb8191f86d413fc668ea946d911"
+  },
+  "stopped": true
+}

@@ -1,0 +1,53 @@
+{
+  "utc": "2026-11-01T09:57:05.287824+00:00",
+  "reviewer": "ROOT",
+  "mode": "task",
+  "arm": "B1",
+  "single_arm_admitted": true,
+  "automatic_next_arm": false,
+  "deployment_admitted": false,
+  "qualification_sha256": "c7ae7445488b053b4e5b4ab160ca4f5f50b62c7ec9b433af746e8f94e94c1b03",
+  "recovery_qualification_sha256": "7d965e0c89fe6fb0481cf8b20c5ed63414eabbf21970aab662e99124da1b2611",
+  "baseline_binding": {
+    "invocation": "6b68a5236be04b4cb9db6dac2e101743",
+    "main_pid": 1152619,
+    "native_pid": 1152678,
+    "native_start_ticks": 179477431
+  },
+  "scope": "Only exact8469 original knownanswer completecold observation, originalMayaS/adffTP2/direct1 wholeprofile. Single B1 after actual selected92 A1 fullyrawmanually/independently reviewed andnative/API/window/controller0/publicrestored. No newweights/build/policy or sustaineddecode claim.",
+  "required_prior_pins": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/A1/terminal-audit.json": "1adf95fa4570641a6947a915491ec63aa56ee0d878eec2c4da6f21b942fd93ba",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/A1/ROOT_FULL_RESULT_REVIEW_FIRST.json": "4548ad03ac28f03e92ddc8cf650143fcc50971400bd90e05f62dafa43803f4e1",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/controller-A1-exit.json": "a04eac4ae810059846f00c7198c6e1dbef2bc36d33390739ca0d6238f5dbf7b6",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_QUALIFICATION_ALIAS_DELTA_SOL_REVIEW.json": "24dce9c56c81f376ad2147db09f1985c617e0f2c056a551e9c4023136c2be6e3"
+  },
+  "A1_prompt_ms": 8862.4,
+  "B1_prefill_frozen_upper_ms": 9128.271999999999,
+  "first_pair_failure_closes_no_replica_or_promotion": true,
+  "no_B2_A2_admitted": true,
+  "fresh_action_conditions": "Exact current healthy idle/default/notreserved/queued/inflight/no private/build/restoration, selected92boundowner/config/cgroup/flags/soleGPU, root132, q4801+qself/window/source/CPU/recovery/priorpins, previous clean actualA1window/kernel0; fresh attempt/controller/output namespace. First genuinefaultcleanupHOLD/noretry.",
+  "full_policy": {
+    "context_total": 1048576,
+    "output_allowance": 262144,
+    "cap": 32768,
+    "effort": 100,
+    "drafter_enabled": true,
+    "DSpark_conf": 0.65,
+    "DSpark_max": 4,
+    "Q8": [
+      1,
+      1
+    ],
+    "mode1": true,
+    "chunk": 4096,
+    "24CPU_allRAM": true,
+    "stream": 0
+  },
+  "window": 1200,
+  "soft": 1000,
+  "cleanup": 200,
+  "startup": 800,
+  "private_max_GiB": 80,
+  "private_swap": 0,
+  "host_margin_GiB": 8
+}

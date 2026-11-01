@@ -1,0 +1,25 @@
+{
+  "utc": "2026-11-01T10:53:03.832845+00:00",
+  "status": "COMPLETE_UNSELECTED_BULK_PAYLOADS_REMOVED_AFTER_COMPARISON_CLOSEOUT",
+  "scope": "Complete exclusive payloads only; acquisition/construction records remain historical unchanged, shared assets/caches/source/raw retained. No globalinferiority claim. Future rerun requires redownload/new qualification, not closedarmreplay.",
+  "removed": [
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/assets/model-00028-of-00048.safetensors",
+      "bytes": 7389761368,
+      "previously_verified_sha256": "3c0e5ad6a4e8e811c1a55fd8f5b59c9fa329b241c671997c28fc7a01944d5a77"
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/assets/model-00029-of-00048.safetensors",
+      "bytes": 7389761368,
+      "previously_verified_sha256": "392a950bcb062b89f683abc52d49a17e92c66f80cd1cb6fb92b71091da75319b"
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/native-gu.bin",
+      "bytes": 9625927680,
+      "previously_verified_sha256": "e386661b7ca9faf94188d8a9cb899e39faf9b54c8b85ad81639e18c993a17b1a"
+    }
+  ],
+  "cleanup_result": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/PAYLOAD_REMOVAL_TARGET_R3_RESULT_FIRST.json",
+  "cleanup_result_sha256": "e83e51c2ee3abef8451ddb2cf870d34f6c87ecdb2c4d00946490f863cda8485e",
+  "selected_native_and_config_unchanged": true
+}

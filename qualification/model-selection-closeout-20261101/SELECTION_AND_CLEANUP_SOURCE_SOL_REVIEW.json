@@ -1,0 +1,403 @@
+{
+  "utc": "2026-11-01T10:25:49.806574+00:00",
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "SELECTION_BOUNDED_CONCLUSION_ACCEPTED_CLEANUP_SOURCE_HOLD_BEFORE_FIRST_CPU_OR_DELETION",
+  "scope": "Entire3new source/test/driver manually read plus plan/selection and actual scoped dependency metadata/results; no tests/imports/host/probes/payloadhash/deletion actions.",
+  "selection": "A1/B1 correct naturalowned closures with fresh meaningful8469 cold8862.4vs10244.7ms yields+15.597355118% regression, fails<=3. NoB2/A2/laterdecode/promotion. Keeping EXISTINGnative92/c43 is defensible bestfullyqualified deployment withincompletedgates, notglobalbestquant/universalqualityinferiority. HGU reversedshortscreen failed and Unsloth mixedshortobservations do not qualify replacement.",
+  "selection_closure": {
+    "A1": {
+      "terminal_passed": true,
+      "ROOT_review": {
+        "utc": "2026-11-01T09:56:01.487135+00:00",
+        "reviewer": "ROOT",
+        "arm": "A1",
+        "fully_reviewed": true,
+        "owned_execution_closed": true,
+        "task_passed": true,
+        "terminal_audit_sha256": "1adf95fa4570641a6947a915491ec63aa56ee0d878eec2c4da6f21b942fd93ba",
+        "qualified_independent_audit_child_rc": 0,
+        "entire_final_and_reasoning_read": true,
+        "final": "Typed JSON values1..64 exactly once ascending, no extra keys;195chars",
+        "reasoning": "Entire675chars read; correct intended JSON construction, no cap/partial/retry. No broad reasoning-quality claim.",
+        "counts_and_latency": {
+          "generated": 366,
+          "prompt_tokens": 8469,
+          "prompt_ms": 8862.4,
+          "decode_ms": 7318.0,
+          "finish": "stop",
+          "drafts_accepted": 257,
+          "drafts_offered": 292,
+          "reused": 0,
+          "hits": 91419,
+          "lookups": 100785
+        },
+        "client_full_seconds": 16.221965984907,
+        "native_draft_execution": [
+          {
+            "configured_and_loaded_separate": true,
+            "execution_proven": true,
+            "evidence": "Exact native92 round() off>0 only after Model.draft/verify; same-command natural DONE and final STAT ratio",
+            "drafts_offered": 292,
+            "drafts_accepted": 257,
+            "zero_acceptance_permitted": true,
+            "draft_rounds": null,
+            "draft_ms": null,
+            "verify_ms": null,
+            "unavailable_native92_counters_not_inferred": true,
+            "samples": 46,
+            "raw_lines_sha256": "68111d44af2bfd8470213e712424aa89da503dcdfe3c3804f4ca363f9a18844c",
+            "source_main_sha256": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+            "source_model_sha256": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350"
+          }
+        ],
+        "actual_native_pid": 1149260,
+        "actual_API_pid": 1149233,
+        "actual_controller_pid": 1148598,
+        "native_API_window_controller_returncode": 0,
+        "old_selected_native1108433_close0_verified": true,
+        "kernel_capture0_no_fault_lines": true,
+        "resources": {
+          "root_min_GiB": 202.78039932250977,
+          "system_swapout_delta_bytes": 352256,
+          "swap_not_attributed_to_model": true
+        },
+        "fence": {
+          "passed": true,
+          "memory_max": 85899345920,
+          "swap_max": 0,
+          "events_delta": {
+            "low": 0,
+            "high": 0,
+            "max": 1816,
+            "oom": 0,
+            "oom_kill": 0,
+            "oom_group_kill": 0,
+            "sock_throttled": 0
+          },
+          "prior_properties_restored": true,
+          "transient_collected": true
+        },
+        "selected_identity": {
+          "native_pid": 1152678,
+          "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+          "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+          "context": 1048576,
+          "output_default": 262144,
+          "prompt_skip_mode": 1,
+          "prefill_chunk": 4096,
+          "Q8": [
+            1,
+            1
+          ],
+          "TP": 1,
+          "images": true,
+          "runtime_ablation": true,
+          "DSpark": true,
+          "CPU_experts": 4045,
+          "all_CPU_experts_RAM": true,
+          "placement": {
+            "trunk_split": [
+              19,
+              21
+            ],
+            "drafter_on_GPU0": true,
+            "head_on_GPU1": true,
+            "actual_human_rows": [
+              {
+                "device": 0,
+                "first_layer": 0,
+                "last_layer": 42,
+                "weights_GB_rounded": 3.31,
+                "experts_GB_rounded": 58.32,
+                "human_experts_with_drafter": 5746,
+                "human_total_with_drafter": 7680,
+                "caches_GB_rounded": 0.58,
+                "free_MiB": 2026
+              },
+              {
+                "device": 1,
+                "first_layer": 19,
+                "last_layer": 39,
+                "weights_GB_rounded": 3.31,
+                "experts_GB_rounded": 58.86,
+                "human_experts_with_drafter": 5953,
+                "human_total_with_drafter": 8064,
+                "caches_GB_rounded": 0.54,
+                "free_MiB": 2030
+              }
+            ],
+            "exact_prompt_bytes_observed": false
+          },
+          "GPU_expert_slots_inferred": 11315,
+          "GPU_slots_direct_hosted_INFO": false,
+          "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+          "start_binding": {
+            "invocation": "6b68a5236be04b4cb9db6dac2e101743",
+            "main_pid": 1152619,
+            "native_pid": 1152678,
+            "native_start_ticks": 179477431
+          },
+          "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+        },
+        "raw_public_assembled_READY_stop_DONE_read": true,
+        "public401_authmodels200": true,
+        "same_context1048576_output262144_quality_drafter_policy": true,
+        "model_quality_equivalence_or_speedup_claim": false,
+        "sustained_decode_claim": false,
+        "baseline_only_not_a_first_pair": true,
+        "automatic_next_or_activation": false,
+        "evidence_sha256": {
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/A1/terminal-audit.json": "1adf95fa4570641a6947a915491ec63aa56ee0d878eec2c4da6f21b942fd93ba",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/controller-A1-exit.json": "a04eac4ae810059846f00c7198c6e1dbef2bc36d33390739ca0d6238f5dbf7b6",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-A1-20261101T094218Z/native/skip-controls/ms-quality-cold-text/response.json": "7cb44fd41bf9ca6cc29d6b82e9a0093d8f176e803aac0e0cede6a6def9d8c2e0",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-A1-20261101T094218Z/native/native-000/raw-done.txt": "dcf451ecb82057ad14bcbfb5313ad0d200d2a0bc9a77672542fe2fd8ebfb4dfa",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-A1-20261101T094218Z/native/native-close.jsonl": "86a2d6f0878969eea24aff03f0136b70d9a6727b2855861c45a9b124abca23ed",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-A1-20261101T094218Z/native/server-cleanup.json": "b6fd50c07dd993a7c872ab6c41a52e692d32c0129e7efeae50acc7a5212180a3",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-formal-prefill-A1-20261101T094218Z/old-owner-close.json": "2d52f21edb8a0e132a376f57cfacfc388e4f7d4534651a11147b51bb46030563",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-formal-prefill-A1-20261101T094218Z/public-default-output-sse.txt": "6cea59c476a9e4157f1fb5941be17cfd6667e7297cb4c4c157163a63f648be89"
+        }
+      },
+      "native": {
+        "generated": 366,
+        "prompt_tokens": 8469,
+        "prompt_ms": 8862.4,
+        "decode_ms": 7318.0,
+        "finish": "stop",
+        "drafts_accepted": 257,
+        "drafts_offered": 292,
+        "reused": 0,
+        "hits": 91419,
+        "lookups": 100785
+      }
+    },
+    "B1": {
+      "terminal_passed": true,
+      "ROOT_review": {
+        "utc": "2026-11-01T10:14:19.241759+00:00",
+        "reviewer": "ROOT",
+        "arm": "B1",
+        "fully_reviewed": true,
+        "owned_execution_closed": true,
+        "task_passed": true,
+        "terminal_audit_sha256": "4cb6fb0d2d23ac0895603cd8b21b37384a64a6cf570d8535283e5992aaa76670",
+        "qualified_independent_audit_child_rc": 0,
+        "entire_final_and_reasoning_read": true,
+        "final": "Typed JSON values1..64 exactly once ascending, no extra keys;195chars",
+        "reasoning": "Entire188chars read; correct concise JSON construction. No cap/partial/retry. No broad reasoning-quality claim.",
+        "counts_and_latency": {
+          "generated": 179,
+          "prompt_tokens": 8469,
+          "prompt_ms": 10244.7,
+          "decode_ms": 3456.6,
+          "finish": "stop",
+          "drafts_accepted": 129,
+          "drafts_offered": 143,
+          "reused": 0,
+          "hits": 42011,
+          "lookups": 48435
+        },
+        "client_full_seconds": 13.734927962068468,
+        "native_draft_execution": [
+          {
+            "configured_and_loaded_separate": true,
+            "execution_proven": true,
+            "draft_rounds": 47,
+            "draft_ms": 240.483,
+            "verify_ms": 2964.322,
+            "acceptance_can_be_zero": true,
+            "samples": 23,
+            "raw_lines_sha256": "ca7dccf09d3971c01b6f4c3095866c5a52eff51752da8f6f71de1e7114b18218"
+          }
+        ],
+        "actual_native_pid": 1161115,
+        "actual_API_pid": 1161089,
+        "actual_controller_pid": 1160404,
+        "native_API_window_controller_returncode": 0,
+        "old_selected_native1152678_close0_verified": true,
+        "resources": {
+          "root_min_GiB": 202.75923538208008,
+          "system_swapout_delta_bytes": 0,
+          "swap_not_attributed_to_model": true
+        },
+        "fence": {
+          "passed": true,
+          "memory_max": 85899345920,
+          "swap_max": 0,
+          "events_delta": {
+            "low": 0,
+            "high": 0,
+            "max": 2253,
+            "oom": 0,
+            "oom_kill": 0,
+            "oom_group_kill": 0,
+            "sock_throttled": 0
+          },
+          "prior_properties_restored": true,
+          "transient_collected": true
+        },
+        "selected_identity": {
+          "native_pid": 1166373,
+          "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+          "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+          "context": 1048576,
+          "output_default": 262144,
+          "prompt_skip_mode": 1,
+          "prefill_chunk": 4096,
+          "Q8": [
+            1,
+            1
+          ],
+          "TP": 1,
+          "images": true,
+          "runtime_ablation": true,
+          "DSpark": true,
+          "CPU_experts": 4045,
+          "all_CPU_experts_RAM": true,
+          "placement": {
+            "trunk_split": [
+              19,
+              21
+            ],
+            "drafter_on_GPU0": true,
+            "head_on_GPU1": true,
+            "actual_human_rows": [
+              {
+                "device": 0,
+                "first_layer": 0,
+                "last_layer": 42,
+                "weights_GB_rounded": 3.31,
+                "experts_GB_rounded": 58.32,
+                "human_experts_with_drafter": 5746,
+                "human_total_with_drafter": 7680,
+                "caches_GB_rounded": 0.58,
+                "free_MiB": 2026
+              },
+              {
+                "device": 1,
+                "first_layer": 19,
+                "last_layer": 39,
+                "weights_GB_rounded": 3.31,
+                "experts_GB_rounded": 58.86,
+                "human_experts_with_drafter": 5953,
+                "human_total_with_drafter": 8064,
+                "caches_GB_rounded": 0.54,
+                "free_MiB": 2030
+              }
+            ],
+            "exact_prompt_bytes_observed": false
+          },
+          "GPU_expert_slots_inferred": 11315,
+          "GPU_slots_direct_hosted_INFO": false,
+          "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+          "start_binding": {
+            "invocation": "6bd4a6d9c93243ce999dca37f7ce7f79",
+            "main_pid": 1166336,
+            "native_pid": 1166373,
+            "native_start_ticks": 179586297
+          },
+          "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+        },
+        "raw_public_assembled_READY_stop_DONE_read": true,
+        "public401_authmodels200": true,
+        "same_context1048576_output262144_quality_drafter_policy": true,
+        "quality_equivalence_or_speedup_claim": false,
+        "sustained_decode_claim": false,
+        "automatic_next_or_activation": false,
+        "evidence_sha256": {
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/B1/terminal-audit.json": "4cb6fb0d2d23ac0895603cd8b21b37384a64a6cf570d8535283e5992aaa76670",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/controller-B1-exit.json": "eadebf61f50d77d97d3d422f43b355e04ca41d2b41f412ee26707bab8041b248",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-B1-20261101T095723Z/native/skip-controls/ms-quality-cold-text/response.json": "575c4fdb670f3f618d09cd93a273a463becf90b3c96d14b009d0c45e7d90e353",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-B1-20261101T095723Z/native/native-000/raw-done.txt": "fce76ecac81cc159791dc14740b2ec20927e41393a537498fc8f1657dccc198a",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-B1-20261101T095723Z/native/native-close.jsonl": "36d7ecb14931e187488aec025b6a57c807396016bf72cc02c85afccb43426e04",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-B1-20261101T095723Z/native/server-cleanup.json": "72ebd124c811ee1fcf09d68d892e24adb0ac5b9f27403faa711379f3b5f85987",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-formal-prefill-B1-20261101T095723Z/old-owner-close.json": "4880832613bd410ad15e72da313fbe3bd1f6f65e7e56c88ca718c2b9efb45432",
+          "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-formal-prefill-B1-20261101T095723Z/public-default-output-sse.txt": "93ada5a14ec276eb2a11e12df71c14c1d3ccc56336bc2ec2a7a8c08252d220a5"
+        }
+      },
+      "native": {
+        "generated": 179,
+        "prompt_tokens": 8469,
+        "prompt_ms": 10244.7,
+        "decode_ms": 3456.6,
+        "finish": "stop",
+        "drafts_accepted": 129,
+        "drafts_offered": 143,
+        "reused": 0,
+        "hits": 42011,
+        "lookups": 48435
+      }
+    }
+  },
+  "plan_reconciliation": {
+    "exact_plan_sha256": "8904383c06184dd2c55ccebf5b11755f25fc918f1132461005a37d2764487378",
+    "count": 15,
+    "bytes": 664358869199,
+    "rows_equal_saved_dependency_audit": true,
+    "protected_inodes_disjoint": true,
+    "plan_links_actual_audit_and_selection_hashes": true,
+    "live_lsof_stats_and_owner_revalidated_here": false,
+    "limit": "HistoricalSHA/signature/provenance and saved lsof/process audit are cooperative custody evidence; final actiontimechecks remain mandatory. No weight rescan or new independent live audit performed."
+  },
+  "findings": [
+    {
+      "id": "C1",
+      "severity": "blocking-destructive-lifecycle",
+      "file": "remove_exact_payloads_admitted.py",
+      "lines": [
+        61,
+        107
+      ],
+      "finding": "Absence check of progress/result is not an atomic one-shot reservation; progress first created in append mode only after slow preflight. Two admitted children can both pass and race the irreversible operation. phase_free only reads state and never claims ownership against other cooperating controllers/builds.",
+      "repair": "Acquire durable exclusive no-retry attempt ownership before preflight/deletion (atomic O_EXCL marker and existing cooperative canonical owner/lease or equivalent checked interlock). Never erase/retry stale/partial evidence; verify exact owned record throughout and release only own activeclaim after conservative closure. Add real concurrent-attempt refusal and failure-before-unlink controls."
+    },
+    {
+      "id": "C2",
+      "severity": "blocking-partial-accounting",
+      "file": "remove_exact_payloads_admitted.py",
+      "lines": [
+        51,
+        51,
+        110
+      ],
+      "finding": "Successful unlink followed by parent fsync or post-unlink replacement check failure raises before caller appends completed. Actual removed file is omitted from removed_count/bytes, even though irreversibility already occurred. INTENT survives but final receipt does not distinguish proven removed from unknown durability/current replacement.",
+      "repair": "Track unlink occurrence immediately and separately from directory durability/postchecks. Persist perfile outcomes conservatively and make final partialHOLD account proven unlink vs unknown completion; never infer file retained from thrown unlink_record. Add real temp-file successfulunlink+injectedparentfsyncfailure and postunlinkreplacement tests; no automatic retry."
+    }
+  ],
+  "other_limits": [
+    "Leaf dirfd/NOFOLLOW/fullsignature and recheck after durableINTENT are useful cooperative protections; they are not an atomic conditional-unlink against an adversarial concurrent rename between finalstat/unlink. Exclusive custody must prevent cooperating writers; do not claim OSindependent custody.",
+    "The14 current tests meaningfully exercise leaf deletion/refusal/intents but never main one-shot concurrency or postunlink failure accounting. They cannot qualify those boundaries unchanged.",
+    "Cleanup intentionally breaks future execution of unselected pack metadata references; retain manifests/source/proofs/caches/shareddrafter/vision and state redownload/reconstruction required. Do not use previous qthatnowreferencesdeletedpayload as new qualification without a fresh evidence map."
+  ],
+  "static_ordered_test_ids": [
+    "test_payload_removal.Removal.test_actual_frozen_plan_exact_path_names_and_byte_total",
+    "test_payload_removal.Removal.test_allowlist_is_only_fifteen_named_payloads",
+    "test_payload_removal.Removal.test_changed_size_refused",
+    "test_payload_removal.Removal.test_durable_intent_failure_keeps_payload",
+    "test_payload_removal.Removal.test_exact_file_removed_with_other_files_untouched",
+    "test_payload_removal.Removal.test_foreign_owner_refused",
+    "test_payload_removal.Removal.test_hardlink_refused_without_deleting_either_name",
+    "test_payload_removal.Removal.test_missing_leaf_is_not_silent_success",
+    "test_payload_removal.Removal.test_protected_inode_refused_and_retained",
+    "test_payload_removal.Removal.test_replacement_during_intent_never_unlinked",
+    "test_payload_removal.Removal.test_same_size_replacement_inode_refused",
+    "test_payload_removal.Removal.test_signature_drift_refused_before_intent",
+    "test_payload_removal.Removal.test_symlink_leaf_refused_target_retained",
+    "test_payload_removal.Removal.test_symlink_parent_refused"
+  ],
+  "static_control_count": 14,
+  "admission": false,
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/SELECTED_PRODUCTION_LOCK_DRAFT.json": "bb38fcde485848edd0591ae9673a432e1240e284cd2da249a61f14447220f63e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CLEANUP_PLAN.json": "8904383c06184dd2c55ccebf5b11755f25fc918f1132461005a37d2764487378",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/DEPENDENCY_AUDIT_FIRST.json": "d4c498b8606b7ee67241df0ca956dc9b9201c0dddf15db84c82df58a8d9179a1",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/remove_exact_payloads_admitted.py": "50418e92d3a711b02099a66a825ce3914e02e598c58c595eaafbe1704c46b827",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/test_payload_removal.py": "ad1288ab150fb00ed6bd05dd916fe4dad390cc8e3fbb97ffbacdfe074696a51b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/run_cleanup_cpu.py": "48b719868b82618058f7724dc35abefde3db1159d86f0a5d269f90b1dcb902bc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_PREFILL_FIRST_PAIR_RESULT.json": "be93febd2000858a4e5230d4d0fea724173b46635a5c71827f313150c19af46a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/A1/terminal-audit.json": "1adf95fa4570641a6947a915491ec63aa56ee0d878eec2c4da6f21b942fd93ba",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/A1/ROOT_FULL_RESULT_REVIEW_FIRST.json": "4548ad03ac28f03e92ddc8cf650143fcc50971400bd90e05f62dafa43803f4e1",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/B1/terminal-audit.json": "4cb6fb0d2d23ac0895603cd8b21b37384a64a6cf570d8535283e5992aaa76670",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/B1/ROOT_FULL_RESULT_REVIEW_FIRST.json": "2190d52249f0ffd5a78e355a177ed45405b772180d13f110660ee541eb1a9fda"
+  },
+  "next": "Preserve original source/HOLD, repair concrete lifecycle/accounting issues before FIRST bounded CPU proof both hosts and separate exact15file actionadmission. Keep selectedproductionrunning. Stop."
+}

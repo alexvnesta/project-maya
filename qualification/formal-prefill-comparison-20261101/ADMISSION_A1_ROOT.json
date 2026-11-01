@@ -1,0 +1,60 @@
+{
+  "utc": "2026-11-01T09:41:46.294788+00:00",
+  "reviewer": "ROOT",
+  "arm": "A1",
+  "mode": "task",
+  "single_arm_admitted": true,
+  "automatic_next_arm": false,
+  "deployment_admitted": false,
+  "qualification_sha256": "c7ae7445488b053b4e5b4ab160ca4f5f50b62c7ec9b433af746e8f94e94c1b03",
+  "recovery_qualification_sha256": "7d965e0c89fe6fb0481cf8b20c5ed63414eabbf21970aab662e99124da1b2611",
+  "baseline_binding": {
+    "invocation": "e546cecd15324582865203e0f2318de7",
+    "main_pid": 1108372,
+    "native_pid": 1108433,
+    "native_start_ticks": 179070360
+  },
+  "fresh_readonly_preflight_sha256": "2b5c6c2983cb50e7ec2c24ab6f16168391fda3ef335fd451d5aca19d57ad7655",
+  "source_review_pins": {
+    "FORMAL_PREFIX_REPAIR_SOL_REVIEW.json": "83af311d22abe1da49c6d165316a536454b0c9740fa35648a0a7efee91704f8e",
+    "FORMAL_QUALIFICATION_SOL_REVIEW_R3.json": "a4b5602602b1d5bf4a808ca68c7591f0744e114b866f55a3877b7dd9d3decc51",
+    "FORMAL_QUALIFICATION_ALIAS_DELTA_SOL_REVIEW.json": "24dce9c56c81f376ad2147db09f1985c617e0f2c056a551e9c4023136c2be6e3",
+    "ROOT_CURRENT_SOURCE_REVIEW.json": "d7c6aa858a6626d0290c9f206edf7f8a30d13bb8191f86d413fc668ea946d911"
+  },
+  "scope": "Only exact original8469knownanswer on actualnative92/c43 profile, no dump/newnative/newflags; prospective fullpolicy/resources/ownedfaultrecovery maintained. No replay of prior shortmodeltasks or oldQS0finite diagnostic; this is new nondump formalbaselineprefill phase.",
+  "bounds": {
+    "window": 1200,
+    "soft": 1000,
+    "cleanup": 200,
+    "startup": 800,
+    "root_admission_GiB": 132,
+    "root_runtime_GiB": 120,
+    "private_memory_GiB": 80,
+    "host_margin_GiB": 8,
+    "private_swap": 0,
+    "private_cache_GiB": 8,
+    "log_GiB": 4
+  },
+  "unchanged_policy": {
+    "context_total": 1048576,
+    "output_allowance": 262144,
+    "benchmark_cap": 32768,
+    "effort": 100,
+    "drafter": true,
+    "Q8": [
+      1,
+      1
+    ],
+    "mode1": true,
+    "chunk": 4096
+  },
+  "conditions": "At action revalidate exact q/recovery/currentbinding/idle/default/phasefree/root/window; registryempty/freshcontroller/output namespace. First fault ownedcleanupHOLD; no retry. Independently audit native/API/window/controller0,source/counters/correctness/resources/public selected92 restoration before B1 consideration.",
+  "first_failures_preserved": [
+    "CPU-TASK-FIRST-darwin",
+    "task-qualification-PREFIX-HOLD.json",
+    "FORMAL_QUALIFICATION_SOL_REVIEW_PREFIX_HOLD.json",
+    "task-qualification-READONLY-ALIAS-REFUSED.json",
+    "READONLY_ALIAS_MAP_REFUSAL_AND_REPAIR.json"
+  ],
+  "prior_window_clean_contract": "Existing Host.previous heldDeepSeek/test0/kernelclean; not GLM restoration."
+}

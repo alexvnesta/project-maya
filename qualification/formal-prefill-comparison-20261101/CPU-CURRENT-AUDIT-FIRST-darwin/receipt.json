@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "controls": 16,
+  "test_ids": [
+    "test_current_audit.Audit.test_actual_isolated_script_help_has_no_unqualified_local_import",
+    "test_current_audit.Audit.test_cap_partial_UNRUN_retry_and_broader_claim_refused",
+    "test_current_audit.Audit.test_complete_short_scope_only",
+    "test_current_audit.Audit.test_duplicate_and_nonfinite_saved_JSON_refused",
+    "test_current_audit.Audit.test_exact_comparison_preserves_types",
+    "test_current_audit.Audit.test_exact_window_exit0",
+    "test_current_audit.Audit.test_old_entry_or_other_arm_refused",
+    "test_current_audit.Audit.test_private_cleanup_required",
+    "test_current_audit.Audit.test_recorder_hashes_exact_small_bytes",
+    "test_current_audit.Audit.test_recorder_refuses_alias_and_large_evidence",
+    "test_current_audit.Audit.test_ungraded_or_wrong_kind_cannot_close_knownanswer_contract",
+    "test_current_audit.Audit.test_unreviewed_or_wrong_scoring_refused",
+    "test_current_audit.Audit.test_wrong_or_unfinished_window_refused",
+    "test_current_audit.CurrentFenceAudit.test_actual80_resource_contract",
+    "test_current_audit.CurrentFenceAudit.test_missing_failed_or_wrong_actual_install_refused",
+    "test_current_audit.CurrentFenceAudit.test_old76_and_unclean_or_foreign_resource_contract_refused"
+  ],
+  "source_sha256": {
+    "current_audit.py": "7cf5a3f0683c3b41b3d786c2df568491ef6d318ea1ff77fe605fcc2b8562dacf",
+    "test_current_audit.py": "c8c9352961438bc211b85f75b9aad4e536aaa342891623c1bf1a5a8fa7f902ac",
+    "run_audit_cpu.py": "9f0fc201cca22a3babdead9ab7a5c839e4a46ad34237b13edf439cc7bff25f78"
+  },
+  "input_sha256": {
+    "direct_io.py": "d899584484ac0a54c778265860e5b6e1480b7a23cd5f76ffc5e10cb28ff56b5e"
+  },
+  "observed": {
+    "pid": 55317,
+    "ppid": 55313,
+    "pgid": 55317,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "native_executed": false,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false
+}

@@ -1,0 +1,32 @@
+{
+  "utc": "2026-11-01T09:39:51.229786+00:00",
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "EXACT_ALIAS_ONLY_MAIN_MAP_CORRECTION_ACCEPTED_CONDITIONAL_SINGLE_A1_NO_GPU_ADMISSION",
+  "scope": "Local map equality/hash analysis only, no filesystem access to remote aliases/OS libraries, no imports/tests/host actions.",
+  "final_main_sha256": "c7ae7445488b053b4e5b4ab160ca4f5f50b62c7ec9b433af746e8f94e94c1b03",
+  "final_main_files": 4801,
+  "old393393_status": "Actual readonly qualification refused before model/private. Preserved unchanged; not admitted/regraded.",
+  "verified_delta": {
+    "removed_aliases": 89,
+    "added_keys": 0,
+    "remaining_hashes_changed": 0,
+    "every_target_preexisted_same_hash": true,
+    "every_alias_target_matches_old_qualified_P_physical_alias_map": true,
+    "CPU_groups_exactly_unchanged": true,
+    "recovery_q_unchanged": "7d965e0c89fe6fb0481cf8b20c5ed63414eabbf21970aab662e99124da1b2611",
+    "no_source_or_CPU_behavior_delta": true
+  },
+  "limits": "This removes duplicate lexical alias keys from main immutable map while retaining exact canonical target bytepins. It does not establish live samefile/host bytes or replace actual qualified() recheck. Recovery keeps original qualified alias handling/schema unchanged. Source and R3 CPU acceptance remains scoped to exact source/maps, not model success.",
+  "conditional_A1_only": "After actual staged final c7ae qualified()+recoveryqualified and real canonical readonly A1 preflight pass; fresh action-time clock/idle/currentowner92c43/source/q/root/window/default/kernel/soleGPU guards; unchanged80GiBzeroSwap+8margin/1200-1000-200/startup800/full1M262144/request32768/effort100/exact8469typedknownanswer/no newbaselineflags/no dumps/unlimitedFSIZE. Separate singleA1 admission still required. No B1/B2/A2 automatic progression, timing/promotion or oldarmreplay.",
+  "actual_preflight_status": "Not yet rerun per parent notice; not verified here. No GPU/private admission.",
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/task-qualification.json": "c7ae7445488b053b4e5b4ab160ca4f5f50b62c7ec9b433af746e8f94e94c1b03",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/task-qualification-READONLY-ALIAS-REFUSED.json": "3933938a7a891368898baffdc6eb4a291f0eb14bce242949e8ecb5cc23bae32e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/READONLY_ALIAS_MAP_REFUSAL_AND_REPAIR.json": "a153f710cd4094aabdcd6984641ba3cbdf962256750a316308fc31953e9e7aec",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_QUALIFICATION_SOL_REVIEW_R3.json": "a4b5602602b1d5bf4a808ca68c7591f0744e114b866f55a3877b7dd9d3decc51",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FIRST_BOTH_HOST_CPU_AND_QUALIFICATION_SUMMARY.json": "15d793269d569a966a2e15821b1de80607804028a61d39f9fa23af3551867704",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/recovery-v1/RECOVERY_QUALIFICATION.json": "7d965e0c89fe6fb0481cf8b20c5ed63414eabbf21970aab662e99124da1b2611",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/task-qualification.json": "1201e2e12621b2d4f371c1b04df9486b5066786ea4f7512936bfdee800c7f153"
+  },
+  "stop": true
+}

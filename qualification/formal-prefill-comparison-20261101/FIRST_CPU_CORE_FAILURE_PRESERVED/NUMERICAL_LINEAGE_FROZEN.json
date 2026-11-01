@@ -1,0 +1,102 @@
+{
+  "HGU": {
+    "mode": "modelstate",
+    "arm": "FHGU",
+    "qualification_sha256": "76fbf2d6b8c74b515f8ed3e847c45258ad9f8fe4b427112e14406f7e81fcb8da",
+    "files": {
+      "registry": {
+        "relative_to_E": "decode-optimization-20261028/maya145-modelchoice-v1/modelstate-arms.json",
+        "sha256": "7cf268337591d9746d2a923a4123f442bd2dadc0d71edddfdc2909b82a96a6ea"
+      },
+      "audit": {
+        "relative_to_E": "decode-optimization-20261028/maya145-modelchoice-v1/FHGU/terminal-audit.json",
+        "sha256": "0c85b2eaed2a1bb41a982f52b59e68c72bfdf140d329c271968e98c130eec677"
+      },
+      "qualification": {
+        "relative_to_E": "decode-optimization-20261028/maya145-modelchoice-v1/modelstate-qualification.json",
+        "sha256": "76fbf2d6b8c74b515f8ed3e847c45258ad9f8fe4b427112e14406f7e81fcb8da"
+      },
+      "root_review": {
+        "relative_to_E": "decode-optimization-20261028/maya145-modelchoice-v1/FHGU/ROOT_FULL_RESULT_REVIEW_FIRST.json",
+        "sha256": "f408ed116d6bc9cd8505c053592d38b44c20f710b42c2fc3aca843dee9a522de"
+      },
+      "sol_review": {
+        "relative_to_E": "decode-optimization-20261028/maya145-modelchoice-v1/FHGU/SOL_FHGU_RESULT_REVIEW.json",
+        "sha256": "acf7fa606c3a370fe0dab90c67880898e9a62e836fdc2686ded7aa22aba3f5fa"
+      }
+    }
+  },
+  "UNSLOTH": {
+    "mode": "modelstate",
+    "arm": "FUNSLOTH",
+    "qualification_sha256": "76fbf2d6b8c74b515f8ed3e847c45258ad9f8fe4b427112e14406f7e81fcb8da",
+    "files": {
+      "registry": {
+        "relative_to_E": "decode-optimization-20261028/maya145-modelchoice-v1/modelstate-arms.json",
+        "sha256": "7cf268337591d9746d2a923a4123f442bd2dadc0d71edddfdc2909b82a96a6ea"
+      },
+      "audit": {
+        "relative_to_E": "decode-optimization-20261028/maya145-modelchoice-v1/FUNSLOTH/terminal-audit.json",
+        "sha256": "08a7f564889e884cf187fe6d7b1da80d26f1639e834f880956c4035a79502ece"
+      },
+      "qualification": {
+        "relative_to_E": "decode-optimization-20261028/maya145-modelchoice-v1/modelstate-qualification.json",
+        "sha256": "76fbf2d6b8c74b515f8ed3e847c45258ad9f8fe4b427112e14406f7e81fcb8da"
+      },
+      "root_review": {
+        "relative_to_E": "decode-optimization-20261028/maya145-modelchoice-v1/FUNSLOTH/ROOT_FULL_RESULT_REVIEW_FIRST.json",
+        "sha256": "cb4d66802675460e2df466a41b19f5004da4f860c76243ec33342dfba6c3c664"
+      },
+      "sol_review": {
+        "relative_to_E": "decode-optimization-20261028/maya145-modelchoice-v1/FUNSLOTH/SOL_FUNSLOTH_RESULT_REVIEW.json",
+        "sha256": "a2e8eff6f566305460ed080f439fa24a1a905d5b7d1a1255b557e0df5d4a77d5"
+      }
+    }
+  },
+  "MS2": {
+    "mode": "state",
+    "arm": "STP2",
+    "qualification_sha256": "ac7e30c42c0de1050b5e7e22a4b6bc2b6b08076cf32703d69563ccd3baf6f55c",
+    "files": {
+      "registry": {
+        "relative_to_E": "decode-optimization-20261028/maya145-state-v1/state-arms.json",
+        "sha256": "c676b5c99a1dcbab808d5c4de13cd3f62fd015ee5e347e8b469f8e19bb2aa002"
+      },
+      "audit": {
+        "relative_to_E": "decode-optimization-20261028/maya145-state-v1/STP2/terminal-audit.json",
+        "sha256": "d8e71f49e551cd65a3e3ae08e2d31aa3de83cfb10752709f48648c93b28e7b8f"
+      },
+      "qualification": {
+        "relative_to_E": "decode-optimization-20261028/maya145-state-v1/state-qualification.json",
+        "sha256": "ac7e30c42c0de1050b5e7e22a4b6bc2b6b08076cf32703d69563ccd3baf6f55c"
+      },
+      "root_review": {
+        "relative_to_E": "decode-optimization-20261028/maya145-state-v1/ROOT_STP2_RESULT_REVIEW.json",
+        "sha256": "98bb41dcd4a7dc58655f32be9ebbd6837077a295e9f0e2b1299c76ea90fb75b0"
+      }
+    }
+  },
+  "MS1": {
+    "mode": "state",
+    "arm": "STP1",
+    "qualification_sha256": "fd4eee6133a0c1d3f27fa81f35f9f8ab2c028010e6a2c7714d2ee4260f9c504f",
+    "files": {
+      "registry": {
+        "relative_to_E": "decode-optimization-20261028/maya145-tp1-state-v1/state-arms.json",
+        "sha256": "cf42d4292ae71967a21f259c73f16b85c250abf26bf00df1d436c7b4ea3f9806"
+      },
+      "audit": {
+        "relative_to_E": "decode-optimization-20261028/maya145-tp1-state-v1/STP1/terminal-audit.json",
+        "sha256": "d9031d9669d5edd94cfbd0300d5f8b7c1e01105ea20dc34352897f21375e9664"
+      },
+      "qualification": {
+        "relative_to_E": "decode-optimization-20261028/maya145-tp1-state-v1/state-qualification.json",
+        "sha256": "fd4eee6133a0c1d3f27fa81f35f9f8ab2c028010e6a2c7714d2ee4260f9c504f"
+      },
+      "root_review": {
+        "relative_to_E": "decode-optimization-20261028/maya145-tp1-state-v1/ROOT_STP1_RESULT_REVIEW.json",
+        "sha256": "6777b1f4d87b4e82df36bd33540953b308f2ab94c279d6113b15752accdec547"
+      }
+    }
+  }
+}

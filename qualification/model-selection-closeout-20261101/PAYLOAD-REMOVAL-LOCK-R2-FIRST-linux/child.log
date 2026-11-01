@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/remove_exact_payloads_admitted.py", line 222, in <module>
+    parser=argparse.ArgumentParser();parser.add_argument('--admission-sha256',required=True);parser.add_argument('--parent',type=int,required=True);args=parser.parse_args();main(args.admission_sha256,args.parent)
+                                                                                                                                                                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/remove_exact_payloads_admitted.py", line 211, in main
+    try:execute(r,host,binding,claim,plan,observed,guard)
+        ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/remove_exact_payloads_admitted.py", line 135, in execute
+    identity=host.target_identity();require(identity['start_binding']==binding,'Selected actual config/exe/cgroup/flags/soleGPUowner')
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/activate_chunk4096.py", line 370, in target_identity
+    emit(self.audit_dir / 'target-placement.json', placement)
+         ^^^^^^^^^^^^^^
+AttributeError: 'ChunkProductionHost' object has no attribute 'audit_dir'

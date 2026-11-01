@@ -1,0 +1,56 @@
+{
+  "utc": "2026-11-01T10:53:03.832845+00:00",
+  "status": "COMPLETE_PRODUCTION_LOCKED_UNSELECTED_PAYLOADS_REMOVED",
+  "selected_native": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "selected_config": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "selected_binding_snapshot": {
+    "invocation": "6bd4a6d9c93243ce999dca37f7ce7f79",
+    "main_pid": 1166336,
+    "native_pid": 1166373,
+    "native_start_ticks": 179586297
+  },
+  "context_total": 1048576,
+  "output_allowance": 262144,
+  "new_candidate_activated": false,
+  "prefill_comparison": "A1/B1closedfail+15.597355%;B2/A2UNRUNblocked,no furtheradmission",
+  "cleanup_actual_child": 1197850,
+  "cleanup_actual_exit": 0,
+  "removed_files": 15,
+  "removed_bytes": 664358869199,
+  "unknown_deletions": [],
+  "source_maps_and_raw_failed_partial_evidence_retained": true,
+  "all_cache_namespaces_retained": true,
+  "selected_shared_assets_retained": true,
+  "no_pending_private_build_restore_download": true,
+  "limitations": [
+    "PrivateexactS2unavailable; publicHGUonly tested.",
+    "Q2_K_XLnotdownloaded/tested.",
+    "No globalquantqualityoruniversalbestclaim.",
+    "No nearfilled1M/full262144generation runtimebound.",
+    "Formalprose/coding againstactual92notadmitted afterprefillscreenfail."
+  ],
+  "closeout_artifacts": {
+    "SELECTED_PRODUCTION_LOCK.json": "915d510a5cb0794308cac4b86ac3e54537404b889fc64d4dd033d2fb23466f13",
+    "FINAL_PRODUCTION_VERIFICATION_FIRST.json": "7eae6b7a0eb6477e8375c0e60d8b3981a378ee1f38956a5fb22028f7a75349e6",
+    "PAYLOAD_REMOVAL_TARGET_R3_RESULT_FIRST.json": "e83e51c2ee3abef8451ddb2cf870d34f6c87ecdb2c4d00946490f863cda8485e",
+    "CLEANUP_ADMISSION_ROOT_TARGET_R3.json": "f6a203e2cbcf6c007c98c7a523410143728d9cd1c7e5bbfb8be53a4ee7841241"
+  },
+  "historical_cleanup_refusals": [
+    {
+      "child": 1185466,
+      "actual_exit": 1,
+      "removed": 0,
+      "scope": "exclusiveflock assumption before anyclaim/unlink",
+      "raw": "PAYLOAD-REMOVAL-FIRST-linux"
+    },
+    {
+      "child": 1191813,
+      "actual_exit": 1,
+      "confirmed_removed": 0,
+      "unknown": [],
+      "scope": "observeraudit_dir wrapperfault beforeunlink;ownedclaimreleased",
+      "raw": "PAYLOAD-REMOVAL-LOCK-R2-FIRST-linux"
+    }
+  ],
+  "final_operation_source_CPU_controls_each_physical_host": 30
+}

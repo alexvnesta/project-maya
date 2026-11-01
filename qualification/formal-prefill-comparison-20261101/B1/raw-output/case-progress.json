@@ -1,0 +1,46 @@
+{
+  "complete": true,
+  "scores": [
+    {
+      "id": "ms-quality-cold-text",
+      "passed": true,
+      "status": "NATURAL_KNOWN_ANSWER_COLD_PREFILL_PASSED"
+    }
+  ],
+  "rows": [
+    {
+      "id": "ms-quality-cold-text",
+      "passed": true,
+      "native": {
+        "generated": 179,
+        "prompt_tokens": 8469,
+        "prompt_ms": 10244.7,
+        "decode_ms": 3456.6,
+        "finish": "stop",
+        "drafts_accepted": 129,
+        "drafts_offered": 143,
+        "reused": 0,
+        "hits": 42011,
+        "lookups": 48435
+      },
+      "observed_tokens": 179,
+      "native_decode_tokens_per_second": 51.7849910316496,
+      "client_seconds": 13.734927962068468,
+      "content_characters": 195,
+      "reasoning_characters": 188,
+      "manual_review_pending": false,
+      "general_quality_or_equivalence_claim": false,
+      "emitted_token_contract": {
+        "count": 179,
+        "valid_vocabulary_ids": true,
+        "ordered_ids_sha256": "fa13bbb287aa726f8555a3b7fd7293687c4c7047bc25a9e0a9071191a7f3d9ca"
+      }
+    }
+  ],
+  "retry": false,
+  "automatic_next_arm": false,
+  "quality_or_performance_pass": false,
+  "manual_review_required": true,
+  "bounded_known_cold_observation": true,
+  "long_input_bound_claim": false
+}

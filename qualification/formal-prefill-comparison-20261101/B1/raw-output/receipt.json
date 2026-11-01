@@ -1,0 +1,102 @@
+{
+  "mode": "task",
+  "arm": "B1",
+  "arm_results": {
+    "complete": true,
+    "scores": [
+      {
+        "id": "ms-quality-cold-text",
+        "passed": true,
+        "status": "NATURAL_KNOWN_ANSWER_COLD_PREFILL_PASSED"
+      }
+    ],
+    "rows": [
+      {
+        "id": "ms-quality-cold-text",
+        "passed": true,
+        "native": {
+          "generated": 179,
+          "prompt_tokens": 8469,
+          "prompt_ms": 10244.7,
+          "decode_ms": 3456.6,
+          "finish": "stop",
+          "drafts_accepted": 129,
+          "drafts_offered": 143,
+          "reused": 0,
+          "hits": 42011,
+          "lookups": 48435
+        },
+        "observed_tokens": 179,
+        "native_decode_tokens_per_second": 51.7849910316496,
+        "client_seconds": 13.734927962068468,
+        "content_characters": 195,
+        "reasoning_characters": 188,
+        "manual_review_pending": false,
+        "general_quality_or_equivalence_claim": false,
+        "emitted_token_contract": {
+          "count": 179,
+          "valid_vocabulary_ids": true,
+          "ordered_ids_sha256": "fa13bbb287aa726f8555a3b7fd7293687c4c7047bc25a9e0a9071191a7f3d9ca"
+        }
+      }
+    ],
+    "retry": false,
+    "automatic_next_arm": false,
+    "quality_or_performance_pass": false,
+    "manual_review_required": true,
+    "bounded_known_cold_observation": true,
+    "long_input_bound_claim": false,
+    "native_request_count": 1,
+    "drafter_execution": [
+      {
+        "configured_and_loaded_separate": true,
+        "execution_proven": true,
+        "draft_rounds": 47,
+        "draft_ms": 240.483,
+        "verify_ms": 2964.322,
+        "acceptance_can_be_zero": true,
+        "samples": 23,
+        "raw_lines_sha256": "ca7dccf09d3971c01b6f4c3095866c5a52eff51752da8f6f71de1e7114b18218"
+      }
+    ],
+    "mode1_activation": {
+      "mode": 1,
+      "source": 20,
+      "last_layer": 39,
+      "source_device": 0,
+      "retained_rows": 2668,
+      "activation_early_rows": [
+        5801
+      ],
+      "complete_evidence": true,
+      "scope": "ACTIVATION_SOURCE_ONLY_NO_PHASE_LIFECYCLE_QUALITY_SPEED_OR_REGRADE"
+    },
+    "DSI1_leftovers": []
+  },
+  "seconds_including_load": 480.9303943889681,
+  "private_cleanup_passed": true,
+  "resource_fence_terminal": {
+    "passed": true,
+    "events_after": {
+      "low": 0,
+      "high": 0,
+      "max": 2253,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 2253,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "cache_charging_disclosure": "memory.current/peak include charged file cache and pinned memory; not process RSS"
+  },
+  "manual_review_pending": true,
+  "not_a_promotion": true
+}

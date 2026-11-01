@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-01T10:38:05.311295+00:00",
+  "actual_child": 1185466,
+  "rc": 1,
+  "error": "BlockingIOError flockEXNB R/experiment.lock",
+  "before_exclusive_attempt_canonical_claim_or_unlink": true,
+  "all15files_remain": true,
+  "selected_native1166373_API1166336_unchanged": true,
+  "actual_lock_owner": "Selected API main1166336 FD3 inherited canonicalexclusiveFLOCK WRITE, dev64513/inode1449998, complete0EOF",
+  "native_API_service_or_GPU_fault": false,
+  "raw_evidence": "PAYLOAD-REMOVAL-FIRST-linux",
+  "next": "Separate source-reviewed/CPU-qualified cleanup with exactselectedAPI-heldcanonical-lock witness, durableexclusiveattempt andcanonicalownedCPUclaim; neverrelease selectedlock or restartservicetocleanup."
+}

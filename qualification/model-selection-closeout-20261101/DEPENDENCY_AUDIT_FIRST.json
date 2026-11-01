@@ -1,0 +1,388 @@
+{
+  "utc": "2026-11-01T10:18:23.190035+00:00",
+  "read_only": true,
+  "selected_binding": {
+    "invocation": "6bd4a6d9c93243ce999dca37f7ce7f79",
+    "main_pid": 1166336,
+    "native_pid": 1166373,
+    "native_start_ticks": 179586297
+  },
+  "selected_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "selected_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "selected_pack": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1",
+  "protected_dependencies": {
+    "/home/alex/strata-deepseek-test-20261024/models/ista-iq2-xs/DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf": {
+      "reason": "selected runtime tensors file0",
+      "dev": 64513,
+      "ino": 1995030,
+      "size": 39535776992
+    },
+    "/home/alex/strata-deepseek-test-20261024/models/ista-iq2-xs/DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf": {
+      "reason": "selected runtime tensors file1",
+      "dev": 64513,
+      "ino": 1995031,
+      "size": 39494617536
+    },
+    "/home/alex/strata-deepseek-test-20261024/models/ista-iq2-xs/DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf": {
+      "reason": "selected runtime tensors file2",
+      "dev": 64513,
+      "ino": 1995036,
+      "size": 39423838496
+    },
+    "/home/alex/strata-deepseek-test-20261024/models/ista-iq2-xs/DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf": {
+      "reason": "selected runtime tensors file3",
+      "dev": 64513,
+      "ino": 1995035,
+      "size": 36771591232
+    },
+    "/home/alex/strata-deepseek-test-20261024/models/shared/DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf": {
+      "reason": "selected runtime tensors file4",
+      "dev": 64513,
+      "ino": 1995025,
+      "size": 110595290816
+    },
+    "/home/alex/strata-deepseek-test-20261024/models/shared/dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf": {
+      "reason": "selected runtime tensors file5",
+      "dev": 64513,
+      "ino": 1995039,
+      "size": 7976914240
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017/vision.bin": {
+      "reason": "retained shared vision",
+      "dev": 64513,
+      "ino": 12734082,
+      "size": 970536960
+    },
+    "/home/alex/deepseek-hosted-20261025/bin/maya-ds4": {
+      "reason": "selected executable",
+      "dev": 64513,
+      "ino": 1450567,
+      "size": 41318112
+    },
+    "/home/alex/deepseek-hosted-20261025/config.json": {
+      "reason": "selected config",
+      "dev": 64513,
+      "ino": 1442037,
+      "size": 2160
+    },
+    "/home/alex/deepseek-hosted-20261025/profile-seed.bin": {
+      "reason": "selected expert seed",
+      "dev": 64513,
+      "ino": 1450402,
+      "size": 66048
+    },
+    "/home/alex/deepseek-hosted-20261025/runtime-direction-L22.gguf": {
+      "reason": "selected projection",
+      "dev": 64513,
+      "ino": 1450401,
+      "size": 20864
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/dspark/dspark.bin": {
+      "reason": "retained published shared drafter",
+      "dev": 64513,
+      "ino": 2893297,
+      "size": 7967616768
+    }
+  },
+  "eligible_rows": [
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00001-of-00006.gguf",
+      "group": "Maya-S model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893170,
+        "size": 47887697312,
+        "mtime_ns": 1793370815049724695,
+        "ctime_ns": 1793370815251729359,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 47887757312
+      },
+      "previously_verified_sha256": "1f3437f57042e69f94c141ffbcba0d5610dab63feb07244fb468be4940d6763f",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json",
+      "manifest_sha256": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00002-of-00006.gguf",
+      "group": "Maya-S model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893209,
+        "size": 47669578400,
+        "mtime_ns": 1793371826769079863,
+        "ctime_ns": 1793371826845081618,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 47669620736
+      },
+      "previously_verified_sha256": "66501fee8702ffd54e6f065323ab54bb3150d20b10b01922c589e7462c7b5ba6",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json",
+      "manifest_sha256": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00003-of-00006.gguf",
+      "group": "Maya-S model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893239,
+        "size": 47103347360,
+        "mtime_ns": 1793372844491573608,
+        "ctime_ns": 1793372844601576148,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 47103397888
+      },
+      "previously_verified_sha256": "3195b23f33337c46a07c48583946d99147c3635412bc4adc6acdc4cf42bf30ad",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json",
+      "manifest_sha256": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00004-of-00006.gguf",
+      "group": "Maya-S model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893241,
+        "size": 35532532032,
+        "mtime_ns": 1793373596864941870,
+        "ctime_ns": 1793373596969944294,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 35532541952
+      },
+      "previously_verified_sha256": "d60dba35fac9601cd5c6026439dd980c457a5bb1c009192ea539b220108ea0db",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json",
+      "manifest_sha256": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00005-of-00006.gguf",
+      "group": "Maya-S model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893243,
+        "size": 80641295472,
+        "mtime_ns": 1793375335290966071,
+        "ctime_ns": 1793375335386968281,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 80641310720
+      },
+      "previously_verified_sha256": "c98d46f96a25d17c4c54da5a60782c130255c364a22e621ea28d5c98a692ceb2",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json",
+      "manifest_sha256": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00006-of-00006.gguf",
+      "group": "Maya-S model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893247,
+        "size": 80643503412,
+        "mtime_ns": 1793377384776131009,
+        "ctime_ns": 1793377384871133195,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 80643522560
+      },
+      "previously_verified_sha256": "98d65ef4f36e0b193935d44c3586241ca09b1b47e90f118e85332cfdb5860263",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/ASSET_MANIFEST.json",
+      "manifest_sha256": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00001-of-00006.gguf",
+      "group": "Unsloth model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893293,
+        "size": 5780923,
+        "mtime_ns": 1793375558615106422,
+        "ctime_ns": 1793375558636106905,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 5783552
+      },
+      "previously_verified_sha256": "22ad51c224e499883c1a753ad35719af44c296bbc8bcb9c931de6bdf950fa3aa",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/ASSET_MANIFEST64.json",
+      "manifest_sha256": "e250263e3db3161a3425f0a44c58d077253a11a324eae04b37e84d313c997800",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00002-of-00006.gguf",
+      "group": "Unsloth model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893291,
+        "size": 49955895008,
+        "mtime_ns": 1793378740558340290,
+        "ctime_ns": 1793378740594341119,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 49955913728
+      },
+      "previously_verified_sha256": "6880d0483490504a530b72686d79c92daa46e58ca5b71763bbfa3778d8a6131a",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/ASSET_MANIFEST64.json",
+      "manifest_sha256": "e250263e3db3161a3425f0a44c58d077253a11a324eae04b37e84d313c997800",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00003-of-00006.gguf",
+      "group": "Unsloth model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893294,
+        "size": 49950675200,
+        "mtime_ns": 1793381889603137113,
+        "ctime_ns": 1793381889637137900,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 49950695424
+      },
+      "previously_verified_sha256": "04b3ec7947255efaf789da77557da9180e93128948644828798d07b8a6e7a60a",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/ASSET_MANIFEST64.json",
+      "manifest_sha256": "e250263e3db3161a3425f0a44c58d077253a11a324eae04b37e84d313c997800",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00004-of-00006.gguf",
+      "group": "Unsloth model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893328,
+        "size": 48971469632,
+        "mtime_ns": 1793384970689326662,
+        "ctime_ns": 1793384970787328936,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 48971481088
+      },
+      "previously_verified_sha256": "318762f39cd7ebf03e3d7b30feaf938fab0464a9c2d6c0e0e99fc030bbfcd820",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/ASSET_MANIFEST64.json",
+      "manifest_sha256": "e250263e3db3161a3425f0a44c58d077253a11a324eae04b37e84d313c997800",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00005-of-00006.gguf",
+      "group": "Unsloth model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893342,
+        "size": 16419622240,
+        "mtime_ns": 1793386006158288521,
+        "ctime_ns": 1793386006217289885,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 16419627008
+      },
+      "previously_verified_sha256": "34fa48fbe2237b1b71a4f18a04bbe10946f6b1c76b7bbff21c76da630da677b6",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/ASSET_MANIFEST64.json",
+      "manifest_sha256": "e250263e3db3161a3425f0a44c58d077253a11a324eae04b37e84d313c997800",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00006-of-00006.gguf",
+      "group": "Unsloth model shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2893343,
+        "size": 135172021792,
+        "mtime_ns": 1793489445185678679,
+        "ctime_ns": 1793489445641689123,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 135172067328
+      },
+      "previously_verified_sha256": "406103485a7a7193337adee38b7178d3b636940aaa3ca033bc91e0d3687e3031",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/ASSET_MANIFEST64.json",
+      "manifest_sha256": "e250263e3db3161a3425f0a44c58d077253a11a324eae04b37e84d313c997800",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/assets/model-00028-of-00048.safetensors",
+      "group": "Public hybrid source shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2911057,
+        "size": 7389761368,
+        "mtime_ns": 1793486431963665138,
+        "ctime_ns": 1793486431988665710,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 7389765632
+      },
+      "previously_verified_sha256": "3c0e5ad6a4e8e811c1a55fd8f5b59c9fa329b241c671997c28fc7a01944d5a77",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/NATIVE_GU_SOURCE_MANIFEST.json",
+      "manifest_sha256": "8fea071855665f114972f3b9581736af745fa4653e35043af275a71be88bff9a",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/assets/model-00029-of-00048.safetensors",
+      "group": "Public hybrid source shards",
+      "signature": {
+        "dev": 64513,
+        "ino": 2911056,
+        "size": 7389761368,
+        "mtime_ns": 1793486707800982804,
+        "ctime_ns": 1793486707822983308,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 7389765632
+      },
+      "previously_verified_sha256": "392a950bcb062b89f683abc52d49a17e92c66f80cd1cb6fb92b71091da75319b",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/NATIVE_GU_SOURCE_MANIFEST.json",
+      "manifest_sha256": "8fea071855665f114972f3b9581736af745fa4653e35043af275a71be88bff9a",
+      "matches_actual_model_or_constructor_signature": true
+    },
+    {
+      "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/native-gu.bin",
+      "group": "Public hybrid overlay",
+      "signature": {
+        "dev": 64513,
+        "ino": 2911121,
+        "size": 9625927680,
+        "mtime_ns": 1793488126417474219,
+        "ctime_ns": 1793488269913760796,
+        "nlink": 1,
+        "uid": 1000,
+        "mode": 436,
+        "allocated_bytes": 9625931776
+      },
+      "previously_verified_sha256": "e386661b7ca9faf94188d8a9cb899e39faf9b54c8b85ad81639e18c993a17b1a",
+      "manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/state.json",
+      "manifest_sha256": "20a2a75bb1d0afce076385f74b7817dcfcbbb8969a508b3a11a2aed09d8d2733",
+      "matches_actual_model_or_constructor_signature": true
+    }
+  ],
+  "eligible_count": 15,
+  "eligible_bytes": 664358869199,
+  "eligible_allocated_bytes": 664359182336,
+  "open_file_or_mmap_scan": {
+    "tool": "sudo lsof exact15paths",
+    "returncode": 1,
+    "stdout_empty": true,
+    "stderr_empty": true
+  },
+  "active_candidate_process_references": [],
+  "root_free_bytes": 217710796800,
+  "no_payload_hash_rescan": true,
+  "all_cache_namespaces_source_raw_failed_partial_records_preserved": true,
+  "deletion_admitted": false
+}

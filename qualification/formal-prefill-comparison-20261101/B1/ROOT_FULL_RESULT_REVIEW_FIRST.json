@@ -1,0 +1,142 @@
+{
+  "utc": "2026-11-01T10:14:19.241759+00:00",
+  "reviewer": "ROOT",
+  "arm": "B1",
+  "fully_reviewed": true,
+  "owned_execution_closed": true,
+  "task_passed": true,
+  "terminal_audit_sha256": "4cb6fb0d2d23ac0895603cd8b21b37384a64a6cf570d8535283e5992aaa76670",
+  "qualified_independent_audit_child_rc": 0,
+  "entire_final_and_reasoning_read": true,
+  "final": "Typed JSON values1..64 exactly once ascending, no extra keys;195chars",
+  "reasoning": "Entire188chars read; correct concise JSON construction. No cap/partial/retry. No broad reasoning-quality claim.",
+  "counts_and_latency": {
+    "generated": 179,
+    "prompt_tokens": 8469,
+    "prompt_ms": 10244.7,
+    "decode_ms": 3456.6,
+    "finish": "stop",
+    "drafts_accepted": 129,
+    "drafts_offered": 143,
+    "reused": 0,
+    "hits": 42011,
+    "lookups": 48435
+  },
+  "client_full_seconds": 13.734927962068468,
+  "native_draft_execution": [
+    {
+      "configured_and_loaded_separate": true,
+      "execution_proven": true,
+      "draft_rounds": 47,
+      "draft_ms": 240.483,
+      "verify_ms": 2964.322,
+      "acceptance_can_be_zero": true,
+      "samples": 23,
+      "raw_lines_sha256": "ca7dccf09d3971c01b6f4c3095866c5a52eff51752da8f6f71de1e7114b18218"
+    }
+  ],
+  "actual_native_pid": 1161115,
+  "actual_API_pid": 1161089,
+  "actual_controller_pid": 1160404,
+  "native_API_window_controller_returncode": 0,
+  "old_selected_native1152678_close0_verified": true,
+  "resources": {
+    "root_min_GiB": 202.75923538208008,
+    "system_swapout_delta_bytes": 0,
+    "swap_not_attributed_to_model": true
+  },
+  "fence": {
+    "passed": true,
+    "memory_max": 85899345920,
+    "swap_max": 0,
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 2253,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "prior_properties_restored": true,
+    "transient_collected": true
+  },
+  "selected_identity": {
+    "native_pid": 1166373,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "6bd4a6d9c93243ce999dca37f7ce7f79",
+      "main_pid": 1166336,
+      "native_pid": 1166373,
+      "native_start_ticks": 179586297
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "raw_public_assembled_READY_stop_DONE_read": true,
+  "public401_authmodels200": true,
+  "same_context1048576_output262144_quality_drafter_policy": true,
+  "quality_equivalence_or_speedup_claim": false,
+  "sustained_decode_claim": false,
+  "automatic_next_or_activation": false,
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/B1/terminal-audit.json": "4cb6fb0d2d23ac0895603cd8b21b37384a64a6cf570d8535283e5992aaa76670",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/controller-B1-exit.json": "eadebf61f50d77d97d3d422f43b355e04ca41d2b41f412ee26707bab8041b248",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-B1-20261101T095723Z/native/skip-controls/ms-quality-cold-text/response.json": "575c4fdb670f3f618d09cd93a273a463becf90b3c96d14b009d0c45e7d90e353",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-B1-20261101T095723Z/native/native-000/raw-done.txt": "fce76ecac81cc159791dc14740b2ec20927e41393a537498fc8f1657dccc198a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-B1-20261101T095723Z/native/native-close.jsonl": "36d7ecb14931e187488aec025b6a57c807396016bf72cc02c85afccb43426e04",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-B1-20261101T095723Z/native/server-cleanup.json": "72ebd124c811ee1fcf09d68d892e24adb0ac5b9f27403faa711379f3b5f85987",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-formal-prefill-B1-20261101T095723Z/old-owner-close.json": "4880832613bd410ad15e72da313fbe3bd1f6f65e7e56c88ca718c2b9efb45432",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-formal-prefill-B1-20261101T095723Z/public-default-output-sse.txt": "93ada5a14ec276eb2a11e12df71c14c1d3ccc56336bc2ec2a7a8c08252d220a5"
+  }
+}

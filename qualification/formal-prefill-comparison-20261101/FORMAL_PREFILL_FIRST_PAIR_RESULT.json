@@ -1,0 +1,54 @@
+{
+  "utc": "2026-11-01T10:14:19.241759+00:00",
+  "status": "FIRST_PAIR_CLOSED_FAIL_NO_REPLICATION_OR_PROMOTION",
+  "frozen_plan_sha256": "bece74b44b1a85d772a6ad8eba957796a3058ff7af4c0340dbed846209a90883",
+  "qualification_sha256": "c7ae7445488b053b4e5b4ab160ca4f5f50b62c7ec9b433af746e8f94e94c1b03",
+  "A_profile": "Actual selected92/c43 GSQ-RCO IQ2_XS TP1auto19-21",
+  "B_profile": "adff original MayaS TP2/direct1",
+  "common_input_tokens": 8469,
+  "reuse_A_B": [
+    0,
+    0
+  ],
+  "A_prompt_ms": 8862.4,
+  "B_prompt_ms": 10244.7,
+  "B_prefill_regression_percent": 15.597355118252398,
+  "max_allowed_regression_percent": 3,
+  "prefill_screen_passed": false,
+  "correctness_A_B": [
+    true,
+    true
+  ],
+  "native_API_window_controller_exit0_A_B": [
+    true,
+    true
+  ],
+  "observed_output_tokens_A_B": [
+    366,
+    179
+  ],
+  "client_seconds_A_B": [
+    16.221965984907,
+    13.734927962068468
+  ],
+  "short_answer_decode_tps_A_B": [
+    50.013664935774806,
+    51.7849910316496
+  ],
+  "short_decode_not_sustained_prose_or_coding_claim": true,
+  "different_reasoning_lengths_block_equal_work_task_speed_claim": true,
+  "whole_profile_not_TP_causal_claim": true,
+  "B2": "UNRUN_BLOCKED_FIRST_PAIR_FAIL",
+  "A2": "UNRUN_BLOCKED_FIRST_PAIR_FAIL",
+  "later_formal_decode_comparison": "NOT_ADMITTED_FIRST_PREFILL_SCREEN_FAIL",
+  "deployment_admitted": false,
+  "best_qualified_profile_remains": "selected92/c43 chunk4096",
+  "no_fifth_arm_replay_regrade": true,
+  "nearfilled_1M_or_full262144_generation_unproven": true,
+  "evidence": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/A1/terminal-audit.json": "1adf95fa4570641a6947a915491ec63aa56ee0d878eec2c4da6f21b942fd93ba",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/A1/ROOT_FULL_RESULT_REVIEW_FIRST.json": "4548ad03ac28f03e92ddc8cf650143fcc50971400bd90e05f62dafa43803f4e1",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/B1/terminal-audit.json": "4cb6fb0d2d23ac0895603cd8b21b37384a64a6cf570d8535283e5992aaa76670",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/B1/ROOT_FULL_RESULT_REVIEW_FIRST.json": "2190d52249f0ffd5a78e355a177ed45405b772180d13f110660ee541eb1a9fda"
+  }
+}

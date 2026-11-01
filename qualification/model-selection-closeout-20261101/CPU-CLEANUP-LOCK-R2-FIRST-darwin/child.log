@@ -1,0 +1,32 @@
+test_actual_frozen_plan_exact_path_names_and_byte_total (test_payload_removal.Removal.test_actual_frozen_plan_exact_path_names_and_byte_total) ... ok
+test_allowlist_is_only_fifteen_named_payloads (test_payload_removal.Removal.test_allowlist_is_only_fifteen_named_payloads) ... ok
+test_changed_size_refused (test_payload_removal.Removal.test_changed_size_refused) ... ok
+test_closing_unlocked_fd_never_releases_existing_holder_flock (test_payload_removal.Removal.test_closing_unlocked_fd_never_releases_existing_holder_flock) ... ok
+test_duplicate_or_blocked_waiter_lock_refused (test_payload_removal.Removal.test_duplicate_or_blocked_waiter_lock_refused) ... ok
+test_durable_intent_failure_keeps_payload (test_payload_removal.Removal.test_durable_intent_failure_keeps_payload) ... ok
+test_exact_claim_rejects_foreign_owner_binding_or_other_phase (test_payload_removal.Removal.test_exact_claim_rejects_foreign_owner_binding_or_other_phase) ... ok
+test_exact_fdinfo_lock_witness_required (test_payload_removal.Removal.test_exact_fdinfo_lock_witness_required) ... ok
+test_exact_file_removed_with_other_files_untouched (test_payload_removal.Removal.test_exact_file_removed_with_other_files_untouched) ... ok
+test_exact_saved_selected_host_lock_record_accepted (test_payload_removal.Removal.test_exact_saved_selected_host_lock_record_accepted) ... ok
+test_exclusive_attempt_refuses_second_owner_without_overwrite (test_payload_removal.Removal.test_exclusive_attempt_refuses_second_owner_without_overwrite) ... ok
+test_exclusive_attempt_refuses_symlink_and_preserves_target (test_payload_removal.Removal.test_exclusive_attempt_refuses_symlink_and_preserves_target) ... ok
+test_foreign_or_untyped_lock_owner_refused (test_payload_removal.Removal.test_foreign_or_untyped_lock_owner_refused) ... ok
+test_foreign_owner_refused (test_payload_removal.Removal.test_foreign_owner_refused) ... ok
+test_hardlink_refused_without_deleting_either_name (test_payload_removal.Removal.test_hardlink_refused_without_deleting_either_name) ... ok
+test_missing_leaf_is_not_silent_success (test_payload_removal.Removal.test_missing_leaf_is_not_silent_success) ... ok
+test_missing_or_different_device_inode_lock_refused (test_payload_removal.Removal.test_missing_or_different_device_inode_lock_refused) ... ok
+test_postunlink_directory_fsync_fault_still_counts_actual_unlink (test_payload_removal.Removal.test_postunlink_directory_fsync_fault_still_counts_actual_unlink) ... ok
+test_postunlink_log_failure_still_counts_actual_unlink (test_payload_removal.Removal.test_postunlink_log_failure_still_counts_actual_unlink) ... ok
+test_postunlink_replacement_is_preserved_and_original_unlink_counted (test_payload_removal.Removal.test_postunlink_replacement_is_preserved_and_original_unlink_counted) ... ok
+test_protected_inode_refused_and_retained (test_payload_removal.Removal.test_protected_inode_refused_and_retained) ... ok
+test_replacement_during_intent_never_unlinked (test_payload_removal.Removal.test_replacement_during_intent_never_unlinked) ... ok
+test_same_size_replacement_inode_refused (test_payload_removal.Removal.test_same_size_replacement_inode_refused) ... ok
+test_shared_POSIX_OFD_or_partial_lock_refused (test_payload_removal.Removal.test_shared_POSIX_OFD_or_partial_lock_refused) ... ok
+test_signature_drift_refused_before_intent (test_payload_removal.Removal.test_signature_drift_refused_before_intent) ... ok
+test_symlink_leaf_refused_target_retained (test_payload_removal.Removal.test_symlink_leaf_refused_target_retained) ... ok
+test_symlink_parent_refused (test_payload_removal.Removal.test_symlink_parent_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.010s
+
+OK

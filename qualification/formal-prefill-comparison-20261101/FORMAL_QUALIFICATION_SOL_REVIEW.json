@@ -1,0 +1,315 @@
+{
+  "utc": "2026-11-01T09:34:04.240002+00:00",
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "CONDITIONAL_SOURCE_CPU_MAP_ACCEPTANCE_SINGLE_A1_ONLY_PENDING_ACTUAL_QUALIFICATION_AND_PREFLIGHT_NO_GPU_ADMISSION",
+  "findings": [],
+  "scope": "Local raw receipt/log/map and frozen criteria reconciliation; no project imports/tests/Ubuntu hashes/remote/native/host actions. No repeats of healthy controls.",
+  "qualification": {
+    "main_sha256": "27070f6c7d15953c65eeb8881b6c042113f3ec241ca0a518abb1a42143f4a9b3",
+    "main_file_pins": 4871,
+    "recovery_sha256": "7d965e0c89fe6fb0481cf8b20c5ed63414eabbf21970aab662e99124da1b2611",
+    "recovery_file_pins": 2371,
+    "main_keys_absolute_no_dotdot": true,
+    "all_inherited4871_payload_OS_artifacts_rehashed_locally": false,
+    "limitation": "Retained oldP provenance/OS/native/payload closure is inherited exact pin authority, not a fresh local OS or weight audit. Actual staged-host full qualified() still mandatory."
+  },
+  "CPU_groups": [
+    {
+      "controls": 159,
+      "source_count": 29,
+      "input_count": 175,
+      "hosts": {
+        "darwin": {
+          "child_pid": 57927,
+          "returncode": 0,
+          "cleanup": [],
+          "bounds": {
+            "pid": 57927,
+            "ppid": 57926,
+            "pgid": 57927,
+            "cpu": [
+              30,
+              30
+            ],
+            "as": null,
+            "nice": 15,
+            "environment": {
+              "CUDA_VISIBLE_DEVICES": "",
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "MALLOC_ARENA_MAX": "1",
+              "PYTHONDONTWRITEBYTECODE": "1"
+            },
+            "platform": "darwin",
+            "dont_write_bytecode": true
+          },
+          "log_tail": [
+            "Ran 159 tests in 0.440s",
+            "",
+            "OK"
+          ]
+        },
+        "linux": {
+          "child_pid": 1140434,
+          "returncode": 0,
+          "cleanup": [],
+          "bounds": {
+            "pid": 1140434,
+            "ppid": 1140422,
+            "pgid": 1140434,
+            "cpu": [
+              30,
+              30
+            ],
+            "as": [
+              536870912,
+              536870912
+            ],
+            "nice": 15,
+            "environment": {
+              "CUDA_VISIBLE_DEVICES": "",
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "MALLOC_ARENA_MAX": "1",
+              "PYTHONDONTWRITEBYTECODE": "1"
+            },
+            "platform": "linux",
+            "dont_write_bytecode": true
+          },
+          "log_tail": [
+            "Ran 159 tests in 0.839s",
+            "",
+            "OK"
+          ]
+        }
+      }
+    },
+    {
+      "controls": 11,
+      "source_count": 4,
+      "input_count": 13,
+      "hosts": {
+        "darwin": {
+          "child_pid": 55318,
+          "returncode": 0,
+          "cleanup": [],
+          "bounds": {
+            "pid": 55318,
+            "ppid": 55314,
+            "pgid": 55318,
+            "cpu": [
+              30,
+              30
+            ],
+            "as": null,
+            "nice": 15,
+            "environment": {
+              "CUDA_VISIBLE_DEVICES": "",
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "MALLOC_ARENA_MAX": "1",
+              "PYTHONDONTWRITEBYTECODE": "1"
+            },
+            "platform": "darwin",
+            "dont_write_bytecode": true
+          },
+          "log_tail": [
+            "Ran 11 tests in 0.005s",
+            "",
+            "OK"
+          ]
+        },
+        "linux": {
+          "child_pid": 1140430,
+          "returncode": 0,
+          "cleanup": [],
+          "bounds": {
+            "pid": 1140430,
+            "ppid": 1140424,
+            "pgid": 1140430,
+            "cpu": [
+              30,
+              30
+            ],
+            "as": [
+              536870912,
+              536870912
+            ],
+            "nice": 15,
+            "environment": {
+              "CUDA_VISIBLE_DEVICES": "",
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "MALLOC_ARENA_MAX": "1",
+              "PYTHONDONTWRITEBYTECODE": "1"
+            },
+            "platform": "linux",
+            "dont_write_bytecode": true
+          },
+          "log_tail": [
+            "Ran 11 tests in 0.008s",
+            "",
+            "OK"
+          ]
+        }
+      }
+    },
+    {
+      "controls": 16,
+      "source_count": 3,
+      "input_count": 1,
+      "hosts": {
+        "darwin": {
+          "child_pid": 55317,
+          "returncode": 0,
+          "cleanup": [],
+          "bounds": {
+            "pid": 55317,
+            "ppid": 55313,
+            "pgid": 55317,
+            "cpu": [
+              30,
+              30
+            ],
+            "as": null,
+            "nice": 15,
+            "environment": {
+              "CUDA_VISIBLE_DEVICES": "",
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "MALLOC_ARENA_MAX": "1",
+              "PYTHONDONTWRITEBYTECODE": "1"
+            },
+            "platform": "darwin",
+            "dont_write_bytecode": true
+          },
+          "log_tail": [
+            "Ran 16 tests in 0.040s",
+            "",
+            "OK"
+          ]
+        },
+        "linux": {
+          "child_pid": 1140429,
+          "returncode": 0,
+          "cleanup": [],
+          "bounds": {
+            "pid": 1140429,
+            "ppid": 1140426,
+            "pgid": 1140429,
+            "cpu": [
+              30,
+              30
+            ],
+            "as": [
+              536870912,
+              536870912
+            ],
+            "nice": 15,
+            "environment": {
+              "CUDA_VISIBLE_DEVICES": "",
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "MALLOC_ARENA_MAX": "1",
+              "PYTHONDONTWRITEBYTECODE": "1"
+            },
+            "platform": "linux",
+            "dont_write_bytecode": true
+          },
+          "log_tail": [
+            "Ran 16 tests in 0.053s",
+            "",
+            "OK"
+          ]
+        }
+      }
+    }
+  ],
+  "recovery_proofs": {
+    "darwin": {
+      "pid": 55316,
+      "controls": 64,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "CPU_limit_seconds": 30,
+      "wall_limit_seconds": 90,
+      "Linux_AS_bytes": null
+    },
+    "linux": {
+      "pid": 1140431,
+      "controls": 64,
+      "returncode": 0,
+      "cleanup_errors": [],
+      "CPU_limit_seconds": 30,
+      "wall_limit_seconds": 90,
+      "Linux_AS_bytes": 536870912
+    }
+  },
+  "map_reconciliation": [
+    "All3 main CPU group saved source/input maps and orderedIDs exactly match both-host receipts; every declared source/current local byte hash matches main map; every explicit175/13/1 input hash matches corresponding scoped local metadata/source bytes and main map.",
+    "Repairedcore159 has29sources/175inputs; profile11 has4sources/13inputs; auditor16 has3sources/1input; recovery64 has3sources/7inputs. Actual core Mac57927/Linux1140434 return0/clean; raw logs read. Linux AS512MiB/Mac no AS, CPU30/nice15/hiddenCUDA/ownedPG and native/devicefalse remain bounded.",
+    "Core input membership repair now includes local auditor, baseline tokenizer/picker/fallback and4actual pure startuphelpers. Source-specific92/TP2 activation/STAT preserved.",
+    "FIRST Mac core159 failure return1/cleanup[] and preserved source/map remain explicit; later distinct R2 success does not overwrite/regrade it. Initial sourceHOLD and repairs preserved. Earlier profile/auditor/recovery positives reused without repeat."
+  ],
+  "criteria_and_lineage": "Exact complete common8469 original knownanswer A=actual92/c43 originalpackTP1 versus B=adff originalMayaSTP2/direct1. QS0 accepted fullfinite/history is workload/lineage authority only; dump-instrumented historical8969.3ms is not fresh no-dump formal timing. A1B1B2A2 <=3% meaningful-prefill regression each order, manual/independent closure and separate confirmation beforeB2; later separate sustaineddecode>=5% families and broader gates remain binding. No205-token sustaineddecode, topologycausal, near1M/full262144generation, HGU/Unslothlongbound or promotion claim.",
+  "conditional_A1_scope": {
+    "only": "One fresh A1 selected92/configc43 profile, exact8469 knownanswer/full32768/effort100/1Mtotal262144allowance/same selecteddrafter/Q8/mode1/chunk4096/projection/allRAM; no newdirectflag/dumps/roundlog, actual unlimitedFSIZE.",
+    "required_before_action": [
+      "Stage exact reviewed artifacts without changing immutable main/recoveryq; verify actualhost main qualified() and recovery.qualified() including4871/2371pins/qself.",
+      "Actual canonical read-only A1 controller preflight must pass source/q/owner/native92/c43/binding/root/default/idle/soleGPU/cleanpreviouswindow/noactivephase. Recheck clock/source/currentowner/root/idle immediately launch.",
+      "Retain80GiB/zeroownedswap+8margin/root132runtime120/startup800/window1200/soft1000/cleanup200/cache8/log4/systemswapthreshold. Actual raw native92 source-specific STAT/DONE/activation5801, coldreused0, typed1..64 naturalanswer and captured private/API/window closure/publicrestore mandatory.",
+      "Separate deliberate singleA1 action admission after fresh proof; no B1/B2/A2 automatic advance, no replay/retry, no source/map relaxation."
+    ],
+    "not_yet_done": "Q not staged or actionverified; this local receipt is not a GPU authorization."
+  },
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/task-qualification.json": "27070f6c7d15953c65eeb8881b6c042113f3ec241ca0a518abb1a42143f4a9b3",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/recovery-v1/RECOVERY_QUALIFICATION.json": "7d965e0c89fe6fb0481cf8b20c5ed63414eabbf21970aab662e99124da1b2611",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R2-FIRST-darwin/receipt.json": "0a241913eb5fa7b70a962ae373b3c8038e870663e50f9f8c2669781e306aa620",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R2-FIRST-darwin/child.json": "8ff83827770fc1f33431ca8e0d9fd8d23c3b0f0cf5e4d03fac6abe3a67285de5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R2-FIRST-darwin/child.log": "9a3405eea511af45cb5c1a1ddb73f1d6e7b893190452850eac7d326173662f13",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R2-FIRST-linux/receipt.json": "ff9e33f2763f526c3fc53e5d98395a27f83138c59496f2579ca2e9cd3f6d4039",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R2-FIRST-linux/child.json": "3cf081f9f95e24cb86765cf6ab419215892fc1145ad2810ff361c7239bf256bb",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-R2-FIRST-linux/child.log": "341ebf38a9d173eeaacd1e1b80f27879123735663febcd5122ad323e64ec9e96",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-PROFILE-FIRST-darwin/receipt.json": "e338b1ddbbed0ecf9baf81d203f56505c0e209fa3bbe2397eeb54302053fd78d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-PROFILE-FIRST-darwin/child.json": "94e73ff57867d7af546a3f1c7cc19cdd70e5247432382adb3cff705f59dcb328",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-PROFILE-FIRST-darwin/child.log": "f6c096adbf27b8ac614d43edee5a64b7a91e136dce090713d31186297a345b4a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-PROFILE-FIRST-linux/receipt.json": "74b55bd6b62ab31a8c97a3698d2361daed546e8bc9c70222751cee8ed9af2b2c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-PROFILE-FIRST-linux/child.json": "ebcbc7ba3067c98910e4634a8edad15974fdaa707c0dd7cc872abc3ec5918c80",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-PROFILE-FIRST-linux/child.log": "8f285ecf06a3593f548db051d63f422efa165675c9bbc03d0e0b6fb1451545ea",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-CURRENT-AUDIT-FIRST-darwin/receipt.json": "e988e224420fa99e43952a91c2cd96a09c4c711efef75e51b17dc2dddba5fc54",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-CURRENT-AUDIT-FIRST-darwin/child.json": "a49d4a9cc5d6cbd84888f7f7c9b13dbb202654e09dd2f24d95642b573491fe17",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-CURRENT-AUDIT-FIRST-darwin/child.log": "42b14980a6526d56bcef4677199f508660ed4e8d29fd55e5273da8833c385ec9",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-CURRENT-AUDIT-FIRST-linux/receipt.json": "59e3d0f14063816f27d0c8ac59eb9e9678852798160fbb117fc521e3bdb0cece",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-CURRENT-AUDIT-FIRST-linux/child.json": "20a3356d27df7372f339ad4ddb40612ca294d64e049d6912e3bc8575c720f9d9",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-CURRENT-AUDIT-FIRST-linux/child.log": "2e0ec2383d9ab6f9cc2da159177e1a7a02ecb64bd1b4409f9986c9e89988c885",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/recovery-v1/CPU-FIRST-darwin/receipt.json": "261d6b007669aafbaa464417e458ea3af63a2acde629c647676066f8605f6120",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/recovery-v1/CPU-FIRST-darwin/child.json": "0893f8e7dbd5acfcf82badd61251867e6f240f915f39029681d4a3c12d9ca9f8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/recovery-v1/CPU-FIRST-darwin/child.log": "0f5cc8cdf8c6d6062386f3df02a9d373f7da379a81acb0a6bf30f9f2d41911da",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/recovery-v1/CPU-FIRST-linux/receipt.json": "6c02848c6accc17dd23cfde0bc78d8ee298e38ea238781b960c775fb945c2547",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/recovery-v1/CPU-FIRST-linux/child.json": "da1ee7ca7b55187d31bcad324a19cabe0ccd0893705ba1923863ed906e109aca",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/recovery-v1/CPU-FIRST-linux/child.log": "3ee37c65c26c298e2cb54c0fa71c7c0353e87ceac445a5fb510f8a3b77618b44",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_PREFILL_PLAN_FROZEN.json": "bece74b44b1a85d772a6ad8eba957796a3058ff7af4c0340dbed846209a90883",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_SOURCE_SOL_REVIEW.json": "e171a28e335a713e868d14c1aa51e408866badb544b4b30aade3c605e48b9a84",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_SOURCE_SOL_REVIEW_R2.json": "d33005dce632cc573956a8a23a07ea6734d23b1720ac82f04ed576298e1f9a39",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_CORE_CPU_REPAIR_SOL_REVIEW.json": "b91a8f210c998080dd5da3beda0a1853c1ac9b40871a137ed9cff7aea34b3a64",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FIRST_BOTH_HOST_CPU_AND_QUALIFICATION_SUMMARY.json": "1c1c185f4b7a3a10c1355a477df8f8454d2ea6362011d9710a8a615e71b654da",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FIRST_CPU_CORE_FAILURE_PRESERVED/DIAGNOSIS.json": "e4f4945ab43f8e560c55f0ceee33c13339f8b5abeaacc808abdb145a02ed522c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-FIRST-darwin/child.json": "d2ae71e374b3a6c63e9daa45318cf9b216a4e6af1791fde6b3339d146af3415f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-FIRST-darwin/child.log": "53216b9434b69d098e09ae06a0043a4ea67f482150da15f79c373cbd53c09146",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/CPU-TASK-FIRST-darwin/receipt.json": "58e0147f748fbd5ec250135fcffd8d51ba37a9c9cbf4f030cfbff1cf7c21f706"
+  },
+  "stop": "Stopped before any private phase, host operation or test execution."
+}

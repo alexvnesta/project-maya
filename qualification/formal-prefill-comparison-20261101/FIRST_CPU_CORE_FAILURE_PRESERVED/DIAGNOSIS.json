@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-01T09:29:17.525702+00:00",
+  "original_receipts": "CPU-TASK-FIRST-darwin",
+  "controls": 159,
+  "error": "Portable pure startup integration called Linux-only full owned-host support on macOS. No host operation occurred.",
+  "failure": "STAT clock accepted -1 first timestamp because clock began -1 and only compared monotonicity.",
+  "changes": "Test invokes exact pinned pure startup functions using AST-extracted unchanged bodies with explicit pure dependency graph; retain actual saved startup without host import. Observer requires nonnegative timestamps. No model/runtime profile change, no GPU attempted, no blind rerun. New distinct CPU directory for repaired source."
+}

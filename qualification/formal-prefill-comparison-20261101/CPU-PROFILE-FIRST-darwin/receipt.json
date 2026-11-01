@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "controls": 11,
+  "test_ids": [
+    "test_engine_profile.Profile.test_TP1_and_uneven_TP2_are_explicit",
+    "test_engine_profile.Profile.test_all_private_state_stays_in_arm_namespace",
+    "test_engine_profile.Profile.test_base_or_profile_policy_mutation_refused",
+    "test_engine_profile.Profile.test_each_full_profile_preserves_base_capacity_drafter_and_quality",
+    "test_engine_profile.Profile.test_exact_full_profile_includes_every_requested_factor",
+    "test_engine_profile.Profile.test_missing_Q8_or_wrong_projection_refused",
+    "test_engine_profile.Profile.test_no_numerical_dump_roundlog_or_profiling_in_any_task",
+    "test_engine_profile.Profile.test_pack_and_TP_disambiguate_both_MayaS_profiles",
+    "test_engine_profile.Profile.test_real_saved_TP1_parser_and_lead_drafter_placement",
+    "test_engine_profile.Profile.test_real_saved_TP2_parser_format_has_no_newmodel_claim",
+    "test_engine_profile.Profile.test_wrong_arm_profile_or_namespace_refused"
+  ],
+  "source_sha256": {
+    "engine_profile.py": "370998331cf86481120e399bae98f53ac05d8bfa5b6312e40a4d0f1214c09aec",
+    "test_engine_profile.py": "5acbaf4ff0241500391c9ccd0fb04a5b3c1ab9d304d575c17e6495de41c2acff",
+    "run_profile_cpu.py": "c8856327e46e162fb617d551d2712a94e306c811032385a70002e12739e5b71f",
+    "profile-base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa"
+  },
+  "input_sha256": {
+    "src/ds4/ds4_model.cu": "046277a7be8d385ccc843e64301d5cc14c93516f602b12e04fc9851acf76fcc5",
+    "src/ds4/ds4_gguf.cu": "827f251584c81be7613efe7e780c3c2f7b952124ab6e9b058782f7352183b022",
+    "short_tasks.py": "e51ba3172453b6aab743804d2be48e36f41e2d89696fe401804230105f44cc90",
+    "SHORT_SOURCES_FROZEN.json": "234345142518d00208601dac20de6fcfc3dcf597c9d9748e72af63194bb153c8",
+    "prior-startup-parser": "c43e07ed6a4019fb6252c64d40a0b3cd7a9bfe98e64c36e94436e159406ff983",
+    "saved-startup/engine.log": "b398fa10113e263225470e025118a08b34338e2f02b51500079238a374394886",
+    "saved-startup/native-ready.json": "6e3ebde905cb932c4c2decbb99aec07101eb9c1e1efefd6f54ff9e6b52f0eb88",
+    "saved-startup/startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "saved-startup/startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c",
+    "saved-TP1/engine.log": "8ec1d548b122058f7d4b5ac5d4b6f785d8f5c99f921da2288cbf5a31e928b066",
+    "saved-TP1/native-ready.json": "bf2c4e6e8ece1af0e99b568a7b036de244c9e2fa41f2bcde15b0d0462deb9c8a",
+    "saved-TP1/startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "saved-TP1/startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c"
+  },
+  "observed": {
+    "pid": 55318,
+    "ppid": 55314,
+    "pgid": 55318,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "native_executed": false,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false
+}

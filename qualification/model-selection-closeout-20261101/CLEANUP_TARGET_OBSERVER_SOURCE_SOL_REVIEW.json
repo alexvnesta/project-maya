@@ -1,0 +1,63 @@
+{
+  "utc": "2026-11-01T10:46:31.977708+00:00",
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "NARROW_TARGET_OBSERVER_WIRING_SOURCE_REPAIR_ACCEPTED_FOR_FIRST30_CPU_NO_DELETION_ADMISSION",
+  "scope": "Helper/mainwiring+3tests+namespace diffs read against preservedfailedR2; actualunchangedChunkProductionHost.target_identity338-376 and owned_target_pid source read. No imports/tests/host/deletion actions.",
+  "findings": [],
+  "assessment": [
+    "bound_observer validates existing canonical noalias directory before constructing host; assigns independent bindingdict and actual audit_dir before any identitycall. Main creates fresh SELECTED-TARGET-AUDIT-R3-FIRST with mkdir(noexistok), then uses helper. This directly repairs missing receipt sink without changing identity/readiness/source/release checks.",
+    "Actual target_identity retains preflight/exe/config/proc/startupready/residency/release/placement checks; final emit uses audit_dir/target-placement.json and returned bindingcopy. Helper supplies missing attribute, does not replace observer result or skip checks.",
+    "Three new realtemp fixture tests cover sink set before identityemit, missing/aliasedsink rejects before hostconstruction, and bindingcopy independentofcaller mutation. Staticcount30, prior27 lock/protected/partial tests retained.",
+    "Admission/result/progress/attempt/CPU/review namespaces consistently TARGET_R3; canonicalcleanup result points newreceipt. OldHOLD marker/results/source/proofs remain preserved; no clearing/regrade or automaticretry. Existinglocks/claims/beforeeachunlinkchecks/protected15plan/accounting unchanged."
+  ],
+  "static_control_count": 30,
+  "ordered_test_ids": [
+    "test_payload_removal.Removal.test_actual_frozen_plan_exact_path_names_and_byte_total",
+    "test_payload_removal.Removal.test_allowlist_is_only_fifteen_named_payloads",
+    "test_payload_removal.Removal.test_bound_observer_freezes_binding_copy",
+    "test_payload_removal.Removal.test_bound_observer_refuses_missing_or_aliased_receipt_sink",
+    "test_payload_removal.Removal.test_bound_observer_sets_real_receipt_sink_before_identity_call",
+    "test_payload_removal.Removal.test_changed_size_refused",
+    "test_payload_removal.Removal.test_closing_unlocked_fd_never_releases_existing_holder_flock",
+    "test_payload_removal.Removal.test_duplicate_or_blocked_waiter_lock_refused",
+    "test_payload_removal.Removal.test_durable_intent_failure_keeps_payload",
+    "test_payload_removal.Removal.test_exact_claim_rejects_foreign_owner_binding_or_other_phase",
+    "test_payload_removal.Removal.test_exact_fdinfo_lock_witness_required",
+    "test_payload_removal.Removal.test_exact_file_removed_with_other_files_untouched",
+    "test_payload_removal.Removal.test_exact_saved_selected_host_lock_record_accepted",
+    "test_payload_removal.Removal.test_exclusive_attempt_refuses_second_owner_without_overwrite",
+    "test_payload_removal.Removal.test_exclusive_attempt_refuses_symlink_and_preserves_target",
+    "test_payload_removal.Removal.test_foreign_or_untyped_lock_owner_refused",
+    "test_payload_removal.Removal.test_foreign_owner_refused",
+    "test_payload_removal.Removal.test_hardlink_refused_without_deleting_either_name",
+    "test_payload_removal.Removal.test_missing_leaf_is_not_silent_success",
+    "test_payload_removal.Removal.test_missing_or_different_device_inode_lock_refused",
+    "test_payload_removal.Removal.test_postunlink_directory_fsync_fault_still_counts_actual_unlink",
+    "test_payload_removal.Removal.test_postunlink_log_failure_still_counts_actual_unlink",
+    "test_payload_removal.Removal.test_postunlink_replacement_is_preserved_and_original_unlink_counted",
+    "test_payload_removal.Removal.test_protected_inode_refused_and_retained",
+    "test_payload_removal.Removal.test_replacement_during_intent_never_unlinked",
+    "test_payload_removal.Removal.test_same_size_replacement_inode_refused",
+    "test_payload_removal.Removal.test_shared_POSIX_OFD_or_partial_lock_refused",
+    "test_payload_removal.Removal.test_signature_drift_refused_before_intent",
+    "test_payload_removal.Removal.test_symlink_leaf_refused_target_retained",
+    "test_payload_removal.Removal.test_symlink_parent_refused"
+  ],
+  "limits": [
+    "Newtests establish wiring with a synthetic host, not a fresh actual targetidentity or deletion pass; existing actual source checks remain mandatory in futurebounded operation.",
+    "Auditdirectory can be preserved even on pre-attemptbusy/failure; do not remove or reuse it automatically. Source only and no fresh operation admitted here.",
+    "FIRST30 matchingbothhostproof/latestsourceinputmaps plus separate ROOT exactR3admission and freshallguards remain required; keep selectedservice untouched."
+  ],
+  "deletion_admitted": false,
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/remove_exact_payloads_admitted.py": "73700509519edb649084d942a348d7e76d397fcd4db818e6a8f35aaf36b61cff",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/test_payload_removal.py": "d7bb8b3e137a7432b30113c94029f63e2f06401cc5f1039ffa8033bea8fdd296",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/run_cleanup_cpu.py": "3131ed65b6d5e5517fda56d834f1d359fcc75176ca8da25ece0554ab886aaa71",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CLEANUP_PLAN.json": "8904383c06184dd2c55ccebf5b11755f25fc918f1132461005a37d2764487378",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CLEANUP_SELECTED_LOCK_SOURCE_SOL_REVIEW.json": "c271f3d5a89c64895c624ad3bee4070ee529097aba467543d310ab6f8203242b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CLEANUP_TARGET_OBSERVER_HOLD_PRESERVED/remove_exact_payloads_admitted.py": "8d6dd3efdddb5f6ebfa944b722207f3be5f27ae94f5dce5c12d445f68528720a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CLEANUP_TARGET_OBSERVER_HOLD_PRESERVED/test_payload_removal.py": "c9c13cb41d0e4bcc1c3431e37bbefef504f12d7eed855439d03923c2b641b9b5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/autonomous-optimization-12h-20261028/chunk4096-v1/activation-v1/activate_chunk4096.py": "b2bb7676969661f98bf77d9969a840a4fcb44367f9644ab6f05ac19d70709056"
+  },
+  "stop": true
+}

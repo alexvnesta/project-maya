@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/remove_exact_payloads_admitted.py", line 178, in <module>
+    parser=argparse.ArgumentParser();parser.add_argument('--admission-sha256',required=True);parser.add_argument('--parent',type=int,required=True);args=parser.parse_args();main(args.admission_sha256,args.parent)
+                                                                                                                                                                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/remove_exact_payloads_admitted.py", line 157, in main
+    fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+BlockingIOError: [Errno 11] Resource temporarily unavailable

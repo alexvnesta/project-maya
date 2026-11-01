@@ -1,0 +1,150 @@
+{
+  "utc": "2026-11-01T09:56:01.487135+00:00",
+  "reviewer": "ROOT",
+  "arm": "A1",
+  "fully_reviewed": true,
+  "owned_execution_closed": true,
+  "task_passed": true,
+  "terminal_audit_sha256": "1adf95fa4570641a6947a915491ec63aa56ee0d878eec2c4da6f21b942fd93ba",
+  "qualified_independent_audit_child_rc": 0,
+  "entire_final_and_reasoning_read": true,
+  "final": "Typed JSON values1..64 exactly once ascending, no extra keys;195chars",
+  "reasoning": "Entire675chars read; correct intended JSON construction, no cap/partial/retry. No broad reasoning-quality claim.",
+  "counts_and_latency": {
+    "generated": 366,
+    "prompt_tokens": 8469,
+    "prompt_ms": 8862.4,
+    "decode_ms": 7318.0,
+    "finish": "stop",
+    "drafts_accepted": 257,
+    "drafts_offered": 292,
+    "reused": 0,
+    "hits": 91419,
+    "lookups": 100785
+  },
+  "client_full_seconds": 16.221965984907,
+  "native_draft_execution": [
+    {
+      "configured_and_loaded_separate": true,
+      "execution_proven": true,
+      "evidence": "Exact native92 round() off>0 only after Model.draft/verify; same-command natural DONE and final STAT ratio",
+      "drafts_offered": 292,
+      "drafts_accepted": 257,
+      "zero_acceptance_permitted": true,
+      "draft_rounds": null,
+      "draft_ms": null,
+      "verify_ms": null,
+      "unavailable_native92_counters_not_inferred": true,
+      "samples": 46,
+      "raw_lines_sha256": "68111d44af2bfd8470213e712424aa89da503dcdfe3c3804f4ca363f9a18844c",
+      "source_main_sha256": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+      "source_model_sha256": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350"
+    }
+  ],
+  "actual_native_pid": 1149260,
+  "actual_API_pid": 1149233,
+  "actual_controller_pid": 1148598,
+  "native_API_window_controller_returncode": 0,
+  "old_selected_native1108433_close0_verified": true,
+  "kernel_capture0_no_fault_lines": true,
+  "resources": {
+    "root_min_GiB": 202.78039932250977,
+    "system_swapout_delta_bytes": 352256,
+    "swap_not_attributed_to_model": true
+  },
+  "fence": {
+    "passed": true,
+    "memory_max": 85899345920,
+    "swap_max": 0,
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 1816,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "prior_properties_restored": true,
+    "transient_collected": true
+  },
+  "selected_identity": {
+    "native_pid": 1152678,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "6b68a5236be04b4cb9db6dac2e101743",
+      "main_pid": 1152619,
+      "native_pid": 1152678,
+      "native_start_ticks": 179477431
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "raw_public_assembled_READY_stop_DONE_read": true,
+  "public401_authmodels200": true,
+  "same_context1048576_output262144_quality_drafter_policy": true,
+  "model_quality_equivalence_or_speedup_claim": false,
+  "sustained_decode_claim": false,
+  "baseline_only_not_a_first_pair": true,
+  "automatic_next_or_activation": false,
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/A1/terminal-audit.json": "1adf95fa4570641a6947a915491ec63aa56ee0d878eec2c4da6f21b942fd93ba",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/controller-A1-exit.json": "a04eac4ae810059846f00c7198c6e1dbef2bc36d33390739ca0d6238f5dbf7b6",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-A1-20261101T094218Z/native/skip-controls/ms-quality-cold-text/response.json": "7cb44fd41bf9ca6cc29d6b82e9a0093d8f176e803aac0e0cede6a6def9d8c2e0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-A1-20261101T094218Z/native/native-000/raw-done.txt": "dcf451ecb82057ad14bcbfb5313ad0d200d2a0bc9a77672542fe2fd8ebfb4dfa",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-A1-20261101T094218Z/native/native-close.jsonl": "86a2d6f0878969eea24aff03f0136b70d9a6727b2855861c45a9b124abca23ed",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-formal-prefill-A1-20261101T094218Z/native/server-cleanup.json": "b6fd50c07dd993a7c872ab6c41a52e692d32c0129e7efeae50acc7a5212180a3",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-formal-prefill-A1-20261101T094218Z/old-owner-close.json": "2d52f21edb8a0e132a376f57cfacfc388e4f7d4534651a11147b51bb46030563",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-formal-prefill-A1-20261101T094218Z/public-default-output-sse.txt": "6cea59c476a9e4157f1fb5941be17cfd6667e7297cb4c4c157163a63f648be89"
+  }
+}

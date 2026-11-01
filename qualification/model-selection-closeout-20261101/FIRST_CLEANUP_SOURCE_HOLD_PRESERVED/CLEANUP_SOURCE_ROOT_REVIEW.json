@@ -1,0 +1,38 @@
+{
+  "utc": "2026-11-01T10:25:07.491092+00:00",
+  "reviewer": "ROOT",
+  "entire_source_and_tests_read": true,
+  "scope": "New guarded exact15complete unselectedpayload housekeeping only; no newmodel/config/native/API/fixture orGPUphase.14meaningful actualtemporaryfile positive/negativecontrols beforedeletion, source/input/IDs exactbothhosts. ExistingGPU sourcequal allunchanged anddeclaredcomparisonsclosed.",
+  "source_sha256": {
+    "remove_exact_payloads_admitted.py": "50418e92d3a711b02099a66a825ce3914e02e598c58c595eaafbe1704c46b827",
+    "test_payload_removal.py": "ad1288ab150fb00ed6bd05dd916fe4dad390cc8e3fbb97ffbacdfe074696a51b",
+    "run_cleanup_cpu.py": "48b719868b82618058f7724dc35abefde3db1159d86f0a5d269f90b1dcb902bc"
+  },
+  "input_sha256": {
+    "CLEANUP_PLAN.json": "8904383c06184dd2c55ccebf5b11755f25fc918f1132461005a37d2764487378",
+    "DEPENDENCY_AUDIT_FIRST.json": "d4c498b8606b7ee67241df0ca956dc9b9201c0dddf15db84c82df58a8d9179a1",
+    "SELECTED_PRODUCTION_LOCK_DRAFT.json": "bb38fcde485848edd0591ae9673a432e1240e284cd2da249a61f14447220f63e",
+    "qualified-unchanged-current-runtime": "6929b1b1b7c6bce1bf2c702864b0e9553d5c27c547391032f0faeb139e9d9a22",
+    "qualified-full-native-owner-source-map": "c7ae7445488b053b4e5b4ab160ca4f5f50b62c7ec9b433af746e8f94e94c1b03",
+    "actual-single-comparison-result": "be93febd2000858a4e5230d4d0fea724173b46635a5c71827f313150c19af46a"
+  },
+  "test_ids": [
+    "test_payload_removal.Removal.test_actual_frozen_plan_exact_path_names_and_byte_total",
+    "test_payload_removal.Removal.test_allowlist_is_only_fifteen_named_payloads",
+    "test_payload_removal.Removal.test_changed_size_refused",
+    "test_payload_removal.Removal.test_durable_intent_failure_keeps_payload",
+    "test_payload_removal.Removal.test_exact_file_removed_with_other_files_untouched",
+    "test_payload_removal.Removal.test_foreign_owner_refused",
+    "test_payload_removal.Removal.test_hardlink_refused_without_deleting_either_name",
+    "test_payload_removal.Removal.test_missing_leaf_is_not_silent_success",
+    "test_payload_removal.Removal.test_protected_inode_refused_and_retained",
+    "test_payload_removal.Removal.test_replacement_during_intent_never_unlinked",
+    "test_payload_removal.Removal.test_same_size_replacement_inode_refused",
+    "test_payload_removal.Removal.test_signature_drift_refused_before_intent",
+    "test_payload_removal.Removal.test_symlink_leaf_refused_target_retained",
+    "test_payload_removal.Removal.test_symlink_parent_refused"
+  ],
+  "real_payload_deleted": false,
+  "GPU_or_model_admitted": false,
+  "cleanup_not_admitted_until_bothhostproofs_and_separatepinnedoperation": true
+}

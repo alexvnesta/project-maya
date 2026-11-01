@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "controls": 20,
+  "test_ids": [
+    "test_payload_removal.Removal.test_actual_frozen_plan_exact_path_names_and_byte_total",
+    "test_payload_removal.Removal.test_allowlist_is_only_fifteen_named_payloads",
+    "test_payload_removal.Removal.test_changed_size_refused",
+    "test_payload_removal.Removal.test_durable_intent_failure_keeps_payload",
+    "test_payload_removal.Removal.test_exact_claim_rejects_foreign_owner_binding_or_other_phase",
+    "test_payload_removal.Removal.test_exact_file_removed_with_other_files_untouched",
+    "test_payload_removal.Removal.test_exclusive_attempt_refuses_second_owner_without_overwrite",
+    "test_payload_removal.Removal.test_exclusive_attempt_refuses_symlink_and_preserves_target",
+    "test_payload_removal.Removal.test_foreign_owner_refused",
+    "test_payload_removal.Removal.test_hardlink_refused_without_deleting_either_name",
+    "test_payload_removal.Removal.test_missing_leaf_is_not_silent_success",
+    "test_payload_removal.Removal.test_postunlink_directory_fsync_fault_still_counts_actual_unlink",
+    "test_payload_removal.Removal.test_postunlink_log_failure_still_counts_actual_unlink",
+    "test_payload_removal.Removal.test_postunlink_replacement_is_preserved_and_original_unlink_counted",
+    "test_payload_removal.Removal.test_protected_inode_refused_and_retained",
+    "test_payload_removal.Removal.test_replacement_during_intent_never_unlinked",
+    "test_payload_removal.Removal.test_same_size_replacement_inode_refused",
+    "test_payload_removal.Removal.test_signature_drift_refused_before_intent",
+    "test_payload_removal.Removal.test_symlink_leaf_refused_target_retained",
+    "test_payload_removal.Removal.test_symlink_parent_refused"
+  ],
+  "source_sha256": {
+    "remove_exact_payloads_admitted.py": "8b0c0c6dfb37e0f3f95f9da0f30e43879a689190f7fa9980e4a3d43f07b9d630",
+    "test_payload_removal.py": "b39d726101829001e66ab0449c645d0e2cf6bd0cc184cd2c128896840922f01c",
+    "run_cleanup_cpu.py": "48b719868b82618058f7724dc35abefde3db1159d86f0a5d269f90b1dcb902bc"
+  },
+  "input_sha256": {
+    "CLEANUP_PLAN.json": "8904383c06184dd2c55ccebf5b11755f25fc918f1132461005a37d2764487378",
+    "DEPENDENCY_AUDIT_FIRST.json": "d4c498b8606b7ee67241df0ca956dc9b9201c0dddf15db84c82df58a8d9179a1",
+    "SELECTED_PRODUCTION_LOCK_DRAFT.json": "bb38fcde485848edd0591ae9673a432e1240e284cd2da249a61f14447220f63e",
+    "qualified-unchanged-current-runtime": "6929b1b1b7c6bce1bf2c702864b0e9553d5c27c547391032f0faeb139e9d9a22",
+    "qualified-full-native-owner-source-map": "c7ae7445488b053b4e5b4ab160ca4f5f50b62c7ec9b433af746e8f94e94c1b03",
+    "actual-single-comparison-result": "be93febd2000858a4e5230d4d0fea724173b46635a5c71827f313150c19af46a"
+  },
+  "observed": {
+    "pid": 80805,
+    "ppid": 80804,
+    "pgid": 80805,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "real_payload_deleted": false,
+  "native_or_service_executed": false
+}

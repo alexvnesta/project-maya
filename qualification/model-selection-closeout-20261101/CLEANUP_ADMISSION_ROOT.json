@@ -1,0 +1,42 @@
+{
+  "utc": "2026-11-01T10:32:27.080010+00:00",
+  "reviewer": "ROOT",
+  "single_cleanup_only": true,
+  "automatic_retry": false,
+  "scope": "Only15exact complete exclusive nonselectedmodelpayloads underauditedownpaths; no cache/source/raw/build/shared/production file removal. No native/service/modeloperation.",
+  "CPU_controls_first_each_physical_host": 20,
+  "exact_CPU_source_input_ID_maps": true,
+  "CPU30_LinuxAS512MiB_wall90_nice15_CUDAhidden_childonly": true,
+  "selected_binding": {
+    "invocation": "6bd4a6d9c93243ce999dca37f7ce7f79",
+    "main_pid": 1166336,
+    "native_pid": 1166373,
+    "native_start_ticks": 179586297
+  },
+  "plan_sha256": "8904383c06184dd2c55ccebf5b11755f25fc918f1132461005a37d2764487378",
+  "source_and_input_pins": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/remove_exact_payloads_admitted.py": "8b0c0c6dfb37e0f3f95f9da0f30e43879a689190f7fa9980e4a3d43f07b9d630",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/test_payload_removal.py": "b39d726101829001e66ab0449c645d0e2cf6bd0cc184cd2c128896840922f01c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/run_cleanup_cpu.py": "48b719868b82618058f7724dc35abefde3db1159d86f0a5d269f90b1dcb902bc",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CLEANUP_SOURCE_ROOT_REVIEW.json": "ffbd335f30a53e5fe1270c2a5fc98a83d0e2670e9d90f91e8bcdee24dbd0d312",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/SELECTION_AND_CLEANUP_SOURCE_SOL_REVIEW_R2.json": "93b77247c2ff2fd0ad7abe6472c8a0249d0787085206dc060cc84f29199c5d22",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CLEANUP_PLAN.json": "8904383c06184dd2c55ccebf5b11755f25fc918f1132461005a37d2764487378",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/DEPENDENCY_AUDIT_FIRST.json": "d4c498b8606b7ee67241df0ca956dc9b9201c0dddf15db84c82df58a8d9179a1",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/SELECTED_PRODUCTION_LOCK_DRAFT.json": "bb38fcde485848edd0591ae9673a432e1240e284cd2da249a61f14447220f63e",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/current_runtime.py": "6929b1b1b7c6bce1bf2c702864b0e9553d5c27c547391032f0faeb139e9d9a22",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/task-qualification.json": "c7ae7445488b053b4e5b4ab160ca4f5f50b62c7ec9b433af746e8f94e94c1b03",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_PREFILL_FIRST_PAIR_RESULT.json": "be93febd2000858a4e5230d4d0fea724173b46635a5c71827f313150c19af46a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/task-arms.json": "f0f1c456d3e7655f4e006a159ee84179d8462ac41565ea5dedddd344fb8e47da",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/CODING_HGU_CONFIRMATION_RESULT.json": "a797aa50582b3d08cc50e3962cb9d667aa1c03add817d910a133874f4535c0fb",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CPU-CLEANUP-FIRST-darwin/receipt.json": "3089536f6a44bdc3479a71c4efa5806fb5bda6a48bb72e2a572116ec0594ed6b",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CPU-CLEANUP-FIRST-darwin/child.json": "fa49f96dca7546f1a0cf7f86ecf0bbbbbac0b689b09ab9a9140f9eab56df6ae2",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CPU-CLEANUP-FIRST-darwin/child.log": "934af69d283cf46726c5d9e1319495572dfcb5b12602080536425c0d9a5582ca",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CPU-CLEANUP-FIRST-linux/receipt.json": "faa4603ccfee518deee9620d919f01f04539796ea26ecd29bbd52937011fadbe",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CPU-CLEANUP-FIRST-linux/child.json": "291d2b7ddc48e71083d10470f5fe1a3805f1e961073b0de410bcea82a34312b6",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CPU-CLEANUP-FIRST-linux/child.log": "b944810e99a0004cc6d936df35745d92e3734a4105bbd3da7c10bae20361dc55"
+  },
+  "fresh_action_guards": "Existingexperimentlock+exclusivepersistentattempt+exactcanonicalownedCPUclaim; source/policy/CPU/recovery/latestcleanwindow/currentselectedowner/defaultidle/root132; exactpayloadall15identity/protectedinodedisjoint; sudo lsof noneopen/mmapped +noactivecandidateprocess. Recheck no work beforedeletion; no drain/restart. Eachleaf FD/dirfd nofollow identity anddurableintent; confirmedunlink/durability/postcheck separate; partial/HOLD/no retry.",
+  "bytes": 664358869199,
+  "no_global_quant_inferiority_claim": true,
+  "postflight_required": "Ownedclaimreleased, actualchild0,15durable removals+zero unknown, protectedunchanged/selectedsamePID/native92/configc43/soleGPU/context1M/output262144/Q8/mode1/drafter/images/default/unitsRestartno/kernelresources/public401/auth200/assembledREADYstopDONE; preserve evidence and publish source/results."
+}

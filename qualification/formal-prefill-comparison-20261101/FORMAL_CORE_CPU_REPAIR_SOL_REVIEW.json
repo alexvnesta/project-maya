@@ -1,0 +1,50 @@
+{
+  "utc": "2026-11-01T09:30:13.249791+00:00",
+  "reviewer": "gpt-6.1-sol",
+  "scope": "Narrow manual source/test/driver delta against FIRST_CPU_CORE_FAILURE_PRESERVED; actual four extracted helper bodies and ms_controls.startup call graph read. No project imports/test execution/host/native/Ubuntu actions.",
+  "verdict": "BOUNDED_SOURCE_REPAIR_ACCEPTED_FOR_PREPARING_FRESH_FIRST_R2_CPU_ONLY",
+  "findings": [],
+  "repairs": {
+    "negative_STAT_clock": "Explicit0<=sec now rejects the first negative timestamp independently of clock=-1. Existing typed finite/nondecreasing/identity/rawhash guards retained; existing negative seconds control meaningfully exercises this regression. No runtime/counter relaxation.",
+    "Mac_startup_fixture": "The saved PROD integration no longer imports full Linux support. It parses exact mapped source and selects unchanged actual startup_contract; Q8 CHECK/numerical_check_receipt/startup_q8_receipt; bundle startup_guard; performance startup_guard. AST compile executes original selected bodies/constants without transforming them. Required symbol set is checked. re/math/builtins bindings cover the observed globals; scoped sys.modules bundle_mode supplies exact extracted dependency and is restored by patch context. Actual ms_controls.startup/current_controls.startup still run, so this is integration of real pure guards, not substituted success values.",
+    "coverage": "Actual saved ready/health/models/log are passed through capacity/allRAM, actual placement, exact Q8 numerical checks and projection/runtime direction. Expected saved outputs are compared. Full Linux owner import/lifecycle entry is deliberately outside this portable fixture; existing owned lifecycle controls and later physical Linux proof remain necessary.",
+    "map_and_attempt": "Four actual helper files now explicit core input paths; fresh CPU-TASK-R2-FIRST namespace. Preserved original source/map/raw failure remain unchanged; prior passing profile/auditor/recovery groups need no repetition for this narrow core change."
+  },
+  "helper_extract_functions": {
+    "hosting-1m-output256k-v3-20261027/capacity_observer.py": [
+      "startup_contract"
+    ],
+    "q8-batch-v1/q8_configuration.py": [
+      "CHECK",
+      "numerical_check_receipt",
+      "startup_q8_receipt"
+    ],
+    "fork-bundle-v1/bundle_mode.py": [
+      "startup_guard"
+    ],
+    "prefill-cache-improvements-20261027/performance-v1/performance_mode.py": [
+      "startup_guard"
+    ]
+  },
+  "qualification_limits": [
+    "No CPU result accepted by this receipt; FIRST R2 must run under exact updated source/input/test maps on both physical hosts.",
+    "Read AST/source analysis is not native startup/fit/inference qualification. Frozen request/policy/order/resources and no GPU admission unchanged.",
+    "Do not regrade failed FIRST Mac core or claim full owner support was imported by the portable integration."
+  ],
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/selected92_observer.py": "859b1ec032fe186eae38a9b2e077a0c88ef464f8f89e643068e3796820a9685f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/test_selected92_observer.py": "43b551738e3adeeeff616803f9093c8e15980e1e099a5454770f46fb818a332d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/test_task_mode.py": "eb2ff7e65ce414bdbcb9b204f17c1971394d9dd553ab7c8ccdea68674120c0bb",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/run_current_cpu.py": "6e78961745070b748b1dea039167ce1f6da1569bd810aed523af4b5393890e97",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/current_controls.py": "28f51801805661705c7759ca98307f42fdf061f5fba6a0b969652a18fdb2b5ca",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_SOURCE_SOL_REVIEW_R2.json": "d33005dce632cc573956a8a23a07ea6734d23b1720ac82f04ed576298e1f9a39",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FIRST_CPU_CORE_FAILURE_PRESERVED/DIAGNOSIS.json": "e4f4945ab43f8e560c55f0ceee33c13339f8b5abeaacc808abdb145a02ed522c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FIRST_CPU_CORE_FAILURE_PRESERVED/ROOT_CURRENT_SOURCE_REVIEW.json": "e7bb6cc52c02e564d86a144d34e880dd1d2c3b0475d77ac38671ecde4987fe63",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/hosting-1m-output256k-v3-20261027/capacity_observer.py": "84e7616db4d7e4279fef5b567789a113bffb18d82e074251581a0a281f55fdb0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/q8-batch-v1/q8_configuration.py": "200bd84a3d9f26395edf48abff0b298becd835da810d1bf1b4878ea5ba10ca86",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/fork-bundle-v1/bundle_mode.py": "f3b90e8ef9b6fbf9ce19e870fb0db4fba30e54e39dce2222912c7e42f071fb84",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/prefill-cache-improvements-20261027/performance-v1/performance_mode.py": "4acd80c3a842c3c7f02aa5433de9015118b28c592e9822d6bde2b5e62fc71f80",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_controls.py": "bec61db8733964af590f12d84044d6dbe6c30ea36014e394da64dc95b48bb20a"
+  },
+  "stopped_before_tests_staging_or_private_phase": true
+}

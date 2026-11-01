@@ -1,0 +1,51 @@
+{
+  "utc": "2026-11-01T10:42:52.024481+00:00",
+  "passed": false,
+  "error": "AttributeError(\"'ChunkProductionHost' object has no attribute 'audit_dir'\")",
+  "status": "PARTIAL_OR_PREDELETION_HOLD",
+  "completed": [],
+  "removed_count_confirmed_unlink": 0,
+  "removed_bytes_confirmed_unlink": 0,
+  "unconfirmed_attempted_paths": [],
+  "unconfirmed_is_not_zero_or_success": true,
+  "root_free_before": 217707925504,
+  "root_free_after": 217707921408,
+  "selected_binding": {
+    "invocation": "6bd4a6d9c93243ce999dca37f7ce7f79",
+    "main_pid": 1166336,
+    "native_pid": 1166373,
+    "native_start_ticks": 179586297
+  },
+  "selected_config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+  "selected_native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+  "observed_child_limits": {
+    "pid": 1191813,
+    "ppid": 1191806,
+    "pgid": 1191813,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "canonical_lock_policy": "exact_bound_selected_API_already_holds_canonical_flock",
+  "selected_host_lock_not_released": true,
+  "no_service_or_model_operation": true,
+  "raw_source_failed_partial_and_cache_records_preserved": true,
+  "retry": false
+}

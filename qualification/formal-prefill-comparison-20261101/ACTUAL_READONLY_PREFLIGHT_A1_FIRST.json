@@ -1,0 +1,23 @@
+{
+  "utc": "2026-11-01T09:40:57.579597+00:00",
+  "passed": true,
+  "read_only": true,
+  "arm": "A1",
+  "qualification_sha256": "c7ae7445488b053b4e5b4ab160ca4f5f50b62c7ec9b433af746e8f94e94c1b03",
+  "file_checks_including_qself": 4802,
+  "recovery_qualification_sha256": "7d965e0c89fe6fb0481cf8b20c5ed63414eabbf21970aab662e99124da1b2611",
+  "root_GiB": 202.8014793395996,
+  "binding": {
+    "invocation": "e546cecd15324582865203e0f2318de7",
+    "main_pid": 1108372,
+    "native_pid": 1108433,
+    "native_start_ticks": 179070360
+  },
+  "previous_window": "/home/alex/strata-deepseek-test-20261024/windows/20261101T082718Z.json",
+  "previous_window_exit": 0,
+  "previous_window_clean_basis": "Exact existing Host.previous/phase.clean_prior: maintenance held/resume allowed/master unchanged/test0/kernelcapture0/no kernel faults; qualified selected92 publicrestoration separate in canonicalSTATE+MS2-2terminalaudit.",
+  "earlier_external_window_assertion_wrong": "Additional ROOT assertion incorrectly expected GLM restoration restoredTrue/maintenanceheldFalse; exact existing DeepSeek maintenance contract requires heldTrue; no controller/window/API/native action or fault. Original qualified function unchanged.",
+  "elapsed_seconds": 2.1263194538187236,
+  "private_attempted": false,
+  "GPU_admitted": false
+}

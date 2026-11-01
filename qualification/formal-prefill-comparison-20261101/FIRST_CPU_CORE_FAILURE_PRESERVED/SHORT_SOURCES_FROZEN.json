@@ -1,0 +1,52 @@
+{
+  "PROD-prefill": {
+    "source_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/model-v1/quality-fixtures-A.json",
+    "source_sha256": "3aa80903f946ba4a032aa47fe5f1c6906c531ac259dbfc8f9d9ff482b5ad4f23",
+    "case_id": "ms-quality-cold-text",
+    "case_sha256": "1a156286e19e64bd87ad82964a6d89f5cf8ef84408e158f0b8f62f9ed7478294",
+    "request_sha256": "400196a1ffde50b4258720e5ded806c91c546d1c9b5affc78a55e4fc8a586487",
+    "prompt_ids_sha256": "010205e8f361a49baf7182628639afd8114a55a40224b5a06f86487d87ac3e65",
+    "prompt_tokens": 8469,
+    "tokenizer_source_sha256": {
+      "chat_template.jinja": "6f9bd1f87d9dad376b4c79683934b4254396d826ae514ab0244efa904ce1d1a4",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+    },
+    "effective_template": {
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "effective_template_relative_to_E": "native-vision-v2/runtime/serve/fixtures/deepseek41/chat_template.jinja",
+      "effective_template_sha256": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b",
+      "pack_template_relative_to_E": "native-vision-v2/tokenizer/chat_template.jinja",
+      "pack_template_replaced": true,
+      "pack_template_sha256": "6f9bd1f87d9dad376b4c79683934b4254396d826ae514ab0244efa904ce1d1a4",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  },
+  "MS2-prefill": {
+    "source_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/model-v1/quality-fixtures-B.json",
+    "source_sha256": "c77c34d85a59f4696bb82397a20df97f92235a7ad752d8d3ad80ccfa38377707",
+    "case_id": "ms-quality-cold-text",
+    "case_sha256": "1a156286e19e64bd87ad82964a6d89f5cf8ef84408e158f0b8f62f9ed7478294",
+    "request_sha256": "400196a1ffde50b4258720e5ded806c91c546d1c9b5affc78a55e4fc8a586487",
+    "prompt_ids_sha256": "010205e8f361a49baf7182628639afd8114a55a40224b5a06f86487d87ac3e65",
+    "prompt_tokens": 8469,
+    "tokenizer_source_sha256": {
+      "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+    },
+    "effective_template": {
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "effective_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "effective_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "pack_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "pack_template_replaced": false,
+      "pack_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  }
+}

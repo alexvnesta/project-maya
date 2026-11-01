@@ -1,0 +1,63 @@
+{
+  "utc": "2026-11-01T10:39:48.784743+00:00",
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "NARROW_SELECTED_HELD_LOCK_SOURCE_REPAIR_ACCEPTED_FOR_FIRST_LOCK_R2_CPU_NO_DELETION_ADMISSION",
+  "scope": "Manual full changed lock parser/guard and main/execute delta plus7newtests/driver delta against preserved lock-refused source. No imports/tests/probes/host/deletion actions.",
+  "findings": [],
+  "source_assessment": [
+    "First operation attempted same canonical LOCK_EX|LOCK_NB and failed beforeattempt/claim/unlink; source repair does not reinterpret that child as success or retry it under same admission. Root-reported actual15remain/no markers requires fresh actualguard, not inferred from this local source review.",
+    "Fallback only on BlockingIOError selects exactbound currentAPI mainPID. Global/proc FD lockrecords require sameactualdev/ino, sole matching wholefile FLOCK ADVISORY WRITE with exactPID and range0EOF; missing/duplicate/waiter/shared/POSIX/OFD/partial/foreigndevice/owner refused. FDinfo requires sameinode and exactheldlock; path/fstat regularfile/noalias check ties own unlockedFD to canonical file.",
+    "Guard does not LOCK_UN/kill/restart selectedholder. Own cleanup acquiredlock is checked identically; closing independentlyopened unlockedFD does not release selectedFLOCK, supported by proposed actualtwoFDtest. Kernel/FD witness is rechecked beforeeachunlink and finalclosure alongside exact canonicalCPUclaim/currentbinding.",
+    "Persistent exclusive nofollow attempt marker and exactownactive_cpu_build record/partialaccounting remain. This is explicitly cooperative API-held canonicallease, not mutex ownership by cleanup nor independentOSCAS. Controllers/builds must honor canonicalphaseclaim before drain; a noncooperating writer remains outside protocol.",
+    "Separate CLEANUP_ADMISSION_ROOT_R2.json and CPU-CLEANUP-LOCK-R2-FIRST/reviewfilename preserve failedFIRSTsource/proofs/admission/raw. Exact15plan890438 unchanged; noselected/sharedpayload or cache/source/metadata deletion scope expansion."
+  ],
+  "test_assessment": "27staticorderedcontrols: original20 retained plus7 actual/pure lock tests. New controls cover savedshape, foreign/untypedowner, wrongdev/inode,shared/POSIX/OFD/partial,duplicate/waiter,FDinfomismatch and actualtwoFDlockbehavior. RuntimeLinux /proc/lock/FD race/owner/source checks still required; Mac tests cannot qualify Linuxlivewitness.",
+  "static_control_count": 27,
+  "ordered_test_ids": [
+    "test_payload_removal.Removal.test_actual_frozen_plan_exact_path_names_and_byte_total",
+    "test_payload_removal.Removal.test_allowlist_is_only_fifteen_named_payloads",
+    "test_payload_removal.Removal.test_changed_size_refused",
+    "test_payload_removal.Removal.test_closing_unlocked_fd_never_releases_existing_holder_flock",
+    "test_payload_removal.Removal.test_duplicate_or_blocked_waiter_lock_refused",
+    "test_payload_removal.Removal.test_durable_intent_failure_keeps_payload",
+    "test_payload_removal.Removal.test_exact_claim_rejects_foreign_owner_binding_or_other_phase",
+    "test_payload_removal.Removal.test_exact_fdinfo_lock_witness_required",
+    "test_payload_removal.Removal.test_exact_file_removed_with_other_files_untouched",
+    "test_payload_removal.Removal.test_exact_saved_selected_host_lock_record_accepted",
+    "test_payload_removal.Removal.test_exclusive_attempt_refuses_second_owner_without_overwrite",
+    "test_payload_removal.Removal.test_exclusive_attempt_refuses_symlink_and_preserves_target",
+    "test_payload_removal.Removal.test_foreign_or_untyped_lock_owner_refused",
+    "test_payload_removal.Removal.test_foreign_owner_refused",
+    "test_payload_removal.Removal.test_hardlink_refused_without_deleting_either_name",
+    "test_payload_removal.Removal.test_missing_leaf_is_not_silent_success",
+    "test_payload_removal.Removal.test_missing_or_different_device_inode_lock_refused",
+    "test_payload_removal.Removal.test_postunlink_directory_fsync_fault_still_counts_actual_unlink",
+    "test_payload_removal.Removal.test_postunlink_log_failure_still_counts_actual_unlink",
+    "test_payload_removal.Removal.test_postunlink_replacement_is_preserved_and_original_unlink_counted",
+    "test_payload_removal.Removal.test_protected_inode_refused_and_retained",
+    "test_payload_removal.Removal.test_replacement_during_intent_never_unlinked",
+    "test_payload_removal.Removal.test_same_size_replacement_inode_refused",
+    "test_payload_removal.Removal.test_shared_POSIX_OFD_or_partial_lock_refused",
+    "test_payload_removal.Removal.test_signature_drift_refused_before_intent",
+    "test_payload_removal.Removal.test_symlink_leaf_refused_target_retained",
+    "test_payload_removal.Removal.test_symlink_parent_refused"
+  ],
+  "limits": [
+    "No currentlivekernel/FD witness verified here; FIRSTfreshbothhostCPUproof/closedraw exactmaps and independent source/input review required before separate destructiveadmission.",
+    "Hardkill/persistence can leave claim/INTENT/unknownpostsyscalloutcome. PreserveHOLD and offline reconcile, never auto-retry/assumefilesretained.",
+    "Global /proc lock+FD read is sampled cooperative evidence, not an atomic security boundary. Any holder/identity/claim uncertainty must stop before furtherunlink, retaining alreadyconfirmedunlink accounting."
+  ],
+  "required_action_gates": "Separate exactR2admission and freshidle/default/current92c43binding/sourcepins/phaseclaim/root/protectedinodes/fullsignatures/exact15lsof/noactivecandidaterefs; strictkernelFDwitness beforeeveryunlink; boundedCPU30/AS512Linux/nice15/CUDAhidden/wall90; keep selectedservice untouched.",
+  "deletion_admitted": false,
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/remove_exact_payloads_admitted.py": "8d6dd3efdddb5f6ebfa944b722207f3be5f27ae94f5dce5c12d445f68528720a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/test_payload_removal.py": "c9c13cb41d0e4bcc1c3431e37bbefef504f12d7eed855439d03923c2b641b9b5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/run_cleanup_cpu.py": "ebaac0026db6b63711298f3edd5843def53c9cca8f05a4efdbe5bf6cf8e6bf67",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/CLEANUP_PLAN.json": "8904383c06184dd2c55ccebf5b11755f25fc918f1132461005a37d2764487378",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/SELECTION_AND_CLEANUP_SOURCE_SOL_REVIEW_R2.json": "93b77247c2ff2fd0ad7abe6472c8a0249d0787085206dc060cc84f29199c5d22",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/FIRST_CLEANUP_LOCK_REFUSAL_PRESERVED/remove_exact_payloads_admitted.py": "8b0c0c6dfb37e0f3f95f9da0f30e43879a689190f7fa9980e4a3d43f07b9d630",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/FIRST_CLEANUP_LOCK_REFUSAL_PRESERVED/test_payload_removal.py": "b39d726101829001e66ab0449c645d0e2cf6bd0cc184cd2c128896840922f01c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-selection-closeout-20261101/FIRST_CLEANUP_LOCK_REFUSAL_PRESERVED/run_cleanup_cpu.py": "48b719868b82618058f7724dc35abefde3db1159d86f0a5d269f90b1dcb902bc"
+  },
+  "stop": true
+}

@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-01T09:34:23.036081+00:00",
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "HOLD_27070_NOT_ADMISSIBLE_NEW_OBSERVER_INTEGRATION_BLOCKER",
+  "supersedes_conditional_source_suitability_of": "FORMAL_QUALIFICATION_SOL_REVIEW.json",
+  "preserve_prior_CPU_map_reconciliation": true,
+  "finding": {
+    "file": "selected92_observer.py:36-39",
+    "description": "observe() compares native request sampling to original APIcase request literally. Actual accepted exact8469 QS0 native request injects strata_prefix tokens94; all original API request fields match. Production exact workload would fail observer after request despite qualified mocked/adaptive sample controls. Actual native-request normalization was absent from core proof.",
+    "actual_extra_keys": [
+      "strata_prefix"
+    ],
+    "actual_prefix": {
+      "tokens": 94
+    },
+    "all_original_fields_equal": true,
+    "required_repair": "Freeze strict source-specific single API-injected prefix reconciliation with actual QS0 native-request positive and malformed/missing/extra/type/cross-request negatives, preserving full original policy/IDs. Review exact source/test delta and new matching both-host coreproof/maps/q; do not mutate or regrade originalCPU/raw."
+  },
+  "no_admission": true,
+  "qualification_sha256_blocked": "27070f6c7d15953c65eeb8881b6c042113f3ec241ca0a518abb1a42143f4a9b3",
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/FORMAL_QUALIFICATION_SOL_REVIEW.json": "5e73e6bf99afca5cb9c66977fc1c386e1bfecc45c07b450081521e383327e923",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/task-qualification.json": "27070f6c7d15953c65eeb8881b6c042113f3ec241ca0a518abb1a42143f4a9b3",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-formal-prefill-v1/selected92_observer.py": "859b1ec032fe186eae38a9b2e077a0c88ef464f8f89e643068e3796820a9685f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS0-20261030T225711Z/native/native-000/request.json": "2f6b7c53d22ea98ecbab4dad5a826007c02d334834aab446900dd02667b25c37",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/quality-fixtures-A.json": "3aa80903f946ba4a032aa47fe5f1c6906c531ac259dbfc8f9d9ff482b5ad4f23"
+  },
+  "scope": "Local JSON comparison only; no project imports/tests/host actions. Stop before any private phase."
+}
