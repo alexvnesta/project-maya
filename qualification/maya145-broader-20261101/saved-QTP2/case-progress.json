@@ -1,0 +1,123 @@
+{
+  "complete": true,
+  "scores": [
+    {
+      "id": "ms-quality-cold-text",
+      "passed": true,
+      "status": "KNOWN_ANSWER_SOURCE_AND_STATE_PASSED"
+    },
+    {
+      "id": "ms-quality-warm-text",
+      "passed": true,
+      "status": "KNOWN_ANSWER_SOURCE_AND_STATE_PASSED"
+    },
+    {
+      "id": "ms-quality-two-images",
+      "passed": true,
+      "status": "KNOWN_ANSWER_SOURCE_AND_STATE_PASSED"
+    },
+    {
+      "id": "ms-quality-return-text",
+      "passed": true,
+      "status": "KNOWN_ANSWER_SOURCE_AND_STATE_PASSED"
+    }
+  ],
+  "rows": [
+    {
+      "id": "ms-quality-cold-text",
+      "passed": true,
+      "native": {
+        "generated": 212,
+        "prompt_tokens": 8469,
+        "prompt_ms": 10229.2,
+        "decode_ms": 4408.8,
+        "finish": "stop",
+        "drafts_accepted": 145,
+        "drafts_offered": 173,
+        "reused": 0,
+        "hits": 52893,
+        "lookups": 60390
+      },
+      "observed_tokens": 212,
+      "native_decode_tokens_per_second": 48.08564688804209,
+      "client_seconds": 14.672077225055546,
+      "content_characters": 195,
+      "reasoning_characters": 362,
+      "manual_review_pending": false,
+      "general_quality_or_equivalence_claim": false
+    },
+    {
+      "id": "ms-quality-warm-text",
+      "passed": true,
+      "native": {
+        "generated": 352,
+        "prompt_tokens": 8469,
+        "prompt_ms": 50.5,
+        "decode_ms": 5519.9,
+        "finish": "stop",
+        "drafts_accepted": 260,
+        "drafts_offered": 311,
+        "reused": 8468,
+        "hits": 93972,
+        "lookups": 100410
+      },
+      "observed_tokens": 352,
+      "native_decode_tokens_per_second": 63.76927118244896,
+      "client_seconds": 5.602688422892243,
+      "content_characters": 195,
+      "reasoning_characters": 554,
+      "manual_review_pending": false,
+      "general_quality_or_equivalence_claim": false
+    },
+    {
+      "id": "ms-quality-two-images",
+      "passed": true,
+      "native": {
+        "generated": 56,
+        "prompt_tokens": 8656,
+        "prompt_ms": 11233.8,
+        "decode_ms": 1114.3,
+        "finish": "stop",
+        "drafts_accepted": 34,
+        "drafts_offered": 41,
+        "reused": 0,
+        "hits": 14949,
+        "lookups": 15975
+      },
+      "observed_tokens": 56,
+      "native_decode_tokens_per_second": 50.25576595171857,
+      "client_seconds": 12.537917421897873,
+      "content_characters": 31,
+      "reasoning_characters": 218,
+      "manual_review_pending": false,
+      "general_quality_or_equivalence_claim": false
+    },
+    {
+      "id": "ms-quality-return-text",
+      "passed": true,
+      "native": {
+        "generated": 169,
+        "prompt_tokens": 8469,
+        "prompt_ms": 54.3,
+        "decode_ms": 2393.2,
+        "finish": "stop",
+        "drafts_accepted": 126,
+        "drafts_offered": 136,
+        "reused": 8468,
+        "hits": 43295,
+        "lookups": 44805
+      },
+      "observed_tokens": 169,
+      "native_decode_tokens_per_second": 70.6167474511115,
+      "client_seconds": 2.479075004113838,
+      "content_characters": 195,
+      "reasoning_characters": 165,
+      "manual_review_pending": false,
+      "general_quality_or_equivalence_claim": false
+    }
+  ],
+  "retry": false,
+  "automatic_next_arm": false,
+  "quality_or_performance_pass": false,
+  "manual_review_required": true
+}

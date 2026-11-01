@@ -1,0 +1,9 @@
+{
+  "utc": "2026-11-01T01:18:30.766659+00:00",
+  "FIRST_CPU_controls": 98,
+  "passed": 97,
+  "failed": 1,
+  "cause": "Copied MemoryRelease test asserted historical quality-qualification.json instead of new broader-qualification.json. Runtime new namespace was correct. No native/host action.",
+  "original_failed_child_preserved": "CPU-BROADER-FIRST-darwin",
+  "repair_scope": "Test expected filename and fresh CPU/R2 review namespace only; runtime unchanged."
+}
