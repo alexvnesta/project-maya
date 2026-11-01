@@ -1,0 +1,23 @@
+test_actual_data_limits_require_exact_identity_and_bounds (test_bulk.Bulk.test_actual_data_limits_require_exact_identity_and_bounds) ... ok
+test_clean_environment_and_native_unit_reuse_source_contract (test_bulk.Bulk.test_clean_environment_and_native_unit_reuse_source_contract) ... ok
+test_exact_all8_terminal_base_gate (test_bulk.Bulk.test_exact_all8_terminal_base_gate) ... ok
+test_exact_own_claim_release_is_cas_and_preserves_other_state (test_bulk.Bulk.test_exact_own_claim_release_is_cas_and_preserves_other_state) ... ok
+test_failed_owned_cleanup_is_retained (test_bulk.Bulk.test_failed_owned_cleanup_is_retained) ... ok
+test_foreign_claim_or_unresolved_children_never_release (test_bulk.Bulk.test_foreign_claim_or_unresolved_children_never_release) ... ok
+test_full_source_sha_once_and_fingerprint_receipt (test_bulk.Bulk.test_full_source_sha_once_and_fingerprint_receipt) ... ok
+test_full_source_wrong_sha_preserves_failure_without_receipt (test_bulk.Bulk.test_full_source_wrong_sha_preserves_failure_without_receipt) ... ok
+test_handle_capture_precedes_return_and_cleanup_uses_only_owned_handles (test_bulk.Bulk.test_handle_capture_precedes_return_and_cleanup_uses_only_owned_handles) ... ok
+test_join_missing_part_and_noncontiguous_plan_refused (test_bulk.Bulk.test_join_missing_part_and_noncontiguous_plan_refused) ... ok
+test_matrix_registration_routes_only_exact_qualified_worker_command (test_bulk.Bulk.test_matrix_registration_routes_only_exact_qualified_worker_command) ... ok
+test_missing_duplicate_changed_or_partial_base_asset_refused (test_bulk.Bulk.test_missing_duplicate_changed_or_partial_base_asset_refused) ... ok
+test_ordered_join_actual_hash_and_exclusive_publish (test_bulk.Bulk.test_ordered_join_actual_hash_and_exclusive_publish) ... ok
+test_qualification_requires_matching_physical_manual_cpu_proofs (test_bulk.Bulk.test_qualification_requires_matching_physical_manual_cpu_proofs) ... ok
+test_reused_queue_fault_stops_new_work_and_joins_started_work (test_bulk.Bulk.test_reused_queue_fault_stops_new_work_and_joins_started_work) ... ok
+test_source_alias_and_traversal_refused (test_bulk.Bulk.test_source_alias_and_traversal_refused) ... ok
+test_streaming_stage_requires_actual_limits_done_exit_and_cleanup (test_bulk.Bulk.test_streaming_stage_requires_actual_limits_done_exit_and_cleanup) ... ok
+test_wrong_record_hash_size_or_child_refused_before_publish (test_bulk.Bulk.test_wrong_record_hash_size_or_child_refused_before_publish) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.031s
+
+OK

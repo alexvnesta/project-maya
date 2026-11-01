@@ -1,0 +1,169 @@
+{
+  "utc": "2026-11-01T17:58:32.402338+00:00",
+  "status": "MAYA_S_ALL8_VERIFIED_HYBRID_ENGINE_BUILT_ORIGINAL_SOURCE_DOWNLOAD_AND_IQ3S_CONVERSION_RUNNING",
+  "user_authorization": "Work on Frankenstein using supplied Oct30 followup and DSX; local reconstruction, not private artifact identity.",
+  "context_total": 1048576,
+  "output_allowance": 262144,
+  "effort": 100,
+  "drafter": true,
+  "production_changed": false,
+  "gpu_run_started": false,
+  "old_arms_closed": true,
+  "earlier_HGU_is_not_complete_S2": true,
+  "new_base_acquisition_namespace": "base-acquisition-v1",
+  "target": "Maya-S + IQ3_S gate/up L24-28 + selective original MXFP4 CPU experts; exact coverage and runtime qualification required",
+  "exact_author_expert_map_available": false,
+  "base_acquisition": {
+    "first_pid": 1295149,
+    "first_outcome": "BUSY_DEFERRED_NO_FAULT_16508780544_BYTES_RETAINED",
+    "resume_pid": 1309930,
+    "qualification_sha256": "f088bd008066ae69536f29d99ed2dc66f5ac11f997e11f006111e3910b89ab0c",
+    "path": "base-acquisition-v1",
+    "complete": true,
+    "current_controller": "base-acquisition-v2",
+    "current_pid": 1457149,
+    "asset_root": "base-acquisition-v1/assets",
+    "v1_resume_outcome": "BUSY_DEFERRED_NO_FAULT_PARTIAL_RETAINED",
+    "ordinary_healthy_serving_may_continue_after_initial_idle": true,
+    "status": "ALL_EIGHT_ASSETS_VERIFIED_NO_MODEL_RUN",
+    "returncode": 0,
+    "complete_bytes": 347445667721,
+    "completed_utc": "2026-11-01T17:32:12.404001+00:00",
+    "terminal_sha256": "f0a3afafa55e93fc3aff35a375cfecac74e003e06bed18de856edcce4972713d"
+  },
+  "component_controls_each_host": {
+    "base_acquisition": 43,
+    "pure_recipe": 26,
+    "native_three_role_codec": 9,
+    "official_source_ranges": 7
+  },
+  "CPU_controls_are_not_model_quality_or_speed": true,
+  "hybrid_GPU_tested": false,
+  "hybrid_native_built": true,
+  "plan": "PLAN.json",
+  "component_proofs": "FIRST_COMPONENT_PROOFS.json",
+  "original_source_plan": "source-plan-v1/GATE_UP_ORIGINAL_SOURCE_PLAN_FIRST.json",
+  "previous_state_utc": "2026-11-01T17:02:33.691612+00:00",
+  "original_gate_up_acquisition": {
+    "controller": "iq3s-source-acquisition-v1",
+    "pid": 1457156,
+    "qualification_sha256": "1b6065d122dcbfebbd6ae36e7cccf39e9da9a25fe9fdf7ed0f19f88a7097e95e",
+    "shards": [
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "total_bytes": 36959958872,
+    "status": "ALL_FIVE_ORIGINAL_SHARDS_VERIFIED_NO_MODEL_RUN",
+    "two_shards_full_SHA_verified_as_of_1451UTC": true,
+    "complete_bytes": 36959958872
+  },
+  "placement_diagnostic": {
+    "source": "placement-engine-v1",
+    "controls_each_host": 14,
+    "native_build": "placement-native-build-v1/FIRST_BUILD_COMPLETION.json",
+    "native_sha256": "75cf4881ddafddd1712ddd6ea5832974890d2ed4ae791fc99748860bf0ff5e63",
+    "build_controls_each_host": 34,
+    "configure_exit": 0,
+    "compile_exit": 0,
+    "GPU_executed": false,
+    "native_hybrid_dispatch_implemented": false
+  },
+  "iq3s_encoder": {
+    "version": "iq3s-encoder-v2",
+    "controls_each_host": 9,
+    "source_maps": 3,
+    "upstream_input_maps": 16,
+    "cross_host_synthetic_output_identical": true,
+    "NULL_imatrix_policy": "Upstream squared-weight-magnitude weighting, no private calibration/Hessian claim",
+    "source_domain": "Finite abs<=65504; each32value group zero or max>=2^-60; rejection without clipping",
+    "v1_FIRST8_preserved_source_review_blocker": "iq3s-encoder-v1/SOL_REVIEW_BLOCKER.json",
+    "actual_original_tensor_tested": true,
+    "model_quality_tested": false,
+    "scope_of_original_tensor_test": "One complete original L24/e0/w1 matrix, not the full model"
+  },
+  "iq3s_overlay_metadata": {
+    "path": "iq3s-overlay-v1",
+    "FIRST_mac_controls": 12,
+    "Ubuntu_controls": 12,
+    "actual_new_base_metadata_tested": false,
+    "controls_each_host": 12,
+    "status": "BOTH_HOST_SOURCE_INPUT_IDS_MATCHED_NO_ACTUAL_BASE_REWRITE_YET"
+  },
+  "canonical_campaign_state_sync": "Pending current native compile claim closure; canonical selected binding unchanged; fresh raw build/acquisition receipts take precedence over old reconstruction summary",
+  "iq3s_real_weight_components": {
+    "rows64": "iq3s-real-rows-v1/FIRST_COMPONENT_COMPLETION.json",
+    "full_matrix": "iq3s-real-matrix-v1/FIRST_COMPONENT_COMPLETION.json",
+    "full_matrix_shape": [
+      2304,
+      5120
+    ],
+    "controls_each_host_per_mode": 3,
+    "exact_cross_host_full_matrix_IQ3_sha256": "bf0f9f966922a9d0f12ac1156c85e0155acac15a1e574b959ad18a5864c9aee3",
+    "full_model_encoded": false,
+    "quality_claim": false
+  },
+  "latest_authorization": "Finish Maya-S download and local Frankenstein; essential correctness and small matched quality/end-to-end comparison only, then set default only if verified better",
+  "comparison_scope": "No new broad benchmark/quant/TP/cache sweep; current production92/c43 is the comparison target",
+  "new_conversion_component": {
+    "path": "iq3s-conversion-v1",
+    "FIRST_controls_each_physical_host": 13,
+    "both_host_exact_source_inputs_IDs_matched": true,
+    "bulk_started": false
+  },
+  "new_bulk_controller": {
+    "path": "iq3s-bulk-v1",
+    "FIRST_controls_Mac": 18,
+    "Ubuntu_first_CPU": "PASSED",
+    "one_preflight_environment_refusal_preserved": "iq3s-bulk-v1/CPU_LAUNCH_ENV_FIRST_REFUSAL.json",
+    "bulk_started": true,
+    "FIRST_controls_each_host": 18,
+    "both_host_exact_source_inputs_IDs_matched": true,
+    "qualification_sha256": "11d46d175978baa0bbb4903a5105ab6c2a8af7baa32a1cdf6919694df3123ee2",
+    "controller_pid": 2128234
+  },
+  "native_engine": {
+    "path": "native-engine-v2",
+    "implementation": "Separate static original-MXFP4 CPU1870 payload; IQ copy exclusion; L24-28 CPU prompt batches; unchanged IQ GPU sources; TP1 only",
+    "FIRST_Mac_helper_controls": 9,
+    "Ubuntu_first_CPU": "PASSED",
+    "critical_Sol_review": "2 budget/effective-env gaps repaired before FIRST helper CPU; no further blocker found statically",
+    "CUDA_build": "FIRST_COMPILE_EXIT0_OWNED_CLOSURE_PASSED",
+    "model_run": "NOT_STARTED",
+    "FIRST_helper_controls_each_host": 9,
+    "build_controller_controls_each_host": 34,
+    "prospective_actual_startup_arithmetic_check": true,
+    "compile_qualification_sha256": "c7ebb77612278bf14c2ae6f2074be5b1bbd8443e7b188d53af228c03df14c442",
+    "native_sha256": "c942a4cf8047d154dd2201b3541b4653c70d88e687b3c014dc649eb09beaac86",
+    "native_bytes": 44728824,
+    "compile_seconds": 699.558861150872,
+    "build_proof": "native-build-v2/FIRST_BUILD_COMPLETION.json"
+  },
+  "original_trunk_acquisition": {
+    "controller": "original-expert-acquisition-v2",
+    "conservative_index_derived_trunk_shards": 40,
+    "total_bytes": 295672271408,
+    "FIRST_controls_each_host": 16,
+    "both_host_exact_maps_IDs": true,
+    "launched": true,
+    "excludes_dense_head_drafter_Engram": true,
+    "qualification_sha256": "4fd3d5cc73fd3ad9c7323b787807c95eae1ee8bc46bf9e2b6be54622e508d1d1",
+    "controller_pid": 2127902
+  },
+  "candidate_pack_metadata": {
+    "path": "candidate-pack-v1",
+    "FIRST_controls_each_host": 6,
+    "exact_maps_IDs_matched": true,
+    "materialized": true,
+    "weights_ready": false,
+    "construction": "candidate-pack-v1/CONSTRUCTION_FIRST.json"
+  },
+  "placement_controller": {
+    "path": "placement-v1",
+    "FIRST_controls_each_host": 11,
+    "GPU_started": false,
+    "critical_lifecycle_review": "PENDING_BEFORE_GPU_ADMISSION"
+  }
+}

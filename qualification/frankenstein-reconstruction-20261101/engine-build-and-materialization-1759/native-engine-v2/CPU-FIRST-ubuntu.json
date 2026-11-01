@@ -1,0 +1,50 @@
+{
+  "physical_host": "ubuntu",
+  "passed": true,
+  "returncode": 0,
+  "controls": 9,
+  "failures": 0,
+  "errors": 0,
+  "test_ids": [
+    "test_routing.NativeRouting.test_all_cpu_prompt_rows",
+    "test_routing.NativeRouting.test_all_gpu_streamed_prompt_rows",
+    "test_routing.NativeRouting.test_all_native_entries",
+    "test_routing.NativeRouting.test_all_ordinary_entries",
+    "test_routing.NativeRouting.test_cpu_rows_are_trailing_without_streamed_holes",
+    "test_routing.NativeRouting.test_descriptor_parser_is_the_previously_qualified_implementation",
+    "test_routing.NativeRouting.test_invalid_fixture_control_fails_without_success",
+    "test_routing.NativeRouting.test_mixed_native_iq_preserves_slots_tokens_all_roles_and_source",
+    "test_routing.NativeRouting.test_speculative_prefix_preserved"
+  ],
+  "source_sha256": {
+    "routing_fixture.cpp": "8834ca2158d145cc6a78a6c7b569c619c2f940eb5f40a51d2144cd0b2e297088",
+    "test_routing.py": "b3a10548b82d3888921b70a34654f8226f7244df98c455d270858f1f0471a602",
+    "run_cpu.py": "3ebf3453ffc3dd19f3a2131f742eda3f2cb5c5b70b8f601e13f1caccba92aa8a"
+  },
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MALLOC_ARENA_MAX": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "input_sha256": {
+    "ds4_cpu_native.hpp": "9e4473fe5f2779a8fc6df5f1d4adefa7b7a9a6181771107a10c9a83f4861eed4",
+    "ds4_model.hpp": "36fc1b3c7b24d2cc5b298de8147cbfaaae46e5bab7921d98a1100aef9cd6aef7",
+    "ds4_model.cu": "b5cf22c5ba6ca2166fa4c88e7fae681abe55cef0e2b38cfdd3a32434b01dbc68",
+    "ds4_main.cpp": "a56d954f11ff87ecc21f5fed21c9dcb129a9616dd101cc827fd86c04b0d09719",
+    "ds4_placement_plan.hpp": "d6a5058640cc4aa930e95aecaeced9db65e5efa023a7d7aedc6dbdeb0fb9d6fa",
+    "shared/native-lane-v1/cpu_native_plan.hpp": "17afbde8df774d9d5d7c83755dd07ffbb5452b4aa114b2fe1aef9100a5a2e4a9"
+  },
+  "CPU_seconds": [
+    30,
+    30
+  ],
+  "Linux_AS_bytes": [
+    536870912,
+    536870912
+  ],
+  "nice": 15,
+  "pid": 2080538,
+  "scope": "FIRST bounded native mixed-representation routing helper controls; no whole-model quality/GPU proof"
+}

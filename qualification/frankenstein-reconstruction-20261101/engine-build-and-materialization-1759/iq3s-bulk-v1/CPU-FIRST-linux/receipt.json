@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "physical_platform": "linux",
+  "controls": 18,
+  "test_ids": [
+    "test_bulk.Bulk.test_actual_data_limits_require_exact_identity_and_bounds",
+    "test_bulk.Bulk.test_clean_environment_and_native_unit_reuse_source_contract",
+    "test_bulk.Bulk.test_exact_all8_terminal_base_gate",
+    "test_bulk.Bulk.test_exact_own_claim_release_is_cas_and_preserves_other_state",
+    "test_bulk.Bulk.test_failed_owned_cleanup_is_retained",
+    "test_bulk.Bulk.test_foreign_claim_or_unresolved_children_never_release",
+    "test_bulk.Bulk.test_full_source_sha_once_and_fingerprint_receipt",
+    "test_bulk.Bulk.test_full_source_wrong_sha_preserves_failure_without_receipt",
+    "test_bulk.Bulk.test_handle_capture_precedes_return_and_cleanup_uses_only_owned_handles",
+    "test_bulk.Bulk.test_join_missing_part_and_noncontiguous_plan_refused",
+    "test_bulk.Bulk.test_matrix_registration_routes_only_exact_qualified_worker_command",
+    "test_bulk.Bulk.test_missing_duplicate_changed_or_partial_base_asset_refused",
+    "test_bulk.Bulk.test_ordered_join_actual_hash_and_exclusive_publish",
+    "test_bulk.Bulk.test_qualification_requires_matching_physical_manual_cpu_proofs",
+    "test_bulk.Bulk.test_reused_queue_fault_stops_new_work_and_joins_started_work",
+    "test_bulk.Bulk.test_source_alias_and_traversal_refused",
+    "test_bulk.Bulk.test_streaming_stage_requires_actual_limits_done_exit_and_cleanup",
+    "test_bulk.Bulk.test_wrong_record_hash_size_or_child_refused_before_publish"
+  ],
+  "source_sha256": {
+    "bulk.py": "1a71e6f1d13d81d326b99be6613b19ed1dc898ac52259fdcf870ca0550ec75fb",
+    "test_bulk.py": "f451a80ba3661f749c2196583a6e8686ec3298573117b34275ea2a07bc576c9c",
+    "run_cpu.py": "d82618e2e7888e51e8dcc3251bda96e82503facf76231e24ae17d9cf9fedcebe"
+  },
+  "returncode": 0,
+  "failures": 0,
+  "errors": 0,
+  "input_sha256": {
+    "iq3s-conversion-v1/convert.py": "8bad9fd42a851bf5571f34f8727c19a88668e619f470cea046784b4a4a1bb574",
+    "iq3s-conversion-v1/SOURCE_PLAN.json": "9351465edc3ea4b4a3763552438d0309bbdbf913d434a2623a45f55dba81e54b",
+    "iq3s-conversion-v1/PLATFORM_ARTIFACTS.json": "e99ed17f0d5876211d058c9d4533a4798d8473e6ed2af170340d97c5c33cc68e",
+    "iq3s-conversion-v1/BOTH_HOST_CPU_FIRST.json": "4a6fdb4afc2f65b9cf7230ca66b060c9bbea64c7c577f138764a34f97f547f92",
+    "placement-native-build-v1/build_current.py": "60022606724b5b447056c0d54e0ea8c0f163359673b640cea0cd659abce26916",
+    "base-acquisition-v2/ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+    "shared_driver": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "observed": {
+    "pid": 2063452,
+    "ppid": 2063451,
+    "pgid": 2063452,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "scope": "Small bulk receipt/ordering/source/ownership controls only; no assets, conversion or model execution"
+}

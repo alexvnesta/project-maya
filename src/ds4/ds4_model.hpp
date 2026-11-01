@@ -38,6 +38,13 @@ struct Options {
     // (--profile-out) where save_profile() also writes what this run routed alone: the counts read at the load taken off
     std::string profile_out;
     bool expert_cache = true;         // experts move between VRAM and the CPU lane as they are used
+    // Diagnostic only: write actual trunk placement, then stop before routed-expert loading or inference.
+    // Requires static GGUF placement, three configured DSpark blocks, and no helper/RAM-store mode.
+    std::string placement_plan;
+    // Static CPU-only original-MXFP4 sidecar; GPU experts retain the pack's IQ
+    // bytes. map pins the descriptor's original source map; identity is the
+    // externally verified full-artifact SHA used to segregate session caches.
+    std::string cpu_native, cpu_native_map, cpu_native_identity;
     // the CPU lane's experts read in place from the model's files, the page cache keeping what fits, instead of
     // copied into RAM: 1 on, 0 off, -1 (auto) where the RAM this process can get does not hold them
     int mmap_experts = -1;

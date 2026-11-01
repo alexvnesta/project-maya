@@ -1,0 +1,41 @@
+{
+  "both_physical_hosts_passed": true,
+  "controls_each_host": 16,
+  "source_map": {
+    "acquire.py": "8b9dfee27d261673d19f6358e020fd2812a4aad6c317d74e19c9082e165d866c",
+    "test_acquire.py": "b1e9de1c55c28d505ff63a81a2a0c04912a78e5b9effee649cc403de614fdfe3",
+    "run_cpu.py": "75e959ba5d66c29e1e8a1a8fbd316d2a45102cf6539f28b0ce30f95cecde80ed",
+    "ASSET_MANIFEST.json": "68503758fd9ca619be1a165ce506809dd45e3bc23cd754f9c1220b9e82132df4"
+  },
+  "input_map": {
+    "index": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+    "metadata": "f4f8d13ede75d7ad4918c602d6b5f3e0c6981f2afa4f8e7bc685d4292d51045a",
+    "legacy_transport": "5a1b1041ea0e1dc3488dc2259302eb5bbe610a5297a1ca000c3cc1f4a6d1d4b7",
+    "legacy_qualification": "1b6065d122dcbfebbd6ae36e7cccf39e9da9a25fe9fdf7ed0f19f88a7097e95e",
+    "legacy_health": "4f40c04a69701cf86e478bdf4f13a021de05f18fae1b943fcd7b88aee19295fd",
+    "lease_owner": "a765195c6fc6fe65e2d780bce3d166d28f181de722d68d725f7bceb568dd7380"
+  },
+  "test_ids": [
+    "test_acquire.Acquisition.test_CPU_receipt_requires_complete_controls_actual_bounds_and_clean_exit",
+    "test_acquire.Acquisition.test_actual_live_cpu_controller_ticks_and_exact_flock_identity_are_checked",
+    "test_acquire.Acquisition.test_admitted_qualified_bulk_coexists_with_healthy_endpoint_observations",
+    "test_acquire.Acquisition.test_all_three_roles_and_scales_are_required",
+    "test_acquire.Acquisition.test_dead_identity_or_foreign_cpu_lock_stops_before_endpoint",
+    "test_acquire.Acquisition.test_every_private_or_restoration_phase_defers_before_bulk_identity",
+    "test_acquire.Acquisition.test_exact_official_index_closure_is40_trunk_shards_and_correct_bytes",
+    "test_acquire.Acquisition.test_foreign_revision_duplicate_metadata_and_nonlfs_refused",
+    "test_acquire.Acquisition.test_full_remaining_disk_budget_includes_native_and_two_overlays_once",
+    "test_acquire.Acquisition.test_healthy_fault_and_owner_change_still_stop_passive_work",
+    "test_acquire.Acquisition.test_initial_admission_never_allows_even_qualified_cpu_conversion",
+    "test_acquire.Acquisition.test_meaningful_snapshot_ignores_unrelated_state_progress",
+    "test_acquire.Acquisition.test_normal_bulk_completion_race_rechecks_only_meaningful_state_once",
+    "test_acquire.Acquisition.test_only_exact_qualified_conversion_is_normalized_after_admission",
+    "test_acquire.Acquisition.test_private_and_foreign_build_deferral_precedes_all_endpoints",
+    "test_acquire.Acquisition.test_transport_reuses_qualified_mechanics_with_only128mib_rate"
+  ],
+  "proofs": {
+    "mac": "52e45af039d4638c93fe58671abb81b135842e7cc683f27d8ac7267128e0267c",
+    "ubuntu": "4c78d7547bf762803dfb0a68c53882d721de074bd0d44a8e346533db9f3da99c"
+  },
+  "model_or_GPU_proof": false
+}

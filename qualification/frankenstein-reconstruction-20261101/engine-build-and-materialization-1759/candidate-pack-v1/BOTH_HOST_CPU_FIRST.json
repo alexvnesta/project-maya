@@ -1,0 +1,35 @@
+{
+  "both_physical_hosts_passed": true,
+  "controls_each_host": 6,
+  "source_sha256": {
+    "metadata.py": "698eb6a156ad5b1f86d788f3acc5b79c3381b0d8de7083414c030450c73ecb1e",
+    "test_metadata.py": "deca43b2198c129721b4e0da25a3f95333404019ede8be0673c9f635ac1cb55c",
+    "run_cpu.py": "f9a2a99ba11a8cf63c3825465fde129867c6f0eff4a32498fc0e927ec29682af"
+  },
+  "input_sha256": {
+    "BASE_METADATA_PINS.json": "a41f64286a25dcef9a21ac36eeee3127896f595e7081c8b79bebbd551a14726b",
+    "base-metadata/ds4.txt": "a075c437417cf74926702badea9737eeb19d2ebc8d9a0ce1fcecc383bc98e709",
+    "base-metadata/tensors.txt": "ed50bff5a053206f7b26396e0a3226d3a59848e39edc6c2eea91d5865f1b6d88",
+    "base-metadata/engram.bin": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142",
+    "base-metadata/tokenizer/vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+    "base-metadata/tokenizer/merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+    "base-metadata/tokenizer/token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+    "base-metadata/tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "base-metadata/tokenizer/chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+    "shared/iq3s-overlay-v1/overlay.py": "39007a9aa2c108373550bcdf8142b6ad3a16098d215ac5f4036814a955195260",
+    "shared/iq3s-overlay-v1/SOURCE_PLAN.json": "9351465edc3ea4b4a3763552438d0309bbdbf913d434a2623a45f55dba81e54b"
+  },
+  "test_ids": [
+    "test_metadata.Metadata.test_actual_complete_metadata_rewrite_and_exact_target_coverage",
+    "test_metadata.Metadata.test_changed_metadata_refused",
+    "test_metadata.Metadata.test_every_unchanged_asset_points_to_retained_actual_source",
+    "test_metadata.Metadata.test_missing_metadata_refused",
+    "test_metadata.Metadata.test_missing_original_role_or_wrong_offset_refused",
+    "test_metadata.Metadata.test_tokenizer_template_and_engram_index_are_byte_identical"
+  ],
+  "proofs": {
+    "mac": "42418f9e6a6a2e61352650ffa9057f08c2bdf2a2c501935ad2ecbe435810fdbb",
+    "ubuntu": "a445e1130e349d7eda0d2379d347719dd1f8e07b91047c5f3b5d0e5b61a0708f"
+  },
+  "model_or_GPU_proof": false
+}

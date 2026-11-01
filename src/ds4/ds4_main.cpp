@@ -137,6 +137,7 @@ void usage() {
                  "maya-ds4 --pack <model>/maya-ds4 --pack-info [--expert-profile FILE]   the pack described: no GPU, no "
                  "weights read\n"
                  "maya-ds4 --version   the release and the commit it was built from\n"
+                 "maya-ds4 --pack ... --placement-plan OUT --no-expert-cache --mmap-experts off --dspark on   GPU placement only; no inference\n"
                  "maya-ds4 --pack ... --profile-run FILE [--profile-out OUT]   an expert profile from a corpus (a line "
                  "of ids each)\n"
                  "           [--profile-readonly] [--profile-out OUT]   any run: the profile never written back; this "
@@ -3538,6 +3539,30 @@ int main(int argc, char** argv) {
         else if (a == "--profile-run") prof_run = val("--profile-run");
         else if (a == "--profile-out") prof_out = val("--profile-out");
         else if (a == "--profile-readonly") o.profile_readonly = true;
+        else if (a == "--cpu-native" || a == "--cpu-native-map" || a == "--cpu-native-identity") {
+            std::string& target = a == "--cpu-native" ? o.cpu_native :
+                                  a == "--cpu-native-map" ? o.cpu_native_map : o.cpu_native_identity;
+            if (!target.empty()) {
+                std::fprintf(stderr, "%s may be supplied only once\n", a.c_str());
+                return 2;
+            }
+            target = val(a.c_str());
+            if (target.empty()) {
+                std::fprintf(stderr, "%s needs a nonempty value\n", a.c_str());
+                return 2;
+            }
+        }
+        else if (a == "--placement-plan") {
+            if (!o.placement_plan.empty()) {
+                std::fprintf(stderr, "--placement-plan may be supplied only once\n");
+                return 2;
+            }
+            o.placement_plan = val("--placement-plan");
+            if (o.placement_plan.empty()) {
+                std::fprintf(stderr, "--placement-plan needs a nonempty absolute output path\n");
+                return 2;
+            }
+        }
         else if (a == "--spec-eval") spec_eval_path = val("--spec-eval");
         else if (a == "--sampler-test") sampler_n = (int) num("--sampler-test", 50, 1e6, true);
         else if (a == "--layer-split") (void) val("--layer-split");   // the server's (this engine balances its own split)
@@ -3551,6 +3576,24 @@ int main(int argc, char** argv) {
         }
     }
     if (o.verbose) std::fprintf(stderr, "ds4: build %s (Maya %s)\n", MAYA_BUILD_ID, MAYA_RELEASE);
+    if (!o.cpu_native.empty() || !o.cpu_native_map.empty() || !o.cpu_native_identity.empty()) {
+        const auto hex = [](const std::string& v) {
+            return v.size() == 64 && std::all_of(v.begin(), v.end(), [](char c) {
+                return (c >= '0' && c <= '9') || (c >= 'a' && c <= 'f');
+            });
+        };
+        if (o.cpu_native.empty() || !hex(o.cpu_native_map) || !hex(o.cpu_native_identity) ||
+            describe || !o.placement_plan.empty() || o.tp != 1 || o.expert_cache ||
+            !o.dspark || o.mmap_experts != 0 || o.seqs != 1 || o.experts != 0) {
+            std::fprintf(stderr, "--cpu-native requires both exact pins, TP1/static/all-RAM/DSpark, and one sequence\n");
+            return 2;
+        }
+        o.profile_readonly = true;
+    }
+    if (describe && !o.placement_plan.empty()) {
+        std::fprintf(stderr, "--placement-plan cannot be combined with --pack-info\n");
+        return 2;
+    }
     if (describe) {   // the pack's description alone, before anything that would touch a GPU
         if (o.pack.empty()) {
             usage();
@@ -3574,8 +3617,16 @@ int main(int argc, char** argv) {
         std::fprintf(stderr, "--sampler-test needs --ids (a prompt whose next tokens are open)\n");
         return 2;
     }
+    if (!o.placement_plan.empty()) {
+        if (serve_mode || !ids_s.empty() || !images.empty() || !enc_rgb.empty() || !ppl.empty() || !prof_run.empty() ||
+            !spec_eval_path.empty() || sampler_n > 0 || o.expert_cache || !o.dspark || o.seqs != 1) {
+            std::fprintf(stderr, "--placement-plan is standalone, with --no-expert-cache and DSpark enabled\n");
+            return 2;
+        }
+        o.profile_readonly = true;
+    }
     if (o.pack.empty() || (!serve_mode && ids_s.empty() && enc_rgb.empty() && ppl.empty() && prof_run.empty() &&
-                           spec_eval_path.empty())) {
+                           spec_eval_path.empty() && o.placement_plan.empty())) {
         usage();
         return 2;
     }
@@ -3620,6 +3671,7 @@ int main(int argc, char** argv) {
         std::fprintf(stderr, "maya-ds4: %s\n", err.c_str());
         return 1;
     }
+    if (!o.placement_plan.empty()) return 0;
     if (!o.vision_only) std::fprintf(stderr, "%s", m.describe().c_str());
     if (dspark_on_asked && !o.vision_only && !m.has_drafter())
         std::fprintf(stderr, "maya-ds4: warning: --dspark on, but this pack has no DSpark drafter blocks (mtp.* tensors): "

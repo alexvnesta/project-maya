@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "metadata_only": true,
+  "weights_ready": false,
+  "all8_base_terminal_sha256": "f0a3afafa55e93fc3aff35a375cfecac74e003e06bed18de856edcce4972713d",
+  "outputs": {
+    "ds4.txt": {
+      "bytes": 1509,
+      "sha256": "84c3288df6a624d742a69ccf0d8a68db3a1d2c73b02e4f513e73db4d43a1b210"
+    },
+    "tensors.txt": {
+      "bytes": 3711161,
+      "sha256": "837d2aad0a5597c95ad7d69492dce66f609437a3f5f372ddf053aa2853b98d37"
+    },
+    "engram.bin": {
+      "bytes": 517980,
+      "sha256": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142"
+    },
+    "tokenizer/vocab.json": {
+      "bytes": 2730577,
+      "sha256": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+    },
+    "tokenizer/merges.txt": {
+      "bytes": 1504833,
+      "sha256": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147"
+    },
+    "tokenizer/token_type.json": {
+      "bytes": 387840,
+      "sha256": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e"
+    },
+    "tokenizer/tokenizer.json": {
+      "bytes": 80,
+      "sha256": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f"
+    },
+    "tokenizer/chat_template.jinja": {
+      "bytes": 18498,
+      "sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16"
+    }
+  },
+  "selected_binding": {
+    "invocation": "6bd4a6d9c93243ce999dca37f7ce7f79",
+    "main_pid": 1166336,
+    "native_pid": 1166373,
+    "native_start_ticks": 179586297
+  },
+  "source_sha256": {
+    "metadata.py": "698eb6a156ad5b1f86d788f3acc5b79c3381b0d8de7083414c030450c73ecb1e",
+    "test_metadata.py": "deca43b2198c129721b4e0da25a3f95333404019ede8be0673c9f635ac1cb55c",
+    "run_cpu.py": "f9a2a99ba11a8cf63c3825465fde129867c6f0eff4a32498fc0e927ec29682af"
+  },
+  "CPU_test_ids": [
+    "test_metadata.Metadata.test_actual_complete_metadata_rewrite_and_exact_target_coverage",
+    "test_metadata.Metadata.test_changed_metadata_refused",
+    "test_metadata.Metadata.test_every_unchanged_asset_points_to_retained_actual_source",
+    "test_metadata.Metadata.test_missing_metadata_refused",
+    "test_metadata.Metadata.test_missing_original_role_or_wrong_offset_refused",
+    "test_metadata.Metadata.test_tokenizer_template_and_engram_index_are_byte_identical"
+  ],
+  "scope": "Base metadata plus exact3840IQ3S tensor offsets. Actual overlay, native payload and GPU qualification still required."
+}

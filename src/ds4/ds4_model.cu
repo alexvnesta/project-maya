@@ -16,6 +16,8 @@
 #include "ds4_ablate.hpp"
 #include "ds4_engram_io.hpp"
 #include "ds4_draft_placement.hpp"
+#include "ds4_placement_plan.hpp"
+#include "ds4_cpu_native.hpp"
 
 #include "ds4_gguf.cuh"
 #if defined(STRATA_USE_HIP)
@@ -70,6 +72,7 @@
 #include <mutex>
 #include <numeric>
 #include <sstream>
+#include <stdexcept>
 #include <thread>
 #include <unordered_map>
 
@@ -1447,6 +1450,11 @@ struct Model::Impl {
     std::atomic<int64_t> eg_pf_rows_n{0}, eg_pf_hits_n{0}, eg_pf_reads_n{0}, eg_pf_wait_ns{0}, eg_pf_io_ns{0};
     uint16_t* h_emb = nullptr;        // the window's embedding rows
     std::vector<float> c_xh, c_xsb, c_acc, c_xhd, c_xsd, c_accd, c_yd;
+    s2native::Plan cpu_native_plan;
+    std::vector<uint8_t> cpu_native_data;
+    std::mutex cpu_native_mu; // The prompt's CPU route and decode share CPU scratch/pools.
+    size_t cpu_native_iq_ram_bytes = 0;
+    std::atomic<uint64_t> cpu_native_prompt_rows{0}, cpu_native_decode_rows{0};
     Exl3Lane lane_x;                            // (cpu_experts' view of them, ds4_cpu_exl3.hpp)
     // the state
     int64_t pos = 0;
@@ -3229,6 +3237,41 @@ struct Model::Impl {
     // ---- loading
     bool load(const Options& opt, std::string& err) {
         o = opt;
+        if (!o.cpu_native.empty()) {
+            const auto hex = [](const std::string& v) {
+                return v.size() == 64 && std::all_of(v.begin(), v.end(), [](char c) {
+                    return (c >= '0' && c <= '9') || (c >= 'a' && c <= 'f');
+                });
+            };
+            // Match the exact variables consumed by copy_experts/flow/lane,
+            // rather than accepting an alias that those paths would ignore.
+            const char* require_ram = std::getenv("DS4_REQUIRE_ALL_RAM");
+            const char* flow = std::getenv("DS4_FLOW");
+            const char* stream = lane_env();
+            if (!hex(o.cpu_native_map) || !hex(o.cpu_native_identity) || !o.placement_plan.empty() ||
+                o.tp != 1 || o.expert_cache || !o.dspark || o.vision_only || o.seqs != 1 || o.experts != 0 ||
+                o.mmap_experts != 0 || !require_ram || std::string(require_ram) != "1" ||
+                (flow && std::atoi(flow) == 0) || !stream || std::string(stream) != "0" || store_request() != 0.0 ||
+                ds4_env("DS4_HELPER") || ds4_env("DS4_HELPER_GB") || ds4_env("DS4_COPY_SWAP") ||
+                ds4_env("DS4_RAM_GB") || ds4_env("DS4_RAM_TIER") || ds4_env("DS4_STREAM_GB") ||
+                ds4_env("DS4_STREAM_WIN") || ds4_env("DS4_STREAM_ZC") || ds4_env("DS4_LAND")) {
+                err = "native CPU sidecar requires TP1/static/all-RAM/DSpark/flow, no helper/store/swap/stream tier";
+                return false;
+            }
+            o.profile_readonly = true;
+        } else if (!o.cpu_native_map.empty() || !o.cpu_native_identity.empty()) {
+            err = "native CPU sidecar pins require the explicit sidecar";
+            return false;
+        }
+        if (!o.placement_plan.empty()) {
+            if (o.expert_cache || !o.dspark || o.vision_only || o.seqs != 1 || o.experts != 0 ||
+                o.mmap_experts != 0 || ram_tier || store_request() != 0.0 ||
+                ds4_env("DS4_HELPER") != nullptr || ds4_env("DS4_HELPER_GB") != nullptr) {
+                err = "placement plan requires static all-RAM GGUF/DSpark policy, no helper/store, one sequence";
+                return false;
+            }
+            if (!placement_plan_path(o.placement_plan, err)) return false;
+        }
         const double t0 = now_ms();
         if (!pk.load(o.pack, err)) return false;
         // (AMD: the prompt GEMMs' measured kernels) the pack's lt-picks.txt, or MAYA_DS4_LT_STORE's file - empty: none,
@@ -3237,6 +3280,16 @@ struct Model::Impl {
         if (lt_store == nullptr) lt_store = std::getenv("DS4_LT_STORE");
         lt::set_store(lt_store != nullptr ? lt_store : (o.pack + "/lt-picks.txt").c_str());
         g.from(pk);
+        if (!o.cpu_native.empty() && (!pk.gguf || g.nl != 40 || g.n_exp != 384 ||
+                                     g.n_mtp != 3 || g.dim != 5120 || g.ff != 2304 || o.prefill_chunk <= 0)) {
+            err = "native CPU sidecar requires complete DeepSeek-V4.1 GGUF geometry";
+            return false;
+        }
+        if (!o.placement_plan.empty() && (!pk.gguf || g.nl != 40 || g.n_exp != 384 ||
+                                        g.n_mtp != 3 || g.dim != 5120 || g.ff != 2304)) {
+            err = "placement plan requires the complete DeepSeek-V4.1 GGUF trunk/drafter geometry";
+            return false;
+        }
         if (g.dim == 0 || g.nl == 0 || (int) g.ratios.size() < g.nl) {
             err = o.pack + "/ds4.txt: incomplete geometry";
             return false;
@@ -4363,8 +4416,56 @@ struct Model::Impl {
         // the experts: VRAM slots in what each device has left (after the PCIe lane's staging slots), the rest on the host
         if (!lane_alloc(err)) return false;
         if (!place_experts(err)) return false;
+        if (!o.placement_plan.empty()) {
+            // Source-bound initialization diagnostic; never load experts or enter a serving loop.
+            if (!pk.gguf || o.expert_cache || g.nl != 40 || g.n_exp != 384 || g.n_mtp != 3 ||
+                helper_id >= 0 || ram_tier || store_request() != 0.0 || o.seqs != 1 ||
+                prof.size() < (size_t) g.nl * g.n_exp) {
+                err = "placement plan requires static GGUF/DSpark trunk, no helper/store, and one sequence";
+                return false;
+            }
+            std::vector<PlacementPlanLayer> plan;
+            for (int il = 0; il < g.nl; ++il) {
+                const Layer& l = L[(size_t) il];
+                if (l.mtp || l.lay.fmt != gg::kFmtMXFP4 || l.n_exp != 384) {
+                    err = "placement plan requires regular per-role GGUF expert matrices";
+                    return false;
+                }
+                PlacementPlanLayer row;
+                row.slots = l.slot;
+                row.members = l.nm;
+                row.counts.assign(prof.begin() + (size_t) il * g.n_exp,
+                                  prof.begin() + (size_t) (il + 1) * g.n_exp);
+                for (int r = 0; r < 3; ++r) {
+                    row.role_bytes[(size_t) r] = mx_part_bytes(l, r);
+                    row.role_types[(size_t) r] = gg::expert_type(l.lay, r);
+                }
+                plan.push_back(std::move(row));
+            }
+            std::string json;
+            if (!placement_plan_json(o.max_context, chunk, g.n_mtp, plan, json, err) ||
+                !placement_plan_write(o.placement_plan, json, err)) return false;
+            return true;
+        }
         if (helper_id >= 0 && !helper_select(err)) return false;
+        if (!o.cpu_native.empty() && !load_cpu_native(err)) return false;
         if (!load_experts(err)) return false;
+        if (cpu_native_plan.placement_verified()) {
+            uint64_t actual_iq = 0;
+            for (const Layer& l : L)
+                for (int e = 0; e < l.n_exp; ++e)
+                    if (l.slot[(size_t) e] < 0 && !native_cpu_selected(l, e)) {
+                        if (!copy_mode || l.ram.empty() || l.ram[(size_t) e] < 0) {
+                            err = "native CPU sidecar: remaining IQ CPU expert lacks its required RAM copy";
+                            return false;
+                        }
+                        actual_iq += l.blob;
+                    }
+            if (actual_iq != cpu_native_iq_ram_bytes) {
+                err = "native CPU sidecar: actual IQ RAM allocation differs from admitted byte budget";
+                return false;
+            }
+        }
         if (copy_swap && copy_mode) {   // (DS4_COPY_SWAP: after the copies)
             if (const char* v = cs_env("COPY_SWAP_MARGIN")) cs_margin = (float) std::atof(v);
             if (const char* v = cs_env("COPY_SWAP_EVERY")) cs_every = std::max(1, std::atoi(v));
@@ -4607,6 +4708,17 @@ struct Model::Impl {
 #if defined(STRATA_USE_HIP)
         if (!init_peer_ar(err)) return false; // after expert placement: optional scratch does not shrink the expert cache
 #endif
+        if (cpu_native_plan.placement_verified()) {
+            for (int il = 24; il <= 28; ++il) {
+                const Layer& l = L[(size_t) il];
+                if (l.dev < 0 || (size_t) l.dev >= chunks.size() || !chunks[(size_t) l.dev] ||
+                    !chunks[(size_t) l.dev]->flow) {
+                    err = "native CPU sensitive-layer prompt path has no flow; refusing IQ fallback";
+                    return false;
+                }
+            }
+            if (!check_native_cpu_math(err)) return false;
+        }
         tune_lane();   // (before calibrate_paths: its CPU-lane speed is the chosen pools')
         pick_len = chunk > 0 ? prompt_pick_length(ds4_env("DS4_PROMPT_PICK")) : 0;
         if (pick_len > 0)
@@ -5749,6 +5861,7 @@ struct Model::Impl {
         const bool early = c.it_spec < 2u * (uint64_t) c.ring_n || (double) c.it_spec_unused <= waste * (double) c.it_spec;
         for (int e : l.host_list) {
             if (!early) break;
+            if (native_cpu_prompt(l, e)) continue;
             const double p = sum > 0 ? pr[e] / sum : 0.0;
             const double q = p >= 1.0 ? 1.0 : 1.0 - std::exp(picks * std::log1p(-p));
             if (q >= spec_q && spec_q <= 1.0) cand.push_back({q, e});
@@ -5763,8 +5876,11 @@ struct Model::Impl {
             vs[x.second] = l.pv_n + j++;
             is[(size_t) x.second] = 1;
         }
-        for (int e : l.host_list)
-            if (!is[(size_t) e]) vs[e] = l.pv_n + j++;
+        // CPU-only prompt rows are a trailing virtual-slot run. Leaving holes
+        // between streamed items would make their batched bounds assign those
+        // CPU rows to an adjacent GPU expert.
+        s2native::append_prompt_slots(l.host_list, is, [&](int e) { return native_cpu_prompt(l, e); },
+                                      l.pv_n + j, vs);
         for (const auto& x : cand) flow_push(c, l, mi, k, x.second, vs[x.second]);
         c.n_spec = (int) cand.size();
         c.it_spec += cand.size();
@@ -5779,6 +5895,7 @@ struct Model::Impl {
             if (b[(size_t) v + 1] == b[(size_t) v]) ++c.it_spec_unused;
         }
         for (int e : l.host_list) {   // (index order: their virtual slots ascending)
+            if (native_cpu_prompt(l, e)) continue;
             const int v = vs[e];
             if (v >= l.pv_n + c.n_spec && b[(size_t) v + 1] > b[(size_t) v]) flow_push(c, l, mi, k, e, v);
         }
@@ -6047,10 +6164,65 @@ struct Model::Impl {
             v_done = v_to;
         }
         if (!run_vram(d, c, L0, vx, vx, b.data(), v_done, L0.pv_n, T, err)) return false;
+        if (!flow_native_cpu(d, c, L0, T, b, err)) return false;
         while (c.base < c.n_comp && c.items.size() > 4096) {   // (done with: read, copied and used)
             flow_unpin(c.items.front());
             c.items.pop_front();
             ++c.base;
+        }
+        return true;
+    }
+
+    bool flow_native_cpu(Dev& d, Chunk& c, const Layer& l, int T, const std::vector<int>& bounds,
+                         std::string& err) {
+        if (!cpu_native_plan.placement_verified() || l.il < 24 || l.il > 28) return true;
+        if (l.nm != 1 || !c.flow || T < 1 || T > c.C) {
+            err = "native CPU prompt path requires a complete TP1 flow chunk";
+            return false;
+        }
+        const int D = g.dim;
+        std::vector<int> row_tok((size_t) T * l.k_exp);
+        std::vector<uint16_t> x16((size_t) T * D);
+        // Match the prompt GPU path's FP16 input rounding. All rows are batched;
+        // no fixed-cap fallback to the pack's IQ weights is permitted here.
+        CK(cudaMemcpyAsync(row_tok.data(), c.row_tok, row_tok.size() * sizeof(int), cudaMemcpyDeviceToHost, d.st));
+        CK(cudaMemcpyAsync(x16.data(), c.x16, x16.size() * sizeof(uint16_t), cudaMemcpyDeviceToHost, d.st));
+        CK(cudaStreamSynchronize(d.st));
+        std::vector<float> input((size_t) kc::kExl3CpuMaxN * D), output(input.size());
+        for (int e : l.host_list) {
+            if (!native_cpu_prompt(l, e)) continue;
+            const int v = l.vs_pin[e];
+            if (v < 0 || (size_t) (v + 1) >= bounds.size() || bounds[(size_t) v] < 0 ||
+                bounds[(size_t) v + 1] < bounds[(size_t) v] ||
+                (size_t) bounds[(size_t) v + 1] > row_tok.size()) {
+                err = "native CPU prompt path: invalid complete sorted bounds";
+                return false;
+            }
+            for (int a = bounds[(size_t) v]; a < bounds[(size_t) v + 1];) {
+                const int n = std::min(kc::kExl3CpuMaxN, bounds[(size_t) v + 1] - a);
+                Ent en;
+                en.e = e; en.n = n; en.slot0 = 0;
+                for (int r = 0; r < 3; ++r) en.src[r] = native_cpu_role(l, e, r);
+                for (int i = 0; i < n; ++i) {
+                    const int token = row_tok[(size_t) a + i];
+                    if (token < 0 || token >= T) { err = "native CPU prompt path: invalid token row"; return false; }
+                    en.tok[i] = i;
+                    for (int j = 0; j < D; ++j)
+                        input[(size_t) i * D + j] = f16_to_f32(x16[(size_t) token * D + j]);
+                }
+                {
+                    std::lock_guard<std::mutex> lock(cpu_native_mu);
+                    cpu_experts_mx(l, input.data(), std::vector<Ent>{en}, D, nullptr, true);
+                    std::copy_n(c_yd.data(), (size_t) n * D, output.data());
+                    cpu_native_prompt_rows.fetch_add((uint64_t) n, std::memory_order_relaxed);
+                }
+                CK(cudaMemcpyAsync(c.y, output.data(), (size_t) n * D * sizeof(float), cudaMemcpyHostToDevice, d.st));
+                moe_combine(c.acc, c.y, c.pos, c.rw, T, l.k_exp, a, a + n, D, d.st);
+                // The host output and shared c.y scratch must remain unchanged
+                // until both the upload and combine have consumed this batch.
+                CK(cudaStreamSynchronize(d.st));
+                a += n;
+            }
         }
         return true;
     }
@@ -7262,6 +7434,131 @@ struct Model::Impl {
         return true;
     }
 
+    bool native_cpu_selected(const Layer& l, int e) const {
+        return !l.mtp && cpu_native_plan.selected(l.il, e);
+    }
+    bool native_cpu_prompt(const Layer& l, int e) const {
+        // The author's sensitive-layer prompt path; elsewhere the prompt still
+        // uses the pack's IQ GPU bytes, while CPU decode uses original MXFP4.
+        return l.il >= 24 && l.il <= 28 && native_cpu_selected(l, e);
+    }
+    const uint8_t* native_cpu_role(const Layer& l, int e, int r) const {
+        uint64_t off = 0, bytes = 0;
+        std::string why;
+        if (!cpu_native_plan.role_range(l.il, e, r, off, bytes, why) ||
+            off < s2native::Plan::HeaderBytes || bytes > cpu_native_data.size() ||
+            off - s2native::Plan::HeaderBytes > cpu_native_data.size() - bytes)
+            throw std::runtime_error("invalid native CPU role after placement validation");
+        return cpu_native_data.data() + off - s2native::Plan::HeaderBytes;
+    }
+    bool load_cpu_native(std::string& err) {
+        if (ram_tier || copy_swap || helper_id >= 0 || chunk <= 0) {
+            err = "native CPU sidecar: incompatible tier/swap/helper/prompt configuration";
+            return false;
+        }
+        namespace fs = std::filesystem;
+        const fs::path path(o.cpu_native);
+        std::error_code ec;
+        if (!path.is_absolute() || path.lexically_normal() != path ||
+            fs::weakly_canonical(path, ec) != path || ec || !fs::is_regular_file(path) ||
+            fs::hard_link_count(path) != 1) {
+            err = "native CPU sidecar: one real absolute regular file required";
+            return false;
+        }
+        const auto stamp = fs::last_write_time(path);
+        struct Reader {
+            os::fd_t fd = os::kBadFd;
+            ~Reader() { os::close_fd(fd); }
+        } source;
+        source.fd = os::open_ro(o.cpu_native);
+        const uint64_t size = os::file_size(source.fd);
+        if (source.fd == os::kBadFd || size != s2native::Plan::FileBytes) {
+            err = "native CPU sidecar: complete fixed-size original payload required";
+            return false;
+        }
+        std::array<uint8_t, 32> source_map{};
+        const auto nibble = [](char c) { return c <= '9' ? c - '0' : c - 'a' + 10; };
+        for (size_t i = 0; i < source_map.size(); ++i)
+            source_map[i] = (uint8_t) ((nibble(o.cpu_native_map[2 * i]) << 4) | nibble(o.cpu_native_map[2 * i + 1]));
+        std::vector<uint8_t> header((size_t) s2native::Plan::HeaderBytes);
+        if (!os::pread_full(source.fd, header.data(), header.size(), 0) ||
+            !s2native::Plan::parse(header, size, source_map, cpu_native_plan, err)) return false;
+        std::vector<int> slots;
+        std::vector<uint32_t> counts;
+        for (int il = 0; il < g.nl; ++il) {
+            const Layer& l = L[(size_t) il];
+            if (l.nm != 1 || l.mtp || l.n_exp != 384 || l.lay.fmt != gg::kFmtMXFP4 ||
+                (il >= 24 && il <= 28 && std::string(gg::type_name(gg::expert_type(l.lay, 0))) != "IQ3_S")) {
+                err = "native CPU sidecar: actual TP1/IQ3_S sensitive-layer geometry changed";
+                return false;
+            }
+            slots.insert(slots.end(), l.slot.begin(), l.slot.end());
+            counts.insert(counts.end(), prof.begin() + (size_t) il * g.n_exp,
+                          prof.begin() + (size_t) (il + 1) * g.n_exp);
+        }
+        if (!cpu_native_plan.verify_placement(counts, slots, err)) return false;
+        uint64_t iq_bytes = 0;
+        for (const Layer& l : L) {
+            for (int e = 0; e < l.n_exp; ++e)
+                if (l.slot[(size_t) e] < 0 && !native_cpu_selected(l, e)) iq_bytes += l.blob;
+        }
+        const uint64_t room = ram_room(), need = iq_bytes + s2native::Plan::PayloadBytes;
+        if (room == ~uint64_t{0} || need > (80ull << 30) || room < need + (8ull << 30)) {
+            err = "native CPU sidecar: all IQ/native experts plus8GiB margin do not fit available RAM";
+            return false;
+        }
+        try { cpu_native_data.resize((size_t) s2native::Plan::PayloadBytes); }
+        catch (const std::bad_alloc&) { err = "native CPU sidecar: original payload allocation failed"; return false; }
+        if (!os::pread_full(source.fd, cpu_native_data.data(), cpu_native_data.size(), s2native::Plan::HeaderBytes) ||
+            os::file_size(source.fd) != size || fs::file_size(path) != size || fs::last_write_time(path) != stamp) {
+            err = "native CPU sidecar: complete stable payload read failed";
+            return false;
+        }
+        cpu_native_iq_ram_bytes = (size_t) iq_bytes;
+        std::fprintf(stderr, "ds4: native CPU:1870 original experts,3roles,%.3fGB; remaining IQ RAM %.3fGB; static placement verified\n",
+                     cpu_native_data.size() / 1e9, iq_bytes / 1e9);
+        return true;
+    }
+
+    bool check_native_cpu_math(std::string& err) {
+        // Compare the new forced-original dispatch with the established
+        // homogeneous MXFP4 CPU path on the very same original bytes. This is
+        // an expert arithmetic/pointer check, not model quality equivalence.
+        const auto& ids = cpu_native_plan.ids();
+        if (ids.size() != s2native::Plan::Count) { err = "native CPU check: incomplete IDs"; return false; }
+        std::lock_guard<std::mutex> lock(cpu_native_mu);
+        uint32_t seed = 0x51a7u;
+        for (int test = 0; test < 8; ++test) {
+            const auto id = ids[(size_t) ((test * 269) % s2native::Plan::Count)];
+            const Layer& l = L[(size_t) id.first];
+            Layer reference = l;
+            for (int r = 0; r < 3; ++r) reference.lay.gg_type[r] = gg::kTypeMXFP4;
+            const int n = test % 2 ? 4 : 1;
+            const size_t stride = (size_t) g.dim + (test % 3 ? 17u : 0u);
+            std::vector<float> x((size_t) n * stride, 0.f);
+            for (int row = 0; row < n; ++row)
+                for (int j = 0; j < g.dim; ++j) {
+                    seed = seed * 1664525u + 1013904223u;
+                    x[(size_t) row * stride + j] = (float) ((int) (seed >> 16) - 32768) / 32768.f;
+                }
+            Ent en;
+            en.e = id.second; en.n = n; en.slot0 = 0;
+            for (int row = 0; row < n; ++row) en.tok[row] = row;
+            for (int r = 0; r < 3; ++r) en.src[r] = native_cpu_role(l, en.e, r);
+            const std::vector<Ent> entries{en};
+            cpu_experts_mx(reference, x.data(), entries, stride, nullptr);
+            std::vector<float> expected(c_yd.begin(), c_yd.begin() + (size_t) n * g.dim);
+            cpu_experts_mx(l, x.data(), entries, stride, nullptr, true);
+            if (std::any_of(expected.begin(), expected.end(), [](float v) { return !std::isfinite(v); }) ||
+                std::memcmp(expected.data(), c_yd.data(), expected.size() * sizeof(float)) != 0) {
+                err = "native CPU check: original three-role dispatch differs or is nonfinite";
+                return false;
+            }
+        }
+        std::fprintf(stderr, "ds4: native CPU check:8 experts,3roles,1/4rows,strided; original MXFP4 path bit for bit\n");
+        return true;
+    }
+
     // a GGUF's VRAM experts, in file order, by a few threads through pinned staging blobs (the CPU lane's stay in the
     // file: the mapping reads them on first use)
     bool load_experts_mx(std::string& err) {
@@ -7349,7 +7646,7 @@ struct Model::Impl {
                 if (l.slot[(size_t) e] >= 0 || helper_owned(l, e)) {   // (the helper's: in its pool)
                     for (int r = 0; r < 3; ++r)
                         os::advise(pk.fds[(size_t) l.mx_file[r]], (l.mx_off[r] + (uint64_t) e * l.mx_stride[r]), mx_part_bytes(l, r), false);
-                } else {
+                } else if (!native_cpu_selected(l, e)) {
                     warm.push_back({l.il, e, sum > 0 ? p[e] / sum : 0.0});
                 }
             }
@@ -9389,7 +9686,9 @@ struct Model::Impl {
         for (int v : g.kv_src) id << v << ",";
         id << " ix=";
         for (int v : g.ix_src) id << v << ",";
-        id << " ds4.txt:" << size_of(pk.dir + "/ds4.txt") << " engram.bin:" << size_of(pk.dir + "/engram.bin")
+        id << " native_cpu=" << (cpu_native_plan.placement_verified() ? o.cpu_native_identity : "off")
+           << " native_cpu_map=" << (cpu_native_plan.placement_verified() ? o.cpu_native_map : "off")
+           << " ds4.txt:" << size_of(pk.dir + "/ds4.txt") << " engram.bin:" << size_of(pk.dir + "/engram.bin")
            << " tensors.txt:" << size_of(pk.dir + "/tensors.txt");
         for (size_t i = 0; i < pk.files.size(); ++i)
             id << " " << pk.files[i] << ":" << os::file_size(pk.fds[i]);
@@ -9907,8 +10206,10 @@ struct Model::Impl {
     // them, exact integer sums a block; every CPU tier the same bits): each token's input quantized once, whatever
     // number of entries take it, and each job its band of h straight into the down's int8 input.
     // (ord: the order the entries are computed in - their slots, so the sums, stay the same; null: as they are)
-    void cpu_experts_mx(const Layer& l, const float* x, const std::vector<Ent>& ents, size_t ldx, const int* ord) {
-        const bool mx_gu = gg::expert_type(l.lay, 0) == gg::kTypeMXFP4, mx_d = gg::expert_type(l.lay, 2) == gg::kTypeMXFP4;
+    void cpu_experts_mx(const Layer& l, const float* x, const std::vector<Ent>& ents, size_t ldx, const int* ord,
+                        bool original_native = false) {
+        const bool mx_gu = original_native || gg::expert_type(l.lay, 0) == gg::kTypeMXFP4,
+                   mx_d = original_native || gg::expert_type(l.lay, 2) == gg::kTypeMXFP4;
         if (!mx_gu && !mx_d) return cpu_experts_iq(l, x, ents, ldx, ord);
         if (!mx_gu || !mx_d) return cpu_experts_both(l, x, ents, ldx, ord, mx_gu);
         constexpr int RB = 64;   // rows a job (whole blocks of h: RB % 32 == 0)
@@ -9919,7 +10220,7 @@ struct Model::Impl {
         const bool band_q = FFh % 32 == 0;   // (each job's rows whole blocks of h)
         const float lim = g.lim;
         static_assert(kc::kExl3CpuMaxN <= gg::kMxCpuMaxN, "a CPU-lane entry's tokens in one call");
-        {   // the experts read from the files (not in the RAM tier) that are not resident: all their pages asked for at
+        if (!original_native) {   // Native selected experts already have complete original bytes in RAM.
             // once, so the SSD reads them with large requests side by side while the first entries compute
             // (os::prefetch_cold: the resident ones are left alone - the hint walks every page of a range, which cost
             // more than computing a warm expert, 0.34 ms a 6.3 MB matrix on Windows)
@@ -9929,6 +10230,11 @@ struct Model::Impl {
                     for (int r = 0; r < 3; ++r) want.push_back({mx_mat(l, en.e, r), mx_part_bytes(l, r)});
             os::prefetch_cold(want);
         }
+        const auto part = [&](const Ent& en, int r, int X) {
+            return original_native
+                ? en.src[r] + (size_t) X * (size_t) (mx_n(r) / NH) * gg::mx_row_bytes(r < 2 ? E : FF)
+                : ent_part(l, en, r, X);
+        };
         // the int8 inputs in c_xh's bytes: token t's (t < kWin) at t xa, then the slots' h at (kWin + slot) ha; a token
         // index past the window (none on the decode or chunk paths) gets a row of its own after them
         uint8_t* xq = (uint8_t*) c_xh.data();
@@ -9962,8 +10268,8 @@ struct Model::Impl {
                     up[i] = yu[i];
                 }
                 // (part X's rows, from where they are: a copy's part on node X, or the file's)
-                gg::mx_rows(ent_part(l, en, 0, X), gr, E, r0 - X * FFh, r1 - X * FFh, ap, en.n, gp);
-                gg::mx_rows(ent_part(l, en, 1, X), gr, E, r0 - X * FFh, r1 - X * FFh, ap, en.n, up);
+                gg::mx_rows(part(en, 0, X), gr, E, r0 - X * FFh, r1 - X * FFh, ap, en.n, gp);
+                gg::mx_rows(part(en, 1, X), gr, E, r0 - X * FFh, r1 - X * FFh, ap, en.n, up);
                 for (int i = 0; i < en.n; ++i) {
                     float* h = band_q ? yg[i] : c_xhd.data() + (size_t) (en.slot0 + i) * FF + r0;
                     for (int r = r0; r < r1; ++r) {
@@ -10002,7 +10308,7 @@ struct Model::Impl {
                     }
                     yp[i] = c_yd.data() + (size_t) (en.slot0 + i) * E + r0;
                 }
-                gg::mx_rows(ent_part(l, en, 2, X), dr, FF, r0 - X * Eh, r1 - X * Eh, ap, en.n, yp);
+                gg::mx_rows(part(en, 2, X), dr, FF, r0 - X * Eh, r1 - X * Eh, ap, en.n, yp);
             };
         run_nodes(ne * DB, f);
     }
@@ -10332,6 +10638,12 @@ struct Model::Impl {
 
     void cpu_experts(const Layer& l, const float* x, const std::vector<Ent>& ents, size_t ldx = 0,
                      const int* ord = nullptr) {
+        std::unique_lock<std::mutex> lock(cpu_native_mu, std::defer_lock);
+        if (cpu_native_plan.placement_verified()) lock.lock();
+        cpu_experts_unlocked(l, x, ents, ldx, ord);
+    }
+    void cpu_experts_unlocked(const Layer& l, const float* x, const std::vector<Ent>& ents, size_t ldx = 0,
+                             const int* ord = nullptr) {
         if (ldx == 0) ldx = (size_t) g.dim;
         static const bool stats = std::getenv("DS4_CPU_STATS") != nullptr;
         double tph = stats ? now_ms() : 0.0;
@@ -10345,6 +10657,19 @@ struct Model::Impl {
             ++cpu_calls;
             cpu_ents += (long) ents.size();
             for (const Ent& en : ents) cpu_rows += en.n;
+        }
+        if (!l.mtp && cpu_native_plan.placement_verified()) {
+            std::vector<Ent> native, iq;
+            s2native::partition_entries(ents, [&](int e) { return native_cpu_selected(l, e); },
+                [&](int e, int r) { return native_cpu_role(l, e, r); }, native, iq);
+            for (const Ent& en : native)
+                cpu_native_decode_rows.fetch_add((uint64_t) en.n, std::memory_order_relaxed);
+            if (!native.empty()) cpu_experts_mx(l, x, native, ldx, nullptr, true);
+            // A subset's entry order cannot use the original ord indices.
+            // Its original output slots are unchanged, so the consumer's sums
+            // retain their original pick order regardless of compute order.
+            if (!iq.empty()) cpu_experts_mx(l, x, iq, ldx, nullptr);
+            return;
         }
         if (l.packed_host) return cpu_experts_packed(l, x, ents, ldx, ord);
         if (l.lay.fmt == gg::kFmtMXFP4) return cpu_experts_mx(l, x, ents, ldx, ord);
@@ -20853,9 +21178,18 @@ struct Model::Impl {
         // kv=fp4: DeepSeek's own cache layout (the compressed KV and the index keys FP4, the window FP8)
         std::snprintf(b, sizeof b, "INFO context=%lld kv=fp4 kv_resident=%lld expert_slots=%d engine_kind=ds4 "
                                    "cpu_experts=%d ram_experts=%d cpu_threads=%d engine=ds4-0.1",
-                      (long long) o.max_context, (long long) o.max_context, g.nl * g.n_exp - nh, nh, ram_held,
+                      (long long) o.max_context, (long long) o.max_context, g.nl * g.n_exp - nh, nh,
+                      ram_held + (cpu_native_plan.placement_verified() ? s2native::Plan::Count : 0),
                       cpu_threads());
         v.push_back(b);
+        if (cpu_native_plan.placement_verified()) {
+            std::snprintf(b, sizeof b, "INFO native_cpu_experts=1870 native_cpu_bytes=%llu native_iq_ram_bytes=%llu "
+                                       "native_prompt_layers=24-28 native_prompt_rows=%llu native_decode_rows=%llu",
+                          (unsigned long long) cpu_native_data.size(), (unsigned long long) cpu_native_iq_ram_bytes,
+                          (unsigned long long) cpu_native_prompt_rows.load(),
+                          (unsigned long long) cpu_native_decode_rows.load());
+            v.push_back(b);
+        }
         // The helper is allocated separately from Dev::experts, including its recent-expert slots.
         const size_t helper_bytes = helper_pool != nullptr ? helper_used : 0;
         if (helper_bytes > 0) {
@@ -21209,7 +21543,9 @@ Model::Tiers Model::tiers() const {
         t.vram += l.n_vram;
         t.vram_gb += (double) l.n_vram * (double) l.blob / 1e9;
         t.cpu += l.n_exp - l.n_vram;
-        cb += (double) (l.n_exp - l.n_vram) * (double) l.blob;
+        for (int e = 0; e < l.n_exp; ++e)
+            if (l.slot[(size_t) e] < 0)
+                cb += m.native_cpu_selected(l, e) ? (double) s2native::Plan::ExpertBytes : (double) l.blob;
     }
     t.cpu_blob = t.cpu > 0 ? cb / t.cpu : 0;
     // in RAM: the copies (copy_experts / the RAM tier); in place, the read-ahead's share of the page cache; not in
@@ -21221,6 +21557,11 @@ Model::Tiers Model::tiers() const {
     if (m.store) t.ram = (int) std::min<size_t>((size_t) t.cpu, (size_t) t.ram + m.store->held());
     t.ram_gb = t.ram * t.cpu_blob / 1e9;
     t.disk_gb = std::max(0, t.cpu - t.ram) * t.cpu_blob / 1e9;
+    if (m.cpu_native_plan.placement_verified()) {
+        t.ram = m.ram_held + s2native::Plan::Count;
+        t.ram_gb = ((double) m.cpu_native_iq_ram_bytes + (double) m.cpu_native_data.size()) / 1e9;
+        t.disk_gb = 0; // Both subsets were strictly loaded into RAM; no disk decode fallback.
+    }
     return t;
 }
 

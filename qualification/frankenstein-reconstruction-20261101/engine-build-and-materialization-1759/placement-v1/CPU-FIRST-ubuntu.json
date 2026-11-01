@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "physical_host": "ubuntu",
+  "controls": 11,
+  "test_ids": [
+    "test_placement.Placement.test_actual_complete_map_and_sensitive_iq3_roles",
+    "test_placement.Placement.test_actual_memory_floor_is_bounded_without_lowering_requirement",
+    "test_placement.Placement.test_argv_is_diagnostic_only_same_capacity_and_drafter",
+    "test_placement.Placement.test_atomic_receipt_preserves_partial_residue_and_alias",
+    "test_placement.Placement.test_capacity_or_drafter_reductions_and_foreign_modes_refused",
+    "test_placement.Placement.test_cpu_proofs_require_both_physical_maps_ids_resources_and_clean_exit",
+    "test_placement.Placement.test_duplicate_holey_invalid_slots_and_empty_counts_refused",
+    "test_placement.Placement.test_environment_rebases_only_private_namespaces",
+    "test_placement.Placement.test_exact_new_namespace_and_preserved_existing_output",
+    "test_placement.Placement.test_owned_child_cleanup_never_signals_unrelated_pid",
+    "test_placement.Placement.test_wrong_total_bytes_context_drafter_quant_or_role_refused"
+  ],
+  "source_sha256": {
+    "placement.py": "b77f6262a90a756e843f237d6eec9bbb2b67627748bc6a3b4c52e90fe9106be5",
+    "test_placement.py": "427f6b79b236f604a52ee6578b3ef677d702d9dff1ba5ec88f84e8625e776379",
+    "run_cpu.py": "e63fe5254ecc23246c50a8b4b7bfd8f9565e1cd4aa89fc3b878f1b28dec191c2"
+  },
+  "input_sha256": {
+    "shared_driver": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71",
+    "base": "1516752104307ffc159fbb80afd972ccd43c5cb9a96cf3e47de126f62482d510",
+    "legacy": "9bd594247cecc13980d864780b778a66da08fcaf2b0a3ff5b386e84e33a1ad2c",
+    "startup": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "fence": "1038fad719fb7ed7516ab3e07d88d40fb3b5cd7408f6ed19ddc2296f13052cf5"
+  },
+  "observed": {
+    "pid": 2127650,
+    "ppid": 2127640,
+    "pgid": 2127650,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "failures": 0,
+  "errors": 0,
+  "returncode": 0,
+  "scope": "New placement policy and actual-map controls only; no GPU allocation, inference or service actions"
+}

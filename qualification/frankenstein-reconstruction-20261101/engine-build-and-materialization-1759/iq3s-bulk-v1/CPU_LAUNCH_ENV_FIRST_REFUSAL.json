@@ -1,0 +1,8 @@
+{
+  "status": "PREFLIGHT_LAUNCH_ENVIRONMENT_REFUSED_BEFORE_CPU_CHILD",
+  "model_or_service_actions": 0,
+  "CPU_test_child_started": false,
+  "reason": "env -i removed XDG_RUNTIME_DIR and the existing read-only guard could not query systemctl --user; no production fault observed",
+  "repair": "Use normal existing SSH environment for read-only selected guard; use the fixed isolated environment only for new data/test children, which do not query systemd",
+  "old_attempt_preserved": true
+}

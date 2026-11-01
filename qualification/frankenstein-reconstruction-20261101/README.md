@@ -1,6 +1,6 @@
 # S2-inspired Frankenstein reconstruction, November 1
 
-This is a new reconstruction effort after the earlier model comparison closed. Current production remains GSQ-RCO/native92/configc43, TP1/chunk4096. No new hybrid has been built, GPU-tested or deployed.
+This is a new reconstruction effort after the earlier model comparison closed. Current production remains GSQ-RCO/native92/configc43, TP1/chunk4096. The new hybrid engine compiled successfully on physical Ubuntu. Its IQ3_S overlay and remaining original-expert sources are being materialized. No hybrid GPU inference, speed comparison or default activation has occurred.
 
 The supplied October 30 followup changes the preferred target from the older document: use original Maya-S, IQ3_S gate/up on layers 24-28, and original MXFP4 for a selected CPU expert set, initially static. Exact private S2 IDs, calibration and engine commits remain unavailable. Public ingredients allow a local reconstruction; they do not establish byte-identical private S2 or its reported speed/quality.
 
@@ -8,13 +8,16 @@ The supplied October 30 followup changes the preferred target from the older doc
 
 | Component | Current evidence |
 |---|---|
-| Maya-S base | New isolated download namespace; same pinned revision and complete SHA manifest. First43 acquisition controls each physical Mac/Ubuntu. Transfer paused safely for user work with16,508,780,544bytes retained, then resumed under a fresh qualified idle/owner guard. Raw current acquisition-state is authoritative. |
-| Expert selection and byte plan | First26 controls each host with exact source/IDs; all sensitive-layer CPU experts covered before remaining native slots selected by use counts. Requires actual frozen GPU IDs, never aggregate slot inference. |
-| Native MXFP4 codec | New down support as well as gate/up. First9 controls each host, including complete [5120,2304] down and [2304,5120] gate/up geometries, all nibble/finite exponent values and refusal of incomplete/NaN input. Lossless CPU byte mapping only. |
-| Original sensitive-layer sources | First7 controls each host with exact4source/7input maps. All3840gate/up matrices and weight/scale planes located in official shards27-31 at immutable original revision. |
-| Upstreams | DSX main98f1259 and Maya main3589d6f/v1.1.46 freshly checked. PR741 parity is unmerged and excludes MXFP4/mixed layers and TP; PR747 direct-NH path is single-member. Neither supplies this selective native CPU lane. |
+| Maya-S base | All eight published assets,347,445,667,721bytes, completed and passed their full published SHA checks. Downloader exited0 at2026-11-01T17:32:12UTC. |
+| Native engine | Actual first configure/compile exited0,699.56s compilation,44,728,824-byte artifact `c942a4cf8047d154dd2201b3541b4653c70d88e687b3c014dc649eb09beaac86`. Source/helper controls passed each physical host, plus existing bounded owned-build controls. No GPU/model execution yet. |
+| CPU representation | Exactly1870 selected CPU experts retain all three original MXFP4 roles. Their IQ CPU copies are excluded. All remaining CPU experts must be in RAM. StaticTP1 only; sensitive-layer prompt batches use their original CPU representation and other prompt layers retain the pack's IQ path. |
+| Runtime arithmetic prerequisite | The new native prospectively compares eight selected experts, all three roles, one/four strided rows against its established homogeneous MXFP4 CPU implementation. This actual startup check has not run yet. |
+| IQ3_S overlay | All3840 gate/up matrices on layers24–28 will be encoded from original MXFP4. Qualified four-worker CPU conversion is running. Upstream NULL-imatrix squared-weight-magnitude weighting is used; this is not the private author's Hessian/calibration recipe. |
+| Original sources | Five sensitive-layer shards are complete. The remaining conservative original trunk closure is40shards00003–00042,295,672,271,408bytes total. It excludes dense/head/drafter/Engram shards. Passive acquisition is running; it is not the frozen1870selection. |
+| Actual placement / native payload | Metadata is constructed. One separately qualified no-inference1M placement will freeze actual expert IDs. The35GB original CPU payload and real hybrid fit remain pending. |
 
-These85 controls per host qualify only the acquisition and source/codec components, not whole-model numerical behavior, speed, quality or activation.
+The new source and actual build receipts are in `engine-build-and-materialization-1759/`. CPU/build results establish source and component behavior, not whole-model quality, speed or deployment. Earlier receipts remain unchanged.
+
 
 ## Concrete artifact sizes
 
@@ -33,14 +36,15 @@ The public source already supports distributing the three unchanged drafter bloc
 
 Latest Maya has optimized IQ2/IQ3 CPU rows and family-specific PDEP avoidance for some formats. A generic slow-PDEP explanation does not establish a2x per-expert improvement on our current engine. In one owned short cold task only0.5% of expert picks used the CPU, so workload-specific full-model measurements matter.
 
-## Next steps and selection
+## Remaining essential checks and selection
 
-1. Finish/verify the pinned base acquisition; retain new partial/completed assets.
-2. Qualify an original-MXFP4-to-IQ3_S encoder and calibration. Do not upconvert existing IQ2 bytes and claim recovered precision.
-3. Qualify a distinct1M initialization/placement diagnostic, then freeze exact GPU IDs and select the1870original CPU experts from a public/owned-synthetic routing profile.
-4. Build the checked original CPU payload and explicit selective CPU representation/dispatch, avoiding duplicated RAM copies. Static placement first; adaptive swaps need separately defined representation semantics and qualification.
-5. Prove component/numerical-distribution, code/prose/tool/image/cache/cancel/lifecycle/resource gates before full-model timing.
-6. Compare matched natural completion time and answer quality against current production and the needed Maya-S control. Record prefill, decode, native/client/output/reasoning/cache/draft counters. **A prefill regression alone will not reject the candidate.** Earlier failed screens remain historical records; new criteria require new separately frozen comparisons.
+Alex requested a small practical comparison, not a new broad benchmark campaign:
+
+1. Complete the original-source acquisition and original-to-IQ3_S conversion; preserve all source and output SHA receipts.
+2. Capture actual1M static GPU/CPU placement, select1870CPU IDs and make the lossless original three-role payload.
+3. Check actual hybrid allocation, CPU arithmetic, finite numerical behavior, known answers, code/prose, images/tools, cache/cancel/recovery and owned lifecycle/resources.
+4. Compare one small matched natural-completion prose/coding panel against current production. Keep prefill, decode, total time, output/reasoning lengths, native/client/cache/draft counters and actual placement. A prefill slowdown alone does not reject it.
+5. Change the default only after all essentials pass and combined natural task time improves by at least10%, without an individual task regression above10%. No quant/TP/cache sweep or universal-quality claim follows from this small panel.
 
 1,048,576total context,262,144output allowance, effort100, benchmarkcap32768, DSpark, images, Q8/check1/1, mode1 and the L22projection across all40main blocks remain requirements. Configured capacity does not prove near-filled1M or full262144generation bounds. No expert deferral, FP8 projection switch, pruning, hardware/driver/power/VM change or cache cleanup.
 

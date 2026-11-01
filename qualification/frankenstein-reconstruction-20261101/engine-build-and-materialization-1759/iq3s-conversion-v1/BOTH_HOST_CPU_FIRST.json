@@ -1,0 +1,35 @@
+{
+  "both_physical_hosts_passed": true,
+  "controls_each_host": 13,
+  "source_sha256": {
+    "convert.py": "8bad9fd42a851bf5571f34f8727c19a88668e619f470cea046784b4a4a1bb574",
+    "test_convert.py": "958dbd609897a10edbe073f9a13acdd5802b6bb1a730a718713fdc8b5710ee2c",
+    "run_cpu.py": "0dc0f3cf98f649de55c1d2081d5a71b2fec9d1c42cb9554df8f20ef0428f68f3"
+  },
+  "input_sha256": {
+    "SOURCE_PLAN.json": "9351465edc3ea4b4a3763552438d0309bbdbf913d434a2623a45f55dba81e54b",
+    "PLATFORM_ARTIFACTS.json": "e99ed17f0d5876211d058c9d4533a4798d8473e6ed2af170340d97c5c33cc68e",
+    "shared/iq3s-real-matrix-v1/original-weight.bin": "baf5ebb0c98ef3d38b03f62ac1702dc4658bde4bfcb6f1268deeefa8dd176319",
+    "shared/iq3s-real-matrix-v1/original-scale.bin": "2cd9b4c35666281251c0218ec7bbe998f0d351436fa375cd7020cef43a8c385b"
+  },
+  "test_ids": [
+    "test_convert.Conversion.test_codec_failure_prevents_encoder_without_retry",
+    "test_convert.Conversion.test_complete_original_matrix_matches_previous_independent_component",
+    "test_convert.Conversion.test_completed_part_is_exclusive_and_hash_bound",
+    "test_convert.Conversion.test_duplicate_task_wrong_completion_and_deadline_refused",
+    "test_convert.Conversion.test_encoder_partial_is_failure",
+    "test_convert.Conversion.test_environment_excludes_dynamic_loaders_and_python_paths",
+    "test_convert.Conversion.test_exact_frozen_plan_and_artifact_map",
+    "test_convert.Conversion.test_four_workers_unique_tasks_and_complete_join",
+    "test_convert.Conversion.test_guard_deferral_joins_running_work_without_starting_remaining",
+    "test_convert.Conversion.test_immediate_fault_latches_before_any_later_task_start",
+    "test_convert.Conversion.test_range_read_uses_same_pinned_inode",
+    "test_convert.Conversion.test_short_original_plane_rejected_before_process",
+    "test_convert.Conversion.test_symlink_and_oversized_range_refused"
+  ],
+  "no_bulk_conversion_admission": true,
+  "proofs": {
+    "mac": "901b6614e7a44cb7982f13bdabc20b29e2ea63487b31c62cea157acfb7ba4e3c",
+    "ubuntu": "4c220ca1fcc5ee79fb8949955cf5344bb46f5f30e85f30a855e301cdac5891f1"
+  }
+}
