@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "controls": 12,
+  "test_ids": [
+    "test_guard.Guard.test_actual_exact_helper",
+    "test_guard.Guard.test_actual_exact_two_endpoint_casts",
+    "test_guard.Guard.test_actual_module_all14_supplied_tests_still_unexecuted",
+    "test_guard.Guard.test_bool_accepting_helper_refused",
+    "test_guard.Guard.test_cast_extra_argument_refused",
+    "test_guard.Guard.test_cast_literal_refused",
+    "test_guard.Guard.test_cast_other_name_refused",
+    "test_guard.Guard.test_float_accepting_helper_refused",
+    "test_guard.Guard.test_helper_decorator_refused",
+    "test_guard.Guard.test_helper_rename_refused",
+    "test_guard.Guard.test_helper_side_effect_refused",
+    "test_guard.Guard.test_reference_and_all_four_negatives_unchanged"
+  ],
+  "source_sha256": {
+    "review_code.py": "a4f563a8b2d693bd0585be541007ffa87a8548648ed98ef3a1991c8b48e705db",
+    "test_guard.py": "0fd0c7817c4f2812e36288b3bd8561b4718e65f0a3e5fd7b74047e63ec841326",
+    "run_guard_cpu.py": "054d445ca51090f584354657e2a8156948d76776c2fb094aa4b730ead6b292f0"
+  },
+  "input_sha256": {
+    "generated_code.py": "9a6c8be55659b95b9f8419ede7381a6b1af1e097f548e3eecd9f7ad889332c6d",
+    "ROOT_FULL_GENERATED_SOURCE_REVIEW.json": "6c04f45f539a23be40c18ebc45f86cc7704b290d5d59acd58ceb35fde76fa5b8"
+  },
+  "observed": {
+    "pid": 1027105,
+    "ppid": 1027104,
+    "pgid": 1027105,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "native_executed": false,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false
+}

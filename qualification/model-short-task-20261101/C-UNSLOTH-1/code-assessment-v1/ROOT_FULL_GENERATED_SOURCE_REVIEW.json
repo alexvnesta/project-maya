@@ -1,0 +1,54 @@
+{
+  "utc": "2026-11-01T06:51:35.754016+00:00",
+  "source_sha256": "9a6c8be55659b95b9f8419ede7381a6b1af1e097f548e3eecd9f7ad889332c6d",
+  "entire_generated_module_read": true,
+  "all_supplied_tests_read": true,
+  "supplied_tests": 14,
+  "supplied_test_ids": [
+    "CoalesceRangesTests.test_bool_endpoints_are_rejected",
+    "CoalesceRangesTests.test_disjoint_ranges_are_sorted",
+    "CoalesceRangesTests.test_empty_input",
+    "CoalesceRangesTests.test_half_open_gap_does_not_merge",
+    "CoalesceRangesTests.test_input_is_not_mutated_on_success",
+    "CoalesceRangesTests.test_input_is_not_mutated_on_type_error",
+    "CoalesceRangesTests.test_input_is_not_mutated_on_value_error",
+    "CoalesceRangesTests.test_negative_and_large_integers",
+    "CoalesceRangesTests.test_non_integer_endpoints_are_rejected",
+    "CoalesceRangesTests.test_output_items_are_tuples",
+    "CoalesceRangesTests.test_overlap_merges",
+    "CoalesceRangesTests.test_start_greater_than_end_is_rejected",
+    "CoalesceRangesTests.test_touching_merges",
+    "CoalesceRangesTests.test_zero_length_ranges_are_dropped"
+  ],
+  "entire_generated_reasoning_read": true,
+  "reasoning_read_ranges_characters": [
+    [
+      0,
+      18000
+    ],
+    [
+      18000,
+      38000
+    ],
+    [
+      38000,
+      55829
+    ]
+  ],
+  "reasoning_characters": 55829,
+  "reasoning_sha256": "aae9dc4693f0344a4cb01134bd1a85003852f444e6c9312b4e3d461aebc02aeb",
+  "response_sha256": "e2063a3d789a58074f563c5ce010fddec7cbc9767b413debff2dbb97b51c5c9f",
+  "extraction": "Exactly one whole-module python code fence removed; no outside prose, code/tokens unchanged. Original response fence preserved, no code repair. Same established benchmark module extraction convention.",
+  "manual_findings": "Full pure_is_integer helper/coalesce function/docstring and14tests read before anyexecution. int normalization onlyvalidated endpoints; localcopy sort/merge, bool/nonint rejection, invertedboundsValueError, noinputmutation, large/signed ints. Onlyunittestimport. Full reasoning repetitive but coherent. No execution or broadqualityclaim yet.",
+  "reviewer_base_sha256": "afc5581685266afd99a8408e9bc2b6bb4eec110e6e6d24d91bd07e5ecfa4d8cc",
+  "unchanged_reference_and_negative_AST_sha256": {
+    "reference": "9b566d780170c46718208a15c98c7b0b29e3faf7d81de12881f92ffd94d54aa7",
+    "evaluate": "3b589f8dc1a8f7fc5fd5500ba3670ee35e3abd2135a0bf3992774f9cb395a193",
+    "no_touch": "2408c5a7201852c417a608a7cd432047631b8f4f010a77adf1ab653b0161be7a",
+    "mutating": "8df128d8c574109c24a308a326d4b1184d2e15bec4b93f08623ea89880247725",
+    "bool_accept": "6d03fca6dd0bef89a47487d455c1edaf3bc821ba0e22f5fd939ddf42082965b2",
+    "keep_empty": "ce60b8a13976ade2718fc09ad71f3136970815e581e20b9928b49bc48d4d4a5e"
+  },
+  "delta": "Exactpure_is_integer helper and exactint(start)/int(end) AST-onlypermission before existing callable whitelist. Reference/cases/RNG/limits/fournegatives unchanged. Fullmanual plus FIRST exact12guardcontrols BOTHphysicalhosts before FIRST generatedcode assessment.",
+  "scope": "One original public shortcodingmain only; no broadmodelquality/equivalence/comparativespeedclaim."
+}
