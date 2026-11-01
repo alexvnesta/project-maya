@@ -1,0 +1,61 @@
+{
+  "utc": "2026-11-01T05:57:47.211568+00:00",
+  "reviewer": "ROOT",
+  "arm": "P-MS2-1",
+  "decision": "FIRST_COMPLETE_SHORT_PROSE_TASK_PASS_WITH_MINOR_WORDING_IMPRECISIONS",
+  "full_content_and_reasoning_read": true,
+  "reasoning_read_ranges_characters": [
+    [
+      0,
+      13000
+    ],
+    [
+      13000,
+      21517
+    ]
+  ],
+  "words_whitespace": 880,
+  "task_passed": true,
+  "checks": {
+    "800_to_1000_words": true,
+    "paragraphs_no_code_lists_headings": true,
+    "exact_final_sentence": true,
+    "hash_bucket_key_equality": true,
+    "chaining_collision_example_explicitly_invented": true,
+    "load_factor_resize_rehash": true,
+    "expected_constant_versus_worst_linear": true
+  },
+  "minor_findings": [
+    "All keys in one bucket makes that bucket chain contain every entry; text says each chain. Context immediately identifies the one-chain linear-search degeneration, so recorded as wording imprecision, not missing conceptual distinction.",
+    "Individual resizing is linear; amortized constant applies to its contribution across insertions. Response explains moving every entry and spreading cost across insertions but loosely labels resizing amortized constant. Broader technical quality not claimed."
+  ],
+  "observation": {
+    "tokens": 6384,
+    "decode_tok_s": 62.04871562852025,
+    "client_seconds": 104.8463871490676,
+    "prompt_tokens": 169,
+    "prefill_ms": 1924.3,
+    "draft_accepted_offered": [
+      3982,
+      4564
+    ]
+  },
+  "owned_execution_closed": true,
+  "independent_terminal_audit_passed": true,
+  "preserve_producer_manual_pending": true,
+  "comparative_speedup_claim": false,
+  "deployment_admitted": false,
+  "next_arm_automatically_admitted": false,
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS2-1-20261101T054248Z/native/skip-controls/ms-prose-main/response.json": "a078b3b246e1d9b16bf1d7f05799bf540cd9cb2f428704a4dc2fb4e33b59b0ac",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS2-1-20261101T054248Z/native/skip-controls/ms-prose-main/request.json": "3bc8bb74e350fd65775b377eb1fc68a22b37b54ed94f4f44540df469c0e1a5bc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS2-1-20261101T054248Z/receipt.json": "ffdbcd88dc29ee0c017db62d5b1e3369d419c9c9ca0f71b3d5b659153f209433",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS2-1-20261101T054248Z/startup-audit.json": "cb056a1cc1d583132d797535f88daa9dd8640c17c40b60a4c0095713d8ca205e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS2-1-20261101T054248Z/native/server-cleanup.json": "8e0faf602e89e01de48f3d73829e596f58818b4636cf62e56df2c9cb798e18a1",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-P-MS2-1-20261101T054248Z/native/native-close.jsonl": "4b4c09e440aec1117b017449935f2422e24414aafb9d4dc057197349c663bb5e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-P-MS2-1-20261101T054248Z/old-owner-close.json": "2fd8adcf75fc6d3303785c9de80bfb65e6da9f765f7a2b6d821d57554eb6100f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-P-MS2-1-20261101T054248Z/result.json": "5201afa49656ac091ff1437ec7b9e388e52476c5d483c6f82d83b666d0a2ef6a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/controller-P-MS2-1-exit.json": "1498fc2db3a3b5d76e6d0e53444cab56afd6c8b8cb998615633292d0566350ff",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/P-MS2-1/terminal-audit.json": "9da3969c6404659bba7496f08dd75a1d954713b9e3e0ae6dbdcae943701e33f2"
+  }
+}
