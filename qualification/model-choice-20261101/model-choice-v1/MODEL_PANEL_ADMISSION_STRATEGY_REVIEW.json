@@ -1,0 +1,65 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-11-01T04:09:50.361250+00:00",
+  "decision": "SOURCE_STRATEGY_ONLY_NO_GPU_ADMISSION",
+  "recommendation": "Use a thin separately frozen single-main selector: exact ms-prose-main169 first, exact ms-coding-main140 in a separate window; optionally separate372/465tool+actual-ID-followup pair. Run each candidate independently under its preserved template. Do not copy the8469JSON preludes or5case broader bundle.",
+  "cold_bound_rule": "Only candidate44token cold prefill is physically measured. Neither identical adff source nor old MayaS8K/quality/cancel success nor new CPUencoding supplies a new-pack8K cold-duration bound.169/140/372/465 are also not yet candidate-measured: first use must be explicitly scoped as a bounded short-input cold observation with hard abort, never claimed prequalified latency. It cannot produce a bound for8K or near1M by extrapolation. If policy requires a prior measured bound for every exact input, no non44task is currently admitted; separately authorize that short observation first.",
+  "concrete_phases": [
+    {
+      "scope": "One exact169token ms-prose-main only",
+      "purpose": "First useful sustained natural-output/quality observation and request-specific cold measurement. Retain full original prompt, seed1/temp1/top_p1/effort100/max_tokens32768 and natural ending/800-1000word/source checks. Record native versus full client timing, prompt/cold/cache state, actualDSpark, full reasoning/content and token counts. Until independently reviewed, these are observations, not a winner or accepted speed comparison."
+    },
+    {
+      "scope": "One exact140token ms-coding-main only, separate window",
+      "purpose": "Known coding contract plus saved executable module for existing independently bounded AST/semantic tests. Require whole module/reasoning review, supplied tests and independent edge/negative checks before quality acceptance; no code execution in model phase. Variable reasoning/output length means compare task completion and correctness with token/native/client measurements rather than raw tps alone."
+    },
+    {
+      "scope": "Optional isolated372token tool plus465token dependent followup",
+      "purpose": "Actual emitted call ID/arguments must form the followup using per-pack qualified DSML normalization. Check expected SKU/quantity/total/availability. No8471prefillcancel/recoverybundle automatically appended; pair contributes lifecycle/tool correctness, not rate samples."
+    }
+  ],
+  "not_ready_now": [
+    "All existing quality cases8469/8656, timed-panel8469cold/warmJSON preludes,8471prefillcancel and near1Mfill: no new-pack measured cold evidence.",
+    "No short image fixture exists in these eight frozen manifests: ms-quality-two-images is8656tokens. Removing its long text would change the fixed task and require a distinct fixture/source qualification; do not relabel it as unchanged isolated shortimage.",
+    "No new16384/32768/262144/1M prompt sweep or calculated upper bound from44/140/169token rates."
+  ],
+  "implementation_pointers": [
+    {
+      "file": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/panels.py",
+      "functions": "requests,encode,contract",
+      "note": "Encoding proves exact public source/template bytes only. contract currently requires the complete original panel. New selector must explicitly freeze selected original case ID+request/IDs/provenance in a new namespace; never silently slice and claim old panel completion."
+    },
+    {
+      "file": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_controls.py",
+      "functions": "bounded_request lines293-321;run_panel lines411-445",
+      "note": "Reuse bounded transport/cancel-release and scoring helpers, not old registry/lifecycle-required selection. The10second start floor is a transport minimum, not a predicted completion or cold-bound proof. Preserve truthful UNRUN versus sent/partial and primary/cleanup faults."
+    },
+    {
+      "file": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/current_runtime.py",
+      "functions": "qualified,make_host",
+      "note": "Reuse exact candidate custody/nine-or-eightFD/resource/current-owner/restoration guards and owned1200window; prospective thin owner/tests/auditor/recovery must match both physical CPU proofs before any separate admission."
+    }
+  ],
+  "resources": "Keep80GiBzeroSwap/8GiBhostmargin/1200window/1000soft/200cleanup/startup800, same1Mtotal/262144output/DSpark/.65/Q8/mode1/projection/directcopy. No request fitting, output cap reduction, hidden reasoning budget, timeout increase or globalcache changes. HGU543s andUnsloth276s short phases are observations under different cacheconditions, not guaranteed startup reserves. Budget from actual current clock; if insufficient time do not issue, preserve UNRUN. If issued and deadline/resource limit reached, cancel/observe idle/close/HOLD, never accept a capped result.",
+  "timing_isolation": "For natural timing phases remove numerical dumps/roundlogger and native512MiBFSIZE, verify actual inherited unlimited /proc FSIZE and exact controlled environment. Keep resource/storage monitoring and raw token/STAT reconciliation. Fullfinite prior qualification is not repeated inside timed path. Any diagnostic copy-I/O/startup numbers remain distinct from main request timings.",
+  "acceptance": "One phase per candidate/case requires complete natural response/known-answer or independent code quality, actualDSpark/source/custody/cache/placement/resource closure, native/API/window/controller0, no kernel/OOM and verified selected92 public restoration. Only then separately plan matched/reversed comparisons. No automatic other candidate, timing/promotion/deployment admission from this strategy.",
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/panels.py": "bded232f3e38943d7178a718a35d4ac822e25b50200443dec7a64b1e152fc813",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/run_cpu.py": "7d96455eb02242ea757f4e6e1936acd27933fcfb37946082ccc6c45decea99dc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/ROOT_SOURCE_REVIEW.json": "f63ce3dbcb6aeb34432bafb6bf001818b1c6709b2a6be3b45b2b27a251fb4c1d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/FIRST_BOTH_HOST_RESULTS.json": "7acd053b730e1a861731c08fbd25d6e2e2dcebdeb5ab594c51c0739f176f78f4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_controls.py": "1038fad719fb7ed7516ab3e07d88d40fb3b5cd7408f6ed19ddc2296f13052cf5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/FHGU/SOL_FHGU_RESULT_REVIEW.json": "acf7fa606c3a370fe0dab90c67880898e9a62e836fdc2686ded7aa22aba3f5fa",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/FUNSLOTH/SOL_FUNSLOTH_RESULT_REVIEW.json": "a2e8eff6f566305460ed080f439fa24a1a905d5b7d1a1255b557e0df5d4a77d5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-linux/manifest-HGU-prose.json": "797d481347d6c226ef3e1fdeddae482e2eed4228e83471eb84d93b799d131990",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-linux/manifest-HGU-coding.json": "cff53e347337f0c55ace8f151b842a77253eeea62dae7d98fedc6365bf2e85dc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-linux/manifest-HGU-lifecycle.json": "6483177e0f3cacc15b2a22f2af73f98e9bf3a635fa09d2e2548afd31a3bb5420",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-linux/manifest-HGU-quality.json": "20054dc6afb79f7a66f4e1dea117eae97b5de1b51242e671e967462e4e488e65",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-linux/manifest-UNSLOTH-prose.json": "5bede5a4e9f8eec2b7a17712650c482ff05964c1d73724fcd0fedd1428a0d70d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-linux/manifest-UNSLOTH-coding.json": "e7c66dcd34440e594049ecdd79b2ac1dceb9031fc776d8f1fe354163ea9fd80b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-linux/manifest-UNSLOTH-lifecycle.json": "5d38a590a7c302cb7d926c800d3ec89edb515d1ec2b2430dce7b9cf5cffc9738",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-linux/manifest-UNSLOTH-quality.json": "cb222e64158cedcada253ae59c2cdb3b7d6c9253f207938261cdad5311cc330f"
+  },
+  "actions": "Local scoped source/metadata reads and this exclusive report only; no controls/imports/network/host/payload/native/GPU actions."
+}

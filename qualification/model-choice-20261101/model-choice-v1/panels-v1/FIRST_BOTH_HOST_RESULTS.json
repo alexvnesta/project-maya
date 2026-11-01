@@ -1,0 +1,125 @@
+{
+  "utc": "2026-11-01T04:06:20.709747+00:00",
+  "passed": true,
+  "controls_each_host": 14,
+  "source_input_IDs_and_all8_manifest_bytes_exact": true,
+  "source_sha256": {
+    "panels.py": "bded232f3e38943d7178a718a35d4ac822e25b50200443dec7a64b1e152fc813",
+    "test_panels.py": "3637298a787d105351ead0c37674d6fc122acefbe04cb253fe76ca92a10c941d",
+    "run_cpu.py": "7d96455eb02242ea757f4e6e1936acd27933fcfb37946082ccc6c45decea99dc"
+  },
+  "input_sha256": {
+    "original/ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "original/prose-fixtures-B.json": "d572147c2f668b7702531ec62a90b5ba9fe8e0b47ac864f05ecca8c73402c601",
+    "native-vision-v2/runtime/serve/fixtures/deepseek41/chat_template.jinja": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b",
+    "native-vision-v2/test_native_vision.py": "3875dc32895821ded8a6929e5a4f5515cdfbe233cf43910d1ed7b5e723f70059",
+    "native-vision-v2/runtime/serve/server.py": "b1be40294f6c49692829ad5f85a7aa2867218180fdc8fbc9bef7710371ba3b9f",
+    "native-vision-v2/runtime/serve/ds4_vision.py": "761212e162004aacf591beb405dc8072f83ee1facaa5398013ec98d5c737da4e",
+    "native-vision-v2/runtime/serve/dsml.py": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+    "native-vision-v2/runtime/tools/strata_tokenizer.py": "6db1ea62d3edbaa64dce139088146ccf370933998d5f997cd5f41a39300075a6",
+    "HGU/ds4.txt": "75fa22995fd2a35d7b81a4ae9e015037a07d7295790b46c85f13ac426c085db7",
+    "HGU/tensors.txt": "1527371944e32643e2d974ccd2f2364436c6b17aeef9bd0b93619ab1f8f89d26",
+    "HGU/engram.bin": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142",
+    "HGU/tokenizer/vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+    "HGU/tokenizer/merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+    "HGU/tokenizer/token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+    "HGU/tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "HGU/tokenizer/chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+    "UNSLOTH/ds4.txt": "bf53e615522820d591ad46ffa777e7cf8d88d8634047be94a71d19b329206425",
+    "UNSLOTH/tensors.txt": "ca1f5a36dc65ca188108930db163d33a8d0a390771454dd312063ffc54a34d3a",
+    "UNSLOTH/engram.bin": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142",
+    "UNSLOTH/tokenizer/vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+    "UNSLOTH/tokenizer/merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+    "UNSLOTH/tokenizer/token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+    "UNSLOTH/tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "UNSLOTH/tokenizer/chat_template.jinja": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b",
+    "qualified-fixtures/fixtures.py": "c9becdd55427156300d4c1ae4ab17fd60a76c2e393bbcc5d56866b62e23c95fc",
+    "qualified-fixtures/run_cpu.py": "8de71a194b7aa93f72372ae3034c8f927b74ee9bd295a158b18d2273fde8e359",
+    "qualified-fixtures/PACKS_FROZEN.json": "02d05f675a3cc5eb1d86fb2253fd442225fafd63dcb65b0c43cf9477a13ac433",
+    "qualified-fixtures/ROOT_SOURCE_REVIEW_R2.json": "9361df897692ceb5036d4538eb2eba946dcf677cceba89a3c10b93cf059be5b0",
+    "prefill-cache-improvements-20261027/numerical-fixtures/manifest.json": "251f89c1949f43308994a2a08805195ff7069eb4f11642920ed442168db10061",
+    "decode-optimization-20261028/prose-speed-v1/prose-fixtures.json": "8039ba7415335710ab481c5cd29f3c2c1bffb19b223d83ec586baf759a336faf",
+    "prefill-v2/frozen/manifest.json": "d3e557d528aeea5e3765f73f6454ddd657b204fb8be6aa3351618cfb739ecdb1",
+    "qualified-fixtures/darwin/receipt.json": "28aae516f6e8e345e0b6cbefee68f8812ec5b36d91f869bf444ee154569e104b",
+    "qualified-fixtures/darwin/child.json": "986c4ba37ebf4d55daef6e125f8ad6c9c685fd1559502ffa0091e8371c65166e",
+    "qualified-fixtures/darwin/child.log": "94126dd3ac5e418cc3adc76d311e37fa05eadb7b891b2f4fded155bb312ab34c",
+    "qualified-fixtures/linux/receipt.json": "e8d3966b6d4713320965bc069ea8ff924f59d572266be86162b14c4e41b660cb",
+    "qualified-fixtures/linux/child.json": "feec69707e36eaea05ddbfeeb58d4a3f3786b68239efc4a1e48f7dfa9630ce88",
+    "qualified-fixtures/linux/child.log": "7475f33ccb5f9a4b3981e782470d976464c75667a3e3850d669841489281f068"
+  },
+  "test_ids": [
+    "test_panels.Panels.test_actual_image_spans_cross_retained_tail",
+    "test_panels.Panels.test_actual_short_prose_and_coding_full_requests",
+    "test_panels.Panels.test_actual_tool_and_cancel_work_preserved",
+    "test_panels.Panels.test_actual_warm_and_return_paths_are_identical",
+    "test_panels.Panels.test_all_actual_panels_preserve_complete_work",
+    "test_panels.Panels.test_both_actual_original_templates_remain_distinct",
+    "test_panels.Panels.test_capacity_or_effort_reduction_refused",
+    "test_panels.Panels.test_changed_encoding_or_image_span_refused",
+    "test_panels.Panels.test_changed_pack_or_template_provenance_refused",
+    "test_panels.Panels.test_encoding_never_grants_GPU_or_quality_admission",
+    "test_panels.Panels.test_omitted_or_reordered_case_refused",
+    "test_panels.Panels.test_source_helper_drift_refused_before_import",
+    "test_panels.Panels.test_unknown_panel_or_candidate_refused",
+    "test_panels.Panels.test_visible_prompt_or_output_cap_changes_refused"
+  ],
+  "manifest_sha256": {
+    "HGU-quality": "20054dc6afb79f7a66f4e1dea117eae97b5de1b51242e671e967462e4e488e65",
+    "HGU-prose": "797d481347d6c226ef3e1fdeddae482e2eed4228e83471eb84d93b799d131990",
+    "HGU-coding": "cff53e347337f0c55ace8f151b842a77253eeea62dae7d98fedc6365bf2e85dc",
+    "HGU-lifecycle": "6483177e0f3cacc15b2a22f2af73f98e9bf3a635fa09d2e2548afd31a3bb5420",
+    "UNSLOTH-quality": "cb222e64158cedcada253ae59c2cdb3b7d6c9253f207938261cdad5311cc330f",
+    "UNSLOTH-prose": "5bede5a4e9f8eec2b7a17712650c482ff05964c1d73724fcd0fedd1428a0d70d",
+    "UNSLOTH-coding": "e7c66dcd34440e594049ecdd79b2ac1dceb9031fc776d8f1fe354163ea9fd80b",
+    "UNSLOTH-lifecycle": "5d38a590a7c302cb7d926c800d3ec89edb515d1ec2b2430dce7b9cf5cffc9738"
+  },
+  "encoded_prompt_lengths": {
+    "HGU-quality": [
+      8469,
+      8469,
+      8656,
+      8469
+    ],
+    "HGU-prose": [
+      8469,
+      8469,
+      169
+    ],
+    "HGU-coding": [
+      8469,
+      8469,
+      140
+    ],
+    "HGU-lifecycle": [
+      372,
+      465,
+      8471,
+      44
+    ],
+    "UNSLOTH-quality": [
+      8469,
+      8469,
+      8656,
+      8469
+    ],
+    "UNSLOTH-prose": [
+      8469,
+      8469,
+      169
+    ],
+    "UNSLOTH-coding": [
+      8469,
+      8469,
+      140
+    ],
+    "UNSLOTH-lifecycle": [
+      372,
+      465,
+      8471,
+      44
+    ]
+  },
+  "CPU_only": true,
+  "long_input_runtime_bounds_unmeasured": true,
+  "GPU_admission": false
+}

@@ -1,0 +1,50 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-11-01T03:53:07.959138+00:00",
+  "decision": "CONDITIONAL_SINGLE_FRESH_FUNSLOTH_FINITE_DIAGNOSTIC_ONLY",
+  "findings": [],
+  "pins": {
+    "FHGU/terminal-audit.json": "0c85b2eaed2a1bb41a982f52b59e68c72bfdf140d329c271968e98c130eec677",
+    "FHGU/ROOT_FULL_RESULT_REVIEW_FIRST.json": "f408ed116d6bc9cd8505c053592d38b44c20f710b42c2fc3aca843dee9a522de",
+    "FHGU/SOL_FHGU_RESULT_REVIEW.json": "acf7fa606c3a370fe0dab90c67880898e9a62e836fdc2686ded7aa22aba3f5fa",
+    "modelstate-qualification.json": "76fbf2d6b8c74b515f8ed3e847c45258ad9f8fe4b427112e14406f7e81fcb8da",
+    "recovery-v1/RECOVERY_QUALIFICATION.json": "a2a93ce78a8b628e0b105a34d262dd6c715cddec0130798ca896e682d234e4f5",
+    "FUNSLOTH-PREFLIGHT-FIRST/controller.log": "0dcc1ab6deb8e7f41aa623ae62189f73df8a32cbf26da924f983ad187c223bbe",
+    "FUNSLOTH-PREFLIGHT-FIRST/exit.json": "1ff23c16dd7fb96317e426db095e3f2c65c14aa6dea86eb75a3486a7da3565f8",
+    "modelstate-arms.json": "902e49311189f11409a9b7e08da80d87c5bf20f1385c14dd04673a7184acf5b4",
+    "SOL_MODELCHOICE_CPU_REVIEW.json": "42e2e71b441e461ec3b493324d950e4cd27212bbbd67b926aac4af43c2829c68",
+    "SOL_MODELCHOICE_FINAL_SOURCE_REVIEW.json": "b1c641ce362397bd8b60abac5abd80dd7cd1e46ac4398a7f053655a850c14463",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/PACK_CUSTODY_FROZEN.json": "919712f5c2937b245ce92d40804e0981b4308f34e7af7d489cd4df32911b9ed4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/ASSET_STAT_ATTESTATION_FIRST.json": "82c756c83172fd63aa74d8b70d3492677e41e330c90d3602da4cc70767a63a0c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/fixtures-v1/CPU-R2-FIRST-linux/manifest-UNSLOTH.json": "5b03cf70cddda76031bc0a5f7bf984e922b103e00432b4f5caead55d09458418",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-pack-v1/CONSTRUCTION_RESULT_R2_FIRST.json": "5b5a480a293816b77e46e7966d5ab05f55d7e33bcab200ba4fa05f8db2be10ed"
+  },
+  "basis": [
+    "Same main76fb4505/recoverya2a932349 qualification, exact unchanged current source vs108/10/15/63 both-hostCPUreview, helper15/fixture11 retained.",
+    "Separate actual reviewed FUNSLOTH controller03:52:18UTC preflight rc0/no run/no queued inference; exact files map matches immutable qualification.",
+    "FHGU accepted registry is restricted shortfinite/literal only and binds exact independent/ROOT/Sol result closure; no replay or inferred broad quality. Restored selected883405/b777/main883368/ticks177294343 matches new saved preflight.",
+    "Unsloth original six-file acquisition and completed metadata constructor closure/stat map remain qualified; eight exact assets and unchanged published06cada template plus actual44token fixture manifest bound. Same short IDs do not imply later requests encode identically."
+  ],
+  "scope": "One fresh owned Unsloth TP2 startup and44token cold plus dependent warmreuse43 known literal finite-state diagnostic only.",
+  "launch_conditions": [
+    "Immediately recheck actual clock, exact selected binding883405/b777/main883368/ticks177294343, healthy/default/idle/no active phase/root132GiB and unchanged full qualification/source/asset stats through reviewed controller. Preflight is historical evidence, not a live lease; drift blocks launch.",
+    "Fresh FUNSLOTH output/controller/cache/dump/slot namespace; registry must remain unattempted FUNSLOTH and prior FHGU short-scope closure intact. One attempt only; fault/partial/UNRUN stays HOLD with no automatic retry.",
+    "Fixed80GiB private fence/zeroSwap and8GiBhostmargin;1200swindow/1000ssoft/200scleanup/startup<=800s. No capacity fitting or timeout expansion.",
+    "Same adff, Unsloth exactpack/originaltemplate, publishedMayaSdrafter,1Mtotal/262144output/full32768requestcap/seed2/temp1/top_p1/effort100/DSpark.65/Q8/mode1/projection/unevenTP2/AR2/directcopy.",
+    "Require all8 original+O_DIRECT source descriptor pairs/inode-size-times and PID-startticks, positive direct/rounded0.000fallback, actual allCPUexpertsRAM/placement/checks. Native-only512MiBFSIZE/per-candidate source bounds/dump and storage monitoring unchanged.",
+    "Full finite rawlogits/round/cache/STAT DSpark/literal/SSE/count evidence without per-token row alignment or cross-model sampled-path equivalence.",
+    "Native/API/window/controller0, no kernel/OOM faults, independent saved fullfinite/resources/closure audit and separately verified selected92 authenticated publicREADYstopDONE restoration mandatory before acceptance."
+  ],
+  "not_admitted": [
+    "FHGU replay",
+    "any additional arm or retry",
+    "timing/longerinput/broadquality",
+    "promotion/deployment",
+    "automatic next candidate"
+  ],
+  "limits": [
+    "Local saved evidence and metadata/source-only review. No network/SSH/host/tests/projectimports/native/GPU/payload actions.",
+    "No fresh independent weight hash, actual Unsloth memory fit, numerical equivalence, broad quality or speed proof.",
+    "Inherited private API model label is not candidate identity; exact pack/config/argv/proofs determine provenance. Preserve original templates and independently re-encode future visible panels."
+  ]
+}

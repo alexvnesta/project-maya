@@ -1,19 +1,19 @@
 {
-  "utc": "2026-11-01T03:33:29.995952+00:00",
-  "status": "EXACT_BOTH_HOST_CPU_AND_ACTUAL_READ_ONLY_PREFLIGHT_PASSED_ADMISSION_PENDING",
+  "utc": "2026-11-01T04:09:23.609279+00:00",
+  "status": "BOTH_NEW_PACKS_SHORT_FINITE_DIAGNOSTICS_CLOSED_NO_TIMING_OR_PROMOTION",
   "active_private_phase": false,
   "GPU_admitted": false,
   "current_binding_snapshot": {
-    "invocation": "95ff5e796eab4d86b0e78d1611b9ada4",
-    "main_pid": 828763,
-    "native_pid": 828819,
-    "native_start_ticks": 176859041
+    "invocation": "ca6c5cde7c084e9fb7f881fc88a9fa93",
+    "main_pid": 894857,
+    "native_pid": 894916,
+    "native_start_ticks": 177382551
   },
   "fixture_controls_each_host": 11,
   "fixture_manifest_source_IDs_exact": true,
   "asset_stat_attestation_sha256": "82c756c83172fd63aa74d8b70d3492677e41e330c90d3602da4cc70767a63a0c",
   "pack_custody_sha256": "3ca0544681673d7bbe99fd0e3fc0c29f69edfd8f71a04d257973d52620e1151f",
-  "next": "Sol exactmap/readonly actualproof review and separate SINGLE FHGU conditional admission; fresh guard before launch. No timing/promotion; FUNSLOTH later separate.",
+  "next": "New focused short visible task owner/fixtures/auditor require exact bothhost CPU first. Long8Knewpack cold runtime bound remains unmeasured; do not inherit fromMayaS or extrapolate44. No more modelstate arms.",
   "owner_source_path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1",
   "new_model_CPU_or_GPU_admitted": false,
   "CPU_executed": true,
@@ -28,5 +28,58 @@
   "qualification_file_pins": 4505,
   "recovery_qualification_sha256": "a2a93ce78a8b628e0b105a34d262dd6c715cddec0130798ca896e682d234e4f5",
   "first_actual_FHGU_readonly_preflight": "FHGU-PREFLIGHT-FIRST/controller.log",
-  "first_actual_preflight_sha256": "232c02d3026663b3e95463f65fd4928e2eda897c30605b4b55095271d0d30176"
+  "first_actual_preflight_sha256": "232c02d3026663b3e95463f65fd4928e2eda897c30605b4b55095271d0d30176",
+  "FHGU": {
+    "native": 873752,
+    "API": 873664,
+    "controller": 872946,
+    "all_exit0": true,
+    "window": "20261101T033527Z",
+    "phase_seconds": 543.2654029061086,
+    "correct_natural_generated": [
+      65,
+      124
+    ],
+    "reuse": [
+      0,
+      43
+    ],
+    "all_finite_rows": [
+      82,
+      153
+    ],
+    "CPU_allRAM": 6636,
+    "GPUtrunk": 8724,
+    "terminal_audit_sha256": "0c85b2eaed2a1bb41a982f52b59e68c72bfdf140d329c271968e98c130eec677",
+    "ROOT_review_sha256": "f408ed116d6bc9cd8505c053592d38b44c20f710b42c2fc3aca843dee9a522de",
+    "general_quality_timing_or_promotion": false
+  },
+  "FHGU_Sol_result_sha256": "acf7fa606c3a370fe0dab90c67880898e9a62e836fdc2686ded7aa22aba3f5fa",
+  "FUNSLOTH_preflight_sha256": "0dcc1ab6deb8e7f41aa623ae62189f73df8a32cbf26da924f983ad187c223bbe",
+  "FUNSLOTH": {
+    "native": 891914,
+    "API": 891801,
+    "controller": 891131,
+    "all_exit0": true,
+    "window": "20261101T035434Z",
+    "phase_seconds": 276.3291790599469,
+    "correct_natural_generated": [
+      59,
+      87
+    ],
+    "reuse": [
+      0,
+      43
+    ],
+    "all_finite_rows": [
+      80,
+      103
+    ],
+    "CPU_allRAM": 5593,
+    "GPUtrunk": 9767,
+    "terminal_audit_sha256": "08a7f564889e884cf187fe6d7b1da80d26f1639e834f880956c4035a79502ece",
+    "ROOT_review_sha256": "cb4d66802675460e2df466a41b19f5004da4f860c76243ec33342dfba6c3c664",
+    "Sol_review_sha256": "a2e8eff6f566305460ed080f439fa24a1a905d5b7d1a1255b557e0df5d4a77d5",
+    "general_quality_timing_or_promotion": false
+  }
 }

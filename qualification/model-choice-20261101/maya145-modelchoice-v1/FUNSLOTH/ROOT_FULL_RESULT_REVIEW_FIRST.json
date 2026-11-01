@@ -1,0 +1,85 @@
+{
+  "utc": "2026-11-01T04:06:00.944954+00:00",
+  "reviewer": "ROOT",
+  "status": "SHORT_NEW_UNSLOTH_FINITE_LITERAL_DIAGNOSTIC_REVIEWED_NO_BROAD_QUALITY_OR_TIMING",
+  "whole_generated_content_and_reasoning_manually_read": true,
+  "semantic_review": "Both complete public benchmark outputs exactly RECOVERED_Q8_LITERAL. Full194/287character reasoning59/87tokens read; no executable code. Different stochastic schedules, no row-aligned equivalence.",
+  "qualification_sha256": "76fbf2d6b8c74b515f8ed3e847c45258ad9f8fe4b427112e14406f7e81fcb8da",
+  "native_API_window_controller_exit0": true,
+  "native_pid": 891914,
+  "API_pid": 891801,
+  "window": "20261101T035434Z",
+  "phase_seconds": 276.3291790599469,
+  "generated_tokens": [
+    59,
+    87
+  ],
+  "prompt_tokens": [
+    44,
+    44
+  ],
+  "reuse": [
+    0,
+    43
+  ],
+  "finite_rows": [
+    80,
+    103
+  ],
+  "vocabulary": 129280,
+  "token_row_alignment_claimed": false,
+  "finite_dumps": [
+    {
+      "bytes": 41369600,
+      "rows": 80,
+      "sha256": "3d579d38016c53423f63b2cffd605aea12de71faf51da0527b1d17764991f01e",
+      "all_finite": true,
+      "token_row_alignment_claimed": false
+    },
+    {
+      "bytes": 53263360,
+      "rows": 103,
+      "sha256": "20735cbc608d834f03ddb5bf856ea5716475a2e461336fd2693073c1cc063266",
+      "all_finite": true,
+      "token_row_alignment_claimed": false
+    }
+  ],
+  "all_CPU_experts_RAM": 5593,
+  "GPU_trunk_slots": 9767,
+  "private_memory_max": 85899345920,
+  "private_swap_max": 0,
+  "resources": {
+    "root_min_GiB": 205.58839797973633,
+    "system_swapout_delta_bytes": 0,
+    "swap_not_attributed_to_model": true
+  },
+  "kernel_faults": [],
+  "selected_binding": {
+    "invocation": "ca6c5cde7c084e9fb7f881fc88a9fa93",
+    "main_pid": 894857,
+    "native_pid": 894916,
+    "native_start_ticks": 177382551
+  },
+  "limitations": [
+    "1M total configuration/262144 output allowance retained; no near1Mfill/full262144generation proof.",
+    "Two44token shortliteral requests only; no broader quality or matched timing claim. Load phase276s differs fromHGU543s under different filecache conditions; no causal loading-speed comparison.",
+    "Exact UnslothUD-IQ2_XXS original published template retained. PrivateAPI model_name is inherited original label, not pack provenance.",
+    "Frozenstat cooperative source custody, no fresh tensor byte attestation; rendered0.000fallback rounded.",
+    "881cgroup maxevents/OOM0; charged filecache and residentmemory combined, no processRSS/no-pressure claim."
+  ],
+  "timing_admitted": false,
+  "deployment_admitted": false,
+  "automatic_next_arm": false,
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/FUNSLOTH/terminal-audit.json": "08a7f564889e884cf187fe6d7b1da80d26f1639e834f880956c4035a79502ece",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/FUNSLOTH/TERMINAL-AUDIT-FIRST-linux/child.json": "1cf1350b90954ba3c97236f906c51a9e09533fc6db0e7f54c6a750a42b57797c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/FUNSLOTH/TERMINAL-AUDIT-FIRST-linux/child.log": "06fcd3c84d9894123da20a0bb0ad349a1a7a33061e10fa35d79948ba2614661a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/controller-FUNSLOTH-exit.json": "a7baf536a8245a7fefe589d2cd27467793ef392ce66723340a0642687c1bea69",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-UNSLOTH-20261101T035328Z/receipt.json": "6e62b413c6e7bbf2fcab5916629a72719c056e725f9588fe7c34511ac6855cc0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-UNSLOTH-20261101T035328Z/startup-audit.json": "d0836a2d79bad73c2da5f933c2417bcda043c4bcec6cfff34cd3cb2025f0403c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-UNSLOTH-20261101T035328Z/native/server-cleanup.json": "a2d2dfe09c9677033ece85073e06f0832bd129d1047d9ffce2e1c04e4b2d0088",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-UNSLOTH-20261101T035328Z/native/native-close.jsonl": "dfdc606d7d477513e97964f6186812796338ff5e7f7d534cd09c03f26281b40d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-UNSLOTH-20261101T035328Z/native/skip-controls/state44-cold/response.json": "7467c261b4727b071d5ad58a14feab6a4650c72f56cdc41a2e6a7d08f7e167ca",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-UNSLOTH-20261101T035328Z/native/skip-controls/state44-warm/response.json": "ebe2b070d92caa1e138979b9497c6b18b9449315d6b3fdd165319d30a88e3058"
+  }
+}
