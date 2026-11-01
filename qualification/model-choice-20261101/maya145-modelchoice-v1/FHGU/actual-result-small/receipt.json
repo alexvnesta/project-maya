@@ -1,0 +1,1100 @@
+{
+  "mode": "modelstate",
+  "arm": "FHGU",
+  "arm_results": {
+    "complete": true,
+    "scores": [
+      {
+        "id": "state44-cold",
+        "passed": true,
+        "status": "FINITE_LITERAL_SOURCE_STATE_PASSED"
+      },
+      {
+        "id": "state44-warm",
+        "passed": true,
+        "status": "FINITE_LITERAL_SOURCE_STATE_PASSED"
+      }
+    ],
+    "rows": [
+      {
+        "id": "state44-cold",
+        "passed": true,
+        "native": {
+          "generated": 65,
+          "prompt_tokens": 44,
+          "prompt_ms": 647.8,
+          "decode_ms": 1492.2,
+          "finish": "stop",
+          "drafts_accepted": 43,
+          "drafts_offered": 60,
+          "reused": 0,
+          "hits": 17676,
+          "lookups": 20340
+        },
+        "observed_tokens": 65,
+        "native_decode_tokens_per_second": 43.55984452486262,
+        "client_seconds": 2.1610090229660273,
+        "content_characters": 20,
+        "reasoning_characters": 214,
+        "manual_review_pending": false,
+        "general_quality_or_equivalence_claim": false
+      },
+      {
+        "id": "state44-warm",
+        "passed": true,
+        "native": {
+          "generated": 124,
+          "prompt_tokens": 44,
+          "prompt_ms": 33.5,
+          "decode_ms": 2640.8,
+          "finish": "stop",
+          "drafts_accepted": 78,
+          "drafts_offered": 106,
+          "reused": 43,
+          "hits": 35474,
+          "lookups": 38415
+        },
+        "observed_tokens": 124,
+        "native_decode_tokens_per_second": 46.955468039987885,
+        "client_seconds": 2.7060234749224037,
+        "content_characters": 20,
+        "reasoning_characters": 462,
+        "manual_review_pending": false,
+        "general_quality_or_equivalence_claim": false
+      }
+    ],
+    "retry": false,
+    "automatic_next_arm": false,
+    "quality_or_performance_pass": false,
+    "manual_review_required": true,
+    "unmeasured_numerical": true,
+    "native_request_count": 2,
+    "drafter_execution": [
+      {
+        "configured_and_loaded_separate": true,
+        "execution_proven": true,
+        "draft_rounds": 20,
+        "draft_ms": 125.699,
+        "verify_ms": 1209.725,
+        "acceptance_can_be_zero": true,
+        "samples": 9,
+        "raw_lines_sha256": "0806d8f25f35778c8e6ffe1af88a7898cc281bb7a92de1c6d94ba50a8f142774"
+      },
+      {
+        "configured_and_loaded_separate": true,
+        "execution_proven": true,
+        "draft_rounds": 43,
+        "draft_ms": 262.506,
+        "verify_ms": 2038.866,
+        "acceptance_can_be_zero": true,
+        "samples": 16,
+        "raw_lines_sha256": "fc047d94662e92560cb3789738e212e6fe0c0104f63bac5704b1b610e2f7fe91"
+      }
+    ],
+    "mode1_activation": {
+      "mode": 1,
+      "source": 20,
+      "retained_rows": 2668,
+      "activation_early_rows": []
+    },
+    "dump_pair": {
+      "count": 2,
+      "sizes": [
+        {
+          "bytes": 42403840,
+          "rows": 82,
+          "finite_or_equivalence_proven": false
+        },
+        {
+          "bytes": 79119360,
+          "rows": 153,
+          "finite_or_equivalence_proven": false
+        }
+      ],
+      "full_finite_audit_pending": true,
+      "token_row_alignment_claimed": false,
+      "source_format": "headerless float32 vocabulary rows; first prompt-last row then variable decode-round batches"
+    },
+    "round_schedule": {
+      "diagnostic_only": true,
+      "raw_sha256": "f3983f95a17ddcd9f0d5b00c2cd66eecc985384d6b859c06d02fd19925c77da0",
+      "rows": [
+        {
+          "tag": "r1",
+          "position": 44,
+          "token_offset": 0,
+          "source": "dspark",
+          "made": 4,
+          "verified": 2,
+          "kept": 2,
+          "confidence_rounded": [
+            1.0,
+            0.8949,
+            0.47,
+            0.4421
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 47,
+          "token_offset": 3,
+          "source": "dspark",
+          "made": 4,
+          "verified": 3,
+          "kept": 3,
+          "confidence_rounded": [
+            0.6711,
+            0.7945,
+            0.8147,
+            0.6311
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 51,
+          "token_offset": 7,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            1.0,
+            0.9992,
+            0.9992,
+            0.9851
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 56,
+          "token_offset": 12,
+          "source": "lookup",
+          "made": 15,
+          "verified": 15,
+          "kept": 3,
+          "confidence_rounded": []
+        },
+        {
+          "tag": "r1",
+          "position": 60,
+          "token_offset": 16,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.6661,
+            0.4665,
+            0.5567,
+            0.3982
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 62,
+          "token_offset": 18,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 0,
+          "confidence_rounded": [
+            0.658,
+            0.5001,
+            0.5403,
+            0.507
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 63,
+          "token_offset": 19,
+          "source": "dspark",
+          "made": 4,
+          "verified": 0,
+          "kept": 0,
+          "confidence_rounded": [
+            0.6464,
+            0.4894,
+            0.3219,
+            0.4136
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 65,
+          "token_offset": 21,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.6823,
+            0.5776,
+            0.5409,
+            0.5406
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 67,
+          "token_offset": 23,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            0.9998,
+            0.9987,
+            0.8673,
+            0.9606
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 72,
+          "token_offset": 28,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            1.0,
+            1.0,
+            0.9991,
+            0.999
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 77,
+          "token_offset": 33,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            0.9996,
+            0.999,
+            0.9985,
+            0.958
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 82,
+          "token_offset": 38,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 0,
+          "confidence_rounded": [
+            0.7261,
+            0.5292,
+            0.4386,
+            0.7103
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 83,
+          "token_offset": 39,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 0,
+          "confidence_rounded": [
+            0.8092,
+            0.5791,
+            0.584,
+            0.5727
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 84,
+          "token_offset": 40,
+          "source": "dspark",
+          "made": 4,
+          "verified": 2,
+          "kept": 0,
+          "confidence_rounded": [
+            0.817,
+            0.6536,
+            0.3967,
+            0.3348
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 85,
+          "token_offset": 41,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            0.9998,
+            0.9998,
+            0.9985,
+            0.998
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 90,
+          "token_offset": 46,
+          "source": "dspark",
+          "made": 4,
+          "verified": 3,
+          "kept": 3,
+          "confidence_rounded": [
+            1.0,
+            1.0,
+            0.8998,
+            0.6439
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 94,
+          "token_offset": 50,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.9295,
+            0.6249,
+            0.8291,
+            0.7862
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 96,
+          "token_offset": 52,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.7252,
+            0.6126,
+            0.9243,
+            0.636
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 98,
+          "token_offset": 54,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            0.74,
+            0.9521,
+            0.7612,
+            0.8374
+          ]
+        },
+        {
+          "tag": "r1",
+          "position": 103,
+          "token_offset": 59,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 44,
+          "token_offset": 0,
+          "source": "dspark",
+          "made": 4,
+          "verified": 2,
+          "kept": 2,
+          "confidence_rounded": [
+            1.0,
+            0.9242,
+            0.5836,
+            0.4501
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 47,
+          "token_offset": 3,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            0.6736,
+            0.7994,
+            0.8268,
+            0.6683
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 52,
+          "token_offset": 8,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            1.0,
+            0.9998,
+            0.9988,
+            0.676
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 57,
+          "token_offset": 13,
+          "source": "dspark",
+          "made": 4,
+          "verified": 3,
+          "kept": 3,
+          "confidence_rounded": [
+            0.999,
+            0.9894,
+            0.8939,
+            0.6377
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 61,
+          "token_offset": 17,
+          "source": "dspark",
+          "made": 4,
+          "verified": 0,
+          "kept": 0,
+          "confidence_rounded": [
+            0.5668,
+            0.5235,
+            0.5218,
+            0.2874
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 63,
+          "token_offset": 19,
+          "source": "dspark",
+          "made": 4,
+          "verified": 0,
+          "kept": 0,
+          "confidence_rounded": [
+            0.628,
+            0.4988,
+            0.5805,
+            0.4131
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 65,
+          "token_offset": 21,
+          "source": "dspark",
+          "made": 4,
+          "verified": 2,
+          "kept": 1,
+          "confidence_rounded": [
+            0.7994,
+            0.6854,
+            0.5665,
+            0.347
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 67,
+          "token_offset": 23,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            0.9107,
+            0.9316,
+            0.8611,
+            0.6703
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 72,
+          "token_offset": 28,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            1.0,
+            1.0,
+            1.0,
+            0.9989
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 77,
+          "token_offset": 33,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            1.0,
+            0.9998,
+            0.9993,
+            0.9983
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 82,
+          "token_offset": 38,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 0,
+          "confidence_rounded": [
+            0.7383,
+            0.535,
+            0.3717,
+            0.4947
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 83,
+          "token_offset": 39,
+          "source": "dspark",
+          "made": 4,
+          "verified": 0,
+          "kept": 0,
+          "confidence_rounded": [
+            0.5832,
+            0.4275,
+            0.3805,
+            0.4272
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 85,
+          "token_offset": 41,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 0,
+          "confidence_rounded": [
+            0.7168,
+            0.5534,
+            0.5011,
+            0.7029
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 86,
+          "token_offset": 42,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.6905,
+            0.4655,
+            0.7218,
+            0.5688
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 88,
+          "token_offset": 44,
+          "source": "dspark",
+          "made": 4,
+          "verified": 2,
+          "kept": 1,
+          "confidence_rounded": [
+            0.7531,
+            0.6712,
+            0.4276,
+            0.3206
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 90,
+          "token_offset": 46,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.9252,
+            0.547,
+            0.6586,
+            0.9039
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 92,
+          "token_offset": 48,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            0.9972,
+            0.9994,
+            0.9985,
+            0.9965
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 97,
+          "token_offset": 53,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            1.0,
+            1.0,
+            0.9999,
+            0.9432
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 102,
+          "token_offset": 58,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 1,
+          "confidence_rounded": [
+            0.9853,
+            0.698,
+            0.9185,
+            0.912
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 104,
+          "token_offset": 60,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 0,
+          "confidence_rounded": [
+            0.8108,
+            0.7897,
+            0.9548,
+            0.8213
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 105,
+          "token_offset": 61,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.9114,
+            0.6447,
+            0.8299,
+            0.9134
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 107,
+          "token_offset": 63,
+          "source": "dspark",
+          "made": 4,
+          "verified": 2,
+          "kept": 2,
+          "confidence_rounded": [
+            0.7908,
+            0.7482,
+            0.4765,
+            0.8333
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 110,
+          "token_offset": 66,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 0,
+          "confidence_rounded": [
+            0.8396,
+            0.9434,
+            0.8609,
+            0.8834
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 111,
+          "token_offset": 67,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.7458,
+            0.6364,
+            0.4047,
+            0.261
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 113,
+          "token_offset": 69,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 0,
+          "confidence_rounded": [
+            0.732,
+            0.6034,
+            0.7186,
+            0.3775
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 114,
+          "token_offset": 70,
+          "source": "dspark",
+          "made": 4,
+          "verified": 2,
+          "kept": 0,
+          "confidence_rounded": [
+            0.8419,
+            0.7316,
+            0.5422,
+            0.4433
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 115,
+          "token_offset": 71,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.8467,
+            0.6304,
+            0.7372,
+            0.6737
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 117,
+          "token_offset": 73,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            1.0,
+            1.0,
+            1.0,
+            0.9992
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 122,
+          "token_offset": 78,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 3,
+          "confidence_rounded": [
+            1.0,
+            1.0,
+            0.9988,
+            0.7627
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 126,
+          "token_offset": 82,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.9542,
+            0.6463,
+            0.5723,
+            0.5369
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 128,
+          "token_offset": 84,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 0,
+          "confidence_rounded": [
+            0.663,
+            0.527,
+            0.5011,
+            0.3688
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 129,
+          "token_offset": 85,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.7462,
+            0.5946,
+            0.556,
+            0.4428
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 131,
+          "token_offset": 87,
+          "source": "dspark",
+          "made": 4,
+          "verified": 3,
+          "kept": 0,
+          "confidence_rounded": [
+            0.7889,
+            0.7125,
+            0.7026,
+            0.581
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 132,
+          "token_offset": 88,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.7293,
+            0.6407,
+            0.6602,
+            0.7405
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 134,
+          "token_offset": 90,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            0.997,
+            0.8072,
+            0.9412,
+            0.9565
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 139,
+          "token_offset": 95,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 144,
+          "token_offset": 100,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 3,
+          "confidence_rounded": [
+            1.0,
+            1.0,
+            0.9962,
+            0.826
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 148,
+          "token_offset": 104,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.7865,
+            0.4399,
+            0.5961,
+            0.6672
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 150,
+          "token_offset": 106,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 1,
+          "confidence_rounded": [
+            0.9423,
+            0.7861,
+            0.9163,
+            0.7413
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 152,
+          "token_offset": 108,
+          "source": "dspark",
+          "made": 4,
+          "verified": 1,
+          "kept": 1,
+          "confidence_rounded": [
+            0.8318,
+            0.5627,
+            0.5201,
+            0.6389
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 154,
+          "token_offset": 110,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 3,
+          "confidence_rounded": [
+            0.9184,
+            0.8799,
+            0.9147,
+            0.9091
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 158,
+          "token_offset": 114,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            0.9991,
+            0.9999,
+            0.9999,
+            0.9988
+          ]
+        },
+        {
+          "tag": "r2",
+          "position": 163,
+          "token_offset": 119,
+          "source": "dspark",
+          "made": 4,
+          "verified": 4,
+          "kept": 4,
+          "confidence_rounded": [
+            1.0,
+            1.0,
+            1.0,
+            0.9995
+          ]
+        }
+      ],
+      "request_tags": [
+        "r1",
+        "r2"
+      ],
+      "plain_steps_omitted": true,
+      "RNG_counters_exported": false,
+      "source_log_not_per_token_logit_alignment": true,
+      "causality_proven": false
+    },
+    "DSI1_leftovers": []
+  },
+  "seconds_including_load": 543.2654029061086,
+  "private_cleanup_passed": true,
+  "resource_fence_terminal": {
+    "passed": true,
+    "events_after": {
+      "low": 0,
+      "high": 0,
+      "max": 2248,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 2248,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "cache_charging_disclosure": "memory.current/peak include charged file cache and pinned memory; not process RSS"
+  },
+  "manual_review_pending": true,
+  "not_a_promotion": true
+}

@@ -1,6 +1,6 @@
 {
-  "utc": "2026-11-01T03:33:29.995591+00:00",
-  "status": "EXACT_BOTH_HOST_CPU_AND_ACTUAL_READ_ONLY_PREFLIGHT_PASSED_ADMISSION_PENDING",
+  "utc": "2026-11-01T03:50:16.833605+00:00",
+  "status": "FHGU_FIRST_FINITE_DIAGNOSTIC_AND_INDEPENDENT_AUDIT_PASSED_SELECTED4096_RESTORED_MANUAL_REVIEW_PENDING",
   "mode": "modelstate",
   "arms": [
     "FHGU",
@@ -44,5 +44,37 @@
   "recovery_qualification_sha256": "a2a93ce78a8b628e0b105a34d262dd6c715cddec0130798ca896e682d234e4f5",
   "first_actual_FHGU_readonly_preflight": "FHGU-PREFLIGHT-FIRST/controller.log",
   "first_actual_preflight_sha256": "232c02d3026663b3e95463f65fd4928e2eda897c30605b4b55095271d0d30176",
-  "next": "Sol exactmap/readonly actualproof review and separate SINGLE FHGU conditional admission; fresh guard before launch. No timing/promotion; FUNSLOTH later separate."
+  "next": "Sol raw result review; accepted short diagnostic closure then fresh separate FUNSLOTH actual preflight and admission, no source changes or repeated controls.",
+  "active_private_phase": false,
+  "current_binding_snapshot": {
+    "invocation": "b7778715cd54463993467e59755f28a1",
+    "main_pid": 883368,
+    "native_pid": 883405,
+    "native_start_ticks": 177294343
+  },
+  "FHGU": {
+    "native": 873752,
+    "API": 873664,
+    "controller": 872946,
+    "all_exit0": true,
+    "window": "20261101T033527Z",
+    "phase_seconds": 543.2654029061086,
+    "correct_natural_generated": [
+      65,
+      124
+    ],
+    "reuse": [
+      0,
+      43
+    ],
+    "all_finite_rows": [
+      82,
+      153
+    ],
+    "CPU_allRAM": 6636,
+    "GPUtrunk": 8724,
+    "terminal_audit_sha256": "0c85b2eaed2a1bb41a982f52b59e68c72bfdf140d329c271968e98c130eec677",
+    "ROOT_review_sha256": "f408ed116d6bc9cd8505c053592d38b44c20f710b42c2fc3aca843dee9a522de",
+    "general_quality_timing_or_promotion": false
+  }
 }

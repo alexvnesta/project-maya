@@ -1,0 +1,249 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-11-01T03:51:40.965495+00:00",
+  "verdict": "FHGU_FIRST_SHORT_FINITE_LITERAL_AND_OWNED_CLOSURE_ACCEPTED_BOUNDED",
+  "findings": [],
+  "scope": "Complete local saved own-fixture responses/content/reasoning/raw traces/STAT/request and lifecycle/resource receipts;47 audit-pinned evidence files independently hashed plus ROOT/terminal closure. No live host verification or float payload read.",
+  "evidence_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/modelstate-arms.json": "c97f628812a9396650cddd688feea118707b9920bf9d9f5092f517bf6e1b6343",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modelchoice-HGU-20261101T033420Z/state.json": "78e009cd69133c73d62e8c682869895b7a495d3536504d5c69a47194b45ece4c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modelchoice-HGU-20261101T033420Z/proof.json": "80e88c3f643b4d1ab008937f178ebc4d53fdb00c2c6dd39566d18f9b0f8595ad",
+    "/Users/alex/strata-deepseek-qualification-20261024/windows/20261101T033527Z.json": "24faf0fae86f6a72b080014affa5871ee2ae8bf7961d5f7b23af5db895d8288b",
+    "/Users/alex/strata-deepseek-qualification-20261024/windows/20261101T033527Z.telemetry.jsonl": "5919713e09bc4c97847ef000271c7c6a73c0b35ddcf1ad2cd169de78a24f646a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modelchoice-HGU-20261101T033420Z/old-owner-close.json": "ac0b6231b8cbbfca8623beabf783a5cce296cea2636ca4184b138333e63ef8b5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modelchoice-HGU-20261101T033420Z/public-default-output-request.json": "93bb8806b80adc0a4793b4302b8387e13ae2d02b04932ddd2b2f166be29a455a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modelchoice-HGU-20261101T033420Z/public-default-output-sse.txt": "edec84395da03487519368514cd77c8890e5a322dafdb2765cdf702f54305e49",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/prose-fixtures-B.json": "d572147c2f668b7702531ec62a90b5ba9fe8e0b47ac864f05ecca8c73402c601",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/fixtures.json": "b19d6e9a00be0f53ffabeeb8e09d8eb8f89bcd26a5546699fcbc1b79c1c41793",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/candidate-config.json": "31bf9132c69397fe03fee67439cab3e014944777f86556922ceb3a2a8df5a53c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/profile-base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/candidate-config.shared-settings.json": "9dccb6db4fd0d5e1596ad0845decb60c24aae2756a4eca216cb9b914d310fdc9",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-ready.json": "f9466ff2ae5091441465dd2c9207568bf8c8dc56cf3b8758077971f863e86a80",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/engine.log": "33c6d6dea2297c9299143d5734cd021ae5e415dfd28cc34348d7538152cad131",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/startup-audit.json": "aea69b66a2cc5a381ddf470f593dce1f8b7ec0185d55fdf81ed711897a360225",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/entry-audit.json": "9c577323f6f7188eb29b6d801a655ceb4fd5ca7b1c473456c4f56ea8b20aee58",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/server-start.json": "c52d0b13b22ed97aab09e0bb9a20182149ab100f2453b4febc5168bda6081550",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/server-cleanup.json": "fde741634029a32e3db93688ed65a4cbcbcee7510788dee385a183c8bc737e59",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-close.jsonl": "369c95ed4527796b1765d1952076a3f06e3f6be84a493d034c46a96d453909da",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/server.log": "29ed9b248a276737f47ad65c8a4e5a82d30e80f892114bb4bc3a8dbc3a57961f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/receipt.json": "84b4aeb092fe0429684332ba6057106c6c03e4cc3a05b805149353249339777f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/private-memory-fence.json": "72ecf4975587cc35a15114708d311cc96fa7bc48d666caef7da17451c3172cbc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/private-memory-fence-restored.json": "d940a4091eeabc4be3789cce49b956ec8adf5eb65d3e35045574c1cec3106758",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modelchoice-HGU-20261101T033420Z/private-memory-fence-collected.json": "c55e51f76480650ec492a6e712273c15a1dd125cb125ceced1067e06bc1159c9",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-file-bound.json": "18b35dae4d8c96c99548bb62cee1eb9bad37d2393e05aa1939c86b359832b1dd",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-000/request.json": "afd34d74c24ed14e172555bbea1b89757685f26e6415186632f619ed83f268f2",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-000/trace-receipt.json": "829a396891314da3f63cffc82b4bc7285403b0ad9d75cef69e26f22fb2a17387",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-000/native-statistics.json": "79eacbe96046603b03e6094db4492fd3b6aec2bf2a537fa2d1131127194f9f21",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-000/tokens.jsonl": "ac69c2caf4a4fb6fc2f208da3e6112e13fd16f9639326474254338b4f9062a60",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-000/stat-lines.jsonl": "8f1d2cba16ca3d7453ef2c29fe98af7c221c0c26d660e313850c0d9104cf1421",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-000/stat-receipt.json": "dde6c6b58b678c4f07f7c2542e5c65ef9c98807384702a6463603086099974f0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/skip-controls/state44-cold/request.json": "9866007357e50421e91b4c7548c480acc92e704f68b3cdd35aa93f86fb2d74a8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/skip-controls/state44-cold/response.json": "056e800164d90e29fed0ce7d24e46ca503be7c43545930121f407a7763cd9a22",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/skip-controls/state44-cold/native-audit.json": "aa2bf8f33c7aac689b4b5682d0d52631fa92a00226115edda448bca9450d8906",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-001/request.json": "afd34d74c24ed14e172555bbea1b89757685f26e6415186632f619ed83f268f2",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-001/trace-receipt.json": "65d67b6f93cc74a7916a4967a2e476b97fb6f8c273f0dd9780d3419c717ed546",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-001/native-statistics.json": "4d864b0e40d0956838249687e1df8c7bdcbad2e250eca68358484ec5aff64163",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-001/tokens.jsonl": "6d8f7eec7d0be633c4425a20d7a23ace1832f0c9f0a289a348146187e95ee983",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-001/stat-lines.jsonl": "b57767a5930006233a96b6fe301e399ff9db0b5511e930ccc61a316b303d71e0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/native-001/stat-receipt.json": "a0ac03093d79d0f57a1d4ff2c6de073187e33bfe1d489cac01f15bde4393030a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/skip-controls/state44-warm/request.json": "9866007357e50421e91b4c7548c480acc92e704f68b3cdd35aa93f86fb2d74a8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/skip-controls/state44-warm/response.json": "30a57ce23106065e7f67afd8b0f44488ccb5cf3c461b1036089f98888f956d71",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/skip-controls/state44-warm/native-audit.json": "1acec393f7ed7ee46b47af1fde1990b5abccef04b0437987867edbf64d4cd736",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modelchoice-HGU-20261101T033420Z/native/rounds.tsv": "f3983f95a17ddcd9f0d5b00c2cd66eecc985384d6b859c06d02fd19925c77da0",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/FHGU/terminal-audit.json": "0c85b2eaed2a1bb41a982f52b59e68c72bfdf140d329c271968e98c130eec677",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/FHGU/ROOT_FULL_RESULT_REVIEW_FIRST.json": "f408ed116d6bc9cd8505c053592d38b44c20f710b42c2fc3aca843dee9a522de",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/FHGU/TERMINAL-AUDIT-FIRST-linux/child.json": "da300b466f31ae6defc89f6d3434b7b9595d9d94ceddd8f9e85c7c2a4a8c387b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/FHGU/TERMINAL-AUDIT-FIRST-linux/child.log": "75e7ce1d43c0edaf5c930dc845ee71e2e6a26e9c0b37d093c1d7a57ed65513b1",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1/controller-FHGU-exit.json": "afb249cf8c42ecdf8aedebbf11b48fd539e01aaee94364f12d1b27d4e63fe6fe",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/maintenance/maya145-modelchoice-HGU-20261101T033420Z/result.json": "a4c7d9abb7118ebd225aa28b9026a5afa3bffeb28c0912c3b4d0318798e9294a"
+  },
+  "rows": [
+    {
+      "id": "state44-cold",
+      "generated_tokens": 65,
+      "prompt_tokens": 44,
+      "reuse": 0,
+      "content_exact": true,
+      "natural_stop_DONE": true,
+      "reasoning_characters": 214,
+      "whole_content_and_reasoning_manually_read": true,
+      "SSE_events_reconstruct_full_text": true,
+      "trace_tokens_valid_complete": true,
+      "DSpark_rounds": 20,
+      "draft_accepted": 43,
+      "draft_offered": 60
+    },
+    {
+      "id": "state44-warm",
+      "generated_tokens": 124,
+      "prompt_tokens": 44,
+      "reuse": 43,
+      "content_exact": true,
+      "natural_stop_DONE": true,
+      "reasoning_characters": 462,
+      "whole_content_and_reasoning_manually_read": true,
+      "SSE_events_reconstruct_full_text": true,
+      "trace_tokens_valid_complete": true,
+      "DSpark_rounds": 43,
+      "draft_accepted": 78,
+      "draft_offered": 106
+    }
+  ],
+  "finite_logits": {
+    "evidence": [
+      {
+        "bytes": 42403840,
+        "rows": 82,
+        "sha256": "7d822d013688fe6bdcab962992889ceed37731c11a06bb0d2128da12a6cb215b",
+        "all_finite": true,
+        "token_row_alignment_claimed": false
+      },
+      {
+        "bytes": 79119360,
+        "rows": 153,
+        "sha256": "f9ddd9936a812f249ba89f333aec22d51f342b16f448c6afdbacdd6acb416ef5",
+        "all_finite": true,
+        "token_row_alignment_claimed": false
+      }
+    ],
+    "basis": "Qualified independent physical-Linux saved auditor exit0 reports complete whole-vocabulary float32 finiteness. Float files not mirrored locally and not reread/scanned here; byte/row/vocab closure reconciled.",
+    "row_alignment_or_equivalence_claim": false
+  },
+  "observed_runtime": {
+    "native_pid": 873752,
+    "API_pid": 873664,
+    "controller_pid": 872946,
+    "window": "20261101T033527Z",
+    "native_API_window_controller_exit0": true,
+    "phase_seconds": 543.2654029061086,
+    "actual_all_CPU_experts_RAM": 6636,
+    "actual_GPU_trunk_slots": 8724,
+    "directFD_all9_original_and_O_DIRECT_pairs": true,
+    "direct_GB_rounded": 76.892,
+    "fallback_GB_rounded": 0.0,
+    "exact_zero_fallback_bytes_proven": false,
+    "actual_mixed_format_checks": "L25/L26 MXFP4/MXFP4/IQ3_XXS TP2 arithmetic and24expert parts RAM/file prompt-copy checks PASS",
+    "same_native_adff_fullsettings": true
+  },
+  "resources": {
+    "memory_max": 85899345920,
+    "swap_max": 0,
+    "memory_events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 2248,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "fence_prior_properties_restored_transient_collected": true,
+    "root_min_GiB": 205.68074417114258,
+    "system_swapout_delta_bytes": 217088,
+    "swap_not_attributed_to_model": true,
+    "kernel_capture_exit0_no_fault_lines": true,
+    "interpretation": "Bounded startup/two requests completed under fixed fence.2248memory.max events indicate reclaim/charging pressure, not spare headroom. Cgroup charges include filecache/pinned memory, not processRSS. No longer-input capacity claim."
+  },
+  "restoration": {
+    "verified_selected_identity": {
+      "native_pid": 883405,
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+      "context": 1048576,
+      "output_default": 262144,
+      "prompt_skip_mode": 1,
+      "prefill_chunk": 4096,
+      "Q8": [
+        1,
+        1
+      ],
+      "TP": 1,
+      "images": true,
+      "runtime_ablation": true,
+      "DSpark": true,
+      "CPU_experts": 4045,
+      "all_CPU_experts_RAM": true,
+      "placement": {
+        "trunk_split": [
+          19,
+          21
+        ],
+        "drafter_on_GPU0": true,
+        "head_on_GPU1": true,
+        "actual_human_rows": [
+          {
+            "device": 0,
+            "first_layer": 0,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.32,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "caches_GB_rounded": 0.58,
+            "free_MiB": 2026
+          },
+          {
+            "device": 1,
+            "first_layer": 19,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31,
+            "experts_GB_rounded": 58.86,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "caches_GB_rounded": 0.54,
+            "free_MiB": 2030
+          }
+        ],
+        "exact_prompt_bytes_observed": false
+      },
+      "GPU_expert_slots_inferred": 11315,
+      "GPU_slots_direct_hosted_INFO": false,
+      "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+      "start_binding": {
+        "invocation": "b7778715cd54463993467e59755f28a1",
+        "main_pid": 883368,
+        "native_pid": 883405,
+        "native_start_ticks": 177294343
+      },
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+    },
+    "public": {
+      "unauthenticated_models": 401,
+      "authenticated_models": 200,
+      "SSE_done": true,
+      "finish": "stop",
+      "known_answer_passed": true,
+      "content": "READY"
+    },
+    "saved_idle_health": {
+      "status": "ok",
+      "max_context": 1048576,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "images": true,
+      "api_key": false,
+      "image_generation": false,
+      "loaded": true,
+      "service": "strata",
+      "busy": false,
+      "switcher": {
+        "active_model": "deepseek",
+        "inflight": 0,
+        "waiting": 0,
+        "nondefault_idle_seconds": 900.0,
+        "default_model": "deepseek",
+        "fault": null
+      }
+    },
+    "current_live_status_checked": false
+  },
+  "manual_output_assessment": "Both complete content strings exactly RECOVERED_Q8_LITERAL; full214/462character reasoning read and follows the simple literal request. Warm reasoning/path differs, allowed stochastic diagnostic behavior. No generated executable code.",
+  "limits": [
+    "Two44token literal cold/warm requests only,65/124generated tokens; near1Mfilled context and262144generation not tested.",
+    "No timing or loading/decode improvement comparison, cross-model numeric equivalence, per-token logit alignment, broad quality or privateS2 identity claim.",
+    "No FUNSLOTH or automatic next phase admitted; each requires separate fresh conditions/admission. All older HOLD/failure evidence unchanged.",
+    "Custody remains cooperative frozen-stat continuity; no model weight rehash or independent tensor attestation.",
+    "No tests/project imports/network/SSH/services/native/GPU/payload actions performed."
+  ]
+}
