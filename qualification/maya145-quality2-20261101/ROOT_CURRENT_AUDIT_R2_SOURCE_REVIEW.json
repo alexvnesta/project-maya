@@ -1,0 +1,40 @@
+{
+  "utc": "2026-11-01T00:23:40.229295+00:00",
+  "entire_new_source_tests_read": true,
+  "root_entire_new_delta_and_tests_read": true,
+  "scope": "Prospective isolated quality2 source/placement observer and verified baseline identity. OldQTP2window1 staysHOLD. NoGPUadmission. Unchanged full policy/lifecycle/fence/fixtures.",
+  "source_sha256": {
+    "current_audit.py": "c8d9da9196718e6785441067ef1b5b8f6f3ae1cf6c53ac4d0725b703182e917c",
+    "test_current_audit.py": "e5d10cff0e5d58a22f6acf4433ecd0ae8db5f83c062709026866158bda157be8",
+    "run_audit_cpu.py": "9b5ab160fb6d9bee68194430c5308fbede1f38ac8a375bffdcefcb88a5be18d1"
+  },
+  "input_sha256": {
+    "current_skip.py": "803f2e0bfaf20030e80fad20c2e94d527cdbf938a667a98b16d1ef1613ebeb57",
+    "saved-QTP2/startup-audit.json": "02daf3d211df3314e942c6ba5be493d657f4856334696a62cc07a9539d6e3ec0",
+    "saved-QTP2/engine.log": "c738e642237b41d86e189b404d53afbf900c6614b15d4e0ffca16bcb0c67a2ea"
+  },
+  "input_paths_local": {
+    "current_skip.py": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/current_skip.py",
+    "saved-QTP2/startup-audit.json": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/saved-QTP2/startup-audit.json",
+    "saved-QTP2/engine.log": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/saved-QTP2/engine.log"
+  },
+  "test_ids": [
+    "test_current_audit.Audit.test_cap_partial_UNRUN_retry_and_broader_claim_refused",
+    "test_current_audit.Audit.test_complete_short_scope_only",
+    "test_current_audit.Audit.test_duplicate_and_nonfinite_saved_JSON_refused",
+    "test_current_audit.Audit.test_exact_comparison_preserves_types",
+    "test_current_audit.Audit.test_exact_window_exit0",
+    "test_current_audit.Audit.test_old_entry_or_other_arm_refused",
+    "test_current_audit.Audit.test_private_cleanup_required",
+    "test_current_audit.Audit.test_recorder_hashes_exact_small_bytes",
+    "test_current_audit.Audit.test_recorder_refuses_alias_and_large_evidence",
+    "test_current_audit.Audit.test_unreviewed_or_wrong_scoring_refused",
+    "test_current_audit.Audit.test_wrong_or_unfinished_window_refused",
+    "test_current_audit.CurrentActivationIntegration.test_actual_saved_placement_and_both_counts",
+    "test_current_audit.CurrentActivationIntegration.test_independent_auditor_rejects_legacy_source_even_with_passed_flags",
+    "test_current_audit.CurrentFenceAudit.test_actual80_resource_contract",
+    "test_current_audit.CurrentFenceAudit.test_missing_failed_or_wrong_actual_install_refused",
+    "test_current_audit.CurrentFenceAudit.test_old76_and_unclean_or_foreign_resource_contract_refused"
+  ],
+  "sol_review_sha256": "64ae706d873bb32b9fa92df37f9011c09211258d868135ceddda5bafa5ada11a"
+}

@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-01T00:25:45.492341+00:00",
+  "decision": "ROOT_SINGLE_PROSPECTIVE_QUALITY2_QTP1_ONLY",
+  "qualification_sha256": "c8bf41a58ea70c6439fa62520bfcb649d38d746dc6cd26e11124565b3a8f6eb9",
+  "preflight_sha256": "edee57b1a4c9408714b7bb6ed2e750ab3d32bef37af603e157afa90a6a38e40a",
+  "baseline_binding": {
+    "invocation": "8b57bb9b2def42b2aea6575d5853a3df",
+    "main_pid": 714507,
+    "native_pid": 714544,
+    "native_start_ticks": 175925851
+  },
+  "manual_source_tests_reviewed": true,
+  "CPU_controls_each_physical_host": {
+    "controller": 95,
+    "profile": 22,
+    "auditor": 16,
+    "recovery": 63
+  },
+  "old_failed_QTP2_remains_HOLD": true,
+  "no_automatic_next_arm": true,
+  "no_promotion": true,
+  "window_seconds": 1200,
+  "soft_seconds": 1000,
+  "cleanup_seconds": 200,
+  "context": 1048576,
+  "output_allowance": 262144,
+  "benchmark_cap": 32768,
+  "effort": 100,
+  "drafter": true
+}

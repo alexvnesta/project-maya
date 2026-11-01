@@ -1,0 +1,79 @@
+{
+  "utc": "2026-11-01T00:45:45.750385+00:00",
+  "decision": "QUALITY2_QTP1_FOUR_STATE_SCREEN_ACCEPTED_ONLY",
+  "full_generated_reasoning_and_answers_read": true,
+  "states": [
+    "cold text exact1through64",
+    "warm text exact1through64 with8468reuse",
+    "two orderedredblueimages",
+    "text afterimages exact1through64 with8468reuse"
+  ],
+  "terminal_audit_sha256": "6691c5abae7a5dac6c60fed913d1912ee1961380d91130af21220f1ec484f6ff",
+  "terminal_child_sha256": "592c79b754845dea13814054b1df12e75df5b10056f503d489d4bcb965d607ed",
+  "window": "/home/alex/strata-deepseek-test-20261024/windows/20261101T002649Z.json",
+  "selected_identity": {
+    "native_pid": 748863,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "17dde21dc8b24b44a2f7ba97b38be637",
+      "main_pid": 748825,
+      "native_pid": 748863,
+      "native_start_ticks": 176184484
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "old_QTP2_window1_remains_HOLD": true,
+  "general_quality_equivalence_speed_or_promotion": false,
+  "new_QTP2_requires_separate_admission": true
+}
