@@ -1,0 +1,96 @@
+{
+  "utc": "2026-11-01T01:52:23.171220+00:00",
+  "decision": "BTP2_FIVE_CASE_SOURCE_LIFECYCLE_AND_THIS_CODE_TASK_ACCEPTED_ONLY",
+  "terminal_audit_sha256": "dc8b3b319c8531569efadd91d4c71d1e40141d1ba2b67e349acfecb5cfb60225",
+  "all_generated_content_reasoning_and16_supplied_tests_read": true,
+  "code_sha256": "0c25b695b06f7e055748ab3bc1e0d80b57452fdde9951e5a9774393a2bd649a9",
+  "code_proofs_each_host": {
+    "independent_cases": 2207,
+    "checks": 4414,
+    "supplied_tests": 16,
+    "negative_controls": 4,
+    "FIRST_guard_controls": 12
+  },
+  "code_proof_sha256": {
+    "darwin": "69a0d2b39e68150a373d2d9fbaeea957bbddca60edf3df3e9378f83f02d8c3cf",
+    "linux": "7768639dcc950535de2aebfd733344ee69ea9e762506582599836fb36bb7abb7"
+  },
+  "native_decode_tps": 56.14100531567659,
+  "generated_tokens": 18060,
+  "native_decode_ms": 321690.0,
+  "client_seconds": 323.090434378013,
+  "private_phase_seconds_including_load": 997.4099100399762,
+  "soft_budget_seconds": 1000,
+  "lifecycle": [
+    "typedtoolcall",
+    "actualcallIDfollowup",
+    "confirmedprefillcancelbeforefirstoutputgenerated0",
+    "naturalRECOVEREDaftercancel"
+  ],
+  "selected_identity": {
+    "native_pid": 792461,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "43cca87865b949689fbb8048ad91f84c",
+      "main_pid": 792348,
+      "native_pid": 792461,
+      "native_start_ticks": 176540991
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "near_full_context_output_tested": false,
+  "comparative_speed_or_general_quality_claim": false,
+  "promotion_admitted": false,
+  "BTP1_remains_UNRUN": "Known observed TP2 wholephase997.4s leavesinsufficientmargin toblindly admit longercomparison. Diagnoseactual loading/fencepressure first; no caps/timeouts/contextchanges."
+}

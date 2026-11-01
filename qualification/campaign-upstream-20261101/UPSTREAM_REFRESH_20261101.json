@@ -1,0 +1,440 @@
+{
+  "utc": "2026-11-01T01:55:00Z",
+  "source": "Live official GitHub connector GET-only",
+  "checked": [
+    {
+      "url": "https://api.github.com/repos/mw00/project-maya/commits/main",
+      "data": {
+        "sha": "3589d6f12a3f77e813b184b51a586f8fc3de2185",
+        "html_url": "https://github.com/mw00/project-maya/commit/3589d6f12a3f77e813b184b51a586f8fc3de2185",
+        "commit": {
+          "author": {
+            "name": "mw00",
+            "email": "mw00@users.noreply.github.com",
+            "date": "2026-10-31T23:59:35Z"
+          },
+          "committer": {
+            "name": "mw00",
+            "email": "mw00@users.noreply.github.com",
+            "date": "2026-10-31T23:59:35Z"
+          },
+          "message": "v1.1.46",
+          "tree": {
+            "sha": "ccac9fe20e1b19de44c85000de41b9c88278a73a",
+            "url": "https://api.github.com/repos/mw00/project-maya/git/trees/ccac9fe20e1b19de44c85000de41b9c88278a73a"
+          },
+          "url": "https://api.github.com/repos/mw00/project-maya/git/commits/3589d6f12a3f77e813b184b51a586f8fc3de2185",
+          "comment_count": 0,
+          "verification": {
+            "verified": false,
+            "reason": "unsigned",
+            "signature": null,
+            "payload": null,
+            "verified_at": null
+          }
+        },
+        "files": [
+          {
+            "filename": "CHANGELOG.md",
+            "status": "modified",
+            "changes": 9,
+            "patch": "@@ -4,6 +4,15 @@ Every release is on GitHub (Releases) with these notes; every published change m\n page's Settings › About and updates (About > Update before the redesign; from v1.0.18), or `git pull`, then `./setup.sh` (Windows: `START-MAYA.bat`) - it recompiles\n only what changed and starts; the model is not downloaded again.\n \n+## v1.1.46 - 2026-10-31\n+\n+DeepSeek reads long prompts about 5% faster on AMD Strix / Gorgon Halo, and three fixes.\n+\n+- **Strix / Gorgon Halo:** DeepSeek reads a 16K prompt about 5% faster (the prompt is read in 4K-token pieces on these GPUs, with the same answers).\n+- **Long agent sessions:** a request whose messages carry their content as parts no longer fails with an error (#717).\n+- **Tool calls:** a tool call with an unclosed parameter tag is handled as a malformed call instead of failing the request (#706).\n+- **DeepSeek on Windows:** the in-place memory trim settings given in a config now reach the engine (#728).\n+\n ## v1.1.45 - 2026-10-31\n \n A fix for DeepSeek-V4.1-Flash on one GPU."
+          },
+          {
+            "filename": "VERSION",
+            "status": "modified",
+            "changes": 2,
+            "patch": "@@ -1 +1 @@\n-1.1.45\n+1.1.46"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/mw00/project-maya/pulls?state=all&sort=updated&direction=desc&per_page=30",
+      "data": [
+        {
+          "number": 742,
+          "title": "Metal: avoid GGML free-block exhaustion on long-context prefill",
+          "state": "open",
+          "updated": "2026-10-31T23:35:18Z",
+          "user": "appleguy",
+          "head": "aeb0b4ee2062a09cd987d7c3d62e9ba932c2a5e1",
+          "url": "https://github.com/mw00/project-maya/pull/742"
+        },
+        {
+          "number": 741,
+          "title": "ds4: an expert gives the same bits on the CPU lane and in VRAM (opt-in, #644)",
+          "state": "open",
+          "updated": "2026-10-31T21:30:47Z",
+          "user": "cresslank",
+          "head": "c1a134d1100d288518eeb95378f3b91ab885b2f8",
+          "url": "https://github.com/mw00/project-maya/pull/741"
+        },
+        {
+          "number": 722,
+          "title": "GLM decode: CPU-expert deferral on every part of a split, opt-in (`MAYA_GLM_DEFER_CPU=2`): +7.7% decode on 2x RTX 4060 Ti (+13% with a re-biased router)",
+          "state": "open",
+          "updated": "2026-10-31T20:42:54Z",
+          "user": "oisee",
+          "head": "c1072ece682884afbbdf7d2d5c03765d584cd7ed",
+          "url": "https://github.com/mw00/project-maya/pull/722"
+        },
+        {
+          "number": 592,
+          "title": "HIP: automatically select exact TP2 prefill transport at startup",
+          "state": "closed",
+          "updated": "2026-10-31T20:22:46Z",
+          "user": "LostVector",
+          "head": "2c3e6f58927f038a02360e5d05163aa43c63b682",
+          "url": "https://github.com/mw00/project-maya/pull/592"
+        },
+        {
+          "number": 736,
+          "title": "ds4: an opt-in DMA/host all-reduce for the flow's prompt chunks",
+          "state": "open",
+          "updated": "2026-10-31T18:38:33Z",
+          "user": "hajekt2",
+          "head": "3869542f2df7275db2d2aeaac96f5e461108a97f",
+          "url": "https://github.com/mw00/project-maya/pull/736"
+        },
+        {
+          "number": 732,
+          "title": "ds4: the engine's end sets aside every parallel conversation, not only the bound one",
+          "state": "open",
+          "updated": "2026-10-31T15:17:58Z",
+          "user": "hajekt2",
+          "head": "de510efdd6bb354efec1ce67a41ebf3de4a4a59b",
+          "url": "https://github.com/mw00/project-maya/pull/732"
+        },
+        {
+          "number": 650,
+          "title": "docs: share four-4090 DS4.1 HTTP tuning observations and reproducible inputs",
+          "state": "open",
+          "updated": "2026-10-31T14:11:07Z",
+          "user": "oscarlius",
+          "head": "d22911c86dfd707a3b4c6c2b2afa5e07cb5c5ebc",
+          "url": "https://github.com/mw00/project-maya/pull/650"
+        },
+        {
+          "number": 720,
+          "title": "A GLM setup run again keeps the config's host, API key, CORS origins and MCP servers",
+          "state": "open",
+          "updated": "2026-10-31T09:36:32Z",
+          "user": "tobitege",
+          "head": "4edad9483804c7c598ee72618fd60e9ad902fb9b",
+          "url": "https://github.com/mw00/project-maya/pull/720"
+        },
+        {
+          "number": 709,
+          "title": "serve: a turn-end marker inside the thinking is the model's text - the stop scan and the turn end apply to the answer (#640)",
+          "state": "closed",
+          "updated": "2026-10-31T09:21:55Z",
+          "user": "markrussi",
+          "head": "7b08c78f64f3a0018de52e7ee69e8d0107d596e9",
+          "url": "https://github.com/mw00/project-maya/pull/709"
+        },
+        {
+          "number": 704,
+          "title": "loop guard: leave a long conversation's prompt whole (MAYA_LOOP_GUARD_COLLAPSE_MAX, 32000 chars, #702)",
+          "state": "closed",
+          "updated": "2026-10-31T09:21:52Z",
+          "user": "tonykee",
+          "head": "93bed79051429e0557c5f8c950b62edbc8a51ede",
+          "url": "https://github.com/mw00/project-maya/pull/704"
+        },
+        {
+          "number": 696,
+          "title": "serve: the loop guard's next engine call fits the context (v1.1.41 regression)",
+          "state": "closed",
+          "updated": "2026-10-31T09:21:49Z",
+          "user": "Jellepepe",
+          "head": "b5eb668c56ea7d9855625b5c08fe0b20e98dbf9c",
+          "url": "https://github.com/mw00/project-maya/pull/696"
+        },
+        {
+          "number": 687,
+          "title": "DeepSeek: --ablate-sites and --ablate-layers limit --ablate to some writes",
+          "state": "open",
+          "updated": "2026-10-31T07:41:54Z",
+          "user": "sociolog",
+          "head": "5b1144c594ba8a7c1afc3731ce86862b88fa4c17",
+          "url": "https://github.com/mw00/project-maya/pull/687"
+        },
+        {
+          "number": 714,
+          "title": "GLM --parallel: keep the conversation checkpoints for each conversation (MAYA_GLM_MULTI_CKPTS, #711)",
+          "state": "open",
+          "updated": "2026-10-31T05:55:22Z",
+          "user": "coco-famihiro",
+          "head": "df1d51c19cd031580419d1cdef4bf81685c15aba",
+          "url": "https://github.com/mw00/project-maya/pull/714"
+        },
+        {
+          "number": 712,
+          "title": "ds4 GGUF: rebase Q5_K int8 tensor-core GEMVs onto v1.1.42",
+          "state": "open",
+          "updated": "2026-10-31T04:21:25Z",
+          "user": "handmade0octopus",
+          "head": "a5501aebe4b39378c4a12311a5396b7edb0f1c00",
+          "url": "https://github.com/mw00/project-maya/pull/712"
+        },
+        {
+          "number": 624,
+          "title": "ds4 GGUF: Q5_K GEMVs of >= N activations on int8 tensor cores (DS4_Q5K_IMMA, opt-in, sm_80+), bit for bit the dp4a kernel",
+          "state": "open",
+          "updated": "2026-10-31T04:13:58Z",
+          "user": "SeriousRising",
+          "head": "1872501868fee0a1c40b13de76fa7b4380ab2abf",
+          "url": "https://github.com/mw00/project-maya/pull/624"
+        },
+        {
+          "number": 710,
+          "title": "A Qwen-form tool call with an unclosed <parameter= tag no longer fails the request",
+          "state": "open",
+          "updated": "2026-10-31T00:44:18Z",
+          "user": "pschaub",
+          "head": "e5678f38c17a5aab4833335b4d383894fd643afb",
+          "url": "https://github.com/mw00/project-maya/pull/710"
+        },
+        {
+          "number": 691,
+          "title": "DeepSeek: long prompts 1,435 -> 1,780 tok/s (EXL3 lend, unpicked experts skipped, AR read-back by DMA, restore points in one read); 2,307 on two tensor-parallel groups",
+          "state": "closed",
+          "updated": "2026-10-30T18:59:23Z",
+          "user": "needmorevram",
+          "head": "ec2af7145da7d5eadad3be6ecbd4c0b191f26ccd",
+          "url": "https://github.com/mw00/project-maya/pull/691"
+        },
+        {
+          "number": 345,
+          "title": "HIP: build and enable the vision encoder on AMD GPUs",
+          "state": "closed",
+          "updated": "2026-10-30T18:59:20Z",
+          "user": "Ehco",
+          "head": "c75f890174c9c0566c68a7b17ec8d069d306f298",
+          "url": "https://github.com/mw00/project-maya/pull/345"
+        },
+        {
+          "number": 701,
+          "title": "ds4: tensor-parallel layers with every expert in VRAM can leave the host out too (MAYA_DS4_HOST_FREE_TP=1)",
+          "state": "open",
+          "updated": "2026-10-30T16:13:47Z",
+          "user": "loktar00",
+          "head": "97faff533824767041e222ffc0939ab96dfcbe33",
+          "url": "https://github.com/mw00/project-maya/pull/701"
+        },
+        {
+          "number": 700,
+          "title": "ds4: say when another program holds a GPU's memory, and never plan around it silently",
+          "state": "open",
+          "updated": "2026-10-30T16:13:45Z",
+          "user": "loktar00",
+          "head": "18f4199f643a47fdd29fa7e64fb7282026d5becb",
+          "url": "https://github.com/mw00/project-maya/pull/700"
+        },
+        {
+          "number": 692,
+          "title": "HIP: EXL3 prompt path on gfx950 matrix cores (MFMA)",
+          "state": "open",
+          "updated": "2026-10-30T16:13:26Z",
+          "user": "yagop",
+          "head": "242ab7ea52d06de1eca1241fc011828074988a82",
+          "url": "https://github.com/mw00/project-maya/pull/692"
+        },
+        {
+          "number": 695,
+          "title": "CPU lane: IQ1_S rows decode a segment's indices, scales and delta sums in vectors - one token too, the same bits",
+          "state": "open",
+          "updated": "2026-10-30T13:30:11Z",
+          "user": "sociolog",
+          "head": "0dee68ac09d6190d03143b54c8cec0e418f9375a",
+          "url": "https://github.com/mw00/project-maya/pull/695"
+        },
+        {
+          "number": 682,
+          "title": "ds4 --parallel: accept serve's STRATA_ aliases of the read scheduler settings",
+          "state": "open",
+          "updated": "2026-10-30T12:42:08Z",
+          "user": "handmade0octopus",
+          "head": "cf5addd79ad5aed0e9a709e1bfdae745b13ad9fd",
+          "url": "https://github.com/mw00/project-maya/pull/682"
+        },
+        {
+          "number": 581,
+          "title": "HIP: gfx950 (MI350X / MI355X) support and EXL3 decode without a per-block L2 flush",
+          "state": "closed",
+          "updated": "2026-10-30T11:00:41Z",
+          "user": "yagop",
+          "head": "da6adf2b4eeeaf728968cfafbf9db0b4bf7a8f9f",
+          "url": "https://github.com/mw00/project-maya/pull/581"
+        },
+        {
+          "number": 688,
+          "title": "DeepSeek: a request that leaves a GPU in a fault ends the engine, and the next request starts a fresh one",
+          "state": "open",
+          "updated": "2026-10-30T09:51:50Z",
+          "user": "sociolog",
+          "head": "0c9da5ba7bd53cbf38753c0700196e387b468fc7",
+          "url": "https://github.com/mw00/project-maya/pull/688"
+        },
+        {
+          "number": 667,
+          "title": "MiniMax reports: maya-mm3's load summary in its engine log, its lines and images setting in --report",
+          "state": "closed",
+          "updated": "2026-10-30T09:20:12Z",
+          "user": "tobitege",
+          "head": "655a925a52243aca24ec9787ec72fb9d72a75fdf",
+          "url": "https://github.com/mw00/project-maya/pull/667"
+        },
+        {
+          "number": 599,
+          "title": "serve: show DS4 helper memory separately in Monitor",
+          "state": "closed",
+          "updated": "2026-10-30T08:38:35Z",
+          "user": "LostVector",
+          "head": "ddf94de9bd9540385513d77f25235e7498311f3e",
+          "url": "https://github.com/mw00/project-maya/pull/599"
+        },
+        {
+          "number": 527,
+          "title": "ds4: extend helper-GPU execution to EXL3 and allow DSpark sharing",
+          "state": "closed",
+          "updated": "2026-10-30T08:38:32Z",
+          "user": "LostVector",
+          "head": "c39394acc3b563ce85aee89f184191a1651076ca",
+          "url": "https://github.com/mw00/project-maya/pull/527"
+        },
+        {
+          "number": 563,
+          "title": "hip: pull clock from wall_clock64, and DS4_IQ1S_ROWS",
+          "state": "closed",
+          "updated": "2026-10-30T08:38:29Z",
+          "user": "Cass67",
+          "head": "dcfaf5e70061f4dbacdda3e53201c4297210d0e9",
+          "url": "https://github.com/mw00/project-maya/pull/563"
+        },
+        {
+          "number": 622,
+          "title": "ds4 DSpark: the drafter head, markov steps and confidences only for the rows the round cut can keep (DS4_DSPARK_LAZY=0: all)",
+          "state": "closed",
+          "updated": "2026-10-30T08:38:27Z",
+          "user": "SeriousRising",
+          "head": "aed24df272c0f7f532b15edca2f796b9b6e5e29d",
+          "url": "https://github.com/mw00/project-maya/pull/622"
+        }
+      ]
+    },
+    {
+      "url": "https://api.github.com/repos/mw00/project-maya/releases/latest",
+      "data": {
+        "tag": "v1.1.46",
+        "html_url": "https://github.com/mw00/project-maya/releases/tag/v1.1.46",
+        "body": "DeepSeek reads long prompts about 5% faster on AMD Strix / Gorgon Halo, and three fixes.\n\n- **Strix / Gorgon Halo:** DeepSeek reads a 16K prompt about 5% faster (the prompt is read in 4K-token pieces on these GPUs, with the same answers).\n- **Long agent sessions:** a request whose messages carry their content as parts no longer fails with an error (#717).\n- **Tool calls:** a tool call with an unclosed parameter tag is handled as a malformed call instead of failing the request (#706).\n- **DeepSeek on Windows:** the in-place memory trim settings given in a config now reach the engine (#728).\n\nMaya is free; if it helps you, you can sponsor it: https://github.com/sponsors/mw00\n"
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/mw00/project-maya/compare/6ecbd3cbc5330b57f70cd5cf8a5c42eb8ef950cc...3589d6f12a3f77e813b184b51a586f8fc3de2185",
+      "data": {
+        "html_url": "https://github.com/mw00/project-maya/compare/6ecbd3cbc5330b57f70cd5cf8a5c42eb8ef950cc...3589d6f12a3f77e813b184b51a586f8fc3de2185",
+        "status": "ahead",
+        "commits": [
+          {
+            "sha": "776b8c813706524db942050c16255b3aec82c0e4",
+            "message": "ds4: cap the default prompt chunk at 4K tokens on RDNA 3 / 3.5 (gfx11)\n\nStrix Halo, Maya-XS, experts resident: a 16K prompt reads at 550 tok/s in chunks of 4096\nagainst 524 at the 32K default (the first one after a start 475 -> 550). Same tokens on a\ngreedy 16K answer. DS4_CHUNK_GFX11=N sets the cap, 0 leaves the default.",
+            "date": "2026-10-31T19:50:14Z"
+          },
+          {
+            "sha": "989ee697b945c76d1842e0635e98e2706837ac3b",
+            "message": "Loop guard: content given as parts (#717)",
+            "date": "2026-10-31T23:28:57Z"
+          },
+          {
+            "sha": "cc7e92fb34314f5879127fbba40e9e1e8616945a",
+            "message": "Tool calls: an unclosed <parameter= tag is malformed, not a crash (#706)",
+            "date": "2026-10-31T23:29:20Z"
+          },
+          {
+            "sha": "4f4b04385c9a41811cb7ec758a6c818dff8e1be4",
+            "message": "DS4 in-place trim: read the config's name too (#728)",
+            "date": "2026-10-31T23:29:53Z"
+          },
+          {
+            "sha": "3589d6f12a3f77e813b184b51a586f8fc3de2185",
+            "message": "v1.1.46",
+            "date": "2026-10-31T23:59:35Z"
+          }
+        ],
+        "files": [
+          {
+            "filename": "CHANGELOG.md",
+            "status": "modified",
+            "changes": 9,
+            "patch": "@@ -4,6 +4,15 @@ Every release is on GitHub (Releases) with these notes; every published change m\n page's Settings › About and updates (About > Update before the redesign; from v1.0.18), or `git pull`, then `./setup.sh` (Windows: `START-MAYA.bat`) - it recompiles\n only what changed and starts; the model is not downloaded again.\n \n+## v1.1.46 - 2026-10-31\n+\n+DeepSeek reads long prompts about 5% faster on AMD Strix / Gorgon Halo, and three fixes.\n+\n+- **Strix / Gorgon Halo:** DeepSeek reads a 16K prompt about 5% faster (the prompt is read in 4K-token pieces on these GPUs, with the same answers).\n+- **Long agent sessions:** a request whose messages carry their content as parts no longer fails with an error (#717).\n+- **Tool calls:** a tool call with an unclosed parameter tag is handled as a malformed call instead of failing the request (#706).\n+- **DeepSeek on Windows:** the in-place memory trim settings given in a config now reach the engine (#728).\n+\n ## v1.1.45 - 2026-10-31\n \n A fix for DeepSeek-V4.1-Flash on one GPU."
+          },
+          {
+            "filename": "VERSION",
+            "status": "modified",
+            "changes": 2,
+            "patch": "@@ -1 +1 @@\n-1.1.45\n+1.1.46"
+          },
+          {
+            "filename": "serve/frontend.py",
+            "status": "modified",
+            "changes": 7,
+            "patch": "@@ -722,8 +722,11 @@ def parse_tool_call(body: str, schema: dict | None = None) -> ToolCall:\n     args = {}\n     while \"<parameter=\" in rest:\n         rest = rest[rest.index(\"<parameter=\") + len(\"<parameter=\"):]\n-        pname = rest[:rest.index(\">\")]\n-        rest = rest[rest.index(\">\") + 1:]\n+        close = rest.find(\">\")\n+        if close < 0 or \"<\" in rest[:close]:     # an unclosed <parameter= tag: malformed, as the other cases (#706)\n+            raise MalformedToolCall(body)\n+        pname = rest[:close]\n+        rest = rest[close + 1:]\n         end = rest.find(\"</parameter>\")\n         value = rest[:end] if end >= 0 else rest\n         rest = rest[end + len(\"</parameter>\"):] if end >= 0 else \"\""
+          },
+          {
+            "filename": "serve/loop_guard.py",
+            "status": "modified",
+            "changes": 18,
+            "patch": "@@ -328,12 +328,20 @@ def args_key(v) -> str:\n                    r\"yes|y|sure|do it)\\s*[.!]*\\s*\")\n \n \n+def _text(c) -> str:\n+    \"\"\"A message's content as text: a string as is; a list of content parts (OpenAI form) by its text parts, joined.\n+    Anything else (None, a part without text) is \"\".\"\"\"\n+    if isinstance(c, str):\n+        return c\n+    if isinstance(c, list):\n+        return \" \".join(p.get(\"text\", \"\") for p in c if isinstance(p, dict) and isinstance(p.get(\"text\"), str))\n+    return \"\"\n+\n+\n def go_on(m: dict) -> bool:\n     \"\"\"A user message that only says to go on (\"continue\", \"proceed\", \"ok\"): it says nothing new, so it does not\n     start the count over (a user's \"continue\" set GLM-5.3 off on the same loop again, twice).\"\"\"\n-    c = m.get(\"content\")\n-    text = c if isinstance(c, str) else \" \".join(p.get(\"text\", \"\") for p in c or [] if isinstance(p, dict))\n-    return bool(GO_ON.fullmatch(text))\n+    return bool(GO_ON.fullmatch(_text(m.get(\"content\"))))\n \n \n def _gist(result: str) -> str:\n@@ -607,14 +615,14 @@ def collapse(messages: list[dict]) -> Collapse | None:\n             # a round that repeats: the call and its result go, and the thinking around them (the loop's own\n             # talk); text the model wrote to the user, if new, stays\n             rounds += 1\n-            if (m.get(\"content\") or \"\").strip():\n+            if _text(m.get(\"content\")).strip():\n                 out.append({\"role\": \"assistant\", \"content\": m[\"content\"]})\n             i = j\n             continue\n         made.update(keys)\n         if keys:\n             last = gists\n-        if (m.get(\"content\") or \"\").strip() or (m.get(\"reasoning_content\") or \"\").strip() or m.get(\"tool_calls\"):\n+        if _text(m.get(\"content\")).strip() or (m.get(\"reasoning_content\") or \"\").strip() or m.get(\"tool_calls\"):\n             out.append(m)\n         i += 1\n     return Collapse(out, paras, rounds) if paras or rounds else None"
+          },
+          {
+            "filename": "serve/test_loop_guard.py",
+            "status": "modified",
+            "changes": 12,
+            "patch": "@@ -941,6 +941,18 @@ def test_what_is_left_out(self):\n         self.assertEqual(LG.collapse(msgs).messages[3], {\"role\": \"assistant\", \"content\": msgs[5][\"content\"]})\n         self.assertEqual(msgs[3][\"reasoning_content\"], self.STUCK)      # the request's own messages stay as sent\n \n+    def test_content_as_parts(self):\n+        # #717: an assistant message's content may be a list of OpenAI parts; it must not break the collapse\n+        self.assertEqual(LG._text([{\"type\": \"text\", \"text\": \"a\"}, {\"type\": \"image_url\"}, \"x\", {\"text\": \"b\"}]), \"a b\")\n+        self.assertEqual(LG._text(None), \"\")\n+        msgs = self.turns(4, new=lambda i: f\" Found: claim {i}.\" if i == 2 else \"\")\n+        for m in msgs:\n+            if m[\"role\"] == \"assistant\":\n+                m[\"content\"] = [{\"type\": \"text\", \"text\": m[\"content\"]}]\n+        c = LG.collapse(msgs)\n+        self.assertEqual(c.rounds, 3)\n+        self.assertTrue(LG.go_on({\"content\": [{\"type\": \"text\", \"text\": \"continue\"}]}))\n+\n     def test_a_check_run_again_in_a_row(self):\n         msgs = [{\"role\": \"user\", \"content\": \"x\"}]\n         for i, n in enumerate((12, 15, 12, 15)):"
+          },
+          {
+            "filename": "serve/test_tools.py",
+            "status": "modified",
+            "changes": 3,
+            "patch": "@@ -61,7 +61,8 @@ def test_without_a_schema_and_without_arguments(self):\n \n     def test_malformed(self):\n         for body in (\"<arg_key>a</arg_key><arg_value>1</arg_value>\", \"f<arg_key>a<arg_value>1</arg_value>\",\n-                     \"f junk <b>\"):\n+                     \"f junk <b>\", \"<function=f><parameter=a>1</parameter><parameter=b\",\n+                     \"<function=f><parameter=a\"):   # (#706: an unclosed <parameter= tag is malformed, not a crash)\n             with self.assertRaises(ValueError, msg=body):\n                 parse_tool_call(body)\n "
+          },
+          {
+            "filename": "src/ds4/ds4_model.cu",
+            "status": "modified",
+            "changes": 24,
+            "patch": "@@ -1649,14 +1649,17 @@ struct Model::Impl {\n     // the in-place pages may hold above the load's own (default 6 on Windows; 0 disables); TRIM_MS the pass interval.\n     const float ip_trim_gb = [] {\n #if defined(_WIN32)\n+        // (a config's env arrives renamed by tools/maya_names.py env_in: read both names, MAYA_ first, as lookup does)\n         const char* v = std::getenv(\"MAYA_DS4_INPLACE_TRIM_GB\");\n+        if (v == nullptr) v = std::getenv(\"STRATA_DS4_INPLACE_TRIM_GB\");\n         return v != nullptr ? (float) std::atof(v) : 6.0f;\n #else\n         return 0.0f;\n #endif\n     }();\n     const int ip_trim_ms = [] {\n         const char* v = std::getenv(\"MAYA_DS4_INPLACE_TRIM_MS\");\n+        if (v == nullptr) v = std::getenv(\"STRATA_DS4_INPLACE_TRIM_MS\");\n         return v != nullptr ? std::max(50, std::atoi(v)) : 250;\n     }();\n     std::atomic<bool> ip_on{false};\n@@ -4737,10 +4740,29 @@ struct Model::Impl {\n                 ok = ok && rows <= room / 2.0;\n             }\n             if (groups.size() > 1 && ram != ~uint64_t{0}) ok = ok && 2.0 * C * hand_row * (double) devs.size() <= (double) ram / 8.0;\n-            if (ok) return C;\n+            if (ok) return gfx11_chunk_cap(C);\n         }\n         return c0;\n     }\n+    // RDNA 3 / 3.5 (gfx11, HIP): chunks of 4K tokens read a 16K prompt faster than the 32K / 16K default (Strix Halo,\n+    // Maya-XS, experts resident: 16K prompt 524 -> 550 tok/s, the first one after a start 475 -> 550; 1K 492, 256\n+    // 340) - so the default is capped there; DS4_CHUNK_GFX11=N changes the cap, 0 leaves the default\n+    int gfx11_chunk_cap(int C) const {\n+#if defined(STRATA_USE_HIP)\n+        const char* e = std::getenv(\"DS4_CHUNK_GFX11\");\n+        const int cap = e != nullptr ? std::atoi(e) : kGfx11Chunk;\n+        if (cap <= 0 || C <= cap || devs.empty()) return C;\n+        for (const Dev& d : devs) {\n+            cudaDeviceProp prop{};\n+            if (cudaGetDeviceProperties(&prop, d.id) != cudaSuccess || std::strncmp(prop.gcnArchName, \"gfx11\", 5) != 0)\n+                return C;\n+        }\n+        return cap / 16 * 16;\n+#else\n+        return C;\n+#endif\n+    }\n+    static constexpr int kGfx11Chunk = 4096;\n     // a device's chunk dimensions in a group of nm members: its heads' width, wo_a groups and FFN share (the widest\n     // member's: member 0 takes split128's odd blocks), the attention's and the indexer's slabs (the indexer's scores\n     // rows are the context wide - about 64 MB of them)"
+          },
+          {
+            "filename": "tools/test_maya_names.py",
+            "status": "modified",
+            "changes": 8,
+            "patch": "@@ -112,5 +112,13 @@ def test_the_server_applies_its_own_settings_under_both_names(self):\n             self.assertEqual(os.environ[\"MAYA_UPDATE_CHECK\"], \"0\")\n \n \n+class EngineReadsTheConfigName(unittest.TestCase):\n+    def test_the_in_place_trim_settings_are_read_under_the_config_name(self):\n+        # #728: env_in leaves a config's MAYA_DS4_INPLACE_* settings under STRATA_; the engine must read that name too\n+        src = (Path(__file__).resolve().parents[1] / \"src\" / \"ds4\" / \"ds4_model.cu\").read_text(encoding=\"utf-8\")\n+        for name in (\"MAYA_DS4_INPLACE_TRIM_GB\", \"MAYA_DS4_INPLACE_TRIM_MS\"):\n+            self.assertIn(f'\"{N.read_as(name)}\"', src)\n+\n+\n if __name__ == \"__main__\":\n     unittest.main()"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/SeriousRising/ds41-flash-cmp170hx/commits?per_page=8",
+      "data": [
+        {
+          "sha": "1e5a6a84b03c492522d51b301ab9e4ba09339e50",
+          "date": "2026-10-29T02:10:48Z",
+          "message": "DeepSeek-V4.1-Flash-1017 on 2x CMP 170HX: serving config, download/build/pack scripts, guide\n\nSnapshot of the rig's served setup (Maya rw-comb5 @ 4fa4ba5, GSQ-RCO IQ2_XXS, 512K).\nbuild.sh test-built from a clean clone; pack step reproduces the served pack.\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+          "url": "https://github.com/SeriousRising/ds41-flash-cmp170hx/commit/1e5a6a84b03c492522d51b301ab9e4ba09339e50"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/mw00/strata",
+      "data": {
+        "name": "mw00/Strata",
+        "html_url": "https://github.com/mw00/Strata",
+        "pushed_at": "2026-10-04T20:36:20Z"
+      }
+    }
+  ],
+  "decision": "Maya1.1.46 contains gfx11chunkcap/Windowsenvalias andAPIparserfixes; noCMP170HX decode orLinuxstartup fix found in exactcompare. Current1.1.45 native remains comparisonbasis; noblindfullrebase. SeriousRisingrecipeunchangedOct29;Stratarepo lastpushOct4. ExistingCOPY_DIRECT flag underseparatesourcereview; noactivation."
+}

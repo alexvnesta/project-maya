@@ -1,0 +1,39 @@
+{
+  "utc": "2026-11-01T01:49:46.939989+00:00",
+  "source_sha256": "0c25b695b06f7e055748ab3bc1e0d80b57452fdde9951e5a9774393a2bd649a9",
+  "entire_generated_module_read": true,
+  "all16_supplied_tests_read": true,
+  "entire_generated_reasoning_read": true,
+  "reasoning_characters": 66890,
+  "reasoning_sha256": "d00ea349e0391a2dc4b9c7cc698eaae9a5f067a5bf706267f9ce8b70d7fb6f3b",
+  "supplied_test_ids": [
+    "CoalesceRangesTests.test_does_not_mutate_input_on_success",
+    "CoalesceRangesTests.test_drops_zero_length_ranges",
+    "CoalesceRangesTests.test_empty_input_returns_empty_list",
+    "CoalesceRangesTests.test_merges_chain_of_touching_and_overlapping_ranges",
+    "CoalesceRangesTests.test_merges_contained_range",
+    "CoalesceRangesTests.test_merges_overlapping_ranges",
+    "CoalesceRangesTests.test_merges_touching_ranges",
+    "CoalesceRangesTests.test_rejects_bool_end_with_type_error_without_mutation",
+    "CoalesceRangesTests.test_rejects_bool_even_for_zero_length_range",
+    "CoalesceRangesTests.test_rejects_bool_start_with_type_error_without_mutation",
+    "CoalesceRangesTests.test_rejects_malformed_ranges_with_type_error_without_mutation",
+    "CoalesceRangesTests.test_rejects_non_integer_endpoints_with_type_error_without_mutation",
+    "CoalesceRangesTests.test_rejects_start_greater_than_end_with_value_error_without_mutation",
+    "CoalesceRangesTests.test_returns_sorted_disjoint_tuples",
+    "CoalesceRangesTests.test_supports_large_integers",
+    "CoalesceRangesTests.test_supports_negative_bounds"
+  ],
+  "manual_findings": "Purecopy/unittestimports;exact_raiseTypeErrorintnotboolhelper;locallist/tuplemerge implementation preservesinput. NoI/O/network/process/eval. Fullsourcebothfunctionsand16testsmethodsreadBEFOREexecution.",
+  "reviewer_base_sha256": "52e3073ae591668c6483cfb413fc7fe534787f425358f1785abfb9c09eb3002f",
+  "unchanged_reference_and_negative_AST_sha256": {
+    "reference": "9b566d780170c46718208a15c98c7b0b29e3faf7d81de12881f92ffd94d54aa7",
+    "evaluate": "3b589f8dc1a8f7fc5fd5500ba3670ee35e3abd2135a0bf3992774f9cb395a193",
+    "no_touch": "2408c5a7201852c417a608a7cd432047631b8f4f010a77adf1ab653b0161be7a",
+    "mutating": "8df128d8c574109c24a308a326d4b1184d2e15bec4b93f08623ea89880247725",
+    "bool_accept": "6d03fca6dd0bef89a47487d455c1edaf3bc821ba0e22f5fd939ddf42082965b2",
+    "keep_empty": "ce60b8a13976ade2718fc09ad71f3136970815e581e20b9928b49bc48d4d4a5e"
+  },
+  "delta": "Exactsingle_argument_raise-onlyhelper name/message andmatchingallowedcallname. Reference,cases,RNGseed,3sCPU/5salarm/512MiB andnegativecontrolsunchanged.",
+  "scope": "Codingoutputonecaseonly;no broadmodelquality/numericalequivalence orcomparativespeedclaim."
+}

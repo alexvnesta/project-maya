@@ -1,0 +1,96 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "scope": "Focused source/design recommendation only,no newcontroller/auditor implementation or execution",
+  "recommendation": "Use separately named thin fork of quality2 current owner for an explicit five-case coding/tool/cancel/recovery panel. Reuse pv pure scoring and cancellation transport through small local adapters;do not resurrect old pv arm registries/qualification or repeat old prose/quality runs.",
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_owner.py": "687eec954c5d5a51b713fd10ea5eaab1cde0e03c91a588713cdc60a0e31586b7",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_controls.py": "1038fad719fb7ed7516ab3e07d88d40fb3b5cd7408f6ed19ddc2296f13052cf5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_runtime.py": "1811228e83217b961ae4ffed9c430f49edf10c3af999b4fd6753518a25001e58",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_audit.py": "a5cc8f615058245167b9e08d5f5426d885ac03d52f8b171a4154fcc5976adc23",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/coding-fixtures-B.json": "513cebf5837290ef69171d2274240afaa8f38cc441373fb52a6c140ce3e3f4dd",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/prose-fixtures-B.json": "d572147c2f668b7702531ec62a90b5ba9fe8e0b47ac864f05ecca8c73402c601",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/current_compat.py": "7307e74bde765a4c7f1f000c60e27270cd904128d3f551436be3cbe546621d8b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/current_runtime.py": "e2857c54b5259ee2968731f21ca82646acf27682e245eb01febb159db02845dc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/baseline_identity.py": "d4f214ab87e0ab6ea74cdce9d4d8710ce0ac5c8adb1a81f9e5c29e7c83d9aac4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/current_skip.py": "803f2e0bfaf20030e80fad20c2e94d527cdbf938a667a98b16d1ef1613ebeb57",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/current_audit.py": "c8d9da9196718e6785441067ef1b5b8f6f3ae1cf6c53ac4d0725b703182e917c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/prefill-cache-improvements-20261027/performance-v1/performance_controls.py": "a46392ffaeac487d2151e0951b175116b398c24189b0f163e0e83e1cd37d893d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_model.cu": "046277a7be8d385ccc843e64301d5cc14c93516f602b12e04fc9851acf76fcc5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-pack-v1/pack-r2-FIRST/tensors.txt": "ca1f5a36dc65ca188108930db163d33a8d0a390771454dd312063ffc54a34d3a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-pack-v1/pack-r2-FIRST/tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-pack-v1/pack-r2-FIRST/tokenizer/chat_template.jinja": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b"
+  },
+  "concrete_path": [
+    {
+      "stage": "Current Maya145/MayaS broader functionality",
+      "cases": [
+        {
+          "source": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/coding-fixtures-B.json",
+          "id": "ms-coding-main",
+          "prompt_tokens": 140
+        },
+        {
+          "source": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/prose-fixtures-B.json",
+          "id": "ms-prose-tool",
+          "prompt_tokens": 372
+        },
+        {
+          "source": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/prose-fixtures-B.json",
+          "id": "ms-prose-tool-followup",
+          "prompt_tokens": 465
+        },
+        {
+          "source": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/prose-fixtures-B.json",
+          "id": "ms-prose-prefill-cancel",
+          "prompt_tokens": 8471
+        },
+        {
+          "source": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/prose-fixtures-B.json",
+          "id": "ms-prose-prefill-recovery",
+          "prompt_tokens": 44
+        }
+      ],
+      "owner": "Reuse quality2 exact startup/source/STAT/80GiBfence/baselineresolver/1200ownedwindow1000requestdeadline/one-startpublicrestoration;newimmutablemode/namespace/registry and exactfiveexpectedtraces. PreserveUNRUN/partial/no-retry.",
+      "reuse_helpers": [
+        "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_controls.py::score (code/tool/literal),followup_case,cancel_score",
+        "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_owner.py:158-187 cancellation wrapper/resourceguards/reconcile",
+        "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_audit.py::case_audit and cancellation/tool raw contracts"
+      ],
+      "important_adaptations": [
+        "pv_controls.run_panel calls old runtime.lifecycle_required and assumesoldthree-main/four-lifecyclearms;adapt onlysmallsequencingwrapper withexplicitfivecases.",
+        "pv_runtime.lifecycle_helper privateimports performance_controls,whoseprefill_cancel line46 internallycallsoldactivation(CUDA1). Supply a privatemodulelocalplacement-awareactivationadapter for newlyread cancellationlogfragment with exact5803early/2668kept;also use current_skip in finalproducerandindependentauditor. Do notmodify oldfiles.",
+        "Dynamic toolfollowup mustretainactualvalidatedcallID and compare normalizedrequest/nativepromptIDs using existing per-pack DSMLordinalproof.",
+        "Cancellation must provepartialreading1024<=read<total-64,nofirstdelta,generated0/nativecancel,clientdisconnectcounterincrease,workidle,andfollowingknownliteral. It is not a rate/quality sample.",
+        "Code scorer only parses syntax/namecoalesce_ranges;manualfulloutputandseparatelyboundedgeneratedcodeassessmentrequireexplicitnewscope. No executionofgeneratedcodeinmodelowner.",
+        "Apply realDSparkSTAT to applicablecompleteddecode cases;cancelledzero-outputcontrolcannotrequirepositivedraftrounds. Neverinferexecutionfromserverdraftingmetadata."
+      ]
+    },
+    {
+      "stage": "Each new pack: distinct startup/numerical/cold known-answer qualification before timing",
+      "packs": [
+        "PublicnativeGU L25/26fulloriginalMXFP4gate/upoverlay1536matrices;restMayaSunchanged",
+        "Unslothpublicpack-r2-FIRST;differentfullweightandtokenizeridentity"
+      ],
+      "approach": "Freeze separate profile/source/pack/tokenizer fixtures perpack;use measuredshort knownliteral cold+warm finitewholemodel logit observation pattern from state-v1,not oldhistoricalpath equality. Then own frozenknown-answer text/cache/imagechecks before 8k+timing. A finitefullvocabdumpisnot numericalequivalence orper-tokenrowalignment.",
+      "boundaries": [
+        "Native-only diagnostic FSIZE/storage/dumpmonitoring belongssolelytonumericalphase;timingprofilesmusthavenodump/roundlogger/FSIZEmutationandactualunlimitednativefilelimit.",
+        "Newpackrequest/template encoding mustbecomputedandfrozenunderactualnewtokenizer;do notreuseoldBpromptIDs,old44tokencountassumptionoroldDSMLcall-IDproofwithoutCPUcomparison.",
+        "Same seed withDSpark/timingadaptive lookupsdoesnotfix exacttokenpath;knownanswersandfiniteevidenceareboundedchecks,notold186/176/184tokenreferenceequality.",
+        "Retain fixed80GiBfence/zerowapandhostmargin;nativeGUstatic+4954521600B growthdoesnotprovefit;Unslothdifferentlayout/capacityneedsactualsource-specificstartupgates.",
+        "Onlyafternewpackqualificationandexplicitmanualreviewfreeze matcheddecode/prefill comparisonrequests/settings;reportactualtokenlengths and rates,noautomaticnextarm oroldarmreplay."
+      ]
+    }
+  ],
+  "source_compatibility": {
+    "mixed_native_GU": "No staticloader/dispatchblocker found: ds4_model.cu2840-2886 per-role dtype/stride,2889-2906lane_fmt_ok,10095-10191cpu_experts_both supportMXFP4gate/upwithlowbitdown;gate/upmustmatch. Runtimecorrectness/fitstillunqualified.",
+    "Unsloth_actual_pack": "LocalmetadatahasQ6_K/F32/Q8_0/Q2_K/IQ1_S/IQ2_XS/BF16/IQ2_XXS/IQ2_S/IQ3_XXS/Q5_K/MXFP4;noMXFP8dense tensor blocker observed. Q5_KEngram/sourcehead256supported,butnewwholepackunqualified.",
+    "tokenizer": "Constructedpre deepseek3 is adapterlabel forpublishedjoyai-llm;incomingtemplateSHA06cada...differsfromMayaS. Source mappingdoesnotproveactualfrontendencoding/toolturncompatibility;freshCPUfixturesmandatory.",
+    "pv_entry": "There is no pv.py;actualfilesarepv_owner.py,pv_dispatch.py,pv_controls.py,pv_audit.py."
+  },
+  "prior_results_context": "Parentreportsquality2QTP1/QTP2closednative/API/window0andindependentterminalauditpassed,currentproduction763934. Notrefreshedonhostbythissource-onlyreview.",
+  "tests_imports_native_or_host_actions_performed": false,
+  "GPU_or_phase_admitted": false,
+  "old_HOLD_or_arms_regraded": false,
+  "new_framework_recommended": false
+}

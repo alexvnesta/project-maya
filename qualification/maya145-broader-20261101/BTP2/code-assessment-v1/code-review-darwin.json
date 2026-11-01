@@ -1,0 +1,27 @@
+{
+  "platform": "Darwin",
+  "source_sha256": "0c25b695b06f7e055748ab3bc1e0d80b57452fdde9951e5a9774393a2bd649a9",
+  "manual_review": "5ce30cdd4a1d9f9d126a16f6a7e8b79066eaae4eabeabd893f8526c00fe0e86a",
+  "reviewer_sha256": "e3c7ba2ea55a6da92b99f4a379888fe0f7606bedee0fdd8bab1681f004e453e7",
+  "independent": {
+    "cases": 2207,
+    "checks": 4414,
+    "errors": [],
+    "passed": true
+  },
+  "supplied_tests": {
+    "run": 16,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "negative_controls_rejected": {
+    "no_touch_merge": true,
+    "mutates_input": true,
+    "accepts_bool": true,
+    "keeps_empty": true
+  },
+  "CPU_limit_seconds": 3,
+  "address_space_limit_MiB": null,
+  "scope": "One newly produced Maya145/MayaS TP2 coding output; no broad quality or comparative speed claim."
+}

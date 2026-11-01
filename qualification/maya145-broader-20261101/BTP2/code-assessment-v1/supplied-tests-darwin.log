@@ -1,0 +1,21 @@
+test_does_not_mutate_input_on_success (manually_reviewed_synthetic_module.CoalesceRangesTests.test_does_not_mutate_input_on_success) ... ok
+test_drops_zero_length_ranges (manually_reviewed_synthetic_module.CoalesceRangesTests.test_drops_zero_length_ranges) ... ok
+test_empty_input_returns_empty_list (manually_reviewed_synthetic_module.CoalesceRangesTests.test_empty_input_returns_empty_list) ... ok
+test_merges_chain_of_touching_and_overlapping_ranges (manually_reviewed_synthetic_module.CoalesceRangesTests.test_merges_chain_of_touching_and_overlapping_ranges) ... ok
+test_merges_contained_range (manually_reviewed_synthetic_module.CoalesceRangesTests.test_merges_contained_range) ... ok
+test_merges_overlapping_ranges (manually_reviewed_synthetic_module.CoalesceRangesTests.test_merges_overlapping_ranges) ... ok
+test_merges_touching_ranges (manually_reviewed_synthetic_module.CoalesceRangesTests.test_merges_touching_ranges) ... ok
+test_rejects_bool_end_with_type_error_without_mutation (manually_reviewed_synthetic_module.CoalesceRangesTests.test_rejects_bool_end_with_type_error_without_mutation) ... ok
+test_rejects_bool_even_for_zero_length_range (manually_reviewed_synthetic_module.CoalesceRangesTests.test_rejects_bool_even_for_zero_length_range) ... ok
+test_rejects_bool_start_with_type_error_without_mutation (manually_reviewed_synthetic_module.CoalesceRangesTests.test_rejects_bool_start_with_type_error_without_mutation) ... ok
+test_rejects_malformed_ranges_with_type_error_without_mutation (manually_reviewed_synthetic_module.CoalesceRangesTests.test_rejects_malformed_ranges_with_type_error_without_mutation) ... ok
+test_rejects_non_integer_endpoints_with_type_error_without_mutation (manually_reviewed_synthetic_module.CoalesceRangesTests.test_rejects_non_integer_endpoints_with_type_error_without_mutation) ... ok
+test_rejects_start_greater_than_end_with_value_error_without_mutation (manually_reviewed_synthetic_module.CoalesceRangesTests.test_rejects_start_greater_than_end_with_value_error_without_mutation) ... ok
+test_returns_sorted_disjoint_tuples (manually_reviewed_synthetic_module.CoalesceRangesTests.test_returns_sorted_disjoint_tuples) ... ok
+test_supports_large_integers (manually_reviewed_synthetic_module.CoalesceRangesTests.test_supports_large_integers) ... ok
+test_supports_negative_bounds (manually_reviewed_synthetic_module.CoalesceRangesTests.test_supports_negative_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.000s
+
+OK

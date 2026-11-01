@@ -1,0 +1,87 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "WORTH_DISTINCT_CPU_AND_BOUNDED_NUMERICAL_QUALIFICATION_NOT_RUNTIME_ADMITTED",
+  "scope": "ExistingDS4_COPY_DIRECT opt-in only,frozenadff sourcepath;noimplementation/knobsweep/newbuild",
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_model.cu": "046277a7be8d385ccc843e64301d5cc14c93516f602b12e04fc9851acf76fcc5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_os.hpp": "546398916715a0de7a73954549bbad64e8d90155e766f247930c680a8565fd25"
+  },
+  "decision": "A narrowerprospectivecandidate thannewstreaming/madvise code:existingflagchangesonlyCPUexpertsourceI/Omethodandretainsallweights/destinations/placement/math/settingsotherthanexplicitloadingflag. Itcanreducebufferedsourcepagecacheinsertionduringcopybutdoesnotguaranteeimprovedstartupor1000sphasecompletion.",
+  "reviewed_contracts": [
+    {
+      "file": "ds4_model.cu",
+      "lines": [
+        353,
+        374
+      ],
+      "detail": "PackownsoneindexeddfdperGGUFfilealongsideoriginalmapped/buffereddescriptors;destructorclosesallaftermodelownershipends. Allloadworkersjoinbeforecopy_expertsreturns."
+    },
+    {
+      "file": "ds4_model.cu",
+      "lines": [
+        438,
+        457
+      ],
+      "detail": "Originalfileopened/mappedfirst;open_directreopenssamepathnameandstoreskBadFdifunsupported. No explicitfstatdev/inode/size equalitybetweendirectandoriginalfd."
+    },
+    {
+      "file": "ds4_os.hpp",
+      "lines": [
+        65,
+        119
+      ],
+      "detail": "LinuxO_RDONLY|O_DIRECT. copy_directrejectsbadfd,zero,off+n overflow/nearINT64MAXandSIZE_MAXallocationoverflow;stagespanroundsdown/up4096andpointerisaligned4096. pread_directreadssynchronously,allowsEOFshortreadonlywhenrequestedintervalfullycovered. Destinationmemcpynbytesonlyaftersuccess;nomathorrepacking."
+    },
+    {
+      "file": "ds4_model.cu",
+      "lines": [
+        7599,
+        7606
+      ],
+      "detail": "DS4_COPY_DIRECTdefaultoff,Windowsfalse. Existingbuffers/drop-cache/NUMA/strictRAMselectionunchanged."
+    },
+    {
+      "file": "ds4_model.cu",
+      "lines": [
+        7780,
+        7814
+      ],
+      "detail": "PerthreadscratchcannotaliastheNUMAdestination. EveryroleandNUMAhalfusessameoff/nb/dstasbufferedbranch;failedreadfallsbacktofullpk.read_atintodst. Allhalves/rolescompletebeforeexistingwholepagehint."
+    }
+  ],
+  "specific_limits_or_gaps": [
+    {
+      "kind": "identity_precondition",
+      "detail": "Samepathisnotindependentdescriptoridentityattestation. Assetimmutability/canonicalsourcecustodymustholdacrossopen/load;preferown-processfddev/inode/sizebindingagainstpinnedassetsbeforeacceptingthiscandidate. No pathnamewritesorassetreplacementduringload."
+    },
+    {
+      "kind": "format_alignment_fallback",
+      "detail": "4096alignmentisassumed,notqueriedfromfilesystem. Unsupportedalignment/open/readreturnsfallback;acceptedflagaloneisnotproofdirectbytesoccurred. Requireactualdirect/fallbackcountersandbyteequivalence."
+    },
+    {
+      "kind": "EOF_and_error",
+      "detail": "Roundedreads may includeadjacentfilebytes/paddingbutonlyrequestedbytescopied. Insufficientwantedbytes/readerror/EINTRreturnsfalse,thenfullbufferedread;bufferedfailurestillfailsload. Allocationfailureisnotconvertedtofallback."
+    },
+    {
+      "kind": "resource",
+      "detail": "Up to12threadlocalscratchbuffersretainroughlymaxalignedmatrixspan+4096eachduringcopy;transientoverheadremainssubjectto80GiBfence. NoadditionalCPUexpertcopiesselected.",
+      "no_fit_claim": true
+    },
+    {
+      "kind": "boundary",
+      "detail": "NoCUDAasyncoperationusesdirectscratchinthisbranch:preadcomplete,memcpycomplete,thenreuse. VRAMloaderhasitsownpinnedstageandsynchronouscudaMemcpy;joinsbeforeCPUcopy."
+    }
+  ],
+  "minimal_qualification_before_any_longer_mode": [
+    "Newseparatelynamedloading-onlyprofilewithsameadff/pack/drafter/projection/context/output/80GiB/1000soft/cache namespacepolicy;explicitcontrolledDS4_COPY_DIRECT=1andactualenvwitness. NooldBTP/QTP replayorunchanged-armregrade.",
+    "SmallboundedCPUbyte-equivalencecontrolsexercisetheexactfrozenhelper:aligned/unalignedoffsetandlength,NUMApart-boundaries,exactEOFwithshortpaddingread,truncatedwantedspan,badfd/unsupportedO_DIRECT/errorfallback,overflowrefusal,anddestinationcanaries. Linuxfilesystemsupportmustbeobserved,notinferredfromMacfallback.",
+    "Bindreadonlydescriptoridentitytosamesourceassetinodes/sizes;retainexistingclosedweightcustody andnoassetwriters. Recorddirect_copy_bytes/buffered_fallback_bytescountersfromnativeactualstartup.",
+    "Separatelyauthorizedshortknown-answer/cold-warmfinitewholemodellogitphasebeforecoding/longertiming;retainfullclosure/restoration,unchangedfence/hostmargin andfailHOLD. Noexacthistoricalseededstochastic-tokenpathrequirement.",
+    "Keep1000soft/1200windowbounds;startupimprovementalonecannotguaranteefull18060tokenresponsefits. Classifydeferral/partialwithoutautomaticretryorfenceloosening."
+  ],
+  "benefit_claim": "None. Existingmemory.maxpressureanddecliningcumulativecopyratesmakeevaluationreasonable,butnotproofO_DIRECTwillbesuperior;cachedwarmreadsorfilesystembehaviormayfavorbufferedpath.",
+  "upstream_1_1_46": "Parentreports3589d6fcomparisonlimitedtoAMDchunkdefault/Windowsenv/APIparserfixes;notindependentlyrecomparedhere.",
+  "tests_imports_implementation_build_native_or_host_actions_performed": false,
+  "GPU_or_phase_admitted": false,
+  "old_HOLD_or_arms_regraded": false
+}

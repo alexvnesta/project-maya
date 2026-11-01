@@ -1,0 +1,28 @@
+{
+  "utc": "2026-11-01T01:49:46.940881+00:00",
+  "entire_new_source_tests_read": true,
+  "source_sha256": {
+    "review_code.py": "e3c7ba2ea55a6da92b99f4a379888fe0f7606bedee0fdd8bab1681f004e453e7",
+    "test_guard.py": "5b84a789386ef5c7f6097fe9b75a6fe896cce0c097a7400915a653fb3849d07f",
+    "run_guard_cpu.py": "054d445ca51090f584354657e2a8156948d76776c2fb094aa4b730ead6b292f0"
+  },
+  "input_sha256": {
+    "generated_code.py": "0c25b695b06f7e055748ab3bc1e0d80b57452fdde9951e5a9774393a2bd649a9",
+    "ROOT_FULL_GENERATED_SOURCE_REVIEW.json": "5ce30cdd4a1d9f9d126a16f6a7e8b79066eaae4eabeabd893f8526c00fe0e86a"
+  },
+  "test_ids": [
+    "test_guard.Guard.test_actual_exact_helper",
+    "test_guard.Guard.test_actual_main_and_all16_supplied_tests_are_still_unexecuted",
+    "test_guard.Guard.test_bool_accepting_helper_refused",
+    "test_guard.Guard.test_changed_error_type_refused",
+    "test_guard.Guard.test_changed_operator_refused",
+    "test_guard.Guard.test_coercion_or_extra_return_refused",
+    "test_guard.Guard.test_decorator_refused",
+    "test_guard.Guard.test_default_argument_refused",
+    "test_guard.Guard.test_different_helper_name_refused",
+    "test_guard.Guard.test_extra_side_effect_refused",
+    "test_guard.Guard.test_float_accepting_helper_refused",
+    "test_guard.Guard.test_import_refused"
+  ],
+  "scope": "FIRST12pureASThelperguardcontrols,notgeneratedcodeexecution;ROOTfullmanualsource_and_testsread,simpleexacthelperdeltadoesnotneedadditionalSolreview."
+}

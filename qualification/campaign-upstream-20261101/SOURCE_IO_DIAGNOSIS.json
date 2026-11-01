@@ -1,0 +1,79 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "STREAMING_CPU_HINTS_ALREADY_EXIST_NO_PROVEN_IO_FIX",
+  "scope": "Targeted frozen startup expertcopy/OSrelease/source-read/CUDAcompletion source diagnosis only",
+  "source_sha256": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_model.cu": "046277a7be8d385ccc843e64301d5cc14c93516f602b12e04fc9851acf76fcc5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_os.hpp": "546398916715a0de7a73954549bbad64e8d90155e766f247930c680a8565fd25"
+  },
+  "main_finding": {
+    "file": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_model.cu",
+    "lines": [
+      7779,
+      7837
+    ],
+    "detail": "TwelveCPUcopyworkersalreadycallrelease_copied_cacheaftereachsuccessful expert,afterallthree matricesandallNUMAparts. load_drop_cachedefaultson. Aggregate71.818GBlineisprintedafterthreadjoin;itdoesnotmeanreleasewasdeferreduntilallcopiescompleted."
+  },
+  "boundaries": [
+    {
+      "file": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_model.cu",
+      "lines": [
+        509,
+        514
+      ],
+      "detail": "Pack::read_at uses synchronouspread_par/pread_fulltoanonymousRAM;CPUexpertcopyloophasnoasyncCUDAread."
+    },
+    {
+      "file": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_model.cu",
+      "lines": [
+        7786,
+        7814
+      ],
+      "detail": "Eachrole/NUMApartcompletebeforeexpertwhole-source-pagehint;failure suppresseshints. Partialedgepagesretained,soadjacentexperts/tensorsnotdiscardedbythatcall."
+    },
+    {
+      "file": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_model.cu",
+      "lines": [
+        7289,
+        7330
+      ],
+      "detail": "VRAMGGUFloaderreadsintothread-privatepinnedstage/stage2,usescudaMemcpyHostToDeviceforeachmember/helper,thenfreesstagesandjoinsallworkersbeforeCPUcopy_expertscalledat7380. Do notreleaseanyfutureasyncDMA sourcebeforecompletion."
+    },
+    {
+      "file": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/source-r2/src/ds4/ds4_os.hpp",
+      "lines": [
+        350,
+        378
+      ],
+      "detail": "Linuxhelperignoresmapped_base;roundsrangesinwardtowholepagesandcallsposix_fadviseDONTNEED. Returnedbytecountmeansacceptedhint,notverifiedevictionorreducedcgroupcharge."
+    }
+  ],
+  "interpretation": {
+    "supported": "Reportedlarge.memory.maxeventcount/zeroOOManddecliningcumulativecopyrateareconsistentwithpressure/reclaim,butdonotidentifycause. Copyrateusesdone_b/(now-t0),witht0beforebudget/allocation;notisolateddeviceIOthroughput.",
+    "not_supported": [
+      "HappenedonlyafterallCPUcopies",
+      "71.818GBwasactuallyevicted",
+      "memory.maxeventscountmeansOOMorpeakmemorymeasurement",
+      "Reducingcacheswillnecessarilyshortenstartuporfitthewhole1000sphase"
+    ]
+  },
+  "narrow_candidate": {
+    "status": "SOURCE_SAFE_IN_PRINCIPLE_BENEFIT_UNPROVEN_NOT_IMPLEMENTED_OR_ADMITTED",
+    "change": "Linuxonly:atthesameexistingper-expertreleaseboundary,optionallyMADV_DONTNEEDonlytheinward-roundedalreadycopiedread-onlyMAP_SHAREDsource mapping range,beforeexistingfadvise;retainWindowsbehaviorandallsettings/placement/math/weights/namespaces.",
+    "required_invariants": [
+      "Validatewholepagemappedrangeagainstactualmappinglengthandpointeroverflow;existinghelperhasbasebutnomappinglengthparameter.",
+      "BothNUMAhalves/allrolescopiedsuccessfully;GPUstagecopiescomplete;neveranonymousdestination,Engram/dense/otheruncopiedregions,edgesorwholemaps.",
+      "Hintfailuresremainadvisory,nochangesinloadsuccess/math/strictallRAM/fence/placement/defaultflags.",
+      "No globaldrop_caches,VM/sysctl,wholeworkingset/filecachepruning orcache-namespacechange."
+    ],
+    "why_uncertain": "BufferedpreadneednotfaultthecorrespondingmmapPTEs;thereforeremovingPTEmappingsmaybenoop. Resident/reclaimcauseisnotestablishedbysourcelogorcgroupmaxevents. Existingfadvisealreadycoversstreamingcleanpages.",
+    "simplest_decision": "Rejectduplicateper-expertstreamingimplementation. Treatrange-localmadviseonlyasseparatelyreviewableprospectivecandidateifcorrespondingmapped-pageevidencesupportsit;donotclaimspeeduporproceedtobuild/test/runtimefromthisreceipt."
+  },
+  "other_possible_delta_not_recommended_for_this_symptom": "VRAMexpertsusebulkpost-GPUloadfadviseat7346-7352,notperjob. Movingthatadvicecanbenarrowlyafterlastsuccessfulsynchronousmembercopy,butCPUcopyalreadybeginsafterthosebulkGPUhints;itdoesnotexplainawaytheexistingCPUstreaminghints.",
+  "upstream_1_1_46": "Notcomparedinthissource-onlytask;parentischeckingupstream3589d6fseparately. Noassertionthatitcontainsorlacksthisfix.",
+  "context_not_live_verified": "ParentreportedBTP2allclosures0andproduction792461restored. No host/log/stateinspectionperformedhere.",
+  "tests_imports_build_native_or_host_actions_performed": false,
+  "source_implementation_performed": false,
+  "GPU_or_new_arm_admitted": false,
+  "old_HOLD_or_results_regraded": false
+}
