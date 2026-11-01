@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-01T04:48:23.639309+00:00",
+  "passed": true,
+  "scope": "New short-task source/CPU only; no GPU/native/admission/prose or coding result",
+  "groups": {
+    "CPU-TASK-FIRST-linux": {
+      "controls_each_host": 108,
+      "source": 20,
+      "inputs": 146
+    },
+    "CPU-PROFILE-FIRST-linux": {
+      "controls_each_host": 11,
+      "source": 4,
+      "inputs": 13
+    },
+    "CPU-CURRENT-AUDIT-FIRST-linux": {
+      "controls_each_host": 16,
+      "source": 3,
+      "inputs": 1
+    },
+    "recovery-v1/CPU-FIRST-linux": {
+      "controls_each_host": 63,
+      "source": 3,
+      "inputs": 7
+    }
+  },
+  "all_source_input_ordered_IDs_exact": true,
+  "source_review_sha256": "3e6b4325c1abfac5fb76fa20cea47000e3784aa83624effd7ad81a94d976b852",
+  "parent_helper15_and_panels14_not_repeated": true
+}

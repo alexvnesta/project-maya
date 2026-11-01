@@ -1,0 +1,202 @@
+{
+  "HGU-prose": {
+    "source_relative_to_E": "decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-darwin/manifest-HGU-prose.json",
+    "source_sha256": "797d481347d6c226ef3e1fdeddae482e2eed4228e83471eb84d93b799d131990",
+    "case_id": "ms-prose-main",
+    "case_sha256": "c4a73e9747f197fc443075d40c25bb316685edec57cdeeb0d8670907d69b0dc7",
+    "request_sha256": "5be1101ce505f65a63ca67719f88b11cd3797bd276da32b02eedee0594f296b7",
+    "prompt_ids_sha256": "9c2ae1f025497f4ec8183c4ce667b6c5947816f74b36e4cd6843a6e8905d0d5c",
+    "prompt_tokens": 169,
+    "tokenizer_source_sha256": {
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16"
+    },
+    "effective_template": {
+      "pack_template_relative_to_E": "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/pack/tokenizer/chat_template.jinja",
+      "pack_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "effective_template_relative_to_E": "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/pack/tokenizer/chat_template.jinja",
+      "effective_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "pack_template_replaced": false,
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  },
+  "HGU-coding": {
+    "source_relative_to_E": "decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-darwin/manifest-HGU-coding.json",
+    "source_sha256": "cff53e347337f0c55ace8f151b842a77253eeea62dae7d98fedc6365bf2e85dc",
+    "case_id": "ms-coding-main",
+    "case_sha256": "367a5c954efefac51c654b1e7487e0a4fdedea739cbe198e02f22bd978739fc0",
+    "request_sha256": "e632813206f4727a1e319ad1c4d3dc99a2d02e3d6ee28bc2ace5f25ad0baa54e",
+    "prompt_ids_sha256": "bcc40f0d41080cadc29ffca1c99d132b2b7ccbb938e50b80cd51e03d46a36f8c",
+    "prompt_tokens": 140,
+    "tokenizer_source_sha256": {
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16"
+    },
+    "effective_template": {
+      "pack_template_relative_to_E": "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/pack/tokenizer/chat_template.jinja",
+      "pack_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "effective_template_relative_to_E": "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/pack/tokenizer/chat_template.jinja",
+      "effective_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "pack_template_replaced": false,
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  },
+  "UNSLOTH-prose": {
+    "source_relative_to_E": "decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-darwin/manifest-UNSLOTH-prose.json",
+    "source_sha256": "5bede5a4e9f8eec2b7a17712650c482ff05964c1d73724fcd0fedd1428a0d70d",
+    "case_id": "ms-prose-main",
+    "case_sha256": "c4a73e9747f197fc443075d40c25bb316685edec57cdeeb0d8670907d69b0dc7",
+    "request_sha256": "5be1101ce505f65a63ca67719f88b11cd3797bd276da32b02eedee0594f296b7",
+    "prompt_ids_sha256": "9c2ae1f025497f4ec8183c4ce667b6c5947816f74b36e4cd6843a6e8905d0d5c",
+    "prompt_tokens": 169,
+    "tokenizer_source_sha256": {
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "chat_template.jinja": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b"
+    },
+    "effective_template": {
+      "pack_template_relative_to_E": "decode-optimization-20261028/unsloth-pack-v1/pack-r2-FIRST/tokenizer/chat_template.jinja",
+      "pack_template_sha256": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b",
+      "effective_template_relative_to_E": "decode-optimization-20261028/unsloth-pack-v1/pack-r2-FIRST/tokenizer/chat_template.jinja",
+      "effective_template_sha256": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b",
+      "pack_template_replaced": false,
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  },
+  "UNSLOTH-coding": {
+    "source_relative_to_E": "decode-optimization-20261028/model-choice-v1/panels-v1/CPU-FIRST-darwin/manifest-UNSLOTH-coding.json",
+    "source_sha256": "e7c66dcd34440e594049ecdd79b2ac1dceb9031fc776d8f1fe354163ea9fd80b",
+    "case_id": "ms-coding-main",
+    "case_sha256": "367a5c954efefac51c654b1e7487e0a4fdedea739cbe198e02f22bd978739fc0",
+    "request_sha256": "e632813206f4727a1e319ad1c4d3dc99a2d02e3d6ee28bc2ace5f25ad0baa54e",
+    "prompt_ids_sha256": "bcc40f0d41080cadc29ffca1c99d132b2b7ccbb938e50b80cd51e03d46a36f8c",
+    "prompt_tokens": 140,
+    "tokenizer_source_sha256": {
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "chat_template.jinja": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b"
+    },
+    "effective_template": {
+      "pack_template_relative_to_E": "decode-optimization-20261028/unsloth-pack-v1/pack-r2-FIRST/tokenizer/chat_template.jinja",
+      "pack_template_sha256": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b",
+      "effective_template_relative_to_E": "decode-optimization-20261028/unsloth-pack-v1/pack-r2-FIRST/tokenizer/chat_template.jinja",
+      "effective_template_sha256": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b",
+      "pack_template_replaced": false,
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  },
+  "MS2-prose": {
+    "source_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/model-v1/prose-fixtures-B.json",
+    "source_sha256": "d572147c2f668b7702531ec62a90b5ba9fe8e0b47ac864f05ecca8c73402c601",
+    "case_id": "ms-prose-main",
+    "case_sha256": "c4a73e9747f197fc443075d40c25bb316685edec57cdeeb0d8670907d69b0dc7",
+    "request_sha256": "5be1101ce505f65a63ca67719f88b11cd3797bd276da32b02eedee0594f296b7",
+    "prompt_ids_sha256": "9c2ae1f025497f4ec8183c4ce667b6c5947816f74b36e4cd6843a6e8905d0d5c",
+    "prompt_tokens": 169,
+    "tokenizer_source_sha256": {
+      "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+    },
+    "effective_template": {
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "effective_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "effective_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "pack_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "pack_template_replaced": false,
+      "pack_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  },
+  "MS2-coding": {
+    "source_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/model-v1/coding-fixtures-B.json",
+    "source_sha256": "513cebf5837290ef69171d2274240afaa8f38cc441373fb52a6c140ce3e3f4dd",
+    "case_id": "ms-coding-main",
+    "case_sha256": "367a5c954efefac51c654b1e7487e0a4fdedea739cbe198e02f22bd978739fc0",
+    "request_sha256": "e632813206f4727a1e319ad1c4d3dc99a2d02e3d6ee28bc2ace5f25ad0baa54e",
+    "prompt_ids_sha256": "bcc40f0d41080cadc29ffca1c99d132b2b7ccbb938e50b80cd51e03d46a36f8c",
+    "prompt_tokens": 140,
+    "tokenizer_source_sha256": {
+      "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+    },
+    "effective_template": {
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "effective_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "effective_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "pack_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "pack_template_replaced": false,
+      "pack_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  },
+  "MS1-prose": {
+    "source_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/model-v1/prose-fixtures-B.json",
+    "source_sha256": "d572147c2f668b7702531ec62a90b5ba9fe8e0b47ac864f05ecca8c73402c601",
+    "case_id": "ms-prose-main",
+    "case_sha256": "c4a73e9747f197fc443075d40c25bb316685edec57cdeeb0d8670907d69b0dc7",
+    "request_sha256": "5be1101ce505f65a63ca67719f88b11cd3797bd276da32b02eedee0594f296b7",
+    "prompt_ids_sha256": "9c2ae1f025497f4ec8183c4ce667b6c5947816f74b36e4cd6843a6e8905d0d5c",
+    "prompt_tokens": 169,
+    "tokenizer_source_sha256": {
+      "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+    },
+    "effective_template": {
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "effective_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "effective_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "pack_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "pack_template_replaced": false,
+      "pack_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  },
+  "MS1-coding": {
+    "source_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/model-v1/coding-fixtures-B.json",
+    "source_sha256": "513cebf5837290ef69171d2274240afaa8f38cc441373fb52a6c140ce3e3f4dd",
+    "case_id": "ms-coding-main",
+    "case_sha256": "367a5c954efefac51c654b1e7487e0a4fdedea739cbe198e02f22bd978739fc0",
+    "request_sha256": "e632813206f4727a1e319ad1c4d3dc99a2d02e3d6ee28bc2ace5f25ad0baa54e",
+    "prompt_ids_sha256": "bcc40f0d41080cadc29ffca1c99d132b2b7ccbb938e50b80cd51e03d46a36f8c",
+    "prompt_tokens": 140,
+    "tokenizer_source_sha256": {
+      "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+    },
+    "effective_template": {
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "effective_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "effective_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "pack_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "pack_template_replaced": false,
+      "pack_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  }
+}

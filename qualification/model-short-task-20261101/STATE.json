@@ -1,0 +1,55 @@
+{
+  "utc": "2026-11-01T04:56:20.777217+00:00",
+  "status": "FIRST_EXACT_BOTH_HOST_CPU_AND_ACTUAL_READONLY_PREFLIGHT_PASSED_ADMISSION_PENDING",
+  "GPU_admitted": false,
+  "CPU_executed": true,
+  "source_implemented": "DRAFT_COMPLETE_AWAITING_REVIEW",
+  "active_private_phase": false,
+  "pending_owner_source_scope": [
+    "public HGU TP2",
+    "UnslothUD-IQ2_XXS TP2",
+    "MayaS TP2",
+    "MayaS TP1"
+  ],
+  "implemented": [
+    "engine_profile.py four explicit pack/TP factors no dump/round instrumentation",
+    "short_tasks.py plus8frozen source metadata entries, complete source case only, no8Kpreludes",
+    "current_config.py/current_runtime.py/current_controls.py/current_compat.py draft owned shortone-main path",
+    "baseline_identity.py candidate_assets.py direct_io.py source copies"
+  ],
+  "proposed_AST_test_counts": {
+    "test_baseline_identity.py": 10,
+    "test_current_audit.py": 16,
+    "test_short_tasks.py": 12,
+    "test_core_lifecycle.py": 40,
+    "test_engine_profile.py": 11,
+    "test_direct_io.py": 11,
+    "test_numeric_lineage.py": 8,
+    "test_task_mode.py": 17,
+    "recovery-v1/test_recovery.py": 63
+  },
+  "unqualified_immutable_source_data": [
+    "SHORT_SOURCES_FROZEN.json",
+    "NUMERICAL_LINEAGE_FROZEN.json"
+  ],
+  "source_new_owners_or_native_builds": false,
+  "CPU_each_host": {
+    "controller": 108,
+    "profile": 11,
+    "auditor": 16,
+    "recovery": 63
+  },
+  "exact_source_input_and_ID_maps": true,
+  "source_review_sha256": "3e6b4325c1abfac5fb76fa20cea47000e3784aa83624effd7ad81a94d976b852",
+  "qualification_sha256": "1201e2e12621b2d4f371c1b04df9486b5066786ea4f7512936bfdee800c7f153",
+  "qualification_pins": 4613,
+  "recovery_qualification_sha256": "bbe85d1df700a4439368f9c292ca033f56a95f1834004463f777ba540c512e93",
+  "actual_readonly_preflight_sha256": "4215773d72e27919d3a949f883e939ce1b8e65e92ef29c9dbf034f9d0922acc0",
+  "selected_binding_snapshot": {
+    "invocation": "ca6c5cde7c084e9fb7f881fc88a9fa93",
+    "main_pid": 894857,
+    "native_pid": 894916,
+    "native_start_ticks": 177382551
+  },
+  "next": "Separate conditional firstP-HGU-1-only short observation admission. Fresh actual clock/idle/owner/source/root guard beforeownedwindow. No other automaticphase; none attempted."
+}
