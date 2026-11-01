@@ -1,0 +1,37 @@
+{
+  "utc": "2026-11-01T08:44:48.103455+00:00",
+  "reviewer": "ROOT",
+  "source_sha256": "7b67629f32cb7265425093dd420cf0bbfa4a7231be878708de02a9c06fbe1845",
+  "entire_module_all_supplied_tests_read": true,
+  "supplied_tests_count": 21,
+  "entire_reasoning_read": true,
+  "reasoning_characters": 64418,
+  "reasoning_read_ranges": [
+    [
+      0,
+      18000
+    ],
+    [
+      18000,
+      36000
+    ],
+    [
+      36000,
+      54000
+    ],
+    [
+      54000,
+      64418
+    ]
+  ],
+  "findings": "Exact stdlib Sequence import; pure typed helper isinstance(value,int) and not bool. Copies pairs into tuples, validates endpoint types beforeordering, dropszero, sorts localonly, merges touch/overlap/maxend, returns tuplelist. No input writes. All21unittest methods and full reasoning read; no IO/network/subprocess. Typeannotationsobject/bool and Sequence,str,bytes,bytearray only new extracted namespace symbols. No arbitrary imports allowed by newdelta.",
+  "unchanged_reference_and_negative_AST_sha256": {
+    "reference": "9b566d780170c46718208a15c98c7b0b29e3faf7d81de12881f92ffd94d54aa7",
+    "evaluate": "3b589f8dc1a8f7fc5fd5500ba3670ee35e3abd2135a0bf3992774f9cb395a193",
+    "no_touch": "2408c5a7201852c417a608a7cd432047631b8f4f010a77adf1ab653b0161be7a",
+    "mutating": "8df128d8c574109c24a308a326d4b1184d2e15bec4b93f08623ea89880247725",
+    "bool_accept": "6d03fca6dd0bef89a47487d455c1edaf3bc821ba0e22f5fd939ddf42082965b2",
+    "keep_empty": "ce60b8a13976ade2718fc09ad71f3136970815e581e20b9928b49bc48d4d4a5e"
+  },
+  "execution_before_manual_read": false
+}

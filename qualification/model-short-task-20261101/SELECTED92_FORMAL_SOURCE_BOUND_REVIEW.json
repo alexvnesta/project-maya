@@ -1,0 +1,307 @@
+{
+  "utc": "2026-11-01T08:52:13.820567+00:00",
+  "reviewer": "gpt-6.1-sol",
+  "verdict": "EXACT_COMMON_8469_WORKLOAD_FOUND_ACCEPTED_NATIVE92_FINITE_LINEAGE_NO_ADMISSION",
+  "scope": "Local scoped metadata/raw synthetic receipt comparison and hashes only; no tests/project imports/remote/native/payload reads. No f32 scan repeated.",
+  "baseline": {
+    "accepted_review": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/QS0_RESULT_ASTRA_REVIEW.json",
+    "terminal_audit": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/QS0/terminal-audit.json",
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "original_baseline_pack": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/pack-native-vision-v1",
+    "source_model_sha256": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350",
+    "source_main_pinned_in_task_q": {
+      "remote_path": "/home/alex/strata-deepseek-test-20261024/maya-ablate469-v2/src/ds4/ds4_main.cpp",
+      "sha256": "1efa69ff5e2b7615b4f522bd695e0feecf5849df6e070eeb35cc9f900a92a2da",
+      "local_source_available_and_manually_read_here": false,
+      "semantics_basis": "Parent source read supplied for draft observer design; literal taskq pin verified locally. Do not claim a local full main-source read."
+    },
+    "actual_startup_native_pid": 3743014,
+    "actual_startup_process_matches": true,
+    "context": 1048576,
+    "prefill_chunk": 4096,
+    "native": {
+      "generated": 216,
+      "prompt_tokens": 8469,
+      "prompt_ms": 8969.3,
+      "decode_ms": 4534.3,
+      "finish": "stop",
+      "drafts_accepted": 153,
+      "drafts_offered": 177,
+      "reused": 0,
+      "hits": 55098,
+      "lookups": 60255
+    },
+    "phase_seconds_including_load": 501.6349270741921,
+    "private_fence": {
+      "passed": true,
+      "memory_max": 85899345920,
+      "swap_max": 0,
+      "events_delta": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0,
+        "sock_throttled": 0
+      },
+      "prior_properties_restored": true,
+      "transient_collected": true
+    },
+    "finite_lineage": [
+      {
+        "id": "ms-quality-cold-text",
+        "native": {
+          "generated": 216,
+          "prompt_tokens": 8469,
+          "prompt_ms": 8969.3,
+          "decode_ms": 4534.3,
+          "finish": "stop",
+          "drafts_accepted": 153,
+          "drafts_offered": 177,
+          "reused": 0,
+          "hits": 55098,
+          "lookups": 60255
+        },
+        "dump": {
+          "bytes": 124625920,
+          "rows": 241,
+          "sha256": "882bfc0d085e6a263c6fcd6e9245bae2804b46ee0efbbbe6bae82f90245454ee",
+          "all_finite": true,
+          "token_row_alignment_claimed": false
+        },
+        "typed_known_answer_correct": true
+      },
+      {
+        "id": "ms-quality-warm-text",
+        "native": {
+          "generated": 185,
+          "prompt_tokens": 8469,
+          "prompt_ms": 49.5,
+          "decode_ms": 3681.5,
+          "finish": "stop",
+          "drafts_accepted": 132,
+          "drafts_offered": 145,
+          "reused": 8468,
+          "hits": 47675,
+          "lookups": 49485
+        },
+        "dump": {
+          "bytes": 102389760,
+          "rows": 198,
+          "sha256": "3b7c4365e52b0a778526dc953f790f16b61c67cafddf288d1bd4206dfe3d5b47",
+          "all_finite": true,
+          "token_row_alignment_claimed": false
+        },
+        "typed_known_answer_correct": true
+      },
+      {
+        "id": "ms-quality-two-images",
+        "native": {
+          "generated": 70,
+          "prompt_tokens": 8656,
+          "prompt_ms": 9819.6,
+          "decode_ms": 1708.7,
+          "finish": "stop",
+          "drafts_accepted": 41,
+          "drafts_offered": 50,
+          "reused": 0,
+          "hits": 19348,
+          "lookups": 20040
+        },
+        "dump": {
+          "bytes": 41369600,
+          "rows": 80,
+          "sha256": "02219c3b5d4d9c624c1e6e4b03629e5ea29e33a0b4e2ec43bc099f07293d1234",
+          "all_finite": true,
+          "token_row_alignment_claimed": false
+        },
+        "typed_known_answer_correct": true
+      },
+      {
+        "id": "ms-quality-return-text",
+        "native": {
+          "generated": 198,
+          "prompt_tokens": 8469,
+          "prompt_ms": 39.3,
+          "decode_ms": 3820.3,
+          "finish": "stop",
+          "drafts_accepted": 142,
+          "drafts_offered": 157,
+          "reused": 8468,
+          "hits": 52620,
+          "lookups": 53175
+        },
+        "dump": {
+          "bytes": 110146560,
+          "rows": 213,
+          "sha256": "44282fdb78b822ec30c52b6e1d15984971aa38fe644c293858dc7a6d6a5f6ef0",
+          "all_finite": true,
+          "token_row_alignment_claimed": false
+        },
+        "typed_known_answer_correct": true
+      }
+    ],
+    "effective_template": {
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "effective_template_relative_to_E": "native-vision-v2/runtime/serve/fixtures/deepseek41/chat_template.jinja",
+      "effective_template_sha256": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b",
+      "pack_template_relative_to_E": "native-vision-v2/tokenizer/chat_template.jinja",
+      "pack_template_replaced": true,
+      "pack_template_sha256": "6f9bd1f87d9dad376b4c79683934b4254396d826ae514ab0244efa904ce1d1a4",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  },
+  "literal_common_identity": {
+    "fixture_A_sha256": "3aa80903f946ba4a032aa47fe5f1c6906c531ac259dbfc8f9d9ff482b5ad4f23",
+    "fixture_B_sha256": "c77c34d85a59f4696bb82397a20df97f92235a7ad752d8d3ad80ccfa38377707",
+    "A_B_request_objects_equal": true,
+    "A_B_prompt_ID_lists_equal": true,
+    "prompt_tokens": 8469,
+    "prompt_ids_sha256": "010205e8f361a49baf7182628639afd8114a55a40224b5a06f86487d87ac3e65",
+    "fixture_request_canonical_sha256": "400196a1ffde50b4258720e5ded806c91c546d1c9b5affc78a55e4fc8a586487",
+    "saved_QS0_request_bytes_sha256": "a96bcd70061c77b8ade9f0da43016fa1c711e37e12013d6ee2bf8b509411154e",
+    "expected": {
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ]
+    },
+    "adff_common_receipts": {
+      "QTP1": {
+        "native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+        "cold_native": {
+          "generated": 207,
+          "prompt_tokens": 8469,
+          "prompt_ms": 11488.9,
+          "decode_ms": 4087.0,
+          "finish": "stop",
+          "drafts_accepted": 137,
+          "drafts_offered": 154,
+          "reused": 0,
+          "hits": 51444,
+          "lookups": 56265
+        },
+        "request_objects_equal_to_baseline": true,
+        "cold_request_saved_bytes_sha256": "a96bcd70061c77b8ade9f0da43016fa1c711e37e12013d6ee2bf8b509411154e"
+      },
+      "QTP2": {
+        "native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+        "cold_native": {
+          "generated": 205,
+          "prompt_tokens": 8469,
+          "prompt_ms": 10191.7,
+          "decode_ms": 4133.1,
+          "finish": "stop",
+          "drafts_accepted": 142,
+          "drafts_offered": 165,
+          "reused": 0,
+          "hits": 49862,
+          "lookups": 57045
+        },
+        "request_objects_equal_to_baseline": true,
+        "cold_request_saved_bytes_sha256": "a96bcd70061c77b8ade9f0da43016fa1c711e37e12013d6ee2bf8b509411154e"
+      }
+    },
+    "serialization_note": "Canonical manifest request hash400196... differs from saved indented request byte hash a96b... by serialization. Objects and IDs compared directly; do not treat different serialization hashes as different requests."
+  },
+  "transfer_and_limits": [
+    "Native92 has actual accepted exact8469 cold known-answer measurement8969.3ms/reuse0, not a32K extrapolation or borrowed adff bound. Its full four-state suite501.635s/80GiB zero-owned-swap/noOOM and all four full-vocab finite dumps are historically accepted. This closes the missing historical workload/provenance lead.",
+    "QS0 enabled DS4_SERVE_DUMP and native numerical file bound; its timings must not be used as fresh no-dump matched formal baseline. Same full request has actual execution evidence, but removing instrumentation/new private namespace/load conditions does not guarantee identical stochastic output, prefill time, startup or fit. No row-token alignment/equivalence claim.",
+    "Exact request object AND encoded IDs also ran under adff/original MayaS QTP1/QTP2, with8469 cold11488.9/10191.7ms. Templates/pack/native are explicit different whole-profile factors; neither historical time is a fresh formal comparison.",
+    "Init-only DS4_COPY_DIRECT1 on adff preserves destination bytes per reviewed source/helper; historical common workload justifies source-grounded consideration under unchanged hard bounds after new owner qualification, not existing direct-mode8K success. Preserve descriptor identity/stat/placement/source witnesses. Do not enable unsupported flag or require adff-only counters on native92.",
+    "No newpackHGU/Unsloth8K transfer, no guaranteed long-input ceiling, near1M fill or actual262144 output proof. Retain all measured values as observations and stop safely on budget."
+  ],
+  "selected92_observer_requirements": [
+    "Separate source-specific observer: do not demand adff draft_rounds/draft_ms/verify_ms from selected92 STAT. Parent reports selected round off>0 branch calls m.draft then m.verify, no ngram fallback; request-scoped DONE d_off/d_acc and per_position draft_reached/kept can support actual DSpark attribution after pinned source reconciliation.",
+    "Before implementation acceptance manually read exact pinned native92 main source locally or via explicitly authorized source fetch, plus verify/draft semantics; freeze exact request/PID/command/sequence correlation, integer/nonbool counters and range relationships, nonzero draft attempt evidence, DONE/stop/emitted reconciliation, no stale cumulative or cross-request reuse. Zero acceptance may be valid; missing/offered0 counters do not prove DSpark execution.",
+    "Add pure observer tests against actual saved native92 lines and complete malformed/missing/foreignPID/duplicate/out-of-order/crossrequest/counter negatives; retain separate adff observer tests. No new protocol/build/ACK needed. FIRST matching both-host CPU, exact input maps and source review before any phase."
+  ],
+  "minimal_path": "Separately freeze A=actualnative92/configc43/B=adffMayaS TP2 full policy and exact8469 cold request with fresh private namespace/reused0. Use measured common workload for meaningful prefill; no long/coding bundle. Review baseline-specific controls/finite lineage/custody and direct-mode candidate delta. Fresh actual guarded single admission only after CPU/source/q/recovery. Later separate original short prose/coding A1B1B2A2 families retain>=5% decode/<=3% meaningful-prefill and all quality/resource/lifecycle gates. Historical QS0/QTP receipts are prerequisites, never substituted for fresh matched timing.",
+  "admission": false,
+  "production_policy": "Keep selectednative92/configc43; no automatic next arm, replay, source edit, healthy probe or host action.",
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/quality-fixtures-A.json": "3aa80903f946ba4a032aa47fe5f1c6906c531ac259dbfc8f9d9ff482b5ad4f23",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/quality-fixtures-B.json": "c77c34d85a59f4696bb82397a20df97f92235a7ad752d8d3ad80ccfa38377707",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/QS0_RESULT_ASTRA_REVIEW.json": "7c025840702784348d84d49ecde37369319c5810ef7e68c4b5eef8774d4ae76d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/QS0/terminal-audit.json": "6db71c524ab0b81173f8abd888a625385abed2d5f25556ad4b9648062a5443e8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/quality-v2/QS0/ROOT_RESULT_REVIEW.json": "dcb9360d81e505c99782a4d5f7c8ece496a0775ae9004a7fdba3ebace2cf13f3",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS0-20261030T225711Z/receipt.json": "1ae621fb5fc325e1a4aa89d732a9b50647260b42254aafda8a242796686e2394",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS0-20261030T225711Z/startup-audit.json": "f5a5bb6249bda8efb449d081047e794da7893c153997559ad7f8b87424fd0150",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS0-20261030T225711Z/candidate-config.json": "00d5429ea12965d3d6f6c0bb43271d13497b891270c168a628084a2bd58142dd",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS0-20261030T225711Z/native/native-000/native-statistics.json": "2a9a480086f6c4262ad594e645fc63b363cdc4e5134695c9e7d899a70ef0f1f2",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS0-20261030T225711Z/native/native-000/request.json": "2f6b7c53d22ea98ecbab4dad5a826007c02d334834aab446900dd02667b25c37",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS0-20261030T225711Z/native/skip-controls/ms-quality-cold-text/request.json": "a96bcd70061c77b8ade9f0da43016fa1c711e37e12013d6ee2bf8b509411154e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya-s-quality-v2-QS0-20261030T225711Z/native/skip-controls/ms-quality-cold-text/response.json": "bfd2da5ff72143f9f747700151dd4b5132637e3e7ce7728ef6823a6378fe5a6d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/QTP1/terminal-audit.json": "6691c5abae7a5dac6c60fed913d1912ee1961380d91130af21220f1ec484f6ff",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/QTP1/raw-receipts-FIRST/reliability-optimization-20261025/results/maya145-quality2-mayas-TP1-20261101T002545Z/native/skip-controls/ms-quality-cold-text/request.json": "a96bcd70061c77b8ade9f0da43016fa1c711e37e12013d6ee2bf8b509411154e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/QTP1/raw-receipts-FIRST/reliability-optimization-20261025/results/maya145-quality2-mayas-TP1-20261101T002545Z/fixtures.json": "e771cce74fbef1bca6d0b61e4dd3a4f29d0520279027910a1f35a3fc3810e102",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/QTP2/terminal-audit.json": "7ec9ed636338cef348da095bde5950ea424ec05a58174226b70a61f9ae9085d8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/QTP2/raw-receipts-FIRST/reliability-optimization-20261025/results/maya145-quality2-mayas-TP2-20261101T004653Z/native/skip-controls/ms-quality-cold-text/request.json": "a96bcd70061c77b8ade9f0da43016fa1c711e37e12013d6ee2bf8b509411154e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-quality-r2-v1/QTP2/raw-receipts-FIRST/reliability-optimization-20261025/results/maya145-quality2-mayas-TP2-20261101T004653Z/fixtures.json": "e771cce74fbef1bca6d0b61e4dd3a4f29d0520279027910a1f35a3fc3810e102",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/task-qualification.json": "1201e2e12621b2d4f371c1b04df9486b5066786ea4f7512936bfdee800c7f153",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/selected-ds4_model.cu": "dfe326d6a60d77354c8c92fb14ec423a92afff76b91f0810104f0a54a51a6350"
+  }
+}

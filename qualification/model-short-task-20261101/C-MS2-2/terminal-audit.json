@@ -1,0 +1,236 @@
+{
+  "stage": "SHORT_MAIN_TRANSPORT_TERMINAL",
+  "passed": true,
+  "mode": "task",
+  "arm": "C-MS2-2",
+  "qualification_sha256": "1201e2e12621b2d4f371c1b04df9486b5066786ea4f7512936bfdee800c7f153",
+  "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z",
+  "window": "/home/alex/strata-deepseek-test-20261024/windows/20261101T082718Z.json",
+  "evidence_sha256": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/task-arms.json": "e3149cc176e799ae53e1fc93696b6774a41d74c8aa5af94f6f6a7e8f3e46fb11",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-C-MS2-2-20261101T082609Z/state.json": "c2a4f6adaf5d79df48b06cdc81b24ac7d3bcc8997e2916375ce53beaf7653d54",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-C-MS2-2-20261101T082609Z/proof.json": "d7286412f81cac02b169be94ba2ae2d063816bc9e79811f0be2e0b261ad15e2d",
+    "/home/alex/strata-deepseek-test-20261024/windows/20261101T082718Z.json": "6027fd12d68ccb68773ef0eb5c0afcd851c533ce81a2e8b3099623441b68cca7",
+    "/home/alex/strata-deepseek-test-20261024/windows/20261101T082718Z.telemetry.jsonl": "601a827ee4263775c35fa8ed24f947ecaa1966c2a07d3e5e38deba2fdd775739",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-C-MS2-2-20261101T082609Z/old-owner-close.json": "b7bf9cf09970f98666d6635a9bb871b1e359068ad1e65c8e49fa2466c472e195",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-C-MS2-2-20261101T082609Z/public-default-output-request.json": "93bb8806b80adc0a4793b4302b8387e13ae2d02b04932ddd2b2f166be29a455a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-C-MS2-2-20261101T082609Z/public-default-output-sse.txt": "a9bf031af363b83896b315a230b3ecacf1f51c4f6fe25ec722865bbf870a612b",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/coding-fixtures-B.json": "513cebf5837290ef69171d2274240afaa8f38cc441373fb52a6c140ce3e3f4dd",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/fixtures.json": "ac51a284fe5da121857effef24c3326e5a62ff07dfbd2c79291d8ac9ff5f4b10",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/native-vision-v2/runtime/serve/dsml.py": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/candidate-config.json": "1d8581d312d34be6598c241689240e1ea982f9d72bd6861023ee8be6f7a42d3e",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/profile-base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/candidate-config.shared-settings.json": "9dccb6db4fd0d5e1596ad0845decb60c24aae2756a4eca216cb9b914d310fdc9",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/native-ready.json": "a26b414b64b2a07c7707e1efe8886a22bb9b14613c2ced997010c7772061ff3f",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/engine.log": "36db8e710bae4674c37ce1307819530fa44e32f479cc5b9d7751f11ffd3f6994",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/startup-audit.json": "6e7079e9244f01e0b2e1cb574e35d19b81693fb7dba624723ab9851ddd063c4e",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/entry-audit.json": "13385fcee83393069ec038f327ac5745339c1d54425e2ff838e865394d4f9d55",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/server-start.json": "b32e4e6d1c15c8029d472e80fa217a7f4ad1c11f4a00bd2ff555c2dc236d7cd4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/server-cleanup.json": "0fe67490d816fe84d8ebddaabf3bd24b70f9d78fbe98fbb5aed788296988024c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/native-close.jsonl": "06f361e0613351b591c08e35c9165fad7fe855eb36baae94dbe4811ea4821d5c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/server.log": "2a25ed18838677454906aa540067bce278278634c6e9641be5635ff9fe041e5b",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/receipt.json": "152632c730a6aff56b093a46fb637ae9adf1199f2fcf7d7973c56f57604eef40",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/private-memory-fence.json": "3d7b2eb9c0f929049a0e614ee3b3855bd1234433767318d75ed8c10dd75502a8",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/private-memory-fence-restored.json": "f8c6aad61f193a03b3f0caec2054fd14828abfcbd1584433fbcf02d681fd08cf",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/maya145-modeltask-C-MS2-2-20261101T082609Z/private-memory-fence-collected.json": "b974ae7b85321171f10173b3e9704f6c0a8f5a483bf63015269b5251f23b248d",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/native-000/request.json": "8e9b77cb73a2275c63a546216f620a1fd8e337849a5aeb25032876be49767ed0",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/native-000/trace-receipt.json": "6b3d49874e53eb442fabb1ff7aa7d1d62ba79000ec71b9bf5d2586394cc770b3",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/native-000/native-statistics.json": "ebc2bdafadbc629e90e58221b113d18524e0d3475ce0f048c371e2cdd6fe2f13",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/native-000/tokens.jsonl": "3338a2354461f7dc805bbf13156bfde583d54854aaf7dcad6921a4480dffa509",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/native-000/stat-lines.jsonl": "07814e738f042c9df3b604fa080542fb6a6d156d32d2d8f8819094dcc86b6ad2",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/native-000/stat-receipt.json": "28b95dc34c60a6dd10af41d713f965d02a842c27c1a950508d7d5f8452206f6a",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/skip-controls/ms-coding-main/request.json": "4f5536df83a037414f91551f657d221b44ec531e5766dd3533ee2a0e94901997",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/skip-controls/ms-coding-main/response.json": "eba4ea1af2faa49af3404d0b79819b5514d9242a06f4f7a3f6b3c7296ed49dda",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/skip-controls/ms-coding-main/native-audit.json": "dcad6f8ac3850569dce9339d3dbad97bb4f7a23946dd818d93b172050c4dadb6"
+  },
+  "whole_pack_factor": {
+    "variant": "MS2",
+    "tp": 2,
+    "native": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/native-build-r2-FIRST/maya-ds4",
+    "pack": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST",
+    "drafter": "same published Maya-S DSpark, enabled",
+    "context_total": 1048576,
+    "output_allowance": 262144,
+    "effort": 100,
+    "prefill_chunk": 4096,
+    "expert_copy_io": "DS4_COPY_DIRECT=1",
+    "asset_count": 8,
+    "numerical_equivalence_claim": false,
+    "near_full_context_or_output_tested": false,
+    "profile": "MS2",
+    "task": "coding",
+    "replicate": 2,
+    "candidate": true,
+    "exe": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-mayas-v1/native-build-r2-FIRST/maya-ds4",
+    "native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+    "factor": "Maya145-explicit-model-short-main-MS2",
+    "published_MayaS_drafter_unchanged": true,
+    "pack_and_Engram_are_explicit_factors": true,
+    "runtime_projection_policy": "L22 scale1 all40 main blocks; drafter unchanged"
+  },
+  "rows": [
+    {
+      "id": "ms-coding-main",
+      "natural_transport_complete_manual_task_quality_pending": true,
+      "natural_stop": true,
+      "native": {
+        "generated": 17885,
+        "prompt_tokens": 140,
+        "prompt_ms": 1491.8,
+        "decode_ms": 312401.9,
+        "finish": "stop",
+        "drafts_accepted": 10312,
+        "drafts_offered": 14782,
+        "reused": 0,
+        "hits": 5532460,
+        "lookups": 5665575
+      },
+      "observed_tokens": 17885,
+      "token_contract": {
+        "count": 17885,
+        "valid_vocabulary_ids": true,
+        "ordered_ids_sha256": "4ace87cdc0aeefba8a83d4e650b5577948caefe566aa3dbeb3d6bf9969107187"
+      },
+      "SSE": {
+        "DONE": true,
+        "finish": "stop",
+        "raw_SSE_reconstructed": true,
+        "content_characters": 5083,
+        "reasoning_characters": 64418
+      }
+    }
+  ],
+  "drafter_execution": [
+    {
+      "configured_and_loaded_separate": true,
+      "execution_proven": true,
+      "draft_rounds": 6675,
+      "draft_ms": 28812.025,
+      "verify_ms": 237906.067,
+      "acceptance_can_be_zero": true,
+      "samples": 2236,
+      "raw_lines_sha256": "eeb8622a7c8b9a72025dd19d39d45c8504a7c1a09fbc620512d7f8fcd4147390"
+    }
+  ],
+  "resources": {
+    "root_min_GiB": 202.80989837646484,
+    "system_swapout_delta_bytes": 0,
+    "swap_not_attributed_to_model": true
+  },
+  "private_fence": {
+    "passed": true,
+    "memory_max": 85899345920,
+    "swap_max": 0,
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 2248,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "prior_properties_restored": true,
+    "transient_collected": true
+  },
+  "tokenizer_custody": {
+    "passed": true,
+    "tokenizer_source_sha256": {
+      "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a"
+    },
+    "effective_template": {
+      "api_picker_sha256": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+      "effective_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "effective_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "pack_template_relative_to_E": "decode-optimization-20261028/maya-s-comparison-v1/pack-v1/pack-FIRST/tokenizer/chat_template.jinja",
+      "pack_template_replaced": false,
+      "pack_template_sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "selection_policy": "EXACT_UNCHANGED_B1_DSML_PICKER_WITH_PINNED_V41_FALLBACK"
+    }
+  },
+  "actual_native_pid": 1095979,
+  "selected_identity": {
+    "native_pid": 1108433,
+    "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+    "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+    "context": 1048576,
+    "output_default": 262144,
+    "prompt_skip_mode": 1,
+    "prefill_chunk": 4096,
+    "Q8": [
+      1,
+      1
+    ],
+    "TP": 1,
+    "images": true,
+    "runtime_ablation": true,
+    "DSpark": true,
+    "CPU_experts": 4045,
+    "all_CPU_experts_RAM": true,
+    "placement": {
+      "trunk_split": [
+        19,
+        21
+      ],
+      "drafter_on_GPU0": true,
+      "head_on_GPU1": true,
+      "actual_human_rows": [
+        {
+          "device": 0,
+          "first_layer": 0,
+          "last_layer": 42,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.32,
+          "human_experts_with_drafter": 5746,
+          "human_total_with_drafter": 7680,
+          "caches_GB_rounded": 0.58,
+          "free_MiB": 2026
+        },
+        {
+          "device": 1,
+          "first_layer": 19,
+          "last_layer": 39,
+          "weights_GB_rounded": 3.31,
+          "experts_GB_rounded": 58.86,
+          "human_experts_with_drafter": 5953,
+          "human_total_with_drafter": 8064,
+          "caches_GB_rounded": 0.54,
+          "free_MiB": 2030
+        }
+      ],
+      "exact_prompt_bytes_observed": false
+    },
+    "GPU_expert_slots_inferred": 11315,
+    "GPU_slots_direct_hosted_INFO": false,
+    "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+    "start_binding": {
+      "invocation": "e546cecd15324582865203e0f2318de7",
+      "main_pid": 1108372,
+      "native_pid": 1108433,
+      "native_start_ticks": 179070360
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096"
+  },
+  "purpose": "SINGLE_COMPLETE_PUBLIC_MAIN_SHORT_COLD_OBSERVATION",
+  "manual_full_output_review_required": true,
+  "cross_pack_numeric_equivalence": false,
+  "near_full_context_or_output_tested": false,
+  "general_quality_claim": false,
+  "performance_claim": false,
+  "raw_performance_observation": true,
+  "comparative_speedup_claim": false,
+  "deployment_admitted": false,
+  "automatic_next_arm": false,
+  "retry": false
+}

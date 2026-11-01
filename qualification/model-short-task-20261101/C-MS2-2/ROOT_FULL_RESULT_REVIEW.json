@@ -1,0 +1,75 @@
+{
+  "utc": "2026-11-01T08:45:41.472658+00:00",
+  "reviewer": "ROOT",
+  "arm": "C-MS2-2",
+  "decision": "FINAL_PRESELECTED_CODING_CONTROL_CORRECT_OBSERVATION_ONLY",
+  "full_content_and_reasoning_read": true,
+  "entire_generated_module_all21_supplied_tests_read_before_any_execution": true,
+  "generated_code_sha256": "7b67629f32cb7265425093dd420cf0bbfa4a7231be878708de02a9c06fbe1845",
+  "reasoning_characters": 64418,
+  "task_passed": true,
+  "CPU_guard_each_host": 14,
+  "independent_each_host": {
+    "checks": 4414,
+    "cases": 2207,
+    "supplied": 21,
+    "meaningful_negatives": 4,
+    "FIRST_all_passed": true
+  },
+  "observed": {
+    "id": "ms-coding-main",
+    "passed": true,
+    "native": {
+      "generated": 17885,
+      "prompt_tokens": 140,
+      "prompt_ms": 1491.8,
+      "decode_ms": 312401.9,
+      "finish": "stop",
+      "drafts_accepted": 10312,
+      "drafts_offered": 14782,
+      "reused": 0,
+      "hits": 5532460,
+      "lookups": 5665575
+    },
+    "observed_tokens": 17885,
+    "native_decode_tokens_per_second": 57.24997191118236,
+    "client_seconds": 313.9125313661061,
+    "content_characters": 5083,
+    "reasoning_characters": 64418,
+    "manual_review_pending": true,
+    "general_quality_or_equivalence_claim": false,
+    "emitted_token_contract": {
+      "count": 17885,
+      "valid_vocabulary_ids": true,
+      "ordered_ids_sha256": "4ace87cdc0aeefba8a83d4e650b5577948caefe566aa3dbeb3d6bf9969107187"
+    }
+  },
+  "owned_execution_closed": true,
+  "independent_terminal_audit_passed": true,
+  "preserve_producer_manual_pending": true,
+  "comparative_speedup_claim": false,
+  "deployment_admitted": false,
+  "next_arm_automatically_admitted": false,
+  "notes": [
+    "Natural17885tokens vsinitial16869 retained. No equalwork or general task latency claim. Entire helper/import/main/all21tests/full64418reasoning read before execution.",
+    "Exact typedhelper and Sequenceimport guarddelta FIRST14bothhosts before FIRST4414independentchecks both; reference/cases/negative/limits unchanged.",
+    "Native/API/window/controlleractualexit0 and independentterminalaudit verifies selected92/c43 restore."
+  ],
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/receipt.json": "152632c730a6aff56b093a46fb637ae9adf1199f2fcf7d7973c56f57604eef40",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/server-cleanup.json": "0fe67490d816fe84d8ebddaabf3bd24b70f9d78fbe98fbb5aed788296988024c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/native-close.jsonl": "06f361e0613351b591c08e35c9165fad7fe855eb36baae94dbe4811ea4821d5c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS2-2-20261101T082609Z/native/skip-controls/ms-coding-main/response.json": "eba4ea1af2faa49af3404d0b79819b5514d9242a06f4f7a3f6b3c7296ed49dda",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS2-2/terminal-audit.json": "79a32e91d560e424dde54319ed566ceb6dbbfb1e10df48720015b08b1d8f361b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/controller-C-MS2-2-exit.json": "da04aef87b772d8c36584050f78c660daef87cc37c47f69485f7fe6bfe4ab5b8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/CODING_HGU_CONFIRMATION_FROZEN.json": "4927c80d055dcb95a831319bcfc2aeed6292b705ce9a55ee3fc085aad492cdbc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS2-2/code-assessment-v1/ROOT_FULL_GENERATED_SOURCE_REVIEW.json": "f7dac90f17ae486f75fbd52e26bcc5c59b2df3621be5f9991b31a547930df52a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS2-2/code-assessment-v1/ROOT_CODE_GUARD_SOURCE_REVIEW.json": "d5343bbc2b679e4a032fc48033341ffbd9d35127ea2d0d48b01cca87e3aab457",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS2-2/code-assessment-v1/code-review-darwin.json": "f473584592cfcc7b8aea6643b0c98ea4a3d6fc8f55c1c2cae0d7622404881a07",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS2-2/code-assessment-v1/CPU-GUARD-FIRST-darwin/receipt.json": "4c35e343608e36326be744f35c35cfd3a5d8caf4e111ce561bdc167081b1e1bb",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS2-2/code-assessment-v1/ASSESSMENT-FIRST-darwin/child.json": "c5ef52d38f45d1cf62c83ad248fd433cc150fff7d494dbf0e3d40c41fc55a541",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS2-2/code-assessment-v1/code-review-linux.json": "414f57576c8f19462448ae8cdeec510dc3263cdedd072afe829456291d35ac34",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS2-2/code-assessment-v1/CPU-GUARD-FIRST-linux/receipt.json": "45245ef9ff408380aa1a7c90ad120cb488eb0ee1248864759a5991b5e3b30aa4",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS2-2/code-assessment-v1/ASSESSMENT-FIRST-linux/child.json": "358c34ffe1b4655529967a99a3624936e618d6fa3881aa2affb43f372717c22b"
+  }
+}
