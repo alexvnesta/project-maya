@@ -1,0 +1,10 @@
+{
+  "classification": "CPU_ENTRY_DEPENDENCY_VISIBILITY",
+  "original_Mac_returncode": 1,
+  "original_Linux_returncode": 0,
+  "native_or_service_actions": false,
+  "request_encoder_and_tests_unchanged": true,
+  "diagnosis": "Mac user-site Jinja2 exists and prior frontend CPU drivers use ordinary -B. New -I hid that existing dependency. No installation or global change required.",
+  "correction": "Use ordinary -B CPU child, matching preexisting qualified frontend CPU drivers, so installed Mac user-site Jinja2 remains available. Keep CPU30/AS512Linux/wall90/nice15/CUDAhidden/thread1/arena1 unchanged. Record actual Jinja2/MarkupSafe origin+hash and isolated flag. No package/env/system edits; same fixture/test/API source and request.",
+  "original_failed_child_not_regraded": true
+}

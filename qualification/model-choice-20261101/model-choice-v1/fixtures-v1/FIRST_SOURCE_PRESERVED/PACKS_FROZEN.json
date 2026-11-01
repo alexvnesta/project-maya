@@ -1,0 +1,46 @@
+{
+  "HGU": {
+    "pack_relative_to_E": "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/pack",
+    "tokenizer_sha256": {
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16"
+    },
+    "metadata_sha256": {
+      "ds4.txt": "75fa22995fd2a35d7b81a4ae9e015037a07d7295790b46c85f13ac426c085db7",
+      "tensors.txt": "1527371944e32643e2d974ccd2f2364436c6b17aeef9bd0b93619ab1f8f89d26",
+      "engram.bin": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142"
+    },
+    "native_source": "Maya1.1.45adff",
+    "context_total": 1048576,
+    "output_allowance": 262144,
+    "benchmark_cap": 32768,
+    "effort": 100,
+    "drafter_unchanged": true,
+    "exact_private_S2": false
+  },
+  "UNSLOTH": {
+    "pack_relative_to_E": "decode-optimization-20261028/unsloth-pack-v1/pack-r2-FIRST",
+    "tokenizer_sha256": {
+      "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+      "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "chat_template.jinja": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b"
+    },
+    "metadata_sha256": {
+      "ds4.txt": "bf53e615522820d591ad46ffa777e7cf8d88d8634047be94a71d19b329206425",
+      "tensors.txt": "ca1f5a36dc65ca188108930db163d33a8d0a390771454dd312063ffc54a34d3a",
+      "engram.bin": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142"
+    },
+    "native_source": "Maya1.1.45adff",
+    "context_total": 1048576,
+    "output_allowance": 262144,
+    "benchmark_cap": 32768,
+    "effort": 100,
+    "drafter_unchanged": true,
+    "exact_private_S2": false
+  }
+}

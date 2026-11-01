@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "controls": 10,
+  "test_ids": [
+    "test_engine_profile.Profile.test_all_private_state_paths_stay_in_the_new_candidate_namespace",
+    "test_engine_profile.Profile.test_both_new_profiles_preserve_full_policy_and_original_base",
+    "test_engine_profile.Profile.test_both_tp2_Q8_direct_and_diagnostic_flags",
+    "test_engine_profile.Profile.test_changed_base_quality_or_capacity_refused",
+    "test_engine_profile.Profile.test_missing_actual_GPU_check_or_foreign_owner_row_refused",
+    "test_engine_profile.Profile.test_profile_delta_is_exact_and_cannot_drop_drafter_or_flags",
+    "test_engine_profile.Profile.test_saved_real_source_format_is_parsed_without_new_model_claim",
+    "test_engine_profile.Profile.test_source_capacity_and_unproven_fit_scope",
+    "test_engine_profile.Profile.test_wrong_Q8_projection_or_reduction_evidence_refused",
+    "test_engine_profile.Profile.test_wrong_variant_namespace_or_old_pack_refused"
+  ],
+  "source_sha256": {
+    "engine_profile.py": "844aa8041596676b5063f4f9a937f3fd11c1a6f059a7df6dcc0498cec824bd3d",
+    "test_engine_profile.py": "989fcb4891c7f3c50db52c4289f7e7deec629d65bc22d9885bc8e6117f8224fd",
+    "run_profile_cpu.py": "2b9e803a2b8b8b257c77f4d3358dfab71a0947b3ecfda0b8ef1865e6f1e49403",
+    "profile-base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa"
+  },
+  "input_sha256": {
+    "src/ds4/ds4_model.cu": "046277a7be8d385ccc843e64301d5cc14c93516f602b12e04fc9851acf76fcc5",
+    "src/ds4/ds4_gguf.cu": "827f251584c81be7613efe7e780c3c2f7b952124ab6e9b058782f7352183b022",
+    "prior-startup-parser": "c43e07ed6a4019fb6252c64d40a0b3cd7a9bfe98e64c36e94436e159406ff983",
+    "saved-startup/engine.log": "b398fa10113e263225470e025118a08b34338e2f02b51500079238a374394886",
+    "saved-startup/native-ready.json": "6e3ebde905cb932c4c2decbb99aec07101eb9c1e1efefd6f54ff9e6b52f0eb88",
+    "saved-startup/startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "saved-startup/startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c"
+  },
+  "observed": {
+    "pid": 869780,
+    "ppid": 869779,
+    "pgid": 869780,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "native_executed": false,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false
+}

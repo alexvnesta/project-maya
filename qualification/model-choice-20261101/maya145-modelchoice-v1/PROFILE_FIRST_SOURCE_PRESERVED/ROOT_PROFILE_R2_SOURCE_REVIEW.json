@@ -1,0 +1,34 @@
+{
+  "utc": "2026-11-01T03:28:54.348051+00:00",
+  "entire_new_source_tests_read": true,
+  "scope": "Manual full new source/tests and changed inherited lifecycle deltas. Source/CPU scope only, no model admission.",
+  "sol_final_source_review_sha256": "b1c641ce362397bd8b60abac5abd80dd7cd1e46ac4398a7f053655a850c14463",
+  "root_test_only_supplement": "Added missing P3 result/child mandatory-pin negative before any CPU. Runtime unchanged versus Sol final; exact controller108.",
+  "source_sha256": {
+    "engine_profile.py": "844aa8041596676b5063f4f9a937f3fd11c1a6f059a7df6dcc0498cec824bd3d",
+    "test_engine_profile.py": "456b38b08edd556e064056867baabc269e8f70aebb5a05a45a342ddab4322f36",
+    "run_profile_cpu.py": "e2d3f82bdf0137ea8728dc3a92decce4f605a243989ad5469f492dd931b41ce0",
+    "profile-base-config.json": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa"
+  },
+  "input_sha256": {
+    "src/ds4/ds4_model.cu": "046277a7be8d385ccc843e64301d5cc14c93516f602b12e04fc9851acf76fcc5",
+    "src/ds4/ds4_gguf.cu": "827f251584c81be7613efe7e780c3c2f7b952124ab6e9b058782f7352183b022",
+    "prior-startup-parser": "c43e07ed6a4019fb6252c64d40a0b3cd7a9bfe98e64c36e94436e159406ff983",
+    "saved-startup/engine.log": "b398fa10113e263225470e025118a08b34338e2f02b51500079238a374394886",
+    "saved-startup/native-ready.json": "6e3ebde905cb932c4c2decbb99aec07101eb9c1e1efefd6f54ff9e6b52f0eb88",
+    "saved-startup/startup-health.json": "6766da04a13609ae7af79b1402a098485f2c7ec221fa6841a820b64613205322",
+    "saved-startup/startup-models.json": "9a0d3f548d7f7923548be316c5d75c841ba74fb571e74d19157d25194f30557c"
+  },
+  "test_ids": [
+    "test_engine_profile.Profile.test_all_private_state_paths_stay_in_the_new_candidate_namespace",
+    "test_engine_profile.Profile.test_both_new_profiles_preserve_full_policy_and_original_base",
+    "test_engine_profile.Profile.test_both_tp2_Q8_direct_and_diagnostic_flags",
+    "test_engine_profile.Profile.test_changed_base_quality_or_capacity_refused",
+    "test_engine_profile.Profile.test_missing_actual_GPU_check_or_foreign_owner_row_refused",
+    "test_engine_profile.Profile.test_profile_delta_is_exact_and_cannot_drop_drafter_or_flags",
+    "test_engine_profile.Profile.test_saved_real_source_format_is_parsed_without_new_model_claim",
+    "test_engine_profile.Profile.test_source_capacity_and_unproven_fit_scope",
+    "test_engine_profile.Profile.test_wrong_Q8_projection_or_reduction_evidence_refused",
+    "test_engine_profile.Profile.test_wrong_variant_namespace_or_old_pack_refused"
+  ]
+}

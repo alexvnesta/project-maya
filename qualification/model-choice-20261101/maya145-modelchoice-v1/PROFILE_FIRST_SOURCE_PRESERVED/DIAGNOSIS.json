@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-01T03:29:21.821145+00:00",
+  "classification": "CPU_TEST_FIXTURE_SCHEMA_ERROR_NO_NATIVE_OR_SERVICE_ACTION",
+  "original": "CPU-PROFILE-R2-FIRST-darwin",
+  "reason": "Positive profile test expected nonexistent max_tokens in selected config. Selected output allowance is passed by qualified API/request controls, not this config key. Exact profile runtime unchanged.",
+  "repair": "Assert actual factor.output_allowance262144, fit_max_tokens false and unchanged effort100, retaining runtime/source exact config guard. Fresh profile driver/review namespace.",
+  "controller108_first_passed_unchanged_no_replay": true
+}

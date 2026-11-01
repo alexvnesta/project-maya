@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "controls": 15,
+  "test_ids": [
+    "test_current_audit.Audit.test_actual_isolated_script_help_has_no_unqualified_local_import",
+    "test_current_audit.Audit.test_cap_partial_UNRUN_retry_and_broader_claim_refused",
+    "test_current_audit.Audit.test_complete_short_scope_only",
+    "test_current_audit.Audit.test_duplicate_and_nonfinite_saved_JSON_refused",
+    "test_current_audit.Audit.test_exact_comparison_preserves_types",
+    "test_current_audit.Audit.test_exact_window_exit0",
+    "test_current_audit.Audit.test_old_entry_or_other_arm_refused",
+    "test_current_audit.Audit.test_private_cleanup_required",
+    "test_current_audit.Audit.test_recorder_hashes_exact_small_bytes",
+    "test_current_audit.Audit.test_recorder_refuses_alias_and_large_evidence",
+    "test_current_audit.Audit.test_unreviewed_or_wrong_scoring_refused",
+    "test_current_audit.Audit.test_wrong_or_unfinished_window_refused",
+    "test_current_audit.CurrentFenceAudit.test_actual80_resource_contract",
+    "test_current_audit.CurrentFenceAudit.test_missing_failed_or_wrong_actual_install_refused",
+    "test_current_audit.CurrentFenceAudit.test_old76_and_unclean_or_foreign_resource_contract_refused"
+  ],
+  "source_sha256": {
+    "current_audit.py": "c9b1f3d3f99c61a354c2c337f118ae55273778ceea0510a7cce551b6cb51245c",
+    "test_current_audit.py": "8c08ec843452664ce1e9b4d6f3423a96429ec5877d9b6d954c0d560904ba5600",
+    "run_audit_cpu.py": "f60a471dba7433e7f10143c352cf0307d7a757941741cda181fa6a8a49dd4d30"
+  },
+  "input_sha256": {
+    "direct_io.py": "d899584484ac0a54c778265860e5b6e1480b7a23cd5f76ffc5e10cb28ff56b5e"
+  },
+  "observed": {
+    "pid": 96013,
+    "ppid": 95987,
+    "pgid": 96013,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "native_executed": false,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false
+}

@@ -1,0 +1,48 @@
+{
+  "utc": "2026-11-01T03:33:29.995591+00:00",
+  "status": "EXACT_BOTH_HOST_CPU_AND_ACTUAL_READ_ONLY_PREFLIGHT_PASSED_ADMISSION_PENDING",
+  "mode": "modelstate",
+  "arms": [
+    "FHGU",
+    "FUNSLOTH"
+  ],
+  "scope": "First two source-encoded44token cold/warm finite/literal diagnostics only, new publicHGU andUnsloth packs; no timing/promotion/oldarmreplay.",
+  "selected_production_binding_snapshot": {
+    "invocation": "95ff5e796eab4d86b0e78d1611b9ada4",
+    "main_pid": 828763,
+    "native_pid": 828819,
+    "native_start_ticks": 176859041
+  },
+  "fixture_proof": "model-choice-v1/fixtures-v1 FIRST_R2 11eachhost exact4source/24inputs/IDs/manifests; short44IDs same but incomingtemplates retained and different",
+  "new_native_build": false,
+  "native_candidate": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+  "fixed_bounds": {
+    "window": 1200,
+    "soft": 1000,
+    "cleanup": 200,
+    "memory": 85899345920,
+    "hostmargin": 8589934592,
+    "context": 1048576,
+    "output": 262144,
+    "benchmark": 32768,
+    "effort": 100
+  },
+  "GPU_admitted": false,
+  "CPU_executed": true,
+  "do_not_claim_current_source_qualified": true,
+  "no_model_tensors_rehashed_or_exported": true,
+  "custody_data_sha256": "919712f5c2937b245ce92d40804e0981b4308f34e7af7d489cd4df32911b9ed4",
+  "CPU_controls_each_host": {
+    "controller": 108,
+    "profile": 10,
+    "auditor": 15,
+    "recovery": 63
+  },
+  "exact_maps_IDs_bothhosts": true,
+  "qualification_sha256": "76fbf2d6b8c74b515f8ed3e847c45258ad9f8fe4b427112e14406f7e81fcb8da",
+  "qualification_file_pins": 4505,
+  "recovery_qualification_sha256": "a2a93ce78a8b628e0b105a34d262dd6c715cddec0130798ca896e682d234e4f5",
+  "first_actual_FHGU_readonly_preflight": "FHGU-PREFLIGHT-FIRST/controller.log",
+  "first_actual_preflight_sha256": "232c02d3026663b3e95463f65fd4928e2eda897c30605b4b55095271d0d30176",
+  "next": "Sol exactmap/readonly actualproof review and separate SINGLE FHGU conditional admission; fresh guard before launch. No timing/promotion; FUNSLOTH later separate."
+}

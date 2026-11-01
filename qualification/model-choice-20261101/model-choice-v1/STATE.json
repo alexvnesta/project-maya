@@ -1,0 +1,32 @@
+{
+  "utc": "2026-11-01T03:33:29.995952+00:00",
+  "status": "EXACT_BOTH_HOST_CPU_AND_ACTUAL_READ_ONLY_PREFLIGHT_PASSED_ADMISSION_PENDING",
+  "active_private_phase": false,
+  "GPU_admitted": false,
+  "current_binding_snapshot": {
+    "invocation": "95ff5e796eab4d86b0e78d1611b9ada4",
+    "main_pid": 828763,
+    "native_pid": 828819,
+    "native_start_ticks": 176859041
+  },
+  "fixture_controls_each_host": 11,
+  "fixture_manifest_source_IDs_exact": true,
+  "asset_stat_attestation_sha256": "82c756c83172fd63aa74d8b70d3492677e41e330c90d3602da4cc70767a63a0c",
+  "pack_custody_sha256": "3ca0544681673d7bbe99fd0e3fc0c29f69edfd8f71a04d257973d52620e1151f",
+  "next": "Sol exactmap/readonly actualproof review and separate SINGLE FHGU conditional admission; fresh guard before launch. No timing/promotion; FUNSLOTH later separate.",
+  "owner_source_path": "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modelchoice-v1",
+  "new_model_CPU_or_GPU_admitted": false,
+  "CPU_executed": true,
+  "CPU_controls_each_host": {
+    "controller": 108,
+    "profile": 10,
+    "auditor": 15,
+    "recovery": 63
+  },
+  "exact_maps_IDs_bothhosts": true,
+  "qualification_sha256": "76fbf2d6b8c74b515f8ed3e847c45258ad9f8fe4b427112e14406f7e81fcb8da",
+  "qualification_file_pins": 4505,
+  "recovery_qualification_sha256": "a2a93ce78a8b628e0b105a34d262dd6c715cddec0130798ca896e682d234e4f5",
+  "first_actual_FHGU_readonly_preflight": "FHGU-PREFLIGHT-FIRST/controller.log",
+  "first_actual_preflight_sha256": "232c02d3026663b3e95463f65fd4928e2eda897c30605b4b55095271d0d30176"
+}

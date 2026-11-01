@@ -1,0 +1,224 @@
+{
+  "utc": "2026-11-01T02:56:19.218276+00:00",
+  "selected_binding": {
+    "invocation": "95ff5e796eab4d86b0e78d1611b9ada4",
+    "main_pid": 828763,
+    "native_pid": 828819,
+    "native_start_ticks": 176859041
+  },
+  "read_only_filesystem_metadata": true,
+  "tensor_bytes_read_or_exported": 0,
+  "no_GPU_service_or_build_actions": true,
+  "candidates": {
+    "HGU": {
+      "pack": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/pack",
+      "assets": [
+        {
+          "file": 0,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00001-of-00006.gguf",
+          "signature": [
+            64513,
+            2893170,
+            47887697312,
+            1793370815049724695,
+            1793370815251729359
+          ]
+        },
+        {
+          "file": 1,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00002-of-00006.gguf",
+          "signature": [
+            64513,
+            2893209,
+            47669578400,
+            1793371826769079863,
+            1793371826845081618
+          ]
+        },
+        {
+          "file": 2,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00003-of-00006.gguf",
+          "signature": [
+            64513,
+            2893239,
+            47103347360,
+            1793372844491573608,
+            1793372844601576148
+          ]
+        },
+        {
+          "file": 3,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00004-of-00006.gguf",
+          "signature": [
+            64513,
+            2893241,
+            35532532032,
+            1793373596864941870,
+            1793373596969944294
+          ]
+        },
+        {
+          "file": 4,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00005-of-00006.gguf",
+          "signature": [
+            64513,
+            2893243,
+            80641295472,
+            1793375335290966071,
+            1793375335386968281
+          ]
+        },
+        {
+          "file": 5,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00006-of-00006.gguf",
+          "signature": [
+            64513,
+            2893247,
+            80643503412,
+            1793377384776131009,
+            1793377384871133195
+          ]
+        },
+        {
+          "file": 6,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/dspark/dspark.bin",
+          "signature": [
+            64513,
+            2893297,
+            7967616768,
+            1793377587691798272,
+            1793377587741466954
+          ]
+        },
+        {
+          "file": 7,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017/vision.bin",
+          "signature": [
+            64513,
+            12734082,
+            970536960,
+            1792951011115294368,
+            1792951011756308920
+          ]
+        },
+        {
+          "file": 8,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/native-gu.bin",
+          "signature": [
+            64513,
+            2911121,
+            9625927680,
+            1793488126417474219,
+            1793488269913760796
+          ]
+        }
+      ],
+      "closure": {
+        "constructor_sha256_record": "e386661b7ca9faf94188d8a9cb899e39faf9b54c8b85ad81639e18c993a17b1a",
+        "bytes": 9625927680,
+        "finished_utc": "2026-10-31T23:11:10.102154+00:00",
+        "mtime_ctime_both_before_finished_UTC": true,
+        "new_full_hash_computed": false,
+        "basis": "Fresh original target plus CPU-qualified1536codec exactreadback and constructor final full-overlay SHA; Linux ctime/mtime demonstrate no payload modification after final closure. New immutable signature for subsequent model guards."
+      }
+    },
+    "UNSLOTH": {
+      "pack": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-pack-v1/pack-r2-FIRST",
+      "assets": [
+        {
+          "file": 0,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00001-of-00006.gguf",
+          "signature": [
+            64513,
+            2893293,
+            5780923,
+            1793375558615106422,
+            1793375558636106905
+          ]
+        },
+        {
+          "file": 1,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00002-of-00006.gguf",
+          "signature": [
+            64513,
+            2893291,
+            49955895008,
+            1793378740558340290,
+            1793378740594341119
+          ]
+        },
+        {
+          "file": 2,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00003-of-00006.gguf",
+          "signature": [
+            64513,
+            2893294,
+            49950675200,
+            1793381889603137113,
+            1793381889637137900
+          ]
+        },
+        {
+          "file": 3,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00004-of-00006.gguf",
+          "signature": [
+            64513,
+            2893328,
+            48971469632,
+            1793384970689326662,
+            1793384970787328936
+          ]
+        },
+        {
+          "file": 4,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00005-of-00006.gguf",
+          "signature": [
+            64513,
+            2893342,
+            16419622240,
+            1793386006158288521,
+            1793386006217289885
+          ]
+        },
+        {
+          "file": 5,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00006-of-00006.gguf",
+          "signature": [
+            64513,
+            2893343,
+            135172021792,
+            1793489445185678679,
+            1793489445641689123
+          ]
+        },
+        {
+          "file": 6,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/dspark/dspark.bin",
+          "signature": [
+            64513,
+            2893297,
+            7967616768,
+            1793377587691798272,
+            1793377587741466954
+          ]
+        },
+        {
+          "file": 7,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017/vision.bin",
+          "signature": [
+            64513,
+            12734082,
+            970536960,
+            1792951011115294368,
+            1792951011756308920
+          ]
+        }
+      ],
+      "closure": {
+        "constructor_result": "unsloth-pack-v1/CONSTRUCTION_RESULT_R2_FIRST.json",
+        "source_and_supplement_stats_checked_next": true,
+        "new_full_hash_computed": false
+      }
+    }
+  }
+}

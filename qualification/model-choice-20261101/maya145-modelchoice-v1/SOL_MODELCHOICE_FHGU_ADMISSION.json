@@ -1,0 +1,52 @@
+{
+  "reviewer": "gpt-6.1-sol",
+  "utc": "2026-11-01T03:33:42.313891+00:00",
+  "decision": "CONDITIONAL_SINGLE_FRESH_FHGU_FINITE_DIAGNOSTIC_ONLY",
+  "findings": [],
+  "pins": {
+    "modelstate-qualification.json": "76fbf2d6b8c74b515f8ed3e847c45258ad9f8fe4b427112e14406f7e81fcb8da",
+    "recovery-v1/RECOVERY_QUALIFICATION.json": "a2a93ce78a8b628e0b105a34d262dd6c715cddec0130798ca896e682d234e4f5",
+    "FHGU-PREFLIGHT-FIRST/controller.log": "232c02d3026663b3e95463f65fd4928e2eda897c30605b4b55095271d0d30176",
+    "FHGU-PREFLIGHT-FIRST/exit.json": "0c244b1aa304173cab90ded86338c58e05dcd3e81790bc9e08a991b0f47099ab",
+    "SOL_MODELCHOICE_CPU_REVIEW.json": "42e2e71b441e461ec3b493324d950e4cd27212bbbd67b926aac4af43c2829c68",
+    "SOL_MODELCHOICE_FINAL_SOURCE_REVIEW.json": "b1c641ce362397bd8b60abac5abd80dd7cd1e46ac4398a7f053655a850c14463"
+  },
+  "metadata_checks": {
+    "main_map_entries": 4505,
+    "recovery_map_entries": 2349,
+    "successful_scoped_reconciliation_checks": 2569,
+    "both_host_controls": {
+      "controller": 108,
+      "profile": 10,
+      "auditor": 15,
+      "recovery": 63,
+      "helper": 15,
+      "fixture": 11
+    },
+    "candidate_fixture_transitive_inputs": 24,
+    "source_drift_since_CPU_review": false,
+    "preflight": "Saved actual reviewed controller03:32:41UTC pass, rc0/no run/no queued inference. Final proof.files equals main qualification. Exact selected828819/invocation95ff5e796eab4d86b0e78d1611b9ada4/main828763/ticks176859041."
+  },
+  "admitted_scope": "One fresh owned FHGU/HGU TP2 startup and44token cold plus dependent warmreuse43 known literal finite-state diagnostic under unchanged adff native. No automatic next candidate or broader inference.",
+  "launch_conditions": [
+    "Immediately refresh actual clock, phase/registry emptiness, exact current selected start binding, healthy/default/idle and root132GiB/source/input/qualification checks through actual reviewed controller. Saved preflight is historical evidence, not a live lease. Stop for drift.",
+    "Final immutable mainq76fbf2d6... and recoveryqa2a93ce... unchanged; full qualified() and independent source/asset stat guards must pass, including all9 HGU assets and original+O_DIRECT FD/PIDticks identity.",
+    "Keep80GiB private fence/zero swap,8GiB host margin,1200s owned window/1000s soft/200s cleanup, startup<=800s; no fit-triggered resize or timeout change.",
+    "Same1Mtotal/262144output/full32768requestcap/seed2/temp1/top_p1/effort100/DSpark.65/Q8/projection/mode1/unevenTP2/AR2/directcopy. Preserve publishedHGUtemplate and exact candidate fixture manifest.",
+    "Native-only512MiBFSIZE, actual per-candidate header/file identity, dump/storage monitoring, full finite rawlogits and round/cache/actualDSpark evidence. No seeded sampled-path or per-token logit alignment equality requirement.",
+    "Any source/FD/directcounter/capacity/allCPURAM/resource/knownanswer/partial/UNRUN/native/API/window/kernel/cleanup fault remains HOLD with no replay or blind retry. Rendered0.000fallback is rounded evidence only.",
+    "Require native/API/window0, actual resource/placement/source closure, independent terminal raw finite audit and separately verified selected92 authenticated public restoration before acceptance."
+  ],
+  "not_admitted": [
+    "FUNSLOTH",
+    "timing or longer-input modes",
+    "promotion/deployment",
+    "old arm replay",
+    "automatic repeat or next arm"
+  ],
+  "limits": [
+    "No new controls, project imports, network/SSH/host/service/GPU/native actions or model payload reads performed.",
+    "Exact local maps/raw proof and source membership checked; no independent live Ubuntu re-resolution/full4505 rehash in this review. Action-time actual qualified() remains required.",
+    "Cooperative frozen-stat custody and source support do not establish fresh tensor attestation,80GiBfit, numerical equivalence, broad quality or speed."
+  ]
+}

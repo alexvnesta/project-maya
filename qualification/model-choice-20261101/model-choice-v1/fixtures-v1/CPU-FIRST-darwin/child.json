@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-I",
+    "-B",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/fixtures-v1/run_cpu.py",
+    "--review-sha256",
+    "6d7eb768a9fe6405b8572b2959d3b0c42dc04e87a0907e3d56b718ef574717d8",
+    "--child",
+    "--parent",
+    "10891"
+  ],
+  "pid": 10894,
+  "returncode": 1,
+  "error": "ValueError('Child nonzero')",
+  "cleanup": [],
+  "elapsed_seconds": 0.33623887499561533
+}

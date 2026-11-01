@@ -1,0 +1,273 @@
+{
+  "utc": "2026-11-01T02:58:03.778070+00:00",
+  "read_only_metadata_reconciliation": true,
+  "new_full_tensor_hashes_computed": false,
+  "candidates": {
+    "HGU": {
+      "pack_relative_to_E": "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/pack",
+      "assets": [
+        {
+          "file": 0,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00001-of-00006.gguf",
+          "signature": [
+            64513,
+            2893170,
+            47887697312,
+            1793370815049724695,
+            1793370815251729359
+          ]
+        },
+        {
+          "file": 1,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00002-of-00006.gguf",
+          "signature": [
+            64513,
+            2893209,
+            47669578400,
+            1793371826769079863,
+            1793371826845081618
+          ]
+        },
+        {
+          "file": 2,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00003-of-00006.gguf",
+          "signature": [
+            64513,
+            2893239,
+            47103347360,
+            1793372844491573608,
+            1793372844601576148
+          ]
+        },
+        {
+          "file": 3,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00004-of-00006.gguf",
+          "signature": [
+            64513,
+            2893241,
+            35532532032,
+            1793373596864941870,
+            1793373596969944294
+          ]
+        },
+        {
+          "file": 4,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00005-of-00006.gguf",
+          "signature": [
+            64513,
+            2893243,
+            80641295472,
+            1793375335290966071,
+            1793375335386968281
+          ]
+        },
+        {
+          "file": 5,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00006-of-00006.gguf",
+          "signature": [
+            64513,
+            2893247,
+            80643503412,
+            1793377384776131009,
+            1793377384871133195
+          ]
+        },
+        {
+          "file": 6,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/dspark/dspark.bin",
+          "signature": [
+            64513,
+            2893297,
+            7967616768,
+            1793377587691798272,
+            1793377587741466954
+          ]
+        },
+        {
+          "file": 7,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017/vision.bin",
+          "signature": [
+            64513,
+            12734082,
+            970536960,
+            1792951011115294368,
+            1792951011756308920
+          ]
+        },
+        {
+          "file": 8,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/native-gu.bin",
+          "signature": [
+            64513,
+            2911121,
+            9625927680,
+            1793488126417474219,
+            1793488269913760796
+          ]
+        }
+      ],
+      "asset_stat_source": "model-choice-v1/ASSET_STAT_ATTESTATION_FIRST.json",
+      "metadata_sha256": {
+        "ds4.txt": "75fa22995fd2a35d7b81a4ae9e015037a07d7295790b46c85f13ac426c085db7",
+        "tensors.txt": "1527371944e32643e2d974ccd2f2364436c6b17aeef9bd0b93619ab1f8f89d26",
+        "engram.bin": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142"
+      },
+      "tokenizer_sha256": {
+        "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+        "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+        "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+        "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+        "chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16"
+      },
+      "constructor_success": true,
+      "exact_private_S2": false,
+      "runtime_fit_or_numeric_quality_speed_proof": false,
+      "proof_relative_to_E": [
+        "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/state.json",
+        "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/plan.json",
+        "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/matrices.jsonl",
+        "decode-optimization-20261028/s2-public-hybrid-v1/SOL_BUILT_NATIVE_GU_ARTIFACT_REVIEW.json",
+        "decode-optimization-20261028/maya-s-comparison-v1/pack-v3/construct-CPU-FIRST/pack-result.json",
+        "decode-optimization-20261028/maya-s-comparison-v1/pack-v3/construct-CPU-FIRST/child.json"
+      ],
+      "overlay_closure": {
+        "constructor_sha256_record": "e386661b7ca9faf94188d8a9cb899e39faf9b54c8b85ad81639e18c993a17b1a",
+        "bytes": 9625927680,
+        "finished_utc": "2026-10-31T23:11:10.102154+00:00",
+        "mtime_ctime_both_before_finished_UTC": true,
+        "new_full_hash_computed": false,
+        "basis": "Fresh original target plus CPU-qualified1536codec exactreadback and constructor final full-overlay SHA; Linux ctime/mtime demonstrate no payload modification after final closure. New immutable signature for subsequent model guards."
+      },
+      "changed_matrices": 1536,
+      "unchanged_tensors": 47259,
+      "proof_sha256": {
+        "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/state.json": "20a2a75bb1d0afce076385f74b7817dcfcbbb8969a508b3a11a2aed09d8d2733",
+        "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/plan.json": "b9998a922238861915dc469453978963512e3b41dddcee5b7bbdb384b0440c30",
+        "decode-optimization-20261028/s2-public-hybrid-v1/native-gu-FIRST/matrices.jsonl": "c3116b37bab8ea6108d41e989a7b42c508b8ad4c02c992dd0f848aebb3e119f8",
+        "decode-optimization-20261028/s2-public-hybrid-v1/SOL_BUILT_NATIVE_GU_ARTIFACT_REVIEW.json": "de4463e66fccf3a71c333eac572f610f2eb0f709ee1ee01a8d2e79fc58a8281d",
+        "decode-optimization-20261028/maya-s-comparison-v1/pack-v3/construct-CPU-FIRST/pack-result.json": "9d42caa2d48361b4c176df2453e5bf1d97f405deb1080f0242db23769164ae9e",
+        "decode-optimization-20261028/maya-s-comparison-v1/pack-v3/construct-CPU-FIRST/child.json": "315442dbf5280bbefb13bd77cff6756224fce5ae650e5cb331c2e5443af1eb35"
+      }
+    },
+    "UNSLOTH": {
+      "pack_relative_to_E": "decode-optimization-20261028/unsloth-pack-v1/pack-r2-FIRST",
+      "assets": [
+        {
+          "file": 0,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00001-of-00006.gguf",
+          "signature": [
+            64513,
+            2893293,
+            5780923,
+            1793375558615106422,
+            1793375558636106905
+          ]
+        },
+        {
+          "file": 1,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00002-of-00006.gguf",
+          "signature": [
+            64513,
+            2893291,
+            49955895008,
+            1793378740558340290,
+            1793378740594341119
+          ]
+        },
+        {
+          "file": 2,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00003-of-00006.gguf",
+          "signature": [
+            64513,
+            2893294,
+            49950675200,
+            1793381889603137113,
+            1793381889637137900
+          ]
+        },
+        {
+          "file": 3,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00004-of-00006.gguf",
+          "signature": [
+            64513,
+            2893328,
+            48971469632,
+            1793384970689326662,
+            1793384970787328936
+          ]
+        },
+        {
+          "file": 4,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00005-of-00006.gguf",
+          "signature": [
+            64513,
+            2893342,
+            16419622240,
+            1793386006158288521,
+            1793386006217289885
+          ]
+        },
+        {
+          "file": 5,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/assets/UD-IQ2_XXS/DeepSeek-V4.1-Flash-1017-UD-IQ2_XXS-00006-of-00006.gguf",
+          "signature": [
+            64513,
+            2893343,
+            135172021792,
+            1793489445185678679,
+            1793489445641689123
+          ]
+        },
+        {
+          "file": 6,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/assets/dspark/dspark.bin",
+          "signature": [
+            64513,
+            2893297,
+            7967616768,
+            1793377587691798272,
+            1793377587741466954
+          ]
+        },
+        {
+          "file": 7,
+          "path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017/vision.bin",
+          "signature": [
+            64513,
+            12734082,
+            970536960,
+            1792951011115294368,
+            1792951011756308920
+          ]
+        }
+      ],
+      "asset_stat_source": "model-choice-v1/ASSET_STAT_ATTESTATION_FIRST.json",
+      "metadata_sha256": {
+        "ds4.txt": "bf53e615522820d591ad46ffa777e7cf8d88d8634047be94a71d19b329206425",
+        "tensors.txt": "ca1f5a36dc65ca188108930db163d33a8d0a390771454dd312063ffc54a34d3a",
+        "engram.bin": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142"
+      },
+      "tokenizer_sha256": {
+        "vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+        "merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+        "token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+        "tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+        "chat_template.jinja": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b"
+      },
+      "constructor_success": true,
+      "exact_private_S2": false,
+      "runtime_fit_or_numeric_quality_speed_proof": false,
+      "proof_relative_to_E": [
+        "decode-optimization-20261028/unsloth-pack-v1/CONSTRUCTION_RESULT_R2_FIRST.json",
+        "decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/STATE64.json"
+      ],
+      "incoming_template_retained": true,
+      "proof_sha256": {
+        "decode-optimization-20261028/unsloth-pack-v1/CONSTRUCTION_RESULT_R2_FIRST.json": "5b5a480a293816b77e46e7966d5ab05f55d7e33bcab200ba4fa05f8db2be10ed",
+        "decode-optimization-20261028/unsloth-v31-iq2xxs-download-v1/STATE64.json": "9003f0ddbea73a0c30e9a23c92d8235aa8d76444f2a08011a39dc15c61f28e4d"
+      }
+    }
+  },
+  "attestation_sha256": "82c756c83172fd63aa74d8b70d3492677e41e330c90d3602da4cc70767a63a0c",
+  "no_model_admission": true
+}
