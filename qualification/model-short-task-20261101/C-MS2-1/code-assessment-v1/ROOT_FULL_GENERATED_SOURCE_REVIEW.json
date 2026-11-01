@@ -1,0 +1,57 @@
+{
+  "utc": "2026-11-01T06:33:33.279868+00:00",
+  "source_sha256": "70713dae14f810729c0107efee2b09a3a83b53c84d7b5e2bed0c8a5745f89d82",
+  "entire_generated_module_read": true,
+  "all_supplied_tests_read": true,
+  "supplied_tests": 18,
+  "supplied_test_ids": [
+    "TestCoalesceRanges.test_bool_endpoints_raise_type_error",
+    "TestCoalesceRanges.test_contained_ranges_merge",
+    "TestCoalesceRanges.test_does_not_mutate_input_on_bool_type_error",
+    "TestCoalesceRanges.test_does_not_mutate_input_on_non_integer_type_error",
+    "TestCoalesceRanges.test_does_not_mutate_input_on_success",
+    "TestCoalesceRanges.test_does_not_mutate_input_on_value_error",
+    "TestCoalesceRanges.test_empty_input_returns_empty_list",
+    "TestCoalesceRanges.test_large_integers",
+    "TestCoalesceRanges.test_malformed_pairs_raise_type_error",
+    "TestCoalesceRanges.test_negative_integers",
+    "TestCoalesceRanges.test_non_integer_endpoints_raise_type_error",
+    "TestCoalesceRanges.test_output_is_sorted_and_disjoint",
+    "TestCoalesceRanges.test_overlapping_ranges_are_merged",
+    "TestCoalesceRanges.test_returns_list_of_tuples",
+    "TestCoalesceRanges.test_single_nonzero_range_is_returned_as_tuple",
+    "TestCoalesceRanges.test_start_greater_than_end_raises_value_error",
+    "TestCoalesceRanges.test_touching_half_open_ranges_are_merged",
+    "TestCoalesceRanges.test_zero_length_ranges_are_dropped"
+  ],
+  "entire_generated_reasoning_read": true,
+  "reasoning_read_ranges_characters": [
+    [
+      0,
+      18000
+    ],
+    [
+      18000,
+      40000
+    ],
+    [
+      40000,
+      60218
+    ]
+  ],
+  "reasoning_characters": 60218,
+  "reasoning_sha256": "fed9d1366b7930ce5906ec0b8078db47077d6f80c4e6ab8a65027c153fc3d027",
+  "response_sha256": "9526ddc8dc66327c0eb465e9b118abff37a28d029f54660d31d09710be957464",
+  "manual_findings": "Entire pure coalesce function and18tests read before anyexecution. Locallist validation/sort/merge; int-not-bool checks; invertedboundsValueError; touchingmerge; zeroemptydrop; no inputmutation; negativesandlargeints. Only unittest and exactfromcopydeepcopy imports; no I/O/network/process/dynamicexecution. Full reasoning verbose but coherent. No testexecution or broadqualityclaim yet.",
+  "reviewer_base_sha256": "e3c7ba2ea55a6da92b99f4a379888fe0f7606bedee0fdd8bab1681f004e453e7",
+  "unchanged_reference_and_negative_AST_sha256": {
+    "reference": "9b566d780170c46718208a15c98c7b0b29e3faf7d81de12881f92ffd94d54aa7",
+    "evaluate": "3b589f8dc1a8f7fc5fd5500ba3670ee35e3abd2135a0bf3992774f9cb395a193",
+    "no_touch": "2408c5a7201852c417a608a7cd432047631b8f4f010a77adf1ab653b0161be7a",
+    "mutating": "8df128d8c574109c24a308a326d4b1184d2e15bec4b93f08623ea89880247725",
+    "bool_accept": "6d03fca6dd0bef89a47487d455c1edaf3bc821ba0e22f5fd939ddf42082965b2",
+    "keep_empty": "ce60b8a13976ade2718fc09ad71f3136970815e581e20b9928b49bc48d4d4a5e"
+  },
+  "delta": "Only exact fromcopydeepcopy and exactlambda interval[0] guard adapters; independent reference/cases/RNG/limits/negatives unchanged. Full manualread plus FIRST exact12guard CPU BOTH physicalhosts required before FIRST generatedcode assessment.",
+  "scope": "One original short coding main only; no broadmodelquality/equivalence orcomparativespeedclaim."
+}

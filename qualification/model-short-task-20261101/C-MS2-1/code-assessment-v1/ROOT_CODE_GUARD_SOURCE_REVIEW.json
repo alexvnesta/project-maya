@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-01T06:34:10.744662+00:00",
+  "reviewer": "ROOT",
+  "entire_new_source_tests_read": true,
+  "source_sha256": {
+    "review_code.py": "afc5581685266afd99a8408e9bc2b6bb4eec110e6e6d24d91bd07e5ecfa4d8cc",
+    "test_guard.py": "d22f0fcae7f9ecef0c98dca1e1437fb80de20b6f468f768918c95722e328beb2",
+    "run_guard_cpu.py": "054d445ca51090f584354657e2a8156948d76776c2fb094aa4b730ead6b292f0"
+  },
+  "input_sha256": {
+    "generated_code.py": "70713dae14f810729c0107efee2b09a3a83b53c84d7b5e2bed0c8a5745f89d82",
+    "ROOT_FULL_GENERATED_SOURCE_REVIEW.json": "be78e77de95e7c295ccb6a297b2dd3dcf5d0babf9370d50e603c3c335a9bd362"
+  },
+  "test_ids": [
+    "test_guard.Guard.test_actual_exact_deepcopy_import",
+    "test_guard.Guard.test_actual_exact_start_key",
+    "test_guard.Guard.test_actual_module_and_all18_tests_still_unexecuted",
+    "test_guard.Guard.test_changed_index_refused",
+    "test_guard.Guard.test_changed_parameter_refused",
+    "test_guard.Guard.test_copy_alias_refused",
+    "test_guard.Guard.test_copy_wildcard_refused",
+    "test_guard.Guard.test_different_tuple_key_refused",
+    "test_guard.Guard.test_other_copy_function_refused",
+    "test_guard.Guard.test_process_import_refused",
+    "test_guard.Guard.test_reference_and_all_four_negatives_unchanged",
+    "test_guard.Guard.test_side_effect_key_refused"
+  ],
+  "manual_findings": "Read whole prior88line independent scorer and new94line exactimport/sort adapters plus all12new actualAST positive/negative controls and unchanged74line boundeddriver BEFOREFIRSTexecution. Generatedcoalesce/all18suppliedtests/full60218characterreasoning read beforeguard. No generatedcode executed byguardcontrols. Reference/event sweep/RNG2207cases/4414checks/4negativeimplementations/3sCPU5salarm512MiB unchanged. Scopeonlynewexactmodule; no globalenvironment/limits or model/runtime/sourcechange."
+}

@@ -1,0 +1,16 @@
+{
+  "max_tokens": 32768,
+  "messages": [
+    {
+      "content": "Write one complete Python3 module containing coalesce_ranges(ranges) plus unittest tests. Input is a list of pairs of integer half-open bounds [start,end). Reject bool and non-integer endpoints with TypeError; reject start>end with ValueError. Drop zero-length ranges. Return a sorted list of disjoint (start,end) tuples, merging overlaps and touching intervals. Never mutate input, including on errors. Handle negative and large integers. Use only the standard library. Include independent-looking tests for every rule. Return only the module, without prose.",
+      "role": "user"
+    }
+  ],
+  "model": "deepseek-v4.1-flash-iq2-xs",
+  "reasoning_budget_tokens": 0,
+  "reasoning_effort": 100,
+  "seed": 1,
+  "stream": true,
+  "temperature": 1.0,
+  "top_p": 1.0
+}

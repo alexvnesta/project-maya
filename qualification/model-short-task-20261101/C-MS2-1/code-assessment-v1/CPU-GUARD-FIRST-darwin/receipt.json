@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "controls": 12,
+  "test_ids": [
+    "test_guard.Guard.test_actual_exact_deepcopy_import",
+    "test_guard.Guard.test_actual_exact_start_key",
+    "test_guard.Guard.test_actual_module_and_all18_tests_still_unexecuted",
+    "test_guard.Guard.test_changed_index_refused",
+    "test_guard.Guard.test_changed_parameter_refused",
+    "test_guard.Guard.test_copy_alias_refused",
+    "test_guard.Guard.test_copy_wildcard_refused",
+    "test_guard.Guard.test_different_tuple_key_refused",
+    "test_guard.Guard.test_other_copy_function_refused",
+    "test_guard.Guard.test_process_import_refused",
+    "test_guard.Guard.test_reference_and_all_four_negatives_unchanged",
+    "test_guard.Guard.test_side_effect_key_refused"
+  ],
+  "source_sha256": {
+    "review_code.py": "afc5581685266afd99a8408e9bc2b6bb4eec110e6e6d24d91bd07e5ecfa4d8cc",
+    "test_guard.py": "d22f0fcae7f9ecef0c98dca1e1437fb80de20b6f468f768918c95722e328beb2",
+    "run_guard_cpu.py": "054d445ca51090f584354657e2a8156948d76776c2fb094aa4b730ead6b292f0"
+  },
+  "input_sha256": {
+    "generated_code.py": "70713dae14f810729c0107efee2b09a3a83b53c84d7b5e2bed0c8a5745f89d82",
+    "ROOT_FULL_GENERATED_SOURCE_REVIEW.json": "be78e77de95e7c295ccb6a297b2dd3dcf5d0babf9370d50e603c3c335a9bd362"
+  },
+  "observed": {
+    "pid": 68813,
+    "ppid": 68809,
+    "pgid": 68813,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "native_executed": false,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false
+}
