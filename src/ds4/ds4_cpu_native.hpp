@@ -11,6 +11,14 @@
 #include <vector>
 
 namespace s2native {
+// The process/cgroup budget and the host's free reserve are separate envelopes.
+// ram_avail() is already capped by the tightest cgroup; subtracting the host
+// reserve from it again would reject a 73.8 GiB payload inside an 80 GiB fence.
+inline bool expert_ram_fits(uint64_t need, uint64_t process_room, uint64_t host_room) {
+    constexpr uint64_t process_limit = 80ull << 30, host_margin = 8ull << 30;
+    return need > 0 && need <= process_limit && process_room != ~uint64_t{0} &&
+           host_room != ~uint64_t{0} && process_room >= need && host_room >= need + host_margin;
+}
 class Plan {
 public:
     static constexpr int Layers = 40, Experts = 384, Dim = 5120, FF = 2304, Count = 1870;

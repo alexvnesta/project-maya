@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "failures": 0,
+  "errors": 0,
+  "controls": 16,
+  "test_ids": [
+    "test_runtime.Essential.test_B0_then_separately_accepted_restored_A0_no_loop_or_replay",
+    "test_runtime.Essential.test_actual_ALL8_terminal_schema_requires_published_revision_hash_and_all_rows",
+    "test_runtime.Essential.test_actual_native_process_contract_rejects_argv_env_cgroup_and_executable",
+    "test_runtime.Essential.test_arm_specific_schedule_keeps_final_known_answer_and_two_mains_identical",
+    "test_runtime.Essential.test_bothhost_CPU_contract_requires_exact_source_IDs_limits_group_and_exit",
+    "test_runtime.Essential.test_cached_foreign_support_origin_is_rejected_before_import",
+    "test_runtime.Essential.test_capacity_drafter_skip_helper_or_foreign_state_cannot_enter",
+    "test_runtime.Essential.test_exact_panel_policy_and_fresh_candidate_config_preserve_base",
+    "test_runtime.Essential.test_existing_STAT_identity_hash_activity_and_done_required",
+    "test_runtime.Essential.test_fresh_namespace_alias_and_residue_hold",
+    "test_runtime.Essential.test_owned_window_exact_phase_and_not_terminal",
+    "test_runtime.Essential.test_phase_requires_same_controller_qualification_registry_and_active_custody",
+    "test_runtime.Essential.test_profile_snapshot_waits_for_current_request_atomic_publication",
+    "test_runtime.Essential.test_profile_snapshots_count_trunk_and_drafter_but_only_sensitive_selected_CPU",
+    "test_runtime.Essential.test_published_asset_chain_accepts_actual_fingerprint_not_invented_hash_child",
+    "test_runtime.Essential.test_returned_logprob_check_is_finite_bounded_not_equivalence"
+  ],
+  "source_map": {
+    "runtime.py": "65f23d800bc4f749abd78c42aa06d7c4dcdeabde66318a63965649dfa159a0cf",
+    "test_runtime.py": "83d3f8afd0736aff45ca8083142c5c8915f1dfa84e447234d24e6363b68bdd65",
+    "run_cpu.py": "9717e51fec08953cfaeed58b179de61e9509a3105aa2bb2bec3f58d3ba5f28ab"
+  },
+  "input_map": {
+    "qualified_supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71",
+    "essential_panel": "7fd8da9db5ebc42ab67c5d1f07d7f9300b214a101f16fd2749dd7a8c9a760034"
+  },
+  "observed": {
+    "pid": 2343341,
+    "ppid": 2343339,
+    "pgid": 2343341,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "supervisor_pid": 2343339,
+  "isolated": true,
+  "scope": "New pure adapter policy/custody only; no GPU/lifecycle/request qualification"
+}

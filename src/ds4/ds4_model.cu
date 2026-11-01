@@ -272,7 +272,7 @@ uint64_t zfs_arc_reclaimable() {
 }
 // the RAM this process can still get: MemAvailable, and below it the tightest cgroup v2 limit on the way to the root
 // (its limit less what is charged, the page cache counted as free: the kernel takes it back); ~0: not known
-uint64_t ram_avail() {
+uint64_t physical_ram_avail() {
 #if defined(_WIN32)
     return os::ram_avail();
 #endif
@@ -291,6 +291,10 @@ uint64_t ram_avail() {
         const uint64_t ceiling = total != 0 ? total : ~uint64_t{0};
         avail += std::min(zfs_arc_reclaimable(), ceiling > avail ? ceiling - avail : 0);
     }
+    return avail;
+}
+uint64_t ram_avail() {
+    uint64_t avail = physical_ram_avail();
     std::string cg = read_file("/proc/self/cgroup");   // "0::/user.slice/..."
     const size_t at = cg.find("0::");
     if (at == std::string::npos) return avail;
@@ -7502,9 +7506,12 @@ struct Model::Impl {
             for (int e = 0; e < l.n_exp; ++e)
                 if (l.slot[(size_t) e] < 0 && !native_cpu_selected(l, e)) iq_bytes += l.blob;
         }
-        const uint64_t room = ram_room(), need = iq_bytes + s2native::Plan::PayloadBytes;
-        if (room == ~uint64_t{0} || need > (80ull << 30) || room < need + (8ull << 30)) {
-            err = "native CPU sidecar: all IQ/native experts plus8GiB margin do not fit available RAM";
+        const uint64_t room = ram_room(), host_room = physical_ram_avail();
+        const uint64_t need = iq_bytes + s2native::Plan::PayloadBytes;
+        std::fprintf(stderr, "ds4: native CPU RAM budget: need=%llu process_room=%llu host_room=%llu process_limit=85899345920 host_margin=8589934592\n",
+                     (unsigned long long) need, (unsigned long long) room, (unsigned long long) host_room);
+        if (!s2native::expert_ram_fits(need, room, host_room)) {
+            err = "native CPU sidecar: all IQ/native experts do not fit process budget or host8GiB margin";
             return false;
         }
         try { cpu_native_data.resize((size_t) s2native::Plan::PayloadBytes); }

@@ -1,0 +1,30 @@
+{
+  "entire_source_tests_driver_manually_read": true,
+  "reviewer": "ROOT",
+  "source_map": {
+    "assembly.py": "8e2a1787bdf73ecb3b4c6bbde15f071f151f477ec46e42788be12c96f4ec01d7",
+    "test_assembly.py": "36d3ea6c7cd36cdc11c187520c1bbf7a9a6400d41fe11038aec7f5127635129e",
+    "run_cpu.py": "8defada06c61a12dd6bc534e402a5074582f4c7fed93c9619f2e4bf80c44449c"
+  },
+  "input_map": {
+    "bounded_hash_helper": "26ab3c1bb4330e1e933a11d739806f7cd2db8a890ac100d208f52a9d67b0cec2",
+    "bulk": "1a71e6f1d13d81d326b99be6613b19ed1dc898ac52259fdcf870ca0550ec75fb",
+    "build_custody": "60022606724b5b447056c0d54e0ea8c0f163359673b640cea0cd659abce26916",
+    "original_plan": "9351465edc3ea4b4a3763552438d0309bbdbf913d434a2623a45f55dba81e54b",
+    "converter_queue": "8bad9fd42a851bf5571f34f8727c19a88668e619f470cea046784b4a4a1bb574",
+    "qualified_supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "test_ids": [
+    "test_assembly.Assembly.test_actual_wait4_usage_preserved_on_killed_child_no_retry",
+    "test_assembly.Assembly.test_bad_part_hash_child_or_DONE_stops_before_any_later_interval",
+    "test_assembly.Assembly.test_new_logical_artifact_publication_preserves_original_failed_bytes_and_receipts",
+    "test_assembly.Assembly.test_original40_must_be_terminal_and_writer_free_before_CPU_admission",
+    "test_assembly.Assembly.test_partition_geometry_covers_all3840_without_overlap_or_holes",
+    "test_assembly.Assembly.test_reused_qualified_queue_fault_stops_new_admission",
+    "test_assembly.Assembly.test_short_pwrite_completes_or_refuses_zero_without_cursor_mutation",
+    "test_assembly.Assembly.test_single_final_hash_is_exact_and_size_guarded",
+    "test_assembly.Assembly.test_storage_keeps_original_evidence_root132_and_future_native",
+    "test_assembly.Assembly.test_tiny_actual_part_SHA_copy_disjoint_readback_and_shared_cursor"
+  ],
+  "scope": "New bounded partition assembly into intended formerlyabsent logicalmodelresource withnewproducer provenance; preserveoriginalfailedpartial/supervisionfalse/nooriginalresult; no oldfailure regrade, no model/GPU admission"
+}

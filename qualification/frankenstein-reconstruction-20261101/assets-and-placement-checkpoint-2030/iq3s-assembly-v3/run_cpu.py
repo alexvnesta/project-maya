@@ -1,0 +1,67 @@
+"""FIRST ten small new assembly controls; no original weights or actual run."""
+import argparse
+import hashlib
+import importlib.util
+import json
+import os
+from pathlib import Path
+import sys
+import unittest
+
+HERE=Path(__file__).resolve().parent
+DRIVER=HERE.parents[1]/'cpu-iq2xs-upstream623-v1/model-v1/cpu_driver.py'
+DRIVER_SHA='3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71'
+NAMES=('assembly.py','test_assembly.py','run_cpu.py')
+ENV={'CUDA_VISIBLE_DEVICES':'','OMP_NUM_THREADS':'1','OPENBLAS_NUM_THREADS':'1','MKL_NUM_THREADS':'1',
+     'NUMEXPR_NUM_THREADS':'1','MALLOC_ARENA_MAX':'1','PYTHONDONTWRITEBYTECODE':'1',
+     'PATH':'/usr/bin:/bin','LANG':'C','LC_ALL':'C'}
+
+
+def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def sources():return {n:sha(HERE/n) for n in NAMES}
+
+
+def inputs():
+    sys.path.insert(0,str(HERE));import assembly
+    if Path(assembly.__file__)!=HERE/'assembly.py':raise ValueError('Exact local assembly module')
+    return assembly.input_map()
+
+
+def checked(pin):
+    path=HERE/'ROOT_SOURCE_REVIEW.json'
+    if sha(path)!=pin or sha(DRIVER)!=DRIVER_SHA:raise ValueError('Prior entire manual source/supervisor review')
+    row=json.loads(path.read_text())
+    if row.get('entire_source_tests_driver_manually_read') is not True or row.get('source_map')!=sources():raise ValueError('Reviewed source drift')
+    if row.get('input_map')!=inputs():raise ValueError('Exact qualified source/helper inputs')
+    return row
+
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--review-sha256',required=True);p.add_argument('--child',action='store_true');p.add_argument('--parent',type=int)
+    args=p.parse_args()
+    if not sys.flags.isolated or not sys.dont_write_bytecode:raise ValueError('Use Python -I -B')
+    review=checked(args.review_sha256)
+    spec=importlib.util.spec_from_file_location('assembly_CPU_supervisor',DRIVER);d=importlib.util.module_from_spec(spec);spec.loader.exec_module(d)
+    folder=HERE/('CPU-FIRST-'+sys.platform)
+    if not args.child:
+        folder.mkdir();d.environment=lambda:dict(ENV)
+        result=d.supervise([sys.executable,'-I','-B',str(HERE/'run_cpu.py'),'--review-sha256',args.review_sha256,
+                            '--child','--parent',str(os.getpid())],folder)
+        print(json.dumps(result),flush=True)
+        return 0 if result['returncode']==0 and result['error'] is None and not result['cleanup'] else 1
+    observed=d.observed();d.bounds(observed,os.getpid(),args.parent);sys.path.insert(0,str(HERE))
+    import test_assembly
+    if Path(test_assembly.__file__)!=HERE/'test_assembly.py':raise ValueError('Exact local controls')
+    suite=unittest.defaultTestLoader.loadTestsFromModule(test_assembly);ids=d.flatten(suite)
+    if ids!=review['test_ids']:raise ValueError('Exact ordered focused controls')
+    result=unittest.TextTestRunner(verbosity=2).run(suite)
+    if checked(args.review_sha256)!=review or d.observed()!=observed:raise ValueError('Source/input/resource drift')
+    row={'passed':result.wasSuccessful(),'returncode':0 if result.wasSuccessful() else 1,'failures':len(result.failures),
+        'errors':len(result.errors),'controls':result.testsRun,'test_ids':ids,'source_map':sources(),'input_map':inputs(),
+        'observed':observed,'supervisor_pid':args.parent,'isolated':bool(sys.flags.isolated),
+        'scope':'New small assembly component/custody policy controls only; no original3840 parts, actual assembly, model or GPU execution'}
+    with (HERE/('CPU-FIRST-'+sys.platform+'.json')).open('x') as f:json.dump(row,f,indent=2);f.write('\n')
+    return row['returncode']
+
+
+if __name__=='__main__':raise SystemExit(main())

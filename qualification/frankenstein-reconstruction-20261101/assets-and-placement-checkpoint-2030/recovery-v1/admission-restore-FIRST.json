@@ -1,0 +1,27 @@
+{
+  "decision": "SINGLE_SELECTED_BASELINE_RESTORE_ONLY",
+  "baseline_only": true,
+  "single_use": true,
+  "manual_review": true,
+  "run_id": "20261101T201042Z",
+  "binary_sha256": "250157320079ca4a263e152ecd09dd7b7c8f2a9504e583a0f64e6c53a7a67b4c",
+  "diagnosis": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/recovery-v1/diagnosis-20261101T201042Z.json",
+  "diagnosis_sha256": "0df9c3555438c715f2e20d5b657a47d75ba43019dd1e7c46125fa34bb8444ea9",
+  "qualification_sha256": "7d9f6f16616624f217b6d0e23aee0fda7a69afbee360294a5d1fadb211ad0411",
+  "health_receipt_sha256": "c8e9c167c5670c7aa035275a2c18367c193c302096146d9d6397494d39ccb91b",
+  "health_window_sha256": "3ec09612a2cb1c937681b2c634e077eea43b1493a145a1a24ff729df1393c3cc",
+  "health_telemetry_sha256": "817e6c433a4aedcc0b3bf03ba9b3145b7ccc21a1b4232ed251aeca5380281547",
+  "independent_health_review": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/recovery-v1/health-ROOT-independent-review-FIRST.json",
+  "independent_health_review_sha256": "5c6f1e8fd1d68d73702b9f4b95ce83caddb2079d7999895a68b6b94b234cdb6b",
+  "health_raw_sha256": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/s2placement-baseline-health-20261101T201042Z/gpu1.stderr": "1307f200f95b1d23fc426a325b3472a934b814bdc5fa19de6c0ad1aae0ce4ac8",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/s2placement-baseline-health-20261101T201042Z/gpu1-exit.json": "33d6081de426536048fef6b17efe6fa2b61d407d72c45a17852c797d31b6bf7c",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/s2placement-baseline-health-20261101T201042Z/receipt.json": "c8e9c167c5670c7aa035275a2c18367c193c302096146d9d6397494d39ccb91b",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/s2placement-baseline-health-20261101T201042Z/gpu1.stdout": "fc341d2657eaf8c1d6383d30acacafb6dbb14d2bc450e8356173e3a9319642d4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/s2placement-baseline-health-20261101T201042Z/gpu0.stderr": "1352d167957e284ba2b09a7ba2079069d92ba1becf745a9e7933c4d22110f250",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/s2placement-baseline-health-20261101T201042Z/gpu1-start.json": "b332b1f5f6b289163dce267c180cddc977d513def105694074520cdfbf454b94",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/s2placement-baseline-health-20261101T201042Z/gpu0.stdout": "edc06f3cd6bd38ee3d4438785a8168aa33cabca1540f844805d6136c9ddfab50",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/s2placement-baseline-health-20261101T201042Z/gpu0-exit.json": "27541703d8ceda8b632abccf0909597c04fd13e00b8b72a7652d3d08f10bacb4",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/s2placement-baseline-health-20261101T201042Z/gpu0-start.json": "c63dfa79d24332cc8b1c7cd99fde80aa8b9d5fd68e65da456bd041a7aa0103b7"
+  }
+}

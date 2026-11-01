@@ -1,0 +1,6 @@
+{
+  "source_sha256": "b2b14cb7280892f2a06ba3dbfa744eb7f6999dffbd94c6d02f3198f9fb3102c7",
+  "failure": "Overstrict realpath check on inherited already-qualified compiler/ELF aliases, before new q/admission/health",
+  "remedy": "Preserve exact historical alias+content pins without claiming symlink-free toolchain; new own paths remain strict",
+  "no_phase_started": true
+}

@@ -1,0 +1,687 @@
+{
+  "utc": "2026-11-01T22:23:58.563938+00:00",
+  "status": "C0_FAILED_PHYSICAL_RAM_MARGIN_NATIVE_CLOSE_MINUS9_SELECTED92_RESTORED",
+  "promotion_performed": false,
+  "candidate_better_demonstrated": false,
+  "additional_candidate_run_authorized_here": false,
+  "MayaS_ALL8_complete_bytes": 347445667721,
+  "acquisition_outer_exits": "Base and original40 actual outer exits UNKNOWN, not retrofitted",
+  "original40_complete_bytes": 295672271408,
+  "unused_source23_preserved_at_data2": {
+    "source_path": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/iq3s-source-acquisition-v1/assets/original/model-00023-of-00048.safetensors",
+    "source_fingerprint": [
+      64513,
+      2916182,
+      7400713088,
+      1793559394437447404,
+      1793559394578450636
+    ],
+    "archive_path": "/data2/deepseek-frankenstein-evidence-20261101/unused-original-sources/model-00023-of-00048.safetensors",
+    "archive_fingerprint": [
+      2065,
+      46399491,
+      7400713088,
+      1793568615374184756,
+      1793568633308595484
+    ],
+    "sha256": "d6e47e8b7147c64eb6619732694dda811e1a9f8af1894977919af9522724ca31",
+    "bytes": 7400713088,
+    "copy_child_exit": 0,
+    "independent_verify_child_exit": 0,
+    "owned_groups_absent": true,
+    "source_unlinked": true,
+    "whole_model_executed": false,
+    "root_free_bytes": 151326552064
+  },
+  "native_payload_bytes": 35157299200,
+  "native_payload_sha256": "0f04dfb9c92aff7ef91214b8f8f646b9b2cf71f6b4b622c9206318f24dc7d6d8",
+  "native_build_v3": {
+    "passed": true,
+    "source_manifest_sha256": "8ae317c761cfdfb8960f16303bd901b95b113250ed857f7843fc9c04cab5c182",
+    "compile_qualification_sha256": "d4ab06874cd6cdf4c3205694c8ff2d56cf6b18f77dc6413c0881a8e6f9984947",
+    "configure_returncode": 0,
+    "compile_returncode": 0,
+    "compile_seconds": 693.4944859510288,
+    "artifact_sha256": "e8910bbf4176f0a19f4a10e611d3ee735fa6fc8205f43a5cca3bbe8bf69d92e1",
+    "artifact_bytes": 44729048,
+    "artifact_fingerprint": [
+      64513,
+      3168579,
+      44729048,
+      1793570359130185333,
+      1793570359132012104
+    ],
+    "owned_claim_released": true,
+    "actual_outer_exit0": true,
+    "actual_outer_seconds": 696.9106520868372,
+    "model_executed": false,
+    "production_changed": false,
+    "source_input_helper_controls_each_host": 11,
+    "CPU_build_controls_each_host": 34,
+    "raw_compile": "compile-r4-FIRST",
+    "original_B0_failed_not_regraded": true
+  },
+  "B0": {
+    "status": "CLOSED_HOLD_STARTUP_RAM_ACCOUNTING_FAILURE",
+    "actual_outer_exit": 1,
+    "regraded": false,
+    "source_fix_separately_qualified": true
+  },
+  "C0": {
+    "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/s2-essential3-C0-20261101T220119Z",
+    "qualification_sha256": "a1b3aa3bcf1b1d59029b9314f2a6a327eb871917c0702f5799e69a1e2289b237",
+    "native_pid": 2757752,
+    "API_pid": 2757668,
+    "actual_window": "/home/alex/strata-deepseek-test-20261024/windows/20261101T220238Z.json",
+    "actual_window_exit": 1,
+    "actual_outer_exit": 1,
+    "outer_seconds": 687.4611883659381,
+    "API_exit": 0,
+    "native_close_exit": -9,
+    "kernel_capture_returncode": 0,
+    "kernel_fault_lines": [],
+    "core_completed_producer_rows": [
+      {
+        "id": "s2-source-known-answer",
+        "producer_passed": true,
+        "native": {
+          "generated": 46,
+          "prompt_tokens": 38,
+          "prompt_ms": 1714.9,
+          "decode_ms": 1205.4,
+          "finish": "stop",
+          "drafts_accepted": 24,
+          "drafts_offered": 39,
+          "reused": 0,
+          "hits": 13489,
+          "lookups": 15255
+        },
+        "tokens": 46,
+        "client_seconds_if_reported": 2.943779077148065,
+        "activity": {
+          "cpu": 29.433,
+          "ram": 18.75,
+          "draft_ms": 78.303,
+          "verify_ms": 973.786,
+          "draft_rounds": 19,
+          "samples": 6,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 559
+      },
+      {
+        "id": "ms-quality-cold-text",
+        "producer_passed": true,
+        "native": {
+          "generated": 185,
+          "prompt_tokens": 8469,
+          "prompt_ms": 13184.6,
+          "decode_ms": 4176.2,
+          "finish": "stop",
+          "drafts_accepted": 126,
+          "drafts_offered": 139,
+          "reused": 0,
+          "hits": 41591,
+          "lookups": 49860
+        },
+        "tokens": 185,
+        "client_seconds_if_reported": 17.394960720092058,
+        "activity": {
+          "cpu": 41.763,
+          "ram": 28.227,
+          "draft_ms": 207.947,
+          "verify_ms": 3455.537,
+          "draft_rounds": 52,
+          "samples": 24,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 17291
+      },
+      {
+        "id": "ms-quality-warm-text",
+        "producer_passed": true,
+        "native": {
+          "generated": 179,
+          "prompt_tokens": 8469,
+          "prompt_ms": 64.0,
+          "decode_ms": 3832.2,
+          "finish": "stop",
+          "drafts_accepted": 127,
+          "drafts_offered": 137,
+          "reused": 8468,
+          "hits": 39787,
+          "lookups": 47430
+        },
+        "tokens": 179,
+        "client_seconds_if_reported": 3.929378814995289,
+        "activity": {
+          "cpu": 40.439,
+          "ram": 27.196,
+          "draft_ms": 185.677,
+          "verify_ms": 3212.661,
+          "draft_rounds": 46,
+          "samples": 23,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 1015
+      },
+      {
+        "id": "ms-quality-two-images",
+        "producer_passed": true,
+        "native": {
+          "generated": 149,
+          "prompt_tokens": 8656,
+          "prompt_ms": 16334.9,
+          "decode_ms": 4224.5,
+          "finish": "stop",
+          "drafts_accepted": 84,
+          "drafts_offered": 124,
+          "reused": 0,
+          "hits": 40670,
+          "lookups": 47880
+        },
+        "tokens": 149,
+        "client_seconds_if_reported": 20.758840643102303,
+        "activity": {
+          "cpu": 38.148,
+          "ram": 23.788,
+          "draft_ms": 210.94,
+          "verify_ms": 3298.173,
+          "draft_rounds": 56,
+          "samples": 19,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 18677
+      },
+      {
+        "id": "ms-quality-return-text",
+        "producer_passed": true,
+        "native": {
+          "generated": 181,
+          "prompt_tokens": 8469,
+          "prompt_ms": 73.4,
+          "decode_ms": 3785.9,
+          "finish": "stop",
+          "drafts_accepted": 131,
+          "drafts_offered": 144,
+          "reused": 8468,
+          "hits": 40468,
+          "lookups": 48390
+        },
+        "tokens": 181,
+        "client_seconds_if_reported": 3.891321700066328,
+        "activity": {
+          "cpu": 41.047,
+          "ram": 27.777,
+          "draft_ms": 187.301,
+          "verify_ms": 3363.236,
+          "draft_rounds": 46,
+          "samples": 23,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 1076
+      },
+      {
+        "id": "ms-prose-tool",
+        "producer_passed": true,
+        "native": {
+          "generated": 89,
+          "prompt_tokens": 372,
+          "prompt_ms": 5041.4,
+          "decode_ms": 1851.5,
+          "finish": "stop",
+          "drafts_accepted": 64,
+          "drafts_offered": 66,
+          "reused": 0,
+          "hits": 18875,
+          "lookups": 22590
+        },
+        "tokens": 89,
+        "client_seconds_if_reported": 6.919926943955943,
+        "activity": {
+          "cpu": 41.278,
+          "ram": 28.422,
+          "draft_ms": 91.353,
+          "verify_ms": 1602.536,
+          "draft_rounds": 22,
+          "samples": 12,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 3129
+      },
+      {
+        "id": "ms-prose-tool-followup",
+        "producer_passed": true,
+        "native": {
+          "generated": 50,
+          "prompt_tokens": 465,
+          "prompt_ms": 2416.2,
+          "decode_ms": 1291.9,
+          "finish": "stop",
+          "drafts_accepted": 33,
+          "drafts_offered": 42,
+          "reused": 372,
+          "hits": 12367,
+          "lookups": 14835
+        },
+        "tokens": 50,
+        "client_seconds_if_reported": 3.7332668600138277,
+        "activity": {
+          "cpu": 41.831,
+          "ram": 26.78,
+          "draft_ms": 61.385,
+          "verify_ms": 1077.59,
+          "draft_rounds": 15,
+          "samples": 7,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 976
+      },
+      {
+        "id": "ms-prose-prefill-cancel",
+        "producer_passed": true,
+        "native": {
+          "generated": 0,
+          "prompt_tokens": 8471,
+          "prompt_ms": 13038.4,
+          "decode_ms": 9.9,
+          "finish": "cancel",
+          "drafts_accepted": 0,
+          "drafts_offered": 0,
+          "reused": 0,
+          "hits": 0,
+          "lookups": 0
+        },
+        "tokens": 0,
+        "client_seconds_if_reported": null,
+        "activity": {
+          "cpu": 0.0,
+          "ram": 0.0,
+          "draft_ms": 0.0,
+          "verify_ms": 0.0,
+          "draft_rounds": 0,
+          "samples": 1,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 16071
+      },
+      {
+        "id": "ms-prose-prefill-recovery",
+        "producer_passed": true,
+        "native": {
+          "generated": 76,
+          "prompt_tokens": 44,
+          "prompt_ms": 1836.1,
+          "decode_ms": 1806.2,
+          "finish": "stop",
+          "drafts_accepted": 48,
+          "drafts_offered": 70,
+          "reused": 0,
+          "hits": 21223,
+          "lookups": 24645
+        },
+        "tokens": 76,
+        "client_seconds_if_reported": 3.664412609068677,
+        "activity": {
+          "cpu": 34.918,
+          "ram": 23.112,
+          "draft_ms": 98.631,
+          "verify_ms": 1506.493,
+          "draft_rounds": 25,
+          "samples": 10,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 854
+      }
+    ],
+    "prose": {
+      "status": "PARTIAL_CANCELLED_NOT_ACCEPTED",
+      "incomplete_reason": "PHYSICAL_HOST_MARGIN",
+      "content_characters": 0,
+      "reasoning_characters": 18756,
+      "client_seconds": 123.95352829620242,
+      "native": {
+        "generated": 4665,
+        "prompt_tokens": 240,
+        "prompt_ms": 3920.7,
+        "decode_ms": 120201.2,
+        "finish": "cancel",
+        "drafts_accepted": 3111,
+        "drafts_offered": 3768,
+        "reused": 0,
+        "hits": 1112195,
+        "lookups": 1338720
+      },
+      "T_lines": 4663,
+      "diagnostic_native_decode_tps": 38.80992868623608,
+      "completed_task_speed_claim": false
+    },
+    "coding": {
+      "status": "UNRUN",
+      "passed": false
+    },
+    "baseline_A1": {
+      "status": "UNRUN_BLOCKED_BY_C0_FAILURE"
+    },
+    "full_independent_pass_audit": false,
+    "source_controls": {
+      "native_helper_each_host": 11,
+      "native_build_each_host": 34,
+      "runtime_each_host": 18,
+      "fixtures_each_host": 7,
+      "auditor_each_host": 5
+    }
+  },
+  "CPU_offload": {
+    "original_MXFP4_experts": 1870,
+    "original_roles": [
+      "w1",
+      "w3",
+      "w2"
+    ],
+    "remaining_IQ_CPU_experts": 3985,
+    "all5855_CPU_experts_RAM_actual_INFO": true,
+    "trunk_GPU_slots": 9505,
+    "combined_expert_RAM_bytes": 79265249280,
+    "startup8expert3role_strided_finite_bitmatch": true,
+    "normal_completed_request_profile_dispatch_evidence": true,
+    "direct_per_request_original_native_counters_claimed": false
+  },
+  "limits_preserved": {
+    "context_total": 1048576,
+    "output_allowance": 262144,
+    "main_request_cap": 32768,
+    "effort": 100,
+    "DSpark_on_and_actual_DONE_STAT_evidence": true,
+    "private_MemoryMax": 85899345920,
+    "physical_host_margin": 8589934592,
+    "window": 1200,
+    "soft": 1000,
+    "cleanup": 200,
+    "timeouts_extended": false,
+    "cache_namespaces_pruned": false
+  },
+  "recovery": {
+    "status": "SELECTED_BASELINE_RESTORED_FAILED_ARM_REMAINS_HOLD",
+    "health24_actual_window": "/home/alex/strata-deepseek-test-20261024/windows/20261101T221703Z.json",
+    "health_actual_outer_exit": 0,
+    "restore_actual_outer_exit": 0,
+    "restore_seconds": 206.95613215188496,
+    "selected_identity": {
+      "CPU_experts": 4045,
+      "DSpark": true,
+      "GPU_expert_slots_inferred": 11315,
+      "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+      "GPU_slots_direct_hosted_INFO": false,
+      "Q8": [
+        1,
+        1
+      ],
+      "TP": 1,
+      "all_CPU_experts_RAM": true,
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096",
+      "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+      "context": 1048576,
+      "images": true,
+      "native_pid": 2783912,
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "output_default": 262144,
+      "placement": {
+        "actual_human_rows": [
+          {
+            "caches_GB_rounded": 0.58,
+            "device": 0,
+            "experts_GB_rounded": 58.32,
+            "first_layer": 0,
+            "free_MiB": 2026,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31
+          },
+          {
+            "caches_GB_rounded": 0.54,
+            "device": 1,
+            "experts_GB_rounded": 58.86,
+            "first_layer": 19,
+            "free_MiB": 2030,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31
+          }
+        ],
+        "drafter_on_GPU0": true,
+        "exact_prompt_bytes_observed": false,
+        "head_on_GPU1": true,
+        "trunk_split": [
+          19,
+          21
+        ]
+      },
+      "prefill_chunk": 4096,
+      "prompt_skip_mode": 1,
+      "runtime_ablation": true,
+      "start_binding": {
+        "invocation": "68c2ca8e212641fa8a2d0c898588602f",
+        "main_pid": 2783410,
+        "native_pid": 2783912,
+        "native_start_ticks": 183974087
+      }
+    },
+    "public": {
+      "SSE_done": true,
+      "authenticated_models": 200,
+      "content": "READY",
+      "finish": "stop",
+      "known_answer_passed": true,
+      "unauthenticated_models": 401
+    }
+  },
+  "assets_currently_unchanged": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00001-of-00006.gguf": {
+      "sha256_from_closed_publication_or_build": "1f3437f57042e69f94c141ffbcba0d5610dab63feb07244fb468be4940d6763f",
+      "fingerprint_unchanged": [
+        64513,
+        2912516,
+        47887697312,
+        1793544073730754259,
+        1793544073832756564
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00002-of-00006.gguf": {
+      "sha256_from_closed_publication_or_build": "66501fee8702ffd54e6f065323ab54bb3150d20b10b01922c589e7462c7b5ba6",
+      "fingerprint_unchanged": [
+        64513,
+        2915356,
+        47669578400,
+        1793548026792350323,
+        1793548026875352251
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00003-of-00006.gguf": {
+      "sha256_from_closed_publication_or_build": "3195b23f33337c46a07c48583946d99147c3635412bc4adc6acdc4cf42bf30ad",
+      "fingerprint_unchanged": [
+        64513,
+        2915365,
+        47103347360,
+        1793549080756017583,
+        1793549080925021545
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00004-of-00006.gguf": {
+      "sha256_from_closed_publication_or_build": "d60dba35fac9601cd5c6026439dd980c457a5bb1c009192ea539b220108ea0db",
+      "fingerprint_unchanged": [
+        64513,
+        2915438,
+        35532532032,
+        1793549824884462052,
+        1793549825019465217
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00005-of-00006.gguf": {
+      "sha256_from_closed_publication_or_build": "c98d46f96a25d17c4c54da5a60782c130255c364a22e621ea28d5c98a692ceb2",
+      "fingerprint_unchanged": [
+        64513,
+        2915439,
+        80641295472,
+        1793551944914904009,
+        1793551945323868302
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00006-of-00006.gguf": {
+      "sha256_from_closed_publication_or_build": "98d65ef4f36e0b193935d44c3586241ca09b1b47e90f118e85332cfdb5860263",
+      "fingerprint_unchanged": [
+        64513,
+        2915440,
+        80643503412,
+        1793554086275268153,
+        1793554086426271634
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/dspark/dspark.bin": {
+      "sha256_from_closed_publication_or_build": "42df65159f980a9189d80597e42b30012c7b10e0dd385a47051f3b2fd659bb7b",
+      "fingerprint_unchanged": [
+        64513,
+        3017316,
+        7967616768,
+        1793554331990932518,
+        1793554332089934800
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/dspark/dspark.json": {
+      "sha256_from_closed_publication_or_build": "639c3144bca8cfe4db59057047dca40411f0cc732796e2a9321feb98fee2295f",
+      "fingerprint_unchanged": [
+        64513,
+        3017336,
+        96965,
+        1793554332337940517,
+        1793554332402942016
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/iq3s-bulk-v1/conversion-FIRST/overlay.iq3s": {
+      "sha256_from_closed_publication_or_build": "39b6bdb241215ea63b5817362b92e2d3acd84367390209a72379e895b0f64869",
+      "fingerprint_unchanged": [
+        64513,
+        3146632,
+        19464192000,
+        1793562426421815496,
+        1793562443702208607
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/native-payload-v3/native-FIRST/native.cpu": {
+      "sha256_from_closed_publication_or_build": "0f04dfb9c92aff7ef91214b8f8f646b9b2cf71f6b4b622c9206318f24dc7d6d8",
+      "fingerprint_unchanged": [
+        64513,
+        3147559,
+        35157299200,
+        1793567285383745943,
+        1793567316914466953
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/models/ista-iq2-xs/DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00001-of-00004.gguf": {
+      "sha256_from_closed_publication_or_build": null,
+      "fingerprint_unchanged": [
+        64513,
+        1995030,
+        39535776992,
+        1792849161143477435,
+        1792849214924947999
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/models/ista-iq2-xs/DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00002-of-00004.gguf": {
+      "sha256_from_closed_publication_or_build": null,
+      "fingerprint_unchanged": [
+        64513,
+        1995031,
+        39494617536,
+        1792850316741747533,
+        1792850365437885108
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/models/ista-iq2-xs/DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00003-of-00004.gguf": {
+      "sha256_from_closed_publication_or_build": null,
+      "fingerprint_unchanged": [
+        64513,
+        1995036,
+        39423838496,
+        1792851466688858380,
+        1792851506561810521
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/models/ista-iq2-xs/DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XS-00004-of-00004.gguf": {
+      "sha256_from_closed_publication_or_build": null,
+      "fingerprint_unchanged": [
+        64513,
+        1995035,
+        36771591232,
+        1792852533352329670,
+        1792852567866153840
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/models/shared/DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf": {
+      "sha256_from_closed_publication_or_build": null,
+      "fingerprint_unchanged": [
+        64513,
+        1995025,
+        110595290816,
+        1792847941646882696,
+        1792848064409752645
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/models/shared/dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf": {
+      "sha256_from_closed_publication_or_build": null,
+      "fingerprint_unchanged": [
+        64513,
+        1995039,
+        7976914240,
+        1792852789725412692,
+        1792852802071704873
+      ],
+      "rehash_performed": false
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017/vision.bin": {
+      "sha256_from_closed_publication_or_build": null,
+      "fingerprint_unchanged": [
+        64513,
+        12734082,
+        970536960,
+        1792951011115294368,
+        1792951011756308920
+      ],
+      "rehash_performed": false
+    }
+  },
+  "root_free_bytes_at_terminal": 143251648512,
+  "limitations": [
+    "Local reconstruction, not byte-identical private S2; author expert map/private artifacts unavailable.",
+    "Prose incomplete and coding/baseline unrun; no matched whole-task speed/quality improvement or deployment qualification.",
+    "Native close-9 remains a lifecycle fault; cause not repaired or regraded.",
+    "No near-filled1M input or full262144 generation executed.",
+    "Cancellation is PHYSICAL_HOST_MARGIN, not a deadline; prior timeout interpretation corrected."
+  ]
+}

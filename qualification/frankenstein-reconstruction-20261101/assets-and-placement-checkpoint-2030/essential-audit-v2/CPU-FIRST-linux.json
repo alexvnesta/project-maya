@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "failures": 0,
+  "errors": 0,
+  "controls": 5,
+  "test_ids": [
+    "test_audit.Audit.test_cancel_requires_zero_native_generation_and_cancel_done",
+    "test_audit.Audit.test_clean_terminal_and_window_native_kernel_or_public_failures",
+    "test_audit.Audit.test_exact_native_token_sampling_reuse_and_done_observation",
+    "test_audit.Audit.test_nonfinite_negative_or_wrong_token_path_rejected",
+    "test_audit.Audit.test_partial_or_failed_API_cleanup_never_accepted"
+  ],
+  "source_map": {
+    "audit.py": "bbe1e4448ee6775c10f30f8a36e684773c5c0ee14ac548c7b4966913c1deae93",
+    "test_audit.py": "a4ec54a2800f5453299570bc2a8c2266889fb6dbda181ce1914bb722f0a65aaa",
+    "run_cpu.py": "ffbc1dca9b16d724fd1c35a400985ef19c47f5d4e48b1bf5b7d9952d5208875d"
+  },
+  "input_map": {
+    "qualified_supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "observed": {
+    "pid": 2289693,
+    "ppid": 2289692,
+    "pgid": 2289693,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "supervisor_pid": 2289692,
+  "isolated": true,
+  "scope": "New pure adapter policy/custody only; no GPU/lifecycle/request qualification"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "OFFLINE_DIAGNOSED_B0_HOLD_NO_REPLAY",
+  "native_sha256": "c942a4cf8047d154dd2201b3541b4653c70d88e687b3c014dc649eb09beaac86",
+  "source_sha256": "b5cf22c5ba6ca2166fa4c88e7fae681abe55cef0e2b38cfdd3a32434b01dbc68",
+  "need_expert_bytes": 79265249280,
+  "need_GiB": 73.8215160369873,
+  "private_memory_max_bytes": 85899345920,
+  "host_margin_bytes": 8589934592,
+  "guard_required_bytes": 87855183872,
+  "impossible_under_current_cgroup_cap": true,
+  "native_source_condition": "room=ram_room()->ram_avail() capped by cgroup; room < need + (8ull<<30)",
+  "no_claim_actual_model_quality_or_speed": true,
+  "next": "Qualified baseline recovery, then separate source repair must preserve80GiB cgroup and8GiB physical host margin; new native/control/source admission, no B0 replay"
+}

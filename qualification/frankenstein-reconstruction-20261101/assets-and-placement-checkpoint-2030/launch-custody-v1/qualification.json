@@ -1,0 +1,29 @@
+{
+  "CPUReview": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/launch-custody-v1/ROOT_SOURCE_REVIEW.json",
+  "source_map": {
+    "launch.py": "51f1c6d189af715b0009ec997e1d66d77ff299bb8ade076d3bfaa70457daccf8",
+    "test_launch.py": "ab87ca56883a4cefa79fd5ba98f7a90a4eaa5ffa63e3948fcf09a3888fca939b",
+    "run_cpu.py": "8251e06e94966d01e6c887fe830ba0d2a2f120d2261603f82e1a0601a071024a"
+  },
+  "input_map": {
+    "qualified_supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "test_ids": [
+    "test_launch.Launch.test_actual_child_stdout_stderr_pid_and_exit0_persisted",
+    "test_launch.Launch.test_actual_nonzero_preserved_without_retry_or_regrade",
+    "test_launch.Launch.test_missing_executable_is_explicit_unobserved_no_pid_claim_or_replay"
+  ],
+  "CPU": {
+    "darwin": {
+      "receipt": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/launch-custody-v1/CPU-FIRST-darwin.json",
+      "child": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/launch-custody-v1/CPU-FIRST-darwin/child.json",
+      "log": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/launch-custody-v1/CPU-FIRST-darwin/child.log"
+    },
+    "linux": {
+      "receipt": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/launch-custody-v1/CPU-FIRST-linux.json",
+      "child": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/launch-custody-v1/CPU-FIRST-linux/child.json",
+      "log": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/launch-custody-v1/CPU-FIRST-linux/child.log"
+    }
+  },
+  "scope": "Actual child wait only; no target admission/deadline override, signals or retry"
+}

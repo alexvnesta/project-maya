@@ -1,0 +1,26 @@
+{
+  "run_id": "20261101T201014Z",
+  "mode": "placement",
+  "arm": "P0",
+  "controller": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/s2-placementv2-P0-20261101T200030Z/state.json",
+  "controller_sha256": "ec0c8ffd16cc4d279f277b9cb6fe4a7a21243d70fa0c26412a3c6f2f88a00efb",
+  "failed_window": "/home/alex/strata-deepseek-test-20261024/windows/20261101T200137Z.json",
+  "failed_window_sha256": "0f3fee6eb721cf6c4f32af35f9fc57a0496c4fcecda03e4dcaae76e5c0564b4f",
+  "last_clean_window": "/home/alex/strata-deepseek-test-20261024/windows/20261101T095830Z.json",
+  "last_clean_window_sha256": "997cc6730bad94a98177b337a1bde9907570c0c7a12aff26f0acbb1ebe1eb53c",
+  "last_clean_telemetry_sha256": "869c3b30942f2ba6228b7ad42a2969d0ed9d5c22c8bd49af4ba306c250d57375",
+  "old_close": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/s2-placementv2-P0-20261101T200030Z/old-owner-close.json",
+  "old_close_sha256": "d5c06228ae88aee8e3f53535ef2753769b7dbb4f19f6854c4e3d8e654214a0a3",
+  "stopped_unit": {
+    "ActiveState": "failed",
+    "InvocationID": "3cb36386f9414e6ba501195ce3fefded",
+    "MainPID": "0",
+    "Result": "exit-code"
+  },
+  "kernel_since": "2026-11-01 20:00:30 UTC",
+  "manual_diagnosis_complete": true,
+  "failed_arm_remains_HOLD": true,
+  "cause": "Placement live-window guard indexed optional test_returncode before native/API/output creation; canonical active window omits it",
+  "baseline_start_refusal": "Unchanged hosting_preflight requires new clean canonical recovery window; refused before native/API creation",
+  "request": "One existing baseline-health24-case window only; then separately reviewed one existing-owner baseline restore. No candidate retry or regrade."
+}

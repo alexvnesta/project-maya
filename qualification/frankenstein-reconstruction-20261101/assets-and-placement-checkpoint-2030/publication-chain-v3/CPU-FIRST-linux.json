@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "failures": 0,
+  "errors": 0,
+  "controls": 14,
+  "test_ids": [
+    "test_chain.Publication.test_UNKNOWN_outer_exit_allowed_only_base_with_explicit_observer_and_absent_PID",
+    "test_chain.Publication.test_actual_new_assembly_schema_binds31groups3840records_and_logicalresource_to_newbuilder",
+    "test_chain.Publication.test_controller_exit_is_bound_to_actual_pid_and_clean_zero",
+    "test_chain.Publication.test_exact_owned_groups_require_complete_clean_zero_and_current_absence",
+    "test_chain.Publication.test_existing_writer_lock_must_be_free_and_same_inode",
+    "test_chain.Publication.test_inherited_normal_hash_hops_require_exact_coverage_limits_and_child_wait0",
+    "test_chain.Publication.test_missing_raw_group_fails_before_source_import",
+    "test_chain.Publication.test_own_CPU_receipt_needs_exact_source_ids_resources_and_exit",
+    "test_chain.Publication.test_postpublication_fingerprint_and_published_inode_bound_to_raw_result",
+    "test_chain.Publication.test_public_READY_requires_actual_complete_raw_stop_done",
+    "test_chain.Publication.test_raw_source_pin_cannot_be_replaced_by_passed_summary",
+    "test_chain.Publication.test_selected_chain_requires_raw_restore_window_READY_topology_and_current_seven_files",
+    "test_chain.Publication.test_selected_inventory_is_exact_seven_including_drafter_vision_engram",
+    "test_chain.Publication.test_selected_unknown_SHA_allowed_but_new_overlay_requires_real_SHA"
+  ],
+  "source_map": {
+    "chain.py": "f5e12993fe4c55642049fa59f0e9a2bae5712920039a4b9562f3c9342ffab450",
+    "test_chain.py": "efea9e9c5ade077fd647c4c735f502c3cc5c48b1a54b6325e59c40040bb78eed",
+    "run_cpu.py": "b715d79819da38bb733806d9c6490614883e6f1cd79144d8e14a21cddce3adc2"
+  },
+  "input_map": {
+    "qualified_supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71",
+    "captured_launch": "51f1c6d189af715b0009ec997e1d66d77ff299bb8ade076d3bfaa70457daccf8"
+  },
+  "observed": {
+    "pid": 2344410,
+    "ppid": 2344409,
+    "pgid": 2344410,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "supervisor_pid": 2344409,
+  "isolated": true,
+  "scope": "Pure publication provenance policy only; no model/full-weight SHA/GPU/Hosting qualification"
+}

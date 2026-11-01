@@ -1,0 +1,12 @@
+{
+  "reviewer": "existing /root/sol_s2_native_review",
+  "entire_source_tests_driver_manually_read": true,
+  "source_sha256": {
+    "recovery.py": "8b26617bc24e3bf71cc9e5cd4cbd5d73a053966de55e689abed29bdb224e9829",
+    "test_recovery.py": "3de12f3e3ba0ae8198e0f1ce290f161e4df319df33914108c6d80a0560465893",
+    "run_cpu.py": "9ed712d30c3b17d8e417aa68703e82c7f0516d70c0fb0c5f7292c89e47091726"
+  },
+  "verdict": "APPROVED_FIRST_CPU_ONLY_NO_GPU_HEALTH_RESTORE_ADMISSION",
+  "no_actions": "No edits/tests/Ubuntu/GPU actions performed",
+  "scope": "Exact stopped-owner recovery only; failed P0 preserved; separate health and restore admissions required"
+}

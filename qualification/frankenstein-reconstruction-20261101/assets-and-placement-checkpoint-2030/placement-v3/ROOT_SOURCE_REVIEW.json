@@ -1,0 +1,39 @@
+{
+  "entire_source_tests_driver_manually_read": true,
+  "source_map": {
+    "placement.py": "a0513dabfe8ba57412c04e163e4921f94e63221529f17048233549053d77aaf6",
+    "test_placement.py": "c2be8b47100d6baa2006d52508811ad1317b85b5b97cf65e0dd54119e11c748d",
+    "run_cpu.py": "30cd986b4dc67315ec2e947a5c99b570091a8fbb0cc66a8183d0104dc621d4c8"
+  },
+  "input_map": {
+    "shared_driver": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71",
+    "base": "1516752104307ffc159fbb80afd972ccd43c5cb9a96cf3e47de126f62482d510",
+    "legacy": "9bd594247cecc13980d864780b778a66da08fcaf2b0a3ff5b386e84e33a1ad2c",
+    "startup": "53988e95be7c1883f7aeeb7ae2b87081da74d64b3f38eb43b6a274d93d1ff4f4",
+    "fence": "1038fad719fb7ed7516ab3e07d88d40fb3b5cd7408f6ed19ddc2296f13052cf5",
+    "iq2s_config": "aa8d222d5f9d5885ee87993b0418f471f4fe44f4f79bfdfffc859f1c4fee88d7",
+    "q8share_config": "c18ddc492f2250eaf7341e12405f51156518b8a20f8faf0e92cc2adb51a5ead0",
+    "pv_config": "3c4b576866dd579823139644d072a547bc477696a3bb3406d0d55fdf6930c513",
+    "pv_runtime": "1811228e83217b961ae4ffed9c430f49edf10c3af999b4fd6753518a25001e58",
+    "candidate_layout": "ce21bc03382378ba4e05d539f60602ad39319c04158fd583b3ef97d99c44a453"
+  },
+  "test_ids": [
+    "test_placement.Placement.test_actual_complete_map_and_sensitive_iq3_roles",
+    "test_placement.Placement.test_actual_live_window_omitted_exit_field_and_terminal_failures",
+    "test_placement.Placement.test_actual_memory_floor_is_bounded_without_lowering_requirement",
+    "test_placement.Placement.test_all120_roles_bound_to_constructed_metadata_even_if_wrong_accounting_is_consistent",
+    "test_placement.Placement.test_argv_is_diagnostic_only_same_capacity_and_drafter",
+    "test_placement.Placement.test_atomic_receipt_preserves_partial_residue_and_alias",
+    "test_placement.Placement.test_capacity_or_drafter_reductions_and_foreign_modes_refused",
+    "test_placement.Placement.test_cpu_proofs_require_both_physical_maps_ids_resources_and_clean_exit",
+    "test_placement.Placement.test_duplicate_holey_invalid_slots_and_empty_counts_refused",
+    "test_placement.Placement.test_environment_rebases_only_private_namespaces",
+    "test_placement.Placement.test_exact_new_namespace_and_preserved_existing_output",
+    "test_placement.Placement.test_import_contract_rejects_foreign_cached_body_before_execution",
+    "test_placement.Placement.test_owned_child_cleanup_never_signals_unrelated_pid",
+    "test_placement.Placement.test_support_pins_transitive_modules_and_actual_config_object_bindings",
+    "test_placement.Placement.test_wrong_total_bytes_context_drafter_quant_or_role_refused"
+  ],
+  "reviewer": "ROOT",
+  "scope": "Entire placement-v2 reviewed; all new v3 differences manually read before FIRST; exact active canonical optional exit field repair; failed P0 v2 preserved, no replay"
+}

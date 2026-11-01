@@ -1,0 +1,70 @@
+"""Metadata freeze for separately reviewed baseline recovery; never launches."""
+import ast
+import datetime
+import importlib.util
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+HERE=Path(__file__).resolve().parent
+Q=HERE.parent
+DC=Q.parent
+E=DC.parent
+R=E.parent
+
+def main():
+    sys.dont_write_bytecode=True
+    spec=importlib.util.spec_from_file_location('s2_recovery_freeze',HERE/'recovery.py')
+    r=importlib.util.module_from_spec(spec);spec.loader.exec_module(r)
+    state=r.read(E/'STATE.json');controller=Path(state['maintenance_controller'])
+    assert controller==E/'maintenance/s2-placementv2-P0-20261101T200030Z/state.json'
+    assert r.read(controller)['status']=='STOPPED_FOR_OFFLINE_DIAGNOSIS'
+    assert state['production_temporarily_stopped'] is True and state['current_native_pid'] is None
+    assert not any(state.get(k) for k in r.PHASES)
+    failed=R/'windows/20261101T200137Z.json';prior=R/'windows/20261101T095830Z.json'
+    assert r.read(failed)['test_returncode']==1 and r.read(failed)['maintenance_resume_allowed'] is False
+    assert not Path(r.read(controller)['output']).exists()
+    assert r.read(prior)['test_returncode']==0
+    unit=dict(line.split('=',1) for line in r.command(['systemctl','--user','show','deepseek-hosted.service','-p','InvocationID,MainPID,ActiveState,Result']).splitlines())
+    run_id=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
+    close=controller.parent/'old-owner-close.json'
+    diagnosis={'run_id':run_id,'mode':'placement','arm':'P0','controller':str(controller),'controller_sha256':r.sha(controller),
+        'failed_window':str(failed),'failed_window_sha256':r.sha(failed),'last_clean_window':str(prior),'last_clean_window_sha256':r.sha(prior),
+        'last_clean_telemetry_sha256':r.sha(prior.with_suffix('.telemetry.jsonl')),'old_close':str(close),'old_close_sha256':r.sha(close),
+        'stopped_unit':unit,'kernel_since':'2026-11-01 20:00:30 UTC','manual_diagnosis_complete':True,'failed_arm_remains_HOLD':True,
+        'cause':'Placement live-window guard indexed optional test_returncode before native/API/output creation; canonical active window omits it',
+        'baseline_start_refusal':'Unchanged hosting_preflight requires new clean canonical recovery window; refused before native/API creation',
+        'request':'One existing baseline-health24-case window only; then separately reviewed one existing-owner baseline restore. No candidate retry or regrade.'}
+    r.diagnosis_contract(diagnosis);r.stopped_guard(diagnosis,'health',failed)
+    dp=HERE/('diagnosis-'+run_id+'.json');r.new(dp,diagnosis)
+    files={**r.canonical_health_files(r.read(r.W/'GPU_INPUT_MAP.json')['files']),str(r.W/'GPU_INPUT_MAP.json'):r.OLD_MAP_SHA,**r.HELPERS,str(r.BINARY):r.BINARY_SHA}
+    def add(p,pin=None):
+        p=Path(p);assert p.resolve()==p and p.is_file() and not p.is_symlink()
+        h=r.sha(p)
+        if pin is not None:assert pin==h,str(p)
+        files[str(p)]=h
+    for p,h in tuple(files.items()):add(p,h)
+    review=r.read(HERE/'RECOVERY_SOURCE_ROOT_REVIEW.json')
+    for n,h in review['source_sha256'].items():add(HERE/n,h)
+    add(HERE/'RECOVERY_SOURCE_ROOT_REVIEW.json');add(HERE/'SOL_RECOVERY_SOURCE_REVIEW.json');add(HERE/'prepare_recovery.py')
+    for platform in ('darwin','linux'):
+        for n in ('receipt.json','child.json','child.log'):add(HERE/('CPU-FIRST-'+platform)/n)
+    for k in ('controller','failed_window','last_clean_window','old_close'):add(diagnosis[k],diagnosis[k+'_sha256'])
+    add(prior.with_suffix('.telemetry.jsonl'));add(failed.with_suffix('.telemetry.jsonl'));add(dp)
+    for p in (Q/'baseline-recovery-FIRST').iterdir():
+        if p.is_file():add(p)
+    q={'root_manual_read':True,'sol_manual_read':True,'source_sha256':review['source_sha256'],'input_sha256':review['input_sha256'],
+       'test_ids':review['test_ids'],'files':files,'scope':'New S2 P0 failure recovery only; old arm remains failed/HOLD; original known baseline health binary unmodified',
+       'existing_health_binary_rebuilt':False}
+    qp=HERE/'RECOVERY_QUALIFICATION.json';r.new(qp,q);pin=r.sha(qp);r.qualified(pin)
+    a={'decision':'SINGLE_BASELINE_HEALTH_ONLY','baseline_only':True,'single_use':True,'manual_review':True,'run_id':run_id,
+       'binary_sha256':r.BINARY_SHA,'diagnosis':str(dp),'diagnosis_sha256':r.sha(dp),'qualification_sha256':pin}
+    ap=HERE/'admission-health-FIRST.json';r.new(ap,a);r.admission_contract(a,diagnosis,'health')
+    plan={'ROOT_explicit_admission':True,'no_replay':True,'target_owns_bounds_and_restore':True,
+          'argv':[str(R/'venv/bin/python3.14'),'-I','-B',str(HERE/'recovery.py'),'health','--admission',str(ap),'--pin',r.sha(ap)],
+          'target_source_sha256':r.sha(HERE/'recovery.py'),'cwd':str(HERE),'output':str(Q/'launch-custody-v1/capture-recovery-health-FIRST')}
+    lp=Q/'launch-custody-v1/recovery-health-FIRST-plan.json';r.new(lp,plan)
+    print(json.dumps({'qualification_sha256':pin,'diagnosis':str(dp),'files':len(files),'admission_sha256':r.sha(ap),'launch_plan_sha256':r.sha(lp)}))
+
+if __name__=='__main__':main()

@@ -1,0 +1,49 @@
+{
+  "schema": "SOL_NATIVE_RAM_SOURCE_REVIEW_v1",
+  "scope": "native-engine-v3 RAM admission delta only; before FIRST CPU",
+  "entire_delta_helper_fixture_tests_driver_manually_read": true,
+  "relevant_ram_avail_ram_room_and_load_cpu_native_flow_manually_read": true,
+  "complete_v2_v3_diff_read": true,
+  "source_sha256": {
+    "routing_fixture.cpp": "edea90d21821b8f9bf9d114678ff537dddcc4f201391a355ace4de62019bc021",
+    "test_routing.py": "f3896843666ef5f522796cb9b10193c53af64141c6d825c5189b147c6c41e904",
+    "run_cpu.py": "3ebf3453ffc3dd19f3a2131f742eda3f2cb5c5b70b8f601e13f1caccba92aa8a"
+  },
+  "input_sha256": {
+    "ds4_cpu_native.hpp": "2851e825bf36350ed9d573f490bdedfd0a01a42a1a5ca0993fe415b9eda04bb7",
+    "ds4_model.hpp": "36fc1b3c7b24d2cc5b298de8147cbfaaae46e5bab7921d98a1100aef9cd6aef7",
+    "ds4_model.cu": "0c0a9da10f0eb5c95bb79e195eea21300f3efd9275175314fc8deb9d6575b041",
+    "ds4_main.cpp": "a56d954f11ff87ecc21f5fed21c9dcb129a9616dd101cc827fd86c04b0d09719",
+    "ds4_placement_plan.hpp": "d6a5058640cc4aa930e95aecaeced9db65e5efa023a7d7aedc6dbdeb0fb9d6fa",
+    "shared/native-lane-v1/cpu_native_plan.hpp": "17afbde8df774d9d5d7c83755dd07ffbb5452b4aa114b2fe1aef9100a5a2e4a9"
+  },
+  "test_ids": [
+    "test_routing.NativeRouting.test_all_cpu_prompt_rows",
+    "test_routing.NativeRouting.test_all_gpu_streamed_prompt_rows",
+    "test_routing.NativeRouting.test_all_native_entries",
+    "test_routing.NativeRouting.test_all_ordinary_entries",
+    "test_routing.NativeRouting.test_cpu_rows_are_trailing_without_streamed_holes",
+    "test_routing.NativeRouting.test_descriptor_parser_is_the_previously_qualified_implementation",
+    "test_routing.NativeRouting.test_host_margin_and_process_budget_are_independent_with_actual_payload",
+    "test_routing.NativeRouting.test_invalid_fixture_control_fails_without_success",
+    "test_routing.NativeRouting.test_mixed_native_iq_preserves_slots_tokens_all_roles_and_source",
+    "test_routing.NativeRouting.test_native_actual_admission_uses_host_and_cgroup_rooms_separately",
+    "test_routing.NativeRouting.test_speculative_prefix_preserved"
+  ],
+  "controls": 11,
+  "verdict": "BOUNDED_FIRST_CPU_SOURCE_APPROVAL",
+  "concrete_blockers": [],
+  "findings": [
+    "need remains positive and capped at80GiB; process/cgroup remaining room must independently cover need.",
+    "Physical host available room must separately cover need plus8GiB; unknown sentinels reject.",
+    "need plus8GiB cannot overflow because the earlier short-circuit bounds need to80GiB.",
+    "Existing physical availability parsing, ZFS reclaimable calculation and cgroup ancestor cap accounting are preserved; ram_room retains existing reservations.",
+    "No arithmetic, payload, weight, placement, routing or CLI changes appear in the complete delta.",
+    "Actual79265249280-byte boundary, one-byte process/host shortfalls, overbudget, unknown and zero cases are covered by prospective C++ control7."
+  ],
+  "limitations": [
+    "No tests, native builds, Ubuntu staging, networking or GPU execution performed.",
+    "Both-host exact CPU qualification and separately admitted new build/startup remain required.",
+    "Availability is an admission-time observation; the unchanged80GiB runtime cgroup fence still governs actual allocations."
+  ]
+}

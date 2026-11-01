@@ -1,0 +1,146 @@
+{
+  "sha256": "39b6bdb241215ea63b5817362b92e2d3acd84367390209a72379e895b0f64869",
+  "bytes": 19464192000,
+  "source_inode": [
+    64513,
+    3146632,
+    19464192000
+  ],
+  "complete": true,
+  "parts": 3840,
+  "full_SHA_passes": 1,
+  "bounded_hash_hops": [
+    {
+      "observed": {
+        "pid": 2336113,
+        "ppid": 2327057,
+        "pgid": 2336113,
+        "cpu": [
+          30,
+          30
+        ],
+        "as": [
+          536870912,
+          536870912
+        ],
+        "nice": 15,
+        "isolated": true,
+        "dont_write_bytecode": true,
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "offset": 0,
+      "end": 4294967296,
+      "own_user_seconds": 2.316918,
+      "own_system_seconds": 1.254872,
+      "waited_child_pid": 2336424,
+      "waited_child_returncode": 0,
+      "wait4_includes_descendants_user_seconds": 7.438131,
+      "wait4_includes_descendants_system_seconds": 2.362097
+    },
+    {
+      "end": 8589934592,
+      "observed": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "as": [
+          536870912,
+          536870912
+        ],
+        "cpu": [
+          30,
+          30
+        ],
+        "dont_write_bytecode": true,
+        "isolated": true,
+        "nice": 15,
+        "pgid": 2336113,
+        "pid": 2336424,
+        "ppid": 2336113
+      },
+      "offset": 4294967296,
+      "own_system_seconds": 1.493818,
+      "own_user_seconds": 2.196614,
+      "wait4_includes_descendants_system_seconds": 0.8651479999999999,
+      "wait4_includes_descendants_user_seconds": 5.241336,
+      "waited_child_pid": 2336729,
+      "waited_child_returncode": 0
+    },
+    {
+      "end": 12884901888,
+      "observed": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "as": [
+          536870912,
+          536870912
+        ],
+        "cpu": [
+          30,
+          30
+        ],
+        "dont_write_bytecode": true,
+        "isolated": true,
+        "nice": 15,
+        "pgid": 2336113,
+        "pid": 2336729,
+        "ppid": 2336424
+      },
+      "offset": 8589934592,
+      "own_system_seconds": 0.34712,
+      "own_user_seconds": 2.103731,
+      "wait4_includes_descendants_system_seconds": 0.515039,
+      "wait4_includes_descendants_user_seconds": 3.137241,
+      "waited_child_pid": 2336908,
+      "waited_child_returncode": 0
+    },
+    {
+      "end": 17179869184,
+      "observed": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "as": [
+          536870912,
+          536870912
+        ],
+        "cpu": [
+          30,
+          30
+        ],
+        "dont_write_bytecode": true,
+        "isolated": true,
+        "nice": 15,
+        "pgid": 2336113,
+        "pid": 2336908,
+        "ppid": 2336729
+      },
+      "offset": 12884901888,
+      "own_system_seconds": 0.324995,
+      "own_user_seconds": 2.065973,
+      "wait4_includes_descendants_system_seconds": 0.18701299999999998,
+      "wait4_includes_descendants_user_seconds": 1.071076,
+      "waited_child_pid": 2337075,
+      "waited_child_returncode": 0
+    },
+    {
+      "end": 19464192000,
+      "observed": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "as": [
+          536870912,
+          536870912
+        ],
+        "cpu": [
+          30,
+          30
+        ],
+        "dont_write_bytecode": true,
+        "isolated": true,
+        "nice": 15,
+        "pgid": 2336113,
+        "pid": 2337075,
+        "ppid": 2336908
+      },
+      "offset": 17179869184,
+      "own_system_seconds": 0.185001,
+      "own_user_seconds": 1.07101
+    }
+  ],
+  "aggregate_CPU_can_exceed30_each_process_CPU30": true
+}

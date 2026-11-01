@@ -1,0 +1,12 @@
+Nov 01 20:04:32 ubuntuserver systemd[6069]: Starting deepseek-hosted.service - Qualified DeepSeek V4.1 Flash IQ2_XS API on the CMP170HX pair...
+Nov 01 20:04:33 ubuntuserver python[2349004]: Traceback (most recent call last):
+Nov 01 20:04:33 ubuntuserver python[2349004]:   File "/home/alex/deepseek-hosted-20261025/hosting_preflight.py", line 56, in <module>
+Nov 01 20:04:33 ubuntuserver python[2349004]:     if __name__=='__main__':main()
+Nov 01 20:04:33 ubuntuserver python[2349004]:                             ~~~~^^
+Nov 01 20:04:33 ubuntuserver python[2349004]:   File "/home/alex/deepseek-hosted-20261025/hosting_preflight.py", line 35, in main
+Nov 01 20:04:33 ubuntuserver python[2349004]:     raise RuntimeError('Latest maintenance window requires diagnosis: '+str(latest))
+Nov 01 20:04:33 ubuntuserver python[2349004]: RuntimeError: Latest maintenance window requires diagnosis: /home/alex/strata-deepseek-test-20261024/windows/20261101T200137Z.json
+Nov 01 20:04:33 ubuntuserver systemd[6069]: deepseek-hosted.service: Control process exited, code=exited, status=1/FAILURE
+Nov 01 20:04:33 ubuntuserver systemd[6069]: deepseek-hosted.service: Failed with result 'exit-code'.
+Nov 01 20:04:33 ubuntuserver systemd[6069]: Failed to start deepseek-hosted.service - Qualified DeepSeek V4.1 Flash IQ2_XS API on the CMP170HX pair.
+Nov 01 20:04:33 ubuntuserver systemd[6069]: deepseek-hosted.service: Consumed 1.314s CPU time over 1.393s wall clock time, 983.9M memory peak.

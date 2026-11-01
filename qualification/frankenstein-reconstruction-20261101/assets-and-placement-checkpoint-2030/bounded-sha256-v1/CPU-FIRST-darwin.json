@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "failures": 0,
+  "errors": 0,
+  "controls": 5,
+  "test_ids": [
+    "test_hash.Hash.test_forked_child_failure_is_not_accepted_or_retried",
+    "test_hash.Hash.test_padding_boundary_vectors_and_empty_source",
+    "test_hash.Hash.test_symlink_hardlink_and_unbounded_hops_rejected",
+    "test_hash.Hash.test_unqualified_resources_multithread_or_changed_source_refused",
+    "test_hash.Hash.test_whole_SHA_matches_hashlib_across_forked_context_boundaries"
+  ],
+  "source_map": {
+    "fork_hash.py": "26ab3c1bb4330e1e933a11d739806f7cd2db8a890ac100d208f52a9d67b0cec2",
+    "test_hash.py": "ebff0319d00cde58f4593720d9a0878b3a66a9be7ba15db630f703539366f791",
+    "run_cpu.py": "3ade1c2339e02cd53d3f06b252a910c7f7ed40e8ab79a3e628f60a8af779443e"
+  },
+  "input_map": {
+    "qualified_supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "observed": {
+    "pid": 52204,
+    "ppid": 52203,
+    "pgid": 52204,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "supervisor_pid": 52203,
+  "isolated": true,
+  "scope": "New pure adapter policy/custody only; no GPU/lifecycle/request qualification"
+}

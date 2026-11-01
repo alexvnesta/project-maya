@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "failures": 0,
+  "errors": 0,
+  "controls": 7,
+  "test_ids": [
+    "test_fixtures.EssentialFixtures.test_actual_both_manifest_schemas_requests_caps_effort_and_counts",
+    "test_fixtures.EssentialFixtures.test_actual_candidate_constructor_tokenizer_and_unchanged_picker_provenance",
+    "test_fixtures.EssentialFixtures.test_actual_images_cache_identity_and_tool_call_ID_normalization",
+    "test_fixtures.EssentialFixtures.test_manifest_publication_is_exclusive_and_metadata_alias_refused",
+    "test_fixtures.EssentialFixtures.test_original_fixture_globals_not_repointed_to_new_pack",
+    "test_fixtures.EssentialFixtures.test_same_final_recovery_and_two_mains_have_identical_actual_IDs_on_both_profiles",
+    "test_fixtures.EssentialFixtures.test_wrong_prompt_count_hash_or_changed_frozen_request_rejected"
+  ],
+  "source_map": {
+    "fixtures.py": "660c81b3439c9c71e8e4a13c554c63c45a4584af847c8d076b01395db331ca7f",
+    "test_fixtures.py": "7205077d1726e3670c513eb31a9f635deef6008993d33d11d45529a4716a3c45",
+    "run_cpu.py": "041012a99f925ce1605ec094a101f983b03fb7142e0858901e83c43123d47d17"
+  },
+  "input_map": {
+    "runtime": "65f23d800bc4f749abd78c42aa06d7c4dcdeabde66318a63965649dfa159a0cf",
+    "original_fixtures": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "essential_panel": "7fd8da9db5ebc42ab67c5d1f07d7f9300b214a101f16fd2749dd7a8c9a760034",
+    "constructor": "4edd0dd37dc058366bb4596875dbd13d0be7816ca6ea89a10c29046186ce1633",
+    "B0/tokenizer/vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+    "B0/tokenizer/merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+    "B0/tokenizer/token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+    "B0/tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "B0/tokenizer/chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+    "A0/tokenizer/vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+    "A0/tokenizer/merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+    "A0/tokenizer/token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+    "A0/tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "A0/tokenizer/chat_template.jinja": "6f9bd1f87d9dad376b4c79683934b4254396d826ae514ab0244efa904ce1d1a4",
+    "B0/metadata/ds4.txt": "84c3288df6a624d742a69ccf0d8a68db3a1d2c73b02e4f513e73db4d43a1b210",
+    "B0/metadata/tensors.txt": "837d2aad0a5597c95ad7d69492dce66f609437a3f5f372ddf053aa2853b98d37",
+    "B0/metadata/engram.bin": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142",
+    "B0/metadata/tokenizer/vocab.json": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+    "B0/metadata/tokenizer/merges.txt": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+    "B0/metadata/tokenizer/token_type.json": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+    "B0/metadata/tokenizer/tokenizer.json": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+    "B0/metadata/tokenizer/chat_template.jinja": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+    "support/native-vision-v2/runtime/serve/fixtures/deepseek41/chat_template.jinja": "06cada875e3a04665f9cf47deae9ef32e16ede2c6511205a4031c8b48140d01b",
+    "support/native-vision-v2/test_native_vision.py": "3875dc32895821ded8a6929e5a4f5515cdfbe233cf43910d1ed7b5e723f70059",
+    "support/native-vision-v2/runtime/serve/server.py": "b1be40294f6c49692829ad5f85a7aa2867218180fdc8fbc9bef7710371ba3b9f",
+    "support/native-vision-v2/runtime/serve/ds4_vision.py": "761212e162004aacf591beb405dc8072f83ee1facaa5398013ec98d5c737da4e",
+    "support/native-vision-v2/runtime/serve/dsml.py": "27717ea9099dcdff1f61203d5104c9cab1a3e3b45962edcfa02d5586e723255d",
+    "support/native-vision-v2/runtime/tools/strata_tokenizer.py": "6db1ea62d3edbaa64dce139088146ccf370933998d5f997cd5f41a39300075a6",
+    "synthetic_images": "251f89c1949f43308994a2a08805195ff7069eb4f11642920ed442168db10061",
+    "qualified_supervisor": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "observed": {
+    "pid": 7381,
+    "ppid": 7380,
+    "pgid": 7381,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "supervisor_pid": 7380,
+  "isolated": true,
+  "manifests": {
+    "B0": {
+      "sha256": "a87121915cfbe20139dbef2854f789c20976c2adea3ebf06f9a1933f9fe77cb7",
+      "canonical_sha256": "71cbf525abd205d8c96f7e6fe0d40232d59859b0a70875a9855c83440f2581f2",
+      "prompt_counts": [
+        38,
+        8469,
+        8469,
+        8656,
+        8469,
+        372,
+        465,
+        8471,
+        44,
+        240,
+        207
+      ],
+      "prompt_ids_sha256": [
+        "024fc011c6d6b6b9fd52375885fa3d08b54a17364e5abe4435ff0d038dcca330",
+        "010205e8f361a49baf7182628639afd8114a55a40224b5a06f86487d87ac3e65",
+        "010205e8f361a49baf7182628639afd8114a55a40224b5a06f86487d87ac3e65",
+        "6756c78089cce084238cd2dc56c2f4767d06144f95745af7f0d233ab91a5d934",
+        "010205e8f361a49baf7182628639afd8114a55a40224b5a06f86487d87ac3e65",
+        "cd8a23ee9863e8e22248a6f3d0689666b9a4ce7c42227a5ad4be725536defdd4",
+        "24c540282201804124a1c11c534d595428874f8be4cc181775a99cc916a56463",
+        "a268cd5ecb65ce32cde3bf4c50d517384a275cbf6597f3d94573c909bc3f9676",
+        "0f51ef0261a3e5cb81f4434bfe4a056af8f1e6d040fbe186370c553ba24beff7",
+        "b205ccec7181741fdcce09ba963a09063da2f1dc866c16cfde48bf3ccf59beeb",
+        "eef02edbcdc81d4bcbb4fd9da3e278d9a9dfdd98eb3bad862cb0f50d130dfbfa"
+      ]
+    },
+    "A0": {
+      "sha256": "1aae0957b618c9483a1d22abac2b65a8c8533e447bd454669547144b368edb89",
+      "canonical_sha256": "46cb660ecde70074e2ae56480e8d4e7eab5714fef3e5ad44c645de4ae29119f9",
+      "prompt_counts": [
+        44,
+        240,
+        207
+      ],
+      "prompt_ids_sha256": [
+        "0f51ef0261a3e5cb81f4434bfe4a056af8f1e6d040fbe186370c553ba24beff7",
+        "b205ccec7181741fdcce09ba963a09063da2f1dc866c16cfde48bf3ccf59beeb",
+        "eef02edbcdc81d4bcbb4fd9da3e278d9a9dfdd98eb3bad862cb0f50d130dfbfa"
+      ]
+    }
+  },
+  "scope": "Actual frozen B0/A0 CPU prompt/tokenizer/picker encoding only; no model/GPU/capacity runtime qualification"
+}

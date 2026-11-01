@@ -1,0 +1,807 @@
+{
+  "utc": "2026-11-01T22:23:58.563938+00:00",
+  "status": "C0_FAILED_PHYSICAL_RAM_MARGIN_NATIVE_CLOSE_MINUS9_SELECTED92_RESTORED",
+  "user_authorization": "Work on Frankenstein using supplied Oct30 followup and DSX; local reconstruction, not private artifact identity.",
+  "context_total": 1048576,
+  "output_allowance": 262144,
+  "effort": 100,
+  "drafter": true,
+  "production_changed": false,
+  "gpu_run_started": true,
+  "old_arms_closed": true,
+  "earlier_HGU_is_not_complete_S2": true,
+  "new_base_acquisition_namespace": "base-acquisition-v1",
+  "target": "Maya-S + IQ3_S gate/up L24-28 + selective original MXFP4 CPU experts; exact coverage and runtime qualification required",
+  "exact_author_expert_map_available": false,
+  "base_acquisition": {
+    "first_pid": 1295149,
+    "first_outcome": "BUSY_DEFERRED_NO_FAULT_16508780544_BYTES_RETAINED",
+    "resume_pid": 1309930,
+    "qualification_sha256": "f088bd008066ae69536f29d99ed2dc66f5ac11f997e11f006111e3910b89ab0c",
+    "path": "base-acquisition-v1",
+    "complete": true,
+    "current_controller": "base-acquisition-v2",
+    "current_pid": 1457149,
+    "asset_root": "base-acquisition-v1/assets",
+    "v1_resume_outcome": "BUSY_DEFERRED_NO_FAULT_PARTIAL_RETAINED",
+    "ordinary_healthy_serving_may_continue_after_initial_idle": true,
+    "status": "ALL_EIGHT_ASSETS_VERIFIED_NO_MODEL_RUN",
+    "returncode": 0,
+    "complete_bytes": 347445667721,
+    "completed_utc": "2026-11-01T17:32:12.404001+00:00",
+    "terminal_sha256": "f0a3afafa55e93fc3aff35a375cfecac74e003e06bed18de856edcce4972713d",
+    "outer_exit_status": "UNKNOWN_NOT_CAPTURED_TERMINAL_REPORTS_INTENDED0"
+  },
+  "component_controls_each_host": {
+    "base_acquisition": 43,
+    "pure_recipe": 26,
+    "native_three_role_codec": 9,
+    "official_source_ranges": 7
+  },
+  "CPU_controls_are_not_model_quality_or_speed": true,
+  "hybrid_GPU_tested": true,
+  "hybrid_native_built": true,
+  "plan": "PLAN.json",
+  "component_proofs": "FIRST_COMPONENT_PROOFS.json",
+  "original_source_plan": "source-plan-v1/GATE_UP_ORIGINAL_SOURCE_PLAN_FIRST.json",
+  "previous_state_utc": "2026-11-01T20:31:37.885180+00:00",
+  "original_gate_up_acquisition": {
+    "controller": "iq3s-source-acquisition-v1",
+    "pid": 1457156,
+    "qualification_sha256": "1b6065d122dcbfebbd6ae36e7cccf39e9da9a25fe9fdf7ed0f19f88a7097e95e",
+    "shards": [
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "total_bytes": 36959958872,
+    "status": "ALL_FIVE_ORIGINAL_SHARDS_VERIFIED_NO_MODEL_RUN",
+    "two_shards_full_SHA_verified_as_of_1451UTC": true,
+    "complete_bytes": 36959958872
+  },
+  "placement_diagnostic": {
+    "source": "placement-engine-v1",
+    "controls_each_host": 14,
+    "native_build": "placement-native-build-v1/FIRST_BUILD_COMPLETION.json",
+    "native_sha256": "75cf4881ddafddd1712ddd6ea5832974890d2ed4ae791fc99748860bf0ff5e63",
+    "build_controls_each_host": 34,
+    "configure_exit": 0,
+    "compile_exit": 0,
+    "GPU_executed": false,
+    "native_hybrid_dispatch_implemented": false
+  },
+  "iq3s_encoder": {
+    "version": "iq3s-encoder-v2",
+    "controls_each_host": 9,
+    "source_maps": 3,
+    "upstream_input_maps": 16,
+    "cross_host_synthetic_output_identical": true,
+    "NULL_imatrix_policy": "Upstream squared-weight-magnitude weighting, no private calibration/Hessian claim",
+    "source_domain": "Finite abs<=65504; each32value group zero or max>=2^-60; rejection without clipping",
+    "v1_FIRST8_preserved_source_review_blocker": "iq3s-encoder-v1/SOL_REVIEW_BLOCKER.json",
+    "actual_original_tensor_tested": true,
+    "model_quality_tested": false,
+    "scope_of_original_tensor_test": "One complete original L24/e0/w1 matrix, not the full model"
+  },
+  "iq3s_overlay_metadata": {
+    "path": "iq3s-overlay-v1",
+    "FIRST_mac_controls": 12,
+    "Ubuntu_controls": 12,
+    "actual_new_base_metadata_tested": false,
+    "controls_each_host": 12,
+    "status": "BOTH_HOST_SOURCE_INPUT_IDS_MATCHED_NO_ACTUAL_BASE_REWRITE_YET"
+  },
+  "canonical_campaign_state_sync": "Final actual C0 failure and selected92 recovery recorded separately; no failed arm regrade",
+  "iq3s_real_weight_components": {
+    "rows64": "iq3s-real-rows-v1/FIRST_COMPONENT_COMPLETION.json",
+    "full_matrix": "iq3s-real-matrix-v1/FIRST_COMPONENT_COMPLETION.json",
+    "full_matrix_shape": [
+      2304,
+      5120
+    ],
+    "controls_each_host_per_mode": 3,
+    "exact_cross_host_full_matrix_IQ3_sha256": "bf0f9f966922a9d0f12ac1156c85e0155acac15a1e574b959ad18a5864c9aee3",
+    "full_model_encoded": false,
+    "quality_claim": false
+  },
+  "latest_authorization": "Finish Maya-S download and local Frankenstein; essential correctness and small matched quality/end-to-end comparison only, then set default only if verified better",
+  "comparison_scope": "No new broad benchmark/quant/TP/cache sweep; current production92/c43 is the comparison target",
+  "new_conversion_component": {
+    "path": "iq3s-conversion-v1",
+    "FIRST_controls_each_physical_host": 13,
+    "both_host_exact_source_inputs_IDs_matched": true,
+    "bulk_started": false
+  },
+  "new_bulk_controller": {
+    "path": "iq3s-bulk-v1",
+    "FIRST_controls_Mac": 18,
+    "Ubuntu_first_CPU": "PASSED",
+    "one_preflight_environment_refusal_preserved": "iq3s-bulk-v1/CPU_LAUNCH_ENV_FIRST_REFUSAL.json",
+    "bulk_started": true,
+    "FIRST_controls_each_host": 18,
+    "both_host_exact_source_inputs_IDs_matched": true,
+    "qualification_sha256": "11d46d175978baa0bbb4903a5105ab6c2a8af7baa32a1cdf6919694df3123ee2",
+    "controller_pid": 2128234,
+    "FIRST_status": "MATRIX3840_COMPLETE_ORIGINAL_JOIN_MINUS9_PRESERVED_SEPARATE_ASSEMBLY3_PASSED",
+    "matrix_DONE": 3840,
+    "join_pid": 2279278,
+    "join_returncode": -9,
+    "join_wall_seconds": 48.75364483403973,
+    "owned_groups": 3846,
+    "all_owned_groups_absent": true,
+    "CPU_claim_released": true,
+    "original_outer_exit_observed": false,
+    "partial_bytes": 17583667200,
+    "artifact_published": false
+  },
+  "native_engine": {
+    "path": "native-engine-v3",
+    "implementation": "Separate static original-MXFP4 CPU1870 payload; IQ copy exclusion; L24-28 CPU prompt batches; unchanged IQ GPU sources; TP1 only",
+    "FIRST_Mac_helper_controls": 9,
+    "Ubuntu_first_CPU": "PASSED",
+    "critical_Sol_review": "2 budget/effective-env gaps repaired before FIRST helper CPU; no further blocker found statically",
+    "CUDA_build": "FIRST_COMPILE_EXIT0_OWNED_CLOSURE_PASSED",
+    "model_run": "C0_partial_failure_no_promotion",
+    "FIRST_helper_controls_each_host": 11,
+    "build_controller_controls_each_host": 34,
+    "prospective_actual_startup_arithmetic_check": true,
+    "compile_qualification_sha256": "c7ebb77612278bf14c2ae6f2074be5b1bbd8443e7b188d53af228c03df14c442",
+    "native_sha256": "e8910bbf4176f0a19f4a10e611d3ee735fa6fc8205f43a5cca3bbe8bf69d92e1",
+    "native_bytes": 44728824,
+    "compile_seconds": 693.4944859510288,
+    "build_proof": "native-build-v2/FIRST_BUILD_COMPLETION.json"
+  },
+  "original_trunk_acquisition": {
+    "controller": "original-expert-acquisition-v2",
+    "conservative_index_derived_trunk_shards": 40,
+    "total_bytes": 295672271408,
+    "FIRST_controls_each_host": 16,
+    "both_host_exact_maps_IDs": true,
+    "launched": true,
+    "excludes_dense_head_drafter_Engram": true,
+    "qualification_sha256": "4fd3d5cc73fd3ad9c7323b787807c95eae1ee8bc46bf9e2b6be54622e508d1d1",
+    "controller_pid": 2127902,
+    "status": "ALL_FORTY_TRUNK_EXPERT_SHARDS_VERIFIED_NO_MODEL_RUN",
+    "complete": true,
+    "complete_bytes": 295672271408,
+    "outer_exit_status": "UNKNOWN_NOT_CAPTURED"
+  },
+  "candidate_pack_metadata": {
+    "path": "candidate-pack-v1",
+    "FIRST_controls_each_host": 6,
+    "exact_maps_IDs_matched": true,
+    "materialized": true,
+    "weights_ready": false,
+    "construction": "candidate-pack-v1/CONSTRUCTION_FIRST.json",
+    "actual_weights_loaded_in_C0": true
+  },
+  "placement_controller": {
+    "path": "placement-v3",
+    "FIRST_Mac_controls": 14,
+    "Ubuntu": "FIRST_PASSED_EXACT_MATCHED_PHYSICAL_CPU_PROOFS",
+    "GPU_started": true,
+    "v1_FIRST11_eachhost_preserved_unadmitted": true,
+    "critical_review_changes": "Exact transitive runtime/config hash+origin+object binding; all120roletypes/bytes fromconstructedcandidate48795metadata/all46080expertrows",
+    "FIRST_controls_each_host": 15,
+    "status": "P0_PRIVATE_NATIVE_WINDOW_EXIT0_SELECTED_PUBLIC_RESTORED",
+    "registry_empty": false,
+    "prior_v2": "P0 closed/HOLD canonical window20261101T200137Z exit1 before output/native/API creation; optional test_returncode key indexing fault",
+    "recovery": "recovery-v1 FIRST64 controls each host; baseline health24 actual passed; single qualified baseline restore closed0; old failed P0 not regraded",
+    "qualification_sha256": "2db5883de479a33e6e4a2b0f9401c7881c6cac25df29eca93e6422029861a28d",
+    "actual_native_pid": 2478405,
+    "actual_window": "20261101T203740Z.json",
+    "actual_outer_exit0": true,
+    "private_inference_requests": 0,
+    "CPU_experts": 5855,
+    "GPU_experts": 9505,
+    "CPU_base_payload_bytes": 68486952960
+  },
+  "latest_user_steering": "Do not forget CPU offload; it is a required actual correctness/participation and whole-model performance component before default",
+  "CPU_offload_acceptance": {
+    "original_native_experts": 1870,
+    "all_roles": [
+      "w1",
+      "w3",
+      "w2"
+    ],
+    "all_CPU_experts_RAM": true,
+    "private_memory_max_bytes": 85899345920,
+    "startup_forced_original_arithmetic_check_required": true,
+    "normal_task_participation_evidence": "Candidate readonly run-only profile positive selected L24-28 CPU-only hits + no-skip/static source + generic actual CPU/RAM/DSpark STAT; bounded dispatch inference, no direct newcounter telemetry claim"
+  },
+  "native_payload_component": {
+    "path": "native-payload-v3",
+    "FIRST_Mac_controls": 15,
+    "Ubuntu": "FIRST_PASSED_EXACT_MATCHED_PHYSICAL_CPU_PROOFS",
+    "actual_payload_created": true,
+    "no_lowbit_upconversion_to_native": true,
+    "FIRST_controls_each_host": 16,
+    "old_v2_full_environment_qualification_refusal_preserved": true,
+    "repair": "Only bounded Darwin proof child removes exact interpreter-added CF encoding variable before recording strict environment; payload algorithm and wire bytes unchanged",
+    "artifact_bytes": 35157299200,
+    "artifact_sha256": "0f04dfb9c92aff7ef91214b8f8f646b9b2cf71f6b4b622c9206318f24dc7d6d8",
+    "full_normal_SHA_hops": 9,
+    "artifact_path": "native-payload-v3/native-FIRST/native.cpu"
+  },
+  "native_CPU_owner": {
+    "path": "native-owner-v3",
+    "FIRST_Mac_controls": 7,
+    "Ubuntu": "FIRST_PASSED_EXACT_MATCHED_PHYSICAL_CPU_PROOFS",
+    "actual_original_verification_or_payload_stage_started": true,
+    "FIRST_controls_each_host": 7,
+    "source_verify_status": "29_FULL_SHA_CHILDREN_EXIT0_ABSENT_OUTER0_CLAIM_RELEASED",
+    "verify_qualification_sha256": "93e7bf3708222d963f20370956b0e970ffece085eda61e20c7d90e6e98082191",
+    "native_qualification_sha256": "831d34b7b7d7ef696637af35674728805c76c9d9c0c4f0e7ec8437e41c023889",
+    "payload_build": "COMPLETE_1870x3_NATIVE_FINALIZER_AND_OUTER_EXIT0",
+    "wrapper_pid": 2502317,
+    "controller_pid": 2502319,
+    "outer_seconds": 468.9262392099481,
+    "CPU_claim_released": true
+  },
+  "essential_panel": {
+    "path": "essential-panel-v1",
+    "FIRST_Mac_controls": 9,
+    "Ubuntu": "FIRST_PASSED_EXACT_MATCHED_PHYSICAL_CPU_PROOFS",
+    "tasks": [
+      "prose",
+      "coding"
+    ],
+    "actual_measured": false,
+    "FIRST_controls_each_host": 9
+  },
+  "essential_runtime": {
+    "path": "essential-runtime-v3",
+    "status": "C0_CLOSED_HOLD_NO_PROMOTION",
+    "small_schedule": "B0 changed-candidate core+2natural tasks; separate A0 finalwarm+same2tasks only",
+    "baseline_source_compatibility": "Exactselected92 lacks profile-out/readonly, cpu_threads INFO anddraft_rounds STAT; preserveoldnative source behavior and actualDONE draftcounters",
+    "FIRST_Mac_controls": 16,
+    "review": "essential-runtime-v1/ROOT_SOURCE_REVIEW.json",
+    "FIRST_controls_each_host": 18,
+    "arithmetic_scope": "Native prospective forced8expert/all3role finite bitmatch and known answers; no unsupported API logprobs or full vocabulary equivalence claim",
+    "qualification_sha256": "a1b3aa3bcf1b1d59029b9314f2a6a327eb871917c0702f5799e69a1e2289b237",
+    "actual_window": "/home/alex/strata-deepseek-test-20261024/windows/20261101T220238Z.json",
+    "controller": 2720833,
+    "actual_outer_exit": 1,
+    "actual_API_exit": 0,
+    "actual_native_READY": false,
+    "actual_inference_requests": 0,
+    "actual_native_close_exit": -9
+  },
+  "baseline_startup_adapter": {
+    "path": "baseline-startup-v1",
+    "FIRST_Mac_controls": 4,
+    "Ubuntu": "FIRST_PASSED_EXACT_MATCHED_PHYSICAL_CPU_PROOFS",
+    "actual_saved_selected92_source_compatible": true,
+    "private_model_started": false
+  },
+  "publication_chain": {
+    "path": "publication-chain-v4",
+    "FIRST_Mac_controls": 12,
+    "Ubuntu": "FIRST_PASSED_EXACT_MATCHED_PHYSICAL_CPU_PROOFS",
+    "no_new_large_weight_SHA_claim_for_existing_selected_assets": true,
+    "actual_raw_materialization_chain_binding": "Four closed immutable asset chains validated; historical publication binding distinct from fresh action-time selected owner",
+    "FIRST_controls_each_host": 14
+  },
+  "essential_fixture_encoding": {
+    "path": "essential-fixtures-v4",
+    "FIRST_Mac_controls": 7,
+    "Ubuntu": "FIRST_PASSED_EXACT_MATCHED_PHYSICAL_CPU_PROOFS",
+    "actual_B0_prompt_counts": [
+      38,
+      8469,
+      8469,
+      8656,
+      8469,
+      372,
+      465,
+      8471,
+      44,
+      240,
+      207
+    ],
+    "actual_A0_prompt_counts": [
+      44,
+      240,
+      207
+    ],
+    "common_request_token_IDs_equal": true,
+    "v1_environment_refusal_preserved": "essential-fixtures-v1/FIRST_ENV_FINDING.json",
+    "v2_repair": "Explicit existing Darwin3.14 dependency directory in bounded child; no install/global change",
+    "FIRST_controls_each_host": 7,
+    "actual_counts_and_IDs_both_hosts_matched": true
+  },
+  "assembly_diagnosis": {
+    "CPU_limit_consistent_not_proven": true,
+    "CPU_seconds_limit": 30,
+    "Linux_AS_bytes": 536870912,
+    "partial_preserved": true,
+    "same_join_retry_forbidden": true,
+    "separate_bounded_chunk_assembly_source": "IN_PROGRESS",
+    "current_selected_binding_verified_unchanged_idle": true
+  },
+  "essential_auditor": {
+    "path": "essential-audit-v3",
+    "FIRST_controls_each_host": 5,
+    "old_v1_negative_timestamp_finding_preserved": true,
+    "actual_model_audit": "BLOCKED_FULL_PASS_BY_C0_PARTIAL_AND_NATIVE_CLOSE_MINUS9"
+  },
+  "outer_exit_capture": {
+    "path": "launch-custody-v1",
+    "FIRST_controls_each_host": 3,
+    "mandatory_future_long_controllers": true,
+    "original_bulk_and_acquisition_exit_not_retrofitted": true
+  },
+  "assembly_v3": {
+    "status": "COMPLETE_ACTUAL_OUTER0_31_GROUPS_CLOSED",
+    "qualification_sha256": "e8b8b7bfcb36ee1b880919818f88cd566ac017d155053032a025c61bb0d44c96",
+    "artifact_sha256": "39b6bdb241215ea63b5817362b92e2d3acd84367390209a72379e895b0f64869",
+    "bytes": 19464192000,
+    "controls_each_host": 10,
+    "original_failure_regraded": false
+  },
+  "resource_deferral": {
+    "controller": "placement-v3",
+    "private_attempted": false,
+    "reason": "Post-stop physical88GiB floor unavailable within unchanged60s; no window/native attempt",
+    "best_production_restored": true,
+    "native_binding_snapshot": {
+      "invocation": "6313c8aa72c54b9282767a9687cced9b",
+      "main_pid": 2375236,
+      "native_pid": 2375325,
+      "native_start_ticks": 183283229
+    },
+    "unrelated_CI_workers_observed": "gha-drugadopt and gha-drugadopt-ci-2 memory use; untouched; not own leaked workers",
+    "no_lowering_RAM_gate": true
+  },
+  "actual_hybrid_model_generation": "C0_PARTIAL_PROSE_CANCELLED_PHYSICAL_HOST_MARGIN_CODING_UNRUN",
+  "actual_native_CPU_selection": {
+    "original_experts": 1870,
+    "sensitive_L24_28_CPU_experts": 925,
+    "remaining_IQ_CPU_experts": 3985,
+    "source_files_used": 29,
+    "source_map_sha256": "c28e9b1c9a5e0b539f7db849decdc528b7984e60ae4c2ec54189538016cced2d",
+    "header_sha256": "958a40060638abc11b2b50c6f32be5a042d144b3a4cbe2210622c116aeb5ff06",
+    "exact_both_physical_metadata_reconstruction": true,
+    "expected_combined_expert_RAM_bytes": 79265249280,
+    "actual_full_model_RAM_runtime_UNPROVEN": true
+  },
+  "current_selected_binding_snapshot": {
+    "invocation": "68c2ca8e212641fa8a2d0c898588602f",
+    "main_pid": 2783410,
+    "native_pid": 2783912,
+    "native_start_ticks": 183974087
+  },
+  "CPU_offload_fault": {
+    "finding": "B0_RAM_GUARD_OFFLINE_FINDING_FIRST.json",
+    "cause": "Host8GiB margin incorrectly added within cgroup80GiB available-room check; required81.8215GiB can never fit",
+    "original_B0_replay_forbidden": true,
+    "recovery_controls_each_host": 64,
+    "recovery_GPU_health_cases": 24,
+    "health_window": "20261101T213655Z.json",
+    "health_outer_exit": 0,
+    "restore_outer_exit": 0,
+    "restore_seconds": 296.4197474538814,
+    "verified_public": "401/auth200/assembledREADY-stop-DONE",
+    "next": "Separate native memory-accounting source repair and new exact qualification, preserve80GiB private fence plus8GiB physical host margin"
+  },
+  "source23_relocation": {
+    "destination": "/data2/deepseek-frankenstein-evidence-20261101/unused-original-sources/model-00023-of-00048.safetensors",
+    "bytes": 7400713088,
+    "sha256": "d6e47e8b7147c64eb6619732694dda811e1a9f8af1894977919af9522724ca31",
+    "unused_by_native_payload_and_IQ3S": true,
+    "two_bounded_copy_verify_children_exit0": true,
+    "failed_partial_preserved_at_original_path": true
+  },
+  "hybrid_full_qualification_passed": false,
+  "selected_default_unchanged": true,
+  "final_report": "FINAL_ESSENTIAL_RESULT_FIRST.json",
+  "final_report_sha256": "2c36b66a3ba46cd69290c367bdd0c076d5727d5407b062fb728663d6d4c0360f",
+  "CPU_offload_actual": {
+    "original_MXFP4_experts": 1870,
+    "original_roles": [
+      "w1",
+      "w3",
+      "w2"
+    ],
+    "remaining_IQ_CPU_experts": 3985,
+    "all5855_CPU_experts_RAM_actual_INFO": true,
+    "trunk_GPU_slots": 9505,
+    "combined_expert_RAM_bytes": 79265249280,
+    "startup8expert3role_strided_finite_bitmatch": true,
+    "normal_completed_request_profile_dispatch_evidence": true,
+    "direct_per_request_original_native_counters_claimed": false
+  },
+  "C0_essential_result": {
+    "output": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/results/s2-essential3-C0-20261101T220119Z",
+    "qualification_sha256": "a1b3aa3bcf1b1d59029b9314f2a6a327eb871917c0702f5799e69a1e2289b237",
+    "native_pid": 2757752,
+    "API_pid": 2757668,
+    "actual_window": "/home/alex/strata-deepseek-test-20261024/windows/20261101T220238Z.json",
+    "actual_window_exit": 1,
+    "actual_outer_exit": 1,
+    "outer_seconds": 687.4611883659381,
+    "API_exit": 0,
+    "native_close_exit": -9,
+    "kernel_capture_returncode": 0,
+    "kernel_fault_lines": [],
+    "core_completed_producer_rows": [
+      {
+        "id": "s2-source-known-answer",
+        "producer_passed": true,
+        "native": {
+          "generated": 46,
+          "prompt_tokens": 38,
+          "prompt_ms": 1714.9,
+          "decode_ms": 1205.4,
+          "finish": "stop",
+          "drafts_accepted": 24,
+          "drafts_offered": 39,
+          "reused": 0,
+          "hits": 13489,
+          "lookups": 15255
+        },
+        "tokens": 46,
+        "client_seconds_if_reported": 2.943779077148065,
+        "activity": {
+          "cpu": 29.433,
+          "ram": 18.75,
+          "draft_ms": 78.303,
+          "verify_ms": 973.786,
+          "draft_rounds": 19,
+          "samples": 6,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 559
+      },
+      {
+        "id": "ms-quality-cold-text",
+        "producer_passed": true,
+        "native": {
+          "generated": 185,
+          "prompt_tokens": 8469,
+          "prompt_ms": 13184.6,
+          "decode_ms": 4176.2,
+          "finish": "stop",
+          "drafts_accepted": 126,
+          "drafts_offered": 139,
+          "reused": 0,
+          "hits": 41591,
+          "lookups": 49860
+        },
+        "tokens": 185,
+        "client_seconds_if_reported": 17.394960720092058,
+        "activity": {
+          "cpu": 41.763,
+          "ram": 28.227,
+          "draft_ms": 207.947,
+          "verify_ms": 3455.537,
+          "draft_rounds": 52,
+          "samples": 24,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 17291
+      },
+      {
+        "id": "ms-quality-warm-text",
+        "producer_passed": true,
+        "native": {
+          "generated": 179,
+          "prompt_tokens": 8469,
+          "prompt_ms": 64.0,
+          "decode_ms": 3832.2,
+          "finish": "stop",
+          "drafts_accepted": 127,
+          "drafts_offered": 137,
+          "reused": 8468,
+          "hits": 39787,
+          "lookups": 47430
+        },
+        "tokens": 179,
+        "client_seconds_if_reported": 3.929378814995289,
+        "activity": {
+          "cpu": 40.439,
+          "ram": 27.196,
+          "draft_ms": 185.677,
+          "verify_ms": 3212.661,
+          "draft_rounds": 46,
+          "samples": 23,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 1015
+      },
+      {
+        "id": "ms-quality-two-images",
+        "producer_passed": true,
+        "native": {
+          "generated": 149,
+          "prompt_tokens": 8656,
+          "prompt_ms": 16334.9,
+          "decode_ms": 4224.5,
+          "finish": "stop",
+          "drafts_accepted": 84,
+          "drafts_offered": 124,
+          "reused": 0,
+          "hits": 40670,
+          "lookups": 47880
+        },
+        "tokens": 149,
+        "client_seconds_if_reported": 20.758840643102303,
+        "activity": {
+          "cpu": 38.148,
+          "ram": 23.788,
+          "draft_ms": 210.94,
+          "verify_ms": 3298.173,
+          "draft_rounds": 56,
+          "samples": 19,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 18677
+      },
+      {
+        "id": "ms-quality-return-text",
+        "producer_passed": true,
+        "native": {
+          "generated": 181,
+          "prompt_tokens": 8469,
+          "prompt_ms": 73.4,
+          "decode_ms": 3785.9,
+          "finish": "stop",
+          "drafts_accepted": 131,
+          "drafts_offered": 144,
+          "reused": 8468,
+          "hits": 40468,
+          "lookups": 48390
+        },
+        "tokens": 181,
+        "client_seconds_if_reported": 3.891321700066328,
+        "activity": {
+          "cpu": 41.047,
+          "ram": 27.777,
+          "draft_ms": 187.301,
+          "verify_ms": 3363.236,
+          "draft_rounds": 46,
+          "samples": 23,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 1076
+      },
+      {
+        "id": "ms-prose-tool",
+        "producer_passed": true,
+        "native": {
+          "generated": 89,
+          "prompt_tokens": 372,
+          "prompt_ms": 5041.4,
+          "decode_ms": 1851.5,
+          "finish": "stop",
+          "drafts_accepted": 64,
+          "drafts_offered": 66,
+          "reused": 0,
+          "hits": 18875,
+          "lookups": 22590
+        },
+        "tokens": 89,
+        "client_seconds_if_reported": 6.919926943955943,
+        "activity": {
+          "cpu": 41.278,
+          "ram": 28.422,
+          "draft_ms": 91.353,
+          "verify_ms": 1602.536,
+          "draft_rounds": 22,
+          "samples": 12,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 3129
+      },
+      {
+        "id": "ms-prose-tool-followup",
+        "producer_passed": true,
+        "native": {
+          "generated": 50,
+          "prompt_tokens": 465,
+          "prompt_ms": 2416.2,
+          "decode_ms": 1291.9,
+          "finish": "stop",
+          "drafts_accepted": 33,
+          "drafts_offered": 42,
+          "reused": 372,
+          "hits": 12367,
+          "lookups": 14835
+        },
+        "tokens": 50,
+        "client_seconds_if_reported": 3.7332668600138277,
+        "activity": {
+          "cpu": 41.831,
+          "ram": 26.78,
+          "draft_ms": 61.385,
+          "verify_ms": 1077.59,
+          "draft_rounds": 15,
+          "samples": 7,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 976
+      },
+      {
+        "id": "ms-prose-prefill-cancel",
+        "producer_passed": true,
+        "native": {
+          "generated": 0,
+          "prompt_tokens": 8471,
+          "prompt_ms": 13038.4,
+          "decode_ms": 9.9,
+          "finish": "cancel",
+          "drafts_accepted": 0,
+          "drafts_offered": 0,
+          "reused": 0,
+          "hits": 0,
+          "lookups": 0
+        },
+        "tokens": 0,
+        "client_seconds_if_reported": null,
+        "activity": {
+          "cpu": 0.0,
+          "ram": 0.0,
+          "draft_ms": 0.0,
+          "verify_ms": 0.0,
+          "draft_rounds": 0,
+          "samples": 1,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 16071
+      },
+      {
+        "id": "ms-prose-prefill-recovery",
+        "producer_passed": true,
+        "native": {
+          "generated": 76,
+          "prompt_tokens": 44,
+          "prompt_ms": 1836.1,
+          "decode_ms": 1806.2,
+          "finish": "stop",
+          "drafts_accepted": 48,
+          "drafts_offered": 70,
+          "reused": 0,
+          "hits": 21223,
+          "lookups": 24645
+        },
+        "tokens": 76,
+        "client_seconds_if_reported": 3.664412609068677,
+        "activity": {
+          "cpu": 34.918,
+          "ram": 23.112,
+          "draft_ms": 98.631,
+          "verify_ms": 1506.493,
+          "draft_rounds": 25,
+          "samples": 10,
+          "direct_native_counter_telemetry": false
+        },
+        "sensitive_original_CPU_dispatch_positive": true,
+        "sensitive_original_CPU_profile_hits": 854
+      }
+    ],
+    "prose": {
+      "status": "PARTIAL_CANCELLED_NOT_ACCEPTED",
+      "incomplete_reason": "PHYSICAL_HOST_MARGIN",
+      "content_characters": 0,
+      "reasoning_characters": 18756,
+      "client_seconds": 123.95352829620242,
+      "native": {
+        "generated": 4665,
+        "prompt_tokens": 240,
+        "prompt_ms": 3920.7,
+        "decode_ms": 120201.2,
+        "finish": "cancel",
+        "drafts_accepted": 3111,
+        "drafts_offered": 3768,
+        "reused": 0,
+        "hits": 1112195,
+        "lookups": 1338720
+      },
+      "T_lines": 4663,
+      "diagnostic_native_decode_tps": 38.80992868623608,
+      "completed_task_speed_claim": false
+    },
+    "coding": {
+      "status": "UNRUN",
+      "passed": false
+    },
+    "baseline_A1": {
+      "status": "UNRUN_BLOCKED_BY_C0_FAILURE"
+    },
+    "full_independent_pass_audit": false,
+    "source_controls": {
+      "native_helper_each_host": 11,
+      "native_build_each_host": 34,
+      "runtime_each_host": 18,
+      "fixtures_each_host": 7,
+      "auditor_each_host": 5
+    }
+  },
+  "terminal_recovery": {
+    "status": "SELECTED_BASELINE_RESTORED_FAILED_ARM_REMAINS_HOLD",
+    "health24_actual_window": "/home/alex/strata-deepseek-test-20261024/windows/20261101T221703Z.json",
+    "health_actual_outer_exit": 0,
+    "restore_actual_outer_exit": 0,
+    "restore_seconds": 206.95613215188496,
+    "selected_identity": {
+      "CPU_experts": 4045,
+      "DSpark": true,
+      "GPU_expert_slots_inferred": 11315,
+      "GPU_slots_basis": "Hosted exact CPU/human startup counts, fixed384drafter, matched qualified B1/B2 INFO; no direct hosted INFO receipt",
+      "GPU_slots_direct_hosted_INFO": false,
+      "Q8": [
+        1,
+        1
+      ],
+      "TP": 1,
+      "all_CPU_experts_RAM": true,
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-ablated-f3033f6a-s1-1m-yoco1-chunk4096",
+      "config_sha256": "c43dd3d99df86cffaf071d482adb55b100288d04b86f82adddd05543e26424fa",
+      "context": 1048576,
+      "images": true,
+      "native_pid": 2783912,
+      "native_sha256": "92abb8bcf6af251c9704d3f23396ea031a1d555b903ad2757a6a496ad77a71e1",
+      "output_default": 262144,
+      "placement": {
+        "actual_human_rows": [
+          {
+            "caches_GB_rounded": 0.58,
+            "device": 0,
+            "experts_GB_rounded": 58.32,
+            "first_layer": 0,
+            "free_MiB": 2026,
+            "human_experts_with_drafter": 5746,
+            "human_total_with_drafter": 7680,
+            "last_layer": 42,
+            "weights_GB_rounded": 3.31
+          },
+          {
+            "caches_GB_rounded": 0.54,
+            "device": 1,
+            "experts_GB_rounded": 58.86,
+            "first_layer": 19,
+            "free_MiB": 2030,
+            "human_experts_with_drafter": 5953,
+            "human_total_with_drafter": 8064,
+            "last_layer": 39,
+            "weights_GB_rounded": 3.31
+          }
+        ],
+        "drafter_on_GPU0": true,
+        "exact_prompt_bytes_observed": false,
+        "head_on_GPU1": true,
+        "trunk_split": [
+          19,
+          21
+        ]
+      },
+      "prefill_chunk": 4096,
+      "prompt_skip_mode": 1,
+      "runtime_ablation": true,
+      "start_binding": {
+        "invocation": "68c2ca8e212641fa8a2d0c898588602f",
+        "main_pid": 2783410,
+        "native_pid": 2783912,
+        "native_start_ticks": 183974087
+      }
+    },
+    "public": {
+      "SSE_done": true,
+      "authenticated_models": 200,
+      "content": "READY",
+      "finish": "stop",
+      "known_answer_passed": true,
+      "unauthenticated_models": 401
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "entire_source_tests_driver_manually_read": true,
+  "source_sha256": {
+    "routing_fixture.cpp": "edea90d21821b8f9bf9d114678ff537dddcc4f201391a355ace4de62019bc021",
+    "test_routing.py": "f3896843666ef5f522796cb9b10193c53af64141c6d825c5189b147c6c41e904",
+    "run_cpu.py": "3ebf3453ffc3dd19f3a2131f742eda3f2cb5c5b70b8f601e13f1caccba92aa8a"
+  },
+  "input_sha256": {
+    "ds4_cpu_native.hpp": "2851e825bf36350ed9d573f490bdedfd0a01a42a1a5ca0993fe415b9eda04bb7",
+    "ds4_model.hpp": "36fc1b3c7b24d2cc5b298de8147cbfaaae46e5bab7921d98a1100aef9cd6aef7",
+    "ds4_model.cu": "0c0a9da10f0eb5c95bb79e195eea21300f3efd9275175314fc8deb9d6575b041",
+    "ds4_main.cpp": "a56d954f11ff87ecc21f5fed21c9dcb129a9616dd101cc827fd86c04b0d09719",
+    "ds4_placement_plan.hpp": "d6a5058640cc4aa930e95aecaeced9db65e5efa023a7d7aedc6dbdeb0fb9d6fa",
+    "shared/native-lane-v1/cpu_native_plan.hpp": "17afbde8df774d9d5d7c83755dd07ffbb5452b4aa114b2fe1aef9100a5a2e4a9"
+  },
+  "scope": "RAM guard accounting repair; actual C++ boundaries keep80GiB process andseparate8GiB physicalhost margin, prior failedB0 not replayed",
+  "changed_since_v1": "Mandatory8expert/3role/1-or4row strided bitwise comparison of forced-original dispatch against established homogeneous MXFP4 CPU path, on identical original bytes at startup",
+  "manual_delta_read": true,
+  "v1_proofs_preserved": true,
+  "CPU_repeat_justification": "New actual engine source must have exact both-host input/source maps before build; controls unchanged because routing helpers unchanged",
+  "sol_review_sha256": "5480db597ef2927a83e5e3f651e63f2ab33ef0e1ea9ca31609327536d6de515d"
+}

@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "physical_platform": "linux",
+  "tests_run": 15,
+  "test_ids": [
+    "test_payload.NativePayload.test_actual_child_limits_and_identity_must_match",
+    "test_payload.NativePayload.test_capture_handle_before_return_and_cleanup_failure_is_preserved",
+    "test_payload.NativePayload.test_codec_fault_short_output_and_short_plane_stop_without_retry",
+    "test_payload.NativePayload.test_disjoint_output_ranges_reject_holes_duplicates_and_role_deferral",
+    "test_payload.NativePayload.test_exact_raw_header_and_tiny_original_plane_reads",
+    "test_payload.NativePayload.test_full_three_role_exact_codec_composition_into_disjoint_output",
+    "test_payload.NativePayload.test_official_contract_rejects_source_file_mismatch",
+    "test_payload.NativePayload.test_original_lowbit_dtype_bad_shape_and_range_are_refused",
+    "test_payload.NativePayload.test_passed_only_or_mismatched_physical_cpu_proof_never_qualifies",
+    "test_payload.NativePayload.test_placement_estimate_or_altered_selection_cannot_form_plan",
+    "test_payload.NativePayload.test_pread_short_source_never_silently_pads",
+    "test_payload.NativePayload.test_pure1870_plan_full_three_role_geometry_header_and_external_map",
+    "test_payload.NativePayload.test_pwrite_handles_short_writes_without_changing_shared_cursor",
+    "test_payload.NativePayload.test_queue_fault_prevents_new_work_without_retry",
+    "test_payload.NativePayload.test_source_receipt_rejects_changed_inode_content_and_map"
+  ],
+  "sources": {
+    "payload.py": "c402eeee5ae68b6074d2216afb35ec3bf41989c773ef83bce0ae8ed5b5bfa9c7",
+    "test_payload.py": "1033cb75d14e43aac1fe0f34a2ba0fe5eab1f3244928bf42c2e06e106af7a3e9",
+    "run_cpu.py": "08345a975f44244edbb8292fc9a42dcae84d6f8ea5925ee254ddeb311e0bae7d"
+  },
+  "inputs": {
+    "bounded_hash_helper": "26ab3c1bb4330e1e933a11d739806f7cd2db8a890ac100d208f52a9d67b0cec2",
+    "recipe": "36f20ef551185a49793e0d1eb94b7e33994c2e0f4b527f9c0b7b432a2e3bd430",
+    "header": "96cb8eb51463bc195fb3f39ce65e54f59b55e66ccf3af3ce4a68c34ab57b30d7",
+    "conversion": "8bad9fd42a851bf5571f34f8727c19a88668e619f470cea046784b4a4a1bb574",
+    "codec_source": "178229dc37b9c4907c604e1787b4acf7615a5f5c095375a6685f1b6a4ad10f40",
+    "codec_proof": "631c3f24506e4c54942f1ccce3db8b6a6294a6f39cc9d51354615c2f431f90c1",
+    "index": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8",
+    "metadata": "f4f8d13ede75d7ad4918c602d6b5f3e0c6981f2afa4f8e7bc685d4292d51045a",
+    "fixture_weight": "baf5ebb0c98ef3d38b03f62ac1702dc4658bde4bfcb6f1268deeefa8dd176319",
+    "fixture_scale": "2cd9b4c35666281251c0218ec7bbe998f0d351436fa375cd7020cef43a8c385b"
+  },
+  "observed": {
+    "pid": 2310025,
+    "ppid": 2310024,
+    "pgid": 2310025,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "returncode": 0,
+  "failures": 0,
+  "errors": 0,
+  "controls": {
+    "CPU_seconds": 30,
+    "AS_bytes": [
+      536870912,
+      536870912
+    ],
+    "wall_seconds": 90,
+    "nice": 15
+  },
+  "process_environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "MALLOC_ARENA_MAX": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PATH": "/usr/bin:/bin",
+    "LANG": "C",
+    "LC_ALL": "C"
+  },
+  "isolated": true,
+  "supervisor_pid": 2310024,
+  "supervisor_sha256": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71",
+  "source_review_sha256": "e8f04d87e1d3e4e26160f7984755cc378258da34e1d2e09b547585e470878d98",
+  "scope": "Pure native1870 metadata, small I/O/ownership and one3role codec composition; no whole native payload, model or GPU"
+}

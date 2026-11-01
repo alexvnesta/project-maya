@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "physical_host": "ubuntu",
+  "controls": 7,
+  "test_ids": [
+    "test_owner.Owner.test_complete_original_sources_are_bound_to_map_revision_and_root",
+    "test_owner.Owner.test_cpu_qualification_needs_matching_physical_source_inputs_and_all_controls",
+    "test_owner.Owner.test_exact_cpu_claim_release_preserves_unrelated_state",
+    "test_owner.Owner.test_foreign_claim_or_unclosed_children_never_release_cpu_custody",
+    "test_owner.Owner.test_import_refuses_wrong_source_hash_and_alias",
+    "test_owner.Owner.test_missing_duplicate_wrong_sha_or_unverified_source_blocks_materialization",
+    "test_owner.Owner.test_source_and_metadata_hashing_is_streaming_and_exclusive_evidence_is_preserved"
+  ],
+  "source_sha256": {
+    "owner.py": "32584dc92b62c9f204267ef77d3e9ed7ce1dd9a6ccbc276e5982a93db544f0dc",
+    "test_owner.py": "4be51597a641d2f9a4e14b70063cbf8741d9fdfb1f499778c498811cec211ec1",
+    "run_cpu.py": "39ab2e55c4d11cf2bc2c13273ddccc11572645452e344312e6ceca1d86ca57c2"
+  },
+  "input_sha256": {
+    "payload": "c402eeee5ae68b6074d2216afb35ec3bf41989c773ef83bce0ae8ed5b5bfa9c7",
+    "bounded_hash_helper": "26ab3c1bb4330e1e933a11d739806f7cd2db8a890ac100d208f52a9d67b0cec2",
+    "build_custody": "60022606724b5b447056c0d54e0ea8c0f163359673b640cea0cd659abce26916",
+    "bulk_verifier": "1a71e6f1d13d81d326b99be6613b19ed1dc898ac52259fdcf870ca0550ec75fb",
+    "shared_driver": "3cbcf0ce9e000035c893d033b2a6fe09e8d555a831d12a08681f5fdbb0de6b71"
+  },
+  "observed": {
+    "pid": 2310041,
+    "ppid": 2310040,
+    "pgid": 2310041,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "failures": 0,
+  "errors": 0,
+  "returncode": 0,
+  "scope": "New native source custody/receipt controls only; no GPU allocation, inference or service actions"
+}
