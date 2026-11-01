@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-01T07:14:32.058086+00:00",
+  "reviewer": "ROOT",
+  "entire_new_source_tests_read": true,
+  "source_sha256": {
+    "review_code.py": "69933fba17eb2db2dd27104e683c26ed2095725723b39a072ff2b69a9d304298",
+    "test_guard.py": "d25a9bb2d646aae6fd253f2d3effbe4788f66540a0c45c125ed902ba64e4b576",
+    "run_guard_cpu.py": "054d445ca51090f584354657e2a8156948d76776c2fb094aa4b730ead6b292f0"
+  },
+  "input_sha256": {
+    "generated_code.py": "12d4e7ad77cb18681b41a9fe867f9536cbd785b1117c50479fe2910d33adf4fb",
+    "ROOT_FULL_GENERATED_SOURCE_REVIEW.json": "de8ca5d4912ab3da6955b8d24eaa3acd9293a66a84b4a082bbb095565a2a55b8"
+  },
+  "test_ids": [
+    "test_guard.Guard.test_actual_exact_five_constant_formats",
+    "test_guard.Guard.test_actual_exact_helper",
+    "test_guard.Guard.test_actual_module_all24_supplied_tests_still_unexecuted",
+    "test_guard.Guard.test_changed_message_refused",
+    "test_guard.Guard.test_dynamic_receiver_refused",
+    "test_guard.Guard.test_extra_format_argument_refused",
+    "test_guard.Guard.test_field_attribute_refused",
+    "test_guard.Guard.test_helper_bool_accepting_refused",
+    "test_guard.Guard.test_helper_float_accepting_refused",
+    "test_guard.Guard.test_helper_rename_refused",
+    "test_guard.Guard.test_keyword_format_refused",
+    "test_guard.Guard.test_reference_and_all_four_negatives_unchanged"
+  ],
+  "manual_findings": "Read full exactpure_is_integer_endpoint/fivefixedstring.format(index) ASTguard delta plusall12actualASTguardtests andunchanged74linedriver BEFOREFIRSTCPU. Full generatedmodule/all24suppliedtests/full33958characterreasoning manually read beforeexecution. Newformats compareonlyexactAST of5constanttemplates+singleenumerateindex; no arbitrarytemplate/receiver/attribute/extraargs expansion. All6reference/evaluate/negative ASTs unchanged; cases/RNG/limits unchanged. Guardtests execute onlypureguardAST, not generatedimplementation; no native/runtime/source delta."
+}

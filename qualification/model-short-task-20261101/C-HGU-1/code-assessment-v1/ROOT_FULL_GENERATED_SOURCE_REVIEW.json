@@ -1,0 +1,59 @@
+{
+  "utc": "2026-11-01T07:14:01.925399+00:00",
+  "source_sha256": "12d4e7ad77cb18681b41a9fe867f9536cbd785b1117c50479fe2910d33adf4fb",
+  "entire_generated_module_read": true,
+  "all_supplied_tests_read": true,
+  "supplied_tests": 24,
+  "supplied_test_ids": [
+    "CoalesceRangesTests.test_disjoint_ranges_remain_separate",
+    "CoalesceRangesTests.test_duplicate_ranges_are_merged",
+    "CoalesceRangesTests.test_empty_input",
+    "CoalesceRangesTests.test_large_integers",
+    "CoalesceRangesTests.test_multiple_chains_merge",
+    "CoalesceRangesTests.test_negative_integers_sort_and_merge",
+    "CoalesceRangesTests.test_nested_range_is_absorbed",
+    "CoalesceRangesTests.test_overlaps_are_merged",
+    "CoalesceRangesTests.test_rejects_bool_end",
+    "CoalesceRangesTests.test_rejects_bool_start",
+    "CoalesceRangesTests.test_rejects_float_end",
+    "CoalesceRangesTests.test_rejects_float_start",
+    "CoalesceRangesTests.test_rejects_none_endpoint",
+    "CoalesceRangesTests.test_rejects_string_endpoint",
+    "CoalesceRangesTests.test_result_is_sorted",
+    "CoalesceRangesTests.test_single_range_is_returned_as_tuple",
+    "CoalesceRangesTests.test_start_equal_end_is_allowed_and_dropped",
+    "CoalesceRangesTests.test_start_greater_than_end_raises_value_error",
+    "CoalesceRangesTests.test_success_does_not_mutate_input",
+    "CoalesceRangesTests.test_touching_ranges_are_merged",
+    "CoalesceRangesTests.test_type_error_does_not_mutate_input",
+    "CoalesceRangesTests.test_value_error_does_not_mutate_input",
+    "CoalesceRangesTests.test_zero_length_range_does_not_affect_others",
+    "CoalesceRangesTests.test_zero_length_ranges_are_dropped"
+  ],
+  "entire_generated_reasoning_read": true,
+  "reasoning_read_ranges_characters": [
+    [
+      0,
+      17000
+    ],
+    [
+      17000,
+      33958
+    ]
+  ],
+  "reasoning_characters": 33958,
+  "reasoning_sha256": "0f370ccc9f996aea313f4a0c5acc1e95be22b7bdab10caed2d66feca286a8ffa",
+  "response_sha256": "3ba1b82e054c69c058d2095cd20a69054f132df14bdff34144ac2ba838f16bdf",
+  "manual_findings": "Full pure_is_integer_endpoint helper/coalesce and24tests read before anyexecution. Five constant safeerror strings formatted onlywithenumerateindex; noarbitraryattribute access orI/O. Locallist copy/sort/merge, exactbool/nonint rejection, invertedboundsValueError, zerodrop, touchingmerge, noinputmutation, large200digit andsignedints. Strictlist/tuplepairs compatible originalcontract. Full reasoning coherent. No execution or broadqualityclaim yet.",
+  "reviewer_base_sha256": "afc5581685266afd99a8408e9bc2b6bb4eec110e6e6d24d91bd07e5ecfa4d8cc",
+  "unchanged_reference_and_negative_AST_sha256": {
+    "reference": "9b566d780170c46718208a15c98c7b0b29e3faf7d81de12881f92ffd94d54aa7",
+    "evaluate": "3b589f8dc1a8f7fc5fd5500ba3670ee35e3abd2135a0bf3992774f9cb395a193",
+    "no_touch": "2408c5a7201852c417a608a7cd432047631b8f4f010a77adf1ab653b0161be7a",
+    "mutating": "8df128d8c574109c24a308a326d4b1184d2e15bec4b93f08623ea89880247725",
+    "bool_accept": "6d03fca6dd0bef89a47487d455c1edaf3bc821ba0e22f5fd939ddf42082965b2",
+    "keep_empty": "ce60b8a13976ade2718fc09ad71f3136970815e581e20b9928b49bc48d4d4a5e"
+  },
+  "delta": "Exactpure_is_integer_endpoint and five exactconstantmessage.format(index) ASTpermissions only. Reference/cases/RNG/limits/fournegatives unchanged. Fullmanual plus FIRST12guard controls BOTHphysicalhosts before FIRSTgeneratedcode assessment.",
+  "scope": "One original public shortcodingmain only; no broadmodelquality/equivalence/comparativespeedclaim."
+}
