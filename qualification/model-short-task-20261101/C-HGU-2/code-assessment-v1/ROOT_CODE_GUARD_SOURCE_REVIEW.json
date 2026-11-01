@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-01T08:24:18.527119+00:00",
+  "reviewer": "ROOT",
+  "entire_new_source_tests_read": true,
+  "source_sha256": {
+    "review_code.py": "a616dea472d096a7a580fdd2bf1c517a41266223cd2f3e206725c9501cef37fc",
+    "test_guard.py": "b45878cc681cc8402661f7b84f1f92316c552468d4ba75ae4dc98009f519a05f",
+    "run_guard_cpu.py": "054d445ca51090f584354657e2a8156948d76776c2fb094aa4b730ead6b292f0"
+  },
+  "input_sha256": {
+    "generated_code.py": "4c91eed80126309ada3746d0ed0a658f561ca9a5da6c64aa8f0abe76de5d57ec",
+    "ROOT_FULL_GENERATED_SOURCE_REVIEW.json": "5c2a840429f53b1066b29fa9ec6ddc5117cb73424b218d190cc986d7080b8937"
+  },
+  "test_ids": [
+    "test_guard.Guard.test_actual_main_has_no_formats_or_extra_helpers",
+    "test_guard.Guard.test_actual_module_all19_supplied_tests_still_unexecuted",
+    "test_guard.Guard.test_changed_message_refused",
+    "test_guard.Guard.test_dynamic_receiver_refused",
+    "test_guard.Guard.test_exact_previously_reviewed_helper",
+    "test_guard.Guard.test_extra_format_argument_refused",
+    "test_guard.Guard.test_field_attribute_refused",
+    "test_guard.Guard.test_helper_bool_accepting_refused",
+    "test_guard.Guard.test_helper_float_accepting_refused",
+    "test_guard.Guard.test_helper_rename_refused",
+    "test_guard.Guard.test_keyword_format_refused",
+    "test_guard.Guard.test_reference_and_all_four_negatives_unchanged"
+  ],
+  "review": "Full inherited reviewer/reference/negatives and driver manually read; only report scope changed. Guard actual predicates updated to this no-helper/no-format module with19 suppliedtests. Helper/format negative safeguards unchanged and synthetic exacthelper tests retained. No generatedcode executed by guard; actual module fully manually read prior. No native or model access. Source-writing initialmissingparent exception preceded every sourcewrite and execution; preserved toolreceipt."
+}

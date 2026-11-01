@@ -1,0 +1,213 @@
+{
+  "utc": "2026-11-01T07:45:08.961693+00:00",
+  "reviewer": "gpt-6.1-sol",
+  "scope": "LOCAL comparison of saved reviews/audits and scoped frozen source; no duplicate full generated reasoning review; no imports/tests/remote/native/model actions",
+  "verdict": "SEVEN_CLOSED_ONE_PENDING_NO_NEXT_ARM_ADMISSION_NO_WINNER",
+  "observations": {
+    "P-HGU-1": {
+      "tokens": 2628,
+      "decode_tok_s": 44.06482962605257,
+      "client_seconds": 61.720392662100494,
+      "prompt_tokens": 169,
+      "prefill_ms": 2055.2,
+      "draft_accepted_offered": [
+        1017,
+        1476
+      ],
+      "review_status": "ROOT_COMPLETE_AND_INDEPENDENT_TERMINAL_PASS"
+    },
+    "P-UNSLOTH-1": {
+      "tokens": 16478,
+      "decode_tok_s": 67.98017444311786,
+      "client_seconds": 244.177669611061,
+      "prompt_tokens": 169,
+      "prefill_ms": 1757.5,
+      "draft_accepted_offered": [
+        11574,
+        13519
+      ],
+      "review_status": "ROOT_COMPLETE_AND_INDEPENDENT_TERMINAL_PASS"
+    },
+    "P-MS2-1": {
+      "tokens": 6384,
+      "decode_tok_s": 62.04871562852025,
+      "client_seconds": 104.8463871490676,
+      "prompt_tokens": 169,
+      "prefill_ms": 1924.3,
+      "draft_accepted_offered": [
+        3982,
+        4564
+      ],
+      "review_status": "ROOT_COMPLETE_AND_INDEPENDENT_TERMINAL_PASS"
+    },
+    "P-MS1-1": {
+      "tokens": 5647,
+      "decode_tok_s": 57.185099671390745,
+      "client_seconds": 100.60598983406089,
+      "prompt_tokens": 169,
+      "prefill_ms": 1829.7,
+      "draft_accepted_offered": [
+        3611,
+        4193
+      ],
+      "review_status": "ROOT_COMPLETE_AND_INDEPENDENT_TERMINAL_PASS"
+    },
+    "C-HGU-1": {
+      "tokens": 10622,
+      "decode_tok_s": 60.307864209082396,
+      "client_seconds": 177.69910194305703,
+      "prompt_tokens": 140,
+      "prefill_ms": 1543.6,
+      "draft_accepted_offered": [
+        6614,
+        8740
+      ],
+      "review_status": "ROOT_COMPLETE_AND_INDEPENDENT_TERMINAL_PASS"
+    },
+    "C-UNSLOTH-1": {
+      "tokens": 15774,
+      "decode_tok_s": 53.315901618066974,
+      "client_seconds": 297.303688691929,
+      "prompt_tokens": 140,
+      "prefill_ms": 1418.6,
+      "draft_accepted_offered": [
+        8943,
+        13135
+      ],
+      "review_status": "ROOT_COMPLETE_AND_INDEPENDENT_TERMINAL_PASS"
+    },
+    "C-MS2-1": {
+      "tokens": 16869,
+      "decode_tok_s": 56.65611060788188,
+      "client_seconds": 299.28047200199217,
+      "prompt_tokens": 140,
+      "prefill_ms": 1511.2,
+      "draft_accepted_offered": [
+        9482,
+        13716
+      ],
+      "review_status": "ROOT_COMPLETE_AND_INDEPENDENT_TERMINAL_PASS"
+    },
+    "C-MS1-1": {
+      "tokens": 14413,
+      "decode_tok_s": 50.78846689869686,
+      "client_seconds": 285.319,
+      "client_precision": "parent supplied rounded observation",
+      "prompt_tokens": 140,
+      "prefill_ms": 1509.4,
+      "review_status": "PROVISIONAL_ROOT_CODE_READ_MAC_GUARD_ONLY_LINUX_ASSESSMENT_AND_TERMINAL_AUDIT_DEFERRED"
+    }
+  },
+  "arithmetic": {
+    "C-HGU-1 versus C-MS2-1": {
+      "decode_tok_s_change_percent": 6.445471745271014,
+      "client_seconds_change_percent": -40.62455837684118,
+      "prefill_ms_change_percent": 2.1439915299100054
+    },
+    "P-HGU-1 versus P-MS2-1": {
+      "decode_tok_s_change_percent": -28.983494372607954,
+      "client_seconds_change_percent": -41.13255178325963,
+      "prefill_ms_change_percent": 6.802473626773375
+    },
+    "P-UNSLOTH-1 versus P-MS2-1": {
+      "decode_tok_s_change_percent": 9.55935792468081,
+      "client_seconds_change_percent": 132.89087611945672,
+      "prefill_ms_change_percent": -8.668087096606559
+    },
+    "C-UNSLOTH-1 versus C-MS2-1": {
+      "decode_tok_s_change_percent": -5.895584702120771,
+      "client_seconds_change_percent": -0.6605119595140208,
+      "prefill_ms_change_percent": -6.127580730545268
+    },
+    "P-MS2-1 versus P-MS1-1": {
+      "decode_tok_s_change_percent": 8.505040622605975,
+      "client_seconds_change_percent": 4.2148557178362855,
+      "prefill_ms_change_percent": 5.170246488495378
+    },
+    "C-MS2-1 versus C-MS1-1": {
+      "decode_tok_s_change_percent": 11.55310263822036,
+      "client_seconds_change_percent": 4.893285060578556,
+      "prefill_ms_change_percent": 0.11925268318537796
+    }
+  },
+  "evidence_order": [
+    "Seven short single-task outcomes have ROOT whole-answer/reasoning review and independent terminal closure. Three coding modules have both-host independent checks, not general coding qualification.",
+    "C-MS1 native completion is an observation, not an accepted coding result: full module/all21 supplied tests/reasoning manually read, Mac12 guards passed; generated execution, Linux controls and terminal audit remain deferred before child for healthy user busy. This is neither model fault nor waived gate.",
+    "Different naturally generated reasoning lengths and single samples preclude equal-work task speedup, causal topology/quantization attribution or general winner. Preserve minor MS2 prose wording notes."
+  ],
+  "first_screen": {
+    "HGU_coding": "Most promising task-specific follow-up: +6.445% native rate versus MS2, short140-token cold prefill +2.144% (within3% on THIS fixture), observed client time about40.6% lower with10622 versus16869 generated tokens. Neither equal-work speedup nor broader prefill qualification.",
+    "HGU_prose": "Fails frozen >=5% native screen versus MS2 (about29% slower native rate). Lower61.7s client time accompanies2628 versus6384 tokens. P-HGU-2 cannot advance by substituting client latency for the frozen native criterion.",
+    "Unsloth": "Prose native rate exceeds MS2 but much longer reasoning produces244s versus105s client time; coding native rate is lower. No overall preference from one endpoint.",
+    "MayaS_TP": "MS2 first native rates exceed MS1 for prose and provisional coding; client times are slightly longer with longer outputs. Coding control unclosed; meaningful prefill and reverse-order replication still missing. No TP winner."
+  },
+  "reversed_confirmation": {
+    "eligible_for_separate_consideration": "C-HGU-2 ONLY as coding-specific confirmation after C-MS1 final both-host code checks and terminal closure, all8 reviewed/closed, separate explicit confirmation flag/review and fresh guards. No admission here.",
+    "control": "Freeze MS2 control before observing second pair: initial C-MS2-1 precedes C-HGU-1, then C-HGU-2 followed by C-MS2-2 gives A1/B1/B2/A2. Do not choose MS1 afterward to improve the comparison. MS1 is a distinct TP comparison requiring its own frozen order and gates.",
+    "formal_limit": "The task PLAN permits a necessary short coding rate screen; it does not establish the frozen broader quality gates. Formal winner/activation still requires those gates, each matched order passing and fresh comparison against actual native92/configc43 selected baseline. Do not silently mark all_quality_lifecycle_resource_gates true from seven task passes.",
+    "blocked": "P-HGU-2 fails prose-rate screen; all next model phases blocked now by incomplete C-MS1 closure and busy state; no automatic Unsloth/other arm admission."
+  },
+  "safest_prospective_short_plan": [
+    {
+      "phase": "Complete original short typed tool/follow-up",
+      "source": "maya-s-comparison-v1/model-v1/ms_fixtures.py TOOL_REQUEST/tool_followup; performance-v2/pv_controls.py followup_case; prefill-v2/frozen/manifest.json tool-lookup/tool-final",
+      "contract": "Retain full372/465 original requests, actual returned single tool-call ID and typed SKU PF2-731/quantity6/result stock17/unit185 -> total1110/availabletrue. CPU re-encode preserved per-pack template and audit actual ID substitution only. Own two-request namespace; no inherited four-case lifecycle completion.",
+      "limit": "New bounded short cold observation, not measured8K bound. Fit both natural completions plus startup/cleanup inside unchanged window or HOLD/UNRUN; no retries."
+    },
+    {
+      "phase": "Complete original short chart MAIN",
+      "source": "prefill-v2/frozen/manifest.json vision-chart; whole request SHA ecd300e53bce96e16d0fab51d45b84fba7cb61ec77b82958b7e659ec18b175a4",
+      "contract": "Original fixedPNG/text full32768/effort100/seed1 request; typed january12/february28/combined40. Historical original625-token count is not candidate count or latency bound: freeze per-pack preserved-template encoding/IDs on both hosts first.",
+      "limit": "Do not edit8656 two-image ledger MAIN: its long text is inside MAIN, so skipping preludes does not shorten it. One-chart success cannot close two-image gate."
+    },
+    {
+      "phase": "Focused same-prefix warm/state and return-to-text",
+      "contract": "Separately freeze complete original short known-answer request cold/warm with actual exact-prefix identity, expected prompt-minus-one reuse and raw native/cache evidence, then source-supported short return-to-text known answer after image. Distinct namespace, no old numeric literal-arm replay or inherited result.",
+      "limit": "Warm state and short return-to-text do not prove8K behavior or two-image coverage. Avoid bundling long natural coding/prose completions into an already tight1000s phase."
+    },
+    {
+      "phase": "Prospective short BEFORE-FIRST-OUTPUT cancellation only",
+      "contract": "Source-review unchanged API/native stop protocol and correlation before coding: exact owned startup PID/ticks/native command/request; actual correlated prompt read >0 (read==total allowed in this NEW gate); cancellation acknowledgment attributable to that command; native generated0; client firstdeltafalse/no content/reasoning/tool output; cancel finish/counter acknowledgment and queue/active/reserved release; independently audited known-answer recovery and full closure/public restore. Missing/unobservable correlation or a generated token makes this gate unproved/HOLD, not success.",
+      "limit": "This can honestly prove before-output cancellation if observed, not partway-prefill or old gate. Existing pv_controls.cancel_score requires1024<=read<total-64;169/140/625 cannot satisfy it. No lowering/regrading old predicate, new ACK or retry-on-race. Frozen actualprefillcancel requirement is not automatically discharged: retain old partial-prefill gate as unmet unless separately prospectively specified source/evidence establishes the required semantics."
+    }
+  ],
+  "blocking_source_questions": [
+    "Pin exact complete requests/assets/typed expected answers, per-candidate tokenizer/template provenance and encodings; no long panel slicing or old arm replay.",
+    "For cancellation inspect exact native read/cancel/finish ordering and receipt correlation: generic client disconnect or stream silence alone cannot establish actual native cancellation/gen0. If native evidence is unavailable under existing protocol, stop at source blocker.",
+    "A single short chart is useful but does not satisfy frozen two-images+return-to-text. Find an already public complete short two-image fixture or separately freeze a new truthful fixture; never silently modify old8656 case.",
+    "Keep producer and independent auditor request/trace/actual-ID/cache/placement/direct-FD/STAT expectations identical, preserve partial/UNRUN, captured process handles and cleanup. Full new delta/manual review plus matching FIRST CPU both physical hosts required before separate phase admission."
+  ],
+  "resource_and_long_input_limits": {
+    "unchanged": "1M total/262144 allowance/request32768/effort100/seed1/temp1/top_p1/same DSpark/Q8/mode1/projection/chunk4096/all CPU experts RAM/direct I/O; no dump/round logger, actual unlimited native FSIZE;80GiB fence/zero owned swap/8GiB host margin/root132GiB admission120GiB runtime/startup800/window1200/soft1000/cleanup200/cache8GiB/log4GiB; source exact system swap threshold unchanged.",
+    "unknown": "HGU/Unsloth8K and near1M cold bounds remain UNKNOWN. Neither CPU encodings nor44/140/169/short625 observation nor original MayaS8K measurements transfer to changed packs. Full configured context/output is not filled1M or actual262144 generation.",
+    "timing": "Do not clone MayaS997.4s five-case bundle. Separate focused short phases prevent aggregate deadline assumptions; prior load durations depend on cache conditions and are not guaranteed startup bounds. No timeout increase, output fitting/truncation or global cache manipulation.",
+    "meaningful_prefill": "MayaS TP meaningful-prefill gate remains binding and distinct from this short screen. Need a separately justified actual measured/source-safe prospective plan; no long launch licensed by this report."
+  },
+  "action_policy": "No GPU admission, next-arm flag, winner, activation or cleanup authorized by this report. Keep selected native92/configc43 hosted. After all8 close, recheck actual clock/source/q/current owner/root/idle/sole GPU/default/kernel/resources immediately before separately admitted action. Current healthy user busy is a deferral, not a fault. No production state verified live in this local review.",
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/PLAN.json": "eb0c8a7c81f784e1123771193ec76d701bb01c027b333ddf3581370910380439",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/task-arms.json": "477b97cf2f00946bd333355d14e1def55f278d3b80d41ad307ef3c236e81bc6f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/completion-campaign-20261031/FORWARD_COMPARISON_CRITERIA_FROZEN.json": "9b6d6c75fece0ab2003f8515554532ea537ce93742bffd0056724d28396e834c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/model-choice-v1/MODEL_PANEL_ADMISSION_STRATEGY_REVIEW.json": "29fd0699195b0cdcbb331cf70b93819203bda5c34ce884de612ff781db210db1",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS1-1/TERMINAL_AUDIT_GUARD_DEFERRED.json": "ac82b7d0ae3cf2bc5571552eed931781a8232b91509bd9045dd622cfd46e2cf1",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS1-1/code-assessment-v1/ROOT_FULL_GENERATED_SOURCE_REVIEW.json": "f06a21111e7b280980cef667cfa72c1889803abf6ac56099c9083afe2303f359",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-MS1-1-20261101T071804Z/native/native-000/native-statistics.json": "7eee39f63c655dd5cac75f582da1df64c296241dab5c80d202cb1aef8d086432",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/prefill-v2/frozen/manifest.json": "d3e557d528aeea5e3765f73f6454ddd657b204fb8be6aa3351618cfb739ecdb1",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/model-v1/ms_fixtures.py": "76e3731d48792545b6135f335df60e9d9b4e7266ce23e70a3093a9916b74a869",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya-s-comparison-v1/performance-v2/pv_controls.py": "1038fad719fb7ed7516ab3e07d88d40fb3b5cd7408f6ed19ddc2296f13052cf5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/P-HGU-1/ROOT_FULL_RESULT_REVIEW.json": "9f59ecc39ad1132f9ecb3610f3080809ddd22c5af30568aced0afa51db4b7b34",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/P-HGU-1/terminal-audit.json": "60ee38a82ab5df836de890b35a0d23daea2e1782af8878700e2bf3647845f455",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/P-UNSLOTH-1/ROOT_FULL_RESULT_REVIEW.json": "18826a8fae09226a172b44703c46b001845864c7d688c9b197a96ec13fd3344f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/P-UNSLOTH-1/terminal-audit.json": "87861991528a93fc4780d79e8bddad4d7dfbaeec2eb0dfe61a0dfed2c9c9cb77",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/P-MS2-1/ROOT_FULL_RESULT_REVIEW.json": "c2167dde495cb62ec724b9483badf2ae2fa1b8c02bbe496ce2520c952fa4aadc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/P-MS2-1/terminal-audit.json": "9da3969c6404659bba7496f08dd75a1d954713b9e3e0ae6dbdcae943701e33f2",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/P-MS1-1/ROOT_FULL_RESULT_REVIEW.json": "ceb2daf414b1229c36bf1d7485f2133485042cd7390c37735a470021dc9e5c0f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/P-MS1-1/terminal-audit.json": "b6010dbe1a5f7cff3f1c98eef3002eba56830af543a141d4ed2ad3383167b71b",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-1/ROOT_FULL_RESULT_REVIEW.json": "4eb76ad64e647f0cffb5cbdb56ee8869b88f0fcf8a129d8025f27729997bbef6",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-1/terminal-audit.json": "2cd52f04ac7214cd36782993db280831c7a082079032ce87f5d8946290c3b42c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-UNSLOTH-1/ROOT_FULL_RESULT_REVIEW.json": "5c499c56013703abf059076ee4d6a3a4c2dce65ad4fd862e955a0959e5f35c9c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-UNSLOTH-1/terminal-audit.json": "4686c0fe452b9587b92886ed58b2ae1af063ef81ee510b82944f3cef987b7a3d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS2-1/ROOT_FULL_RESULT_REVIEW.json": "16930d9b43c0149f42b36a1f5c451d10eb1c0556ef96287936eba20d86614dd9",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-MS2-1/terminal-audit.json": "46b6b53c2e215c2225590d57035d4b84979df8e550dadd0f05458c2a9ea18e9b"
+  }
+}

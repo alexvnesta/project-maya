@@ -1,0 +1,96 @@
+{
+  "mode": "task",
+  "arm": "C-HGU-2",
+  "arm_results": {
+    "complete": true,
+    "scores": [
+      {
+        "id": "ms-coding-main",
+        "passed": true,
+        "status": "NATURAL_SHORT_OBSERVATION_MANUAL_QUALITY_PENDING"
+      }
+    ],
+    "rows": [
+      {
+        "id": "ms-coding-main",
+        "passed": true,
+        "native": {
+          "generated": 14264,
+          "prompt_tokens": 140,
+          "prompt_ms": 1591.5,
+          "decode_ms": 238013.5,
+          "finish": "stop",
+          "drafts_accepted": 8879,
+          "drafts_offered": 11950,
+          "reused": 0,
+          "hits": 4260224,
+          "lookups": 4376670
+        },
+        "observed_tokens": 14264,
+        "native_decode_tokens_per_second": 59.92937375400975,
+        "client_seconds": 239.63011927180924,
+        "content_characters": 5508,
+        "reasoning_characters": 49759,
+        "manual_review_pending": true,
+        "general_quality_or_equivalence_claim": false,
+        "emitted_token_contract": {
+          "count": 14264,
+          "valid_vocabulary_ids": true,
+          "ordered_ids_sha256": "4143d35747e6c3b39c345bb358218c558e23b5eb51d12ff5cdecc2058c7e70a6"
+        }
+      }
+    ],
+    "retry": false,
+    "automatic_next_arm": false,
+    "quality_or_performance_pass": false,
+    "manual_review_required": true,
+    "bounded_short_cold_observation": true,
+    "long_input_bound_claim": false,
+    "native_request_count": 1,
+    "drafter_execution": [
+      {
+        "configured_and_loaded_separate": true,
+        "execution_proven": true,
+        "draft_rounds": 4806,
+        "draft_ms": 21110.835,
+        "verify_ms": 185649.16,
+        "acceptance_can_be_zero": true,
+        "samples": 1784,
+        "raw_lines_sha256": "1c7806365bb49f30bd176e721e9442f7785c2d6e5f4b45f674522d6495942282"
+      }
+    ],
+    "mode1_activation": {
+      "mode": 1,
+      "source": 20,
+      "retained_rows": 2668,
+      "activation_early_rows": []
+    },
+    "DSI1_leftovers": []
+  },
+  "seconds_including_load": 781.2340490119532,
+  "private_cleanup_passed": true,
+  "resource_fence_terminal": {
+    "passed": true,
+    "events_after": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "events_delta": {
+      "low": 0,
+      "high": 0,
+      "max": 0,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0,
+      "sock_throttled": 0
+    },
+    "cache_charging_disclosure": "memory.current/peak include charged file cache and pinned memory; not process RSS"
+  },
+  "manual_review_pending": true,
+  "not_a_promotion": true
+}

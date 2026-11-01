@@ -1,0 +1,76 @@
+{
+  "utc": "2026-11-01T08:25:30.727526+00:00",
+  "reviewer": "ROOT",
+  "arm": "C-HGU-2",
+  "decision": "REVERSED_CODING_TASK_CORRECT_OBSERVATION_ONLY_FINAL_MS2_CONTROL_PENDING",
+  "full_content_and_reasoning_read": true,
+  "entire_generated_module_all19_supplied_tests_read_before_any_execution": true,
+  "generated_code_sha256": "4c91eed80126309ada3746d0ed0a658f561ca9a5da6c64aa8f0abe76de5d57ec",
+  "reasoning_characters": 49759,
+  "task_passed": true,
+  "CPU_guard_each_host": 12,
+  "independent_each_host": {
+    "checks": 4414,
+    "cases": 2207,
+    "supplied": 19,
+    "meaningful_negatives": 4,
+    "FIRST_all_passed": true
+  },
+  "observed": {
+    "id": "ms-coding-main",
+    "passed": true,
+    "native": {
+      "generated": 14264,
+      "prompt_tokens": 140,
+      "prompt_ms": 1591.5,
+      "decode_ms": 238013.5,
+      "finish": "stop",
+      "drafts_accepted": 8879,
+      "drafts_offered": 11950,
+      "reused": 0,
+      "hits": 4260224,
+      "lookups": 4376670
+    },
+    "observed_tokens": 14264,
+    "native_decode_tokens_per_second": 59.92937375400975,
+    "client_seconds": 239.63011927180924,
+    "content_characters": 5508,
+    "reasoning_characters": 49759,
+    "manual_review_pending": true,
+    "general_quality_or_equivalence_claim": false,
+    "emitted_token_contract": {
+      "count": 14264,
+      "valid_vocabulary_ids": true,
+      "ordered_ids_sha256": "4143d35747e6c3b39c345bb358218c558e23b5eb51d12ff5cdecc2058c7e70a6"
+    }
+  },
+  "owned_execution_closed": true,
+  "independent_terminal_audit_passed": true,
+  "preserve_producer_manual_pending": true,
+  "comparative_speedup_claim": false,
+  "deployment_admitted": false,
+  "next_arm_automatically_admitted": false,
+  "notes": [
+    "Natural output14264tokens vsinitial10622; no equalwork latency claim. Both sources fully read and correct.",
+    "Initialmetadata localmissingparent rejected beforewrites; one placeholderreviewpin rejectedbeforeCPUchild. Both preserved, no model/runtime/source fault, no modelretry or auditregrade. Correct FIRST12guards andFIRSTgeneratedassessment separate.",
+    "Public selected native92/configc43 restored after actual native1079516/API1079403/window080557/controller1078593exit0; independentterminalaudit passes."
+  ],
+  "pins": {
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-HGU-2-20261101T080448Z/receipt.json": "e4d5920110c2e83508c2930c746f6aeb549086cfdeddbd3e1c60c01d6a1de06c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-HGU-2-20261101T080448Z/native/server-cleanup.json": "fa4b167f907f081b5f01afdeeb0a2ddd94bf949e74181b2eef56a598e855c62a",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-HGU-2-20261101T080448Z/native/native-close.jsonl": "227265a13e6e2a2427ea5fbc4c927eab02b260f3e6ee3df2061655e0b14a5d8f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/results/maya145-modeltask-C-HGU-2-20261101T080448Z/native/skip-controls/ms-coding-main/response.json": "4c52c5836a4fa8b36e18cbf63200f08de88ff5d7046b2f13f9a0ec56e0934ae3",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-2/terminal-audit.json": "51e959459fc771e4c22f4aa9a46b6472a08611abc3cf55d3580dcc76a35034e3",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/controller-C-HGU-2-exit.json": "3b1a6c05d3f280785e08a0410981707481769a270409fbf4f22dff7d01f5778c",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/CODING_HGU_CONFIRMATION_FROZEN.json": "4927c80d055dcb95a831319bcfc2aeed6292b705ce9a55ee3fc085aad492cdbc",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-2/code-assessment-v1/ROOT_FULL_GENERATED_SOURCE_REVIEW.json": "5c2a840429f53b1066b29fa9ec6ddc5117cb73424b218d190cc986d7080b8937",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-2/code-assessment-v1/ROOT_CODE_GUARD_SOURCE_REVIEW.json": "fa3ba4bb0f3b9d4440c96dc612709d088cae7d04ffd575073276c2e75af1d2e5",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-2/code-assessment-v1/PRECHILD_PLACEHOLDER_PIN_REJECTION.json": "bc293bc26bcb65b3fd17840fd0d0fefe184ea12eb758763a2a226a7f79bfdadd",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-2/code-assessment-v1/code-review-darwin.json": "d8ce41944b0dbd3412d6fce770c953aae9e5d932a3243effaeb54c8307f03b6f",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-2/code-assessment-v1/CPU-GUARD-FIRST-darwin/receipt.json": "26c722fb315e6e8adf5444b78c319b15e06dd309c1e3cee9b6c53350c7cd52b8",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-2/code-assessment-v1/ASSESSMENT-FIRST-darwin/child.json": "ef1a7e22c02a8c27b6273cf819d089b0cf745cffe2780ad354fa1b478bb70a3e",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-2/code-assessment-v1/code-review-linux.json": "e2b3ed28679fb44c12b9f75c797328caf4807fdac238ca7262bfbccbd926693d",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-2/code-assessment-v1/CPU-GUARD-FIRST-linux/receipt.json": "98ab388ac056676304c5238bc3c675fcc28f23ce44fc679a31993c6ace0728a6",
+    "/Users/alex/strata-deepseek-qualification-20261024/reliability-optimization-20261025/decode-optimization-20261028/maya145-modeltask-v1/C-HGU-2/code-assessment-v1/ASSESSMENT-FIRST-linux/child.json": "1d9ac9e4b130c2cef37fef621722696e3de05eba0c85d9d2099305de1c4d1769"
+  }
+}

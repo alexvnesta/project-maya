@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "controls": 12,
+  "test_ids": [
+    "test_guard.Guard.test_actual_exact_helper",
+    "test_guard.Guard.test_actual_main_has_no_endpoint_casts",
+    "test_guard.Guard.test_actual_module_all21_supplied_tests_still_unexecuted",
+    "test_guard.Guard.test_bool_accepting_helper_refused",
+    "test_guard.Guard.test_cast_extra_argument_refused",
+    "test_guard.Guard.test_cast_literal_refused",
+    "test_guard.Guard.test_cast_other_name_refused",
+    "test_guard.Guard.test_float_accepting_helper_refused",
+    "test_guard.Guard.test_helper_decorator_refused",
+    "test_guard.Guard.test_helper_rename_refused",
+    "test_guard.Guard.test_helper_side_effect_refused",
+    "test_guard.Guard.test_reference_and_all_four_negatives_unchanged"
+  ],
+  "source_sha256": {
+    "review_code.py": "f69239bb9e385b27edbb95db5979b27b01b9f52b0532f6b26a46aede1e5d8d60",
+    "test_guard.py": "987ce87699ab20c916da7b0cca03792766363c42cc8d286afa5f7c6c81820442",
+    "run_guard_cpu.py": "054d445ca51090f584354657e2a8156948d76776c2fb094aa4b730ead6b292f0"
+  },
+  "input_sha256": {
+    "generated_code.py": "894c3dd8d13e1a1ad1ccea6145d754dc376578c4b9b1999797bb1711904e32b3",
+    "ROOT_FULL_GENERATED_SOURCE_REVIEW.json": "f06a21111e7b280980cef667cfa72c1889803abf6ac56099c9083afe2303f359"
+  },
+  "observed": {
+    "pid": 76130,
+    "ppid": 76124,
+    "pgid": 76130,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "native_executed": false,
+  "device_executed": false,
+  "model_quality_or_speed_proof": false
+}

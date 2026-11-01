@@ -1,0 +1,60 @@
+{
+  "utc": "2026-11-01T07:38:36.070663+00:00",
+  "source_sha256": "894c3dd8d13e1a1ad1ccea6145d754dc376578c4b9b1999797bb1711904e32b3",
+  "entire_generated_module_read": true,
+  "all_supplied_tests_read": true,
+  "supplied_tests": 21,
+  "supplied_test_ids": [
+    "TestCoalesceRangesBoundaryValues.test_empty_input",
+    "TestCoalesceRangesBoundaryValues.test_large_integers",
+    "TestCoalesceRangesBoundaryValues.test_negative_bounds",
+    "TestCoalesceRangesBoundaryValues.test_negative_bounds_can_stay_disjoint",
+    "TestCoalesceRangesMerging.test_drops_zero_length_ranges",
+    "TestCoalesceRangesMerging.test_drops_zero_length_ranges_but_keeps_non_empty",
+    "TestCoalesceRangesMerging.test_keeps_gapped_half_open_ranges_separate",
+    "TestCoalesceRangesMerging.test_merges_nested_and_duplicate_ranges",
+    "TestCoalesceRangesMerging.test_merges_overlapping_ranges",
+    "TestCoalesceRangesMerging.test_merges_touching_half_open_ranges",
+    "TestCoalesceRangesMerging.test_returns_sorted_list_of_tuples",
+    "TestCoalesceRangesMerging.test_sorts_input_ranges",
+    "TestCoalesceRangesMerging.test_zero_length_ranges_are_ignored_when_merging",
+    "TestCoalesceRangesMutation.test_does_not_mutate_input_on_success",
+    "TestCoalesceRangesMutation.test_does_not_mutate_input_on_type_error",
+    "TestCoalesceRangesMutation.test_does_not_mutate_input_on_value_error",
+    "TestCoalesceRangesValidation.test_equal_bounds_are_allowed_and_dropped",
+    "TestCoalesceRangesValidation.test_rejects_bool_end_endpoints",
+    "TestCoalesceRangesValidation.test_rejects_bool_start_endpoints",
+    "TestCoalesceRangesValidation.test_rejects_non_integer_endpoints",
+    "TestCoalesceRangesValidation.test_rejects_reversed_bounds"
+  ],
+  "entire_generated_reasoning_read": true,
+  "reasoning_read_ranges_characters": [
+    [
+      0,
+      17000
+    ],
+    [
+      17000,
+      34000
+    ],
+    [
+      34000,
+      48167
+    ]
+  ],
+  "reasoning_characters": 48167,
+  "reasoning_sha256": "9ee43eaba6d6150ab78a58a6aa2d47e1e255388e93fbcf9483bef5a5008b3b1a",
+  "response_sha256": "2f2fe4da0f7d5e833409e09ade1a5dd0bb2e11efc8bc8b82dd37fae12342bdd0",
+  "manual_findings": "Entire module/pure_is_integer helper/coalesce andALL21tests across4classes plusfull48167charreasoning manually read before execution. Localcopy/sort/merge; no endpointnormalizationcasts used; correct bool/nonint/reversed/zerodrop/touching/negative/large andnomutationpaths. Onlyunittest/copy imports andsafe deepcopytests; no I/O/network/dynamicexecution. No execution or broadqualityclaim yet.",
+  "reviewer_base_sha256": "a4f563a8b2d693bd0585be541007ffa87a8548648ed98ef3a1991c8b48e705db",
+  "unchanged_reference_and_negative_AST_sha256": {
+    "reference": "9b566d780170c46718208a15c98c7b0b29e3faf7d81de12881f92ffd94d54aa7",
+    "evaluate": "3b589f8dc1a8f7fc5fd5500ba3670ee35e3abd2135a0bf3992774f9cb395a193",
+    "no_touch": "2408c5a7201852c417a608a7cd432047631b8f4f010a77adf1ab653b0161be7a",
+    "mutating": "8df128d8c574109c24a308a326d4b1184d2e15bec4b93f08623ea89880247725",
+    "bool_accept": "6d03fca6dd0bef89a47487d455c1edaf3bc821ba0e22f5fd939ddf42082965b2",
+    "keep_empty": "ce60b8a13976ade2718fc09ad71f3136970815e581e20b9928b49bc48d4d4a5e"
+  },
+  "delta": "Scorer unchanged apart from reportscope label. Testcontrols adaptactualhelper/main selection byname, assertnoactualintcasts and21suppliedtests. Purehelperandrestrictedunusedcastpermissions unchanged; reference/cases/limits/fournegatives unchanged. FIRST newinput-matching12guard CPUBOTHhosts before FIRST generatedcode execution.",
+  "scope": "One short original codingmain only; no broadquality/equivalence/speedclaim."
+}

@@ -1,0 +1,33 @@
+{
+  "utc": "2026-11-01T08:24:08.765471+00:00",
+  "reviewer": "ROOT",
+  "source_sha256": "4c91eed80126309ada3746d0ed0a658f561ca9a5da6c64aa8f0abe76de5d57ec",
+  "entire_module_all_supplied_tests_read": true,
+  "supplied_tests_count": 19,
+  "entire_reasoning_read": true,
+  "reasoning_characters": 49759,
+  "reasoning_read_ranges": [
+    [
+      0,
+      17000
+    ],
+    [
+      17000,
+      34000
+    ],
+    [
+      34000,
+      49759
+    ]
+  ],
+  "findings": "Pure local-copy sorting and tuple accumulation; both endpoint int-not-bool validation precedes ordering, empty drop, overlap/touch merge with maxend; no input writes. Entire19 unittest bodies and main guard safe standardlibrary unittest only; no external IO or arbitrary imports. Invalid pair catches TypeError/ValueError toTypeError. No helper, intcasts, formatcalls or unsafe operations. Different natural reasoning length retained; no causal latency claim.",
+  "unchanged_reference_and_negative_AST_sha256": {
+    "reference": "9b566d780170c46718208a15c98c7b0b29e3faf7d81de12881f92ffd94d54aa7",
+    "evaluate": "3b589f8dc1a8f7fc5fd5500ba3670ee35e3abd2135a0bf3992774f9cb395a193",
+    "no_touch": "2408c5a7201852c417a608a7cd432047631b8f4f010a77adf1ab653b0161be7a",
+    "mutating": "8df128d8c574109c24a308a326d4b1184d2e15bec4b93f08623ea89880247725",
+    "bool_accept": "6d03fca6dd0bef89a47487d455c1edaf3bc821ba0e22f5fd939ddf42082965b2",
+    "keep_empty": "ce60b8a13976ade2718fc09ad71f3136970815e581e20b9928b49bc48d4d4a5e"
+  },
+  "execution_before_manual_read": false
+}

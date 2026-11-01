@@ -1,0 +1,39 @@
+{
+  "utc": "2026-11-01T08:00:33.532583+00:00",
+  "scope": "CODING_ONLY_NECESSARY_SHORT_SCREEN_REVERSED_CONFIRMATION_NOT_FORMAL_WINNER_OR_ACTIVATION",
+  "status": "CONDITIONAL_PLAN_REQUIRES_ALL8_CLOSED_FRESH_QUALIFIED_PREFLIGHT_AND_SEPARATE_SINGLE_ARM_ADMISSION",
+  "original_frozen_criteria_sha256": "9b6d6c75fece0ab2003f8515554532ea537ce93742bffd0056724d28396e834c",
+  "sameSol_eligibility_review_sha256": "dba77768eb6534c5ee151ce4f6ed363cf384f6a80d06f59a89b319869dc302fc",
+  "initial_A1": "C-MS2-1",
+  "initial_B1": "C-HGU-1",
+  "next_B2": "C-HGU-2",
+  "preselected_final_A2": "C-MS2-2",
+  "control_chosen_before_second_pair": true,
+  "no_control_substitution_to_MS1": true,
+  "minimum_native_rate_gain_percent": 5,
+  "maximum_cold_SHORT_same_coding_fixture_prefill_regression_percent": 3,
+  "all_task_correctness_lifecycle_resources_required_each_arm": true,
+  "first_pair": {
+    "native_rate_gain_percent": 6.445471745271014,
+    "short_prefill_regression_percent": 2.1439915299100054,
+    "different_output_lengths": true,
+    "not_equal_work_or_causal_speedup": true
+  },
+  "fixed_policy": "Exact original complete coding140/effort100/seed1/temp1/top_p1/request32768;1Mtotal/262144allowance/sameDSpark/Q8mode1/chunk4096/all40L22scale1/drafterunchanged/allCPUexpertsRAM/24CPU/stream0/DS4_COPY_DIRECT1/no dumps/unlimited nativeFSIZE",
+  "resource_bounds": "Unchangedwindow1200/soft1000/cleanup200/startup800/private80GiBzeroSwap+8hostmargin/root132runtime120/swapout1GiB/cache8/log4",
+  "prose_HGU_second_arm_blocked": {
+    "native_rate_vs_MS2_percent": -28.983494372607954,
+    "short_prefill_regression_percent": 6.802473626773375,
+    "cannot_replace_frozen_native_gate_with_shorter_client_time": true
+  },
+  "remaining_before_any_promotion": [
+    "Broaderfinite/image2+returntext/tool/cache/actualbeforeoutputcancel/recovery gates via separatelyqualifiedsource",
+    "Meaningfulprefill remains distinct from140token observation; no newpack8Kcoldbound extrapolation",
+    "Freshmatchedformalperformanceagainstactualselectednative92/configc43baseline andreplication",
+    "Separatelyqualifiedsingleexistingowneractivation andproductionaudit",
+    "Dependency-auditedexclusive losingpayloadcleanup afterwinningproductionverified"
+  ],
+  "automatic_next_arm": false,
+  "no_old_arm_replay_or_regrade": true,
+  "deployment_admitted": false
+}
