@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-01T13:17:09.253351+00:00",
+  "reviewer": "ROOT",
+  "entire_source_tests_driver_manually_read": true,
+  "source_sha256": {
+    "mxpack.cpp": "178229dc37b9c4907c604e1787b4acf7615a5f5c095375a6685f1b6a4ad10f40",
+    "test_codec.py": "2e3b27e7c2bd5e709c225e2ec81d3afd3e01798692e94c9fabe32cf8eac23122",
+    "run_cpu.py": "b1b9fcacf1864458440e82752739cb58b6282eb0b21b297bcee2b437bc91ec83"
+  },
+  "scope": "New codec supports down as well as gate/up, preserving all original FP4 nibbles/E8M0 exponents. Synthetic full actual matrix geometries, all finite exponent bytes/nibbles, and incomplete/NaN/oversize refusal. No inference or performance claim.",
+  "delta_from_previous_gate_up_codec": "Bounded rows 2304 to5120 so original [5120,2304] down is representable. All code manually read before FIRST checks.",
+  "supervision": "Child-only CPU30s/LinuxAS512MiB/nice15/CUDAhidden; parentwall90; whole process-group kill on timeout/interruption; orphan group is failure, never reported as clean."
+}

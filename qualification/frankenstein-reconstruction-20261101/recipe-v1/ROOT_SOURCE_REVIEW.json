@@ -1,0 +1,19 @@
+{
+  "utc": "2026-11-01T13:13:14.757813+00:00",
+  "reviewer": "ROOT",
+  "entire_source_tests_driver_manually_read": true,
+  "source_sha256": {
+    "reconstruction.py": "36f20ef551185a49793e0d1eb94b7e33994c2e0f4b527f9c0b7b432a2e3bd430",
+    "test_reconstruction.py": "7e754a760cc7f7654e39b1ff877a1351d7a24302540ffa41ea83d22dc16d8619",
+    "run_cpu.py": "48cd8848c8d14aed48014f0b508022f5b4796848d20d2160bfa330b5b7131618"
+  },
+  "scope": "Pure schema, explicit static CPU expert selection, native source-plane mapping and exact packed byte budgets. Does not admit weight acquisition, encoding, engine build or GPU execution.",
+  "reviewed_concerns": [
+    "No inferred actual GPU map from aggregate slots; empty profile rejected",
+    "Every sensitive-layer CPU expert covered before remaining capacity selected by actual use counts",
+    "No T16/exl3 reinterpretation, low-bit upconversion or expert pruning",
+    "Source weight and scale planes must match exact role/shape/dtype and complete bounds, no overlap",
+    "No prefill-only veto; full natural completion, quality and lifecycle gates needed",
+    "30s CPU/90s wall/Linux512MiB child-only controls before test import"
+  ]
+}

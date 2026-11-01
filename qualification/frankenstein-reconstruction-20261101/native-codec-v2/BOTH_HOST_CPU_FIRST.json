@@ -1,0 +1,27 @@
+{
+  "passed_each": true,
+  "controls_each": 9,
+  "source_sha256": {
+    "mxpack.cpp": "178229dc37b9c4907c604e1787b4acf7615a5f5c095375a6685f1b6a4ad10f40",
+    "test_codec.py": "2e3b27e7c2bd5e709c225e2ec81d3afd3e01798692e94c9fabe32cf8eac23122",
+    "run_cpu.py": "b1b9fcacf1864458440e82752739cb58b6282eb0b21b297bcee2b437bc91ec83"
+  },
+  "input_sha256": {},
+  "test_ids": [
+    "test_codec.NativeCodec.test_all_nibbles_and_finite_scale_bytes",
+    "test_codec.NativeCodec.test_effective_fp4_e8m0_values_unchanged",
+    "test_codec.NativeCodec.test_full_down_original_geometry",
+    "test_codec.NativeCodec.test_full_gate_up_original_geometry",
+    "test_codec.NativeCodec.test_incomplete_and_overlong_source_never_emitted",
+    "test_codec.NativeCodec.test_invalid_geometry_refused_before_read",
+    "test_codec.NativeCodec.test_multiple_rows_and_block_boundaries",
+    "test_codec.NativeCodec.test_nan_scale_refused_before_output",
+    "test_codec.NativeCodec.test_wrong_argument_names_and_trailing_junk_refused"
+  ],
+  "raw_proofs": {
+    "CPU-FIRST-mac.json": "ca5a4cada731c40bae9b71fa8697a363d65d5c228d637ed2968b1ea069632c03",
+    "CPU-FIRST-mac.log": "a51ecc7d384de8e4262eb6071f969809794e936f987dc074f0c85bbfbed7b4d7",
+    "CPU-FIRST-ubuntu.json": "0eeeb8cea288e6fc07d68840be6091e6264b88da5ef5586638180840eab6feb4",
+    "CPU-FIRST-ubuntu.log": "2c1abaddeff382b257c0b40fd08b2b837a7e5765029a1d4b07c56145a879e2b4"
+  }
+}

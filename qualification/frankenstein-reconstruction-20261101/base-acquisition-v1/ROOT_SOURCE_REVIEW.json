@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-01T13:06:39.460277+00:00",
+  "reviewer": "ROOT",
+  "manual_read_entire_source_tests_driver_manifest": true,
+  "changed_scope": "New separately authorized base-only acquisition namespace plus 256MiB/s maximum transfer/hash throttle; exact old revision/SHA bytes, source/HTTP/timeout/guard/disk/resume/no-retry behavior retained. New exact CPU proof required.",
+  "no_model_service_gpu_entrypoint": true,
+  "input_manifest_sha256": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b",
+  "source_map": {
+    "acquire.py": "4ceef2a4a2cf2d5b17b004afc9b2798bc0d96e0d406876fda3808991556f02f2",
+    "test_acquire.py": "832baab833651c71a1253582d59670b20a76595f721a7ec8fe2d04085b069d80",
+    "run_cpu.py": "419086591684d83362c4fcf0e321bd02af51b8a1439d3724d1451aacc9325863",
+    "ASSET_MANIFEST.json": "22ecce3e7085e29520fadaa67d603beb8cc0905f834ff3563029f6038825034b"
+  },
+  "admitted_before_cpu": true,
+  "constraints": [
+    "Idle/default/exact bound current owner before source staging and whole-model transfer",
+    "Never reuse closed old arms or infer model speed from acquisition proof",
+    "Root132 reserve; exact Content-Range and full SHA; no automatic retry; no external code executed",
+    "No native/driver/service/cache mutation"
+  ]
+}

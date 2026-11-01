@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-01T13:20:03.220274+00:00",
+  "reviewer": "ROOT",
+  "entire_source_tests_driver_manually_read": true,
+  "source_sha256": {
+    "reconstruction.py": "36f20ef551185a49793e0d1eb94b7e33994c2e0f4b527f9c0b7b432a2e3bd430",
+    "source_plan.py": "9d7997c356923ab693a4109089d12fe66f89989316e3393c337f8490140b03ca",
+    "test_source_plan.py": "f82d3b10e1c5920fa64d5127ecda78fbf3346a5e5f03c0580dae398fde10c6c6",
+    "run_cpu.py": "15cf9cbaf8c4dcd89e6bf6f548f8511aeaf01a80915c7e1b4d1ac471a09f95f9"
+  },
+  "input_sha256": {
+    "header-model-00027-of-00048.safetensors.json": "860a9df93cce88f03014595bb85f2ceb6a1e09e0e046b31fa133f9765eca8fca",
+    "header-model-00028-of-00048.safetensors.json": "498514d0839bf906b5c994e434d971963c50f10e8489535c12802bb25e3ebbc2",
+    "header-model-00029-of-00048.safetensors.json": "ed22397485b4cf6db5ed98fa9d50a0cf549ee68e0138a2308b4eca399f0540bb",
+    "header-model-00030-of-00048.safetensors.json": "702a62d9b6e0826b093b5bdb26ff7b9ac3bd5ffc82b2654363d9b8257e8b9e32",
+    "header-model-00031-of-00048.safetensors.json": "4e53fbf1a834d19fa99a6e8a6ba8cbe5a539daf1d8febebc9b59f97895f02c35",
+    "official-HF-metadata-FIRST.json": "f4f8d13ede75d7ad4918c602d6b5f3e0c6981f2afa4f8e7bc685d4292d51045a",
+    "official-index-FIRST.json": "74b0686a3d2891980d5e303251b075a3bccae2c2ff650747db2620a649b98fa8"
+  },
+  "scope": "All3840 original L24-28 gate/up weight+scale ranges on actual source metadata only, distinct from encoding/full-file SHA, numerical/model or GPU qualification. No new runtime or candidate admitted.",
+  "actual_metadata_source": "Immutable official1017 index, metadata + Range206 strict source headers27-31, no source code execution or model payload transfer.",
+  "manual_checks": [
+    "Complete actual source coverage and correct I8/E8M0 shapes",
+    "No silent missing scale or overlapping/source-out-of-file ranges",
+    "IQ3_S from original source, not low-bit upconversion",
+    "CPU1870 IDs left unfrozen until actual allocator map obtained",
+    "No exclusive prefill veto in later whole-model selection"
+  ]
+}

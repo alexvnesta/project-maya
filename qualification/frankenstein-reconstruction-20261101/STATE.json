@@ -1,0 +1,36 @@
+{
+  "utc": "2026-11-01T13:27:12.849362+00:00",
+  "status": "BASE_TRANSFER_RESUMED_COMPONENTS_CPU_QUALIFIED_NATIVE_HYBRID_NOT_BUILT",
+  "user_authorization": "Work on Frankenstein using supplied Oct30 followup and DSX; local reconstruction, not private artifact identity.",
+  "context_total": 1048576,
+  "output_allowance": 262144,
+  "effort": 100,
+  "drafter": true,
+  "production_changed": false,
+  "gpu_run_started": false,
+  "old_arms_closed": true,
+  "earlier_HGU_is_not_complete_S2": true,
+  "new_base_acquisition_namespace": "base-acquisition-v1",
+  "target": "Maya-S + IQ3_S gate/up L24-28 + selective original MXFP4 CPU experts; exact coverage and runtime qualification required",
+  "exact_author_expert_map_available": false,
+  "base_acquisition": {
+    "first_pid": 1295149,
+    "first_outcome": "BUSY_DEFERRED_NO_FAULT_16508780544_BYTES_RETAINED",
+    "resume_pid": 1309930,
+    "qualification_sha256": "0d3f552658cfd756b687b4f784f245d3aa2faf61fac065fd872e7783d697f56c",
+    "path": "base-acquisition-v1",
+    "complete": false
+  },
+  "component_controls_each_host": {
+    "base_acquisition": 43,
+    "pure_recipe": 26,
+    "native_three_role_codec": 9,
+    "official_source_ranges": 7
+  },
+  "CPU_controls_are_not_model_quality_or_speed": true,
+  "hybrid_GPU_tested": false,
+  "hybrid_native_built": false,
+  "plan": "PLAN.json",
+  "component_proofs": "FIRST_COMPONENT_PROOFS.json",
+  "original_source_plan": "source-plan-v1/GATE_UP_ORIGINAL_SOURCE_PLAN_FIRST.json"
+}

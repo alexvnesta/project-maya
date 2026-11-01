@@ -1,0 +1,27 @@
+{
+  "utc": "2026-11-01T13:27:12.849362+00:00",
+  "source": "Owned historical formal-prefillB1 engine.log/startup audits, source-bound actual1M Maya-S/adff TP2",
+  "actual_counts": {
+    "gpu_trunk_slots": 8870,
+    "CPU_all_RAM_experts": 6490,
+    "CPU_RAM_GB_rounded": 71.9,
+    "gpu0_free_MiB_rounded": 1918,
+    "gpu1_free_MiB_rounded": 9534,
+    "CPU_pick_share_in_one_short_task_percent": 0.5,
+    "CPU_copy_load_seconds": 407.6
+  },
+  "target_overlay_bytes": {
+    "native_all_three_roles_1870": 35157196800,
+    "IQ3S_L24_28_gate_up_all_experts": 19464192000,
+    "IQ3S_growth_vs_MayaS_gate_up": 7785676800
+  },
+  "capacity_conclusions": [
+    "Configured1M original Maya-S already ran, but hybrid1M fit is NOT established",
+    "35.16GB native pack replaces old IQ CPU bytes; it is not all net extraRAM if implemented correctly",
+    "Keeping both selected IQ CPU copies and native copies would wasteRAM and likely violate private80GiB fence",
+    "IQ3S growth can move additional experts out ofVRAM and increaseCPU RAM; exact selected IDs/placement needed",
+    "Do not infer ~103tok/s or2x whole-model speed from document per-expert claims or short decode",
+    "Latest Maya CPU has optimized IQ2/IQ3 rows and Zen-family PDEP avoidance for sometypes, so benchmark native CPU vs actual current rows rather than a generic slow-PDEP assumption"
+  ],
+  "model_quality_or_speed_proof": false
+}

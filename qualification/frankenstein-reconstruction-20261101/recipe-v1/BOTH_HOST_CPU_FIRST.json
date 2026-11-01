@@ -1,0 +1,44 @@
+{
+  "passed_each": true,
+  "controls_each": 26,
+  "source_sha256": {
+    "reconstruction.py": "36f20ef551185a49793e0d1eb94b7e33994c2e0f4b527f9c0b7b432a2e3bd430",
+    "test_reconstruction.py": "7e754a760cc7f7654e39b1ff877a1351d7a24302540ffa41ea83d22dc16d8619",
+    "run_cpu.py": "48cd8848c8d14aed48014f0b508022f5b4796848d20d2160bfa330b5b7131618"
+  },
+  "input_sha256": {},
+  "test_ids": [
+    "test_reconstruction.Reconstruction.test_all_three_native_roles_and_exact_bytes",
+    "test_reconstruction.Reconstruction.test_bad_count_types_shapes_and_zero_rows",
+    "test_reconstruction.Reconstruction.test_budget_native_and_iq3_s_growth",
+    "test_reconstruction.Reconstruction.test_duplicate_invalid_or_boolean_gpu_ids",
+    "test_reconstruction.Reconstruction.test_empty_profile_not_fake_placement",
+    "test_reconstruction.Reconstruction.test_every_sensitive_ram_expert_included",
+    "test_reconstruction.Reconstruction.test_exact_native_count_and_no_gpu_overlap",
+    "test_reconstruction.Reconstruction.test_exact_original_weight_scale_range",
+    "test_reconstruction.Reconstruction.test_insufficient_cpu_set_refused",
+    "test_reconstruction.Reconstruction.test_misaligned_source_identity_refused",
+    "test_reconstruction.Reconstruction.test_missing_actual_gpu_map_refused",
+    "test_reconstruction.Reconstruction.test_native_coverage_count_not_inferred",
+    "test_reconstruction.Reconstruction.test_native_record_duplicate_unordered_or_drafter_refused",
+    "test_reconstruction.Reconstruction.test_native_record_geometry_and_contiguous_offsets",
+    "test_reconstruction.Reconstruction.test_newer_iq3_s_supersedes_t16",
+    "test_reconstruction.Reconstruction.test_nonofficial_shard_refused",
+    "test_reconstruction.Reconstruction.test_not_prefill_only_selection",
+    "test_reconstruction.Reconstruction.test_outside_file_or_overlapping_planes_refused",
+    "test_reconstruction.Reconstruction.test_profile_trunk_and_drafter",
+    "test_reconstruction.Reconstruction.test_recipe_preserves_capacity_effort_drafter",
+    "test_reconstruction.Reconstruction.test_remainder_ranked_by_count_then_layer_expert",
+    "test_reconstruction.Reconstruction.test_selection_deterministic_and_source_bound",
+    "test_reconstruction.Reconstruction.test_sensitive_set_cannot_be_truncated",
+    "test_reconstruction.Reconstruction.test_target_not_boolean_zero_or_overbudget",
+    "test_reconstruction.Reconstruction.test_wrong_original_shape_dtype_or_bool",
+    "test_reconstruction.Reconstruction.test_wrong_profile_lengths"
+  ],
+  "raw_proofs": {
+    "CPU-FIRST-mac.json": "b1333927c2d9933ddb6041bd67f65a2609d5ecfa1cafb8339d5e8a89d5e79035",
+    "CPU-FIRST-mac.log": "4e54d33304dc823afedac7d201e8112f2adf74c5a2528049fa642e2b09932be7",
+    "CPU-FIRST-ubuntu.json": "c43f02192a8fd211ca1d66a546af323316d1efcfd76aa1aa3d678bd8e6c1ee9d",
+    "CPU-FIRST-ubuntu.log": "1cbc974fb1d86f285dd504aa565796872765617af786b3ef237fb130612e60fd"
+  }
+}

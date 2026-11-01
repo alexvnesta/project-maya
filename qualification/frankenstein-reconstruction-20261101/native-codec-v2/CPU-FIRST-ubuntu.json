@@ -1,0 +1,42 @@
+{
+  "physical_host": "ubuntu",
+  "passed": true,
+  "returncode": 0,
+  "controls": 9,
+  "failures": 0,
+  "errors": 0,
+  "test_ids": [
+    "test_codec.NativeCodec.test_all_nibbles_and_finite_scale_bytes",
+    "test_codec.NativeCodec.test_effective_fp4_e8m0_values_unchanged",
+    "test_codec.NativeCodec.test_full_down_original_geometry",
+    "test_codec.NativeCodec.test_full_gate_up_original_geometry",
+    "test_codec.NativeCodec.test_incomplete_and_overlong_source_never_emitted",
+    "test_codec.NativeCodec.test_invalid_geometry_refused_before_read",
+    "test_codec.NativeCodec.test_multiple_rows_and_block_boundaries",
+    "test_codec.NativeCodec.test_nan_scale_refused_before_output",
+    "test_codec.NativeCodec.test_wrong_argument_names_and_trailing_junk_refused"
+  ],
+  "source_sha256": {
+    "mxpack.cpp": "178229dc37b9c4907c604e1787b4acf7615a5f5c095375a6685f1b6a4ad10f40",
+    "test_codec.py": "2e3b27e7c2bd5e709c225e2ec81d3afd3e01798692e94c9fabe32cf8eac23122",
+    "run_cpu.py": "b1b9fcacf1864458440e82752739cb58b6282eb0b21b297bcee2b437bc91ec83"
+  },
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MALLOC_ARENA_MAX": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "CPU_seconds": [
+    30,
+    30
+  ],
+  "Linux_AS_bytes": [
+    536870912,
+    536870912
+  ],
+  "nice": 15,
+  "pid": 1304435,
+  "scope": "Lossless CPU byte-layout codec only; no native inference/GPU/model quality or speed proof"
+}
