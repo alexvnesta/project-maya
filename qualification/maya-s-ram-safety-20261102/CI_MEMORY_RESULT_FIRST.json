@@ -1,0 +1,73 @@
+{
+  "utc": "2026-11-02T03:31:14.418296+00:00",
+  "soft_high_each_GiB": 4,
+  "hard_limits_preserved": true,
+  "no_restart": true,
+  "units": [
+    {
+      "unit": "gha-drugadopt.service",
+      "actual_returncode": 0,
+      "stderr": "",
+      "after": {
+        "Id": "gha-drugadopt.service",
+        "ActiveState": "active",
+        "DropInPaths": "/etc/systemd/system/gha-drugadopt.service.d/10-restrictsuidsgid.conf /etc/systemd/system/gha-drugadopt.service.d/20-cpu-quota-2026-09-21.conf /etc/systemd/system/gha-drugadopt.service.d/30-proc-visibility-2026-10-04.conf /etc/systemd/system/gha-drugadopt.service.d/40-bwrap-proc-compatibility-2026-10-07.conf /etc/systemd/system.control/gha-drugadopt.service.d/50-MemoryHigh.conf",
+        "InvocationID": "d510bec750fb4ce9bfd15fc450f8fe04",
+        "MainPID": "558390",
+        "ControlGroup": "/system.slice/gha-drugadopt.service",
+        "MemoryCurrent": "1448689664",
+        "MemoryHigh": "4294967296",
+        "MemoryMax": "17179869184"
+      }
+    },
+    {
+      "unit": "gha-drugadopt-ci-2.service",
+      "actual_returncode": 0,
+      "stderr": "",
+      "after": {
+        "Id": "gha-drugadopt-ci-2.service",
+        "ActiveState": "active",
+        "DropInPaths": "/etc/systemd/system/gha-drugadopt-ci-2.service.d/10-restrictsuidsgid.conf /etc/systemd/system/gha-drugadopt-ci-2.service.d/20-cpu-quota-2026-09-21.conf /etc/systemd/system/gha-drugadopt-ci-2.service.d/30-proc-visibility-2026-10-04.conf /etc/systemd/system/gha-drugadopt-ci-2.service.d/40-bwrap-proc-compatibility-2026-10-07.conf /etc/systemd/system.control/gha-drugadopt-ci-2.service.d/50-MemoryHigh.conf",
+        "InvocationID": "8fc5ef151d45456885bd3f3370b4ced1",
+        "MainPID": "558361",
+        "ControlGroup": "/system.slice/gha-drugadopt-ci-2.service",
+        "MemoryCurrent": "117706752",
+        "MemoryHigh": "4294967296",
+        "MemoryMax": "17179869184"
+      }
+    },
+    {
+      "unit": "gha-drugadopt-ci-3.service",
+      "actual_returncode": 0,
+      "stderr": "",
+      "after": {
+        "Id": "gha-drugadopt-ci-3.service",
+        "ActiveState": "active",
+        "DropInPaths": "/etc/systemd/system/gha-drugadopt-ci-3.service.d/10-restrictsuidsgid.conf /etc/systemd/system/gha-drugadopt-ci-3.service.d/20-cpu-quota-2026-09-21.conf /etc/systemd/system/gha-drugadopt-ci-3.service.d/30-proc-visibility-2026-10-04.conf /etc/systemd/system/gha-drugadopt-ci-3.service.d/40-bwrap-proc-compatibility-2026-10-07.conf /etc/systemd/system.control/gha-drugadopt-ci-3.service.d/50-MemoryHigh.conf",
+        "InvocationID": "1a79b04d5165495fb7c6dbaf6e1686bf",
+        "MainPID": "558389",
+        "ControlGroup": "/system.slice/gha-drugadopt-ci-3.service",
+        "MemoryCurrent": "124739584",
+        "MemoryHigh": "4294967296",
+        "MemoryMax": "17179869184"
+      }
+    },
+    {
+      "unit": "actions.runner.orchestrated-bio-scopeify.ubuntuserver-scopeify.service",
+      "actual_returncode": 0,
+      "stderr": "",
+      "after": {
+        "Id": "actions.runner.orchestrated-bio-scopeify.ubuntuserver-scopeify.service",
+        "ActiveState": "active",
+        "DropInPaths": "/etc/systemd/system.control/actions.runner.orchestrated-bio-scopeify.ubuntuserver-scopeify.service.d/50-MemoryHigh.conf",
+        "InvocationID": "15aaa5e184fa4a8a86ed2b0caf5abf20",
+        "MainPID": "558414",
+        "ControlGroup": "/system.slice/actions.runner.orchestrated-bio-scopeify.ubuntuserver-scopeify.service",
+        "MemoryCurrent": "92254208",
+        "MemoryHigh": "4294967296",
+        "MemoryMax": "infinity"
+      }
+    }
+  ],
+  "rollback": "systemctl set-property UNIT MemoryHigh=infinity"
+}

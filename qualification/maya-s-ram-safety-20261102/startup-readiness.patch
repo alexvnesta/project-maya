@@ -1,0 +1,35 @@
+--- a/hosting_ready.py
++++ b/hosting_ready.py
+@@ -12,6 +12,9 @@
+     if len(rows)!=2 or sorted(x[0] for x in rows)!=['0','1'] or any(x[1:]!=('50976','1593') for x in rows):raise RuntimeError('Actual both-GPU Q8 checks missing')
+     return {'passed':True,'devices':[0,1],'int8_each':50976,'scales_each':1593}
+ def main():
++    import os, sys
++    sys.path.insert(0,str(D/'runtime-native-vision-v2'))
++    from serve.memory_admission import wait_for_safe_memory
+     cfg=json.loads((D/'config.json').read_text());base='http://127.0.0.1:18141';deadline=time.monotonic()+1100
+     while True:
+         try:
+@@ -21,14 +24,21 @@
+         except (OSError,ValueError,KeyError,IndexError):pass
+         if time.monotonic()>deadline:raise RuntimeError('Hosted model readiness timeout')
+         time.sleep(3)
++    gate=wait_for_safe_memory(os.environ,deadline)
++    (D/'startup-memory-admission.json').write_text(json.dumps({'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'invocation':os.environ.get('INVOCATION_ID'),'readings':gate,'before_first_readiness_POST':True},indent=2)+'\n')
+     body={'model':cfg['model_name'],'messages':[{'role':'user','content':'Reply with exactly READY and no other final answer.'}],
+           'temperature':0,'seed':1,'reasoning_budget_tokens':0,'max_tokens':256}
+     started=time.monotonic()
+-    with urllib.request.urlopen(urllib.request.Request(base+'/v1/chat/completions',data=json.dumps(body).encode(),headers={'Content-Type':'application/json'}),timeout=180) as f:answer=json.load(f)
++    try:
++        with urllib.request.urlopen(urllib.request.Request(base+'/v1/chat/completions',data=json.dumps(body).encode(),headers={'Content-Type':'application/json'}),timeout=180) as f:answer=json.load(f)
++    except urllib.error.HTTPError as error:
++        (D/'startup-readiness-http-failure.json').write_text(json.dumps({'status':error.code,'body':error.read(4096).decode('utf-8',errors='replace'),'inference_retried':False},indent=2)+'\n')
++        raise
+     c=answer['choices'][0]
+     if c.get('finish_reason')!='stop' or c['message'].get('content','').strip()!='READY':raise RuntimeError('Hosted real READY failed')
+     preflight=json.loads((D/'startup-preflight.json').read_text())
+     with pathlib.Path(cfg['log']).open('rb') as f:f.seek(preflight['engine_log_offset']);native_log=f.read().decode('utf-8',errors='replace')
++    if 'RAM conversation budget: 2.15 GB (LRU states spill to the folder; one RAM slot is always kept)' not in native_log:raise RuntimeError('Native saved-state RAM budget not active')
+     copies=re.findall(r'(\d+) routed experts on the CPU lane .*?: (\d+) copied into RAM',native_log)
+     if not copies or copies[-1][0]!=copies[-1][1]:raise RuntimeError('Hosted placement did not copy every CPU expert')
+     if copies[-1]!=('6490','6490') or 'no disk fallback' not in native_log:raise RuntimeError('Maya-S allCPU RAM placement differs')

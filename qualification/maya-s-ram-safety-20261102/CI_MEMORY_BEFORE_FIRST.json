@@ -1,0 +1,46 @@
+{
+  "gha-drugadopt.service": {
+    "Id": "gha-drugadopt.service",
+    "ActiveState": "active",
+    "DropInPaths": "/etc/systemd/system/gha-drugadopt.service.d/10-restrictsuidsgid.conf /etc/systemd/system/gha-drugadopt.service.d/20-cpu-quota-2026-09-21.conf /etc/systemd/system/gha-drugadopt.service.d/30-proc-visibility-2026-10-04.conf /etc/systemd/system/gha-drugadopt.service.d/40-bwrap-proc-compatibility-2026-10-07.conf",
+    "InvocationID": "d510bec750fb4ce9bfd15fc450f8fe04",
+    "MainPID": "558390",
+    "ControlGroup": "/system.slice/gha-drugadopt.service",
+    "MemoryCurrent": "1448689664",
+    "MemoryHigh": "infinity",
+    "MemoryMax": "17179869184"
+  },
+  "gha-drugadopt-ci-2.service": {
+    "Id": "gha-drugadopt-ci-2.service",
+    "ActiveState": "active",
+    "DropInPaths": "/etc/systemd/system/gha-drugadopt-ci-2.service.d/10-restrictsuidsgid.conf /etc/systemd/system/gha-drugadopt-ci-2.service.d/20-cpu-quota-2026-09-21.conf /etc/systemd/system/gha-drugadopt-ci-2.service.d/30-proc-visibility-2026-10-04.conf /etc/systemd/system/gha-drugadopt-ci-2.service.d/40-bwrap-proc-compatibility-2026-10-07.conf",
+    "InvocationID": "8fc5ef151d45456885bd3f3370b4ced1",
+    "MainPID": "558361",
+    "ControlGroup": "/system.slice/gha-drugadopt-ci-2.service",
+    "MemoryCurrent": "117706752",
+    "MemoryHigh": "infinity",
+    "MemoryMax": "17179869184"
+  },
+  "gha-drugadopt-ci-3.service": {
+    "Id": "gha-drugadopt-ci-3.service",
+    "ActiveState": "active",
+    "DropInPaths": "/etc/systemd/system/gha-drugadopt-ci-3.service.d/10-restrictsuidsgid.conf /etc/systemd/system/gha-drugadopt-ci-3.service.d/20-cpu-quota-2026-09-21.conf /etc/systemd/system/gha-drugadopt-ci-3.service.d/30-proc-visibility-2026-10-04.conf /etc/systemd/system/gha-drugadopt-ci-3.service.d/40-bwrap-proc-compatibility-2026-10-07.conf",
+    "InvocationID": "1a79b04d5165495fb7c6dbaf6e1686bf",
+    "MainPID": "558389",
+    "ControlGroup": "/system.slice/gha-drugadopt-ci-3.service",
+    "MemoryCurrent": "124739584",
+    "MemoryHigh": "infinity",
+    "MemoryMax": "17179869184"
+  },
+  "actions.runner.orchestrated-bio-scopeify.ubuntuserver-scopeify.service": {
+    "Id": "actions.runner.orchestrated-bio-scopeify.ubuntuserver-scopeify.service",
+    "ActiveState": "active",
+    "DropInPaths": "",
+    "InvocationID": "15aaa5e184fa4a8a86ed2b0caf5abf20",
+    "MainPID": "558414",
+    "ControlGroup": "/system.slice/actions.runner.orchestrated-bio-scopeify.ubuntuserver-scopeify.service",
+    "MemoryCurrent": "92254208",
+    "MemoryHigh": "infinity",
+    "MemoryMax": "infinity"
+  }
+}

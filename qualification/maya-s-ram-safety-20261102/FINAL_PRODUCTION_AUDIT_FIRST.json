@@ -1,0 +1,151 @@
+{
+  "utc": "2026-11-02T04:51:41.893186+00:00",
+  "status": "RAM_SAFETY_COMPLETE_MAYAS_TP2_ACTIVE_VERIFIED",
+  "qualification_sha256": "96f85917915270f2248734f2d670c76d3be86453eff0fe6cfabf34bfd1a5cf55",
+  "selected_identity": {
+    "native_pid": 3660591,
+    "native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+    "config_sha256": "429255f61cf01c279c863e8659c0939e9243baea92e95d580731ea6d398b1dc2",
+    "context": 1048576,
+    "output_default": 262144,
+    "images": true,
+    "TP": 2,
+    "prefill_chunk": 4096,
+    "DSpark": true,
+    "Q8": [
+      1,
+      1
+    ],
+    "prompt_skip_mode": 1,
+    "runtime_ablation": true,
+    "CPU_experts": 6490,
+    "all_CPU_experts_RAM": true,
+    "GPU_trunk_experts": 8870,
+    "GPU_slot_basis": "Matched qualified original TP2 startup and current complete all6490 CPU count; TP replicas not double-counted",
+    "start_binding": {
+      "invocation": "be8949bd111b48209c4eb42163989fb4",
+      "main_pid": 3660556,
+      "native_pid": 3660591,
+      "native_start_ticks": 186273470
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-mayas-tp2-1m-chunk4096-20261101",
+    "model": "Maya-S IQ2_XXS",
+    "served_model_alias": "deepseek-v4.1-flash-iq2-xs",
+    "RAM_policy": {
+      "saved_RAM_slots": 2,
+      "saved_RAM_GiB_soft": 2,
+      "one_large_state_and_serialization_peak_can_exceed_budget": true,
+      "new_request_min_available_GiB": 8,
+      "memory_some_avg10_reject_at_percent": 10,
+      "new_request_pressure_status": 503,
+      "active_request_cancelled_by_guard": false,
+      "native_model_capacity_quality_unchanged": true
+    },
+    "deployment_revision": "ramguard-20261102"
+  },
+  "actual_controller_exit0": true,
+  "controller_elapsed_seconds": 609.5098037901334,
+  "old_native_API_close": {
+    "binding": {
+      "invocation": "7da49fdd6dc74e75b5faa4d45c4406dc",
+      "main_pid": 3643022,
+      "native_pid": 3643085,
+      "native_start_ticks": 186153753
+    },
+    "before": {
+      "ActiveState": "inactive",
+      "InvocationID": "7da49fdd6dc74e75b5faa4d45c4406dc",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainCode": "1",
+      "ExecMainStatus": "0"
+    },
+    "native_close": {
+      "utc": "2026-11-02T04:40:08.730899+00:00",
+      "server_pid": 3643022,
+      "native_pid": 3643085,
+      "returncode": 0,
+      "closed": true
+    },
+    "after": {
+      "ActiveState": "inactive",
+      "InvocationID": "7da49fdd6dc74e75b5faa4d45c4406dc",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainCode": "1",
+      "ExecMainStatus": "0"
+    },
+    "passed": true,
+    "before_raw": "ActiveState=inactive\nInvocationID=7da49fdd6dc74e75b5faa4d45c4406dc\nMainPID=0\nResult=success\nExecMainCode=1\nExecMainStatus=0\n",
+    "after_raw": "ActiveState=inactive\nInvocationID=7da49fdd6dc74e75b5faa4d45c4406dc\nMainPID=0\nResult=success\nExecMainCode=1\nExecMainStatus=0\n"
+  },
+  "public": {
+    "unauthenticated_models": 401,
+    "authenticated_models": 200,
+    "SSE_done": true,
+    "finish": "stop",
+    "known_answer_passed": true,
+    "content": "READY"
+  },
+  "actual_release_file_recheck_count": 979,
+  "startup_preflight_verified_all979": true,
+  "startup_admission_readings": {
+    "utc": "2026-11-02T04:50:08.765522+00:00",
+    "invocation": "be8949bd111b48209c4eb42163989fb4",
+    "readings": {
+      "available_bytes": 42365267968,
+      "some_avg10": 8.45,
+      "floor_GiB": 8.0
+    },
+    "before_first_readiness_POST": true
+  },
+  "unit": "ActiveState=active\nSubState=running\nRestart=no\nMemoryCurrent=77546192896\nMemoryPeak=118458638336\nMemorySwapCurrent=73342976\nMemoryHigh=infinity\nMemoryMax=infinity\n",
+  "router": "ActiveState=active\nSubState=running\nRestart=no\n",
+  "CI_memory": {
+    "gha-drugadopt.service": {
+      "MainPID": "558390",
+      "MemoryHigh": "4294967296",
+      "MemoryMax": "17179869184"
+    },
+    "gha-drugadopt-ci-2.service": {
+      "MainPID": "558361",
+      "MemoryHigh": "4294967296",
+      "MemoryMax": "17179869184"
+    },
+    "gha-drugadopt-ci-3.service": {
+      "MainPID": "558389",
+      "MemoryHigh": "4294967296",
+      "MemoryMax": "17179869184"
+    },
+    "actions.runner.orchestrated-bio-scopeify.ubuntuserver-scopeify.service": {
+      "MainPID": "558414",
+      "MemoryHigh": "4294967296",
+      "MemoryMax": "infinity"
+    }
+  },
+  "work": {
+    "active": 0,
+    "queued": 0,
+    "admission_reserved": 0
+  },
+  "MemAvailable_GiB": 39.51874923706055,
+  "SwapFree_GiB": 2.6714859008789062,
+  "native_memory": {
+    "VmRSS": "75457220 kB",
+    "RssAnon": "71538692 kB",
+    "RssFile": "399356 kB",
+    "RssShmem": "3519172 kB",
+    "VmSwap": "48632 kB"
+  },
+  "root_free_GiB": 729.9919776916504,
+  "quarantine": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/maintenance/mayas-ram-safety-20261102/QUARANTINE_RESULT_FIRST.json",
+  "failed_v1_v2_remain_HOLD": true,
+  "two_separate_verified_baseline_recoveries_preserved": true,
+  "scope_limits": [
+    "No new whole-model speed claim",
+    "No near-filled1M or full262144generation bound established",
+    "Saved-cache2GiB is soft: one large state and serialization peak may exceed it",
+    "New admission cannot prevent every allocation spike inside an already-running request",
+    "OS swap observed; copied CPU RAM tier is not a claim that every process page is physically resident"
+  ]
+}
