@@ -1,3 +1,5 @@
+Current selection: **original Maya-S TP2**, with1,048,576 total context,262,144 output allowance, DSpark/conf.65, Q8/check1/1, mode1, L22/all40 projection, chunk4096 and all6,490 CPU experts in RAM. `config.example.json` describes this selected profile. Its new cache/profile/lane namespaces must not load older model state. The legacy API model alias remains `deepseek-v4.1-flash-iq2-xs` for existing client compatibility; pack/release/native identity determines the actual model. See `PROVENANCE.json` and `../../qualification/maya-s-default-20261101/` for the actual activation and cleanup evidence. Portable templates require deployment-specific qualification.
+
 # Hosted Strata integration
 
 Our deployed API derives from [Strata](https://github.com/Niko1221/Strata) commit

@@ -1,0 +1,124 @@
+{
+  "status": "MAYAS_TP2_DEFAULT_ACTIVE_VERIFIED_CLEANUP_COMPLETE",
+  "authorization": "Alex selected Maya-S TP2 default and requested other unwanted DeepSeek setups removed. May interrupt DeepSeek inference.",
+  "context_total": 1048576,
+  "output_allowance": 262144,
+  "drafter": true,
+  "source_native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+  "source_native": "maya145-mayas-v1/native-build-r2-FIRST/maya-ds4",
+  "selected_weights": "Published original Maya-S IQ2_XXS eight-asset revision d1fc01009f21e26157acb6858c315d0365483b72, re-downloaded under s2-reconstruction-v1/base-acquisition-v1/assets",
+  "scope": "No more Frankenstein model arms or matched baseline. Preserve completed RAM-policy D0 and earlier failures. Rebind exact old qualified Maya-S metadata to current verified assets; qualify/activate existing-owner production profile and check availability; then exact audited unused model-payload cleanup.",
+  "settings_preserved": [
+    "1M total context",
+    "262144 output",
+    "effort100",
+    "DSpark.65 unchanged published drafter",
+    "native images",
+    "Q8/check1/1",
+    "mode1",
+    "L22scale1/all40projection",
+    "24CPU/allCPUexpertsRAM/stream0",
+    "chunk4096"
+  ],
+  "selected_profile_flags": {
+    "TP": 2,
+    "DS4_COPY_DIRECT": "1",
+    "DS4_TP_GGUF_UNEVEN": "1",
+    "DS4_TP_CHECK": "1",
+    "DS4_AR2": "1"
+  },
+  "no_global_performance_superiority_claim": true,
+  "note": "User explicitly chooses Maya-S TP2 despite prior cold-prefill gate. Covered quality/coding/prose/lifecycle source/raw receipts must be verified, no bypass of actual serving checks.",
+  "result": {
+    "status": "MAYAS_TP2_DEFAULT_ACTIVE_UNUSED_WEIGHTS_REMOVED",
+    "utc": "2026-11-01T23:59:42.663755+00:00",
+    "selected_release": "deepseek-maya-s-tp2-1m-vision-q8-yoco1-output256k-20261101",
+    "verified": {
+      "passed": true,
+      "selected_identity": {
+        "native_pid": 3038339,
+        "native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+        "config_sha256": "12fb4c1731cca16b6f7e8dd17bcf0b7431f2c34f6d4cc3358e9e436fa9c7910a",
+        "context": 1048576,
+        "output_default": 262144,
+        "images": true,
+        "TP": 2,
+        "prefill_chunk": 4096,
+        "DSpark": true,
+        "Q8": [
+          1,
+          1
+        ],
+        "prompt_skip_mode": 1,
+        "runtime_ablation": true,
+        "CPU_experts": 6490,
+        "all_CPU_experts_RAM": true,
+        "GPU_trunk_experts": 8870,
+        "GPU_slot_basis": "Matched qualified original TP2 startup and current complete all6490 CPU count; TP replicas not double-counted",
+        "start_binding": {
+          "invocation": "ccf903d3ad9949fb8bc14418a2c41781",
+          "main_pid": 3038278,
+          "native_pid": 3038339,
+          "native_start_ticks": 184465859
+        },
+        "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-mayas-tp2-1m-chunk4096-20261101",
+        "model": "Maya-S IQ2_XXS",
+        "served_model_alias": "deepseek-v4.1-flash-iq2-xs"
+      },
+      "public": {
+        "unauthenticated_models": 401,
+        "authenticated_models": 200,
+        "SSE_done": true,
+        "finish": "stop",
+        "known_answer_passed": true,
+        "content": "READY"
+      },
+      "health": {
+        "status": "ok",
+        "max_context": 1048576,
+        "model": "deepseek-v4.1-flash-iq2-xs",
+        "images": true,
+        "api_key": false,
+        "image_generation": false,
+        "loaded": true,
+        "service": "strata",
+        "busy": false,
+        "switcher": {
+          "active_model": "deepseek",
+          "inflight": 0,
+          "waiting": 0,
+          "nondefault_idle_seconds": 900.0,
+          "default_model": "deepseek",
+          "fault": null
+        }
+      }
+    },
+    "cleanup": {
+      "removed_count": 3890,
+      "removed_bytes": 669107267888,
+      "result": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/mayas-cleanup-batches-20261101/FINAL_RESULT_FIRST.json"
+    },
+    "hybrid_closed_by_user_selection": true,
+    "RAM_policy_D0_completed": {
+      "qualification": "876aeb3cc60bcabd70fe8ad566ce90d63a20a863d91a75ab5156d01dd776ca5f",
+      "new_CPU_controls_each_host": 99,
+      "private_MemoryMax_GiB": 88,
+      "physical_host_reserve_GiB": 4,
+      "prose": {
+        "generated_tokens": 8146,
+        "native_tok_s": 42.2674795693,
+        "client_seconds": 196.62806019
+      },
+      "coding": {
+        "generated_tokens": 5562,
+        "native_tok_s": 38.429251,
+        "client_seconds": 147.97626023
+      },
+      "native_API_window_outer_exit0": true,
+      "manual_task_quality_UNRUN": true,
+      "no_matched_baseline_or_promotion": true
+    },
+    "no_more_hybrid_or_old_model_replays": true,
+    "all_test_source_raw_logs_and_caches_preserved": true
+  }
+}

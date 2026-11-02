@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "controls": 11,
+  "ids": [
+    "test_cleanup.Contract.test_bound_state_and_owned_claim",
+    "test_cleanup.Contract.test_duplicate_rows_refused",
+    "test_cleanup.Contract.test_foreign_binding_claim_and_phase_refused",
+    "test_cleanup.Contract.test_near_named_paths_refused",
+    "test_cleanup.Contract.test_only_explicit_unused_paths",
+    "test_cleanup.Contract.test_other_commands_keep_isolated_environment",
+    "test_cleanup.Contract.test_selected_assets_and_caches_refused",
+    "test_cleanup.Contract.test_selected_inode_refused",
+    "test_cleanup.Contract.test_unverified_selection_refused",
+    "test_cleanup.Contract.test_user_unit_child_gets_exact_nonsecret_bus_context",
+    "test_cleanup.Contract.test_wrong_counts_bytes_or_selected_artifacts_refused"
+  ],
+  "source_sha256": "8925fc955c0f3425cc93c435c3743181b51e30e72c2c2876483ba7f4db7b12b8",
+  "test_sha256": "bfa95a6ac899cfbf358f35e98e70ee30e8c8ed29ccfb8c06b41ce840f29c06f7",
+  "driver_sha256": "0a3be74145655a5c5cfb8d0669439db38c2ca22bd24056014f3dc71bb7030cb6",
+  "observed": {
+    "pid": 3050086,
+    "ppid": 3050085,
+    "pgid": 3050086,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "supervisor_pid": 3050085
+}

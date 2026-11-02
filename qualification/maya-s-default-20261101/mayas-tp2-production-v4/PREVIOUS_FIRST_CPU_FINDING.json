@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-01T23:27:16.445652+00:00",
+  "status": "FIRST_CPU_35_OF_36_EACH_HOST_FAILED_ORIGINAL_PRESERVED",
+  "finding": "Foreign CAS replacement preserved state and sent no service signals, but the cleanup reservation exception masked the original CAS error. Negative control correctly failed.",
+  "change": "New v2 source keeps both errors using original exception plus custody note; same target model/native/limits, new production metadata namespace.",
+  "old_production_changed": false,
+  "native_API_GPU_attempts": 0,
+  "first_stage_gate_busy": "The sequential tool wrapper did not stop after the busy guard; source-only staging and bounded36 CPU controls ran under the user authorization to interrupt DeepSeek. No service/request/GPU action occurred. Future dependent staging calls explicitly abort on failed guard.",
+  "no_failed_proof_regrade": true
+}

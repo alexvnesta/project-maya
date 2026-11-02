@@ -1,0 +1,147 @@
+{
+  "passed": true,
+  "tensor_bytes_changed": false,
+  "metadata_only": true,
+  "outputs": {
+    "ds4.txt": {
+      "sha256": "9a00c0537bdef09a3a6aad39a9927fe50ef2098c3c9d3d3f85b65fc53a32c5d3",
+      "bytes": 1543
+    },
+    "tensors.txt": {
+      "sha256": "f9e0b572de9c945f4bb0dd19dac93b11279ce6cb76abd39cb9bebc8648898e96",
+      "bytes": 3719775
+    },
+    "engram.bin": {
+      "sha256": "08d55d6433f389b14aa115f4ea4eb31d6a2d63df1ae40821f03facf4c2d49142",
+      "bytes": 517980
+    },
+    "tokenizer/vocab.json": {
+      "sha256": "2f0bf5b31f4aa191d5d0d78291927a4f28c9ceb498a5e345b97e926c4cb99c1a",
+      "bytes": 2730577
+    },
+    "tokenizer/merges.txt": {
+      "sha256": "547bace837acea98652eef5669c9b01cee1c73ad1d2a44d6fdce9e6a81c22147",
+      "bytes": 1504833
+    },
+    "tokenizer/token_type.json": {
+      "sha256": "0a61021438e5ce6041133495f18fc360a6587aea748b17d953f552d2119ba51e",
+      "bytes": 387840
+    },
+    "tokenizer/tokenizer.json": {
+      "sha256": "5a47981b685b75154e29bfb0299584c9b3a4a28679585e86d524c34c065d037f",
+      "bytes": 80
+    },
+    "tokenizer/chat_template.jinja": {
+      "sha256": "753420ada6b529bbdeefe3c24932f948696a71dd36f54491ec951cbc44f40c16",
+      "bytes": 18498
+    }
+  },
+  "assets": {
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00001-of-00006.gguf": {
+      "fingerprint": [
+        64513,
+        2912516,
+        47887697312,
+        1793544073730754259,
+        1793544073832756564
+      ],
+      "sha256": "1f3437f57042e69f94c141ffbcba0d5610dab63feb07244fb468be4940d6763f",
+      "published_manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v2/ASSET_MANIFEST.json"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00002-of-00006.gguf": {
+      "fingerprint": [
+        64513,
+        2915356,
+        47669578400,
+        1793548026792350323,
+        1793548026875352251
+      ],
+      "sha256": "66501fee8702ffd54e6f065323ab54bb3150d20b10b01922c589e7462c7b5ba6",
+      "published_manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v2/ASSET_MANIFEST.json"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00003-of-00006.gguf": {
+      "fingerprint": [
+        64513,
+        2915365,
+        47103347360,
+        1793549080756017583,
+        1793549080925021545
+      ],
+      "sha256": "3195b23f33337c46a07c48583946d99147c3635412bc4adc6acdc4cf42bf30ad",
+      "published_manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v2/ASSET_MANIFEST.json"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00004-of-00006.gguf": {
+      "fingerprint": [
+        64513,
+        2915438,
+        35532532032,
+        1793549824884462052,
+        1793549825019465217
+      ],
+      "sha256": "d60dba35fac9601cd5c6026439dd980c457a5bb1c009192ea539b220108ea0db",
+      "published_manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v2/ASSET_MANIFEST.json"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00005-of-00006.gguf": {
+      "fingerprint": [
+        64513,
+        2915439,
+        80641295472,
+        1793551944914904009,
+        1793551945323868302
+      ],
+      "sha256": "c98d46f96a25d17c4c54da5a60782c130255c364a22e621ea28d5c98a692ceb2",
+      "published_manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v2/ASSET_MANIFEST.json"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/Maya-S/DeepSeek-V4.1-Flash-1017-Maya-S-IQ2_XXS-00006-of-00006.gguf": {
+      "fingerprint": [
+        64513,
+        2915440,
+        80643503412,
+        1793554086275268153,
+        1793554086426271634
+      ],
+      "sha256": "98d65ef4f36e0b193935d44c3586241ca09b1b47e90f118e85332cfdb5860263",
+      "published_manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v2/ASSET_MANIFEST.json"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/dspark/dspark.bin": {
+      "fingerprint": [
+        64513,
+        3017316,
+        7967616768,
+        1793554331990932518,
+        1793554332089934800
+      ],
+      "sha256": "42df65159f980a9189d80597e42b30012c7b10e0dd385a47051f3b2fd659bb7b",
+      "published_manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v2/ASSET_MANIFEST.json"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v1/assets/dspark/dspark.json": {
+      "fingerprint": [
+        64513,
+        3017336,
+        96965,
+        1793554332337940517,
+        1793554332402942016
+      ],
+      "sha256": "639c3144bca8cfe4db59057047dca40411f0cc732796e2a9321feb98fee2295f",
+      "published_manifest": "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/s2-reconstruction-v1/base-acquisition-v2/ASSET_MANIFEST.json"
+    },
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/vision-assets-1017/vision.bin": {
+      "chain": "SELECTED92_EXISTING",
+      "sha256": null,
+      "fingerprint": [
+        64513,
+        12734082,
+        970536960,
+        1792951011115294368,
+        1792951011756308920
+      ]
+    }
+  },
+  "native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+  "selected_before": {
+    "invocation": "3612dec4b6ca4321b4b1cdaefd0848f7",
+    "main_pid": 2905292,
+    "native_pid": 2905345,
+    "native_start_ticks": 184208966
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "status": "PREPARATION_IMPORT_REFUSED_BEFORE_METADATA_OR_SERVICE_ACTION",
+  "finding": "New helper name activate.py collided with the immutable legacy activation module on sys.modules during actual dependency import. FIRST42 CPU still passed its bounded mocked/source controls; actual metadata import failed before any pack, qualification, native or service change.",
+  "repair": "New v4 uses unique activate_mayas.py name, plus explicit foreign cached legacy module guard. Same source/model settings, source/CPU requalification before separate first deployment attempt.",
+  "failed_operation_preserved": true
+}

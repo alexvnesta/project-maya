@@ -1,4 +1,15 @@
-# Maya-S / selective-native reconstruction: essential check closeout
+# Frankenstein closeout: Maya-S TP2 selected instead
+
+Alex explicitly selected original public Maya-S TP2 as the default. It is now active and verified with 1,048,576 total context, 262,144 output allowance, DSpark, native images, Q8/check1/1, mode1, L22/all40 projection, chunk4096 and all6,490 CPU experts in RAM. The optional selective-MXFP4 hybrid engine in this branch is **not** the selected executable; production uses the previously tested Maya1.1.45 native `adff28a2…`.
+
+After the earlier C0 failure below, Alex authorized a separate RAM-policy repair. ClickHouse was confirmed inactive. A new private process envelope of88GiB and physical-host reserve4GiB, child-only and with no system-wide memory change, passed FIRST99 CPU controls on each physical host. A separately frozen D0 run completed both natural requests and all nine essential controls: prose8,146tokens /42.2675tok/s /196.628s client; coding5,562tokens /38.4293tok/s /147.976s client. Actual native/API/window/controller all closed0; no swap in the private cgroup. This fixes that bounded runtime memory failure. Generated prose/code were not independently accepted or executed, and no matched baseline was run. It does not establish hybrid quality or an end-to-end improvement. No further hybrid comparison followed Alex's explicit Maya-S selection.
+
+The user then requested deletion of the unwanted models and reconstruction payloads. The cleanup record in `../maya-s-default-20261101/` records exact removed bytes, selected dependency protection, the preserved bounded partial-cleanup timeout and its separately audited remaining batches. Source, raw test records and caches remain; unused weight blobs, including the failed incomplete join blob and converted chunks, are removed. Historical statements below about retained weight payloads describe the earlier checkpoint.
+
+The original default's faster cold prefill remains a disclosed tradeoff: on the prior8,469-token prompt Maya-S was15.60% slower. Prior completed Maya-S TP2 tasks measured about62tok/s prose and57tok/s coding; these are workload-specific, not a general speed or quality claim. Near-filled1M inputs and full262,144-token generation remain unproven.
+
+## Historical C0 failure and recovery, retained unchanged
+
 
 The Maya-S download and local Frankenstein build are complete. The hybrid is **not qualified for deployment**. Its prose request was cancelled when physical RAM fell below the unchanged 8 GiB reserve, and the native process closed with `-9`. Coding and the matched baseline panel remain UNRUN. The original selected GSQ-RCO/native92/configc43, TP1/chunk4096 setup was restored and remains the default.
 

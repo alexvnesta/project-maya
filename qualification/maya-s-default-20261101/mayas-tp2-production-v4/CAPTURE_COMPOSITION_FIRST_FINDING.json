@@ -1,0 +1,1 @@
+{"error": "shell quote removed quoted module-name string; capture parent NameError", "no_target_or_capture_started": true, "correction": "use numeric repr-neutral module name via chr so shell cannot remove quotes; fully shell-quoted command transport"}

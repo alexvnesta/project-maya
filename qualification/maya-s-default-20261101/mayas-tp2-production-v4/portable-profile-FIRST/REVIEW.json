@@ -1,0 +1,30 @@
+{
+  "ROOT_full_changed_source_tests_driver_read": true,
+  "sources": {
+    "tests/test_hosted_capacity_profile.py": "88b046ea4d949ea5d56ab31b9f191f12b2dab4c21add518aff49112b1dc79872",
+    "integrations/strata-hosted/model_ready_gate.py": "a5f22fa941cbdc914e0bef7e395e99b603567982a700b7c243aca31bd8fa7c77",
+    "integrations/strata-hosted/controller.py": "46584b8687c3e1abfb524333ba4a9e78feeb75374779c44e023f5cae1d9a9045",
+    "integrations/strata-hosted/PROVENANCE.json": "b220e7523ebf13deaff2cda2897d218b151721a580936e070e2805d8db6da4cb",
+    "integrations/strata-hosted/hosting_preflight.py": "dab27c5d785ac7aed61837277a61472c928e98e83b62210cbeba009fcbf69f50",
+    "integrations/strata-hosted/hosting_defaults.py": "846ed06043c81c791fee5fb1b6d383b88706d3e6d827aec1833dbb3b011ab37f",
+    "integrations/strata-hosted/native-vision-and-tools.patch": "801a65d7982dea025f473ded03356cb68e0dcb1b4e59a0f5d972b82b32326e9a",
+    "integrations/strata-hosted/switcher.py": "d0e1ff140593ec6b020d86ecee3c5a539f71321cf1e25195a9349e4bc2f97484",
+    "integrations/strata-hosted/config.example.json": "12ab25883ae422d3dea165b437654411020440dc61e5a3b63f9bbb29350db516",
+    "integrations/strata-hosted/hosting_ready.py": "40593cbe7a539eeb1fc6bcafde6cded3a884125957c12779527bb07037a0443e",
+    "integrations/strata-hosted/config.shared-settings.example.json": "9dccb6db4fd0d5e1596ad0845decb60c24aae2756a4eca216cb9b914d310fdc9",
+    "integrations/strata-hosted/LICENSE-Strata.txt": "949b9b0aada7476006469e58ee4ffb0e0f68c2d9137e90a356757b61a09d37f0",
+    "integrations/strata-hosted/hosting_entry.py": "25700acf9b780190b46a5c4a30a812a316ff5ea0b2c4db6e1191468dadb20b5d",
+    "integrations/strata-hosted/overlay/serve/ds4_vision.py": "761212e162004aacf591beb405dc8072f83ee1facaa5398013ec98d5c737da4e"
+  },
+  "driver": "aba511363f8416b1ca0135c8f1f48b457ee978afb68263ad810be40e25d456bc",
+  "ids": [
+    "test_hosted_capacity_profile.HostedCapacity.test_Q8_ready_requires_exact_both_device_footer",
+    "test_hosted_capacity_profile.HostedCapacity.test_all_portable_source_pins_match",
+    "test_hosted_capacity_profile.HostedCapacity.test_chunk_mode_cache_identity_and_hidden_factors_are_refused",
+    "test_hosted_capacity_profile.HostedCapacity.test_client_gate_accepts_1m_and_preserves_explicit_other_backend_selection",
+    "test_hosted_capacity_profile.HostedCapacity.test_expanded_1m_profile_and_output_default_are_admitted",
+    "test_hosted_capacity_profile.HostedCapacity.test_old_context_and_old_cache_namespace_are_refused",
+    "test_hosted_capacity_profile.HostedCapacity.test_quality_policy_or_Q8_changes_are_refused"
+  ],
+  "scope": "Portable TP2 Maya-S template aligned with actual verified activation. New Q8 counts, four flags, isolated Maya-S namespace/profile, 84GiB startupRAM, strict competing unit rc3/4. No installation/native/GPU action."
+}

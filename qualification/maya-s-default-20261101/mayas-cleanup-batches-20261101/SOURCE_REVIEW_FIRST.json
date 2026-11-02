@@ -1,0 +1,14 @@
+{
+  "ROOT_full_source_tests_read": true,
+  "source_sha256": "3da6d4d7caa34d16583a05cbb068cc2a411545f5a8509c020c4b85535b40e06e",
+  "test_sha256": "45534b56e5ea2faaebac41296e5932bd3a0f73838837e2b3381ba0a427555aa5",
+  "driver_sha256": "9f08196ad760cacef70c99cad4012aa4a8e73679c0e2bee744328beeebaf8ae6",
+  "test_ids": [
+    "test_batch.Batches.test_empty_rows_refused",
+    "test_batch.Batches.test_full_bound_and_final_tail_exact",
+    "test_batch.Batches.test_inputs_not_mutated",
+    "test_batch.Batches.test_negative_bool_float_and_overrun_refused",
+    "test_batch.Batches.test_partition_no_missing_duplicates_or_reorder"
+  ],
+  "scope": "Strict max64 remaining rows each bounded child; original2504 confirmed removals and timeout retained. Same qualified leaf unlink/lock and11validated selection/session guards.5new batch partition controls. No native/service/restart/inference action."
+}

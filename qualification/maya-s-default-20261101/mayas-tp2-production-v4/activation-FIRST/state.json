@@ -1,0 +1,116 @@
+{
+  "status": "MAYAS_TP2_DEFAULT_ACTIVE_VERIFIED",
+  "pid": 3037412,
+  "selected_before": {
+    "invocation": "3612dec4b6ca4321b4b1cdaefd0848f7",
+    "main_pid": 2905292,
+    "native_pid": 2905345,
+    "native_start_ticks": 184208966
+  },
+  "qualification_sha256": "ef4d82abcc3eec6a991aa3691c89a799cfa3c9409e123d07ac9339d13cb3dfa7",
+  "admission_sha256": "1b7feb67fc77b480c7ec42e6a0fe3f42e468a071483f2a220e2d1ea938049cce",
+  "kernel_since": "2026-11-01 23:38:25 UTC",
+  "active": false,
+  "installation": {
+    "backup": "/home/alex/deepseek-hosted-20261025/releases/before-mayas-tp2-activation-FIRST",
+    "release": "deepseek-maya-s-tp2-1m-vision-q8-yoco1-output256k-20261101",
+    "native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+    "cache": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-mayas-tp2-1m-chunk4096-20261101"
+  },
+  "verified": {
+    "passed": true,
+    "selected_identity": {
+      "native_pid": 3038339,
+      "native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+      "config_sha256": "12fb4c1731cca16b6f7e8dd17bcf0b7431f2c34f6d4cc3358e9e436fa9c7910a",
+      "context": 1048576,
+      "output_default": 262144,
+      "images": true,
+      "TP": 2,
+      "prefill_chunk": 4096,
+      "DSpark": true,
+      "Q8": [
+        1,
+        1
+      ],
+      "prompt_skip_mode": 1,
+      "runtime_ablation": true,
+      "CPU_experts": 6490,
+      "all_CPU_experts_RAM": true,
+      "GPU_trunk_experts": 8870,
+      "GPU_slot_basis": "Matched qualified original TP2 startup and current complete all6490 CPU count; TP replicas not double-counted",
+      "start_binding": {
+        "invocation": "ccf903d3ad9949fb8bc14418a2c41781",
+        "main_pid": 3038278,
+        "native_pid": 3038339,
+        "native_start_ticks": 184465859
+      },
+      "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-mayas-tp2-1m-chunk4096-20261101",
+      "model": "Maya-S IQ2_XXS",
+      "served_model_alias": "deepseek-v4.1-flash-iq2-xs"
+    },
+    "public": {
+      "unauthenticated_models": 401,
+      "authenticated_models": 200,
+      "SSE_done": true,
+      "finish": "stop",
+      "known_answer_passed": true,
+      "content": "READY"
+    },
+    "health": {
+      "status": "ok",
+      "max_context": 1048576,
+      "model": "deepseek-v4.1-flash-iq2-xs",
+      "images": true,
+      "api_key": false,
+      "image_generation": false,
+      "loaded": true,
+      "service": "strata",
+      "busy": false,
+      "switcher": {
+        "active_model": "deepseek",
+        "inflight": 0,
+        "waiting": 0,
+        "nondefault_idle_seconds": 900.0,
+        "default_model": "deepseek",
+        "fault": null
+      }
+    }
+  },
+  "selected_identity": {
+    "native_pid": 3038339,
+    "native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+    "config_sha256": "12fb4c1731cca16b6f7e8dd17bcf0b7431f2c34f6d4cc3358e9e436fa9c7910a",
+    "context": 1048576,
+    "output_default": 262144,
+    "images": true,
+    "TP": 2,
+    "prefill_chunk": 4096,
+    "DSpark": true,
+    "Q8": [
+      1,
+      1
+    ],
+    "prompt_skip_mode": 1,
+    "runtime_ablation": true,
+    "CPU_experts": 6490,
+    "all_CPU_experts_RAM": true,
+    "GPU_trunk_experts": 8870,
+    "GPU_slot_basis": "Matched qualified original TP2 startup and current complete all6490 CPU count; TP replicas not double-counted",
+    "start_binding": {
+      "invocation": "ccf903d3ad9949fb8bc14418a2c41781",
+      "main_pid": 3038278,
+      "native_pid": 3038339,
+      "native_start_ticks": 184465859
+    },
+    "cache_namespace": "/home/alex/deepseek-hosted-20261025/state/conversation-cache-mayas-tp2-1m-chunk4096-20261101",
+    "model": "Maya-S IQ2_XXS",
+    "served_model_alias": "deepseek-v4.1-flash-iq2-xs"
+  },
+  "start_binding": {
+    "invocation": "ccf903d3ad9949fb8bc14418a2c41781",
+    "main_pid": 3038278,
+    "native_pid": 3038339,
+    "native_start_ticks": 184465859
+  }
+}

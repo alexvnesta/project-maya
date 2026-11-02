@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14",
+    "-I",
+    "-B",
+    "/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/mayas-default-cleanup-v2-20261101/run_controls.py",
+    "--review",
+    "58e0e11ea3c0bb89bc702404600e8993c94d3318ee2c4a785622fffb039852a2",
+    "--child",
+    "--parent",
+    "3050324",
+    "--execute",
+    "77ba14a69ec1310c386705b1a0eb8d54c872aef7fb3725626739855c68f3f57a"
+  ],
+  "pid": 3050325,
+  "returncode": -15,
+  "error": "TimeoutExpired(['/home/alex/strata-deepseek-test-20261024/venv/bin/python3.14', '-I', '-B', '/home/alex/strata-deepseek-test-20261024/reliability-optimization-20261025/decode-optimization-20261028/mayas-default-cleanup-v2-20261101/run_controls.py', '--review', '58e0e11ea3c0bb89bc702404600e8993c94d3318ee2c4a785622fffb039852a2', '--child', '--parent', '3050324', '--execute', '77ba14a69ec1310c386705b1a0eb8d54c872aef7fb3725626739855c68f3f57a'], 85)",
+  "cleanup": [],
+  "elapsed_seconds": 85.01006698491983
+}

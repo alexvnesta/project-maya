@@ -10,8 +10,8 @@ def projection_receipt(native_log,cfg):
     return {'enabled':True,'mode':'runtime residual projection','scale':1,'main_blocks':40,'drafter_unchanged':True,'direction_sha256':hashlib.sha256(pathlib.Path(direction).read_bytes()).hexdigest(),'numeric_checks':{x[0]:float(x[1]) for x in rows},'scope':'Projection math and targeted functionality, not broad quality or universal refusal-removal proof'}
 def q8_receipt(native_log):
     rows=re.findall(r"^ds4: CUDA([01]) Q8 batch check: 8 jobs .*: ([0-9]+) int8 and ([0-9]+) scales the per-job launches' bit for bit, every guard intact \(DS4_Q8_CHECK\)$",native_log,re.M)
-    if len(rows)!=2 or sorted(x[0] for x in rows)!=['0','1'] or any(x[1:]!=('42784','1337') for x in rows):raise RuntimeError('Actual both-GPU Q8 checks missing')
-    return {'passed':True,'devices':[0,1],'int8_each':42784,'scales_each':1337}
+    if len(rows)!=2 or sorted(x[0] for x in rows)!=['0','1'] or any(x[1:]!=('50976','1593') for x in rows):raise RuntimeError('Actual both-GPU Q8 checks missing')
+    return {'passed':True,'devices':[0,1],'int8_each':50976,'scales_each':1593}
 def main():
     cfg=json.loads((D/'config.json').read_text());base='http://127.0.0.1:18141';deadline=time.monotonic()+1100
     while True:
@@ -32,6 +32,10 @@ def main():
     with pathlib.Path(cfg['log']).open('rb') as f:f.seek(preflight['engine_log_offset']);native_log=f.read().decode('utf-8',errors='replace')
     copies=re.findall(r'(\d+) routed experts on the CPU lane .*?: (\d+) copied into RAM',native_log)
     if not copies or copies[-1][0]!=copies[-1][1]:raise RuntimeError('Hosted placement did not copy every CPU expert')
+    if copies[-1]!=('6490','6490') or 'no disk fallback' not in native_log:raise RuntimeError('Maya-S allCPU RAM placement differs')
+    if 'ds4: TP check passed (' not in native_log or '(DS4_TP_CHECK)' not in native_log or 'ds4: DS4_AR2=1:' not in native_log:raise RuntimeError('Actual TP2 checks absent')
+    parts=re.findall(r'^ds4: CUDA([01]) layers \[0, (?:39|42)\] \(tensor parallel 2, part ([01])\)',native_log,re.M)
+    if set(parts)!={('0','0'),('1','1')}:raise RuntimeError('Actual two-device tensor parallel placement absent')
     projection=projection_receipt(native_log,cfg);q8=q8_receipt(native_log)
     if json.loads((D/'config.shared-settings.json').read_text()).get('max_tokens')!=262144:raise RuntimeError('Output default changed')
     receipt={'Q8':q8,'projection':projection,'max_output_tokens':262144,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'health':health,'models':models,'real_ready':answer,'ready_seconds':time.monotonic()-started,'cpu_experts':int(copies[-1][0]),'ram_experts':int(copies[-1][1]),'profile_seed_sha256':preflight['profile_seed_sha256']}

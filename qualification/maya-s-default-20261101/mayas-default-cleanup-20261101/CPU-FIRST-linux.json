@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "controls": 9,
+  "ids": [
+    "test_cleanup.Contract.test_bound_state_and_owned_claim",
+    "test_cleanup.Contract.test_duplicate_rows_refused",
+    "test_cleanup.Contract.test_foreign_binding_claim_and_phase_refused",
+    "test_cleanup.Contract.test_near_named_paths_refused",
+    "test_cleanup.Contract.test_only_explicit_unused_paths",
+    "test_cleanup.Contract.test_selected_assets_and_caches_refused",
+    "test_cleanup.Contract.test_selected_inode_refused",
+    "test_cleanup.Contract.test_unverified_selection_refused",
+    "test_cleanup.Contract.test_wrong_counts_bytes_or_selected_artifacts_refused"
+  ],
+  "source_sha256": "7715010bc6ab53191b39dfba3e1964fe462b3324af04e037de565e244f70e3b9",
+  "test_sha256": "a75e399ae858f66949bbf88140d98f6ea22f4a31f95cc99b728aa1dac8663927",
+  "driver_sha256": "0a3be74145655a5c5cfb8d0669439db38c2ca22bd24056014f3dc71bb7030cb6",
+  "observed": {
+    "pid": 3048672,
+    "ppid": 3048671,
+    "pgid": 3048672,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": [
+      536870912,
+      536870912
+    ],
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "linux",
+    "dont_write_bytecode": true
+  },
+  "supervisor_pid": 3048671
+}

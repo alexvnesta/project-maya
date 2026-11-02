@@ -1,0 +1,20 @@
+{
+  "utc": "2026-11-01T23:50:13.019935+00:00",
+  "ROOT_full_source_tests_read": true,
+  "source_sha256": "7715010bc6ab53191b39dfba3e1964fe462b3324af04e037de565e244f70e3b9",
+  "test_sha256": "a75e399ae858f66949bbf88140d98f6ea22f4a31f95cc99b728aa1dac8663927",
+  "driver_sha256": "0a3be74145655a5c5cfb8d0669439db38c2ca22bd24056014f3dc71bb7030cb6",
+  "test_ids": [
+    "test_cleanup.Contract.test_bound_state_and_owned_claim",
+    "test_cleanup.Contract.test_duplicate_rows_refused",
+    "test_cleanup.Contract.test_foreign_binding_claim_and_phase_refused",
+    "test_cleanup.Contract.test_near_named_paths_refused",
+    "test_cleanup.Contract.test_only_explicit_unused_paths",
+    "test_cleanup.Contract.test_selected_assets_and_caches_refused",
+    "test_cleanup.Contract.test_selected_inode_refused",
+    "test_cleanup.Contract.test_unverified_selection_refused",
+    "test_cleanup.Contract.test_wrong_counts_bytes_or_selected_artifacts_refused"
+  ],
+  "scope": "New Maya-S exact dependency-protected plan/state guard; existing30 durable unlink/lock controls remain passed and are not replayed.9 new controls; no service or inference action",
+  "manual_observations": "No glob/recursive deletion. Strict explicit path families, unique entries, selected inode protection, exact old qualified unlink primitive, lsof open/mmap gate, no live constructors, current default binding+canonical lock witness, child bounds, durable per-file intent/unlink/result, partial accounting, preserve caches/source/raw results. User specifically requested deleting unwanted other setups."
+}

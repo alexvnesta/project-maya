@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "controls": 5,
+  "ids": [
+    "test_batch.Batches.test_empty_rows_refused",
+    "test_batch.Batches.test_full_bound_and_final_tail_exact",
+    "test_batch.Batches.test_inputs_not_mutated",
+    "test_batch.Batches.test_negative_bool_float_and_overrun_refused",
+    "test_batch.Batches.test_partition_no_missing_duplicates_or_reorder"
+  ],
+  "source_sha256": "3da6d4d7caa34d16583a05cbb068cc2a411545f5a8509c020c4b85535b40e06e",
+  "test_sha256": "45534b56e5ea2faaebac41296e5932bd3a0f73838837e2b3381ba0a427555aa5",
+  "driver_sha256": "9f08196ad760cacef70c99cad4012aa4a8e73679c0e2bee744328beeebaf8ae6",
+  "observed": {
+    "pid": 84834,
+    "ppid": 84819,
+    "pgid": 84834,
+    "cpu": [
+      30,
+      30
+    ],
+    "as": null,
+    "nice": 15,
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "MALLOC_ARENA_MAX": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "platform": "darwin",
+    "dont_write_bytecode": true
+  },
+  "supervisor_pid": 84819
+}

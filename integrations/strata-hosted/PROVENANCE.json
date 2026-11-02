@@ -7,7 +7,7 @@
     "context": 1048576,
     "max_output_default": 262144,
     "effort": 100,
-    "TP": 1,
+    "TP": 2,
     "Q8_batch": 1,
     "Q8_check": 1,
     "images": true,
@@ -15,17 +15,19 @@
     "cache_namespace_must_include_direction_identity": true,
     "prefill_chunk": 4096,
     "prompt_skip_mode": 1,
-    "cache_namespace_must_include_skip_mode_and_chunk": true
+    "cache_namespace_must_include_skip_mode_and_chunk": true,
+    "model": "Published original Maya-S IQ2_XXS",
+    "CPU_experts_all_RAM": 6490
   },
   "files": {
     "model_ready_gate.py": "a5f22fa941cbdc914e0bef7e395e99b603567982a700b7c243aca31bd8fa7c77",
     "controller.py": "46584b8687c3e1abfb524333ba4a9e78feeb75374779c44e023f5cae1d9a9045",
-    "hosting_preflight.py": "4af6805520c9eaccf7d7b060e9b294cc4e712eef8a712ff40bbede31f2865702",
+    "hosting_preflight.py": "dab27c5d785ac7aed61837277a61472c928e98e83b62210cbeba009fcbf69f50",
     "hosting_defaults.py": "846ed06043c81c791fee5fb1b6d383b88706d3e6d827aec1833dbb3b011ab37f",
     "native-vision-and-tools.patch": "801a65d7982dea025f473ded03356cb68e0dcb1b4e59a0f5d972b82b32326e9a",
     "switcher.py": "d0e1ff140593ec6b020d86ecee3c5a539f71321cf1e25195a9349e4bc2f97484",
-    "config.example.json": "3c5a1b2ae2dc4ccd956b4ce22c18533147c9379c580412ab3c31cce0f4529074",
-    "hosting_ready.py": "fe7b6f2602c8fb68a0eab5fed343aeb2c5f658e5d297f3ca3c53b22698a6316b",
+    "config.example.json": "12ab25883ae422d3dea165b437654411020440dc61e5a3b63f9bbb29350db516",
+    "hosting_ready.py": "40593cbe7a539eeb1fc6bcafde6cded3a884125957c12779527bb07037a0443e",
     "config.shared-settings.example.json": "9dccb6db4fd0d5e1596ad0845decb60c24aae2756a4eca216cb9b914d310fdc9",
     "LICENSE-Strata.txt": "949b9b0aada7476006469e58ee4ffb0e0f68c2d9137e90a356757b61a09d37f0",
     "hosting_entry.py": "25700acf9b780190b46a5c4a30a812a316ff5ea0b2c4db6e1191468dadb20b5d",
@@ -124,5 +126,30 @@
     "offline_saved_response_assembler_controls_each_host": 12,
     "new_inference_or_restart_for_audit_repair": false,
     "nearfilled1M_full256K_generation_proven": false
+  },
+  "selected_production": {
+    "release": "deepseek-maya-s-tp2-1m-vision-q8-yoco1-output256k-20261101",
+    "native_sha256": "adff28a2d3a3f54ebfc0399e5e3ec7385f6fbb848e4e675fa1044cf7c6961f4f",
+    "config_sha256": "12fb4c1731cca16b6f7e8dd17bcf0b7431f2c34f6d4cc3358e9e436fa9c7910a",
+    "source": "Previously tested Maya1.1.45/build5c9ba2f, not optional hybrid engine at this branch HEAD",
+    "qualification_sha256": "ef4d82abcc3eec6a991aa3691c89a799cfa3c9409e123d07ac9339d13cb3dfa7",
+    "activation_CPU_controls_each_host": 44,
+    "old_native_API_exit0": true,
+    "activation_controller_exit0": true,
+    "public_401_auth200_READY_stop_DONE": true,
+    "context_total": 1048576,
+    "output_allowance": 262144,
+    "DSpark": true,
+    "all_CPU_experts_RAM": 6490,
+    "TP": 2,
+    "prior_prose_tok_s": 62.05,
+    "prior_coding_tok_s": [
+      56.66,
+      57.25
+    ],
+    "cold_prefill_8469_regression_pct": 15.5974,
+    "user_explicit_tradeoff_selection": true,
+    "new_speed_campaign": false,
+    "nearfilled1M_full262144_output_unproven": true
   }
 }

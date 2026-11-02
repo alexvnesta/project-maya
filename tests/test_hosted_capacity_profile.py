@@ -38,17 +38,18 @@ class HostedCapacity(unittest.TestCase):
    with self.assertRaises(RuntimeError):m.validate_config(c)
  def test_quality_policy_or_Q8_changes_are_refused(self):
   m=self.module('hosting_preflight')
-  for name in ['batch','check','TP','vision','fit']:
+  for name in ['batch','check','TP','vision','fit','DS4_TP_GGUF_UNEVEN','DS4_TP_CHECK','DS4_AR2','DS4_COPY_DIRECT']:
    c=self.config()
    if name=='batch':c['env']['STRATA_DS4_Q8_BATCH']='0'
    elif name=='check':c['env']['DS4_Q8_CHECK']='0'
-   elif name=='TP':c['args'][c['args'].index('--tp')+1]='2'
+   elif name=='TP':c['args'][c['args'].index('--tp')+1]='1'
    elif name=='vision':c['args'][c['args'].index('--vision')+1]='off'
-   else:c['fit_max_tokens']=True
+   elif name=='fit':c['fit_max_tokens']=True
+   else:c['env'][name]='0'
    with self.assertRaises(RuntimeError):m.validate_config(c)
  def test_Q8_ready_requires_exact_both_device_footer(self):
-  m=self.module('hosting_ready');log=''.join("ds4: CUDA"+str(d)+" Q8 batch check: 8 jobs (k 32 .. 5120, rows 1 .. 16, strided, one input shared): 42784 int8 and 1337 scales the per-job launches' bit for bit, every guard intact (DS4_Q8_CHECK)\n" for d in [0,1]);self.assertTrue(m.q8_receipt(log)['passed'])
-  for bad in [log.replace('CUDA1','CUDA0'),log.replace('42784','42783'),log.splitlines()[0]]:
+  m=self.module('hosting_ready');log=''.join("ds4: CUDA"+str(d)+" Q8 batch check: 8 jobs (k 32 .. 5120, rows 1 .. 16, strided, one input shared): 50976 int8 and 1593 scales the per-job launches' bit for bit, every guard intact (DS4_Q8_CHECK)\n" for d in [0,1]);self.assertTrue(m.q8_receipt(log)['passed'])
+  for bad in [log.replace('CUDA1','CUDA0'),log.replace('50976','50975'),log.splitlines()[0]]:
    with self.assertRaises(RuntimeError):m.q8_receipt(bad)
  def test_client_gate_accepts_1m_and_preserves_explicit_other_backend_selection(self):
   m=self.module('model_ready_gate');h={'status':'ok','loaded':True,'max_context':1048576,'images':True,'switcher':{'fault':None,'default_model':'deepseek','active_model':'deepseek'}};models={'default_model':'deepseek-v4.1-flash-iq2-xs'};self.assertTrue(m.qualified(h,models));old=copy.deepcopy(h);old['max_context']=524288;self.assertFalse(m.qualified(old,models));other=copy.deepcopy(h);other['switcher']['active_model']='glm';other['max_context']=655360;self.assertTrue(m.qualified(other,models))
